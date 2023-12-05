@@ -1,0 +1,77 @@
+navigation:
+  - heading: Modeling
+  - title: Overview
+    path: /art/modeling/
+  - title: Technical Specifications
+    path: /art/modeling/specifications
+  - title: Reference Assets
+    path: /art/modeling/project-files
+  - title: Rigging and Skinning
+    path: /art/modeling/rigging
+  - title: Blender and Maya Export Settings
+    path: /art/modeling/export-requirements
+  - title: 3D Importer
+    path: /art/modeling/3d-importer
+  - title: Roblox Blender Plugin
+    path: /art/modeling/roblox-blender-plugin
+
+  - heading: Texturing
+  - title: Physically-based Rendering (PBR)
+    path: /art/modeling/surface-appearance
+  - title: PBR Material References
+    path: /art/modeling/material-reference
+
+  - heading: Animation
+    section:
+  - title: Exporting Animations from Maya
+    path: /art/characters/exporting-avatar-animations-from-maya
+  - title: Animating Heads
+    path: /art/characters/facial-animation/animating-heads
+  - heading: Environment and Lighting
+  - title: Assembling Modular Environments
+    path: /tutorials/3D-art/assembling-modular-environments
+  - title: Enhancing Outdoor Environments with Future Lighting
+    path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
+
+  - heading: Example Projects
+    path:
+  - title: The Mystery of Duvall Drive
+    section:
+      - title: Overview
+        path: /resources/the-mystery-of-duvall-drive/
+      - title: Constructing the House
+        path: /resources/the-mystery-of-duvall-drive/constructing-the-house
+      - title: Materializing the World
+        path: /resources/the-mystery-of-duvall-drive/materializing-the-world
+      - title: Immersive Narrative
+        path: /resources/the-mystery-of-duvall-drive/immersive-narrative
+      - title: Streaming in Immersion
+        path: /resources/the-mystery-of-duvall-drive/streaming-in-immersion
+      - title: Developing a Moving World
+        path: /resources/the-mystery-of-duvall-drive/developing-a-moving-world
+      - title: Designing Dark Soundscapes
+        path: /resources/the-mystery-of-duvall-drive/designing-dark-soundscapes
+      - title: Technical Overview
+        section:
+          - title: Overview
+            path: /resources/the-mystery-of-duvall-drive/technical-overview
+          - title: Main Design Requirements
+            path: /resources/the-mystery-of-duvall-drive/main-design-requirements
+          - title: Foundational Gameplay Systems
+            path: /resources/the-mystery-of-duvall-drive/foundational-gameplay-systems
+          - title: Supporting Systems
+            path: /resources/the-mystery-of-duvall-drive/supporting-systems
+  - title: Beyond The Dark
+    section:
+      - title: Overview
+        path: /resources/beyond-the-dark/
+      - title: Architecture
+        path: /resources/beyond-the-dark/building-architecture
+      - title: Characters
+        path: /resources/beyond-the-dark/custom-characters
+      - title: Layered Clothing
+        path: /resources/beyond-the-dark/layered-clothing
+      - title: Sound Design
+        path: /resources/beyond-the-dark/sound-design
+      - title: User Interface
+        path: /resources/beyond-the-dark/user-interface
