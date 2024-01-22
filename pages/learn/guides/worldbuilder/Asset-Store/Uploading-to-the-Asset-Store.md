@@ -6,7 +6,7 @@ This guide will walk you through the process of uploading your custom asset to t
 
 We encourage you to follow along with the video tutorial to ensure a successful setup; the written instructions are also below. Your journey into Highrise World Building starts here.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iwJydHnMgzI?si=YtZMYxfTo4a3IuWq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/iwJydHnMgzI?si=YtZMYxfTo4a3IuWq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### **Step 1: Navigate to the Create Portal**
 

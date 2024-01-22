@@ -6,7 +6,7 @@ This tutorial will walk you through essential concepts for working with assets a
 
 We encourage you to follow along with the video tutorial to ensure a successful setup.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmXQvVw0cAU?si=MsINzKWo71b6dvmF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/bmXQvVw0cAU?si=MsINzKWo71b6dvmF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### **1. Grid Snapping for Precise Placement**
 

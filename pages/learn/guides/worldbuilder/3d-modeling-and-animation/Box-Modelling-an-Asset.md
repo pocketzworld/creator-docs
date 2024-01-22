@@ -8,7 +8,7 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 
 As well as this short video explaining the basic controlls of Blender 3D: [Introduction To Blender](https://www.youtube.com/watch?v=Rqhtw7dg6Wk)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VQHSCcRWyhI?si=o58lbYjm2LsU6ITb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/VQHSCcRWyhI?si=o58lbYjm2LsU6ITb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## **Step 1: Preparing the Scene**
 

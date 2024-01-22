@@ -6,7 +6,7 @@ This tutorial will guide you in Creating your First World in the HIGHRISE World 
 
 We encourage you to follow along with the video tutorial to ensure a successful setup; the written instructions are also below. Your journey into Highrise World Building starts here.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8qn7tb_5wr4?si=Er3okJeF7YsM3-4P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/8qn7tb_5wr4?si=Er3okJeF7YsM3-4P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### **Step 1: Open World Builder and Create a New World**
 

@@ -6,7 +6,7 @@ In this series, we will learn how to create a custom Highrise 3D asset using Ble
 
 We encourage you to follow along with the video tutorial to ensure a successful setup.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9hLWfw5mVyI?si=4X7EowO__Q7DobRz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/9hLWfw5mVyI?si=4X7EowO__Q7DobRz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## **1. Install the Vertex Color Addon**
 

@@ -4,7 +4,7 @@ This tutorial will guide you step-by-step, from installing the Python developmen
 
 We encourage you to follow along with the video tutorial to ensure a successful setup; the written instructions are also below. Your journey into Highrise bot development starts here.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q8NYI8NYfgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/q8NYI8NYfgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## **Step 1: Installing Python**
 

@@ -6,7 +6,7 @@ In this tutorial, we will learn how to create a glowing material for objects and
 
 We encourage you to follow along with the video tutorial to ensure a successful setup.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7HdyXzHo0VU?si=p_GdmkhOaZzz41nT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/7HdyXzHo0VU?si=p_GdmkhOaZzz41nT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### **Step 1: Adding the Blue Cube to the Scene**
 1. Open your World and navigate to the "Models” Folder.
