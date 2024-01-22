@@ -10,7 +10,7 @@ Simply follow this link and download the latest Python version: [https://www.pyt
 
 You will get a .exe install file, locate it in your downloads and click the file. The following popup will show:
 
-![python installation](https://cdn-production.joinhighrise.com/create-portal/install_python_d94b494f22.png)
+![python installation](/assets/learn/guides/bots/install-python.png)
 
 **IMPORTANT**: Check the **‘Add python.exe to PATH’** tick box, then you can click **‘Install Now’** and follow the steps to install.
 
