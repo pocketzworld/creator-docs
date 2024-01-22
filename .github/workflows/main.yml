@@ -11,6 +11,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -21,6 +24,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::129994418504:role/pw-creator-docs-github-actions-role-efd05b3
           aws-region: us-east-1
+
 
       - name: Copy files to the production website with the AWS CLI
         run: |
