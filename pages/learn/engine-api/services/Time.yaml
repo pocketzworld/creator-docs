@@ -1,0 +1,32 @@
+name: Time
+type: service
+summary: |
+  `hr.time` Provides access to time and update loop related functions, such as delta time of an update frame.
+description:
+code_samples:
+properties:
+  - name: deltaTime
+    summary: |
+      The time in seconds it took to complete the last frame.
+    description:
+    code_samples:
+    type: number
+  - name: fixedTime
+    summary: |
+      The time in seconds since the start of the game.
+    description:
+    code_samples:
+    type: number
+  - name: fixedDeltaTime
+    summary: |
+      The time in seconds it took to complete the last (physics) fixed update frame.
+    description:
+    code_samples:
+    type: number
+  - name: time
+    summary: |
+      The time in seconds since the start of the game.
+    description:
+    code_samples:
+    type: number
+methods:

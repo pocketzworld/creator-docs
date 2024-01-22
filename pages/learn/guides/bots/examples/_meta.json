@@ -1,0 +1,20 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "basics": {
+    "title": "Basics"
+  },
+  "persistent-data": {
+    "title": "Persistent Data"
+  },
+  "third-party-integration": {
+    "title": "Third Party Integration"
+  },
+  "games-activities": {
+    "title": "Games/Activities"
+  },
+  "tipping-bot": {
+    "title": "Tipping Bot"
+  }
+}

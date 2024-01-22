@@ -1,0 +1,46 @@
+name: 'Set Environment'
+description: 'Sets proper environment based on branch'
+
+inputs:
+  kube_config:
+    description: "Kubernetes configuration"
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set env to dev1
+      shell: bash
+      run: |
+        echo "ENVIRONMENT_NAME=dev1" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/dev1')
+    - name: Set env to dev2
+      shell: bash
+      run: |
+        echo "ENVIRONMENT_NAME=dev2" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/dev2')
+    - name: Set env to dev3
+      shell: bash
+      run: |
+        echo "ENVIRONMENT_NAME=dev3" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/dev3')
+    - name: Set env to dev
+      shell: bash
+      run: |
+        echo "ENVIRONMENT_NAME=dev" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/main')
+    - name: Set env to rc
+      shell: bash
+      run: |
+       echo "ENVIRONMENT_NAME=rc" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/rc')
+    - name: Set env to beta
+      shell: bash
+      run: |
+       echo "ENVIRONMENT_NAME=beta" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/beta')
+    - name: Set env to production
+      shell: bash
+      run: |
+       echo "ENVIRONMENT_NAME=production" >> $GITHUB_ENV
+      if: endsWith(github.ref, '/production')

@@ -1,0 +1,50 @@
+name: Script
+type: class
+summary: |
+  A lua script that is attached to entities and executed within the world.
+description: |
+  A lua script that is attached to entities and executed within the world.
+code_samples:
+inherits:
+properties:
+  - name: awake
+    summary: |
+      Occurs once at the beginning of this objects lifetime, before Start.
+    description:
+    code_samples:
+    type: Event
+  - name: fixedUpdate
+    summary: |
+      Called every fixed timestep. This is typically reserved for physics and, 
+      due to the cadence that it fires, is often suboptimal for non-physics needs.
+    description:
+    code_samples:
+    type: Event
+  - name: start
+    summary: |
+      Occurs once at the beginning of this objects lifetime, after Awake.
+    description:
+    code_samples:
+    type: Event
+  - name: triggerEnter
+    summary:
+    description:
+    code_samples:
+    type: Event
+  - name: triggerExit
+    summary:
+    description:
+    code_samples:
+    type: Event
+  - name: triggerStay
+    summary:
+    description:
+    code_samples:
+    type: Event
+  - name: update
+    summary: |
+      Called every frame.
+    description:
+    code_samples:
+    type: Event
+methods:

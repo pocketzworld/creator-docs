@@ -1,0 +1,117 @@
+name: vector3
+type: datatype
+summary: |
+  Represents a 3D value with a direction and magnitude.
+description: |
+  The `Datatype.vector3` data type represents a vector in 3D space, typically
+  usually used as a point, direction, normal, or distance.
+code_samples:
+inherits:
+constructors:
+  - name: vector3.New
+    summary: Returns a new `Datatype.vector3` from the given x, y, and z components.
+    description: Returns a new `Datatype.vector3` using the given x, y, and z components.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+      - name: z
+        type: number
+        default:
+        summary:
+    code_samples:
+properties:
+  - name: magnitude
+    type: number
+    summary: |
+      The length of the vector3.
+    description: |
+      The length of the vector3.
+    code_samples:
+  - name: magnitudeSqr
+    type: number
+    summary: |
+      The length of the vector3 squared.
+    description: |
+      The length of the vector3 squared. This is often used as 
+      a faster alternative to `Datatype.vector3.Magnitude` when
+      comparing lengths of vectors.
+    code_samples:
+  - name: normalized
+    type: vector3
+    summary: |
+      A normalized copy of the vector - one that has the same
+      direction as the original but a magnitude of 1.
+    description: |
+      A normalized copy of the vector - one that has the same
+      direction as the original but a magnitude of 1.
+    code_samples:
+  - name: x
+    type: number
+    summary: |
+      The x-coordinate of the vector3.
+    description: |
+      The x-coordinate of the vector3.
+    code_samples:
+  - name: y
+    type: number
+    summary: |
+      The y-coordinate of the vector3.
+    description: |
+      The y-coordinate of the vector3.
+    code_samples:
+  - name: z
+    type: number
+    summary: |
+      The z-coordinate of the vector3.
+    description: |
+      The z-coordinate of the vector3.
+    code_samples:
+methods:
+  - name: distance
+    summary: |
+      The distance between two `Datatype.vector3`.
+    description: |
+      Returns a `Datatype.vector3` representing the distance between 
+      self and the other vector.
+    parameters:
+      - name: self
+        type: vector3
+        default:
+        summary:
+      - name: other
+        type: vector3
+        default:
+        summary:
+    returns:
+      - type: vector3
+        summary:
+    code_samples:
+math_operations:
+  - operation: '+'
+    summary: |
+      Produces a `Datatype.vector3` with each component of the second added to
+      the corresponding component of the first.
+    description: |
+      Produces a `Datatype.vector3` with each component of the second added to
+      the corresponding component of the first.
+    type_a: vector3
+    type_b: vector3
+    return_type: vector3
+    code_samples:
+  - operation: '*'
+    summary: |
+      Produces a `Datatype.vector3` with each component of the second multiplied
+      by the corresponding component of the first.
+    description: |
+      Produces a `Datatype.vector3` with each component of the second multiplied
+      by the corresponding component of the first.
+    type_a: vector3
+    type_b: vector3
+    return_type: vector3
+    code_samples:

@@ -1,0 +1,29 @@
+name: 'Deploy'
+description: 'Deploy the build to specific env based on branch'
+
+inputs:
+  kube_config:
+    description: "Kubernetes configuration"
+    required: true
+  environment:
+    description: "Environment to depoloy to"
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Deploy the image to Kubernetes (non Production)
+      shell: bash
+      run: |
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl
+        chmod +x ./kubectl
+        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+        chmod 700 get_helm.sh
+        ./get_helm.sh
+        echo ${kube_config} | base64 -d > ./kube_config
+        ./kubectl config set-context --current --namespace=${ENVIRONMENT_NAME}
+        DATE_VERSION=${GITHUB_SHA:0:8}-${GITHUB_RUN_ATTEMPT} PATH=./:$PATH make deploy-kubernetes
+      env:
+        KUBECTL_VERSION: v1.22.1
+        kube_config: ${{ inputs.kube_config }}
+        KUBECONFIG: ./kube_config

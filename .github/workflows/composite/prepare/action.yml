@@ -1,0 +1,57 @@
+name: "Prepare Build"
+description: "Prepare build that later on will be deployed to some env"
+
+runs:
+  using: "composite"
+  # Steps represent a sequence of tasks that will be executed as part of the job
+  steps:
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: arn:aws:iam::129994418504:role/dev_ci_role
+        aws-region: us-east-1
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Set up Docker Buildx
+      id: buildx
+      uses: docker/setup-buildx-action@v2
+      with:
+        install: true
+        version: latest
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: |
+          /tmp/.buildx-cache-highrise-create
+          /tmp/.buildx-cache-highrise-game
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+
+    - name: Build and push the Docker image (highrise-create)
+      shell: bash
+      run: VERSION=${GITHUB_SHA:0:8}-${GITHUB_RUN_ATTEMPT} make build-push-highrise-create
+      env:
+        DOCKER_BUILD_ADDOPTS: --cache-from type=local,src=/tmp/.buildx-cache-highrise-create --cache-to type=local,mode=max,dest=/tmp/.buildx-cache-highrise-create-new
+
+    - name: Move cache (highrise-create)
+      shell: bash
+      run: |
+        rm -rf /tmp/.buildx-cache-highrise-create
+        mv /tmp/.buildx-cache-highrise-create-new /tmp/.buildx-cache-highrise-create
+
+    - name: Build and push the Docker image (highrise-game)
+      shell: bash
+      run: VERSION=${GITHUB_SHA:0:8}-${GITHUB_RUN_ATTEMPT} make build-push-highrise-game
+      env:
+        DOCKER_BUILD_ADDOPTS: --cache-from type=local,src=/tmp/.buildx-cache-highrise-game --cache-to type=local,mode=max,dest=/tmp/.buildx-cache-highrise-game-new
+
+    - name: Move cache (highrise-game)
+      shell: bash
+      run: |
+        rm -rf /tmp/.buildx-cache-highrise-game
+        mv /tmp/.buildx-cache-highrise-game-new /tmp/.buildx-cache-highrise-game

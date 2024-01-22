@@ -1,0 +1,14 @@
+{
+  "classes": {
+    "title": "Classes"
+  },
+  "datatypes": {
+    "title": "Datatypes"
+  },
+  "globals": {
+    "title": "Globals"
+  },
+  "services": {
+    "title": "Services"
+  }
+}

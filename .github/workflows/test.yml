@@ -1,0 +1,30 @@
+name: Run FE Tests
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches-ignore: [main, rc, beta, production]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Unit:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.0
+      - name: install dependencies
+        working-directory: web-nextjs
+        run: npm install
+      - name: Run jest + react-testing-library unit tests
+        working-directory: web-nextjs
+        run: npx jest
