@@ -14,10 +14,22 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          repository: pocketzworld/pocket-web
-          event-type: content-update
-          client-payload: '{"version":"dev"}'
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          role-to-assume: arn:aws:iam::129994418504:role/pw-creator-docs-github-actions-role-efd05b3
+          aws-region: us-east-1
+
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws s3 sync ./assets s3://lifeassets/create-portal
+
+#      - name: Repository Dispatch
+#        uses: peter-evans/repository-dispatch@v2
+#        with:
+#          repository: pocketzworld/pocket-web
+#          event-type: content-update
+#          client-payload: '{"version":"dev"}'
+#          token: ${{ secrets.REPO_ACCESS_TOKEN }}
