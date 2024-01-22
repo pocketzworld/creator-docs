@@ -1,4 +1,4 @@
-## Color Codes 
+# Color Codes 
 
 While designing, you can use our in-game color palettes to inform your art direction!
 
