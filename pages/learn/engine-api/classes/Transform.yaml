@@ -1,0 +1,96 @@
+name: transform
+type: class
+summary: |
+  The data that defines the offset of an object in 3D space, including position, 
+  rotation, and scale.
+description: |
+  The `class.transform` class is used to control the position, rotation,
+  and scale of an object in 3D space. The most common use is 
+  `class.entity.transform`.
+  
+  Keep in mind that anything with the term "local" here refers to the object's local 
+  space, meaning relative to its parent. For example, if you have an entity that 
+  is a child of another, and you set the child's LocalPosition to
+  vector3.new(0, 0, 0), it will be positioned at the same location as its parent.
+code_samples:
+inherits:
+properties:
+  - name: back
+    summary: |
+      The back of the entity.
+    description: |
+      The normalized vector3 that represents the direction behind the entity's facing direction.
+    code_samples:
+    type: vector3
+  - name: down
+    summary: |
+      The down of the entity.
+    description: |
+      The normalized vector3 that represents the direction behind the entity's facing direction.
+    code_samples:
+    type: vector3
+  - name: eulerAngles
+    summary: |
+      The world rotation of the entity.
+    description: |
+      The rotation of the entity compared to the world orientation in degrees.
+    code_samples:
+    type: vector3
+  - name: forward
+    summary: |
+      The forward of the entity.
+    description: |
+      The normalized vector3 that represents the entity's facing direction.
+    code_samples:
+    type: vector3
+  - name: left
+    summary: |
+      The left of the entity.
+    description: |
+      The normalized vector3 that represents the direction left of the entity's facing direction.
+    code_samples:
+    type: vector3
+  - name: localEulerAngles
+    summary: |
+      The local rotation of the entity.
+    description: |
+      The relative rotation of the entity compared to its parent entity in degrees.
+    code_samples:
+    type: vector3
+  - name: localPosition
+    summary: |
+      The local position of the entity.
+    description: |
+      The relative position of the entity compared to its parent entity.
+    code_samples:
+    type: vector3
+  - name: localScale
+    summary: |
+      The local scale of the entity.
+    description: |
+      The relative scale of the entity compared to its parent entity.
+    code_samples:
+    type: vector3
+  - name: position
+    summary: |
+      The world space position of the object.
+    description: |
+      The position of the object in relative to the world's origin (which is at `room.transform.position`).
+    code_samples:
+    type: vector3
+  - name: right
+    summary: |
+      The right of the entity.
+    description: |
+      The normalized vector3 that represents the entity's right direction.
+    code_samples:
+    type: vector3
+  - name: up
+    summary: |
+      The up of the entity.
+    description: |
+      The normalized vector3 that represents the entity's up direction.
+    code_samples:
+    type: vector3
+methods:
+  

@@ -1,0 +1,35 @@
+{
+  "drawing": {
+    "title": "Drawing & Designing"
+  },
+  "shape": {
+    "title": "Shape & Silhouette"
+  },
+  "perspective": {
+    "title": "Perspective"
+  },
+  "light-shadow": {
+    "title": "Light & Shadow"
+  },
+  "material": {
+    "title": "Material & Rendering"
+  },
+  "hair": {
+    "title": "Hair & Hair Texture"
+  },
+  "face-items": {
+    "title": "Face Items"
+  },
+  "animal-buddies": {
+    "title": "Animal Buddies"
+  },
+  "color-codes-avatar-bases": {
+    "title": "Color Codes and Avatar Bases"
+  },
+  "illustrator": {
+    "title": "Illustrator Tips"
+  },
+  "branding-resources": {
+    "title": "Branding Resources"
+  }
+}

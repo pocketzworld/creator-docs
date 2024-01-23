@@ -1,0 +1,71 @@
+name: UI
+type: service
+summary: |
+  `hr.ui` Provides access to user interface related functions, such as 
+    creating your own UI elements.
+description:
+code_samples:
+properties:
+  - name: screen
+    summary: |
+      The root UI element that all Lua created UI elements are children of.
+    description:
+    code_samples:
+    type: VisualElement
+methods:
+  - name: closeActionPicker
+    summary: |
+      Closes the action picker.
+    description:
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: createImage
+    summary: |
+      Creates an image UI element.
+    description:
+    code_samples:
+    parameters:
+    returns:
+      - type: VisualElement
+        summary:
+  - name: createLabel
+    summary: |
+      Creates a text UI element.
+    description:
+    code_samples:
+    parameters:
+    returns:
+      - type: VisualElement
+        summary:
+  - name: createView
+    summary: |
+      Creates a ui element. These can be used for formatting, as a visual ui object, or even 
+      containers for other UI elements to group under.
+    description:
+    code_samples:
+    parameters:
+    returns:
+      - type: VisualElement
+        summary:
+  - name: openActionPicker
+    summary: |
+      Opens the action picker.
+    description:
+    code_samples:
+    parameters:
+      - name: elements
+        type: Array
+        default:
+        summary: |
+          The array of `Class.VisualElement` to display in the action picker.
+      - name: autoClose
+        type: boolean
+        default:
+        summary: |
+          Whether or not the action picker should automatically close when an action is selected.
+    returns:
+      - type: void
+        summary:

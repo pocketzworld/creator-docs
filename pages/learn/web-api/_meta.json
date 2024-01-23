@@ -1,0 +1,11 @@
+{
+  "general": {
+    "title": "Web Api"
+  },
+  "endpoints": {
+    "title": "Endpoints"
+  },
+  "schema": {
+    "title": "Schema"
+  }
+}

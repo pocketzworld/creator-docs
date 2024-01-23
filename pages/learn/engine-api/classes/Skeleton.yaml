@@ -1,0 +1,45 @@
+name: Skeleton
+type: class
+summary: |
+  The skeleton of an entity. This is used to play and stop animations.
+description:
+code_samples:
+inherits:
+  - Entity
+properties:
+methods:
+  - name: play
+    summary: |
+      Plays an animation on the skeleton.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: Skeleton
+        default:
+        summary:
+      - name: animationName
+        type: string
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary: |
+          (Optional) A function to call when the animation is finished playing.
+    returns:
+      - type: boolean
+        summary:
+  - name: stop
+    summary: |
+      Stops an animation on the skeleton.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: Skeleton
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:

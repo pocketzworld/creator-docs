@@ -1,0 +1,26 @@
+{
+  "guides": {
+    "title": "Guides",
+    "redirectTo": "/learn/guides/bots/creating-a-bot"
+  },
+  "engine-api": {
+    "title": "Engine Api",
+    "redirectTo": "/learn/engine-api/classes/Anchor"
+  },
+  "bots-api": {
+    "title": "Bots Api",
+    "redirectTo": "/learn/bots-api/general/overview"
+  },
+  "web-api": {
+    "title": "Web Api",
+    "redirectTo": "/learn/web-api/general/overview"
+  },
+  "designer-resources": {
+    "title": "Designer Resources",
+    "redirectTo": "/learn/designer-resources/artguides/drawing"
+  },
+  "host-resources": {
+    "title": "Host Resources",
+    "redirectTo": "/learn/host-resources/hrlive/about"
+  }
+}
