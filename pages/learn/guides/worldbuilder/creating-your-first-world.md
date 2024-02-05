@@ -39,11 +39,15 @@
 ### **Step 4: Add Lights**
 1. Right click in the Heirarchy and create a light.
 2. Make sure the light *Type* is set to **Baked**
+
 **For Stationary Meshes**
-4. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
+
+3. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
+   
 **For Animated or Moving Meshes**
-1. Make the Object **Non-Static**
-2. Create a **Light Probe Grid** to light the dynamic meshes.
+
+4. Make the Object **Non-Static**
+5. Create a **Light Probe Grid** to light the dynamic meshes.
 [Light Probes tutorial](https://www.youtube.com/watch?v=_E0JXOZDTKA)
 
 
