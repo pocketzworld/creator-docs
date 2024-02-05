@@ -10,15 +10,14 @@
 **Creating your Project**
 1. If you don't have any projects yet, click "New Project"
 2. Choose a Template to start with then choose a destination for your project. Create a new folder for your world within that location.
-3. With the New Folder selected, Click "Select Folder" to confirm your choice.
+3. With the _New Folder_ selected, Click _Select Folder_ to confirm your choice.
 
 
 ### **Step 2: Sign in to your Highrise Account**
 
-1. After creating your project you will be taken to the Template's Scene. In the Assets panel you will see the "Template" folder.
-2. This you can either delete to start fresh or build off of.
-3. On the top left toolbar you can use the "Sign in" button to sign into your HR Account.
-4. You can now test your world with the "Play" button in the middle of the top toolbar.
+1. After creating your project you will be taken to the Template's Scene. In the Assets panel you will see the "Template" folder, this you can either delete to start fresh or build off of.
+2. On the top left toolbar you can use the "Sign in" button to sign into your HR Account.
+3. You can now test your world with the "Play" button in the middle of the top toolbar.
 
 
 ### **Step 3: Adjust The Room Lighting and Background**
@@ -38,10 +37,10 @@
 
 
 ### **Step 4: Add Lights**
-**For Stationary Meshes**
 1. Right click in the Heirarchy and create a light.
 2. Make sure the light *Type* is set to **Baked**
-3. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
+**For Stationary Meshes**
+4. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
 **For Animated or Moving Meshes**
 1. Make the Object **Non-Static**
 2. Create a **Light Probe Grid** to light the dynamic meshes.
