@@ -3,11 +3,14 @@
 ## **Introduction:**
 
 ### **Step 1: Open The Studio Hub and select New Project**
+**Installing the correct Unity Editor**
+1. Launch The Studio Hub.
+2. If you do not have Unity's **2022.3.16f1** version installed, follow the Studio prompts to install it.
 
-1. Launch The Studio Hub, where you will see your current projects"
-2. If you don't have any projects yet, click "New Project"
-3. Choose a Template to start with then choose a destination for your project. Create a new folder for your world within that location.
-4. With the New Folder selected, Click "Select Folder" to confirm your choice.
+**Creating your Project**
+1. If you don't have any projects yet, click "New Project"
+2. Choose a Template to start with then choose a destination for your project. Create a new folder for your world within that location.
+3. With the New Folder selected, Click "Select Folder" to confirm your choice.
 
 
 ### **Step 2: Sign in to your Highrise Account**
@@ -35,10 +38,14 @@
 
 
 ### **Step 4: Add Lights**
-
+**For Stationary Meshes**
 1. Right click in the Heirarchy and create a light.
 2. Make sure the light *Type* is set to **Baked**
 3. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
+**For Animated or Moving Meshes**
+1. Make the Object **Non-Static**
+2. Create a **Light Probe Grid** to light the dynamic meshes.
+[Light Probes tutorial](https://www.youtube.com/watch?v=_E0JXOZDTKA)
 
 
 ### **Step 5: Bake your lights and Navmesh**
