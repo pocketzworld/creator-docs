@@ -1,4 +1,4 @@
-# **Creating your First World**
+# **Creating Your First World**
 
 ## **Introduction**
 
