@@ -1,6 +1,7 @@
 # **Creating Your First World**
 
 ## **Introduction**
+In this guide you will learn how to use Studi Hub to creat, light, and test your first project.
 
 ### **Step 1: Open The Studio Hub and select New Project**
 **Installing the correct Unity Editor**
