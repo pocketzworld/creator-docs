@@ -1,71 +1,65 @@
-# **Creating your First World**
+# **Creating Your First World**
 
-## **Introduction:**
+## **Introduction**
+In this guide you will learn how to use Studi Hub to creat, light, and test your first project.
 
-This tutorial will guide you in Creating your First World in the HIGHRISE World Builder.
+### **Step 1: Open The Studio Hub and select New Project**
+**Installing the correct Unity Editor**
+1. Launch The Studio Hub.
+2. If you do not have Unity's **2022.3.16f1** version installed, follow the Studio prompts to install it.
 
-We encourage you to follow along with the video tutorial to ensure a successful setup; the written instructions are also below. Your journey into Highrise World Building starts here.
+**Creating your Project**
+1. If you don't have any projects yet, click "New Project"
+2. Choose a Template to start with then choose a destination for your project. Create a new folder for your world within that location.
+3. With the _New Folder_ selected, Click _Select Folder_ to confirm your choice.
 
-<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/8qn7tb_5wr4?si=Er3okJeF7YsM3-4P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### **Step 1: Open World Builder and Create a New World**
+### **Step 2: Sign in to your Highrise Account**
 
-1. Launch World Builder. Upon starting, you'll be greeted by the "Worlds Library."
-2. Since we don't have any worlds yet, click "Create."
-3. Choose a destination on your drive where you'd like to save your world. Create a new folder for your world within that location.
-4. Click "Select Folder" to confirm your choice.
+1. After creating your project you will be taken to the Template's Scene. In the Assets panel you will see the "Template" folder, this you can either delete to start fresh or build off of.
+2. On the top left toolbar you can use the "Sign in" button to sign into your HR Account.
+3. You can now test your world with the "Play" button in the middle of the top toolbar.
 
-![WB1.png](https://cdn-production.joinhighrise.com/create-portal/WB_1_58b81a6e3a.png)
 
-### **Step 2: Access the Main Room**
+### **Step 3: Adjust The Room Lighting and Background**
 
-1. After creating your world, you might be taken directly to the first "Room" or "Scene." If not, double-click on the Room item labeled "Main" or “New Room”.
+1. Go to "Window > Rendering > Lighting". Or press (CMD/CNTRL) + 9 to open the window.
+2. Here you can access the **Scene** and **Environment** settings.
+3. The **Scene** settings include:
+    - Lightmap settings
+    - Map Reselutioin
+    - and Samples
+    - The Template's settings are provided in the *.lighting* file in **Assets > Template > Scenes > Room**
+4. The **Environment** settings include:
+    - Skybox Material
+    - and Environment Lighting
+    - The Environment Lighting can be a Color, Gradient, or the Skybox it's self
+5. The **Skybox** is a Gradient material named *Sky* located in **Assets > Template > Art**
 
-![WB2.png](https://cdn-production.joinhighrise.com/create-portal/WB_2_e861fd7e4f.png)
 
-### **Step 3: Adjust Room Properties**
+### **Step 4: Add Lights**
+1. Right click in the Heirarchy and create a light.
+2. Make sure the light *Type* is set to **Baked**
 
-1. On the right-hand side, you'll find the Inspector window displaying properties for your selected object, which, in this case, is the Room.
-2. Here are the properties you will see:
-    - Player Prefab
-    - Local Player Prefab
-    - Sun Color
-    - Ambient/Shadow Color
-    - Background Color
+**For Stationary Meshes**
 
-### **Step 4: Setting Inside and Outside Colors**
+3. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
+   
+**For Animated or Moving Meshes**
 
-1. All we want to worry about right now is the Background Color.
-2. Select the Drop down menu and select Gradient
-3. You have options for both Inside Color and Outside Color, represented as Hex Codes.
+4. Make the Object **Non-Static**
+5. Create a **Light Probe Grid** to light the dynamic meshes.
+[Light Probes tutorial](https://www.youtube.com/watch?v=_E0JXOZDTKA)
 
-![WB3.png](https://cdn-production.joinhighrise.com/create-portal/WB_3_f6b23857c7.png)
 
-### **Step 5: Save and Exit**
+### **Step 5: Bake your lights and Navmesh**
+After laying out your **Lights** and **Objects**:
+1. Select the "NavMesh" Object in the Heirarchy
+2. Click **Bake** in the NavMeshSurface component in the Inspector Panel. *this will update the navigation map in your room*
+3. Make sure all Lights and stationary Meshes are marked **Static** or **Baked**
+4. In the Lighting Panel select **Generate Lighting** to calculate your new Lights and Shadows.
 
-1. Save your Room.
-2. Close the Room.
-3. Finally, close your project, which will return you to the Worlds Library.
-
-![WB4.png](https://cdn-production.joinhighrise.com/create-portal/WB_4_f9042191c7.png)
-
-### **Step 6: View Your First World**
-
-1. In the Worlds Library, you'll now see your newly created world.
-2. You can also view the directory path on your machine where your world's core files are stored.
-
-### **Step 7: Explore the Assets Folder**
-
-1. Navigate to your world's folder and locate the "Assets" folder. This is where you can place your Rooms, Models, Scripts, and other assets.
-
-![WB5.png](https://cdn-production.joinhighrise.com/create-portal/WB_5_502b042c75.png)
-
-### **Step 8: Test Your Room**
-
-1. Return to your Room within the world and use the "Play" button at the top of the editor to test it.
-
-![WB6.png](https://cdn-production.joinhighrise.com/create-portal/WB_6_b923374909.png)
 
 # **Congratulations! You've Created Your First 3D Room**
 
-That's it! You've successfully created your first 3D room using World Builder. Now, you can continue to build and customize your virtual world with rooms, models, and more in the Assets folder.
+That's it! You've successfully created your first 3D room using World Builder. Now, you can continue to build and customize your virtual world with rooms, models, and more.
