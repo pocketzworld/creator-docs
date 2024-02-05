@@ -1,6 +1,7 @@
 # **Creating Glowing Materials**
 
 ## **Introduction**
+In this guide you will learn how to create glowing/neon materials with emission and post processing.
 
 ### **Step 1: Setup the Post Processing**
 1. Create a new Empty Gameobject, named "PostProc", in the Heirarchy
