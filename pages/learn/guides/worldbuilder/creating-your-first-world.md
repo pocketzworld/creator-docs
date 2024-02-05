@@ -1,6 +1,6 @@
 # **Creating your First World**
 
-## **Introduction:**
+## **Introduction**
 
 ### **Step 1: Open The Studio Hub and select New Project**
 **Installing the correct Unity Editor**
