@@ -1,4 +1,4 @@
-# **Setting up a New Unity Project with a Custom Asset**
+# **Downloading and Importing Assets from the Unity Asset Store**
 
 ## **Introduction**
 In this guide you will learn how to download and import assets from the Unity Asset Store.
