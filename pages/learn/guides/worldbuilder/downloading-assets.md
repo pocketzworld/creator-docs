@@ -3,6 +3,8 @@
 ## **Introduction**
 In this guide you will learn how to download and import assets from the Unity Asset Store.
 
+[Downloading Assets Video Guide](https://www.youtube.com/watch?v=MltrDeGAwXk)
+
 ### **Step 1: Start a New Basic Project**
 1. Open the Studio Hub and create a new project.
 
