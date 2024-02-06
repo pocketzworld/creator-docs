@@ -5,10 +5,10 @@
   "creating-glowing-materials": {
     "title": "Creating Glowing Materials"
   },
+  "downloading-assets":{
+    "title": "Importing Assets"
+  },
   "3d-modeling-and-animation": {
     "title": "3D Modeling and Animation"
-  },
-  "Asset-Store": {
-    "title": "Asset Store"
   }
 }

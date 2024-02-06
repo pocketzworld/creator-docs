@@ -1,4 +1,4 @@
-# **Uploading to the Asset Store**
+# **Uploading to the Highrise Asset Store**
 
 ## **Introduction:**
 
