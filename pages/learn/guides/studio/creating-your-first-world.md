@@ -1,11 +1,11 @@
 # **Creating Your First World**
 
 ## **Introduction**
-In this guide you will learn how to use Studi Hub to creat, light, and test your first project.
+In this guide you will learn how to use Studio Hub to create, light, and test your first project.
 
 ### **Step 1: Open The Studio Hub and select New Project**
 **Installing the correct Unity Editor**
-1. Launch The Studio Hub.
+1. Launch the Studio Hub.
 2. If you do not have Unity's **2022.3.16f1** version installed, follow the Studio prompts to install it.
 
 **Creating your Project**
@@ -27,19 +27,19 @@ In this guide you will learn how to use Studi Hub to creat, light, and test your
 2. Here you can access the **Scene** and **Environment** settings.
 3. The **Scene** settings include:
     - Lightmap settings
-    - Map Reselutioin
+    - Map Resolution
     - and Samples
     - The Template's settings are provided in the *.lighting* file in **Assets > Template > Scenes > Room**
 4. The **Environment** settings include:
     - Skybox Material
     - and Environment Lighting
-    - The Environment Lighting can be a Color, Gradient, or the Skybox it's self
+    - The Environment Lighting can be a Color, Gradient, or the Skybox itself
 5. The **Skybox** is a Gradient material named *Sky* located in **Assets > Template > Art**
 
 
 ### **Step 4: Add Lights**
-1. Right click in the Heirarchy and create a light.
-2. Make sure the light *Type* is set to **Baked**
+1. Right click in the Hierarchy and create a light.
+2. Make sure the light **Type** is set to **Baked**
 
 **For Stationary Meshes**
 
@@ -54,7 +54,7 @@ In this guide you will learn how to use Studi Hub to creat, light, and test your
 
 ### **Step 5: Bake your lights and Navmesh**
 After laying out your **Lights** and **Objects**:
-1. Select the "NavMesh" Object in the Heirarchy
+1. Select the "NavMesh" Object in the Hierarchy
 2. Click **Bake** in the NavMeshSurface component in the Inspector Panel. *this will update the navigation map in your room*
 3. Make sure all Lights and stationary Meshes are marked **Static** or **Baked**
 4. In the Lighting Panel select **Generate Lighting** to calculate your new Lights and Shadows.
