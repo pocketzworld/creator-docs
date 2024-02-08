@@ -62,4 +62,4 @@ After laying out your **Lights** and **Objects**:
 
 # **Congratulations! You've Created Your First 3D Room**
 
-That's it! You've successfully created your first 3D room using World Builder. Now, you can continue to build and customize your virtual world with rooms, models, and more.
+That's it! You've successfully created your first 3D room using the Highrise Studio Hub. Now, you can continue to build and customize your virtual world with rooms, models, and more.

@@ -29,11 +29,11 @@ We encourage you to follow along with the video tutorial to ensure a successful 
    -  image, 
    -  thumbnail, 
    -  tags for visibility. 
-   -  Save your Asset and return to the World Builder.
+   -  Save your Asset and return to the Highrise Studio Hub.
 
-### **Step 4: Organize Your Assets in the World Builder**
+### **Step 4: Organize Your Assets in the Highrise Studio Hub**
 
-In the World Builder, you'll should have a dedicated directory for your new Assets. This directory includes any Prefab, Texture, Mesh, or Material that the asset depends on.
+In the Highrise Studio Hub, you'll should have a dedicated directory for your new Assets. This directory includes any Prefab, Texture, Mesh, or Material that the asset depends on.
 
 ### **Step 5: Upload to the Asset Store**
 
