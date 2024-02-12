@@ -1,0 +1,47 @@
+name: Character
+type: class
+summary: |
+  An abstract entity class that represents a character within the world
+description: |
+  An abstract `Class.Entity` type that represents a character within the world.
+  This character may or may not be able to move, animate, interact with other
+  entities, be controlled by a player or ai, and many other interactions.
+code_samples:
+inherits:
+  - Entity
+properties:
+  - name: moveFinished
+    summary:
+    description:
+    code_samples:
+    type: Event
+  - name: moveStarted
+    summary:
+    description:
+    code_samples:
+    type: Event
+methods:
+  - name: playAnimation
+    summary: |
+      Plays the given animation on the character.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: Character
+        default:
+        summary: |
+          The character to play the animation on.
+      - name: animationName
+        type: string
+        default:
+        summary: |
+          The name of the animation to play.
+      - name: looping
+        type: boolean
+        default:
+        summary: |
+          (Optional) Whether or not the animation should loop. Default false.
+    returns:
+      - type: void
+        summary:

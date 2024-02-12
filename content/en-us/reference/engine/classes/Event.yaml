@@ -1,0 +1,45 @@
+name: Event
+type: class
+summary: |
+  An event that can be subscribed to and fired.
+description: |
+  Events are a way to react to triggers, other scripts, and elements of the Highrise world.
+code_samples:
+inherits:
+properties:
+methods:
+  - name: connect
+    summary: |
+      Connects a function to the event that will be called when the event is fired.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: Event
+        default:
+        summary:
+      - name: closure
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: fire
+    summary: |
+      Fires the event, calling all connected functions.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: Event
+        default:
+        summary:
+      - name: args
+        type: object
+        default:
+        summary: |
+          Optional argument to pass to the connected functions if the event requires.
+    returns:
+      - type: void
+        summary:

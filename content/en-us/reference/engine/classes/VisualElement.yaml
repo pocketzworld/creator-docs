@@ -1,0 +1,149 @@
+name: VisualElement
+type: class
+summary: |
+  Represents a UI element.
+description:
+code_samples:
+inherits:
+properties:
+  - name: clickable
+    summary: |
+      Whether or not the element is clickable.
+    description:
+    code_samples:
+    type: boolean
+  - name: enabled
+    summary: |
+      Whether or not the element is enabled.
+    description:
+    code_samples:
+    type: boolean
+  - name: opacity
+    summary: |
+      The opacity of the element.
+    description:
+    code_samples:
+    type: number
+  - name: pressed
+    summary: |
+      Event to fire when the element is pressed.
+    description:
+    code_samples:
+    type: Event
+methods:
+  - name: add
+    summary: |
+      Adds a child element.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: VisualElement
+        default:
+        summary:
+      - name: element
+        type: VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: attachToMesh
+    summary:
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: VisualElement
+        default:
+        summary:
+      - name: mesh
+        type: MeshEntity
+        default:
+        summary:
+      - name: width
+        type: number
+        default:
+        summary: |
+          (Optional) The width of the element.
+      - name: height
+        type: number
+        default:
+        summary: |
+          (Optional) The height of the element.
+    returns:
+      - type: void
+        summary:
+  - name: clear
+    summary: |
+      Removes all children from the element.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: setDisplay
+    summary: |
+      Sets whether or not to display the element.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: VisualElement
+        default:
+        summary:
+      - name: value
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+hidden:
+  - name: load
+    summary: |
+      Loads an image from an ImageAsset.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: VisualElement
+        default:
+        summary:
+      - name: image
+        type: ImageAsset
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: loadUser
+    summary: |
+      Loads an image from an ImageAsset.
+    description:
+    code_samples:
+    parameters:
+      - name: self
+        type: VisualElement
+        default:
+        summary:
+      - name: userId
+        type: string
+        default:
+        summary:
+      - name: scene
+        type: string
+        default: ""
+        summary:
+      - name: facingDirection
+        type: string
+        default: "frontRight"
+        summary:
+    returns:
+      - type: void
+        summary:

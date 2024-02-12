@@ -1,0 +1,32 @@
+name: Avatar
+type: class
+summary: |
+  A user avatar within the world
+description: |
+  A `Class.Character` type that represents a user character within the world.
+  This could be another player, a bot, an npc, or other versions of a user character.
+code_samples:
+inherits:
+  - Character
+properties:
+  - name: isBot
+    summary:
+    description:
+    code_samples:
+    type: boolean
+  - name: isLocal
+    summary:
+    description:
+    code_samples:
+    type: boolean
+  - name: isPlayer
+    summary:
+    description:
+    code_samples:
+    type: boolean
+  - name: user
+    summary:
+    description:
+    code_samples:
+    type: User
+methods:

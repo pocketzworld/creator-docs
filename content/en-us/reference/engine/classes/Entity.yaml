@@ -1,0 +1,187 @@
+name: Entity
+type: class
+summary: |
+  The base class for all objects that exist within the `Class.Room`
+description: |
+  `Class.Entity` is the base type for all objects that exists within the
+  `Class.Room`. There are several implementations of `Class.Entity`, such as 
+  `Class.Avatar` and `Class.Anchor`
+  
+  Generally, when documentation refers to an "entity" this is what it refers to.
+code_samples:
+inherits:
+properties:
+  - name: id
+    summary:
+    description:
+    code_samples:
+    type: string
+  - name: isEnabled
+    summary:
+    description:
+    code_samples:
+    type: boolean
+  - name: name
+    summary:
+    description:
+    code_samples:
+    type: string
+  - name: parent
+    summary: |
+      The parent of this entity.
+    description: |
+      The parent of this entity. This will be nil if this entity is the root
+    code_samples:
+    type: Transform
+  - name: state
+    summary: |
+      The current state of this entity.
+    description: |
+      The current state of this entity, defined by a table of keys and values
+    code_samples:
+    type: Table
+  - name: tapped
+    summary: |
+      The `Class.Event` that fires when this entity is tapped.
+    description: |
+      The event that fires when this entity is tapped. This is only fired if
+      `Class.Entity.isEnabled` is true.
+    code_samples:
+    type: Event
+  - name: transform
+    summary: |
+      The `Class.Transform` of this object in 3D Space.
+    description: |
+      The `Class.Transform` that's attached to this entity that controls its
+      position, rotation, and scale in 3D space.
+    code_samples:
+    type: Transform
+methods:
+  - name: createEntity
+    summary: |
+      Creates a new entity.
+    description:
+    code_samples:
+    parameters:
+      - name: asset
+        type: PrefabAsset
+        default:
+        summary: |
+          (Optional) The asset to create an entity copy from. Default is an empty entity.
+      - name: name
+        type: Entity
+        default:
+        summary: |
+          (Optional) The parent entity to attach this creation to. Default is the room itself.
+    returns:
+      - type: Entity
+        summary: |
+          The created entity.
+  - name: destroy
+    summary: |
+      Destroys target.
+    description:
+    code_samples:
+    parameters:
+      - name: target
+        type: Entity
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: find
+    summary: |
+      Gets the first entity found with the given name that is under a specific entity.
+    description: |
+      Returns the first `Class.Entity` found with the given name that is a child of `self`.
+      This can be given as a path as well (e.g. "Child/Grandchild").
+      
+      This is more efficient than searching the whole room.
+    code_samples:
+    parameters:
+      - name: self
+        type: Entity
+        default:
+        summary: |
+          The parent entity to search under.
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the entity to look for.
+    returns:
+      - type: Entity
+        summary: |
+          The entity found. This will be nil if none are found.
+  - name: findNamed
+    summary: |
+      Gets all entities with the given name under a specific entity.
+    description: |
+      Returns an array of entities that match the given name that are children of `self`.
+      This can be given as a path as well (e.g. "Child/Grandchild").
+      
+      This is more efficient than searching the whole room.
+    code_samples:
+    parameters:
+      - name: self
+        type: Entity
+        default:
+        summary: |
+          The parent entity to search under.
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the entities to look for.
+    returns:
+      - type: Array
+        summary: |
+          The array of entities. This will be empty if none are found.
+  - name: findTyped
+    summary: |
+      Gets entities of given Type that are under a specific entity.
+    description: |
+      Returns an array of entities that are the given type that are children of `self`.
+      
+      This is more efficient than searching the whole room.
+    code_samples:
+    parameters:
+      - name: self
+        type: Entity
+        default:
+        summary: |
+          The parent entity to search under.
+      - name: type
+        type: string
+        default:
+        summary: |
+          The name of the type to look for.
+    returns:
+      - type: Array
+        summary: |
+          The array of entities. This will be empty if none are found.
+hidden:
+  - name: findTagged
+    summary: |
+      Gets entities with the given tag that under a specific entity.
+    description: |
+      Returns an array of entities that have given tag that are children of `self`.
+
+      This is more efficient than searching the whole room.
+    code_samples:
+    parameters:
+      - name: self
+        type: Entity
+        default:
+        summary: |
+          The parent entity to search under.
+      - name: tag
+        type: string
+        default:
+        summary: |
+          The name of the tag on the entities to look for.
+    returns:
+      - type: Array
+        summary: |
+          The array of entities. This will be empty if none are found.

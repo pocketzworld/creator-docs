@@ -1,0 +1,18 @@
+name: Events
+type: service
+summary: |
+  `hr.events` Provides access to event related functions, such as creating your own events
+description:
+code_samples:
+properties:
+methods:
+  - name: createEvent
+    summary: |
+      Creates a new event.
+    description:
+    code_samples:
+    parameters:
+    returns:
+      - type: Event
+        summary: |
+          The new event

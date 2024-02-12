@@ -1,0 +1,30 @@
+name: Trigger
+type: class
+summary: |
+  A volume within the world that sends trigger events.
+description: |
+  A `Class.Entity` type that represents a volume within the world that sends events when
+  entities enter, exit, or stay in the volume.
+code_samples:
+inherits:
+  - Entity
+properties:
+  - name: triggerEnter
+    summary: |
+      Fires when an entity enters the trigger. Sends the other entity as a parameter to the event.
+    description:
+    code_samples:
+    type: Event
+  - name: triggerExit
+    summary: |
+      Fires when an entity exits the trigger. Sends the other entity as a parameter to the event.
+    description:
+    code_samples:
+    type: Event
+  - name: triggerStay
+    summary: |
+      Fires each frame an entity stays in the trigger. Sends the other entity as a parameter to the event.
+    description:
+    code_samples:
+    type: Event
+methods:
