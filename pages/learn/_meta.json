@@ -3,10 +3,6 @@
     "title": "Guides",
     "redirectTo": "/learn/guides/bots/creating-a-bot"
   },
-  "engine-api": {
-    "title": "Engine Api",
-    "redirectTo": "/learn/engine-api/classes/Anchor"
-  },
   "bots-api": {
     "title": "Bots Api",
     "redirectTo": "/learn/bots-api/general/overview"
