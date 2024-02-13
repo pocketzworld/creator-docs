@@ -22,20 +22,6 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-  - name: depth
-    summary: |
-      [Unity's Texture3D.depth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-depth.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: isReadable
-    summary: |
-      [Unity's Texture3D.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-isReadable.html)
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
 methods: 
   - name: Apply
     summary: |

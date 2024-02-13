@@ -60,41 +60,6 @@ properties:
     is_static: false
     code_samples:
     type: Vector3
-  - name: center
-    summary: |
-      [Unity's Bounds.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-center.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: size
-    summary: |
-      [Unity's Bounds.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-size.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: extents
-    summary: |
-      [Unity's Bounds.extents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-extents.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: min
-    summary: |
-      [Unity's Bounds.min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-min.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: max
-    summary: |
-      [Unity's Bounds.max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-max.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
 methods: 
   - name: SetMinMax
     summary: |

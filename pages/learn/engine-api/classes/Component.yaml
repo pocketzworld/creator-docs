@@ -29,27 +29,6 @@ properties:
     is_static: false
     code_samples:
     type: string
-  - name: transform
-    summary: |
-      [Unity's Component.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Transform
-  - name: gameObject
-    summary: |
-      [Unity's Component.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html)
-    description:
-    is_static: false
-    code_samples:
-    type: GameObject
-  - name: tag
-    summary: |
-      [Unity's Component.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-tag.html)
-    description:
-    is_static: false
-    code_samples:
-    type: string
 methods: 
   - name: GetComponent
     summary: |

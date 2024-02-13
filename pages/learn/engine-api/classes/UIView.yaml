@@ -60,48 +60,6 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-  - name: IsDisposed
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: SortOrder
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: IsBound
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: IsDisplayed
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: IsRunningAsync
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: IsStale
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
 methods: 
   - name: Reset
     summary: |

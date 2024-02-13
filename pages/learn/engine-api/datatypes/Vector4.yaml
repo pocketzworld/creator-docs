@@ -54,27 +54,6 @@ properties:
     is_static: false
     code_samples:
     type: number
-  - name: normalized
-    summary: |
-      [Unity's Vector4.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-normalized.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector4
-  - name: magnitude
-    summary: |
-      [Unity's Vector4.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: sqrMagnitude
-    summary: |
-      [Unity's Vector4.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-sqrMagnitude.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
   - name: x
     summary: |
       [Unity's Vector4.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-x.html)

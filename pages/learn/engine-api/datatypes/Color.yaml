@@ -57,34 +57,6 @@ properties:
     is_static: false
     code_samples:
     type: number
-  - name: grayscale
-    summary: |
-      [Unity's Color.grayscale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: linear
-    summary: |
-      [Unity's Color.linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Color
-  - name: gamma
-    summary: |
-      [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Color
-  - name: maxColorComponent
-    summary: |
-      [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
   - name: r
     summary: |
       [Unity's Color.r Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-r.html)

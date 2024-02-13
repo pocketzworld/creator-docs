@@ -75,48 +75,6 @@ properties:
     is_static: false
     code_samples:
     type: Matrix4x4
-  - name: rotation
-    summary: |
-      [Unity's Matrix4x4.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-rotation.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Quaternion
-  - name: lossyScale
-    summary: |
-      [Unity's Matrix4x4.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-lossyScale.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: isIdentity
-    summary: |
-      [Unity's Matrix4x4.isIdentity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-isIdentity.html)
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: determinant
-    summary: |
-      [Unity's Matrix4x4.determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-determinant.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: inverse
-    summary: |
-      [Unity's Matrix4x4.inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-inverse.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Matrix4x4
-  - name: transpose
-    summary: |
-      [Unity's Matrix4x4.transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-transpose.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Matrix4x4
   - name: m00
     summary: |
       [Unity's Matrix4x4.m00 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m00.html)

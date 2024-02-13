@@ -50,27 +50,6 @@ properties:
     is_static: false
     code_samples:
     type: number
-  - name: normalized
-    summary: |
-      [Unity's Vector3.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-normalized.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: magnitude
-    summary: |
-      [Unity's Vector3.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-magnitude.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: sqrMagnitude
-    summary: |
-      [Unity's Vector3.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-sqrMagnitude.html)
-    description:
-    is_static: false
-    code_samples:
-    type: number
   - name: x
     summary: |
       [Unity's Vector3.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-x.html)

@@ -14,13 +14,6 @@ properties:
     is_static: false
     code_samples:
     type: string
-  - name: name
-    summary: |
-      [Unity's Object.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-name.html)
-    description:
-    is_static: false
-    code_samples:
-    type: string
 methods: 
   - name: GetInstanceID
     summary: |

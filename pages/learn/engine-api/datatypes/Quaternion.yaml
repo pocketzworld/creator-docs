@@ -47,20 +47,6 @@ properties:
     is_static: false
     code_samples:
     type: Quaternion
-  - name: eulerAngles
-    summary: |
-      [Unity's Quaternion.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-eulerAngles.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Vector3
-  - name: normalized
-    summary: |
-      [Unity's Quaternion.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html)
-    description:
-    is_static: false
-    code_samples:
-    type: Quaternion
   - name: x
     summary: |
       [Unity's Quaternion.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-x.html)
