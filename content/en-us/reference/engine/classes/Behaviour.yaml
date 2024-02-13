@@ -9,28 +9,28 @@ inherits:
 constructors: 
 properties: 
   - name: enabled
-    summary:|
+    summary: |
       [Unity's Behaviour.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-enabled.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isActiveAndEnabled
-    summary:|
+    summary: |
       [Unity's Behaviour.isActiveAndEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-isActiveAndEnabled.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: enabled
-    summary:|
+    summary: |
       [Unity's Behaviour.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-enabled.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isActiveAndEnabled
-    summary:|
+    summary: |
       [Unity's Behaviour.isActiveAndEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-isActiveAndEnabled.html)
     description:
     is_static: false

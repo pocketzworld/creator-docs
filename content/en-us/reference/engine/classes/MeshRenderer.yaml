@@ -9,42 +9,42 @@ inherits:
 constructors: 
 properties: 
   - name: additionalVertexStreams
-    summary:|
+    summary: |
       [Unity's MeshRenderer.additionalVertexStreams Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-additionalVertexStreams.html)
     description:
     is_static: false
     code_samples:
     type: Mesh
   - name: enlightenVertexStream
-    summary:|
+    summary: |
       [Unity's MeshRenderer.enlightenVertexStream Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-enlightenVertexStream.html)
     description:
     is_static: false
     code_samples:
     type: Mesh
   - name: subMeshStartIndex
-    summary:|
+    summary: |
       [Unity's MeshRenderer.subMeshStartIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-subMeshStartIndex.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: additionalVertexStreams
-    summary:|
+    summary: |
       [Unity's MeshRenderer.additionalVertexStreams Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-additionalVertexStreams.html)
     description:
     is_static: false
     code_samples:
     type: Mesh
   - name: enlightenVertexStream
-    summary:|
+    summary: |
       [Unity's MeshRenderer.enlightenVertexStream Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-enlightenVertexStream.html)
     description:
     is_static: false
     code_samples:
     type: Mesh
   - name: subMeshStartIndex
-    summary:|
+    summary: |
       [Unity's MeshRenderer.subMeshStartIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-subMeshStartIndex.html)
     description:
     is_static: false

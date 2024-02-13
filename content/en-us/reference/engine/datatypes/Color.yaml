@@ -7,7 +7,7 @@ code_samples:
 inherits: 
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's Color.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-new.html)
     description:
     is_static: false
@@ -30,84 +30,84 @@ constructors:
         summary:
 properties: 
   - name: grayscale
-    summary:|
+    summary: |
       [Unity's Color.grayscale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: linear
-    summary:|
+    summary: |
       [Unity's Color.linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html)
     description:
     is_static: false
     code_samples:
     type: Color
   - name: gamma
-    summary:|
+    summary: |
       [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
     description:
     is_static: false
     code_samples:
     type: Color
   - name: maxColorComponent
-    summary:|
+    summary: |
       [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: grayscale
-    summary:|
+    summary: |
       [Unity's Color.grayscale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: linear
-    summary:|
+    summary: |
       [Unity's Color.linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html)
     description:
     is_static: false
     code_samples:
     type: Color
   - name: gamma
-    summary:|
+    summary: |
       [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
     description:
     is_static: false
     code_samples:
     type: Color
   - name: maxColorComponent
-    summary:|
+    summary: |
       [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: r
-    summary:|
+    summary: |
       [Unity's Color.r Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-r.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: g
-    summary:|
+    summary: |
       [Unity's Color.g Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-g.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: b
-    summary:|
+    summary: |
       [Unity's Color.b Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-b.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: a
-    summary:|
+    summary: |
       [Unity's Color.a Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-a.html)
     description:
     is_static: false
@@ -115,7 +115,7 @@ properties:
     type: number
 methods: 
   - name: Lerp
-    summary:|
+    summary: |
       [Unity's Color.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.Lerp.html)
     description:
     is_static: true
@@ -137,7 +137,7 @@ methods:
       - type: Color
         summary:
   - name: LerpUnclamped
-    summary:|
+    summary: |
       [Unity's Color.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.LerpUnclamped.html)
     description:
     is_static: true
@@ -159,7 +159,7 @@ methods:
       - type: Color
         summary:
   - name: HSVToRGB
-    summary:|
+    summary: |
       [Unity's Color.HSVToRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.HSVToRGB.html)
     description:
     is_static: true

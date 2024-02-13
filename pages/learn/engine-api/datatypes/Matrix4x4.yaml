@@ -7,7 +7,7 @@ code_samples:
 inherits: 
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's Matrix4x4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-new.html)
     description:
     is_static: false
@@ -34,196 +34,196 @@ constructors:
         summary:
 properties: 
   - name: rotation
-    summary:|
+    summary: |
       [Unity's Matrix4x4.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-rotation.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: lossyScale
-    summary:|
+    summary: |
       [Unity's Matrix4x4.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-lossyScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: isIdentity
-    summary:|
+    summary: |
       [Unity's Matrix4x4.isIdentity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-isIdentity.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: determinant
-    summary:|
+    summary: |
       [Unity's Matrix4x4.determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-determinant.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: inverse
-    summary:|
+    summary: |
       [Unity's Matrix4x4.inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-inverse.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: transpose
-    summary:|
+    summary: |
       [Unity's Matrix4x4.transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-transpose.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: rotation
-    summary:|
+    summary: |
       [Unity's Matrix4x4.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-rotation.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: lossyScale
-    summary:|
+    summary: |
       [Unity's Matrix4x4.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-lossyScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: isIdentity
-    summary:|
+    summary: |
       [Unity's Matrix4x4.isIdentity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-isIdentity.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: determinant
-    summary:|
+    summary: |
       [Unity's Matrix4x4.determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-determinant.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: inverse
-    summary:|
+    summary: |
       [Unity's Matrix4x4.inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-inverse.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: transpose
-    summary:|
+    summary: |
       [Unity's Matrix4x4.transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-transpose.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: m00
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m00 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m00.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m10
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m10 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m10.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m20
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m20 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m20.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m30
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m30 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m30.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m01
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m01 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m01.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m11
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m11 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m11.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m21
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m21 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m21.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m31
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m31 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m31.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m02
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m02 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m02.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m12
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m12 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m12.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m22
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m22 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m22.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m32
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m32 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m32.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m03
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m03 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m03.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m13
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m13 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m13.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m23
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m23 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m23.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: m33
-    summary:|
+    summary: |
       [Unity's Matrix4x4.m33 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m33.html)
     description:
     is_static: false
@@ -231,7 +231,7 @@ properties:
     type: number
 methods: 
   - name: ValidTRS
-    summary:|
+    summary: |
       [Unity's Matrix4x4.ValidTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.ValidTRS.html)
     description:
     is_static: false
@@ -241,7 +241,7 @@ methods:
       - type: boolean
         summary:
   - name: SetTRS
-    summary:|
+    summary: |
       [Unity's Matrix4x4.SetTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetTRS.html)
     description:
     is_static: false
@@ -263,7 +263,7 @@ methods:
       - type: void
         summary:
   - name: GetColumn
-    summary:|
+    summary: |
       [Unity's Matrix4x4.GetColumn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetColumn.html)
     description:
     is_static: false
@@ -277,7 +277,7 @@ methods:
       - type: Vector4
         summary:
   - name: GetRow
-    summary:|
+    summary: |
       [Unity's Matrix4x4.GetRow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetRow.html)
     description:
     is_static: false
@@ -291,7 +291,7 @@ methods:
       - type: Vector4
         summary:
   - name: GetPosition
-    summary:|
+    summary: |
       [Unity's Matrix4x4.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetPosition.html)
     description:
     is_static: false
@@ -301,7 +301,7 @@ methods:
       - type: Vector3
         summary:
   - name: SetColumn
-    summary:|
+    summary: |
       [Unity's Matrix4x4.SetColumn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetColumn.html)
     description:
     is_static: false
@@ -319,7 +319,7 @@ methods:
       - type: void
         summary:
   - name: SetRow
-    summary:|
+    summary: |
       [Unity's Matrix4x4.SetRow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetRow.html)
     description:
     is_static: false
@@ -337,7 +337,7 @@ methods:
       - type: void
         summary:
   - name: MultiplyPoint
-    summary:|
+    summary: |
       [Unity's Matrix4x4.MultiplyPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyPoint.html)
     description:
     is_static: false
@@ -351,7 +351,7 @@ methods:
       - type: Vector3
         summary:
   - name: MultiplyPoint3x4
-    summary:|
+    summary: |
       [Unity's Matrix4x4.MultiplyPoint3x4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyPoint3x4.html)
     description:
     is_static: false
@@ -365,7 +365,7 @@ methods:
       - type: Vector3
         summary:
   - name: MultiplyVector
-    summary:|
+    summary: |
       [Unity's Matrix4x4.MultiplyVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyVector.html)
     description:
     is_static: false
@@ -379,7 +379,7 @@ methods:
       - type: Vector3
         summary:
   - name: Determinant
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Determinant.html)
     description:
     is_static: true
@@ -393,7 +393,7 @@ methods:
       - type: number
         summary:
   - name: TRS
-    summary:|
+    summary: |
       [Unity's Matrix4x4.TRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.TRS.html)
     description:
     is_static: true
@@ -415,7 +415,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Inverse
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Inverse.html)
     description:
     is_static: true
@@ -429,7 +429,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Transpose
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Transpose.html)
     description:
     is_static: true
@@ -443,7 +443,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Ortho
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Ortho Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Ortho.html)
     description:
     is_static: true
@@ -477,7 +477,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Perspective
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Perspective Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Perspective.html)
     description:
     is_static: true
@@ -503,7 +503,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: LookAt
-    summary:|
+    summary: |
       [Unity's Matrix4x4.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.LookAt.html)
     description:
     is_static: true
@@ -525,7 +525,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Frustum
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Frustum Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Frustum.html)
     description:
     is_static: true
@@ -559,7 +559,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Scale
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Scale.html)
     description:
     is_static: true
@@ -573,7 +573,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Translate
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Translate.html)
     description:
     is_static: true
@@ -587,7 +587,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: Rotate
-    summary:|
+    summary: |
       [Unity's Matrix4x4.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Rotate.html)
     description:
     is_static: true

@@ -8,7 +8,7 @@ inherits:
   - VisualElement
 constructors: 
   - name: new
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -19,84 +19,84 @@ constructors:
         summary:
 properties: 
   - name: IsDisposed
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: SortOrder
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: number
   - name: IsBound
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsDisplayed
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsRunningAsync
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsStale
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsDisposed
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: SortOrder
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: number
   - name: IsBound
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsDisplayed
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsRunningAsync
-    summary:|
+    summary: |
       
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsStale
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -104,7 +104,7 @@ properties:
     type: boolean
 methods: 
   - name: Reset
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -114,7 +114,7 @@ methods:
       - type: void
         summary:
   - name: Dispose
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -124,7 +124,7 @@ methods:
       - type: void
         summary:
   - name: BindHierarchy
-    summary:|
+    summary: |
       
     description:
     is_static: true
@@ -138,7 +138,7 @@ methods:
       - type: void
         summary:
   - name: DisposeChildren
-    summary:|
+    summary: |
       
     description:
     is_static: true

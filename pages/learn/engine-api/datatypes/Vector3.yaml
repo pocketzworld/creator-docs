@@ -7,7 +7,7 @@ code_samples:
 inherits: 
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's Vector3.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-new.html)
     description:
     is_static: false
@@ -26,63 +26,63 @@ constructors:
         summary:
 properties: 
   - name: normalized
-    summary:|
+    summary: |
       [Unity's Vector3.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-normalized.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: magnitude
-    summary:|
+    summary: |
       [Unity's Vector3.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-magnitude.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
-    summary:|
+    summary: |
       [Unity's Vector3.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-sqrMagnitude.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: normalized
-    summary:|
+    summary: |
       [Unity's Vector3.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-normalized.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: magnitude
-    summary:|
+    summary: |
       [Unity's Vector3.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-magnitude.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
-    summary:|
+    summary: |
       [Unity's Vector3.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-sqrMagnitude.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: x
-    summary:|
+    summary: |
       [Unity's Vector3.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-x.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: y
-    summary:|
+    summary: |
       [Unity's Vector3.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-y.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: z
-    summary:|
+    summary: |
       [Unity's Vector3.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-z.html)
     description:
     is_static: false
@@ -90,7 +90,7 @@ properties:
     type: number
 methods: 
   - name: Set
-    summary:|
+    summary: |
       [Unity's Vector3.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Set.html)
     description:
     is_static: false
@@ -112,7 +112,7 @@ methods:
       - type: void
         summary:
   - name: Scale
-    summary:|
+    summary: |
       [Unity's Vector3.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html)
     description:
     is_static: false
@@ -126,7 +126,7 @@ methods:
       - type: void
         summary:
   - name: Normalize
-    summary:|
+    summary: |
       [Unity's Vector3.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html)
     description:
     is_static: false
@@ -136,7 +136,7 @@ methods:
       - type: void
         summary:
   - name: Slerp
-    summary:|
+    summary: |
       [Unity's Vector3.Slerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Slerp.html)
     description:
     is_static: true
@@ -158,7 +158,7 @@ methods:
       - type: Vector3
         summary:
   - name: SlerpUnclamped
-    summary:|
+    summary: |
       [Unity's Vector3.SlerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SlerpUnclamped.html)
     description:
     is_static: true
@@ -180,7 +180,7 @@ methods:
       - type: Vector3
         summary:
   - name: RotateTowards
-    summary:|
+    summary: |
       [Unity's Vector3.RotateTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.RotateTowards.html)
     description:
     is_static: true
@@ -206,7 +206,7 @@ methods:
       - type: Vector3
         summary:
   - name: Lerp
-    summary:|
+    summary: |
       [Unity's Vector3.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Lerp.html)
     description:
     is_static: true
@@ -228,7 +228,7 @@ methods:
       - type: Vector3
         summary:
   - name: LerpUnclamped
-    summary:|
+    summary: |
       [Unity's Vector3.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.LerpUnclamped.html)
     description:
     is_static: true
@@ -250,7 +250,7 @@ methods:
       - type: Vector3
         summary:
   - name: MoveTowards
-    summary:|
+    summary: |
       [Unity's Vector3.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.MoveTowards.html)
     description:
     is_static: true
@@ -272,7 +272,7 @@ methods:
       - type: Vector3
         summary:
   - name: Scale
-    summary:|
+    summary: |
       [Unity's Vector3.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html)
     description:
     is_static: true
@@ -290,7 +290,7 @@ methods:
       - type: Vector3
         summary:
   - name: Cross
-    summary:|
+    summary: |
       [Unity's Vector3.Cross Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Cross.html)
     description:
     is_static: true
@@ -308,7 +308,7 @@ methods:
       - type: Vector3
         summary:
   - name: Reflect
-    summary:|
+    summary: |
       [Unity's Vector3.Reflect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Reflect.html)
     description:
     is_static: true
@@ -326,7 +326,7 @@ methods:
       - type: Vector3
         summary:
   - name: Normalize
-    summary:|
+    summary: |
       [Unity's Vector3.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html)
     description:
     is_static: true
@@ -340,7 +340,7 @@ methods:
       - type: Vector3
         summary:
   - name: Dot
-    summary:|
+    summary: |
       [Unity's Vector3.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Dot.html)
     description:
     is_static: true
@@ -358,7 +358,7 @@ methods:
       - type: number
         summary:
   - name: Project
-    summary:|
+    summary: |
       [Unity's Vector3.Project Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Project.html)
     description:
     is_static: true
@@ -376,7 +376,7 @@ methods:
       - type: Vector3
         summary:
   - name: ProjectOnPlane
-    summary:|
+    summary: |
       [Unity's Vector3.ProjectOnPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.ProjectOnPlane.html)
     description:
     is_static: true
@@ -394,7 +394,7 @@ methods:
       - type: Vector3
         summary:
   - name: Angle
-    summary:|
+    summary: |
       [Unity's Vector3.Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Angle.html)
     description:
     is_static: true
@@ -412,7 +412,7 @@ methods:
       - type: number
         summary:
   - name: SignedAngle
-    summary:|
+    summary: |
       [Unity's Vector3.SignedAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SignedAngle.html)
     description:
     is_static: true
@@ -434,7 +434,7 @@ methods:
       - type: number
         summary:
   - name: Distance
-    summary:|
+    summary: |
       [Unity's Vector3.Distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Distance.html)
     description:
     is_static: true
@@ -452,7 +452,7 @@ methods:
       - type: number
         summary:
   - name: ClampMagnitude
-    summary:|
+    summary: |
       [Unity's Vector3.ClampMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.ClampMagnitude.html)
     description:
     is_static: true
@@ -470,7 +470,7 @@ methods:
       - type: Vector3
         summary:
   - name: Magnitude
-    summary:|
+    summary: |
       [Unity's Vector3.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Magnitude.html)
     description:
     is_static: true
@@ -484,7 +484,7 @@ methods:
       - type: number
         summary:
   - name: SqrMagnitude
-    summary:|
+    summary: |
       [Unity's Vector3.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SqrMagnitude.html)
     description:
     is_static: true
@@ -498,7 +498,7 @@ methods:
       - type: number
         summary:
   - name: Min
-    summary:|
+    summary: |
       [Unity's Vector3.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Min.html)
     description:
     is_static: true
@@ -516,7 +516,7 @@ methods:
       - type: Vector3
         summary:
   - name: Max
-    summary:|
+    summary: |
       [Unity's Vector3.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Max.html)
     description:
     is_static: true

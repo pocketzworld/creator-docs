@@ -9,126 +9,126 @@ inherits:
 constructors: 
 properties: 
   - name: mipmapCount
-    summary:|
+    summary: |
       [Unity's Texture.mipmapCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipmapCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: width
-    summary:|
+    summary: |
       [Unity's Texture.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-width.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: height
-    summary:|
+    summary: |
       [Unity's Texture.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-height.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: isReadable
-    summary:|
+    summary: |
       [Unity's Texture.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isReadable.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: anisoLevel
-    summary:|
+    summary: |
       [Unity's Texture.anisoLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-anisoLevel.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: mipMapBias
-    summary:|
+    summary: |
       [Unity's Texture.mipMapBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipMapBias.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: texelSize
-    summary:|
+    summary: |
       [Unity's Texture.texelSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-texelSize.html)
     description:
     is_static: false
     code_samples:
     type: Vector2
   - name: updateCount
-    summary:|
+    summary: |
       [Unity's Texture.updateCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-updateCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: isDataSRGB
-    summary:|
+    summary: |
       [Unity's Texture.isDataSRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isDataSRGB.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: mipmapCount
-    summary:|
+    summary: |
       [Unity's Texture.mipmapCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipmapCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: width
-    summary:|
+    summary: |
       [Unity's Texture.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-width.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: height
-    summary:|
+    summary: |
       [Unity's Texture.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-height.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: isReadable
-    summary:|
+    summary: |
       [Unity's Texture.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isReadable.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: anisoLevel
-    summary:|
+    summary: |
       [Unity's Texture.anisoLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-anisoLevel.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: mipMapBias
-    summary:|
+    summary: |
       [Unity's Texture.mipMapBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipMapBias.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: texelSize
-    summary:|
+    summary: |
       [Unity's Texture.texelSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-texelSize.html)
     description:
     is_static: false
     code_samples:
     type: Vector2
   - name: updateCount
-    summary:|
+    summary: |
       [Unity's Texture.updateCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-updateCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: isDataSRGB
-    summary:|
+    summary: |
       [Unity's Texture.isDataSRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isDataSRGB.html)
     description:
     is_static: false
@@ -136,7 +136,7 @@ properties:
     type: boolean
 methods: 
   - name: IncrementUpdateCount
-    summary:|
+    summary: |
       [Unity's Texture.IncrementUpdateCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.IncrementUpdateCount.html)
     description:
     is_static: false
@@ -146,7 +146,7 @@ methods:
       - type: void
         summary:
   - name: SetGlobalAnisotropicFilteringLimits
-    summary:|
+    summary: |
       [Unity's Texture.SetGlobalAnisotropicFilteringLimits Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.SetGlobalAnisotropicFilteringLimits.html)
     description:
     is_static: true
@@ -164,7 +164,7 @@ methods:
       - type: void
         summary:
   - name: SetStreamingTextureMaterialDebugProperties
-    summary:|
+    summary: |
       [Unity's Texture.SetStreamingTextureMaterialDebugProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.SetStreamingTextureMaterialDebugProperties.html)
     description:
     is_static: true

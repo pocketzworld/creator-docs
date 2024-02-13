@@ -9,266 +9,266 @@ inherits:
 constructors: 
 properties: 
   - name: position
-    summary:|
+    summary: |
       [Unity's Transform.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: localPosition
-    summary:|
+    summary: |
       [Unity's Transform.localPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localPosition.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: eulerAngles
-    summary:|
+    summary: |
       [Unity's Transform.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: localEulerAngles
-    summary:|
+    summary: |
       [Unity's Transform.localEulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localEulerAngles.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: right
-    summary:|
+    summary: |
       [Unity's Transform.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-right.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: up
-    summary:|
+    summary: |
       [Unity's Transform.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-up.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: forward
-    summary:|
+    summary: |
       [Unity's Transform.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-forward.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: rotation
-    summary:|
+    summary: |
       [Unity's Transform.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-rotation.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: localRotation
-    summary:|
+    summary: |
       [Unity's Transform.localRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localRotation.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: localScale
-    summary:|
+    summary: |
       [Unity's Transform.localScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: parent
-    summary:|
+    summary: |
       [Unity's Transform.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: worldToLocalMatrix
-    summary:|
+    summary: |
       [Unity's Transform.worldToLocalMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-worldToLocalMatrix.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: localToWorldMatrix
-    summary:|
+    summary: |
       [Unity's Transform.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localToWorldMatrix.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: root
-    summary:|
+    summary: |
       [Unity's Transform.root Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-root.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: childCount
-    summary:|
+    summary: |
       [Unity's Transform.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: lossyScale
-    summary:|
+    summary: |
       [Unity's Transform.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-lossyScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: hasChanged
-    summary:|
+    summary: |
       [Unity's Transform.hasChanged Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hasChanged.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: hierarchyCapacity
-    summary:|
+    summary: |
       [Unity's Transform.hierarchyCapacity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCapacity.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: hierarchyCount
-    summary:|
+    summary: |
       [Unity's Transform.hierarchyCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: position
-    summary:|
+    summary: |
       [Unity's Transform.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: localPosition
-    summary:|
+    summary: |
       [Unity's Transform.localPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localPosition.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: eulerAngles
-    summary:|
+    summary: |
       [Unity's Transform.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: localEulerAngles
-    summary:|
+    summary: |
       [Unity's Transform.localEulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localEulerAngles.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: right
-    summary:|
+    summary: |
       [Unity's Transform.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-right.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: up
-    summary:|
+    summary: |
       [Unity's Transform.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-up.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: forward
-    summary:|
+    summary: |
       [Unity's Transform.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-forward.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: rotation
-    summary:|
+    summary: |
       [Unity's Transform.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-rotation.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: localRotation
-    summary:|
+    summary: |
       [Unity's Transform.localRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localRotation.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: localScale
-    summary:|
+    summary: |
       [Unity's Transform.localScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: parent
-    summary:|
+    summary: |
       [Unity's Transform.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: worldToLocalMatrix
-    summary:|
+    summary: |
       [Unity's Transform.worldToLocalMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-worldToLocalMatrix.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: localToWorldMatrix
-    summary:|
+    summary: |
       [Unity's Transform.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localToWorldMatrix.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: root
-    summary:|
+    summary: |
       [Unity's Transform.root Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-root.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: childCount
-    summary:|
+    summary: |
       [Unity's Transform.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: lossyScale
-    summary:|
+    summary: |
       [Unity's Transform.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-lossyScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: hasChanged
-    summary:|
+    summary: |
       [Unity's Transform.hasChanged Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hasChanged.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: hierarchyCapacity
-    summary:|
+    summary: |
       [Unity's Transform.hierarchyCapacity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCapacity.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: hierarchyCount
-    summary:|
+    summary: |
       [Unity's Transform.hierarchyCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCount.html)
     description:
     is_static: false
@@ -276,7 +276,7 @@ properties:
     type: number
 methods: 
   - name: SetParent
-    summary:|
+    summary: |
       [Unity's Transform.SetParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html)
     description:
     is_static: false
@@ -290,7 +290,7 @@ methods:
       - type: void
         summary:
   - name: SetPositionAndRotation
-    summary:|
+    summary: |
       [Unity's Transform.SetPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetPositionAndRotation.html)
     description:
     is_static: false
@@ -308,7 +308,7 @@ methods:
       - type: void
         summary:
   - name: SetLocalPositionAndRotation
-    summary:|
+    summary: |
       [Unity's Transform.SetLocalPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetLocalPositionAndRotation.html)
     description:
     is_static: false
@@ -326,7 +326,7 @@ methods:
       - type: void
         summary:
   - name: RotateAround
-    summary:|
+    summary: |
       [Unity's Transform.RotateAround Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.RotateAround.html)
     description:
     is_static: false
@@ -348,7 +348,7 @@ methods:
       - type: void
         summary:
   - name: LookAt
-    summary:|
+    summary: |
       [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
     description:
     is_static: false
@@ -366,7 +366,7 @@ methods:
       - type: void
         summary:
   - name: TransformDirection
-    summary:|
+    summary: |
       [Unity's Transform.TransformDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformDirection.html)
     description:
     is_static: false
@@ -380,7 +380,7 @@ methods:
       - type: Vector3
         summary:
   - name: InverseTransformDirection
-    summary:|
+    summary: |
       [Unity's Transform.InverseTransformDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformDirection.html)
     description:
     is_static: false
@@ -394,7 +394,7 @@ methods:
       - type: Vector3
         summary:
   - name: TransformVector
-    summary:|
+    summary: |
       [Unity's Transform.TransformVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformVector.html)
     description:
     is_static: false
@@ -408,7 +408,7 @@ methods:
       - type: Vector3
         summary:
   - name: InverseTransformVector
-    summary:|
+    summary: |
       [Unity's Transform.InverseTransformVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformVector.html)
     description:
     is_static: false
@@ -422,7 +422,7 @@ methods:
       - type: Vector3
         summary:
   - name: TransformPoint
-    summary:|
+    summary: |
       [Unity's Transform.TransformPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformPoint.html)
     description:
     is_static: false
@@ -436,7 +436,7 @@ methods:
       - type: Vector3
         summary:
   - name: InverseTransformPoint
-    summary:|
+    summary: |
       [Unity's Transform.InverseTransformPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformPoint.html)
     description:
     is_static: false
@@ -450,7 +450,7 @@ methods:
       - type: Vector3
         summary:
   - name: DetachChildren
-    summary:|
+    summary: |
       [Unity's Transform.DetachChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.DetachChildren.html)
     description:
     is_static: false
@@ -460,7 +460,7 @@ methods:
       - type: void
         summary:
   - name: SetAsFirstSibling
-    summary:|
+    summary: |
       [Unity's Transform.SetAsFirstSibling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsFirstSibling.html)
     description:
     is_static: false
@@ -470,7 +470,7 @@ methods:
       - type: void
         summary:
   - name: SetAsLastSibling
-    summary:|
+    summary: |
       [Unity's Transform.SetAsLastSibling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsLastSibling.html)
     description:
     is_static: false
@@ -480,7 +480,7 @@ methods:
       - type: void
         summary:
   - name: SetSiblingIndex
-    summary:|
+    summary: |
       [Unity's Transform.SetSiblingIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetSiblingIndex.html)
     description:
     is_static: false
@@ -494,7 +494,7 @@ methods:
       - type: void
         summary:
   - name: GetSiblingIndex
-    summary:|
+    summary: |
       [Unity's Transform.GetSiblingIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetSiblingIndex.html)
     description:
     is_static: false
@@ -504,7 +504,7 @@ methods:
       - type: number
         summary:
   - name: Find
-    summary:|
+    summary: |
       [Unity's Transform.Find Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Find.html)
     description:
     is_static: false
@@ -518,7 +518,7 @@ methods:
       - type: Transform
         summary:
   - name: IsChildOf
-    summary:|
+    summary: |
       [Unity's Transform.IsChildOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.IsChildOf.html)
     description:
     is_static: false
@@ -532,7 +532,7 @@ methods:
       - type: boolean
         summary:
   - name: GetChild
-    summary:|
+    summary: |
       [Unity's Transform.GetChild Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetChild.html)
     description:
     is_static: false

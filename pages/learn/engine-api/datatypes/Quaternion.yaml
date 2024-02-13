@@ -7,7 +7,7 @@ code_samples:
 inherits: 
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's Quaternion.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-new.html)
     description:
     is_static: false
@@ -34,56 +34,56 @@ constructors:
         summary:
 properties: 
   - name: eulerAngles
-    summary:|
+    summary: |
       [Unity's Quaternion.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-eulerAngles.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: normalized
-    summary:|
+    summary: |
       [Unity's Quaternion.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: eulerAngles
-    summary:|
+    summary: |
       [Unity's Quaternion.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-eulerAngles.html)
     description:
     is_static: false
     code_samples:
     type: Vector3
   - name: normalized
-    summary:|
+    summary: |
       [Unity's Quaternion.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html)
     description:
     is_static: false
     code_samples:
     type: Quaternion
   - name: x
-    summary:|
+    summary: |
       [Unity's Quaternion.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-x.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: y
-    summary:|
+    summary: |
       [Unity's Quaternion.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-y.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: z
-    summary:|
+    summary: |
       [Unity's Quaternion.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-z.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: w
-    summary:|
+    summary: |
       [Unity's Quaternion.w Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-w.html)
     description:
     is_static: false
@@ -91,7 +91,7 @@ properties:
     type: number
 methods: 
   - name: Set
-    summary:|
+    summary: |
       [Unity's Quaternion.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Set.html)
     description:
     is_static: false
@@ -117,7 +117,7 @@ methods:
       - type: void
         summary:
   - name: SetLookRotation
-    summary:|
+    summary: |
       [Unity's Quaternion.SetLookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetLookRotation.html)
     description:
     is_static: false
@@ -131,7 +131,7 @@ methods:
       - type: void
         summary:
   - name: SetFromToRotation
-    summary:|
+    summary: |
       [Unity's Quaternion.SetFromToRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetFromToRotation.html)
     description:
     is_static: false
@@ -149,7 +149,7 @@ methods:
       - type: void
         summary:
   - name: Normalize
-    summary:|
+    summary: |
       [Unity's Quaternion.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html)
     description:
     is_static: false
@@ -159,7 +159,7 @@ methods:
       - type: void
         summary:
   - name: FromToRotation
-    summary:|
+    summary: |
       [Unity's Quaternion.FromToRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.FromToRotation.html)
     description:
     is_static: true
@@ -177,7 +177,7 @@ methods:
       - type: Quaternion
         summary:
   - name: Inverse
-    summary:|
+    summary: |
       [Unity's Quaternion.Inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Inverse.html)
     description:
     is_static: true
@@ -191,7 +191,7 @@ methods:
       - type: Quaternion
         summary:
   - name: Slerp
-    summary:|
+    summary: |
       [Unity's Quaternion.Slerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Slerp.html)
     description:
     is_static: true
@@ -213,7 +213,7 @@ methods:
       - type: Quaternion
         summary:
   - name: SlerpUnclamped
-    summary:|
+    summary: |
       [Unity's Quaternion.SlerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SlerpUnclamped.html)
     description:
     is_static: true
@@ -235,7 +235,7 @@ methods:
       - type: Quaternion
         summary:
   - name: Lerp
-    summary:|
+    summary: |
       [Unity's Quaternion.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Lerp.html)
     description:
     is_static: true
@@ -257,7 +257,7 @@ methods:
       - type: Quaternion
         summary:
   - name: LerpUnclamped
-    summary:|
+    summary: |
       [Unity's Quaternion.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LerpUnclamped.html)
     description:
     is_static: true
@@ -279,7 +279,7 @@ methods:
       - type: Quaternion
         summary:
   - name: AngleAxis
-    summary:|
+    summary: |
       [Unity's Quaternion.AngleAxis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.AngleAxis.html)
     description:
     is_static: true
@@ -297,7 +297,7 @@ methods:
       - type: Quaternion
         summary:
   - name: LookRotation
-    summary:|
+    summary: |
       [Unity's Quaternion.LookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LookRotation.html)
     description:
     is_static: true
@@ -315,7 +315,7 @@ methods:
       - type: Quaternion
         summary:
   - name: Dot
-    summary:|
+    summary: |
       [Unity's Quaternion.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Dot.html)
     description:
     is_static: true
@@ -333,7 +333,7 @@ methods:
       - type: number
         summary:
   - name: Angle
-    summary:|
+    summary: |
       [Unity's Quaternion.Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Angle.html)
     description:
     is_static: true
@@ -351,7 +351,7 @@ methods:
       - type: number
         summary:
   - name: Euler
-    summary:|
+    summary: |
       [Unity's Quaternion.Euler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Euler.html)
     description:
     is_static: true
@@ -373,7 +373,7 @@ methods:
       - type: Quaternion
         summary:
   - name: RotateTowards
-    summary:|
+    summary: |
       [Unity's Quaternion.RotateTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.RotateTowards.html)
     description:
     is_static: true
@@ -395,7 +395,7 @@ methods:
       - type: Quaternion
         summary:
   - name: Normalize
-    summary:|
+    summary: |
       [Unity's Quaternion.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html)
     description:
     is_static: true

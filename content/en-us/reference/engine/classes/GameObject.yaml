@@ -8,7 +8,7 @@ inherits:
   - Object
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's GameObject.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-new.html)
     description:
     is_static: false
@@ -19,119 +19,119 @@ constructors:
         summary:
 properties: 
   - name: transform
-    summary:|
+    summary: |
       [Unity's GameObject.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-transform.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: layer
-    summary:|
+    summary: |
       [Unity's GameObject.layer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-layer.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: activeSelf
-    summary:|
+    summary: |
       [Unity's GameObject.activeSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeSelf.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: activeInHierarchy
-    summary:|
+    summary: |
       [Unity's GameObject.activeInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeInHierarchy.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isStatic
-    summary:|
+    summary: |
       [Unity's GameObject.isStatic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-isStatic.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: tag
-    summary:|
+    summary: |
       [Unity's GameObject.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-tag.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: sceneCullingMask
-    summary:|
+    summary: |
       [Unity's GameObject.sceneCullingMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-sceneCullingMask.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: gameObject
-    summary:|
+    summary: |
       [Unity's GameObject.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-gameObject.html)
     description:
     is_static: false
     code_samples:
     type: GameObject
   - name: transform
-    summary:|
+    summary: |
       [Unity's GameObject.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-transform.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: layer
-    summary:|
+    summary: |
       [Unity's GameObject.layer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-layer.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: activeSelf
-    summary:|
+    summary: |
       [Unity's GameObject.activeSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeSelf.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: activeInHierarchy
-    summary:|
+    summary: |
       [Unity's GameObject.activeInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeInHierarchy.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isStatic
-    summary:|
+    summary: |
       [Unity's GameObject.isStatic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-isStatic.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: tag
-    summary:|
+    summary: |
       [Unity's GameObject.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-tag.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: sceneCullingMask
-    summary:|
+    summary: |
       [Unity's GameObject.sceneCullingMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-sceneCullingMask.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: gameObject
-    summary:|
+    summary: |
       [Unity's GameObject.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-gameObject.html)
     description:
     is_static: false
     code_samples:
     type: GameObject
   - name: hellYeahFieldOrProperty
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -139,7 +139,7 @@ properties:
     type: number
 methods: 
   - name: GetComponent
-    summary:|
+    summary: |
       [Unity's GameObject.GetComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponent.html)
     description:
     is_static: false
@@ -153,7 +153,7 @@ methods:
       - type: Component
         summary:
   - name: GetComponentInChildren
-    summary:|
+    summary: |
       [Unity's GameObject.GetComponentInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInChildren.html)
     description:
     is_static: false
@@ -171,7 +171,7 @@ methods:
       - type: Component
         summary:
   - name: GetComponentInParent
-    summary:|
+    summary: |
       [Unity's GameObject.GetComponentInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInParent.html)
     description:
     is_static: false
@@ -189,7 +189,7 @@ methods:
       - type: Component
         summary:
   - name: AddComponent
-    summary:|
+    summary: |
       [Unity's GameObject.AddComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.AddComponent.html)
     description:
     is_static: false
@@ -203,7 +203,7 @@ methods:
       - type: Component
         summary:
   - name: SetActive
-    summary:|
+    summary: |
       [Unity's GameObject.SetActive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.SetActive.html)
     description:
     is_static: false
@@ -217,7 +217,7 @@ methods:
       - type: void
         summary:
   - name: CompareTag
-    summary:|
+    summary: |
       [Unity's GameObject.CompareTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.CompareTag.html)
     description:
     is_static: false
@@ -231,7 +231,7 @@ methods:
       - type: boolean
         summary:
   - name: FindWithTag
-    summary:|
+    summary: |
       [Unity's GameObject.FindWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindWithTag.html)
     description:
     is_static: true
@@ -245,7 +245,7 @@ methods:
       - type: GameObject
         summary:
   - name: FindGameObjectWithTag
-    summary:|
+    summary: |
       [Unity's GameObject.FindGameObjectWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectWithTag.html)
     description:
     is_static: true
@@ -259,7 +259,7 @@ methods:
       - type: GameObject
         summary:
   - name: Find
-    summary:|
+    summary: |
       [Unity's GameObject.Find Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.Find.html)
     description:
     is_static: true
@@ -273,7 +273,7 @@ methods:
       - type: GameObject
         summary:
   - name: HellYeah
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -295,7 +295,7 @@ methods:
       - type: string
         summary:
   - name: HellYeahStatic
-    summary:|
+    summary: |
       
     description:
     is_static: true

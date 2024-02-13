@@ -8,7 +8,7 @@ inherits:
   - Object
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's Material.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-new.html)
     description:
     is_static: false
@@ -23,112 +23,112 @@ constructors:
         summary:
 properties: 
   - name: color
-    summary:|
+    summary: |
       [Unity's Material.color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-color.html)
     description:
     is_static: false
     code_samples:
     type: Color
   - name: mainTexture
-    summary:|
+    summary: |
       [Unity's Material.mainTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTexture.html)
     description:
     is_static: false
     code_samples:
     type: Texture
   - name: mainTextureOffset
-    summary:|
+    summary: |
       [Unity's Material.mainTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTextureOffset.html)
     description:
     is_static: false
     code_samples:
     type: Vector2
   - name: mainTextureScale
-    summary:|
+    summary: |
       [Unity's Material.mainTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTextureScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector2
   - name: renderQueue
-    summary:|
+    summary: |
       [Unity's Material.renderQueue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-renderQueue.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: doubleSidedGI
-    summary:|
+    summary: |
       [Unity's Material.doubleSidedGI Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-doubleSidedGI.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: enableInstancing
-    summary:|
+    summary: |
       [Unity's Material.enableInstancing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-enableInstancing.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: passCount
-    summary:|
+    summary: |
       [Unity's Material.passCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-passCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: color
-    summary:|
+    summary: |
       [Unity's Material.color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-color.html)
     description:
     is_static: false
     code_samples:
     type: Color
   - name: mainTexture
-    summary:|
+    summary: |
       [Unity's Material.mainTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTexture.html)
     description:
     is_static: false
     code_samples:
     type: Texture
   - name: mainTextureOffset
-    summary:|
+    summary: |
       [Unity's Material.mainTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTextureOffset.html)
     description:
     is_static: false
     code_samples:
     type: Vector2
   - name: mainTextureScale
-    summary:|
+    summary: |
       [Unity's Material.mainTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTextureScale.html)
     description:
     is_static: false
     code_samples:
     type: Vector2
   - name: renderQueue
-    summary:|
+    summary: |
       [Unity's Material.renderQueue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-renderQueue.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: doubleSidedGI
-    summary:|
+    summary: |
       [Unity's Material.doubleSidedGI Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-doubleSidedGI.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: enableInstancing
-    summary:|
+    summary: |
       [Unity's Material.enableInstancing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-enableInstancing.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: passCount
-    summary:|
+    summary: |
       [Unity's Material.passCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-passCount.html)
     description:
     is_static: false
@@ -136,7 +136,7 @@ properties:
     type: number
 methods: 
   - name: HasProperty
-    summary:|
+    summary: |
       [Unity's Material.HasProperty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasProperty.html)
     description:
     is_static: false
@@ -150,7 +150,7 @@ methods:
       - type: boolean
         summary:
   - name: HasFloat
-    summary:|
+    summary: |
       [Unity's Material.HasFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasFloat.html)
     description:
     is_static: false
@@ -164,7 +164,7 @@ methods:
       - type: boolean
         summary:
   - name: HasInt
-    summary:|
+    summary: |
       [Unity's Material.HasInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasInt.html)
     description:
     is_static: false
@@ -178,7 +178,7 @@ methods:
       - type: boolean
         summary:
   - name: HasInteger
-    summary:|
+    summary: |
       [Unity's Material.HasInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasInteger.html)
     description:
     is_static: false
@@ -192,7 +192,7 @@ methods:
       - type: boolean
         summary:
   - name: HasTexture
-    summary:|
+    summary: |
       [Unity's Material.HasTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasTexture.html)
     description:
     is_static: false
@@ -206,7 +206,7 @@ methods:
       - type: boolean
         summary:
   - name: HasMatrix
-    summary:|
+    summary: |
       [Unity's Material.HasMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasMatrix.html)
     description:
     is_static: false
@@ -220,7 +220,7 @@ methods:
       - type: boolean
         summary:
   - name: HasVector
-    summary:|
+    summary: |
       [Unity's Material.HasVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasVector.html)
     description:
     is_static: false
@@ -234,7 +234,7 @@ methods:
       - type: boolean
         summary:
   - name: HasColor
-    summary:|
+    summary: |
       [Unity's Material.HasColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasColor.html)
     description:
     is_static: false
@@ -248,7 +248,7 @@ methods:
       - type: boolean
         summary:
   - name: HasBuffer
-    summary:|
+    summary: |
       [Unity's Material.HasBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasBuffer.html)
     description:
     is_static: false
@@ -262,7 +262,7 @@ methods:
       - type: boolean
         summary:
   - name: HasConstantBuffer
-    summary:|
+    summary: |
       [Unity's Material.HasConstantBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasConstantBuffer.html)
     description:
     is_static: false
@@ -276,7 +276,7 @@ methods:
       - type: boolean
         summary:
   - name: EnableKeyword
-    summary:|
+    summary: |
       [Unity's Material.EnableKeyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.EnableKeyword.html)
     description:
     is_static: false
@@ -290,7 +290,7 @@ methods:
       - type: void
         summary:
   - name: DisableKeyword
-    summary:|
+    summary: |
       [Unity's Material.DisableKeyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.DisableKeyword.html)
     description:
     is_static: false
@@ -304,7 +304,7 @@ methods:
       - type: void
         summary:
   - name: IsKeywordEnabled
-    summary:|
+    summary: |
       [Unity's Material.IsKeywordEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.IsKeywordEnabled.html)
     description:
     is_static: false
@@ -318,7 +318,7 @@ methods:
       - type: boolean
         summary:
   - name: SetShaderPassEnabled
-    summary:|
+    summary: |
       [Unity's Material.SetShaderPassEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetShaderPassEnabled.html)
     description:
     is_static: false
@@ -336,7 +336,7 @@ methods:
       - type: void
         summary:
   - name: GetShaderPassEnabled
-    summary:|
+    summary: |
       [Unity's Material.GetShaderPassEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetShaderPassEnabled.html)
     description:
     is_static: false
@@ -350,7 +350,7 @@ methods:
       - type: boolean
         summary:
   - name: GetPassName
-    summary:|
+    summary: |
       [Unity's Material.GetPassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetPassName.html)
     description:
     is_static: false
@@ -364,7 +364,7 @@ methods:
       - type: string
         summary:
   - name: FindPass
-    summary:|
+    summary: |
       [Unity's Material.FindPass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.FindPass.html)
     description:
     is_static: false
@@ -378,7 +378,7 @@ methods:
       - type: number
         summary:
   - name: SetOverrideTag
-    summary:|
+    summary: |
       [Unity's Material.SetOverrideTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetOverrideTag.html)
     description:
     is_static: false
@@ -396,7 +396,7 @@ methods:
       - type: void
         summary:
   - name: GetTag
-    summary:|
+    summary: |
       [Unity's Material.GetTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTag.html)
     description:
     is_static: false
@@ -418,7 +418,7 @@ methods:
       - type: string
         summary:
   - name: Lerp
-    summary:|
+    summary: |
       [Unity's Material.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.Lerp.html)
     description:
     is_static: false
@@ -440,7 +440,7 @@ methods:
       - type: void
         summary:
   - name: SetPass
-    summary:|
+    summary: |
       [Unity's Material.SetPass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetPass.html)
     description:
     is_static: false
@@ -454,7 +454,7 @@ methods:
       - type: boolean
         summary:
   - name: CopyPropertiesFromMaterial
-    summary:|
+    summary: |
       [Unity's Material.CopyPropertiesFromMaterial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.CopyPropertiesFromMaterial.html)
     description:
     is_static: false
@@ -468,7 +468,7 @@ methods:
       - type: void
         summary:
   - name: CopyMatchingPropertiesFromMaterial
-    summary:|
+    summary: |
       [Unity's Material.CopyMatchingPropertiesFromMaterial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.CopyMatchingPropertiesFromMaterial.html)
     description:
     is_static: false
@@ -482,7 +482,7 @@ methods:
       - type: void
         summary:
   - name: ComputeCRC
-    summary:|
+    summary: |
       [Unity's Material.ComputeCRC Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.ComputeCRC.html)
     description:
     is_static: false
@@ -492,7 +492,7 @@ methods:
       - type: number
         summary:
   - name: SetInt
-    summary:|
+    summary: |
       [Unity's Material.SetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetInt.html)
     description:
     is_static: false
@@ -510,7 +510,7 @@ methods:
       - type: void
         summary:
   - name: SetFloat
-    summary:|
+    summary: |
       [Unity's Material.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetFloat.html)
     description:
     is_static: false
@@ -528,7 +528,7 @@ methods:
       - type: void
         summary:
   - name: SetInteger
-    summary:|
+    summary: |
       [Unity's Material.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetInteger.html)
     description:
     is_static: false
@@ -546,7 +546,7 @@ methods:
       - type: void
         summary:
   - name: SetColor
-    summary:|
+    summary: |
       [Unity's Material.SetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetColor.html)
     description:
     is_static: false
@@ -564,7 +564,7 @@ methods:
       - type: void
         summary:
   - name: SetVector
-    summary:|
+    summary: |
       [Unity's Material.SetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetVector.html)
     description:
     is_static: false
@@ -582,7 +582,7 @@ methods:
       - type: void
         summary:
   - name: SetMatrix
-    summary:|
+    summary: |
       [Unity's Material.SetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetMatrix.html)
     description:
     is_static: false
@@ -600,7 +600,7 @@ methods:
       - type: void
         summary:
   - name: SetTexture
-    summary:|
+    summary: |
       [Unity's Material.SetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetTexture.html)
     description:
     is_static: false
@@ -618,7 +618,7 @@ methods:
       - type: void
         summary:
   - name: GetInt
-    summary:|
+    summary: |
       [Unity's Material.GetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetInt.html)
     description:
     is_static: false
@@ -632,7 +632,7 @@ methods:
       - type: number
         summary:
   - name: GetFloat
-    summary:|
+    summary: |
       [Unity's Material.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetFloat.html)
     description:
     is_static: false
@@ -646,7 +646,7 @@ methods:
       - type: number
         summary:
   - name: GetInteger
-    summary:|
+    summary: |
       [Unity's Material.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetInteger.html)
     description:
     is_static: false
@@ -660,7 +660,7 @@ methods:
       - type: number
         summary:
   - name: GetColor
-    summary:|
+    summary: |
       [Unity's Material.GetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetColor.html)
     description:
     is_static: false
@@ -674,7 +674,7 @@ methods:
       - type: Color
         summary:
   - name: GetVector
-    summary:|
+    summary: |
       [Unity's Material.GetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetVector.html)
     description:
     is_static: false
@@ -688,7 +688,7 @@ methods:
       - type: Vector4
         summary:
   - name: GetMatrix
-    summary:|
+    summary: |
       [Unity's Material.GetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetMatrix.html)
     description:
     is_static: false
@@ -702,7 +702,7 @@ methods:
       - type: Matrix4x4
         summary:
   - name: GetTexture
-    summary:|
+    summary: |
       [Unity's Material.GetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTexture.html)
     description:
     is_static: false
@@ -716,7 +716,7 @@ methods:
       - type: Texture
         summary:
   - name: SetTextureOffset
-    summary:|
+    summary: |
       [Unity's Material.SetTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetTextureOffset.html)
     description:
     is_static: false
@@ -734,7 +734,7 @@ methods:
       - type: void
         summary:
   - name: SetTextureScale
-    summary:|
+    summary: |
       [Unity's Material.SetTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetTextureScale.html)
     description:
     is_static: false
@@ -752,7 +752,7 @@ methods:
       - type: void
         summary:
   - name: GetTextureOffset
-    summary:|
+    summary: |
       [Unity's Material.GetTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTextureOffset.html)
     description:
     is_static: false
@@ -766,7 +766,7 @@ methods:
       - type: Vector2
         summary:
   - name: GetTextureScale
-    summary:|
+    summary: |
       [Unity's Material.GetTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTextureScale.html)
     description:
     is_static: false

@@ -7,7 +7,7 @@ code_samples:
 inherits: 
 constructors: 
   - name: new
-    summary:|
+    summary: |
       [Unity's VisualElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-new.html)
     description:
     is_static: false
@@ -18,210 +18,210 @@ constructors:
         summary:
 properties: 
   - name: viewDataKey
-    summary:|
+    summary: |
       [Unity's VisualElement.viewDataKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-viewDataKey.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: canGrabFocus
-    summary:|
+    summary: |
       [Unity's VisualElement.canGrabFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-canGrabFocus.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: layout
-    summary:|
+    summary: |
       [Unity's VisualElement.layout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-layout.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: contentRect
-    summary:|
+    summary: |
       [Unity's VisualElement.contentRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentRect.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: worldBound
-    summary:|
+    summary: |
       [Unity's VisualElement.worldBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldBound.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: localBound
-    summary:|
+    summary: |
       [Unity's VisualElement.localBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-localBound.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: worldTransform
-    summary:|
+    summary: |
       [Unity's VisualElement.worldTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldTransform.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: name
-    summary:|
+    summary: |
       [Unity's VisualElement.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-name.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: enabledInHierarchy
-    summary:|
+    summary: |
       [Unity's VisualElement.enabledInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledInHierarchy.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: enabledSelf
-    summary:|
+    summary: |
       [Unity's VisualElement.enabledSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledSelf.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: visible
-    summary:|
+    summary: |
       [Unity's VisualElement.visible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-visible.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: parent
-    summary:|
+    summary: |
       [Unity's VisualElement.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-parent.html)
     description:
     is_static: false
     code_samples:
     type: VisualElement
   - name: contentContainer
-    summary:|
+    summary: |
       [Unity's VisualElement.contentContainer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentContainer.html)
     description:
     is_static: false
     code_samples:
     type: VisualElement
   - name: childCount
-    summary:|
+    summary: |
       [Unity's VisualElement.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-childCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: tooltip
-    summary:|
+    summary: |
       [Unity's VisualElement.tooltip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-tooltip.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: viewDataKey
-    summary:|
+    summary: |
       [Unity's VisualElement.viewDataKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-viewDataKey.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: canGrabFocus
-    summary:|
+    summary: |
       [Unity's VisualElement.canGrabFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-canGrabFocus.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: layout
-    summary:|
+    summary: |
       [Unity's VisualElement.layout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-layout.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: contentRect
-    summary:|
+    summary: |
       [Unity's VisualElement.contentRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentRect.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: worldBound
-    summary:|
+    summary: |
       [Unity's VisualElement.worldBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldBound.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: localBound
-    summary:|
+    summary: |
       [Unity's VisualElement.localBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-localBound.html)
     description:
     is_static: false
     code_samples:
     type: Rect
   - name: worldTransform
-    summary:|
+    summary: |
       [Unity's VisualElement.worldTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldTransform.html)
     description:
     is_static: false
     code_samples:
     type: Matrix4x4
   - name: name
-    summary:|
+    summary: |
       [Unity's VisualElement.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-name.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: enabledInHierarchy
-    summary:|
+    summary: |
       [Unity's VisualElement.enabledInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledInHierarchy.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: enabledSelf
-    summary:|
+    summary: |
       [Unity's VisualElement.enabledSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledSelf.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: visible
-    summary:|
+    summary: |
       [Unity's VisualElement.visible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-visible.html)
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: parent
-    summary:|
+    summary: |
       [Unity's VisualElement.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-parent.html)
     description:
     is_static: false
     code_samples:
     type: VisualElement
   - name: contentContainer
-    summary:|
+    summary: |
       [Unity's VisualElement.contentContainer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentContainer.html)
     description:
     is_static: false
     code_samples:
     type: VisualElement
   - name: childCount
-    summary:|
+    summary: |
       [Unity's VisualElement.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-childCount.html)
     description:
     is_static: false
     code_samples:
     type: number
   - name: tooltip
-    summary:|
+    summary: |
       [Unity's VisualElement.tooltip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-tooltip.html)
     description:
     is_static: false
@@ -229,7 +229,7 @@ properties:
     type: string
 methods: 
   - name: Focus
-    summary:|
+    summary: |
       [Unity's VisualElement.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Focus.html)
     description:
     is_static: false
@@ -239,7 +239,7 @@ methods:
       - type: void
         summary:
   - name: SetEnabled
-    summary:|
+    summary: |
       [Unity's VisualElement.SetEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.SetEnabled.html)
     description:
     is_static: false
@@ -253,7 +253,7 @@ methods:
       - type: void
         summary:
   - name: MarkDirtyRepaint
-    summary:|
+    summary: |
       [Unity's VisualElement.MarkDirtyRepaint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.MarkDirtyRepaint.html)
     description:
     is_static: false
@@ -263,7 +263,7 @@ methods:
       - type: void
         summary:
   - name: ContainsPoint
-    summary:|
+    summary: |
       [Unity's VisualElement.ContainsPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ContainsPoint.html)
     description:
     is_static: false
@@ -277,7 +277,7 @@ methods:
       - type: boolean
         summary:
   - name: Overlaps
-    summary:|
+    summary: |
       [Unity's VisualElement.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Overlaps.html)
     description:
     is_static: false
@@ -291,7 +291,7 @@ methods:
       - type: boolean
         summary:
   - name: ClearClassList
-    summary:|
+    summary: |
       [Unity's VisualElement.ClearClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ClearClassList.html)
     description:
     is_static: false
@@ -301,7 +301,7 @@ methods:
       - type: void
         summary:
   - name: AddToClassList
-    summary:|
+    summary: |
       [Unity's VisualElement.AddToClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.AddToClassList.html)
     description:
     is_static: false
@@ -315,7 +315,7 @@ methods:
       - type: void
         summary:
   - name: RemoveFromClassList
-    summary:|
+    summary: |
       [Unity's VisualElement.RemoveFromClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveFromClassList.html)
     description:
     is_static: false
@@ -329,7 +329,7 @@ methods:
       - type: void
         summary:
   - name: ToggleInClassList
-    summary:|
+    summary: |
       [Unity's VisualElement.ToggleInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ToggleInClassList.html)
     description:
     is_static: false
@@ -343,7 +343,7 @@ methods:
       - type: void
         summary:
   - name: EnableInClassList
-    summary:|
+    summary: |
       [Unity's VisualElement.EnableInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.EnableInClassList.html)
     description:
     is_static: false
@@ -361,7 +361,7 @@ methods:
       - type: void
         summary:
   - name: ClassListContains
-    summary:|
+    summary: |
       [Unity's VisualElement.ClassListContains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ClassListContains.html)
     description:
     is_static: false
@@ -375,7 +375,7 @@ methods:
       - type: boolean
         summary:
   - name: Add
-    summary:|
+    summary: |
       [Unity's VisualElement.Add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Add.html)
     description:
     is_static: false
@@ -389,7 +389,7 @@ methods:
       - type: void
         summary:
   - name: Insert
-    summary:|
+    summary: |
       [Unity's VisualElement.Insert Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Insert.html)
     description:
     is_static: false
@@ -407,7 +407,7 @@ methods:
       - type: void
         summary:
   - name: Remove
-    summary:|
+    summary: |
       [Unity's VisualElement.Remove Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Remove.html)
     description:
     is_static: false
@@ -421,7 +421,7 @@ methods:
       - type: void
         summary:
   - name: RemoveAt
-    summary:|
+    summary: |
       [Unity's VisualElement.RemoveAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveAt.html)
     description:
     is_static: false
@@ -435,7 +435,7 @@ methods:
       - type: void
         summary:
   - name: Clear
-    summary:|
+    summary: |
       [Unity's VisualElement.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Clear.html)
     description:
     is_static: false
@@ -445,7 +445,7 @@ methods:
       - type: void
         summary:
   - name: ElementAt
-    summary:|
+    summary: |
       [Unity's VisualElement.ElementAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ElementAt.html)
     description:
     is_static: false
@@ -459,7 +459,7 @@ methods:
       - type: VisualElement
         summary:
   - name: IndexOf
-    summary:|
+    summary: |
       [Unity's VisualElement.IndexOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.IndexOf.html)
     description:
     is_static: false
@@ -473,7 +473,7 @@ methods:
       - type: number
         summary:
   - name: BringToFront
-    summary:|
+    summary: |
       [Unity's VisualElement.BringToFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.BringToFront.html)
     description:
     is_static: false
@@ -483,7 +483,7 @@ methods:
       - type: void
         summary:
   - name: SendToBack
-    summary:|
+    summary: |
       [Unity's VisualElement.SendToBack Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.SendToBack.html)
     description:
     is_static: false
@@ -493,7 +493,7 @@ methods:
       - type: void
         summary:
   - name: PlaceBehind
-    summary:|
+    summary: |
       [Unity's VisualElement.PlaceBehind Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.PlaceBehind.html)
     description:
     is_static: false
@@ -507,7 +507,7 @@ methods:
       - type: void
         summary:
   - name: PlaceInFront
-    summary:|
+    summary: |
       [Unity's VisualElement.PlaceInFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.PlaceInFront.html)
     description:
     is_static: false
@@ -521,7 +521,7 @@ methods:
       - type: void
         summary:
   - name: RemoveFromHierarchy
-    summary:|
+    summary: |
       [Unity's VisualElement.RemoveFromHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveFromHierarchy.html)
     description:
     is_static: false
@@ -531,7 +531,7 @@ methods:
       - type: void
         summary:
   - name: Contains
-    summary:|
+    summary: |
       [Unity's VisualElement.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Contains.html)
     description:
     is_static: false
@@ -545,7 +545,7 @@ methods:
       - type: boolean
         summary:
   - name: FindCommonAncestor
-    summary:|
+    summary: |
       [Unity's VisualElement.FindCommonAncestor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.FindCommonAncestor.html)
     description:
     is_static: false
@@ -559,7 +559,7 @@ methods:
       - type: VisualElement
         summary:
   - name: Q
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -573,7 +573,7 @@ methods:
       - type: VisualElement
         summary:
   - name: RegisterCallback
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -583,7 +583,7 @@ methods:
       - type: string
         summary:
   - name: RegisterPressCallback
-    summary:|
+    summary: |
       
     description:
     is_static: false
@@ -593,7 +593,7 @@ methods:
       - type: void
         summary:
   - name: RegisterLongPressCallback
-    summary:|
+    summary: |
       
     description:
     is_static: false

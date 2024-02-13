@@ -9,42 +9,42 @@ inherits:
 constructors: 
 properties: 
   - name: transform
-    summary:|
+    summary: |
       [Unity's Component.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: gameObject
-    summary:|
+    summary: |
       [Unity's Component.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html)
     description:
     is_static: false
     code_samples:
     type: GameObject
   - name: tag
-    summary:|
+    summary: |
       [Unity's Component.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-tag.html)
     description:
     is_static: false
     code_samples:
     type: string
   - name: transform
-    summary:|
+    summary: |
       [Unity's Component.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html)
     description:
     is_static: false
     code_samples:
     type: Transform
   - name: gameObject
-    summary:|
+    summary: |
       [Unity's Component.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html)
     description:
     is_static: false
     code_samples:
     type: GameObject
   - name: tag
-    summary:|
+    summary: |
       [Unity's Component.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-tag.html)
     description:
     is_static: false
@@ -52,7 +52,7 @@ properties:
     type: string
 methods: 
   - name: GetComponent
-    summary:|
+    summary: |
       [Unity's Component.GetComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponent.html)
     description:
     is_static: false
@@ -66,7 +66,7 @@ methods:
       - type: Component
         summary:
   - name: GetComponentInChildren
-    summary:|
+    summary: |
       [Unity's Component.GetComponentInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInChildren.html)
     description:
     is_static: false
@@ -84,7 +84,7 @@ methods:
       - type: Component
         summary:
   - name: GetComponentInParent
-    summary:|
+    summary: |
       [Unity's Component.GetComponentInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInParent.html)
     description:
     is_static: false
@@ -102,7 +102,7 @@ methods:
       - type: Component
         summary:
   - name: CompareTag
-    summary:|
+    summary: |
       [Unity's Component.CompareTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.CompareTag.html)
     description:
     is_static: false
