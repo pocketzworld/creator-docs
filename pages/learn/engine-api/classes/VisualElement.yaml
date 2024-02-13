@@ -8,7 +8,7 @@ inherits:
 constructors: 
   - name: new
     summary: |
-      [Unity's VisualElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-new.html)
+      [Unity's VisualElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-ctor.html)
     description:
     is_static: false
     code_samples:

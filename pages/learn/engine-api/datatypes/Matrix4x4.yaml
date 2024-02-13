@@ -8,7 +8,7 @@ inherits:
 constructors: 
   - name: new
     summary: |
-      [Unity's Matrix4x4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-new.html)
+      [Unity's Matrix4x4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-ctor.html)
     description:
     is_static: false
     code_samples:

@@ -8,7 +8,7 @@ inherits:
 constructors: 
   - name: new
     summary: |
-      [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-new.html)
+      [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html)
     description:
     is_static: false
     code_samples:

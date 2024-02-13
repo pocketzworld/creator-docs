@@ -9,7 +9,7 @@ inherits:
 constructors: 
   - name: new
     summary: |
-      [Unity's Texture2D.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-new.html)
+      [Unity's Texture2D.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-ctor.html)
     description:
     is_static: false
     code_samples:

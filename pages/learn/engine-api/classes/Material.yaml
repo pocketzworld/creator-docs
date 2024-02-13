@@ -9,7 +9,7 @@ inherits:
 constructors: 
   - name: new
     summary: |
-      [Unity's Material.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-new.html)
+      [Unity's Material.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-ctor.html)
     description:
     is_static: false
     code_samples:

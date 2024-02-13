@@ -9,7 +9,7 @@ inherits:
 constructors: 
   - name: new
     summary: |
-      [Unity's Mesh.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-new.html)
+      [Unity's Mesh.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-ctor.html)
     description:
     is_static: false
     code_samples:
