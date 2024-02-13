@@ -1,0 +1,414 @@
+name: Mesh
+type: classes
+summary: |
+  [Unity's Mesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.html)
+description:
+code_samples:
+inherits: 
+  - Object
+constructors: 
+  - name: new
+    summary:|
+      [Unity's Mesh.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-new.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Mesh
+        summary:
+properties: 
+  - name: vertexBufferCount
+    summary:|
+      [Unity's Mesh.vertexBufferCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexBufferCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: blendShapeCount
+    summary:|
+      [Unity's Mesh.blendShapeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-blendShapeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: bindposeCount
+    summary:|
+      [Unity's Mesh.bindposeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-bindposeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isReadable
+    summary:|
+      [Unity's Mesh.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-isReadable.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: vertexCount
+    summary:|
+      [Unity's Mesh.vertexCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: subMeshCount
+    summary:|
+      [Unity's Mesh.subMeshCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-subMeshCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: bounds
+    summary:|
+      [Unity's Mesh.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-bounds.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Bounds
+  - name: vertexAttributeCount
+    summary:|
+      [Unity's Mesh.vertexAttributeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexAttributeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: vertexBufferCount
+    summary:|
+      [Unity's Mesh.vertexBufferCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexBufferCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: blendShapeCount
+    summary:|
+      [Unity's Mesh.blendShapeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-blendShapeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: bindposeCount
+    summary:|
+      [Unity's Mesh.bindposeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-bindposeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isReadable
+    summary:|
+      [Unity's Mesh.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-isReadable.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: vertexCount
+    summary:|
+      [Unity's Mesh.vertexCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: subMeshCount
+    summary:|
+      [Unity's Mesh.subMeshCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-subMeshCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: bounds
+    summary:|
+      [Unity's Mesh.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-bounds.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Bounds
+  - name: vertexAttributeCount
+    summary:|
+      [Unity's Mesh.vertexAttributeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexAttributeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: GetVertexBufferStride
+    summary:|
+      [Unity's Mesh.GetVertexBufferStride Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetVertexBufferStride.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: stream
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: ClearBlendShapes
+    summary:|
+      [Unity's Mesh.ClearBlendShapes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.ClearBlendShapes.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetBlendShapeName
+    summary:|
+      [Unity's Mesh.GetBlendShapeName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeName.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: shapeIndex
+        type: number
+        default:
+        summary:
+    returns:
+      - type: string
+        summary:
+  - name: GetBlendShapeIndex
+    summary:|
+      [Unity's Mesh.GetBlendShapeIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: blendShapeName
+        type: string
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetBlendShapeFrameCount
+    summary:|
+      [Unity's Mesh.GetBlendShapeFrameCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeFrameCount.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: shapeIndex
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetBlendShapeFrameWeight
+    summary:|
+      [Unity's Mesh.GetBlendShapeFrameWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeFrameWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: shapeIndex
+        type: number
+        default:
+        summary:
+      - name: frameIndex
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: MarkModified
+    summary:|
+      [Unity's Mesh.MarkModified Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.MarkModified.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetUVDistributionMetric
+    summary:|
+      [Unity's Mesh.GetUVDistributionMetric Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetUVDistributionMetric.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: uvSetIndex
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetIndexStart
+    summary:|
+      [Unity's Mesh.GetIndexStart Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetIndexStart.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: submesh
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetIndexCount
+    summary:|
+      [Unity's Mesh.GetIndexCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetIndexCount.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: submesh
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetBaseVertex
+    summary:|
+      [Unity's Mesh.GetBaseVertex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBaseVertex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: submesh
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Clear
+    summary:|
+      [Unity's Mesh.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.Clear.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: keepVertexLayout
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RecalculateBounds
+    summary:|
+      [Unity's Mesh.RecalculateBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateBounds.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RecalculateNormals
+    summary:|
+      [Unity's Mesh.RecalculateNormals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateNormals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RecalculateTangents
+    summary:|
+      [Unity's Mesh.RecalculateTangents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateTangents.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RecalculateUVDistributionMetric
+    summary:|
+      [Unity's Mesh.RecalculateUVDistributionMetric Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateUVDistributionMetric.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: uvSetIndex
+        type: number
+        default:
+        summary:
+      - name: uvAreaThreshold
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RecalculateUVDistributionMetrics
+    summary:|
+      [Unity's Mesh.RecalculateUVDistributionMetrics Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateUVDistributionMetrics.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: uvAreaThreshold
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: MarkDynamic
+    summary:|
+      [Unity's Mesh.MarkDynamic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.MarkDynamic.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: UploadMeshData
+    summary:|
+      [Unity's Mesh.UploadMeshData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.UploadMeshData.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: markNoLongerReadable
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Optimize
+    summary:|
+      [Unity's Mesh.Optimize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.Optimize.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: OptimizeIndexBuffers
+    summary:|
+      [Unity's Mesh.OptimizeIndexBuffers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.OptimizeIndexBuffers.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: OptimizeReorderVertexBuffer
+    summary:|
+      [Unity's Mesh.OptimizeReorderVertexBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.OptimizeReorderVertexBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

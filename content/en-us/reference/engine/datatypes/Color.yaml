@@ -1,0 +1,223 @@
+name: Color
+type: datatypes
+summary: |
+  [Unity's Color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary:|
+      [Unity's Color.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-new.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: r
+        type: number
+        default:
+        summary:
+      - name: g
+        type: number
+        default:
+        summary:
+      - name: b
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Color
+        summary:
+properties: 
+  - name: grayscale
+    summary:|
+      [Unity's Color.grayscale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: linear
+    summary:|
+      [Unity's Color.linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Color
+  - name: gamma
+    summary:|
+      [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Color
+  - name: maxColorComponent
+    summary:|
+      [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: grayscale
+    summary:|
+      [Unity's Color.grayscale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: linear
+    summary:|
+      [Unity's Color.linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Color
+  - name: gamma
+    summary:|
+      [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Color
+  - name: maxColorComponent
+    summary:|
+      [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: r
+    summary:|
+      [Unity's Color.r Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-r.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: g
+    summary:|
+      [Unity's Color.g Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-g.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: b
+    summary:|
+      [Unity's Color.b Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-b.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: a
+    summary:|
+      [Unity's Color.a Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-a.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Lerp
+    summary:|
+      [Unity's Color.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.Lerp.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Color
+        default:
+        summary:
+      - name: b
+        type: Color
+        default:
+        summary:
+      - name: t
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Color
+        summary:
+  - name: LerpUnclamped
+    summary:|
+      [Unity's Color.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.LerpUnclamped.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Color
+        default:
+        summary:
+      - name: b
+        type: Color
+        default:
+        summary:
+      - name: t
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Color
+        summary:
+  - name: HSVToRGB
+    summary:|
+      [Unity's Color.HSVToRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.HSVToRGB.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: H
+        type: number
+        default:
+        summary:
+      - name: S
+        type: number
+        default:
+        summary:
+      - name: V
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Color
+        summary:
+math_operations: 
+  - operation: '=='
+    summary: |
+      [Unity's Color.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_eq.html)
+    description:
+    type_a: Color
+    type_b: Color
+    return_type: boolean
+    code_samples:
+  - operation: '/'
+    summary: |
+      [Unity's Color.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_divide.html)
+    description:
+    type_a: Color
+    type_b: number
+    return_type: Color
+    code_samples:
+  - operation: '*'
+    summary: |
+      [Unity's Color.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html)
+    description:
+    type_a: number
+    type_b: Color
+    return_type: Color
+    code_samples:
+  - operation: '-'
+    summary: |
+      [Unity's Color.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_subtract.html)
+    description:
+    type_a: Color
+    type_b: Color
+    return_type: Color
+    code_samples:
+  - operation: '+'
+    summary: |
+      [Unity's Color.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_add.html)
+    description:
+    type_a: Color
+    type_b: Color
+    return_type: Color
+    code_samples:
