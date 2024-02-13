@@ -1,0 +1,423 @@
+name: Vector4
+type: datatypes
+summary: |
+  [Unity's Vector4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary:|
+      [Unity's Vector4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-new.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+properties: 
+  - name: normalized
+    summary:|
+      [Unity's Vector4.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-normalized.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Vector4
+  - name: magnitude
+    summary:|
+      [Unity's Vector4.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: sqrMagnitude
+    summary:|
+      [Unity's Vector4.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-sqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: normalized
+    summary:|
+      [Unity's Vector4.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-normalized.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Vector4
+  - name: magnitude
+    summary:|
+      [Unity's Vector4.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: sqrMagnitude
+    summary:|
+      [Unity's Vector4.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-sqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: x
+    summary:|
+      [Unity's Vector4.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-x.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: y
+    summary:|
+      [Unity's Vector4.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-y.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: z
+    summary:|
+      [Unity's Vector4.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-z.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: w
+    summary:|
+      [Unity's Vector4.w Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-w.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Set
+    summary:|
+      [Unity's Vector4.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Set.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: newX
+        type: number
+        default:
+        summary:
+      - name: newY
+        type: number
+        default:
+        summary:
+      - name: newZ
+        type: number
+        default:
+        summary:
+      - name: newW
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Scale
+    summary:|
+      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: scale
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Normalize
+    summary:|
+      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SqrMagnitude
+    summary:|
+      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: Lerp
+    summary:|
+      [Unity's Vector4.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Lerp.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+      - name: b
+        type: Vector4
+        default:
+        summary:
+      - name: t
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: LerpUnclamped
+    summary:|
+      [Unity's Vector4.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.LerpUnclamped.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+      - name: b
+        type: Vector4
+        default:
+        summary:
+      - name: t
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: MoveTowards
+    summary:|
+      [Unity's Vector4.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.MoveTowards.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: current
+        type: Vector4
+        default:
+        summary:
+      - name: target
+        type: Vector4
+        default:
+        summary:
+      - name: maxDistanceDelta
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: Scale
+    summary:|
+      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+      - name: b
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: Normalize
+    summary:|
+      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: Dot
+    summary:|
+      [Unity's Vector4.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Dot.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+      - name: b
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Project
+    summary:|
+      [Unity's Vector4.Project Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Project.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+      - name: b
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: Distance
+    summary:|
+      [Unity's Vector4.Distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Distance.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+      - name: b
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Magnitude
+    summary:|
+      [Unity's Vector4.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Magnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Min
+    summary:|
+      [Unity's Vector4.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Min.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: lhs
+        type: Vector4
+        default:
+        summary:
+      - name: rhs
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: Max
+    summary:|
+      [Unity's Vector4.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Max.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: lhs
+        type: Vector4
+        default:
+        summary:
+      - name: rhs
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: Vector4
+        summary:
+  - name: SqrMagnitude
+    summary:|
+      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: a
+        type: Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+math_operations: 
+  - operation: '=='
+    summary: |
+      [Unity's Vector4.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_eq.html)
+    description:
+    type_a: Vector4
+    type_b: Vector4
+    return_type: boolean
+    code_samples:
+  - operation: '/'
+    summary: |
+      [Unity's Vector4.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_divide.html)
+    description:
+    type_a: Vector4
+    type_b: number
+    return_type: Vector4
+    code_samples:
+  - operation: '*'
+    summary: |
+      [Unity's Vector4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_multiply.html)
+    description:
+    type_a: number
+    type_b: Vector4
+    return_type: Vector4
+    code_samples:
+  - operation: '-'
+    summary: |
+      
+    description:
+    type_a: Vector4
+    type_b: 
+    return_type: Vector4
+    code_samples:
+  - operation: '-'
+    summary: |
+      [Unity's Vector4.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_subtract.html)
+    description:
+    type_a: Vector4
+    type_b: Vector4
+    return_type: Vector4
+    code_samples:
+  - operation: '+'
+    summary: |
+      [Unity's Vector4.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_add.html)
+    description:
+    type_a: Vector4
+    type_b: Vector4
+    return_type: Vector4
+    code_samples:

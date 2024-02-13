@@ -5,7 +5,7 @@
   },
   "engine-api": {
     "title": "Engine Api",
-    "redirectTo": "/learn/engine-api/classes/Anchor"
+    "redirectTo": "/learn/engine-api/classes/GameObject"
   },
   "bots-api": {
     "title": "Bots Api",
