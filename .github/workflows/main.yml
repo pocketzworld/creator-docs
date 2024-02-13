@@ -35,5 +35,5 @@ jobs:
         with:
           repository: pocketzworld/pocket-web
           event-type: content-update
-          client-payload: '{"version":"production"}'
+          client-payload: '{"version":"production", "content-sha": "${{ github.sha }}"}'
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
