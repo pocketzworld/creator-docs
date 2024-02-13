@@ -1,0 +1,128 @@
+name: Texture3D
+type: classes
+summary: |
+  [Unity's Texture3D Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.html)
+description:
+code_samples:
+inherits: 
+  - Texture
+constructors: 
+properties: 
+  - name: depth
+    summary:|
+      [Unity's Texture3D.depth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-depth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isReadable
+    summary:|
+      [Unity's Texture3D.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-isReadable.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: depth
+    summary:|
+      [Unity's Texture3D.depth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-depth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isReadable
+    summary:|
+      [Unity's Texture3D.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-isReadable.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: Apply
+    summary:|
+      [Unity's Texture3D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.Apply.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: updateMipmaps
+        type: boolean
+        default:
+        summary:
+      - name: makeNoLongerReadable
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetPixel
+    summary:|
+      [Unity's Texture3D.SetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.SetPixel.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+      - name: z
+        type: number
+        default:
+        summary:
+      - name: color
+        type: Color
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPixel
+    summary:|
+      [Unity's Texture3D.GetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixel.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+      - name: z
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Color
+        summary:
+  - name: GetPixelBilinear
+    summary:|
+      [Unity's Texture3D.GetPixelBilinear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixelBilinear.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: u
+        type: number
+        default:
+        summary:
+      - name: v
+        type: number
+        default:
+        summary:
+      - name: w
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Color
+        summary:
+math_operations: 

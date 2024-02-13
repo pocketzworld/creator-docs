@@ -1,0 +1,154 @@
+name: UIView
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - VisualElement
+constructors: 
+  - name: new
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: UIView
+        summary:
+properties: 
+  - name: IsDisposed
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: SortOrder
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: IsBound
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsDisplayed
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsRunningAsync
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsStale
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsDisposed
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: SortOrder
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: IsBound
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsDisplayed
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsRunningAsync
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsStale
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: Reset
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary:|
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: BindHierarchy
+    summary:|
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: element
+        type: VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisposeChildren
+    summary:|
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: element
+        type: VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations: 

@@ -1,0 +1,25 @@
+name: UIService
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: OpenPopup
+    summary:|
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: ve
+        type: UIView
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+math_operations: 

@@ -1,0 +1,157 @@
+name: Object
+type: classes
+summary: |
+  [Unity's Object Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: name
+    summary:|
+      [Unity's Object.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-name.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: name
+    summary:|
+      [Unity's Object.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-name.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods: 
+  - name: GetInstanceID
+    summary:|
+      [Unity's Object.GetInstanceID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.GetInstanceID.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: Instantiate
+    summary:|
+      [Unity's Object.Instantiate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Instantiate.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: original
+        type: Object
+        default:
+        summary:
+      - name: position
+        type: Vector3
+        default:
+        summary:
+      - name: rotation
+        type: Quaternion
+        default:
+        summary:
+    returns:
+      - type: Object
+        summary:
+  - name: Destroy
+    summary:|
+      [Unity's Object.Destroy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Destroy.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: obj
+        type: Object
+        default:
+        summary:
+      - name: t
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DestroyImmediate
+    summary:|
+      [Unity's Object.DestroyImmediate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.DestroyImmediate.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: obj
+        type: Object
+        default:
+        summary:
+      - name: allowDestroyingAssets
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DontDestroyOnLoad
+    summary:|
+      [Unity's Object.DontDestroyOnLoad Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.DontDestroyOnLoad.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: target
+        type: Object
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FindObjectOfType
+    summary:|
+      [Unity's Object.FindObjectOfType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindObjectOfType.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: type
+        type: Type
+        default:
+        summary:
+    returns:
+      - type: Object
+        summary:
+  - name: FindFirstObjectByType
+    summary:|
+      [Unity's Object.FindFirstObjectByType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindFirstObjectByType.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: type
+        type: Type
+        default:
+        summary:
+    returns:
+      - type: Object
+        summary:
+  - name: FindAnyObjectByType
+    summary:|
+      [Unity's Object.FindAnyObjectByType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindAnyObjectByType.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: type
+        type: Type
+        default:
+        summary:
+    returns:
+      - type: Object
+        summary:
+math_operations: 
+  - operation: '=='
+    summary: |
+      [Unity's Object.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-operator_eq.html)
+    description:
+    type_a: Object
+    type_b: Object
+    return_type: boolean
+    code_samples:
