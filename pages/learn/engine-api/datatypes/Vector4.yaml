@@ -21,6 +21,14 @@ constructors:
         type: number
         default:
         summary:
+      - name: z
+        type: number
+        default:
+        summary:
+      - name: w
+        type: number
+        default:
+        summary:
     returns:
       - type: Vector4
         summary:

@@ -12,9 +12,21 @@ constructors:
     description:
     is_static: false
     code_samples:
-    parameters: 
-      - name: source
-        type: Rect
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+      - name: width
+        type: number
+        default:
+        summary:
+      - name: height
+        type: number
         default:
         summary:
     returns:

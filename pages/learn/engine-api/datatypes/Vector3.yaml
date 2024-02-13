@@ -21,6 +21,10 @@ constructors:
         type: number
         default:
         summary:
+      - name: z
+        type: number
+        default:
+        summary:
     returns:
       - type: Vector3
         summary:
