@@ -1,7 +1,7 @@
 name: TapHandler
 type: classes
 summary: |
-  A Behaviour that can be attached to a GameObject to make them handle tap events.
+  A Behaviour that fires a LuaEvent when the attached Class.GameObject's Collider(s) are tapped.
 description:
 code_samples:
 inherits:
