@@ -74,13 +74,6 @@ properties:
     is_static: false
     code_samples:
     type: GameObject
-  - name: hellYeahFieldOrProperty
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    type: number
 methods: 
   - name: GetComponent
     summary: |
@@ -210,42 +203,6 @@ methods:
     code_samples:
     parameters: 
       - name: name
-        type: string
-        default:
-        summary:
-    returns:
-      - type: GameObject
-        summary:
-  - name: HellYeah
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    parameters: 
-      - name: suffix1
-        type: string
-        default:
-        summary:
-      - name: suffix2
-        type: number
-        default:
-        summary:
-      - name: suffix3
-        type: GameObject
-        default:
-        summary:
-    returns:
-      - type: string
-        summary:
-  - name: HellYeahStatic
-    summary: |
-      
-    description:
-    is_static: true
-    code_samples:
-    parameters: 
-      - name: goToFind
         type: string
         default:
         summary:
