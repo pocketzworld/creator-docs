@@ -14,15 +14,15 @@ constructors:
     code_samples:
     parameters: 
       - name: center
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: size
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Bounds
+      - type: DataType.Bounds
         summary:
 properties: 
   - name: center
@@ -31,35 +31,35 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: size
     summary: |
       [Unity's Bounds.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-size.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: extents
     summary: |
       [Unity's Bounds.extents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-extents.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: min
     summary: |
       [Unity's Bounds.min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-min.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: max
     summary: |
       [Unity's Bounds.max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-max.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
 methods: 
   - name: SetMinMax
     summary: |
@@ -69,11 +69,11 @@ methods:
     code_samples:
     parameters: 
       - name: min
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: max
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -87,7 +87,7 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -115,7 +115,7 @@ methods:
     code_samples:
     parameters: 
       - name: bounds
-        type: Bounds
+        type: DataType.Bounds
         default:
         summary:
     returns:
@@ -129,7 +129,7 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -143,7 +143,7 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -157,11 +157,11 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
 math_operations: 
   - operation: '=='

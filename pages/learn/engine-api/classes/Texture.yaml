@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Object
+  - Class.Object
 constructors: 
 properties: 
   - name: mipmapCount
@@ -56,7 +56,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: updateCount
     summary: |
       [Unity's Texture.updateCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-updateCount.html)

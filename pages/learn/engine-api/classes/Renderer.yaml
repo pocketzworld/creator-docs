@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Component
+  - Class.Component
 constructors: 
 properties: 
   - name: bounds
@@ -14,14 +14,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Bounds
+    type: DataType.Bounds
   - name: localBounds
     summary: |
       [Unity's Renderer.localBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-localBounds.html)
     description:
     is_static: false
     code_samples:
-    type: Bounds
+    type: DataType.Bounds
   - name: enabled
     summary: |
       [Unity's Renderer.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-enabled.html)
@@ -112,28 +112,28 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: localToWorldMatrix
     summary: |
       [Unity's Renderer.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-localToWorldMatrix.html)
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: lightProbeProxyVolumeOverride
     summary: |
       [Unity's Renderer.lightProbeProxyVolumeOverride Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightProbeProxyVolumeOverride.html)
     description:
     is_static: false
     code_samples:
-    type: GameObject
+    type: Class.GameObject
   - name: probeAnchor
     summary: |
       [Unity's Renderer.probeAnchor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-probeAnchor.html)
     description:
     is_static: false
     code_samples:
-    type: Transform
+    type: Class.Transform
   - name: lightmapIndex
     summary: |
       [Unity's Renderer.lightmapIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightmapIndex.html)
@@ -154,28 +154,28 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector4
+    type: DataType.Vector4
   - name: realtimeLightmapScaleOffset
     summary: |
       [Unity's Renderer.realtimeLightmapScaleOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-realtimeLightmapScaleOffset.html)
     description:
     is_static: false
     code_samples:
-    type: Vector4
+    type: DataType.Vector4
   - name: material
     summary: |
       [Unity's Renderer.material Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-material.html)
     description:
     is_static: false
     code_samples:
-    type: Material
+    type: Class.Material
   - name: sharedMaterial
     summary: |
       [Unity's Renderer.sharedMaterial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sharedMaterial.html)
     description:
     is_static: false
     code_samples:
-    type: Material
+    type: Class.Material
 methods: 
   - name: ResetBounds
     summary: |

@@ -26,7 +26,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
 properties: 
   - name: normalized
@@ -35,7 +35,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: magnitude
     summary: |
       [Unity's Vector3.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-magnitude.html)
@@ -102,7 +102,7 @@ methods:
     code_samples:
     parameters: 
       - name: scale
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -126,11 +126,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: b
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: t
@@ -138,7 +138,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: SlerpUnclamped
     summary: |
@@ -148,11 +148,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: b
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: t
@@ -160,7 +160,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: RotateTowards
     summary: |
@@ -170,11 +170,11 @@ methods:
     code_samples:
     parameters: 
       - name: current
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: target
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: maxRadiansDelta
@@ -186,7 +186,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Lerp
     summary: |
@@ -196,11 +196,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: b
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: t
@@ -208,7 +208,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: LerpUnclamped
     summary: |
@@ -218,11 +218,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: b
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: t
@@ -230,7 +230,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: MoveTowards
     summary: |
@@ -240,11 +240,11 @@ methods:
     code_samples:
     parameters: 
       - name: current
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: target
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: maxDistanceDelta
@@ -252,7 +252,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Scale
     summary: |
@@ -262,15 +262,15 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: b
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Cross
     summary: |
@@ -280,15 +280,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: rhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Reflect
     summary: |
@@ -298,15 +298,15 @@ methods:
     code_samples:
     parameters: 
       - name: inDirection
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: inNormal
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Normalize
     summary: |
@@ -316,11 +316,11 @@ methods:
     code_samples:
     parameters: 
       - name: value
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Dot
     summary: |
@@ -330,11 +330,11 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: rhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -348,15 +348,15 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: onNormal
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: ProjectOnPlane
     summary: |
@@ -366,15 +366,15 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: planeNormal
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Angle
     summary: |
@@ -384,11 +384,11 @@ methods:
     code_samples:
     parameters: 
       - name: from
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: to
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -402,15 +402,15 @@ methods:
     code_samples:
     parameters: 
       - name: from
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: to
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: axis
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -424,11 +424,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: b
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -442,7 +442,7 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: maxLength
@@ -450,7 +450,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Magnitude
     summary: |
@@ -460,7 +460,7 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -474,7 +474,7 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -488,15 +488,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: rhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Max
     summary: |
@@ -506,15 +506,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: rhs
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
 math_operations: 
   - operation: '=='

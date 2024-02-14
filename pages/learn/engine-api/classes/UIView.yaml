@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - VisualElement
+  - Class.VisualElement
 constructors: 
   - name: new
     summary: |
@@ -15,7 +15,7 @@ constructors:
     code_samples:
     parameters: 
     returns:
-      - type: UIView
+      - type: Class.UIView
         summary:
 properties: 
   - name: IsDisposed
@@ -89,7 +89,7 @@ methods:
     code_samples:
     parameters: 
       - name: element
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -103,7 +103,7 @@ methods:
     code_samples:
     parameters: 
       - name: element
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:

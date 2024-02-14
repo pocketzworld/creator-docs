@@ -26,7 +26,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
 properties: 
   - name: grayscale
@@ -42,14 +42,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Color
+    type: DataType.Color
   - name: gamma
     summary: |
       [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
     description:
     is_static: false
     code_samples:
-    type: Color
+    type: DataType.Color
   - name: maxColorComponent
     summary: |
       [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
@@ -94,11 +94,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Color
+        type: DataType.Color
         default:
         summary:
       - name: b
-        type: Color
+        type: DataType.Color
         default:
         summary:
       - name: t
@@ -106,7 +106,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
   - name: LerpUnclamped
     summary: |
@@ -116,11 +116,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Color
+        type: DataType.Color
         default:
         summary:
       - name: b
-        type: Color
+        type: DataType.Color
         default:
         summary:
       - name: t
@@ -128,7 +128,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
   - name: HSVToRGB
     summary: |
@@ -150,7 +150,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
 math_operations: 
   - operation: '=='

@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Component
+  - Class.Component
 constructors: 
 properties: 
   - name: position
@@ -14,98 +14,98 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: localPosition
     summary: |
       [Unity's Transform.localPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localPosition.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: eulerAngles
     summary: |
       [Unity's Transform.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: localEulerAngles
     summary: |
       [Unity's Transform.localEulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localEulerAngles.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: right
     summary: |
       [Unity's Transform.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-right.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: up
     summary: |
       [Unity's Transform.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-up.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: forward
     summary: |
       [Unity's Transform.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-forward.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: rotation
     summary: |
       [Unity's Transform.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-rotation.html)
     description:
     is_static: false
     code_samples:
-    type: Quaternion
+    type: DataType.Quaternion
   - name: localRotation
     summary: |
       [Unity's Transform.localRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localRotation.html)
     description:
     is_static: false
     code_samples:
-    type: Quaternion
+    type: DataType.Quaternion
   - name: localScale
     summary: |
       [Unity's Transform.localScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localScale.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: parent
     summary: |
       [Unity's Transform.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html)
     description:
     is_static: false
     code_samples:
-    type: Transform
+    type: Class.Transform
   - name: worldToLocalMatrix
     summary: |
       [Unity's Transform.worldToLocalMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-worldToLocalMatrix.html)
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: localToWorldMatrix
     summary: |
       [Unity's Transform.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localToWorldMatrix.html)
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: root
     summary: |
       [Unity's Transform.root Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-root.html)
     description:
     is_static: false
     code_samples:
-    type: Transform
+    type: Class.Transform
   - name: childCount
     summary: |
       [Unity's Transform.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html)
@@ -119,7 +119,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: hasChanged
     summary: |
       [Unity's Transform.hasChanged Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hasChanged.html)
@@ -150,7 +150,7 @@ methods:
     code_samples:
     parameters: 
       - name: p
-        type: Transform
+        type: Class.Transform
         default:
         summary:
     returns:
@@ -164,11 +164,11 @@ methods:
     code_samples:
     parameters: 
       - name: position
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: rotation
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
@@ -182,11 +182,11 @@ methods:
     code_samples:
     parameters: 
       - name: localPosition
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: localRotation
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
@@ -200,11 +200,11 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: axis
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: angle
@@ -222,11 +222,11 @@ methods:
     code_samples:
     parameters: 
       - name: target
-        type: Transform
+        type: Class.Transform
         default:
         summary:
       - name: worldUp
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -240,11 +240,11 @@ methods:
     code_samples:
     parameters: 
       - name: direction
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: InverseTransformDirection
     summary: |
@@ -254,11 +254,11 @@ methods:
     code_samples:
     parameters: 
       - name: direction
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: TransformVector
     summary: |
@@ -268,11 +268,11 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: InverseTransformVector
     summary: |
@@ -282,11 +282,11 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: TransformPoint
     summary: |
@@ -296,11 +296,11 @@ methods:
     code_samples:
     parameters: 
       - name: position
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: InverseTransformPoint
     summary: |
@@ -310,11 +310,11 @@ methods:
     code_samples:
     parameters: 
       - name: position
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: DetachChildren
     summary: |
@@ -382,7 +382,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Transform
+      - type: Class.Transform
         summary:
   - name: IsChildOf
     summary: |
@@ -392,7 +392,7 @@ methods:
     code_samples:
     parameters: 
       - name: parent
-        type: Transform
+        type: Class.Transform
         default:
         summary:
     returns:
@@ -410,6 +410,6 @@ methods:
         default:
         summary:
     returns:
-      - type: Transform
+      - type: Class.Transform
         summary:
 math_operations: 

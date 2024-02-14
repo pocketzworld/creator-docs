@@ -14,7 +14,7 @@ constructors:
     code_samples:
     parameters: 
     returns:
-      - type: VisualElement
+      - type: Class.VisualElement
         summary:
 properties: 
   - name: viewDataKey
@@ -37,35 +37,35 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Rect
+    type: DataType.Rect
   - name: contentRect
     summary: |
       [Unity's VisualElement.contentRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentRect.html)
     description:
     is_static: false
     code_samples:
-    type: Rect
+    type: DataType.Rect
   - name: worldBound
     summary: |
       [Unity's VisualElement.worldBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldBound.html)
     description:
     is_static: false
     code_samples:
-    type: Rect
+    type: DataType.Rect
   - name: localBound
     summary: |
       [Unity's VisualElement.localBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-localBound.html)
     description:
     is_static: false
     code_samples:
-    type: Rect
+    type: DataType.Rect
   - name: worldTransform
     summary: |
       [Unity's VisualElement.worldTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldTransform.html)
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: name
     summary: |
       [Unity's VisualElement.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-name.html)
@@ -100,14 +100,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: VisualElement
+    type: Class.VisualElement
   - name: contentContainer
     summary: |
       [Unity's VisualElement.contentContainer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentContainer.html)
     description:
     is_static: false
     code_samples:
-    type: VisualElement
+    type: Class.VisualElement
   - name: childCount
     summary: |
       [Unity's VisualElement.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-childCount.html)
@@ -165,7 +165,7 @@ methods:
     code_samples:
     parameters: 
       - name: localPoint
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -179,7 +179,7 @@ methods:
     code_samples:
     parameters: 
       - name: rectangle
-        type: Rect
+        type: DataType.Rect
         default:
         summary:
     returns:
@@ -277,7 +277,7 @@ methods:
     code_samples:
     parameters: 
       - name: child
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -295,7 +295,7 @@ methods:
         default:
         summary:
       - name: element
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -309,7 +309,7 @@ methods:
     code_samples:
     parameters: 
       - name: element
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -351,7 +351,7 @@ methods:
         default:
         summary:
     returns:
-      - type: VisualElement
+      - type: Class.VisualElement
         summary:
   - name: IndexOf
     summary: |
@@ -361,7 +361,7 @@ methods:
     code_samples:
     parameters: 
       - name: element
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -395,7 +395,7 @@ methods:
     code_samples:
     parameters: 
       - name: sibling
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -409,7 +409,7 @@ methods:
     code_samples:
     parameters: 
       - name: sibling
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -433,7 +433,7 @@ methods:
     code_samples:
     parameters: 
       - name: child
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
@@ -447,11 +447,11 @@ methods:
     code_samples:
     parameters: 
       - name: other
-        type: VisualElement
+        type: Class.VisualElement
         default:
         summary:
     returns:
-      - type: VisualElement
+      - type: Class.VisualElement
         summary:
   - name: Q
     summary: |
@@ -465,7 +465,7 @@ methods:
         default:
         summary:
     returns:
-      - type: VisualElement
+      - type: Class.VisualElement
         summary:
   - name: RegisterCallback
     summary: |

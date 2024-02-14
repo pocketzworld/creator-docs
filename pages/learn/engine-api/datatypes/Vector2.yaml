@@ -22,7 +22,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
 properties: 
   - name: normalized
@@ -31,7 +31,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: magnitude
     summary: |
       [Unity's Vector2.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-magnitude.html)
@@ -87,7 +87,7 @@ methods:
     code_samples:
     parameters: 
       - name: scale
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -121,11 +121,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: b
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: t
@@ -133,7 +133,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: LerpUnclamped
     summary: |
@@ -143,11 +143,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: b
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: t
@@ -155,7 +155,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: MoveTowards
     summary: |
@@ -165,11 +165,11 @@ methods:
     code_samples:
     parameters: 
       - name: current
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: target
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: maxDistanceDelta
@@ -177,7 +177,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: Scale
     summary: |
@@ -187,15 +187,15 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: b
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: Reflect
     summary: |
@@ -205,15 +205,15 @@ methods:
     code_samples:
     parameters: 
       - name: inDirection
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: inNormal
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: Perpendicular
     summary: |
@@ -223,11 +223,11 @@ methods:
     code_samples:
     parameters: 
       - name: inDirection
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: Dot
     summary: |
@@ -237,11 +237,11 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: rhs
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -255,11 +255,11 @@ methods:
     code_samples:
     parameters: 
       - name: from
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: to
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -273,11 +273,11 @@ methods:
     code_samples:
     parameters: 
       - name: from
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: to
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -291,11 +291,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: b
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -309,7 +309,7 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: maxLength
@@ -317,7 +317,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: SqrMagnitude
     summary: |
@@ -327,7 +327,7 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -341,15 +341,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: rhs
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: Max
     summary: |
@@ -359,15 +359,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
       - name: rhs
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
 math_operations: 
   - operation: '=='

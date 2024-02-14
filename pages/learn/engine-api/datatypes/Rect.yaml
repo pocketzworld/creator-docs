@@ -30,7 +30,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Rect
+      - type: DataType.Rect
         summary:
 properties: 
   - name: x
@@ -53,28 +53,28 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: center
     summary: |
       [Unity's Rect.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-center.html)
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: min
     summary: |
       [Unity's Rect.min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-min.html)
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: max
     summary: |
       [Unity's Rect.max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-max.html)
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: width
     summary: |
       [Unity's Rect.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-width.html)
@@ -95,7 +95,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: xMin
     summary: |
       [Unity's Rect.xMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMin.html)
@@ -159,7 +159,7 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -173,7 +173,7 @@ methods:
     code_samples:
     parameters: 
       - name: other
-        type: Rect
+        type: DataType.Rect
         default:
         summary:
     returns:
@@ -203,7 +203,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Rect
+      - type: DataType.Rect
         summary:
   - name: NormalizedToPoint
     summary: |
@@ -213,15 +213,15 @@ methods:
     code_samples:
     parameters: 
       - name: rectangle
-        type: Rect
+        type: DataType.Rect
         default:
         summary:
       - name: normalizedRectCoordinates
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: PointToNormalized
     summary: |
@@ -231,15 +231,15 @@ methods:
     code_samples:
     parameters: 
       - name: rectangle
-        type: Rect
+        type: DataType.Rect
         default:
         summary:
       - name: point
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
 math_operations: 
   - operation: '=='

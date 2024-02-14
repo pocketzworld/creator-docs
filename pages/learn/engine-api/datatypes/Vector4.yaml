@@ -30,7 +30,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
 properties: 
   - name: normalized
@@ -39,7 +39,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector4
+    type: DataType.Vector4
   - name: magnitude
     summary: |
       [Unity's Vector4.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html)
@@ -117,7 +117,7 @@ methods:
     code_samples:
     parameters: 
       - name: scale
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -151,11 +151,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: b
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: t
@@ -163,7 +163,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: LerpUnclamped
     summary: |
@@ -173,11 +173,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: b
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: t
@@ -185,7 +185,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: MoveTowards
     summary: |
@@ -195,11 +195,11 @@ methods:
     code_samples:
     parameters: 
       - name: current
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: target
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: maxDistanceDelta
@@ -207,7 +207,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: Scale
     summary: |
@@ -217,15 +217,15 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: b
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: Normalize
     summary: |
@@ -235,11 +235,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: Dot
     summary: |
@@ -249,11 +249,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: b
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -267,15 +267,15 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: b
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: Distance
     summary: |
@@ -285,11 +285,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: b
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -303,7 +303,7 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -317,15 +317,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: rhs
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: Max
     summary: |
@@ -335,15 +335,15 @@ methods:
     code_samples:
     parameters: 
       - name: lhs
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: rhs
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: SqrMagnitude
     summary: |
@@ -353,7 +353,7 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:

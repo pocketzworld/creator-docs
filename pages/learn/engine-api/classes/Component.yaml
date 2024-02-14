@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Object
+  - Class.Object
 constructors: 
 properties: 
   - name: transform
@@ -14,14 +14,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Transform
+    type: Class.Transform
   - name: gameObject
     summary: |
       [Unity's Component.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html)
     description:
     is_static: false
     code_samples:
-    type: GameObject
+    type: Class.GameObject
   - name: tag
     summary: |
       [Unity's Component.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-tag.html)
@@ -38,11 +38,11 @@ methods:
     code_samples:
     parameters: 
       - name: type
-        type: Type
+        type: Class.Type
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: GetComponentInChildren
     summary: |
@@ -52,7 +52,7 @@ methods:
     code_samples:
     parameters: 
       - name: t
-        type: Type
+        type: Class.Type
         default:
         summary:
       - name: includeInactive
@@ -60,7 +60,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: GetComponentInParent
     summary: |
@@ -70,7 +70,7 @@ methods:
     code_samples:
     parameters: 
       - name: t
-        type: Type
+        type: Class.Type
         default:
         summary:
       - name: includeInactive
@@ -78,7 +78,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: CompareTag
     summary: |

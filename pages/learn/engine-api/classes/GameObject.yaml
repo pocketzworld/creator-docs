@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Object
+  - Class.Object
 constructors: 
   - name: new
     summary: |
@@ -15,7 +15,7 @@ constructors:
     code_samples:
     parameters: 
     returns:
-      - type: GameObject
+      - type: Class.GameObject
         summary:
 properties: 
   - name: transform
@@ -24,7 +24,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Transform
+    type: Class.Transform
   - name: layer
     summary: |
       [Unity's GameObject.layer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-layer.html)
@@ -73,7 +73,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: GameObject
+    type: Class.GameObject
 methods: 
   - name: GetComponent
     summary: |
@@ -83,11 +83,11 @@ methods:
     code_samples:
     parameters: 
       - name: type
-        type: Type
+        type: Class.Type
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: GetComponentInChildren
     summary: |
@@ -97,7 +97,7 @@ methods:
     code_samples:
     parameters: 
       - name: type
-        type: Type
+        type: Class.Type
         default:
         summary:
       - name: includeInactive
@@ -105,7 +105,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: GetComponentInParent
     summary: |
@@ -115,7 +115,7 @@ methods:
     code_samples:
     parameters: 
       - name: type
-        type: Type
+        type: Class.Type
         default:
         summary:
       - name: includeInactive
@@ -123,7 +123,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: AddComponent
     summary: |
@@ -133,11 +133,11 @@ methods:
     code_samples:
     parameters: 
       - name: componentType
-        type: Type
+        type: Class.Type
         default:
         summary:
     returns:
-      - type: Component
+      - type: Class.Component
         summary:
   - name: SetActive
     summary: |
@@ -179,7 +179,7 @@ methods:
         default:
         summary:
     returns:
-      - type: GameObject
+      - type: Class.GameObject
         summary:
   - name: FindGameObjectWithTag
     summary: |
@@ -193,7 +193,7 @@ methods:
         default:
         summary:
     returns:
-      - type: GameObject
+      - type: Class.GameObject
         summary:
   - name: Find
     summary: |
@@ -207,6 +207,6 @@ methods:
         default:
         summary:
     returns:
-      - type: GameObject
+      - type: Class.GameObject
         summary:
 math_operations: 

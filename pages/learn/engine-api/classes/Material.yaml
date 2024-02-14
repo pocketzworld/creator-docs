@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Object
+  - Class.Object
 constructors: 
   - name: new
     summary: |
@@ -15,11 +15,11 @@ constructors:
     code_samples:
     parameters: 
       - name: source
-        type: Material
+        type: Class.Material
         default:
         summary:
     returns:
-      - type: Material
+      - type: Class.Material
         summary:
 properties: 
   - name: color
@@ -28,28 +28,28 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Color
+    type: DataType.Color
   - name: mainTexture
     summary: |
       [Unity's Material.mainTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTexture.html)
     description:
     is_static: false
     code_samples:
-    type: Texture
+    type: Class.Texture
   - name: mainTextureOffset
     summary: |
       [Unity's Material.mainTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTextureOffset.html)
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: mainTextureScale
     summary: |
       [Unity's Material.mainTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-mainTextureScale.html)
     description:
     is_static: false
     code_samples:
-    type: Vector2
+    type: DataType.Vector2
   - name: renderQueue
     summary: |
       [Unity's Material.renderQueue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material-renderQueue.html)
@@ -369,11 +369,11 @@ methods:
     code_samples:
     parameters: 
       - name: start
-        type: Material
+        type: Class.Material
         default:
         summary:
       - name: end
-        type: Material
+        type: Class.Material
         default:
         summary:
       - name: t
@@ -405,7 +405,7 @@ methods:
     code_samples:
     parameters: 
       - name: mat
-        type: Material
+        type: Class.Material
         default:
         summary:
     returns:
@@ -419,7 +419,7 @@ methods:
     code_samples:
     parameters: 
       - name: mat
-        type: Material
+        type: Class.Material
         default:
         summary:
     returns:
@@ -501,7 +501,7 @@ methods:
         default:
         summary:
       - name: value
-        type: Color
+        type: DataType.Color
         default:
         summary:
     returns:
@@ -519,7 +519,7 @@ methods:
         default:
         summary:
       - name: value
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -537,7 +537,7 @@ methods:
         default:
         summary:
       - name: value
-        type: Matrix4x4
+        type: DataType.Matrix4x4
         default:
         summary:
     returns:
@@ -555,7 +555,7 @@ methods:
         default:
         summary:
       - name: value
-        type: Texture
+        type: Class.Texture
         default:
         summary:
     returns:
@@ -615,7 +615,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
   - name: GetVector
     summary: |
@@ -629,7 +629,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: GetMatrix
     summary: |
@@ -643,7 +643,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: GetTexture
     summary: |
@@ -657,7 +657,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Texture
+      - type: Class.Texture
         summary:
   - name: SetTextureOffset
     summary: |
@@ -671,7 +671,7 @@ methods:
         default:
         summary:
       - name: value
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -689,7 +689,7 @@ methods:
         default:
         summary:
       - name: value
-        type: Vector2
+        type: DataType.Vector2
         default:
         summary:
     returns:
@@ -707,7 +707,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
   - name: GetTextureScale
     summary: |
@@ -721,6 +721,6 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector2
+      - type: DataType.Vector2
         summary:
 math_operations: 

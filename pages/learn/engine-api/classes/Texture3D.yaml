@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Texture
+  - Class.Texture
 constructors: 
 properties: 
   - name: depth
@@ -61,7 +61,7 @@ methods:
         default:
         summary:
       - name: color
-        type: Color
+        type: DataType.Color
         default:
         summary:
     returns:
@@ -87,7 +87,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
   - name: GetPixelBilinear
     summary: |
@@ -109,6 +109,6 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
 math_operations: 

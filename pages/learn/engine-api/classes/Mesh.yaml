@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Object
+  - Class.Object
 constructors: 
   - name: new
     summary: |
@@ -15,7 +15,7 @@ constructors:
     code_samples:
     parameters: 
     returns:
-      - type: Mesh
+      - type: Class.Mesh
         summary:
 properties: 
   - name: vertexBufferCount
@@ -66,7 +66,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Bounds
+    type: DataType.Bounds
   - name: vertexAttributeCount
     summary: |
       [Unity's Mesh.vertexAttributeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexAttributeCount.html)

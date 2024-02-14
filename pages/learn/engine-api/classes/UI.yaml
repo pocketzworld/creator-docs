@@ -16,7 +16,7 @@ methods:
     code_samples:
     parameters: 
       - name: ve
-        type: UIView
+        type: Class.UIView
         default:
         summary:
     returns:

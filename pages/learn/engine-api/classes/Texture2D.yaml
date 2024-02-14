@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Texture
+  - Class.Texture
 constructors: 
   - name: new
     summary: |
@@ -23,7 +23,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Texture2D
+      - type: Class.Texture2D
         summary:
 properties: 
   - name: ignoreMipmapLimit
@@ -178,7 +178,7 @@ methods:
         default:
         summary:
       - name: color
-        type: Color
+        type: DataType.Color
         default:
         summary:
     returns:
@@ -200,7 +200,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
   - name: GetPixelBilinear
     summary: |
@@ -218,7 +218,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Color
+      - type: DataType.Color
         summary:
   - name: Apply
     summary: |
@@ -264,7 +264,7 @@ methods:
     code_samples:
     parameters: 
       - name: source
-        type: Rect
+        type: DataType.Rect
         default:
         summary:
       - name: destX

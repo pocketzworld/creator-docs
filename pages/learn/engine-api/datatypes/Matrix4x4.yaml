@@ -14,23 +14,23 @@ constructors:
     code_samples:
     parameters: 
       - name: column0
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: column1
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: column2
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
       - name: column3
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
 properties: 
   - name: rotation
@@ -39,14 +39,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Quaternion
+    type: DataType.Quaternion
   - name: lossyScale
     summary: |
       [Unity's Matrix4x4.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-lossyScale.html)
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: isIdentity
     summary: |
       [Unity's Matrix4x4.isIdentity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-isIdentity.html)
@@ -67,14 +67,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: transpose
     summary: |
       [Unity's Matrix4x4.transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-transpose.html)
     description:
     is_static: false
     code_samples:
-    type: Matrix4x4
+    type: DataType.Matrix4x4
   - name: m00
     summary: |
       [Unity's Matrix4x4.m00 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m00.html)
@@ -206,15 +206,15 @@ methods:
     code_samples:
     parameters: 
       - name: pos
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: q
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: s
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -232,7 +232,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: GetRow
     summary: |
@@ -246,7 +246,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Vector4
+      - type: DataType.Vector4
         summary:
   - name: GetPosition
     summary: |
@@ -256,7 +256,7 @@ methods:
     code_samples:
     parameters: 
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: SetColumn
     summary: |
@@ -270,7 +270,7 @@ methods:
         default:
         summary:
       - name: column
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -288,7 +288,7 @@ methods:
         default:
         summary:
       - name: row
-        type: Vector4
+        type: DataType.Vector4
         default:
         summary:
     returns:
@@ -302,11 +302,11 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: MultiplyPoint3x4
     summary: |
@@ -316,11 +316,11 @@ methods:
     code_samples:
     parameters: 
       - name: point
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: MultiplyVector
     summary: |
@@ -330,11 +330,11 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Vector3
+      - type: DataType.Vector3
         summary:
   - name: Determinant
     summary: |
@@ -344,7 +344,7 @@ methods:
     code_samples:
     parameters: 
       - name: m
-        type: Matrix4x4
+        type: DataType.Matrix4x4
         default:
         summary:
     returns:
@@ -358,19 +358,19 @@ methods:
     code_samples:
     parameters: 
       - name: pos
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: q
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: s
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Inverse
     summary: |
@@ -380,11 +380,11 @@ methods:
     code_samples:
     parameters: 
       - name: m
-        type: Matrix4x4
+        type: DataType.Matrix4x4
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Transpose
     summary: |
@@ -394,11 +394,11 @@ methods:
     code_samples:
     parameters: 
       - name: m
-        type: Matrix4x4
+        type: DataType.Matrix4x4
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Ortho
     summary: |
@@ -432,7 +432,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Perspective
     summary: |
@@ -458,7 +458,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: LookAt
     summary: |
@@ -468,19 +468,19 @@ methods:
     code_samples:
     parameters: 
       - name: from
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: to
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: up
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Frustum
     summary: |
@@ -514,7 +514,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Scale
     summary: |
@@ -524,11 +524,11 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Translate
     summary: |
@@ -538,11 +538,11 @@ methods:
     code_samples:
     parameters: 
       - name: vector
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
   - name: Rotate
     summary: |
@@ -552,11 +552,11 @@ methods:
     code_samples:
     parameters: 
       - name: q
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
-      - type: Matrix4x4
+      - type: DataType.Matrix4x4
         summary:
 math_operations: 
   - operation: '=='

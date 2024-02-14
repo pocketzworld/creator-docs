@@ -30,7 +30,7 @@ constructors:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
 properties: 
   - name: eulerAngles
@@ -39,14 +39,14 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Vector3
+    type: DataType.Vector3
   - name: normalized
     summary: |
       [Unity's Quaternion.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html)
     description:
     is_static: false
     code_samples:
-    type: Quaternion
+    type: DataType.Quaternion
   - name: x
     summary: |
       [Unity's Quaternion.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-x.html)
@@ -110,7 +110,7 @@ methods:
     code_samples:
     parameters: 
       - name: view
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -124,11 +124,11 @@ methods:
     code_samples:
     parameters: 
       - name: fromDirection
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: toDirection
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
@@ -152,15 +152,15 @@ methods:
     code_samples:
     parameters: 
       - name: fromDirection
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: toDirection
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: Inverse
     summary: |
@@ -170,11 +170,11 @@ methods:
     code_samples:
     parameters: 
       - name: rotation
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: Slerp
     summary: |
@@ -184,11 +184,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: b
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: t
@@ -196,7 +196,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: SlerpUnclamped
     summary: |
@@ -206,11 +206,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: b
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: t
@@ -218,7 +218,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: Lerp
     summary: |
@@ -228,11 +228,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: b
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: t
@@ -240,7 +240,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: LerpUnclamped
     summary: |
@@ -250,11 +250,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: b
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: t
@@ -262,7 +262,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: AngleAxis
     summary: |
@@ -276,11 +276,11 @@ methods:
         default:
         summary:
       - name: axis
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: LookRotation
     summary: |
@@ -290,15 +290,15 @@ methods:
     code_samples:
     parameters: 
       - name: forward
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
       - name: upwards
-        type: Vector3
+        type: DataType.Vector3
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: Dot
     summary: |
@@ -308,11 +308,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: b
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
@@ -326,11 +326,11 @@ methods:
     code_samples:
     parameters: 
       - name: a
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: b
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
@@ -356,7 +356,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: RotateTowards
     summary: |
@@ -366,11 +366,11 @@ methods:
     code_samples:
     parameters: 
       - name: from
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: to
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
       - name: maxDegreesDelta
@@ -378,7 +378,7 @@ methods:
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
   - name: Normalize
     summary: |
@@ -388,11 +388,11 @@ methods:
     code_samples:
     parameters: 
       - name: q
-        type: Quaternion
+        type: DataType.Quaternion
         default:
         summary:
     returns:
-      - type: Quaternion
+      - type: DataType.Quaternion
         summary:
 math_operations: 
   - operation: '=='

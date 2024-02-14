@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - Component
+  - Class.Component
 constructors: 
 properties: 
   - name: enabled
