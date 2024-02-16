@@ -82,10 +82,6 @@ methods:
     is_static: false
     code_samples:
     parameters: 
-      - name: type
-        type: Class.Type
-        default:
-        summary:
     returns:
       - type: Class.Component
         summary:

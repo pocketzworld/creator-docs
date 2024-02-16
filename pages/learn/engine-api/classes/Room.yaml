@@ -1,0 +1,26 @@
+name: Room
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: Tapped
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: HasTapped
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+math_operations: 

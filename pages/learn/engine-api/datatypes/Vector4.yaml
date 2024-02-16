@@ -10,7 +10,7 @@ constructors:
     summary: |
       [Unity's Vector4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-ctor.html)
     description:
-    is_static: false
+    is_static: true
     code_samples:
     parameters: 
       - name: x

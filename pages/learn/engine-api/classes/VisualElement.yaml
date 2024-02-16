@@ -123,6 +123,50 @@ properties:
     code_samples:
     type: string
 methods: 
+  - name: Q
+    summary: |
+      [Unity's VisualElement.Q Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Q.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary:
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: RegisterCallback
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+  - name: RegisterPressCallback
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RegisterLongPressCallback
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
   - name: Focus
     summary: |
       [Unity's VisualElement.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Focus.html)
@@ -452,49 +496,5 @@ methods:
         summary:
     returns:
       - type: Class.VisualElement
-        summary:
-  - name: Q
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    parameters: 
-      - name: name
-        type: string
-        default:
-        summary:
-    returns:
-      - type: Class.VisualElement
-        summary:
-  - name: RegisterCallback
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    parameters: 
-    returns:
-      - type: string
-        summary:
-  - name: RegisterPressCallback
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    parameters: 
-    returns:
-      - type: void
-        summary:
-  - name: RegisterLongPressCallback
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    parameters: 
-    returns:
-      - type: void
         summary:
 math_operations: 
