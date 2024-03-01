@@ -1,7 +1,7 @@
 name: Color
 type: datatypes
 summary: |
-  The Color datatype in Unity represents a color as a combination of red, green, blue, and optionally, alpha components. A Color can be used wherever a color property is required to define in Unity, whether it's for setting the background color of the scene, or to set the color of an object material. Get the full details on [official Unity Color documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.html).
+  The Color datatype in Unity embodies the concept of color within a digital environment. It does so by representing colors in terms of their individual red, green, blue, and alpha (transparency) components. Each of these ranges from 0 to 1, where 0 indicates none of that component and 1 signifies full intensity. For instance, a fully red color will have an 'r' property of 1 and 'g', 'b', 'a' properties of 0. Similarly, colors can be mixed to create various shades and hues. Additionally, an 'a' (or alpha) property of 1 means the color is completely opaque, while an 'a' property of 0 means it is entirely transparent. Unity's Color datatype is a crucial tool anytime you want to define or manipulate colors in your game, for example when changing the color of an object, adjusting light colors, or altering pixel colors within a texture. To explore its functionalities in much more detail, refer to the [official Unity Color documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.html).
 description:
 code_samples:
 inherits:

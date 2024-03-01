@@ -1,567 +1,567 @@
 name: Matrix4x4
 type: datatypes
 summary: |
-  [Unity's Matrix4x4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.html)
+  Unity's Matrix4x4 datatype operates as the cornerstone in modeling transformations in 3D space, holding critical data about translations, rotations, and scaling. Think of it as the mathematical blueprint that instructs your 3D objects on how to transform from one state to another – a fundamental tool in creating dynamic and interactive 3D environments. Like a guiding chart for your 3D objects, impacting how they move, turn, and resize in the 3D realm. For in-depth understanding and practical application scenarios, peruse through the [Matrix4x4 section from the official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.html).
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+constructors:
   - name: new
     summary: |
-      [Unity's Matrix4x4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-ctor.html)
+      The 'new' constructor creates a new Matrix4x4 instance given four Vector4 inputs for each column of the matrix. In other words, it constructs a 4x4 matrix using four 4-dimensional vectors. For more details, see the [official Unity documentation on Matrix4x4.new](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-ctor.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: column0
         type: DataType.Vector4
         default:
-        summary:
+        summary: This is the first column vector of the 4x4 matrix.
       - name: column1
         type: DataType.Vector4
         default:
-        summary:
+        summary: This is the second column vector of the 4x4 matrix.
       - name: column2
         type: DataType.Vector4
         default:
-        summary:
+        summary: This is the third column vector of the 4x4 matrix.
       - name: column3
         type: DataType.Vector4
         default:
-        summary:
+        summary: This is the fourth column vector of the 4x4 matrix.
     returns:
       - type: DataType.Matrix4x4
-        summary:
-properties: 
+        summary: Returns a new Matrix4x4 instance.
+properties:
   - name: rotation
     summary: |
-      [Unity's Matrix4x4.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-rotation.html)
+      The 'rotation' property is a Quaternion that represents the rotation part of this matrix. Accessing this property can be particularly useful if you want to extract the rotation information of a Matrix4x4 instance. You can learn more from the [official Unity documentation on Matrix4x4.rotation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-rotation.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: lossyScale
     summary: |
-      [Unity's Matrix4x4.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-lossyScale.html)
+      The 'lossyScale' property returns a Vector3 representing the scale of the matrix. If the matrix has a uniform scale (the same scale along all axes), 'lossyScale' will correctly report it. If the matrix has a non-uniform scale (different scales along different axes), 'lossyScale' will not accurately reflect it. More information is available in the [official Unity documentation on Matrix4x4.lossyScale](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-lossyScale.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: isIdentity
     summary: |
-      [Unity's Matrix4x4.isIdentity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-isIdentity.html)
+      The 'isIdentity' property returns a boolean indicating whether the matrix is the identity matrix. The identity matrix is a special type of matrix that doesn't change any vector when we multiply that vector with it. Check out the [official Unity documentation on Matrix4x4.isIdentity](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-isIdentity.html) for more details.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: determinant
     summary: |
-      [Unity's Matrix4x4.determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-determinant.html)
+      The 'determinant' property returns the determinant of the matrix. The determinant is a special number that encapsulates some properties of the matrix. It is used for solving systems of equations, in calculus, and more. For more explanation, see the [official Unity documentation on Matrix4x4.determinant](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-determinant.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: inverse
     summary: |
-      [Unity's Matrix4x4.inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-inverse.html)
+      The 'inverse' property provides the inverse of the matrix, assuming it exists. An inverse matrix is a matrix that, when multiplied by the original matrix, yields the identity matrix. For a deeper understanding, refer to the [official Unity documentation on Matrix4x4.inverse](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-inverse.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: transpose
     summary: |
-      [Unity's Matrix4x4.transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-transpose.html)
+      The 'transpose' property returns the transpose of the matrix. The transpose of a matrix is obtained by swapping its rows with columns and vice versa. To know more about the transposition of a matrix, head over to the [official Unity documentation on Matrix4x4.transpose](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-transpose.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: m00
     summary: |
-      [Unity's Matrix4x4.m00 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m00.html)
+      The 'm00' property represents the element at the first row and first column of the matrix. For more information, refer to the [official Unity documentation on Matrix4x4.m00](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m00.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m10
     summary: |
-      [Unity's Matrix4x4.m10 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m10.html)
+      The 'm10' property represents the element at the second row and first column of the matrix. Check out the [official Unity documentation on Matrix4x4.m10](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m10.html) for more details.
     description:
     is_static: false
     code_samples:
     type: number
   - name: m20
     summary: |
-      [Unity's Matrix4x4.m20 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m20.html)
+      The 'm20' property corresponds to the element in the third row and first column of the matrix. For more information, see the [official Unity documentation on Matrix4x4.m20](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m20.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m30
     summary: |
-      [Unity's Matrix4x4.m30 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m30.html)
+      The 'm30' property represents the element at the fourth row and first column of the matrix. You can learn more about it from the [official Unity documentation on Matrix4x4.m30](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m30.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m01
     summary: |
-      [Unity's Matrix4x4.m01 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m01.html)
+      The 'm01' property corresponds to the element in the first row and second column of the matrix. More details are available in the [official Unity documentation on Matrix4x4.m01](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m01.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m11
     summary: |
-      [Unity's Matrix4x4.m11 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m11.html)
+      The 'm11' property represents the element at the second row and second column of the matrix. For more information, refer to the [official Unity documentation on Matrix4x4.m11](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m11.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m21
     summary: |
-      [Unity's Matrix4x4.m21 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m21.html)
+      The 'm21' property signifies the element at the third row and second column of the matrix. For a deeper understanding, check out the [official Unity documentation on Matrix4x4.m21](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m21.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m31
     summary: |
-      [Unity's Matrix4x4.m31 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m31.html)
+      The 'm31' property denotes the element in the fourth row and second column of the matrix. For more details, see the [official Unity documentation on Matrix4x4.m31](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m31.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m02
     summary: |
-      [Unity's Matrix4x4.m02 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m02.html)
+      The 'm02' property represents the element at the first row and third column of the matrix. To know more, visit the [official Unity documentation on Matrix4x4.m02](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m02.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m12
     summary: |
-      [Unity's Matrix4x4.m12 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m12.html)
+      The 'm12' property denotes the element in the second row and third column of the matrix. You can learn more about it from the [official Unity documentation on Matrix4x4.m12](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m12.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m22
     summary: |
-      [Unity's Matrix4x4.m22 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m22.html)
+      The 'm22' property corresponds to the element in the third row and third column of the matrix. For more information, refer to the [official Unity documentation on Matrix4x4.m22](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m22.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m32
     summary: |
-      [Unity's Matrix4x4.m32 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m32.html)
+      The 'm32' property signifies the element at the fourth row and third column of the matrix. More details can be found in the [official Unity documentation on Matrix4x4.m32](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m32.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m03
     summary: |
-      [Unity's Matrix4x4.m03 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m03.html)
+      The 'm03' property denotes the element in the first row and fourth column of the matrix. To know more about it, visit the [official Unity documentation on Matrix4x4.m03](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m03.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m13
     summary: |
-      [Unity's Matrix4x4.m13 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m13.html)
+      The 'm13' property represents the element at the second row and fourth column of the matrix. For a deeper understanding, check out the [official Unity documentation on Matrix4x4.m13](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m13.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m23
     summary: |
-      [Unity's Matrix4x4.m23 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m23.html)
+      The 'm23' property signifies the element in the third row and fourth column of the matrix. You can learn more about it from the [official Unity documentation on Matrix4x4.m23](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m23.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: m33
     summary: |
-      [Unity's Matrix4x4.m33 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m33.html)
+      The 'm33' property denotes the element at the fourth row and fourth column of the matrix. More details can be found in the [official Unity documentation on Matrix4x4.m33](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-m33.html).
     description:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: ValidTRS
     summary: |
-      [Unity's Matrix4x4.ValidTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.ValidTRS.html)
+      The 'ValidTRS' method checks if a matrix is a valid transformation matrix. It returns a boolean indicating whether the matrix holds valid translation, rotation, and scale values. More substance regarding this can be found in [Unity's Matrix4x4.ValidTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.ValidTRS.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if the matrix is a valid transformation matrix, otherwise false.
   - name: SetTRS
     summary: |
-      [Unity's Matrix4x4.SetTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetTRS.html)
+      The 'SetTRS' method sets the matrix to a transformation matrix, given a Vector3 for position, a Quaternion for rotation, and a Vector3 for scale. It's quick and convenient when you want to set up a transform from position, rotation and scale values. For more info, refer to [Unity's Matrix4x4.SetTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetTRS.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: pos
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position to set in the transformation matrix.
       - name: q
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The rotation to set in the transformation matrix.
       - name: s
         type: DataType.Vector3
         default:
-        summary:
+        summary: The scale to set in the transformation matrix.
     returns:
       - type: void
         summary:
   - name: GetColumn
     summary: |
-      [Unity's Matrix4x4.GetColumn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetColumn.html)
+      The 'GetColumn' method returns a Vector4 representing a specified column of the matrix. This can be helpful when you need to extract specific column information from a matrix. More explanation can be found in [Unity's Matrix4x4.GetColumn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetColumn.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the column to retrieve.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a Vector4 representing the specified column of the matrix.
   - name: GetRow
     summary: |
-      [Unity's Matrix4x4.GetRow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetRow.html)
+      The 'GetRow' method returns a Vector4 representing a specified row of the matrix. This can be useful when you need to extract certain row information from a matrix. More substance regarding this is available in [Unity's Matrix4x4.GetRow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetRow.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the row to retrieve.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a Vector4 representing the specified row of the matrix.
   - name: GetPosition
     summary: |
-      [Unity's Matrix4x4.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetPosition.html)
+      The 'GetPosition' method gives a Vector3 representing the position stored in the transformation matrix. This is particularly useful when wanting to extract the position component from a transformation matrix. For more information, refer to [Unity's Matrix4x4.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.GetPosition.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns a Vector3 representing the position stored in the matrix.
   - name: SetColumn
     summary: |
-      [Unity's Matrix4x4.SetColumn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetColumn.html)
+      The 'SetColumn' method sets a Vector4 to a specified column of the matrix. This method comes in handy when you want to replace a specific column of a matrix. More info can be found in [Unity's Matrix4x4.SetColumn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetColumn.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the column to set.
       - name: column
         type: DataType.Vector4
         default:
-        summary:
+        summary: The vector to set in the specified column of the matrix.
     returns:
       - type: void
         summary:
   - name: SetRow
     summary: |
-      [Unity's Matrix4x4.SetRow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetRow.html)
+      The 'SetRow' method sets a Vector4 to a specified row of the matrix. You can use this method to replace a certain row of a matrix. For more information, see [Unity's Matrix4x4.SetRow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.SetRow.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the row to set.
       - name: row
         type: DataType.Vector4
         default:
-        summary:
+        summary: The vector to set in the specified row of the matrix.
     returns:
       - type: void
         summary:
   - name: MultiplyPoint
     summary: |
-      [Unity's Matrix4x4.MultiplyPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyPoint.html)
+      The 'MultiplyPoint' method multiplies a Matrix4x4 and a Vector3 together. It treats the input Vector3 as a point in 3D space - this means it also considers the translation stored in the matrix. To know more, see [Unity's Matrix4x4.MultiplyPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyPoint.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: point
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to be multiplied with the matrix.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns a Vector3 as a result of the multiplication.
   - name: MultiplyPoint3x4
     summary: |
-      [Unity's Matrix4x4.MultiplyPoint3x4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyPoint3x4.html)
+      The 'MultiplyPoint3x4' method multiplies a Matrix4x4 and a Vector3 together. It treats the matrix as if it's a 3x4 matrix, and thus the result will not have perspective projection applied. More explanation is available in [Unity's Matrix4x4.MultiplyPoint3x4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyPoint3x4.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: point
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to be multiplied with the matrix.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns a Vector3 as a result of the multiplication without perspective projection.
   - name: MultiplyVector
     summary: |
-      [Unity's Matrix4x4.MultiplyVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyVector.html)
+      The 'MultiplyVector' method multiplies a Matrix4x4 and a Vector3 together. It treats the input Vector3 as a direction rather than a point, meaning it will not consider the translation part of the matrix. For more detailed information, refer to [Unity's Matrix4x4.MultiplyVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.MultiplyVector.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: vector
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to be multiplied with the matrix.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns a Vector3 as a result of the multiplication.
   - name: Determinant
     summary: |
-      [Unity's Matrix4x4.Determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Determinant.html)
+      The static 'Determinant' method returns the determinant of a given Matrix4x4. The determinant of a matrix is a special scalar value that can be computed from its elements and can provide useful information about the matrix. You can learn more about it from [Unity's Matrix4x4.Determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Determinant.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: m
         type: DataType.Matrix4x4
         default:
-        summary:
+        summary: The matrix whose determinant is to be calculated.
     returns:
       - type: number
-        summary:
+        summary: Returns the determinant of the given matrix.
   - name: TRS
     summary: |
-      [Unity's Matrix4x4.TRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.TRS.html)
+      The static 'TRS' method creates a transformation matrix from translation, rotation, and scale. The 'TRS' stands for 'Translate, Rotate, Scale'. It returns a Matrix4x4 built from the given Vector3 of position, Quaternion of rotation and another Vector3 of scale. For a comprehensive understanding, check out [Unity's Matrix4x4.TRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.TRS.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: pos
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position to be included in the transformation matrix.
       - name: q
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The rotation to be included in the transformation matrix.
       - name: s
         type: DataType.Vector3
         default:
-        summary:
+        summary: The scale to be included in the transformation matrix.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns a Matrix4x4 transformation matrix created from a position, rotation, and scale.
   - name: Inverse
     summary: |
-      [Unity's Matrix4x4.Inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Inverse.html)
+      The static 'Inverse' method computes the inverse of a given Matrix4x4. The inverse of a matrix is a matrix that, when multiplied with the original matrix, yields the identity matrix. For further detail, see [Unity's Matrix4x4.Inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Inverse.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: m
         type: DataType.Matrix4x4
         default:
-        summary:
+        summary: The matrix to be inversed.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns the inverse of the given matrix.
   - name: Transpose
     summary: |
-      [Unity's Matrix4x4.Transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Transpose.html)
+      The static 'Transpose' method returns the transpose of a given Matrix4x4. The transpose of a matrix is a new matrix whose rows are the columns of the original matrix and whose columns are the original's rows. For more info, refer to [Unity's Matrix4x4.Transpose Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Transpose.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: m
         type: DataType.Matrix4x4
         default:
-        summary:
+        summary: The matrix to be transposed.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns the transpose of the given matrix.
   - name: Ortho
     summary: |
-      [Unity's Matrix4x4.Ortho Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Ortho.html)
+      The static 'Ortho' method creates an orthogonal projection matrix. The resulting matrix can be used to transform coordinates in 3D into a 2D projection. This is particularly useful in things like 2D games or interfaces. Learn more from [Unity's Matrix4x4.Ortho Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Ortho.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: left
         type: number
         default:
-        summary:
+        summary: The value for the left vertical clipping plane.
       - name: right
         type: number
         default:
-        summary:
+        summary: The value for the right vertical clipping plane.
       - name: bottom
         type: number
         default:
-        summary:
+        summary: The value for the bottom horizontal clipping plane.
       - name: top
         type: number
         default:
-        summary:
+        summary: The value for the top horizontal clipping plane.
       - name: zNear
         type: number
         default:
-        summary:
+        summary: The value for the near depth clipping plane.
       - name: zFar
         type: number
         default:
-        summary:
+        summary: The value for the far depth clipping plane.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns an orthogonal projection matrix created from the specified parameters.
   - name: Perspective
     summary: |
-      [Unity's Matrix4x4.Perspective Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Perspective.html)
+      The static 'Perspective' method creates a perspective projection matrix from field of view, aspect ratio, and near and far clipping planes. The resulting matrix can be used to transform 3D coordinates into a 2D perspective. For a deeper understanding, refer to [Unity's Matrix4x4.Perspective Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Perspective.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: fov
         type: number
         default:
-        summary:
+        summary: The field of view in the y direction, measured in degrees.
       - name: aspect
         type: number
         default:
-        summary:
+        summary: The aspect ratio, defined as width divided by height.
       - name: zNear
         type: number
         default:
-        summary:
+        summary: The value for the near depth clipping plane.
       - name: zFar
         type: number
         default:
-        summary:
+        summary: The value for the far depth clipping plane.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns a perspective projection matrix created from the specified parameters.
   - name: LookAt
     summary: |
-      [Unity's Matrix4x4.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.LookAt.html)
+      The static 'LookAt' method creates a viewing matrix aimed at a target with a defined up direction. This method can be useful in a variety of situations, like setting the view matrix of a camera. More information can be found in [Unity's Matrix4x4.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.LookAt.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: from
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position the result matrix will transform from.
       - name: to
         type: DataType.Vector3
         default:
-        summary:
+        summary: The target point the result matrix will face towards.
       - name: up
         type: DataType.Vector3
         default:
-        summary:
+        summary: The up direction. It must not be parallel to the direction vector pointing from 'from' to 'to'.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns a viewing matrix aimed at the target from a set position and up direction.
   - name: Frustum
     summary: |
-      [Unity's Matrix4x4.Frustum Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Frustum.html)
+      The static 'Frustum' method creates a perspective projection matrix that represents a view frustum. A frustum is a kind of pyramid with its top cut off. It is typically what a camera in 3D space sees with certain field of view and near and far clipping planes. For more details, see [Unity's Matrix4x4.Frustum Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Frustum.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: left
         type: number
         default:
-        summary:
+        summary: The value for the left vertical clipping plane.
       - name: right
         type: number
         default:
-        summary:
+        summary: The value for the right vertical clipping plane.
       - name: bottom
         type: number
         default:
-        summary:
+        summary: The value for the bottom horizontal clipping plane.
       - name: top
         type: number
         default:
-        summary:
+        summary: The value for the top horizontal clipping plane.
       - name: zNear
         type: number
         default:
-        summary:
+        summary: The value for the near depth clipping plane.
       - name: zFar
         type: number
         default:
-        summary:
+        summary: The value for the far depth clipping plane.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns a perspective projection matrix that represents the specified view frustum.
   - name: Scale
     summary: |
-      [Unity's Matrix4x4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Scale.html)
+      The static 'Scale' method forms a scaling matrix from a given Vector3. The resulting matrix can be used to scale an object in 3D space by the specified vector. More info about this can be learned from [Unity's Matrix4x4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Scale.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: vector
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector by which to scale.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns a scaling matrix created from the specified vector.
   - name: Translate
     summary: |
-      [Unity's Matrix4x4.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Translate.html)
+      The static 'Translate' method creates a translation matrix from a given Vector3. It can be used to move an object in 3D space by a specified vector. For more details, see [Unity's Matrix4x4.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Translate.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: vector
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector by which to translate.
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: Returns a translation matrix created from the specified vector.
   - name: Rotate
     summary: |
-      [Unity's Matrix4x4.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Rotate.html)
+      The static 'Rotate' method generates a rotation matrix from a Quaternion. The resulting matrix can be used to rotate an object in 3D space by the specified Quaternion. For more explanation, please refer to [Unity's Matrix4x4.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Rotate.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: q
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The quaternion by which to rotate.
     returns:
       - type: DataType.Matrix4x4
-        summary:
-math_operations: 
+        summary: Returns a rotation matrix created from the specified quaternion.
+math_operations:
   - operation: '=='
     summary: |
-      [Unity's Matrix4x4.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-operator_eq.html)
+      The '==' operator checks if two Matrix4x4 matrices are equal, element-wise. Two matrices are considered equal if all their corresponding elements are equal. For more details, refer to [Unity's Matrix4x4.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-operator_eq.html).
     description:
     type_a: Matrix4x4
     type_b: Matrix4x4
@@ -569,7 +569,7 @@ math_operations:
     code_samples:
   - operation: '*'
     summary: |
-      [Unity's Matrix4x4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-operator_multiply.html)
+      The '*' operator multiplies a Matrix4x4 by a Vector4. This operation results in a transformed Vector4 that has been scaled, rotated, and positioned according to the Matrix4x4. More insights can be gained from [Unity's Matrix4x4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-operator_multiply.html).
     description:
     type_a: Matrix4x4
     type_b: Vector4
