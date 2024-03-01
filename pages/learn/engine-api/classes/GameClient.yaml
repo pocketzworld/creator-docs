@@ -1,0 +1,38 @@
+name: GameClient
+type: classes
+summary: |
+  This class represents a local game client in the Highrise game environment.
+description:
+code_samples:
+inherits:
+constructors:
+methods:
+  - name: PlayerConnected
+    summary: |
+      Event that is triggered when a player connected to the game.
+    description:
+    is_static: false
+    parameters:
+    code_samples:
+    returns:
+      - type: Class.Event
+        summary: This method returns an Event indicating a player has just connected.
+  - name: PlayerDisconnected
+    summary: |
+      Event that is fired when a player is disconnected from the client.
+    description:
+    is_static: false
+    parameters:
+    code_samples:
+    returns:
+      - type: Class.Event
+        summary: This method returns an Event indicating a player has just disconnected.
+properties:
+  - name: localPlayer
+    summary: |
+      Fetches the local player of the game client.
+    description:
+    is_static: false
+    code_samples:
+    type: ClientPlayer
+math_operations:
