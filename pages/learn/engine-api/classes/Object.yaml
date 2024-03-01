@@ -42,7 +42,8 @@ methods:
         summary: The Object to destroy.
     returns:
       - type: void
-        summary: Does not return anything.  - name: Instantiate
+        summary: Does not return anything.
+  - name: Instantiate
     summary: |
       The 'Instantiate' method clones the object original and returns the clone. This can be immensely useful in various gameplay mechanics like respawning, shooting projectiles, etc. Learn more about Instantiate [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Instantiate.html).
     description:
