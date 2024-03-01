@@ -1,210 +1,210 @@
 name: Renderer
 type: classes
 summary: |
-  [Unity's Renderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.html)
+  The Renderer class breathes life into Unity's three-dimensional gaming landscape by controlling the display and customization of mesh objects. By harnessing the capabilities of Materials and attached Shaders, the Renderer class dictates how each object is drawn onto the screen, thereby influencing the final look and feel of a game's surface. Head over to the [official Renderer documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.html) for a deep-dive into its functionalities.
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Component
-constructors: 
-properties: 
+constructors:
+properties:
   - name: bounds
     summary: |
-      [Unity's Renderer.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-bounds.html)
+      The bounds property is a read-only attribute that provides the access-aligned 3D bounding box that fully encompasses the object in the world space. [More details here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-bounds.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Bounds
   - name: localBounds
     summary: |
-      [Unity's Renderer.localBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-localBounds.html)
+      The localBounds property is a read-only attribute that aids in obtaining the local bounding volume of the Renderer. [Explore more](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-localBounds.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Bounds
   - name: enabled
     summary: |
-      [Unity's Renderer.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-enabled.html)
+      The enabled property determines whether this renderer is enabled or not. If false, Renderer will not produce any rendering output. [Learn more](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-enabled.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isVisible
     summary: |
-      [Unity's Renderer.isVisible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-isVisible.html)
+      The isVisible property indicates whether the Renderer is visible from any camera. [Click here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-isVisible.html) for more details. 
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: receiveShadows
     summary: |
-      [Unity's Renderer.receiveShadows Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-receiveShadows.html)
+      `receiveShadows` property is a toggle to control whether the object will receive shadows by casting objects. For additional details, refer [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-receiveShadows.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: forceRenderingOff
     summary: |
-      [Unity's Renderer.forceRenderingOff Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-forceRenderingOff.html)
+      If `forceRenderingOff` is true, rendering is forced off and will not be updated. This might be used for complex scenarios where you need full control over the rendering. More information is available [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-forceRenderingOff.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: staticShadowCaster
     summary: |
-      [Unity's Renderer.staticShadowCaster Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-staticShadowCaster.html)
+      In case `staticShadowCaster` is set to true, Renderer will be part of static shadow caster culling even though it is a dynamic Renderer. More details can be found [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-staticShadowCaster.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: renderingLayerMask
     summary: |
-      [Unity's Renderer.renderingLayerMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-renderingLayerMask.html)
+      `renderingLayerMask` represents custom Light Layer this Renderer uses. For more details, see this [documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-renderingLayerMask.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: rendererPriority
     summary: |
-      [Unity's Renderer.rendererPriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-rendererPriority.html)
+      The `rendererPriority` property allows you to override the render order for this particular Renderer. Find out more at this [link](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-rendererPriority.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: sortingLayerName
     summary: |
-      [Unity's Renderer.sortingLayerName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sortingLayerName.html)
+      `sortingLayerName` controls the name of the Renderer's sorting layer. More information can be found [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sortingLayerName.html).
     description:
     is_static: false
     code_samples:
     type: string
   - name: sortingLayerID
     summary: |
-      [Unity's Renderer.sortingLayerID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sortingLayerID.html)
+      `sortingLayerID` gives read/write access to the unique ID for the Renderer's sorting layer. Read more [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sortingLayerID.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: sortingOrder
     summary: |
-      [Unity's Renderer.sortingOrder Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sortingOrder.html)
+      `sortingOrder` property controls the Renderer's place in its sorting layer. More information can be found at this [documentation page](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sortingOrder.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: allowOcclusionWhenDynamic
     summary: |
-      [Unity's Renderer.allowOcclusionWhenDynamic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-allowOcclusionWhenDynamic.html)
+      `allowOcclusionWhenDynamic` is a toggle for advanced use. If true, dynamic occlusion culling will be performed for this Renderer. More information can be found [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-allowOcclusionWhenDynamic.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isPartOfStaticBatch
     summary: |
-      [Unity's Renderer.isPartOfStaticBatch Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-isPartOfStaticBatch.html)
+      The read-only property `isPartOfStaticBatch` determines if this Renderer is part of a static batch. To get more insights into this property, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-isPartOfStaticBatch.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: worldToLocalMatrix
     summary: |
-      [Unity's Renderer.worldToLocalMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-worldToLocalMatrix.html)
+      `worldToLocalMatrix` property provides a matrix that transforms a point from world space into local space. Refer to the official [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-worldToLocalMatrix.html) for a deeper understanding of this property.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: localToWorldMatrix
     summary: |
-      [Unity's Renderer.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-localToWorldMatrix.html)
+      `localToWorldMatrix` property gives a matrix that transforms a point from local space into world space. For further information, review the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-localToWorldMatrix.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: lightProbeProxyVolumeOverride
     summary: |
-      [Unity's Renderer.lightProbeProxyVolumeOverride Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightProbeProxyVolumeOverride.html)
+      The GameObject assigned to `lightProbeProxyVolumeOverride` property will provide light probe Proxy Volume’s settings to this Renderer. More details can be found at this [link](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightProbeProxyVolumeOverride.html).
     description:
     is_static: false
     code_samples:
     type: Class.GameObject
   - name: probeAnchor
     summary: |
-      [Unity's Renderer.probeAnchor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-probeAnchor.html)
+      The GameObject assigned to `probeAnchor` property will be used to find the light or reflection probe. If nothing is assigned, the Renderer’s GameObject’s Transform will be used for this. For more details, consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-probeAnchor.html).
     description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: lightmapIndex
     summary: |
-      [Unity's Renderer.lightmapIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightmapIndex.html)
+      `lightmapIndex` allows you to set a specific lightmap to this Renderer. [Here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightmapIndex.html) is more information on this. 
     description:
     is_static: false
     code_samples:
     type: number
   - name: realtimeLightmapIndex
     summary: |
-      [Unity's Renderer.realtimeLightmapIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-realtimeLightmapIndex.html)
+      `realtimeLightmapIndex` property provides the ability to set a specific real-time lightmap to use for this Renderer. Read more on this [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-realtimeLightmapIndex.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: lightmapScaleOffset
     summary: |
-      [Unity's Renderer.lightmapScaleOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightmapScaleOffset.html)
+      `lightmapScaleOffset` is a four-dimensional vector that modifies how the object blends with static lightmaps. More information about this can be found [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-lightmapScaleOffset.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector4
   - name: realtimeLightmapScaleOffset
     summary: |
-      [Unity's Renderer.realtimeLightmapScaleOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-realtimeLightmapScaleOffset.html)
+      `realtimeLightmapScaleOffset` is a four-dimensional vector property that modifies how 3D objects blend with real-time lightmaps. You can find extensive detail on this property [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-realtimeLightmapScaleOffset.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector4
   - name: material
     summary: |
-      [Unity's Renderer.material Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-material.html)
+      `material` property allows getting or setting the material to the renderer dynamically at runtime. Note that this creates a new instance of the material, impacting performance and memory. Learn more about the usage of the 'material' property [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-material.html).
     description:
     is_static: false
     code_samples:
     type: Class.Material
   - name: sharedMaterial
     summary: |
-      [Unity's Renderer.sharedMaterial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sharedMaterial.html)
+      With `sharedMaterial` property, it lets you directly access the material used by the renderer. This avoids creating a new instance of the material and is more performance-friendly. Find more about this material [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer-sharedMaterial.html).
     description:
     is_static: false
     code_samples:
     type: Class.Material
-methods: 
+methods:
   - name: ResetBounds
     summary: |
-      [Unity's Renderer.ResetBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.ResetBounds.html)
+      This method updates the bounding volume of the renderer (Bounds property) to fully encapsulate the rendered content, including modifications done in the LateUpdate callbacks. Get more insights [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.ResetBounds.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method doesn't return any value.
   - name: ResetLocalBounds
     summary: |
-      [Unity's Renderer.ResetLocalBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.ResetLocalBounds.html)
+      The `ResetLocalBounds` method forcefully updates the local bounding volume of the renderer. It's compulsory to call this manually after changing the geometry of the rendered object. More on this can be found [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.ResetLocalBounds.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method doesn't return any value.
   - name: HasPropertyBlock
     summary: |
-      [Unity's Renderer.HasPropertyBlock Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.HasPropertyBlock.html)
+      `HasPropertyBlock` method checks if the renderer has a MaterialPropertyBlock assigned to it. MaterialPropertyBlocks are used for changing the material properties without instancing materials. Read more about this method [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.HasPropertyBlock.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if the Renderer has a MaterialPropertyBlock, otherwise false.
 math_operations: 
