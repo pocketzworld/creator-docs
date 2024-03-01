@@ -1,9 +1,9 @@
 name: Texture
 type: classes
 summary: |
-  [Unity's Texture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.html)
-description: |
-  The Texture class in Unity is the super class for all types of texture in visuals and graphics design. It stands as a representation for all 2D Textures. 
+  The Texture class in Unity forms the bedrock for handling all forms of textures used in visual and graphic design. Representing all 2D Textures, it plays a crucial role in creating immersive and high-quality visual experiences in-game development.
+  For more elaborate details, refer to the [Unity's Texture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.html).
+description:
 code_samples:
 inherits:
   - Class.Object
@@ -12,72 +12,72 @@ properties:
   - name: mipmapCount
     summary: |
       [Unity's Texture.mipmapCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipmapCount.html)
-    description: |
       Displays the total number of mipmap levels present in the Texture. Mipmaps are basically a collection of pre-calculated, optimized sequences of images, each of which is a progressively lower resolution representation of the same image.
+    description:
     code_samples:
     is_static: false
     type: number
   - name: width
     summary: |
       [Unity's Texture.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-width.html)
-    description: |
       States the width value of the texture, calculated in pixel units.
+    description:
     code_samples:
     is_static: false
     type: number
   - name: height
     summary: |
       [Unity's Texture.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-height.html)
-    description: |
       Denotes the height value of the texture, calculated in pixel units.
+    description:
     code_samples:
     is_static: false
     type: number
   - name: isReadable
     summary: |
       [Unity's Texture.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isReadable.html)
-    description: |
       A boolean property that determines if the texture data is readable, i.e., depending on its value (true or false), it indicates if the texture data can or cannot be accessed for reading.
+    description:
     code_samples:
     is_static: false
     type: boolean
   - name: anisoLevel
     summary: |
       [Unity's Texture.anisoLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-anisoLevel.html)
-    description: |
       Indicative of the texture's Anisotropic filtering level meaning the property directly controls how the texture appears when viewed from a distance or from different angles.
+    description:
     code_samples:
     is_static: false
     type: number
   - name: mipMapBias
     summary: |
       [Unity's Texture.mipMapBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipMapBias.html)
-    description: |
       Represents the Mipmap bias of the texture. It is used for adjusting the texture's Mipmap level.
+    description:
     code_samples:
     is_static: false
     type: number
   - name: texelSize
     summary: |
       [Unity's Texture.texelSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-texelSize.html)
-    description: |
       Returns the size of a texture texel (a texture pixel). Essentially, the term 'texel' refers to a pixel of a texture map.
+    description:
     code_samples:
     is_static: false
     type: DataType.Vector2
   - name: updateCount
     summary: |
       [Unity's Texture.updateCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-updateCount.html)
-    description: |
       Displays the total count of texture updates done since the scene got loaded.
+    description:
     code_samples:
     is_static: false
     type: number
   - name: isDataSRGB
     summary: |
       [Unity's Texture.isDataSRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isDataSRGB.html)
-    description: |
       A boolean property that determines if the texture is in gamma space (sRGB) or not. True if data is sRGB or false if linear.
+    description:
     code_samples:
     is_static: false
     type: boolean
@@ -85,8 +85,8 @@ methods:
   - name: IncrementUpdateCount
     summary: |
       [Unity's Texture.IncrementUpdateCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.IncrementUpdateCount.html)
-    description: |
       A method that increments the updateCount of a texture.
+    description:
     is_static: false
     code_samples:
     parameters:
@@ -96,8 +96,8 @@ methods:
   - name: SetGlobalAnisotropicFilteringLimits
     summary: |
       [Unity's Texture.SetGlobalAnisotropicFilteringLimits Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.SetGlobalAnisotropicFilteringLimits.html)
-    description: |
       Describes a method which sets the global limit for Anisotropic filtering in Unity's texture.
+    description:
     is_static: true
     code_samples:
     parameters:
@@ -115,8 +115,8 @@ methods:
   - name: SetStreamingTextureMaterialDebugProperties
     summary: |
       [Unity's Texture.SetStreamingTextureMaterialDebugProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.SetStreamingTextureMaterialDebugProperties.html)
-    description: |
       A method for setting debug properties for streaming texture materials.
+    description:
     is_static: true
     code_samples:
     parameters:

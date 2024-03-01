@@ -1,111 +1,111 @@
 name: UIView
 type: classes
 summary: |
-  
+  The UIView class is a fundamental component in Highrise that defines and manages interface elements in a game's interface. Part of Highrise's VisualElement class, UIView provides enhanced control over the manipulation and display of UI elements.
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
+constructors:
   - name: new
     summary: |
-      
+      Creates a new UIView instance. 
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.UIView
-        summary:
-properties: 
+        summary: A new UIView object.
+properties:
   - name: IsDisposed
     summary: |
-      
+      Indicates whether the UIView has been disposed.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: SortOrder
     summary: |
-      
+      Represents the UIView's order in the visual hierarchy.
     description:
     is_static: false
     code_samples:
     type: number
   - name: IsBound
     summary: |
-      
+      Indicates if the UIView has been bound to a parent.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsDisplayed
     summary: |
-      
+      Denotes if the UIView is currently visible on the screen.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsRunningAsync
     summary: |
-      
+      Determines if the UIView is currently running an asynchronous operation.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsStale
     summary: |
-      
+      Indicates if the UIView has been marked as stale.
     description:
     is_static: false
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: Reset
     summary: |
-      
+      Restores all UIView properties to their default values.
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: Dispose
     summary: |
-      
+      Releases all resources used by the UIView.
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: BindHierarchy
     summary: |
-      
+      Connects the UIView to a parent in the visual hierarchy.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
-        summary:
+        summary: The VisualElement parent to bind the UIView to.
     returns:
       - type: void
         summary:
   - name: DisposeChildren
     summary: |
-      
+      Disposes all children of the specified VisualElement.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
-        summary:
+        summary: The VisualElement whose children should be disposed.
     returns:
       - type: void
         summary:
