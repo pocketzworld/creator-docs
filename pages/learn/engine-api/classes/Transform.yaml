@@ -2,414 +2,453 @@ name: Transform
 type: classes
 summary: |
   [Unity's Transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.html)
-description:
+description: |
+  The Transform class in Unity is responsible for the position, rotation, and scale of each object in the scene. Every GameObject has one, which allows them to be manipulated in 3D space.
 code_samples:
-inherits: 
+inherits:
   - Class.Component
-constructors: 
-properties: 
+constructors:
+properties:
   - name: position
     summary: |
       [Unity's Transform.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html)
-    description:
+    description: |
+      The world space position of the Transform.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: localPosition
     summary: |
       [Unity's Transform.localPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localPosition.html)
-    description:
+    description: |
+      The local position of the Transform relative to the parent object's transform. If the transform has no parent, it is the same as position.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: eulerAngles
     summary: |
       [Unity's Transform.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html)
-    description:
+    description: |
+      The world space rotation of the Transform in degrees.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: localEulerAngles
     summary: |
       [Unity's Transform.localEulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localEulerAngles.html)
-    description:
+    description: |
+      The rotation as Euler angles in degrees relative to the parent transform's rotation.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: right
     summary: |
       [Unity's Transform.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-right.html)
-    description:
+    description: |
+      Shows the red axis of the Transform in world space, which points to the right of the GameObject.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: up
     summary: |
       [Unity's Transform.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-up.html)
-    description:
+    description: |
+      Represents the green axis of the Transform in world space. It points up relative to the GameObject.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: forward
     summary: |
       [Unity's Transform.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-forward.html)
-    description:
+    description: |
+      Reflects the blue axis of the Transform in world space. It indicates the direction that the GameObject's front is facing.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rotation
     summary: |
       [Unity's Transform.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-rotation.html)
-    description:
+    description: |
+      This property signifies the orientation of the GameObject in world space stored as a Quaternion.
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: localRotation
     summary: |
       [Unity's Transform.localRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localRotation.html)
-    description:
+    description: |
+      This property signifies the orientation of the GameObject relative to the parent game object (if any) stored as a Quaternion.
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: localScale
     summary: |
       [Unity's Transform.localScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localScale.html)
-    description:
+    description: |
+      This property refers to the scale of the GameObject relative to the parent GameObject's Transform.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: parent
     summary: |
       [Unity's Transform.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html)
-    description:
+    description: |
+      This property defines the parent of the Transform. Setting this to a different Transform will result in moving this GameObject to the other Transform's hierarchy.
     is_static: false
     code_samples:
     type: Class.Transform
   - name: worldToLocalMatrix
     summary: |
       [Unity's Transform.worldToLocalMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-worldToLocalMatrix.html)
-    description:
+    description: |
+      This property retrieves a Matrix4x4 that transforms a point from world space into local space.
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: localToWorldMatrix
     summary: |
       [Unity's Transform.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localToWorldMatrix.html)
-    description:
+    description: |
+      This property retrieves a Matrix4x4 that transforms a point from local space into world space.
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: root
     summary: |
       [Unity's Transform.root Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-root.html)
-    description:
+    description: |
+      This property points to the topmost transform in the hierarchy of this GameObject.
     is_static: false
     code_samples:
     type: Class.Transform
   - name: childCount
     summary: |
       [Unity's Transform.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html)
-    description:
+    description: |
+      This property provides the total number of children the Transform has.
     is_static: false
     code_samples:
     type: number
   - name: lossyScale
     summary: |
       [Unity's Transform.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-lossyScale.html)
-    description:
+    description: |
+      This property reflects the global scale of the GameObject. It factors in the scale of all the parent GameObjects.
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: hasChanged
     summary: |
       [Unity's Transform.hasChanged Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hasChanged.html)
-    description:
+    description: |
+      This property specifies whether the Transform's position, rotation or scale has changed since the last frame. 
     is_static: false
     code_samples:
     type: boolean
   - name: hierarchyCapacity
     summary: |
       [Unity's Transform.hierarchyCapacity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCapacity.html)
-    description:
+    description: |
+      This property refers to the total number of hierarchy nodes that the Transform currently has created.
     is_static: false
     code_samples:
     type: number
   - name: hierarchyCount
     summary: |
       [Unity's Transform.hierarchyCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCount.html)
-    description:
+    description: |
+      This property gets the number of nodes in the Transform hierarchy that the Transform is a part of.
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: SetParent
     summary: |
       [Unity's Transform.SetParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html)
-    description:
+    description: |
+      This method is used to set the parent of the Transform. It takes another Transform as a parameter and sets it as the parent.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: p
         type: Class.Transform
         default:
-        summary:
+        summary: The Transform to set as parent.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SetPositionAndRotation
     summary: |
       [Unity's Transform.SetPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetPositionAndRotation.html)
-    description:
+    description: |
+      This method sets both the position and the rotation of the Transform. Both the position and rotation are in World Space.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The new position.
       - name: rotation
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The new rotation.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SetLocalPositionAndRotation
     summary: |
       [Unity's Transform.SetLocalPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetLocalPositionAndRotation.html)
-    description:
+    description: |
+      This method sets both the local position and the local rotation of the Transform. The local position and rotation are relative to the parent GameObject's transform, if it has one.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: localPosition
         type: DataType.Vector3
         default:
-        summary:
+        summary: The new local position.
       - name: localRotation
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The new local rotation.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: RotateAround
     summary: |
       [Unity's Transform.RotateAround Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.RotateAround.html)
-    description:
+    description: |
+      This method rotates the Transform around a given point in world space by a specified number of degrees. 
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: point
         type: DataType.Vector3
         default:
-        summary:
+        summary: The point in the world space around which to rotate.
       - name: axis
         type: DataType.Vector3
         default:
-        summary:
+        summary: The axis relative to which to rotate.
       - name: angle
         type: number
         default:
-        summary:
+        summary: The angle to rotate by, in degrees.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: LookAt
     summary: |
       [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
-    description:
+    description: |
+      The LookAt method rotates the Transform to face towards a specified target Transform. The Transform will not move, only rotate so that the forward vector points towards the target.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: target
         type: Class.Transform
         default:
-        summary:
+        summary: The target Transform to look at.
       - name: worldUp
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector that defines the up direction.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: TransformDirection
     summary: |
       [Unity's Transform.TransformDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformDirection.html)
-    description:
+    description: |
+      This method transforms direction from local space to world space. It essentially changes the provided Vector3 direction from the local coordinate system of this Transform to the world coordinate system.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: direction
         type: DataType.Vector3
         default:
-        summary:
+        summary: The direction in local space that is to be transformed to world space.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The direction in world space.
   - name: InverseTransformDirection
     summary: |
       [Unity's Transform.InverseTransformDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformDirection.html)
-    description:
+    description: |
+      This method transforms a direction from world space to local space, relative to this Transform's coordinate system.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: direction
         type: DataType.Vector3
         default:
-        summary:
+        summary: The direction in world space that is to be transformed to local space.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The direction in local space.
   - name: TransformVector
     summary: |
       [Unity's Transform.TransformVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformVector.html)
-    description:
+    description: |
+      Transforms a Vector3 from local space to world space. This is similar to TransformDirection, but also handles the movement along with the rotation.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: vector
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector in local space to transform to world space.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The vector in world space.
   - name: InverseTransformVector
     summary: |
       [Unity's Transform.InverseTransformVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformVector.html)
-    description:
+    description: |
+      Similar to Transform.InverseTransformPoint but handles the vector as direction rather than a position.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: vector
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to transform from world space to local space.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The transformed vector in local space.
   - name: TransformPoint
     summary: |
       [Unity's Transform.TransformPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformPoint.html)
-    description:
+    description: |
+      Transforms a position from local space to world space.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position in local space to be transformed to world space.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The position in world space.
   - name: InverseTransformPoint
     summary: |
       [Unity's Transform.InverseTransformPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformPoint.html)
-    description:
+    description: |
+      Transforms a position from world space to local space.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position in world space to be transformed to local space.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The position in local space.
   - name: DetachChildren
     summary: |
       [Unity's Transform.DetachChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.DetachChildren.html)
-    description:
+    description: |
+      This function unparents all the transform's children.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SetAsFirstSibling
     summary: |
       [Unity's Transform.SetAsFirstSibling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsFirstSibling.html)
-    description:
+    description: |
+      This function moves the transform to the start of the local transform list.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SetAsLastSibling
     summary: |
       [Unity's Transform.SetAsLastSibling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsLastSibling.html)
-    description:
+    description: |
+      This function moves the transform to the end of the local transform list.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SetSiblingIndex
     summary: |
       [Unity's Transform.SetSiblingIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetSiblingIndex.html)
-    description:
+    description: |
+      This function sets the sibling index.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The sibling index to set.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: GetSiblingIndex
     summary: |
       [Unity's Transform.GetSiblingIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetSiblingIndex.html)
-    description:
+    description: |
+      This method gets the sibling index of the transform.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: number
-        summary:
+        summary: The sibling index of the transform.
   - name: Find
     summary: |
       [Unity's Transform.Find Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Find.html)
-    description:
+    description: |
+      This method looks for a child with the specified name in the direct children of the transform. Note that this method does not search descendants.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: n
         type: string
         default:
-        summary:
+        summary: Name of the child to be found.
     returns:
       - type: Class.Transform
-        summary:
+        summary: The Transform if found, else null.
   - name: IsChildOf
     summary: |
       [Unity's Transform.IsChildOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.IsChildOf.html)
-    description:
+    description: |
+      Checks if the potentialParent transform is a parent, a grandparent etc. of this Transform.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: parent
         type: Class.Transform
         default:
-        summary:
+        summary: The potential parent transform.
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if this Transform is a child, grandchild, etc. of the specified Transform.
   - name: GetChild
     summary: |
       [Unity's Transform.GetChild Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetChild.html)
-    description:
+    description: |
+      This method gets a Transform child by index.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: Index of the child transform.
     returns:
       - type: Class.Transform
-        summary:
+        summary: The child Transform.
 math_operations: 
