@@ -1,7 +1,7 @@
 name: Renderer
 type: classes
 summary: |
-  The Renderer class in Unity deals with the display and handling of mesh objects. It uses Materials with attached Shaders in the scene to control how to draw each object to the screen. Shaders are responsible for the appearance of the surface. You can find more details in the [official Renderer documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.html).
+  The Renderer class breathes life into Unity's three-dimensional gaming landscape by controlling the display and customization of mesh objects. By harnessing the capabilities of Materials and attached Shaders, the Renderer class dictates how each object is drawn onto the screen, thereby influencing the final look and feel of a game's surface. Head over to the [official Renderer documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.html) for a deep-dive into its functionalities.
 description:
 code_samples:
 inherits:
