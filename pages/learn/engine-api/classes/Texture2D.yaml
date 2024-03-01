@@ -2,284 +2,309 @@ name: Texture2D
 type: classes
 summary: |
   [Unity's Texture2D Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.html)
-description:
+description: |
+  The Texture2D class in Unity is a subclass of the Texture super class and represents two-dimensional textures and images. 
 code_samples:
-inherits: 
+inherits:
   - Class.Texture
-constructors: 
+constructors:
   - name: new
     summary: |
       [Unity's Texture2D.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-ctor.html)
-    description:
+    description: |
+      A constructor for the Texture2D class. It creates a new texture object with a specific width and height.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: width
         type: number
         default:
-        summary:
+        summary: The width of the new texture in pixels.
       - name: height
         type: number
         default:
-        summary:
+        summary: The height of the new texture in pixels.
     returns:
       - type: Class.Texture2D
-        summary:
-properties: 
+        summary: A new Texture2D object.
+properties:
   - name: ignoreMipmapLimit
     summary: |
       [Unity's Texture2D.ignoreMipmapLimit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-ignoreMipmapLimit.html)
-    description:
+    description: |
+      A Boolean property. If set to true, it allows texture streaming and ignores the mipmap limit set for the Texture2D object.
     is_static: false
     code_samples:
     type: boolean
   - name: mipmapLimitGroup
     summary: |
       [Unity's Texture2D.mipmapLimitGroup Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-mipmapLimitGroup.html)
-    description:
+    description: |
+      Defines the mipmap limit group of the Texture2D object as a string.
     is_static: false
     code_samples:
     type: string
   - name: activeMipmapLimit
     summary: |
       [Unity's Texture2D.activeMipmapLimit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-activeMipmapLimit.html)
-    description:
+    description: |
+      Displays the currently active mipmap limit for the Texture2D object.
     is_static: false
     code_samples:
     type: number
   - name: isReadable
     summary: |
       [Unity's Texture2D.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-isReadable.html)
-    description:
+    description: |
+      A boolean property that determines if the data of the Texture2D is readable or not.
     is_static: false
     code_samples:
     type: boolean
   - name: vtOnly
     summary: |
       [Unity's Texture2D.vtOnly Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-vtOnly.html)
-    description:
+    description: |
+      This property indicates whether the Texture2D is only for virtual texturing.
     is_static: false
     code_samples:
     type: boolean
   - name: streamingMipmaps
     summary: |
       [Unity's Texture2D.streamingMipmaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-streamingMipmaps.html)
-    description:
+    description: |
+      This property indicates whether mip maps of this Texture2D are being streamed in the background.
     is_static: false
     code_samples:
     type: boolean
   - name: streamingMipmapsPriority
     summary: |
       [Unity's Texture2D.streamingMipmapsPriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-streamingMipmapsPriority.html)
-    description:
+    description: |
+      A property that alters the priority of streaming mip maps for this Texture2D.
     is_static: false
     code_samples:
     type: number
   - name: requestedMipmapLevel
     summary: |
       [Unity's Texture2D.requestedMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-requestedMipmapLevel.html)
-    description:
+    description: |
+      Represents the mipmap level that has been requested via script for this Texture2D.
     is_static: false
     code_samples:
     type: number
   - name: minimumMipmapLevel
     summary: |
       [Unity's Texture2D.minimumMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-minimumMipmapLevel.html)
-    description:
+    description: |
+      Describes the minimum mipmap level available for this Texture2D.
     is_static: false
     code_samples:
     type: number
   - name: calculatedMipmapLevel
     summary: |
       [Unity's Texture2D.calculatedMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-calculatedMipmapLevel.html)
-    description:
+    description: |
+      Reflects the mipmap level calculated internally based on the current texture setting.
     is_static: false
     code_samples:
     type: number
   - name: desiredMipmapLevel
     summary: |
       [Unity's Texture2D.desiredMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-desiredMipmapLevel.html)
-    description:
+    description: |
+      It represents the desired mipmap level intended for the Texture2D.
     is_static: false
     code_samples:
     type: number
   - name: loadingMipmapLevel
     summary: |
       [Unity's Texture2D.loadingMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-loadingMipmapLevel.html)
-    description:
+    description: |
+      Defines the mipmap level that is currently being loaded for this Texture2D.
     is_static: false
     code_samples:
     type: number
   - name: loadedMipmapLevel
     summary: |
       [Unity's Texture2D.loadedMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D-loadedMipmapLevel.html)
-    description:
+    description: |
+      Reflects the mipmap level that has been completely loaded for this Texture2D.
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: Compress
     summary: |
       [Unity's Texture2D.Compress Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.Compress.html)
-    description:
+    description: |
+      This method is used to compress the Texture2D object to decrease its memory usage.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: highQuality
         type: boolean
         default:
-        summary:
+        summary: A parameter indicating whether the compression will be of high quality.
     returns:
       - type: void
-        summary:
+        summary: This method does not return any value.
   - name: ClearRequestedMipmapLevel
     summary: |
       [Unity's Texture2D.ClearRequestedMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.ClearRequestedMipmapLevel.html)
-    description:
+    description: |
+      A method that clears the currently requested mipmap level for the Texture2D.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return any value.
   - name: IsRequestedMipmapLevelLoaded
     summary: |
       [Unity's Texture2D.IsRequestedMipmapLevelLoaded Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.IsRequestedMipmapLevelLoaded.html)
-    description:
+    description: |
+      A method that checks if the requested mipmap level for the Texture2D is loaded.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if the requested mipmap level is loaded, false otherwise.
   - name: ClearMinimumMipmapLevel
     summary: |
       [Unity's Texture2D.ClearMinimumMipmapLevel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.ClearMinimumMipmapLevel.html)
-    description:
+    description: |
+      This method is used to clear the set minimum mipmap level for this Texture2D.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return any value.
   - name: SetPixel
     summary: |
       [Unity's Texture2D.SetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.SetPixel.html)
-    description:
+    description: |
+      This method changes the pixel color at coordinates (x,y) in the texture to the color provided.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
-        summary:
+        summary: The x coordinate of the pixel.
       - name: y
         type: number
         default:
-        summary:
+        summary: The y coordinate of the pixel.
       - name: color
         type: DataType.Color
         default:
-        summary:
+        summary: The color to set the pixel.
     returns:
       - type: void
-        summary:
+        summary: This method does not return any value.
   - name: GetPixel
     summary: |
       [Unity's Texture2D.GetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixel.html)
-    description:
+    description: |
+      This method is utilized to retrieve the color of a pixel at coordinates (x,y) in the texture.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
-        summary:
+        summary: The x coordinate of the pixel.
       - name: y
         type: number
         default:
-        summary:
+        summary: The y coordinate of the pixel.
     returns:
       - type: DataType.Color
-        summary:
+        summary: The color of the pixel at the coordinates (x,y).
   - name: GetPixelBilinear
     summary: |
       [Unity's Texture2D.GetPixelBilinear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixelBilinear.html)
-    description:
+    description: |
+      This method retrieves the color of a pixel using bilinear interpolation within the texture.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: u
         type: number
         default:
-        summary:
+        summary: The u coordinate for interpolation.
       - name: v
         type: number
         default:
-        summary:
+        summary: The v coordinate for interpolation.
     returns:
       - type: DataType.Color
-        summary:
+        summary: The color of the pixel at the interpolated coordinates.
   - name: Apply
     summary: |
       [Unity's Texture2D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.Apply.html)
-    description:
+    description: |
+      This method is used to apply all previously done changes to the texture and upload the result to GPU.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: updateMipmaps
         type: boolean
         default:
-        summary:
+        summary: A boolean to decide if the mipmaps should be updated.
       - name: makeNoLongerReadable
         type: boolean
         default:
-        summary:
+        summary: A boolean to decide if texture should be marked non-readable.
     returns:
       - type: void
-        summary:
+        summary: This method does not return any value.
   - name: Reinitialize
     summary: |
       [Unity's Texture2D.Reinitialize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.Reinitialize.html)
-    description:
+    description: |
+      This method creates a new Texture2D with the same name, hide flags and tag.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: width
         type: number
         default:
-        summary:
+        summary: The new width.
       - name: height
         type: number
         default:
-        summary:
+        summary: The new height.
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if successful, false otherwise.
   - name: ReadPixels
     summary: |
       [Unity's Texture2D.ReadPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.ReadPixels.html)
-    description:
+    description: |
+      This method reads pixel data from the screen into the texture as a block.
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: source
         type: DataType.Rect
         default:
-        summary:
+        summary: The source rectangle on screen.
       - name: destX
         type: number
         default:
-        summary:
+        summary: The x coordinate in the texture to place the pixels.
       - name: destY
         type: number
         default:
-        summary:
+        summary: The y coordinate in the texture to place the pixels.
       - name: recalculateMipMaps
         type: boolean
         default:
-        summary:
+        summary: A boolean parameter indicating whether to recalculate mipmaps after reading.
     returns:
       - type: void
-        summary:
+        summary: This method does not return any value.
 math_operations: 
