@@ -1,9 +1,8 @@
 name: Texture3D
 type: classes
 summary: |
-  [Unity's Texture3D Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.html)
-description: |
-  The Texture3D class in Unity represents a three-dimensional texture asset. This can be used to modify and store volumetric data.
+  The Texture3D class in Unity is a broad toolbox specializing in the representation and manipulation of three-dimensional texture assets. This class is an essential component for bringing greater depth and volumetric detail to 3D gaming environments. For comprehensive information and detailed functionality, explore the [official Unity's Texture3D documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.html).
+description:
 code_samples:
 inherits:
   - Class.Texture
@@ -12,16 +11,16 @@ properties:
   - name: depth
     summary: |
       [Unity's Texture3D.depth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-depth.html)
-    description: |
       The depth property of a Texture3D indicates how many layers it holds, similar to how width and height represent two dimensions of the texture.
+    description:
     is_static: false
     code_samples:
     type: number
   - name: isReadable
     summary: |
       [Unity's Texture3D.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-isReadable.html)
-    description: |
-      The isReadable property allows you to check whether you can read the data of this Texture3D. If true, the texture data can be read, else it's non-readable.
+      The isReadable property allows you to verify if the data of the Texture3D can be read.
+    description:
     is_static: false
     code_samples:
     type: boolean
@@ -29,27 +28,27 @@ methods:
   - name: Apply
     summary: |
       [Unity's Texture3D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.Apply.html)
-    description: |
-      The Apply method applies all previous changes made to the texture and uploads the new updated version of the texture to the GPU.
+      The Apply method implements all previous modifications to the texture and uploads the amended version to the GPU.
+    description:
     is_static: false
     code_samples:
     parameters:
       - name: updateMipmaps
         type: boolean
         default:
-        summary: An optional parameter indicating whether to update the mipmap levels.
+        summary: Indicates whether to update the mipmap levels.
       - name: makeNoLongerReadable
         type: boolean
         default:
-        summary: An optional parameter designating the texture as no longer readable.
+        summary: Designates the texture as non-readable.
     returns:
       - type: void
-        summary: This function does not return a value.
+        summary:
   - name: SetPixel
     summary: |
       [Unity's Texture3D.SetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.SetPixel.html)
-    description: |
-      This method alters the color of a specified pixel in the Texture3D.
+      The SetPixel method modifies the color of the specified pixel within the Texture3D.
+    description:
     is_static: false
     code_samples:
     parameters:
@@ -71,12 +70,12 @@ methods:
         summary: The new color to be set for the specified pixel.
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: GetPixel
     summary: |
       [Unity's Texture3D.GetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixel.html)
-    description: |
-      The GetPixel method retrieves the color of a pixel at the specified (x, y, z) coordinates inside the texture.
+      The GetPixel method retrieves the color of a pixel at the specified (x, y, z) coordinates within the texture.
+    description:
     is_static: false
     code_samples:
     parameters:
@@ -94,12 +93,12 @@ methods:
         summary: The z-coordinate (depth) of the desired pixel.
     returns:
       - type: DataType.Color
-        summary: Returns the color of the pixel at the specified coordinates.
+        summary: Returns the pixel color at the specified coordinates.
   - name: GetPixelBilinear
     summary: |
       [Unity's Texture3D.GetPixelBilinear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixelBilinear.html)
-    description: |
-      This method retrieves the color of a pixel using bi-linear interpolation based on the floating-point u, v, and w coordinates. It calculates the color by averaging the colors of the four pixels located diagonally to the specified coordinates. This can insinuate smoother transitions between pixels.
+      The GetPixelBilinear method retrieves the color of a pixel using bi-linear interpolation, which can insinuate smoother transitions between pixels.
+    description:
     is_static: false
     code_samples:
     parameters:
@@ -117,5 +116,5 @@ methods:
         summary: The w-coordinate (depth) for interpolation.
     returns:
       - type: DataType.Color
-        summary: Returns the color of the pixel at the interpolated coordinates.
-math_operations: 
+        summary: Returns the interpolated pixel color.
+math_operations:
