@@ -1,8 +1,8 @@
 name: Texture
 type: classes
 summary: |
-  [Unity's Texture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.html)
-  The Texture class in Unity is the super class for all types of texture in visuals and graphics design. It stands as a representation for all 2D Textures.
+  The Texture class in Unity forms the bedrock for handling all forms of textures used in visual and graphic design. Representing all 2D Textures, it plays a crucial role in creating immersive and high-quality visual experiences in-game development.
+  For more elaborate details, refer to the [Unity's Texture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.html).
 description:
 code_samples:
 inherits:
