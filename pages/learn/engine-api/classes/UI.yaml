@@ -1,25 +1,26 @@
 name: UI
 type: classes
 summary: |
-  
+  Accessor to the Highrise UI system.
 description:
 code_samples:
 inherits: 
 constructors: 
 properties: 
-methods: 
+methods:
   - name: OpenPopup
     summary: |
-      
-    description:
+      Opens the provided UIView as a popup.
+    description: |
+      This method is used to open a popup window of the given UIView in Highrise.
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: ve
         type: Class.UIView
         default:
-        summary:
+        summary: The UIView content of the popup.
     returns:
       - type: number
-        summary:
+        summary: The unique identifier for the opened popup.
 math_operations: 
