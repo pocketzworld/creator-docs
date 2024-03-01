@@ -1,16 +1,16 @@
 name: Animator
 type: classes
 summary: |
-  [Unity's Animator Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.html)
+  The Animator class is responsible for controlling animation in Unity. It interfaces with the animator controller, which is a state machine handling the transitions and interactions between animations, to drive the animated behavior of GameObjects. The Animator class allows you to create, play, manipulate animations and more. For a comprehensive understanding, go through the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.html).
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+constructors:
+properties:
   - name: isOptimizable
     summary: |
-      [Unity's Animator.isOptimizable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-isOptimizable.html)
+      The 'isOptimizable' property indicates whether the Animator component can be optimized for performance enhancement. You can find further information in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-isOptimizable.html).
     description:
     is_static: false
     code_samples:
