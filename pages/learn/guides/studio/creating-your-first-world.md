@@ -8,15 +8,15 @@ Looking to craft your first immersive, virtual world? You're in the right place 
 2. Launch Studio Hub. You will be prompted to install the correct Unity version if needed.
 3. Click "New Project" and opt for the Basic Template.
 
-![open studio hub](assets/learn/guides/studio/open-studio-hub.png)
+![open studio hub](/assets/learn/guides/studio/open-studio-hub.png)
 
 4. Now that we're in Unity, on the top left toolbar you can use the "Sign in" button to sign into your Highrise Account.
 
-![before sign in](assets/learn/guides/studio/before-sign-in.png)    ![after sign in](assets/learn/guides/studio/after-sign-in.png)
+![before sign in](/assets/learn/guides/studio/before-sign-in.png)    ![after sign in](/assets/learn/guides/studio/after-sign-in.png)
 
 5. You can now test your world with the "Play" button in the middle of the top toolbar.
 
-![play button](assets/learn/guides/studio/play-button.png)
+![play button](/assets/learn/guides/studio/play-button.png)
 
 ### **Step 2: Adding Assets and Scripts**
 There are many ways to import assets like textures and meshes into Unity. Here are a few common methods:
@@ -27,7 +27,7 @@ There are many ways to import assets like textures and meshes into Unity. Here a
 
 In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua Script`, and name your script.
 
-![add-lua-script](assets/learn/guides/studio/add-lua-script.png)
+![add-lua-script](/assets/learn/guides/studio/add-lua-script.png)
 
 ### **Step 3: Adjust The Room Lighting and Background**
 
