@@ -25,7 +25,7 @@ There are many ways to import assets like textures and meshes into Unity. Here a
 - **Drag & Drop:** An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel. 
 - ---- Note that Highrise Studio does not support adding new C# runtime scripts.
 
-In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua Script`, and name your script.
+In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua > Script`, and name your script.
 
 ![add-lua-script](/assets/learn/guides/studio/add-lua-script.png)
 
