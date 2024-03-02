@@ -1,368 +1,368 @@
 name: Vector4
 type: datatypes
 summary: |
-  [Unity's Vector4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.html)
+  The 'Vector4' data type represents a vector or a point in four-dimensional space in Unity. It can be used for a variety of tasks such as representing color data (RGBA values), four dimensional transforms, or even homogenous coordinates for 3D transformations. For an in-depth understanding, you can visit the [official Unity Vector4 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.html).
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+constructors:
   - name: new
     summary: |
-      [Unity's Vector4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-ctor.html)
+      The 'new' constructor creates a new instance of a Vector4, with specified 'x', 'y', 'z', and 'w' components. For example, in RGBA color representation, 'x', 'y', 'z', and 'w' could represent Red, Green, Blue, and Alpha components respectively. You can find more details in the [official Unity Vector4.new documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-ctor.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
-        summary:
+        summary: The 'x' component of the Vector4.
       - name: y
         type: number
         default:
-        summary:
+        summary: The 'y' component of the Vector4.
       - name: z
         type: number
         default:
-        summary:
+        summary: The 'z' component of the Vector4.
       - name: w
         type: number
         default:
-        summary:
+        summary: The 'w' component of the Vector4.
     returns:
       - type: DataType.Vector4
-        summary:
-properties: 
+        summary: Returns a new Vector4 instance with specified 'x', 'y', 'z', and 'w' components.
+properties:
   - name: normalized
     summary: |
-      [Unity's Vector4.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-normalized.html)
+      The 'normalized' property provides a normalized version of the Vector4, which is a Vector4 of same direction but with length 1. Normalization of a vector is often useful in cases where you need to work with a direction alone and not the magnitude or length of the vector. To know more, see the [official Unity Vector4.normalized documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-normalized.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector4
   - name: magnitude
     summary: |
-      [Unity's Vector4.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html)
+      The 'magnitude' property provides the length of the Vector4. The length or magnitude of a vector can be useful when calculating distances or scaling vectors. For more information, check out the [official Unity Vector4.magnitude documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
     summary: |
-      [Unity's Vector4.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-sqrMagnitude.html)
+      The 'sqrMagnitude' property returns the square of the magnitude (length) of the Vector4. It's a performance-friendly way of comparing lengths because it avoids the computationally expensive square root operation used in 'magnitude' computation. For more information, see the [official Unity Vector4.sqrMagnitude documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-sqrMagnitude.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: x
     summary: |
-      [Unity's Vector4.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-x.html)
+      The 'x' property allows you to access the 'x' component of the Vector4. Depending on the context, this property can represent different things such as the 'Red' component in an RGBA color vector or the first spatial dimension in a four-dimensional point. For more information, refer to the [official Unity Vector4.x documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-x.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: |
-      [Unity's Vector4.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-y.html)
+      The 'y' property permits you to access the 'y' component of the Vector4. In an RGBA color vector, it could represent the 'Green' component or the second dimension in a spatial vector, depending on the usage context. You can learn more in the [official Unity Vector4.y documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-y.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: z
     summary: |
-      [Unity's Vector4.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-z.html)
+      The 'z' property gives you access to the 'z' component of the Vector4. It might represent the 'Blue' component in an RGBA color vector or the third dimension in a spatial vector. For an in-depth understanding, refer to the [official Unity documentation on Vector4.z](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-z.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: w
     summary: |
-      [Unity's Vector4.w Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-w.html)
+      The 'w' property lets you access the 'w' component of the Vector4. It could represent the 'Alpha' component in an RGBA color vector or a homogenous coordinate (in perspective projection) in a spatial vector. For more detailed information, see the [official Unity Vector4.w documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-w.html).
     description:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: Set
     summary: |
-      [Unity's Vector4.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Set.html)
+      The 'Set' method allows you to set the 'x', 'y', 'z', and 'w' components of the Vector4. This can save effort and improve readability when compared with setting these components individually. For more details, visit [Unity's Vector4.Set documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Set.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: newX
         type: number
         default:
-        summary:
+        summary: The new 'x' component for the Vector4.
       - name: newY
         type: number
         default:
-        summary:
+        summary: The new 'y' component for the Vector4.
       - name: newZ
         type: number
         default:
-        summary:
+        summary: The new 'z' component for the Vector4.
       - name: newW
         type: number
         default:
-        summary:
+        summary: The new 'w' component for the Vector4.
     returns:
       - type: void
         summary:
   - name: Scale
     summary: |
-      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+      The 'Scale' method scales a Vector4 by another Vector4's components. It's a convenience method to perform scaling operation on the vector when using Vector4 to represent dimensions or shape attributes. More details can be found in the [official Unity Vector4.Scale documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: scale
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 to scale by.
     returns:
       - type: void
         summary:
   - name: Normalize
     summary: |
-      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+      The 'Normalize' method transforms the Vector4 into a vector of same direction but with length 1. It's a quick way of converting the Vector4 to a pure direction vector. For its usage and further details, you can check the [official Unity Vector4.Normalize documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: SqrMagnitude
     summary: |
-      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+      The 'SqrMagnitude' method gives the square of the magnitude (length) of the Vector4. Computing the square of the magnitude is a performance-friendly way of comparing lengths as it avoids the computationally expensive square root operation. Learn more from the [official Unity Vector4.SqrMagnitude documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: number
-        summary:
+        summary: Returns the square of the magnitude (length) of the Vector4.
   - name: Lerp
     summary: |
-      [Unity's Vector4.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Lerp.html)
+      The 'Lerp' method does a Linear Interpolation between two Vector4's based on a 't' parameter. When 't' is 0, it returns 'a'. If 't' is 1, it returns 'b'. At any other 't' value, it gives a point along the line between 'a' and 'b'. This use of this method is similar to regular 'Lerp' methods used for smooth transitions or animations. To know more, check the [official Unity documentation for Vector4.Lerp](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Lerp.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The starting Vector4.
       - name: b
         type: DataType.Vector4
         default:
-        summary:
+        summary: The ending Vector4.
       - name: t
         type: number
         default:
-        summary:
+        summary: The factor by which to interpolate between the two Vector4's.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a Vector4 that is interpolated between 'a' and 'b' by amount 't'.
   - name: LerpUnclamped
     summary: |
-      [Unity's Vector4.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.LerpUnclamped.html)
+      The 'LerpUnclamped' method does just like 'Lerp' operation but it does not clamp values of 't'. So it gives you more freedom with t values. For more details, check out the [official Unity Vector4.LerpUnclamped documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.LerpUnclamped.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 where the Lerp starts.
       - name: b
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 where the Lerp ends.
       - name: t
         type: number
         default:
-        summary:
+        summary: The interpolation fraction.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns an interpolated Vector4 using unclamped Lerp.
   - name: MoveTowards
     summary: |
-      [Unity's Vector4.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.MoveTowards.html)
+      The 'MoveTowards' method moves a Vector4 'current' towards another Vector4 'target'. The third parameter 'maxDistanceDelta' determines the maximum distance that 'current' Vector4 can move. This method is often used in scenarios where an object has to move towards a target position in a smooth and controlled manner. For more information, check out the [official Unity Vector4.MoveTowards documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.MoveTowards.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: current
         type: DataType.Vector4
         default:
-        summary:
+        summary: The current position.
       - name: target
         type: DataType.Vector4
         default:
-        summary:
+        summary: The target position.
       - name: maxDistanceDelta
         type: number
         default:
-        summary:
+        summary: The largest possible distance to move towards the target.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a Vector4 that has moved an incremental step closer to the target position.
   - name: Scale
     summary: |
-      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+      The static 'Scale' method multiplies two Vector4's component-wise. In other words, the method would multiple the respective 'x', 'y', 'z', and 'w' components of the two Vector4's together to create a new Vector4. It's very useful in scenarios where component-wise data manipulation is needed. You can learn more about it from the [official Unity Vector4.Scale documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The first Vector4.
       - name: b
         type: DataType.Vector4
         default:
-        summary:
+        summary: The second Vector4.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a new Vector4 which is the component-wise multiplication of the two Vector4's.
   - name: Normalize
     summary: |
-      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+      The static 'Normalize' method normalizes a Vector4 and returns a new Vector4 with length 1. It's particularly useful in situations where you require the direction of a Vector4 but not its magnitude. For a better understanding, refer to the [official Unity Vector4.Normalize documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 to normalize.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a new Vector4 that has the same direction as the input but with a length of 1.
   - name: Dot
     summary: |
-      [Unity's Vector4.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Dot.html)
+      The 'Dot' method computes the dot product of two Vector4's. The dot product is a value expressing the angular relationship between two vectors and is found by summing the products of the corresponding entries of the two sequences of numbers. Learn more about it from the [official Unity Vector4.Dot documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Dot.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The first Vector4.
       - name: b
         type: DataType.Vector4
         default:
-        summary:
+        summary: The second Vector4.
     returns:
       - type: number
-        summary:
+        summary: Returns the dot product of the two vectors.
   - name: Project
     summary: |
-      [Unity's Vector4.Project Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Project.html)
+      The 'Project' method projects a Vector4 onto another Vector4. This is useful when you want to find the nearest point on the line defined by the second Vector4. More information can be found in the [official Unity Vector4.Project documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Project.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 to project.
       - name: b
         type: DataType.Vector4
         default:
-        summary:
+        summary: The vector to be projected onto.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a new Vector4 that is the projection of 'a' onto 'b'.
   - name: Distance
     summary: |
-      [Unity's Vector4.Distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Distance.html)
+      The 'Distance' method computes the distance between two Vector4's. The distance is the length of the shortest line segment connecting the two Vector4's. It's useful in a variety of scenarios such as object spacing, collision detection and more. To know more, see the [official Unity Vector4.Distance documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Distance.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The first Vector4.
       - name: b
         type: DataType.Vector4
         default:
-        summary:
+        summary: The second Vector4.
     returns:
       - type: number
-        summary:
+        summary: Returns the distance between the two Vecotr4's.
   - name: Magnitude
     summary: |
-      [Unity's Vector4.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Magnitude.html)
+      The 'Magnitude' method calculates the length of the Vector4. This is often used when you need to find the distance a vector spans in the 4D space. Learn more about vector magnitude from the [official Unity Vector4.Magnitude documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Magnitude.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 whose magnitude needs to be computed.
     returns:
       - type: number
-        summary:
+        summary: Returns the magnitude or length of the Vector4.
   - name: Min
     summary: |
-      [Unity's Vector4.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Min.html)
+      The 'Min' method returns a new Vector4 whose components are the lesser values of the corresponding components between two Vector4's. This function can be useful when trying to find the minimum X / Y / Z / W values from two vectors, perhaps for bounding box or threshold operations. Why don't you check the [official Unity Vector4.Min documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Min.html) for more info!
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: lhs
         type: DataType.Vector4
         default:
-        summary:
+        summary: The first Vector4.
       - name: rhs
         type: DataType.Vector4
         default:
-        summary:
+        summary: The second Vector4.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a new Vector4 with the smaller valued components from the two Vector4's.
   - name: Max
     summary: |
-      [Unity's Vector4.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Max.html)
+      The 'Max' method returns a new Vector4 whose components are the greater values of the corresponding components between two Vector4's. This is useful when you're trying to find Vector4 with the maximum X / Y / Z / W components from two Vector4's, like for bounding box or limiting operations. For more details, check out the [official Unity Vector4.Max documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Max.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: lhs
         type: DataType.Vector4
         default:
-        summary:
+        summary: The first Vector4.
       - name: rhs
         type: DataType.Vector4
         default:
-        summary:
+        summary: The second Vector4.
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: Returns a Vector4 with the maximum valued components from the two Vector4's.
   - name: SqrMagnitude
     summary: |
-      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+      The static 'SqrMagnitude' method gives the square of the magnitude (length) of a Vector4, like the instance 'sqrMagnitude' property. As with normal 'sqrMagnitude', this is a more efficient way of comparing lengths, since it avoids the computationally expensive square root operation. You can gather more details from [Unity's Vector4.SqrMagnitude documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Vector4
         default:
-        summary:
+        summary: The Vector4 whose magnitude will be squared.
     returns:
       - type: number
-        summary:
-math_operations: 
+        summary: Returns the square of the magnitude (length) of the Vector4.
+math_operations:
   - operation: '=='
     summary: |
-      [Unity's Vector4.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_eq.html)
+      The '==' operator checks if all components in two Vector4's are equal. If all x, y, z, and w components from both Vector4's are equal, it returns true otherwise it returns false. Refer to the [official Unity Vector4.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_eq.html) for more info.
     description:
     type_a: Vector4
     type_b: Vector4
@@ -370,7 +370,7 @@ math_operations:
     code_samples:
   - operation: '/'
     summary: |
-      [Unity's Vector4.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_divide.html)
+      The '/' operator lets you divide a Vector4 by a number, which results in each component of the Vector4 being divided by that number. For example if you divide Vector4(4, 4, 4, 4) by 2, the resultant Vector4 would be Vector4(2, 2, 2, 2). Find more details in [Unity's Vector4.operator_divide documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_divide.html).
     description:
     type_a: Vector4
     type_b: number
@@ -378,7 +378,7 @@ math_operations:
     code_samples:
   - operation: '*'
     summary: |
-      [Unity's Vector4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_multiply.html)
+      The '*' operator allows you to scale a Vector4 by multiplying it by a number. Each component of the vector is multiplied by this number. A real world scenario can be increasing the RGBA values of color vector uniformly. For more, see [official Unity Vector4.operator_multiply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_multiply.html).
     description:
     type_a: number
     type_b: Vector4
@@ -386,15 +386,15 @@ math_operations:
     code_samples:
   - operation: '-'
     summary: |
-      
+      The '-' operator when applied to a Vector4, negates each component of the Vector4. For example, applying '-' to Vector4(2, 2, 2, 2) would result in Vector4(-2, -2, -2, -2). This operation is helpful for operations such as reversing directions, flipping normals, etc.
     description:
     type_a: Vector4
-    type_b: 
+    type_b:
     return_type: Vector4
     code_samples:
   - operation: '-'
     summary: |
-      [Unity's Vector4.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_subtract.html)
+      The '-' operator when used between two Vector4's, subtracts the second Vector4 from the first one component-wise. So, if Vector4(4, 4, 4, 4) and Vector4(2, 2, 2, 2) are subtracted, the result will be Vector4(2, 2, 2, 2). This operation can be used to find the relative difference between two vectors. More info can be found in the [official Unity Vector4.operator_subtract documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_subtract.html).
     description:
     type_a: Vector4
     type_b: Vector4
@@ -402,7 +402,7 @@ math_operations:
     code_samples:
   - operation: '+'
     summary: |
-      [Unity's Vector4.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_add.html)
+      The '+' operator adds two Vector4's component-wise, resulting in a new Vector4. Each component of the resulting Vector4 is the sum of the corresponding components of the original Vector4's. For example if you add Vector4(2, 3, 2, 2) and Vector4(1, 2, 1, 1), the result will be Vector4(3, 5, 3, 3). You can find more about addition operation in vector algebra from the [official Unity Vector4.operator_add documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_add.html).
     description:
     type_a: Vector4
     type_b: Vector4
