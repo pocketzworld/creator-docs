@@ -23,7 +23,7 @@ There are many ways to import assets like textures and meshes into Unity. Here a
 - **Asset Store:** Unity's built-in Asset Store is a treasure trove of ready-made assets. To access, simply click on `Window > Asset Store`, select your chosen asset, and import directly into your project.
 - **Manual Import:** To import locally stored files, right-click within the Project panel, select `Import New Asset`, and browse to your desired file.
 - **Drag & Drop:** An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel. 
-- ---- Note that Highrise Studio does not support adding new C# scripts.
+- ---- Note that Highrise Studio does not support adding new C# runtime scripts.
 
 In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua Script`, and name your script.
 
@@ -33,16 +33,9 @@ In order to create a new Lua script to harness the power of Highrise Studio, you
 
 1. Go to `Window > Rendering > Lighting`. Or press `(CMD/CNTRL) + 9` to open the window.
 2. Here you can access the **Scene** and **Environment** settings.
-3. The **Scene** settings include:
-    - Lightmap settings
-    - Map Resolution
-    - and Samples
-    - The Template's settings are provided in the *.lighting* file in **Assets > Template > Scenes > Room**
-4. The **Environment** settings include:
-    - Skybox Material
-    - and Environment Lighting
-    - The Environment Lighting can be a Color, Gradient, or the Skybox itself
-5. The **Skybox** is a Gradient material named *Sky* located in **Assets > Template > Art**
+3. The **Scene** settings allow you to control the lightmap, map resolution, and samples.
+4. The **Environment** settings allow you to adjust the Skybox material and environment lighting.
+5. The **Skybox** is a Gradient material named *Sky* located in `Assets > Template > Art` in Unity's Project tab.
 
 
 ### **Step 4: Add Lights**
