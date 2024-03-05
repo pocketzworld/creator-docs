@@ -1,0 +1,62 @@
+name: Event
+type: classes
+summary: |
+  The Event class represents an event in the Highrise game environment
+description:
+code_samples:
+inherits:
+constructors:
+  - name: new
+    summary: |
+      Constructs a new instance of the Event class by calling a static method: new
+    is_static: true
+    code_samples:
+    parameters:
+    returns:
+      - type: Event
+        summary: Returns an instance of the Event class.
+properties:
+  - name: name
+    summary: |
+      Fetches the name of the event. This is a read-only attribute.
+    is_static: false
+    code_samples:
+    type: string
+methods:
+  - name: FireClient
+    summary: |
+      Triggers the event on the client-side.
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary: The method does not return any value.
+  - name: FireAllClients
+    summary: |
+      Triggers the event on all clients.
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary: The method does not return any value.
+  - name: FireServer
+    summary: |
+      Triggers the event on the server-side.
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary: The method does not return any value.
+  - name: Connect
+    summary: |
+      Connects a function to an event. The function will be triggered when the event is fired.
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.EventConnection
+        summary: Returns an instance of the EventConnection indicating the connection.
+math_operations:

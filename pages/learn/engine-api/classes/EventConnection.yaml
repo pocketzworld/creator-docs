@@ -1,0 +1,15 @@
+name: EventConnection
+type: classes
+summary: This class represents an Event Connection that was made in the Highrise game environment. See Class.Event
+constructors:
+methods:
+  - name: Disconnect
+    summary: |
+      Disconnects the event connection.
+    description:
+    is_static: false
+    parameters:
+    returns:
+      - type: void
+        summary: This method does not return a value.
+math_operations:
