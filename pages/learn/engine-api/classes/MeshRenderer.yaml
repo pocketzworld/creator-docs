@@ -1,7 +1,11 @@
 name: MeshRenderer
 type: classes
 summary: |
-  MeshRenderer is a component class in Unity's rendering system that takes the geometry from the Mesh Filter and renders it at the position defined by the object's Transform component. You can change a GameObject's Material properties via the MeshRenderer. The MeshRenderer works in conjunction with the Mesh Filter for rendering of 3D objects. Further information can be found in [Unity's MeshRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer.html).
+  In Unity's toolbox, the MeshRenderer is akin to a paintbrush which 'draws' the 3D objects onto the screen. It is a crucial component class within Unity's render system, taking the raw geometry data from the Mesh Filter and using it to render the object onto the game's window.
+  
+  Working interdependently with the object's Class.Transform component, the MeshRenderer displays the 3D graphics at the precise position, rotation, and scale defined by the Transform. Additionally, it features the capability to tweak a GameObject's Material properties, allowing developers to adjust the visual appearance of their objects.
+  
+  The partnership between MeshRenderer and Mesh Filter is fundamental to Unity's method of rendering 3D objects. For in-depth insights into how you can wield the MeshRenderer to influence the visual aesthetics of your game, dive into the [official Unity MeshRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer.html).
 description:
 code_samples:
 inherits:

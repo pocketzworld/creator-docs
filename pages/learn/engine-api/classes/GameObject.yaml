@@ -91,7 +91,7 @@ methods:
         summary: Returns the requested component attached to the GameObject, if it exists.
   - name: AddScript
     summary: |
-      The `AddScript` method enables you to attach a new LuaScript to the GameObject during runtime. This allows the GameObject to exhibit the defined behaviors in the script and execute it immediately. For more in-depth details, visit the [Unity's GameObject.AddScript Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.AddScript.html).
+      The `AddScript` method enables you to attach a new LuaScript to the GameObject during runtime. This allows the GameObject to exhibit the defined behaviors in the script and execute it immediately.
     description:
     is_static: false
     code_samples:
