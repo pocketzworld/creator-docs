@@ -1,0 +1,190 @@
+name: AnimationCurve
+type: classes
+summary: |
+  [Unity's AnimationCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: length
+    summary: |
+      [Unity's AnimationCurve.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve-length.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Evaluate
+    summary: |
+      [Unity's AnimationCurve.Evaluate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Evaluate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: AddKey
+    summary: |
+      [Unity's AnimationCurve.AddKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.AddKey.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary:
+      - name: value
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: ClearKeys
+    summary: |
+      [Unity's AnimationCurve.ClearKeys Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ClearKeys.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveKey
+    summary: |
+      [Unity's AnimationCurve.RemoveKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.RemoveKey.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SmoothTangents
+    summary: |
+      [Unity's AnimationCurve.SmoothTangents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.SmoothTangents.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary:
+      - name: weight
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CopyFrom
+    summary: |
+      [Unity's AnimationCurve.CopyFrom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.CopyFrom.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: Class.AnimationCurve
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Constant
+    summary: |
+      [Unity's AnimationCurve.Constant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Constant.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: timeStart
+        type: number
+        default:
+        summary:
+      - name: timeEnd
+        type: number
+        default:
+        summary:
+      - name: value
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.AnimationCurve
+        summary:
+  - name: Linear
+    summary: |
+      [Unity's AnimationCurve.Linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Linear.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: timeStart
+        type: number
+        default:
+        summary:
+      - name: valueStart
+        type: number
+        default:
+        summary:
+      - name: timeEnd
+        type: number
+        default:
+        summary:
+      - name: valueEnd
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.AnimationCurve
+        summary:
+  - name: EaseInOut
+    summary: |
+      [Unity's AnimationCurve.EaseInOut Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.EaseInOut.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: timeStart
+        type: number
+        default:
+        summary:
+      - name: valueStart
+        type: number
+        default:
+        summary:
+      - name: timeEnd
+        type: number
+        default:
+        summary:
+      - name: valueEnd
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.AnimationCurve
+        summary:
+  - name: ToString
+    summary: |
+      [Unity's AnimationCurve.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+math_operations: 

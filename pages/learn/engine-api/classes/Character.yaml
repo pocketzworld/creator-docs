@@ -1,0 +1,304 @@
+name: Character
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: BillboardTransform
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+  - name: AnimationName
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: Owner
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Character
+  - name: Name
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: IsRunning
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsWalking
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsSitting
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsLoaded
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsMoving
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsAnchored
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsFacingFront
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: Height
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: HasAnimation
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: StopAnimation
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetAnimationTime
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary:
+      - name: unitTime
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetAnimationUnitTime
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary:
+      - name: time
+        type: number
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: SetAnimationTime
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary:
+      - name: time
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetAnimationUnitTime
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary:
+      - name: unitTime
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CurrentAnimationSupportsBackFacing
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: PlayErrorAnimation
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: playSound
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FaceFront
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: FaceBack
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Hide
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Show
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SetEmptyBehaviour
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Look
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: direction
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: leftRightOnly
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CancelCurrentBehaviour
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: ToString
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+math_operations: 

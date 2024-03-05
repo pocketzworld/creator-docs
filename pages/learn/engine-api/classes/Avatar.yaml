@@ -1,0 +1,106 @@
+name: Avatar
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.Character
+constructors: 
+properties: 
+  - name: Name
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: IsLoaded
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: PetIsLoaded
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsSpeaker
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsSpeaking
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsMuted
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: IsDeafened
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: Height
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: FootstepEvent
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: LandingEvent
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+methods: 
+  - name: MoveTo
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ToString
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+math_operations: 

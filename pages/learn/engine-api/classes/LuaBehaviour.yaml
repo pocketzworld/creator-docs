@@ -1,0 +1,164 @@
+name: LuaBehaviour
+type: classes
+summary: |
+  fill. this object is the glue that makes their lua scripts work like unity's components. the behaviour is always accessed via `self` in the lua scripts
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: gameObject
+    summary: |
+      fill
+    description:
+    is_static: false
+    code_samples:
+      ```lua
+        local go = self.gameObject
+        print("Hi! My name is " .. go.name)
+      ```
+    type: Class.GameObject
+  - name: transform
+    summary: |
+      fill
+    description:
+    is_static: false
+    code_samples:
+      ```lua
+        local t = self.transform
+        print("Hi! I'm located at " .. tostring(t.position))
+      ```
+    type: Class.GameObject
+  - name: OnCollisionExit
+    summary: |
+      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work. Also at some point have Class.Collision in there somewhere
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnCollisionExit.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      self.OnCollisionExit:Connect(function(collision : Collision)
+          print("I stopped colliding with and touching a collider named " .. collision.gameObject.name)
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: OnCollisionStay
+    summary: |
+      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work. Also at some point have Class.Collision in there somewhere
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnCollisionStay.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      self.OnCollisionStay:Connect(function(collision : Collision)
+          print("I am still colliding with and touching a collider named " .. collision.gameObject.name)
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: OnCollisionEnter
+    summary: |
+      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work. Also at some point have Class.Collision in there somewhere
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnCollisionEnter.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      self.OnCollisionEnter:Connect(function(collision : Collision)
+          print("I collided with a collider named " .. collision.gameObject.name)
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: OnTriggerExit
+    summary: |
+      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnTriggerExit.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      self.OnTriggerEnd:Connect(function(other : Collider)
+        print("This triggering collider left: " .. other.gameObject.name)
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: OnTriggerStay
+    summary: |
+      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnTriggerStay.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      self.OnTriggerStay:Connect(function(other : Collider)
+        print("The triggering collider that has not left is named " .. other.gameObject.name)
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: OnTriggerEnter
+    summary: |
+      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnTriggerEnter.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      self.OnTriggerEnter:Connect(function(other : Collider)
+        print("I was triggered by a collider named " .. other.gameObject.name)
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: Update
+    summary: |
+      fill
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.Update.html)
+    description:
+    is_static: false
+    code_samples:
+      ```lua
+      self.Update:Connect(function()
+        print("This frame took " .. Time.deltaTime .. "seconds")
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: LateUpdate
+    summary: |
+      fill
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.LateUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+      ```lua
+      self.LateUpdate:Connect(function()
+        print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: FixedUpdate
+    summary: |
+      fill
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.FixedUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+      ```lua
+      self.FixedUpdate:Connect(function()
+        print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
+      end)
+      ```
+    type: Class.LuaEvent
+  - name: Start
+    summary: |
+      fill. Not that we do not have Awake(). the script is already run top to bottom which acts like the "awake" functionality. Start would be after all of that so that you can do things after all scripts spawned this frame have initialized that way
+      [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.Start.html)
+    description:
+    is_static: false
+    code_samples:
+      ```lua
+      self.Start:Connect(function()
+          print("I started. This is the first frame I am alive!")
+      end)
+      ```
+    type: Class.LuaEvent
+methods: 
+math_operations: 
