@@ -1,26 +1,25 @@
 name: UI
 type: classes
 summary: |
-  Accessor to the Highrise UI system.
+  The UI class is a gateway to Highrise's user interface system. It provides a standardized way to communicate and control various aspects of your game's user interface, like dialog boxes, buttons, menus, and other on-screen elements players interact with. By manipulating UI elements, you can create dynamic and immersive gaming experiences.
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
 methods:
   - name: OpenPopup
     summary: |
-      Opens the provided UIView as a popup.
-    description: |
-      This method is used to open a popup window of the given UIView in Highrise.
+      The OpenPopup method allows you to initiate a popup window using the UIView specified. It's a straightforward way to display on-screen messages, notifications, or user interactive elements in a separate window overlaying the current game screen.
+    description:
     is_static: true
     code_samples:
     parameters:
       - name: ve
         type: Class.UIView
         default:
-        summary: The UIView content of the popup.
+        summary: The UIView that you want to instantiate as a popup.
     returns:
       - type: number
-        summary: The unique identifier for the opened popup.
+        summary: An identifier unique to the opened popup is returned, which can be used for any subsequent reference to the popup.
 math_operations: 
