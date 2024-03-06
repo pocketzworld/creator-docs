@@ -6,6 +6,8 @@ description:
 code_samples:
 inherits:
   - Class.Behaviour
+tags:
+  - ServerAndClient
 constructors:
 properties:
   - name: gameObject
@@ -13,6 +15,8 @@ properties:
       The gameObject property allows you to interact with the GameObject that this LuaBehaviour instance (remember, accessed by `self` in Lua scripts) is attached to. This equips your Lua script with the ability to manipulate the GameObject in complex ways.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
       ```lua
       local go = self.gameObject
@@ -24,6 +28,8 @@ properties:
       The transform property provides you access to the Transform component of the GameObject attached to this LuaBehaviour instance. With this, the Lua script can modify the GameObject's 3D position, rotation, and scale in the game world.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
       ```lua
       local t = self.transform
@@ -114,6 +120,8 @@ properties:
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.Update.html)
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
       ```lua
       self.Update:Connect(function()
@@ -127,6 +135,8 @@ properties:
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.LateUpdate.html)
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
       ```lua
       self.LateUpdate:Connect(function()
@@ -153,6 +163,8 @@ properties:
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.Start.html)
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
       ```lua
       self.Start:Connect(function()

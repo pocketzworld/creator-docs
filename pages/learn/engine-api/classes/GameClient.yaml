@@ -34,7 +34,7 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: ClientPlayer
+    type: Class.Player
   - name: mainCamera
     summary: |
       This property helps you obtain the main camera for the game client. It fetches the first active, enabled camera tagged as "MainCamera" in the scene. If no such camera is found, it returns nil.

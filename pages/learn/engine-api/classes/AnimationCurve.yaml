@@ -1,190 +1,200 @@
 name: AnimationCurve
 type: classes
 summary: |
-  [Unity's AnimationCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.html)
+  The AnimationCurve is a class native to Unity, adopted by Highrise, that provides the ability to visually shape and manipulate an animation curve. Animation curves are used within game development to smoothly control variable values over time, whether that be object movement, color fading, AI decision-making, or any other time-dependent value changes, providing a huge improvement to an animation's quality.
+
+  Each AnimationCurve constitutes an array of 'keyframes', corresponding to a value occurring at a specific point in time. The interpolation between these points results in a curved graph known as the AnimationCurve. Developers can shape this curve to dictate how values will oscillate over time, giving complete control with visual cues. Regularly seen in tweening animations, lerping between positions, fading in and out audio tracks, and much more. 
+
+  Highrise exposes this Unity tool with an array of useful methods such as 'Evaluate', 'AddKey', 'ClearKeys' and more that allow developers to manipulate the curve within their game’s runtime.
+
 description:
-code_samples:
-inherits: 
-constructors: 
-properties: 
+code_samples: |
+  #### Putting an animation curve in the inspector
+  ```lua
+  --!SerializeField
+  local myAnimationCurve : AnimationCurve = nil
+  ```
+inherits:
+constructors:
+properties:
   - name: length
     summary: |
-      [Unity's AnimationCurve.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve-length.html)
+      The 'length' property gives you the count of keys present in the curve. Useful for iterating over all keys or for general informational purposes, it returns the total number of keys in the curve. You can find more information in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve-length.html).
     description:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: Evaluate
     summary: |
-      [Unity's AnimationCurve.Evaluate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Evaluate.html)
+      The 'Evaluate' method is used extensively to interpolate the value from the curve at a given time point. The curve is evaluated, giving the value of the curve at that exact time. This becomes very handy when lerping between two values in a non-linear way for smoother transitions, as described in [Unity's documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Evaluate.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: time
         type: number
         default:
-        summary:
+        summary: The time at which to evaluate the curve.
     returns:
       - type: number
-        summary:
+        summary: Returns the value of the curve at the specified time.
   - name: AddKey
     summary: |
-      [Unity's AnimationCurve.AddKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.AddKey.html)
+      The 'AddKey' method is a tool designed to insert a new key into your AnimationCurve. This provides a powerful way to dynamically shape your animation by adding keyframes at certain times with specific values. For more information on adding keys, refer to the [Unity's AnimationCurve.AddKey documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.AddKey.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: time
         type: number
         default:
-        summary:
+        summary: The time at which the new key should be inserted.
       - name: value
         type: number
         default:
-        summary:
+        summary: The value of the new key at the specified time.
     returns:
       - type: number
-        summary:
+        summary: Returns the index of the added key, or of the existing key if one already exists at the given time.
   - name: ClearKeys
     summary: |
-      [Unity's AnimationCurve.ClearKeys Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ClearKeys.html)
+      The 'ClearKeys' method allows you to erase all keys from the AnimationCurve. It can be beneficial when you need to reset the curve or want to dynamically generate a new one. Further detail can be found in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ClearKeys.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: RemoveKey
     summary: |
-      [Unity's AnimationCurve.RemoveKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.RemoveKey.html)
+      The 'RemoveKey' method is a utility function that removes the key at a specified index from your AnimationCurve. Varying curves dynamically can lead to interesting gameplay possibilities and variation in animations. For more on removing keys, visit the [Unity's AnimationCurve.RemoveKey documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.RemoveKey.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the key you want to remove.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SmoothTangents
     summary: |
-      [Unity's AnimationCurve.SmoothTangents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.SmoothTangents.html)
+      The 'SmoothTangents' method updates the tangent of a key in the AnimationCurve to create a smooth transition in the curve. This becomes essential while crafting natural and organic animations. For a deeper insight, you can check the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.SmoothTangents.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the key to update.
       - name: weight
         type: number
         default:
-        summary:
+        summary: How much influence the tangent has. A weight of 0 will make the tangent flat.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: CopyFrom
     summary: |
-      [Unity's AnimationCurve.CopyFrom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.CopyFrom.html)
+      The 'CopyFrom' method copies all settings, including all keys from the given curve. This can prove useful when you want to duplicate the behavior of an existing curve. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.CopyFrom.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: other
         type: Class.AnimationCurve
         default:
-        summary:
+        summary: The source AnimationCurve to copy from.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: Constant
     summary: |
-      [Unity's AnimationCurve.Constant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Constant.html)
+      The 'Constant' static method creates a new AnimationCurve where all values are the same (constant). This can come in handy when creating a stable, unchanging behavior. For a deeper insight, you can check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Constant.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: timeStart
         type: number
         default:
-        summary:
+        summary: The starting time of the curve.
       - name: timeEnd
         type: number
         default:
-        summary:
+        summary: The ending time of the curve.
       - name: value
         type: number
         default:
-        summary:
+        summary: The constant value for the curve.
     returns:
       - type: Class.AnimationCurve
-        summary:
+        summary: Returns a new AnimationCurve with a constant value.
   - name: Linear
     summary: |
-      [Unity's AnimationCurve.Linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Linear.html)
+      The 'Linear' static method creates a new AnimationCurve representing a linear interpolation between a start and end value (valueStart and valueEnd) over a specified time period (timeStart to timeEnd). This is particularly useful when a linear transition between two states is required over a given duration. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Linear.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: timeStart
         type: number
         default:
-        summary:
+        summary: The starting time of the curve.
       - name: valueStart
         type: number
         default:
-        summary:
+        summary: The value of the curve at the start time.
       - name: timeEnd
         type: number
         default:
-        summary:
+        summary: The ending time of the curve.
       - name: valueEnd
         type: number
         default:
-        summary:
+        summary: The value of the curve at the end time.
     returns:
       - type: Class.AnimationCurve
-        summary:
+        summary: Returns a new AnimationCurve representing a linear interpolation.
   - name: EaseInOut
     summary: |
-      [Unity's AnimationCurve.EaseInOut Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.EaseInOut.html)
+      The 'EaseInOut' static function creates a new AnimationCurve that smoothly transitions between the start and end values over a specified time period. This method is especially useful to create animations with smooth starts and ends, providing a more natural look. You can refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.EaseInOut.html) for more detail.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: timeStart
         type: number
         default:
-        summary:
+        summary: The starting time of the curve.
       - name: valueStart
         type: number
         default:
-        summary:
+        summary: The value of the curve at the start time.
       - name: timeEnd
         type: number
         default:
-        summary:
+        summary: The ending time of the curve.
       - name: valueEnd
         type: number
         default:
-        summary:
+        summary: The value of the curve at the end time.
     returns:
       - type: Class.AnimationCurve
-        summary:
+        summary: Returns a new AnimationCurve with smooth transitions at start and end.
   - name: ToString
     summary: |
-      [Unity's AnimationCurve.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ToString.html)
+      The 'ToString' method is used to get a string representing the AnimationCurve, which can be useful for debugging or logging. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ToString.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
-        summary:
-math_operations: 
+        summary: Returns a string representing the AnimationCurve.
+math_operations:
