@@ -1,38 +1,38 @@
 name: LuaBehaviour
 type: classes
 summary: |
-  fill. this object is the glue that makes their lua scripts work like unity's components. the behaviour is always accessed via `self` in the lua scripts
+  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of JavaScript or C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to. 
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+constructors:
+properties:
   - name: gameObject
     summary: |
-      fill
+      The gameObject property allows you to interact with the GameObject that this LuaBehaviour instance (remember, accessed by `self` in Lua scripts) is attached to. This equips your Lua script with the ability to manipulate the GameObject in complex ways.
     description:
     is_static: false
     code_samples:
       ```lua
-        local go = self.gameObject
-        print("Hi! My name is " .. go.name)
+      local go = self.gameObject
+      print("Hi! My name is " .. go.name)
       ```
     type: Class.GameObject
   - name: transform
     summary: |
-      fill
+      The transform property provides you access to the Transform component of the GameObject attached to this LuaBehaviour instance. With this, the Lua script can modify the GameObject's 3D position, rotation, and scale in the game world.
     description:
     is_static: false
     code_samples:
       ```lua
-        local t = self.transform
-        print("Hi! I'm located at " .. tostring(t.position))
+      local t = self.transform
+      print("Hi! I'm located at " .. tostring(t.position))
       ```
-    type: Class.GameObject
+    type: Class.Transform
   - name: OnCollisionExit
     summary: |
-      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work. Also at some point have Class.Collision in there somewhere
+      This event is triggered when a GameObject, equipped with a Collider (and one of them must have a Class.RigidBody), stops colliding with another GameObject. This could be useful for game logic where an action occurs as soon as a collision ends, like playing a sound effect when a ball leaves a wall. Note that both GameObjects need a collider and the IsTrigger property on both colliders must be set to false.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnCollisionExit.html)
     description:
     is_static: false
@@ -42,10 +42,10 @@ properties:
           print("I stopped colliding with and touching a collider named " .. collision.gameObject.name)
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: OnCollisionStay
     summary: |
-      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work. Also at some point have Class.Collision in there somewhere
+      The OnCollisionStay event triggers when a GameObject continues to collide with another GameObject. This can be handy for scenarios where an action must be continuously performed while collision is ongoing - maybe your character loses health as long as it keeps touching a spiky wall. Similar to OnCollisionExit, both GameObjects require a Class.Collider and one needs a Class.RigidBody attached.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnCollisionStay.html)
     description:
     is_static: false
@@ -55,10 +55,10 @@ properties:
           print("I am still colliding with and touching a collider named " .. collision.gameObject.name)
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: OnCollisionEnter
     summary: |
-      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work. Also at some point have Class.Collision in there somewhere
+      The OnCollisionEnter event is triggered when a GameObject, equipped with a Class.Collider, collides with another GameObject. Handy for scenarios when an action should occur as soon as a collision begins - for example, when your character touches a coin, the coin disappears and the score increases. Like the other collision events, both GameObjects need a collider and the IsTrigger property on both colliders must be set to false.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnCollisionEnter.html)
     description:
     is_static: false
@@ -68,10 +68,10 @@ properties:
           print("I collided with a collider named " .. collision.gameObject.name)
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: OnTriggerExit
     summary: |
-      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work
+      The OnTriggerExit event signals when a GameObject exits a trigger Collider. This implies a GameObject ceases to intersect with the collider's trigger space. Examples of its usage include teleporting a character when it steps out of a magical portal. Note that both GameObjects require a Class.Collider, while at least one GameObject must have a set IsTrigger to true.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnTriggerExit.html)
     description:
     is_static: false
@@ -81,10 +81,10 @@ properties:
         print("This triggering collider left: " .. other.gameObject.name)
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: OnTriggerStay
     summary: |
-      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work
+      The OnTriggerStay event is invoked continuously for every physics update where a GameObject intersects a trigger collider. It is useful for scenarios where an action must continue while a GameObject is within a certain area, like a player receiving healing effects while inside a healing zone. This event requires both GameObjects to have a Class.Collider with at least one GameObject having its IsTrigger set to true.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnTriggerStay.html)
     description:
     is_static: false
@@ -94,10 +94,10 @@ properties:
         print("The triggering collider that has not left is named " .. other.gameObject.name)
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: OnTriggerEnter
     summary: |
-      fill with something, don't forget to mention that both need Class.Collider, the specifics of IsTrigger, and one needs to have a Class.RigidBody for this to work
+      The OnTriggerEnter event is triggered when a GameObject intersects a trigger collider. This can be useful for a variety of scenarios, like a player stepping on a tripwire that witnesses a trap. Again, both GameObjects require a Class.Collider component with at least one GameObject having its IsTrigger property set to true.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.OnTriggerEnter.html)
     description:
     is_static: false
@@ -107,58 +107,60 @@ properties:
         print("I was triggered by a collider named " .. other.gameObject.name)
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: Update
     summary: |
-      fill
+      The Update event is fired every frame to update non-physics related changes or input. It's commonly used for updating animations, game logic, collecting input, or debugging. Note that the frequency of the Update call might not be consistent as it depends on the frame rate.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.Update.html)
     description:
     is_static: false
     code_samples:
       ```lua
       self.Update:Connect(function()
-        print("This frame took " .. Time.deltaTime .. "seconds")
+      print("This frame took " .. Time.deltaTime .. "seconds")
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LateUpdate
     summary: |
-      fill
+      LateUpdate is called every frame, just like Update but it is always called after all Update functions are called. This is especially useful if you need to order actions to happen in a sequence. For instance, you would want to move your character in the Update function, then adjust the camera position in the LateUpdate to correspond to the character's new position.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.LateUpdate.html)
     description:
     is_static: false
     code_samples:
       ```lua
       self.LateUpdate:Connect(function()
-        print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
+      print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: FixedUpdate
     summary: |
-      fill
+      FixedUpdate is called every fixed frame-rate frame to perform physics-related changes. Use this for applying forces, gravity or tweaking physics-related game settings. Unlike Update, FixedUpdate is consistent, ensuring that physics plays out the same way regardless of the frame rate of the game.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.FixedUpdate.html)
     description:
     is_static: false
     code_samples:
       ```lua
       self.FixedUpdate:Connect(function()
-        print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
+      print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: Start
     summary: |
-      fill. Not that we do not have Awake(). the script is already run top to bottom which acts like the "awake" functionality. Start would be after all of that so that you can do things after all scripts spawned this frame have initialized that way
+      The Start event is triggered when a LuaBehaviour is enabled just before any Update methods are called for the first time. This can be useful for initializing variables or performing setup operations. Note that unlike Unity, Highrise does not have an Awake function. Code that you would typically place in the Awake function is placed within the Lua script outside of any function, which Highrise will execute immediately when the script loads.
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.Start.html)
     description:
     is_static: false
     code_samples:
       ```lua
       self.Start:Connect(function()
-          print("I started. This is the first frame I am alive!")
+      print("I started. This is still the first frame I am alive!")
       end)
+
+      print("I executed immediately! Not being in a function is kind of like Awake()")
       ```
-    type: Class.LuaEvent
-methods: 
-math_operations: 
+    type: Class.Event
+methods:
+math_operations:

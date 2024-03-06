@@ -1,38 +1,66 @@
 name: GameClient
 type: classes
 summary: |
-  This class represents a local game client in the Highrise game environment.
+  In Highrise's scripting environment, the GameClient class acts as the high-level game context the script is running in. Any client-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Client' or 'Client and Server' can access client - with 'Client and Server' scripts only offering access when their `server` global property is set to false.
+
+  The GameClient is essential for managing critical client-specific activities, such as identifying the local player or the main camera. It also enables responding to events like the connection and disconnection of players during gameplay.
+
+  It stands as the bridge between local operations and the expansive game environment, providing a hassle-free way to tap into and manage client-side functionalities.
 description:
-code_samples:
+code_samples: |
+  ```lua
+    local localAvatarConnection = nil
+    localAvatarConnection = client.localPlayer.AvatarInstantiated:Connect(function(player, avatar)
+      OnLocalAvatar(player, avatar)
+    end)
+  
+    function OnLocalAvatar(player, avatar)
+      localAvatarConnection:Disconnect()
+      localAvatarConnection = nil
+  
+      print("The local user's avatar has finished loading and has now spawned!")
+    end
+  
+    client.PlayerConnected:Connect(function(player)
+      print("Another player has connected named " .. player.name)
+    end)
+  ```  
 inherits:
 constructors:
-methods:
-  - name: PlayerConnected
-    summary: |
-      Event that is triggered when a player connected to the game.
-    description:
-    is_static: false
-    parameters:
-    code_samples:
-    returns:
-      - type: Class.Event
-        summary: This method returns an Event indicating a player has just connected.
-  - name: PlayerDisconnected
-    summary: |
-      Event that is fired when a player is disconnected from the client.
-    description:
-    is_static: false
-    parameters:
-    code_samples:
-    returns:
-      - type: Class.Event
-        summary: This method returns an Event indicating a player has just disconnected.
 properties:
   - name: localPlayer
     summary: |
-      Fetches the local player of the game client.
+      This property provides a direct handle to the game's local player from the client's perspective, facilitating easy interaction and local player management.
     description:
     is_static: false
     code_samples:
     type: ClientPlayer
+  - name: mainCamera
+    summary: |
+      This property helps you obtain the main camera for the game client. It fetches the first active, enabled camera tagged as "MainCamera" in the scene. If no such camera is found, it returns nil.
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Camera
+methods:
+  - name: PlayerConnected
+    summary: |
+      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player . 
+    description:
+    is_static: false
+    parameters:
+    code_samples:
+    returns:
+      - type: Class.Event
+        summary: This method triggers an Event indicating that a player has just connected to the game.
+  - name: PlayerDisconnected
+    summary: |
+      An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
+    description:
+    is_static: false
+    parameters:
+    code_samples:
+    returns:
+      - type: Class.Event
+        summary: This method fires off an Event indicating that a player has just disconnected from the game.
 math_operations:

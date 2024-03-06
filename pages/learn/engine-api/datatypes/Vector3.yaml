@@ -71,7 +71,91 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods:
+  - name: zero
+    summary: |
+      'zero' is a property that generates a new Vector3 instance with zero values for all its coordinates (x, y, z), essentially representing the origin in 3D space or indicating no motion or rotation. Learn more in [Unity's Vector3.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-zero.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: one
+    summary: |
+      The 'one' property generates a new Vector3 object with all of its components (x, y, and z) set to 1. This is useful when needing a Vector3 instance that points diagonally along the axis in a 3D space. For additional details, refer to [Unity's Vector3.one Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-one.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: forward
+    summary: |
+      The 'forward' property returns a Vector3 that points towards the positive Z-axis direction, useful for designating a forward direction in 3D space. More information can be accessed in [Unity's Vector3.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-forward.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: back
+    summary: |
+      The 'back' property provides a Vector3 instance that points towards the negative Z-axis, used often to designate a backward direction in 3D environments. You can find more about it in [Unity's Vector3.back Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-back.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: up
+    summary: |
+      The 'up' property offers a Vector3 that points upwards along the positive Y-axis. This is especially handy when working with 3D objects that need to move or face the upward direction. For more insights, check out [Unity's Vector3.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-up.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: down
+    summary: |
+      The 'down' property represents a Vector3 that points downwards along the negative Y-axis. Typically it is used to dictate a downward direction in 3D applications. More information can be found in [Unity's Vector3.down Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-down.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: left
+    summary: |
+      The 'left' property returns a Vector3 pointing in the negative X-axis direction, generally used to signify a left direction in 3D space. Dive deeper in [Unity's Vector3.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-left.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: right
+    summary: |
+      The 'right' property provides a Vector3 that points towards the positive X-axis direction which is generally recognized as right direction in the 3D space. For more details, refer to  [Unity's Vector3.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-right.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: positiveInfinity
+    summary: |
+      The 'positiveInfinity' property of Vector3 yields a Vector3 with all components (x, y, z) initialized to positive infinity. It can be handy when you need a Vector3 with the largest possible value. Detailed explanation can be found in [Unity's Vector3.positiveInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-positiveInfinity.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: negativeInfinity
+    summary: |
+      The 'negativeInfinity' property is used to generate a Vector3 where all components (x, y, z) are set to negative infinity, representing the smallest possible value of a Vector3. You can learn more in [Unity's Vector3.negativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-negativeInfinity.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: kEpsilon
+    summary: |
+      'kEpsilon' is a property that provides a very small positive number greater than 0. In the context of Vector3s, this is generally used to test whether its components are approximately zero, factoring in small errors due to floating point inaccuracies. Take a look at [Unity's Vector3.kEpsilon Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-kEpsilon.html) for more details.
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: kEpsilonNormalSqrt
+    summary: |
+      'kEpsilonNormalSqrt' is a property holding a very small, positive number that is used in calculations requiring square root, usually representing a negligible threshold value for comparing Vector3 magnitudes. More can be learned from [Unity's Vector3.kEpsilonNormalSqrt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-kEpsilonNormalSqrt.html).
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
   - name: Set
     summary: |
       The 'Set' method enables you to change the x, y, and z values of an existing Vector3 object. This is especially handy when you need to update all three components of the Vector3 simultaneously. More information is available on the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Set.html).

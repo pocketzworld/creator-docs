@@ -27,35 +27,35 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragBegan
     summary: |
       
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragChanged
     summary: |
       
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragEnded
     summary: |
       
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: MouseWheel
     summary: |
       
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
 methods: 
   - name: ToString
     summary: |
