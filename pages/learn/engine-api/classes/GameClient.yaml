@@ -42,25 +42,20 @@ properties:
     is_static: false
     code_samples:
     type: Class.Camera
-methods:
   - name: PlayerConnected
     summary: |
       An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player . 
     description:
     is_static: false
-    parameters:
     code_samples:
     returns:
-      - type: Class.Event
-        summary: This method triggers an Event indicating that a player has just connected to the game.
+    type: Class.Event
   - name: PlayerDisconnected
     summary: |
       An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
     description:
     is_static: false
-    parameters:
     code_samples:
-    returns:
-      - type: Class.Event
-        summary: This method fires off an Event indicating that a player has just disconnected from the game.
+    type: Class.Event
+methods:
 math_operations:
