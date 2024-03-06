@@ -1,3 +1,5 @@
+# Production Process
+
 🎉 Congratulations! Your concept art is about to become a real item! Our artists craft each item specially with your work in mind, and our goal is to create something amazing that our whole Highrise community will value and love. 
 
 The art creation process involves a few different stages: 
@@ -9,7 +11,7 @@ The art creation process involves a few different stages:
 
 We will walk you through the process below. Buckle up and get ready for your next adventure! 🎉
 
-## 1. 🥳You have been selected! 🥳
+## 1. 🥳 You have been selected! 🥳
 
 Before we get to work, we ask that you send any additional details, references, item break downs, and item names. 
 
@@ -18,7 +20,7 @@ Before we get to work, we ask that you send any additional details, references, 
 - We may modify your items to suit our style, especially if your own unique art style is quite different. Also, our team may combine or break apart items as needed (like adding socks + legs together, or separating hair + clips). We look at a multitude of factors when we select items and try to take in account our your preferences, but cannot always accommodate all requests!
 - Depending on a variety of factors, such as the needs of the event, our team will select which items we’ll produce from your designs. While we always consider designer requests for items, rarity, and naming, we will make the final call for item selection and distribution.
 
-## 2. ✏️Concepting Stage: (Our artists draw!) You relax! ✏️
+## 2. ✏️ Concepting Stage: (Our artists draw!) You relax! ✏️
 
 Next, our artists start drawing your items! Our team uses your design as inspiration, and will always try to stay close to your design as possible. Sometimes we will have to make edits and changes — here are some common reasons:
 
@@ -29,7 +31,7 @@ Next, our artists start drawing your items! Our team uses your design as inspira
 
 Whenever we make changes, we’ll always do our best to explain our reasoning or technical limitations, so please feel free to ask follow up questions! Our team has years of experience working in game development and vector art, and will do our utmost to make your design its best self for the community!
 
-## 3. ✅Concept Preview window! Time for you to review ✅
+## 3. ✅ Concept Preview window! Time for you to review ✅
 
 Our artists have finished their interpretation of your design! We will send you a preview for you to review. Here is what we need from you!
 
@@ -46,11 +48,11 @@ Our artists have finished their interpretation of your design! We will send you 
 5. Please flag any changes or edit requests in the creator chat. We will not consider outside sources like Discord for feedback or edits.
 6. Please remain polite to our artists. Any player who is rude or does not adhere to the above conditions may be removed from future winnings. 
 
-## 4.  🏝️Vector Stage! Relax you earned it! 🏝️
+## 4.  🏝️ Vector Stage! Relax you earned it! 🏝️
 
 Our artists are cleaning up and converting the concept art into files Highrise uses for wearable clothing! This process takes a little while so expect the vector preview a few weeks after your initial concept preview.
 
-## 5. 👀Vector Preview! Time to review 👀
+## 5. 👀 Vector Preview! Time to review 👀
 
 Our artist will send you the finalized preview of your design. It's time to take one last look!
 
@@ -65,7 +67,7 @@ Our artist will send you the finalized preview of your design. It's time to take
 3. Please flag any changes or edit requests in the creator chat. We will not consider outside sources like Discord for feedback or edits.
 4. Please remain polite to our artists. Any player who is rude or does not adhere to the above conditions may be removed from future winnings. 
 
-## 6. 🎁Item in your inbox! 🎁
+## 6. 🎁 Item in your inbox! 🎁
 
 Before the items are released to everyone in the game, you will receive the items in your inbox. Try them on! We hope you will totally fall in love with them. 😄 We do our very best to make sure your items are tested and layer properly before we send them off… but sometimes we miss things. Please flag us in our creator chat so we can fix any issues before the event, sale, or grab goes live. 
 
