@@ -19,6 +19,8 @@ properties:
       This property represents the position of the GameObject in world space coordinates. It can be used to get or set the current position of your GameObject. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: DataType.Vector3
   - name: localPosition
@@ -33,6 +35,8 @@ properties:
       The 'eulerAngles' property represents the rotation of the GameObject in degrees around the x, y, and z axes. The angles are measured in a specific order: z, x, and then y. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html) to learn more.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: DataType.Vector3
   - name: localEulerAngles

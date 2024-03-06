@@ -10,11 +10,15 @@ summary: |
 description:
 code_samples:
 inherits:
+tags:
+  - ServerAndClient
 constructors:
   - name: new
     summary: |
       Creates a new instance of the Event class. In essence, this means defining a new incident or event in the Highrise game that is worthy of triggering specific actions or responses.
     is_static: true
+    tags:
+      - ServerAndClient
     code_samples:
     parameters:
     returns:
@@ -25,6 +29,8 @@ properties:
     summary: |
       This property denotes the name or identifier of the particular event, which could be anything like 'PlayerJoined' or 'PlayerMoved'.
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: string
 methods:
@@ -32,9 +38,9 @@ methods:
     summary: |
       This method triggers or 'fires' the event on a specific client's side, i.e., the user's device. For instance, this might be useful to display a custom message on a player's screen.
     is_static: false
-    code_samples:
     tags:
       - ServerAndClient
+    code_samples:
     parameters:
     returns:
       - type: void

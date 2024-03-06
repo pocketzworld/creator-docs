@@ -1,7 +1,7 @@
 name: GameClient
 type: classes
 summary: |
-  In Highrise's scripting environment, the GameClient class acts as the high-level game context the script is running in. Any client-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Client' or 'Client and Server' can access client - with 'Client and Server' scripts only offering access when their `server` global property is set to false.
+  In Highrise's scripting environment, the GameClient class acts as the high-level game context the script is running in. Any client-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Client' or 'Client and Server' can access client - with 'Client and Server' requiring you to check if `client` is not nil (or `server` is nil).
 
   The GameClient is essential for managing critical client-specific activities, such as identifying the local player or the main camera. It also enables responding to events like the connection and disconnection of players during gameplay.
 

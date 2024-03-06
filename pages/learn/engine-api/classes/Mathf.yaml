@@ -7,42 +7,56 @@ summary: |
 
   It includes methods for basic mathematical functions such as sine, cosine, or tangents as well as more specific game-related algorithms such as smooth damping, lerp, clamp, and more. For more information, refer to the [official Unity Mathf documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.html).
 constructors:
+tags:
+  - ServerAndClient
 properties:
   - name: PI
     summary: |
       The 'PI' property represents the mathematical constant Pi, ideal for circular and trigonometric calculations. Read more from [Unity's PI documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PI.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     type: double
   - name: Infinity
     summary: |
       'Infinity' represents positive infinity. Useful for setting values to unrealistic high when comparing. Check [Unity's Infinity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Infinity.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     type: double
   - name: NegativeInfinity
     summary: |
       'NegativeInfinity' represents negative infinity, aiding in assigning unrealistically low values during comparisons. See [Unity's NegativeInfinity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.NegativeInfinity.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     type: double
   - name: Deg2Rad
     summary: |
       'Deg2Rad' is a conversion factor used to transform degrees to radians. Explore more in [Unity's Deg2Rad documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Deg2Rad.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     type: double
   - name: Rad2Deg
     summary: |
       'Rad2Deg' is a conversion factor used to transform radians to degrees. Find out more at [Unity's Rad2Deg documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Rad2Deg.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     type: double
   - name: Epsilon
     summary: |
       'Epsilon' represents the smallest positive double greater than zero. Useful in preventing division by zero errors. Learn more at [Unity's Epsilon documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Epsilon.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     type: double
 methods:
   - name: Abs
@@ -50,6 +64,8 @@ methods:
       The 'Abs' method calculates and returns the absolute value of its input. Check [Unity's Abs documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Abs.html) for more details.
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: value
         type: float
@@ -63,6 +79,8 @@ methods:
       The 'Acos' method returns the angle in radians whose cosine is the specified number, useful in trigonometric math operations. More info at [Unity's Acos documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Acos.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: float
@@ -76,6 +94,8 @@ methods:
       The 'Approximately' method compares two floating point values, checking if they are approximately equal to handle inconsistencies in floating point arithmetic. Read [Unity's Approximately documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Approximately.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: float
@@ -93,6 +113,8 @@ methods:
       The 'Asin' method returns the angle in radians whose sine is the specified number. Useful for trigonometry operations involving sine. Check [Unity's Asin documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Asin.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: float
@@ -106,6 +128,8 @@ methods:
       The 'Atan' method returns the angle in radians whose tangent is the specified number. Useful for trigonometry operations involving tangent. See [Unity's Atan documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Atan.html) for more.
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: float
@@ -119,6 +143,8 @@ methods:
       The 'Atan2' method returns the angle in radians whose tan is y/x, where the signs of both arguments are used to determine the quadrant of the result. It is often useful in game physics calculations. Check [Unity's Atan2 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Atan2.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: y
         type: float
@@ -136,6 +162,8 @@ methods:
       The 'Ceil' method rounds a number up to the closest integer value that is not less than a specified number. Helpful in setting upper limit values. More details in [Unity's Ceil documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Ceil.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: float
@@ -149,6 +177,8 @@ methods:
       The 'CeilToInt' method rounds a number up to the nearest integer, returning an integer value. Useful when working with discrete values. Read more at [Unity's CeilToInt documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.CeilToInt.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: float
@@ -162,6 +192,8 @@ methods:
       The 'Clamp' method restricts a number to be within a specified range. Great for setting limits on a variable or return value. See more at [Unity's Clamp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Clamp.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: value
         type: float
@@ -183,6 +215,8 @@ methods:
       The 'Clamp01' method restricts a number to be within the range [0,1]. This function can be handy when a proportion or percentage value needs to be ensured. Check out [Unity's Clamp01 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Clamp01.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: value
         type: float
@@ -196,6 +230,8 @@ methods:
       The 'ClosestPowerOfTwo' method returns the power of two that is closest to a provided number. Particularly useful when dealing with texture resolutions. Learn more from [Unity's ClosestPowerOfTwo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.ClosestPowerOfTwo.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: value
         type: int32
@@ -209,6 +245,8 @@ methods:
       The 'Cos' method computes and returns the cosine of the angle specified in radians. Helps in trigonometry operations involving cosine. See [Unity's Cos documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Cos.html) for more.
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: float
@@ -222,6 +260,8 @@ methods:
       The 'DeltaAngle' method determines and returns the difference between two angles. Key to angle comparisons, ensuring minimal rotation direction. For details, refer to [Unity's DeltaAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.DeltaAngle.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: current
         type: float
@@ -239,6 +279,8 @@ methods:
       The 'Exp' method calculates and returns 'e' raised to the specified power. Essential for exponential growth calculations. Check [Unity's Exp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Exp.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: power
         type: float
@@ -252,6 +294,8 @@ methods:
       The 'Floor' method rounds a number down towards negative infinity to the closest integer value, and returns that integer. Handy for assigning lower limit values. More at [Unity's Floor documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Floor.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: float
@@ -265,6 +309,8 @@ methods:
       The 'InverseLerp' method linearly interpolates between two numbers, returning the fraction of the way 'value' is between 'a' and 'b'. Essential for finding relative positions or progress percentage. Read [Unity's InverseLerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.InverseLerp.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: float
@@ -286,6 +332,8 @@ methods:
       The 'IsPowerOfTwo' method checks if a given number is a power of two. Crucial in bit manipulation and efficient division and multiplication. Read [Unity's IsPowerOfTwo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.IsPowerOfTwo.html) for more details.
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: value
         type: number
@@ -299,6 +347,8 @@ methods:
       The 'Lerp' method linearly interpolates between two numbers by a specific proportion. Very common in smoothing transitions or animations. Check [Unity's Lerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Lerp.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: number
@@ -320,6 +370,8 @@ methods:
       The 'LerpAngle' method linearly interpolates between two angles. It is useful in smoothly transitioning angles over time. Read [Unity's LerpAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LerpAngle.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: number
@@ -341,6 +393,8 @@ methods:
       The 'LerpUnclamped' method linearly interpolates between two numbers based on the third input, even exceeding 1. Useful for values beyond the standard boundaries. See [Unity's LerpUnclamped documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LerpUnclamped.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: number
@@ -362,6 +416,8 @@ methods:
       The 'Log' function calculates and returns the natural logarithm (base e) of a number. Useful in several scientific calculations. More in [Unity's Log documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Log.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: number
@@ -375,6 +431,8 @@ methods:
       The 'Log10' method calculates and returns the base 10 logarithm of a number. Essential in scaling problems and for checking the number of decimal digits in the given number. Check [Unity's Log10 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Log10.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: number
@@ -388,6 +446,8 @@ methods:
       The 'Max' method returns the larger of two or more values. Ideal for finding highest score, fastest time, largest size, etc. Find more at [Unity's Max documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Max.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: values
         type: number[]
@@ -401,6 +461,8 @@ methods:
       The 'Min' method returns the smaller of two or more numbers. Practical for setting lower limit, comparing scores or ordering. See [Unity's Min documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Min.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: values
         type: number[]
@@ -414,6 +476,8 @@ methods:
       The 'MoveTowards' method shifts a number towards a target by a specified maximum step and returns the result. It can be used to create smooth transitions between numbers or limit the rate of change. Refer to [Unity's MoveTowards documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.MoveTowards.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: current
         type: number
@@ -435,6 +499,8 @@ methods:
       The 'MoveTowardsAngle' method works similarly to 'MoveTowards', but it moves the current angle towards a target angle. Angles are taken modulo 360 degrees to compute the shortest way around the circle. Check [Unity's MoveTowardsAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.MoveTowardsAngle.html) for more details.
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: current
         type: number
@@ -456,6 +522,8 @@ methods:
       The 'NextPowerOfTwo' method rounds a number up to the next highest power of two. Useful when dealing with things like texture sizes in computer graphics. Explore [Unity's NextPowerOfTwo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.NextPowerOfTwo.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: value
         type: number
@@ -469,6 +537,8 @@ methods:
       The 'PingPong' method swings a value between zero and a maximum, similar to how a ping pong ball would bounce between two sides. Vital for creating oscillating effects. For more see [Unity's PingPong documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PingPong.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: t
         type: number
@@ -486,6 +556,8 @@ methods:
       The 'Pow' method raises a number to the given power. Highly used in exponential growth or decrease calculations. Explore more at [Unity's Pow documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Pow.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: number
@@ -503,6 +575,8 @@ methods:
       The 'Repeat' method loops the value t, such that it is never larger than length and never smaller than 0. It is useful for creating cyclic or repeating effects. Read [Unity's Repeat documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Repeat.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: t
         type: number
@@ -520,6 +594,8 @@ methods:
       The 'Round' method rounds a number to the nearest integer value and returns this integer. This is useful when you need discrete steps or levels. Learn more from [Unity's Round documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Round.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: number
@@ -533,6 +609,8 @@ methods:
       The 'Sign' function returns the sign of a number. It is an essential method for determining the positivity or negativity of a number. Check out more on [Unity's Sign documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sign.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: number
@@ -546,6 +624,8 @@ methods:
       The 'Sin' method computes and returns the sine of an angle specified in radians. Helpful in many trigonometric calculations during game mechanics scripting. See [Unity's Sin documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sin.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: number
@@ -559,6 +639,8 @@ methods:
       The 'SmoothDamp' method gradually changes a number towards a desired goal over time. The value is smoothed by some spring-damper like function, which will never overshoot. Ideal for smooth transitions to a target value. Learn more from [Unity's SmoothDamp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothDamp.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: current
         type: number
@@ -594,6 +676,8 @@ methods:
       The 'SmoothDampAngle' method is identical to 'SmoothDamp' but operates over angles instead. It rotates a value current towards target. Given the nature of rotation, it smoothly interpolates between the two. Check [Unity's SmoothDampAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothDampAngle.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: current
         type: number
@@ -629,6 +713,8 @@ methods:
       The 'SmoothStep' method interpolates between two numbers in a smooth and gradual manner. It is similar to 'Lerp', but has ease-in and ease-out of the values. See [Unity's SmoothStep documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothStep.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: from
         type: number
@@ -650,6 +736,8 @@ methods:
       The 'Sqrt' method calculates and returns the square root of a specified number, useful in distance and trigonometric calculations. For more details, refer to [Unity's Sqrt documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sqrt.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: f
         type: number
@@ -663,6 +751,8 @@ methods:
       The 'Tan' method returns the tangent of a specified angle in radians. It is typically used in trigonometric calculations. Check out more at [Unity's Tan documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Tan.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     parameters:
       - name: a
         type: number

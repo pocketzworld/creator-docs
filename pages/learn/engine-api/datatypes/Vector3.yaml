@@ -5,12 +5,16 @@ summary: |
 description:
 code_samples:
 inherits:
+tags:
+  - ServerAndClient
 constructors:
   - name: new
     summary: |
       The 'new' constructor allows the creation of a new instance of Vector3 by providing values for x, y, and z coordinates individually. It offers an ideal way of instantiating a new Vector3 object that can be used to represent a point in the 3D space of your Unity game world. More on this in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-ctor.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     code_samples:
     parameters:
       - name: x
@@ -55,6 +59,8 @@ properties:
       The 'x' property represents the x-coordinate of the Vector3. This can be used to manipulate the x-component of the Vector3 directly, or to read its current value. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-x.html) for more detail.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: number
   - name: y
@@ -62,6 +68,8 @@ properties:
       The 'y' property corresponds to the y-coordinate of the Vector3. Similarly to the 'x' property, it can be used for both writing to and reading from the y-component of your Vector3. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-y.html) for further details.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: number
   - name: z
@@ -69,6 +77,8 @@ properties:
       The 'z' property represents the z-coordinate of the Vector3. It can be utilized directly to read or write to the z-component of the Vector3. The [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-z.html) contains more information on this.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: number
   - name: zero

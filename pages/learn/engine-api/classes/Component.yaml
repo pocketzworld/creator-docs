@@ -19,6 +19,8 @@ properties:
       The 'transform' property gives you a handle to the Transform component of the GameObject to which this component is attached. The Transform component controls the position, rotation, and scale of a GameObject in the scene. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html) for more information.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.Transform
   - name: gameObject
@@ -26,6 +28,8 @@ properties:
       The 'gameObject' property allows you to access the GameObject that this component is attached to. Many operations in Unity involve manipulating GameObjects, often via the components attached to them. For more details, refer to the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.GameObject
   - name: tag

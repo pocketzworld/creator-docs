@@ -10,6 +10,8 @@ description:
 code_samples:
 inherits:
   - Class.Object
+tags:
+  - ServerAndClient
 constructors:
   - name: new
     summary: |
@@ -27,6 +29,8 @@ properties:
       This property is used to access the Transform of the GameObject. The Transform controls the position, rotation, and scale of the GameObject in the scene. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-transform.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.Transform
   - name: layer
@@ -94,6 +98,8 @@ methods:
       The `AddScript` method enables you to attach a new LuaScript to the GameObject during runtime. This allows the GameObject to exhibit the defined behaviors in the script and execute it immediately.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     parameters:
       - name: script
@@ -108,6 +114,8 @@ methods:
       The `FindGameObjectsWithTag` method returns all active GameObjects with the specified tag. It allows you the convenience of accessing multiple GameObjects at once based on their tags in a single method. For more information, refer to [Unity's GameObject.FindGameObjectsWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectsWithTag.html).
     description:
     is_static: true
+    tags:
+      - ServerAndClient
     code_samples:
     parameters:
       - name: tag

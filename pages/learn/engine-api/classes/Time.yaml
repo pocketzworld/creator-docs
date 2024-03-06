@@ -8,6 +8,8 @@ summary: |
 description:
 code_samples:
 inherits:
+tags:
+  - ServerAndClient
 constructors:
 properties:
   - name: deltaTime
@@ -15,6 +17,8 @@ properties:
       'deltaTime' represents the time in seconds it took to complete the last frame. This is frequently used for smooth object motion or time-related calculations. As deltaTime varies between frames, it reflects real-world time more than game time. Read more at [Unity's deltaTime documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Time-deltaTime.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples: |
       ```lua
         self.Update:Connect(function()
