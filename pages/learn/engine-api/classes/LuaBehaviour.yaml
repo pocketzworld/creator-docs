@@ -3,7 +3,7 @@ type: classes
 summary: |
   At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of JavaScript or C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to. 
 description:
-code_samples:
+code_samples: |
 inherits:
   - Class.Behaviour
 tags:
@@ -17,7 +17,7 @@ properties:
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
       ```lua
       local go = self.gameObject
       print("Hi! My name is " .. go.name)
@@ -30,7 +30,7 @@ properties:
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
       ```lua
       local t = self.transform
       print("Hi! I'm located at " .. tostring(t.position))
@@ -122,7 +122,7 @@ properties:
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
       ```lua
       self.Update:Connect(function()
       print("This frame took " .. Time.deltaTime .. "seconds")
@@ -137,7 +137,7 @@ properties:
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
       ```lua
       self.LateUpdate:Connect(function()
       print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
@@ -150,7 +150,7 @@ properties:
       [Unity's Documentation here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.FixedUpdate.html)
     description:
     is_static: false
-    code_samples:
+    code_samples: |
       ```lua
       self.FixedUpdate:Connect(function()
       print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
@@ -165,7 +165,7 @@ properties:
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
       ```lua
       self.Start:Connect(function()
       print("I started. This is still the first frame I am alive!")
