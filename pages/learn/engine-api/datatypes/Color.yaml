@@ -1,14 +1,18 @@
 name: Color
 type: datatypes
 summary: |
-  The Color datatype in Unity embodies the concept of color within a digital environment. It does so by representing colors in terms of their individual red, green, blue, and alpha (transparency) components. Each of these ranges from 0 to 1, where 0 indicates none of that component and 1 signifies full intensity. For instance, a fully red color will have an 'r' property of 1 and 'g', 'b', 'a' properties of 0. Similarly, colors can be mixed to create various shades and hues. Additionally, an 'a' (or alpha) property of 1 means the color is completely opaque, while an 'a' property of 0 means it is entirely transparent. Unity's Color datatype is a crucial tool anytime you want to define or manipulate colors in your game, for example when changing the color of an object, adjusting light colors, or altering pixel colors within a texture. To explore its functionalities in much more detail, refer to the [official Unity Color documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.html).
+  Unity's Color datatype represents an RGBA (Red Green Blue Alpha) color. Colors in Unity are represented with numbers between 0 and 1, where 1 signifies the maximum intensity of a particular color component. RGB components define the color while the Alpha component defines the transparency. 
+
+  Color class in Unity provides various functions and predefined colors which ranges from common colors like red, green, blue, white, black, to more specific colors such as yellow, cyan, magenta, gray, etc. Further it also provides functionalities such as linear interpolation between two colors, conversion from/to HSV color model and generating a grayscale color, making it a powerful tool for any color manipulation tasks within Unity game development.
+
+  For more information about the Color class, please refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.html).
 description:
 code_samples:
 inherits:
 constructors:
   - name: new
     summary: |
-      The 'new' constructor creates a new Color by defining the red, green, and blue (RGB) channels. You can dive into the [Unity Color.new documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-ctor.html) for further details.
+      Creates a new Color object with the provided red, green, blue, and optional alpha values. These values range from 0 to 1, where 0 represents no color and 1 represents full intensity of the color. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-ctor.html) for more detailed explanation.
     description:
     is_static: false
     code_samples:
@@ -27,68 +31,145 @@ constructors:
         summary: The blue component of the color.
     returns:
       - type: DataType.Color
-        summary: Returns a new Color with the given red, green, and blue components.
+        summary: Returns a new Color object with the specified red, green, and blue components.
 properties:
   - name: grayscale
     summary: |
-      The 'grayscale' property calculates the grayscale equivalent of the color. It considers the color's perceptual luminance. To know more, check the [Unity Color.grayscale documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html).
+      The 'grayscale' property provides the grayscale value of the color based on the intensities of the red, green, and blue components. You can find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: linear
     summary: |
-      The 'linear' property returns a linear (gamma-free) version of the color. The color's components are assumed to be in the Gamma space, so the alpha value remains the same. Head to the [Unity Color.linear documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html) for more insights.
+      The 'linear' property returns the linear (gamma space) equivalent of this color object. Game graphics are usually rendered in a color space known as gamma space, but many computations are done in linear space, thus this property can be useful when such conversions are necessary. Find more details in [Unity's Color.linear documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: gamma
     summary: |
-      The 'gamma' property gets a gamma-adjusted version of the color, allowing for correct rendering on devices with different gamma values. The alpha value is not changed. To learn more, refer to the [Unity Color.gamma documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html).
+      The 'gamma' property provides the gamma space equivalent of this color object. When the computations are done in linear space, this conversion can be useful to switch back to Gamma space for rendering. More insights can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: maxColorComponent
     summary: |
-      The `maxColorComponent' property retrieves the maximum of the color's red, green, and blue components. It is useful when wanting to know the 'brightness' or the most dominant channel of the color. You can learn more on the [Unity Color.maxColorComponent documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html).
+      The 'maxColorComponent' property returns the maximum RGB component in the color. It can be useful when you want to identify the dominant color component. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html) for more information.
     description:
     is_static: false
     code_samples:
     type: number
   - name: r
     summary: |
-      The 'r' property represents the red component of the color. Reducing its value would make the color more cyan, while incrementing it would make the color more red. Refer to the [Unity Color.r documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-r.html) for additional details.
+      The 'r' property lets you access or change the red component value of the color. Check out Unity's [Color.r documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-r.html) for more information.
     description:
     is_static: false
     code_samples:
     type: number
   - name: g
     summary: |
-      The 'g' property corresponds to the green component of the color. Increase its value for a more green color while reducing it would give a more magenta color. Further information can be found in the [Unity Color.g documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-g.html).
+      The 'g' property allows you to access or alter the green component of the color. Refer to the [Unity's Color.g documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-g.html) for more insights.
     description:
     is_static: false
     code_samples:
     type: number
   - name: b
     summary: |
-      The 'b' property holds the blue component of the color. Increasing its value would make the color more blue, whereas decreasing it would turn it more yellow. To know more, check out the [Unity Color.b documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-b.html).
+      The 'b' property serves to access or modify the blue component. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-b.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: a
     summary: |
-      The 'a' property refers to the alpha component of the color, mainly used for transparency levels where 1 means fully opaque and 0 means fully transparent. For more details, please visit the [Unity Color.a documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-a.html).
+      The 'a' property gives access to the alpha (transparency) component of the color where '1' is fully opaque and '0' is fully transparent. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-a.html).
     description:
     is_static: false
     code_samples:
     type: number
+  - name: red
+    summary: |
+      The 'red' property provides a predefined Color object with red component set to maximum and all other components set to zero. It's a static property, accessible directly from the class. See the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-red.html) for further details.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: green
+    summary: |
+      The 'green' property gives a predefined color object with green component at maximum while red, blue, and alpha components at zero. As a static property, it can be accessed directly from the class. You can find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-green.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: blue
+    summary: |
+      The 'blue' property returns a predefined color object with blue component set to maximum and all other components set to zero. One major use of this property can be for quick access to the pure blue color. See the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-blue.html) for further details.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: white
+    summary: |
+      The 'white' property provides a predefined color object with all components set to maximum, producing white color. It is a static property accessible directly from the class. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-white.html) for more insights.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: black
+    summary: |
+      The 'black' property represents a predefined black color object with all color components set to zero. As a static property, it can be accessed directly from the class. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-black.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: yellow
+    summary: |
+      The 'yellow' property offers a predefined yellow color object, offering a quick way to use yellow in your game. It is a static property, accessible directly from the class. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-yellow.html) for more details.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: cyan
+    summary: |
+      The 'cyan' property represents a predefined cyan color object. It provides a quick and convenient way to use cyan in your game. More information can be found from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-cyan.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: magenta
+    summary: |
+      The 'magenta' property provides a predefined magenta color object. It allows quick access to the magenta color. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-magenta.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: gray
+    summary: |
+      The 'gray' property returns a predefined gray color object, allowing for quick utilization of gray in a game scene or interface. As a static property, it's accessible directly from the class. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gray.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: grey
+    summary: |
+      The 'grey' property provides a predefined grey color object. As a static property, it can be accessed directly from the class. This makes it convenient to use grey color quickly and easily. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grey.html) for more information.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
+  - name: clear
+    summary: |
+      The 'clear' property gives access to a predefined color object with all components set to zero, resulting in a fully transparent color. Quick access to a transparent color can provide utility in many situations. See the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-clear.html) for further insights.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Color
 methods:
   - name: Lerp
     summary: |
-      The 'Lerp' (or Linear Interpolation) method blends between two colors by a t factor which goes from 0 to 1. At t=0, it returns the first color, at t=1, it returns the second color. In-between, you get a blend of both. For more details, check out the [Unity Color.Lerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.Lerp.html).
+      The 'Lerp' method calculates and returns a color that is a certain percentage (defined by the third parameter) between two other colors. This can be used to smoothly transition between two colors. Check out Unity's [Color.Lerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.Lerp.html) for more detailed explanation.
     description:
     is_static: true
     code_samples:
@@ -96,21 +177,21 @@ methods:
       - name: a
         type: DataType.Color
         default:
-        summary: The first color to blend.
+        summary: The color to transition from.
       - name: b
         type: DataType.Color
         default:
-        summary: The second color to blend.
+        summary: The color to transition into.
       - name: t
         type: number
         default:
-        summary: The blend factor.
+        summary: The percentage of the transition. 0 represents color 'a' and 1 represents color 'b'.
     returns:
       - type: DataType.Color
-        summary: Returns a new color that is a blend of color a and b.
+        summary: Returns the interpolated color.
   - name: LerpUnclamped
     summary: |
-      The 'LerpUnclamped' method is similar to Lerp, but here the t parameter is not clamped to the range [0, 1]. Refer to the [Unity Color.LerpUnclamped documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.LerpUnclamped.html) for more understanding.
+      The 'LerpUnclamped' method works similarly to 'Lerp', but without clamping the percentage (third parameter) between 0 and 1. This allows for extrapolation beyond the two original colors. For more insights, refer to Unity's [official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.LerpUnclamped.html).
     description:
     is_static: true
     code_samples:
@@ -118,21 +199,21 @@ methods:
       - name: a
         type: DataType.Color
         default:
-        summary: The first color to blend.
+        summary: The color to transition from.
       - name: b
         type: DataType.Color
         default:
-        summary: The second color to blend.
+        summary: The color to transition into.
       - name: t
         type: number
         default:
-        summary: The blend factor.
+        summary: The percentage of the transition.
     returns:
       - type: DataType.Color
-        summary: Returns a new color that is a blend of color a and b.
+        summary: Returns the interpolated or extrapolated color.
   - name: HSVToRGB
     summary: |
-      The 'HSVToRGB' method converts a color from Hue-Saturation-Value (HSV) space to Red-Green-Blue (RGB) space. This can be useful when you want to create a color wheel or similar visual representations. The [Unity Color.HSVToRGB documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.HSVToRGB.html) provides more information.
+      The 'HSVToRGB' method is used to convert a color from HSV (Hue, Saturation, Value) color model to RGB (Red, Green, Blue) model. This function can be quite useful whenever you're dealing with HSV colors and need to convert them for use in RGB format. Check out Unity's [official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.HSVToRGB.html) for more details.
     description:
     is_static: true
     code_samples:
@@ -140,22 +221,22 @@ methods:
       - name: H
         type: number
         default:
-        summary: The Hue component of the color.
+        summary: The Hue component of the color, ranges between 0 to 1.
       - name: S
         type: number
         default:
-        summary: The Saturation component of the color.
+        summary: The Saturation component of the color, ranges between 0 to 1.
       - name: V
         type: number
         default:
-        summary: The Value (brightness) component of the color.
+        summary: The Value component of the color, ranges between 0 to 1.
     returns:
       - type: DataType.Color
-        summary: Returns the RGB equivalent of the HSV color.
+        summary: Returns a Color object in RGB color space.
 math_operations:
   - operation: '=='
     summary: |
-      The '==' operation checks whether two color values (RGB and alpha) are equal or not. Read more about this in the [Unity Color.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_eq.html).
+      The '==' operator performs an equality check between two Color objects. If all corresponding RGBA components are equal, the colors are considered equal. You can find more details at [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_eq.html).
     description:
     type_a: Color
     type_b: Color
@@ -163,7 +244,7 @@ math_operations:
     code_samples:
   - operation: '/'
     summary: |
-      The '/' operator divides each RGB and Alpha component of a color by a scalar number. Refer to the [Unity Color.operator_divide documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_divide.html) for more details.
+      The '/' operator performs a division operation either between two Color objects or a Color and a scalar (a single number). Each component of the color is divided separately. For more information, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_divide.html).
     description:
     type_a: Color
     type_b: number
@@ -171,15 +252,15 @@ math_operations:
     code_samples:
   - operation: '*'
     summary: |
-      The '*' operator multiplies each RGB and alpha component of a color by a scalar number. It can also calculate the product of two colors on a component-wise basis. Refer to the [Unity Color.operator_multiply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html) to understand it better.
+      The '*' operator multiplies a Color and a scalar. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html) for more details.
     description:
-    type_a: number
-    type_b: Color
+    type_a: Color
+    type_b: number
     return_type: Color
     code_samples:
   - operation: '-'
     summary: |
-      The '-' operator subtracts the second color from the first color on a component-wise basis. To learn more, read the [Unity Color.operator_subtract documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_subtract.html).
+      The '-' operator subtracts two Color objects. Each component of the ensuing color is the result of the subtraction of the corresponding components of the minuend and subtrahend. More details are available in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_subtract.html).
     description:
     type_a: Color
     type_b: Color
@@ -187,7 +268,7 @@ math_operations:
     code_samples:
   - operation: '+'
     summary: |
-      The '+' operator adds two colors together on a component-wise basis - separately adding the red, green, blue, and alpha values of each color. You can find more details in the [Unity Color.operator_add documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_add.html).
+      The '+' operator adds two Color objects. The resulting color comprises the sum of the corresponding components from the two colors being added. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_add.html) for more detailed explanation.
     description:
     type_a: Color
     type_b: Color

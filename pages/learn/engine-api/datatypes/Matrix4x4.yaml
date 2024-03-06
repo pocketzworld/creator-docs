@@ -187,7 +187,21 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods:
+  - name: zero
+    summary: |
+      The 'zero' property represents a Matrix4x4 where all elements are set to zero. This essentially signifies a "null" transformation, meaning no change will take place on applying this matrix to a vector or a point. See the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-zero.html) for more information on how a zero matrix can be used.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: identity
+    summary: |
+      The 'identity' property represents an Identity Matrix4x4. An identity matrix, when used to transform a point or a vector, leaves it unaltered, just like the number '1' in multiplication. It plays a crucial role in matrix operations and can be very useful for resetting transformations. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-identity.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Matrix4x4
+methods: 
   - name: ValidTRS
     summary: |
       The 'ValidTRS' method checks if a matrix is a valid transformation matrix. It returns a boolean indicating whether the matrix holds valid translation, rotation, and scale values. More substance regarding this can be found in [Unity's Matrix4x4.ValidTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.ValidTRS.html).

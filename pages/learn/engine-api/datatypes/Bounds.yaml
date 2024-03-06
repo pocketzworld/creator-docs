@@ -121,6 +121,20 @@ methods:
     returns:
       - type: boolean
         summary: Returns true if the bounding boxes intersect, false otherwise.
+  - name: IntersectRay
+    summary: |
+      The 'IntersectRay' method is particularly useful in determining if a specified Ray intersects the bounds. This can prove vital in various game scenarios for interaction detection such as determining if a projectile is in range of an object or if a click or tap in screen space intersects a game object. It evaluates the intersection and returns true if the Ray intersects with the bounds, otherwise it returns false. More information about this can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.IntersectRay.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        default:
+        summary: The Ray instance against which the intersection is to be checked.
+    returns:
+      - type: boolean
+        summary: Returns true if the Ray intersects with the bounds, otherwise false.
   - name: Contains
     summary: |
       The 'Contains' method is used to check whether a specific point is within the current bounding box. To get a deeper understanding, you can check the [Unity Bounds.Contains documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Contains.html).
