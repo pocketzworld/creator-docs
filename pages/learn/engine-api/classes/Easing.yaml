@@ -1,0 +1,173 @@
+name: Easing
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: EaseQuadratic
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseCubic
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseBack
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseBounce
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseElastic
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseSine
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseCircle
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseExponential
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: EaseCubicBezier
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: t
+        type: number
+        default:
+        summary:
+      - name: p
+        type: DataType.Vector4
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+math_operations: 

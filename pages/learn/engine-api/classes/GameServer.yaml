@@ -1,0 +1,39 @@
+name: GameServer
+type: classes
+summary: |
+  In Highrise's scripting environment, the GameServer class acts as the high-level game context the script is running remotely. Any server-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Server' or 'Client and Server' can access server - with 'Client and Server' scripts requiring you to check if `server` is not nil (or `client` is nil).
+
+  Any high-level server events and interactions will be found in this type.
+description:
+tags:
+  - ServerOnly
+code_samples: |
+  ```lua
+    server.PlayerConnected:Connect(function(player)
+      print("Another player has connected named " .. player.name)
+    end)
+  ```
+inherits:
+constructors:
+properties:
+  - name: PlayerConnected
+    summary: |
+      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player when in a Class.GameClient side script. 
+    description:
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples:
+    returns:
+    type: Class.Event
+  - name: PlayerDisconnected
+    summary: |
+      An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
+    description:
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples:
+    type: Class.Event
+methods:
+math_operations:

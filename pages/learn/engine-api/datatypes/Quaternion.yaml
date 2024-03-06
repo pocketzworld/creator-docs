@@ -1,7 +1,13 @@
 name: Quaternion
 type: datatypes
 summary: |
-  The Quaternion datatype in Unity represents rotation in three-dimensional space, avoiding the problem of gimbal lock. Quaternions consist of a vector (x,y,z) and a scalar (w) part offering a compact way to encode spatial transformations. They are very efficient for analyzing changes in orientation and angle of rotation. But they can be a bit more challenging to visualize or reason about compared to Euler angles or matrices. Check out the [official Unity Quaternion documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html) for a deep understanding. 
+  Imagine you're playing a 3D game and you have full control to rotate your character or vehicle in any direction. In Unity, the feature that enables this seamless 3D rotation is powered by a datatype known as Quaternion.
+
+  A Quaternion, consisting of four parts—x, y, z, and another one called "w"—is able to represent rotation and direction in 3D space. Think of x, y, and z as the direction and w as the degree of rotation around that direction. 
+
+  Quaternions are especially handy because they avoid an issue known as "gimbal lock," which can limit an object's freedom of rotation. Understanding Quaternions may feel a bit challenging at first, but they're incredibly powerful for 3D movement and rotation, making them a core part of 3D game development.
+
+  For a deeper dive, the [official Unity Quaternion documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html) provides comprehensive insights. 
 description:
 code_samples:
 inherits:
@@ -73,6 +79,20 @@ properties:
       The 'w' property represents the w (scalar) component of the Quaternion. You can read more about it in the [Unity Quaternion.w documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-w.html).
     description:
     is_static: false
+    code_samples:
+    type: number
+  - name: identity
+    summary: |
+      The 'identity' property represents a Quaternion that corresponds to "no rotation" - it effectively represents an identity rotation operation. In other words, the object will not be rotated at all. This is extremely valuable when you need to reset an object's rotation. For a deeper understanding, refer to the [official Unity documentation on Quaternion.identity](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-identity.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Quaternion
+  - name: kEpsilon
+    summary: |
+      Similar to Vector2 and Vector3, Quaternions in Unity have a 'kEpsilon' property that represents a small number greater than zero. This is useful for comparing Quaternion components with small tolerances, commonly used for floating-point precision issues. More information can be accessed from the [official Unity Quaternion.kEpsilon documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-kEpsilon.html).
+    description:
+    is_static: true
     code_samples:
     type: number
 methods:

@@ -1,0 +1,77 @@
+name: Collision
+type: classes
+summary: |
+  [Unity's Collision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: impulse
+    summary: |
+      [Unity's Collision.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-impulse.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: relativeVelocity
+    summary: |
+      [Unity's Collision.relativeVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-relativeVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: rigidbody
+    summary: |
+      [Unity's Collision.rigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-rigidbody.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Rigidbody
+  - name: body
+    summary: |
+      [Unity's Collision.body Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-body.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Component
+  - name: collider
+    summary: |
+      [Unity's Collision.collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-collider.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Collider
+  - name: transform
+    summary: |
+      [Unity's Collision.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-transform.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+  - name: gameObject
+    summary: |
+      [Unity's Collision.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-gameObject.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.GameObject
+  - name: contactCount
+    summary: |
+      [Unity's Collision.contactCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-contactCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: ToString
+    summary: |
+      [Unity's Collision.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+math_operations: 

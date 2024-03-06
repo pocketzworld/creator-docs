@@ -10,6 +10,8 @@ description:
 code_samples:
 inherits:
   - Class.Object
+tags:
+  - ServerAndClient
 constructors:
   - name: new
     summary: |
@@ -27,6 +29,8 @@ properties:
       This property is used to access the Transform of the GameObject. The Transform controls the position, rotation, and scale of the GameObject in the scene. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-transform.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.Transform
   - name: layer
@@ -89,6 +93,38 @@ methods:
     returns:
       - type: Class.Component
         summary: Returns the requested component attached to the GameObject, if it exists.
+  - name: AddScript
+    summary: |
+      The `AddScript` method enables you to attach a new LuaScript to the GameObject during runtime. This allows the GameObject to exhibit the defined behaviors in the script and execute it immediately.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+    parameters:
+      - name: script
+        type: Class.LuaScript
+        default:
+        summary: The LuaScript to be attached to the GameObject.
+    returns:
+      - type: Class.Component
+        summary: Returns the Class.LuaBehaviour component that has been added to the GameObject hosting your script.
+  - name: FindGameObjectsWithTag
+    summary: |
+      The `FindGameObjectsWithTag` method returns all active GameObjects with the specified tag. It allows you the convenience of accessing multiple GameObjects at once based on their tags in a single method. For more information, refer to [Unity's GameObject.FindGameObjectsWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectsWithTag.html).
+    description:
+    is_static: true
+    tags:
+      - ServerAndClient
+    code_samples:
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: The tag to search GameObjects for.
+    returns:
+      - type: GameObject[]
+        summary: Returns an array of GameObjects tagged with the specified string.
   - name: GetComponentInChildren
     summary: |
       The `GetComponentInChildren` method is similar to `GetComponent`, but it also searches through all the GameObject's children to find the requested component. This can be helpful when dealing with complex structures like character rigs. Learn more from the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInChildren.html).
@@ -138,7 +174,45 @@ methods:
         summary: The type of the Component to be added.
     returns:
       - type: Class.Component
-        summary: Returns the newly added component.
+        summary: Returns the newly added component to the GameObject.
+  - name: GetComponentCount
+    summary: |
+      The `GetComponentCount` method allows you to get the total number of components attached to the GameObject. This can be useful when you want to know how many components a GameObject has for debugging or optimization purposes. To learn more, visit [Unity's GameObject.GetComponentCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentCount.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: number
+        summary: Returns the number of components attached to the GameObject.
+  - name: GetComponentAtIndex
+    summary: |
+      The `GetComponentAtIndex` method is used to access a specific component attached to the GameObject based on its index. This can be helpful when dealing with multiple components of the same type. For additional details, visit [Unity's GameObject.GetComponentAtIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentAtIndex.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary: The index of the Component to access.
+    returns:
+      - type: Class.Component
+        summary: Returns the component at the specified index.
+  - name: GetComponentIndex
+    summary: |
+      The `GetComponentIndex` method returns the index of a specific Component attached to the GameObject. This is useful when you need to know the order of components attached to the GameObject. More information can be found at [Unity's GameObject.GetComponentIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentIndex.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: component
+        type: Class.Component
+        default:
+        summary: The Component to find the index of.
+    returns:
+      - type: number
+        summary: Returns the index of the specified component if it exists on the GameObject, else -1.
   - name: SetActive
     summary: |
       The `SetActive` method is used for activating or deactivating a GameObject during runtime. An inactive GameObject will not render in the scene and its scripts will not run. For further details, refer to the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.SetActive.html).

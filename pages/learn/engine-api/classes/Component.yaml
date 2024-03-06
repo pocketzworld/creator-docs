@@ -1,7 +1,13 @@
 name: Component
 type: classes
 summary: |
-  A Component in Unity represents a piece of behavior or functionality that can be added to a GameObject. It's akin to the DNA of a GameObject, dictating its behavior and interactions in your game environment. From physics elements such as Colliders to rendering mechanisms like MeshRenderer and Camera, even to custom behavior scripts, Components encompass a vast spectrum of functionality. They are the fundamental building blocks that shape all Unity project development. For a more comprehensive understanding, check out the [official Unity documentation on Components](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.html).
+  Think of a Class.GameObject in Unity as an empty box. On its own, it can't do much. However, once you add Components to it, the GameObject becomes lively and capable of interacting with the virtual world you're building. Components are the essence of a GameObject, molding its characteristics and behaviors. They are the DNA of a GameObject, shaping how it interacts within the game environment.
+
+  There's a wide variety of Components that factor into different functionalities. For instance, physical components like Class.Collider that allow GameObjects to physically interact with the environment or other GameObjects. Rendering components such as Class.MeshRenderer and Class.Camera are vital as they provide your GameObject form and control how the player views the game world.
+
+  Adding a Lua script to your GameObject makes it a Component known as a Class.LuaBehaviour. These scripts offer immense creativity, enabling your GameObject to behave in unique ways, from playing animations to responding to inputs or interacting with other GameObjects.
+
+  In summary, Components convert static GameObjects into interactive, dynamic game elements. They're the cornerstone of Unity project development, making your game world immersive and engaging. For a deeper understanding, check out the [official Unity documentation on Components](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.html).
 description:
 code_samples:
 inherits:
@@ -13,6 +19,8 @@ properties:
       The 'transform' property gives you a handle to the Transform component of the GameObject to which this component is attached. The Transform component controls the position, rotation, and scale of a GameObject in the scene. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html) for more information.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.Transform
   - name: gameObject
@@ -20,6 +28,8 @@ properties:
       The 'gameObject' property allows you to access the GameObject that this component is attached to. Many operations in Unity involve manipulating GameObjects, often via the components attached to them. For more details, refer to the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.GameObject
   - name: tag

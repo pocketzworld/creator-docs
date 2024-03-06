@@ -60,7 +60,77 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods:
+  - name: zero
+    summary: |
+      The 'zero' property generates a Vector2 instance with both its components (x and y) set to zero. This represents the origin in a 2D space or can indicate no movement or rotation. For in-depth understanding, refer to [Unity's Vector2.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-zero.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: one
+    summary: |
+      The 'one' property provides a new Vector2 instance with both x and y components set to 1. This is particularly handy when needing a normalized Vector2 that points diagonally in a 2D plane. Check out [Unity's Vector2.one Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-one.html) for more insights.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: up
+    summary: |
+      The 'up' property generates a new Vector2 instance that points upwards (the positive y direction). This property can be especially useful when needing to specify an 'upwards' direction in the 2D world. For further details, refer to [Unity's Vector2.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-up.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: down
+    summary: |
+      The 'down' property provides a new Vector2 instance that points downwards (the negative y direction). It is mostly used when there is a need to specify a 'downwards' direction in the 2D world. More details can be found in [Unity's Vector2.down Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-down.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: left
+    summary: |
+      The 'left' property returns a Vector2 instance that points to the left (the negative x direction). Mostly used when you need to point or move objects in the 'leftwards' direction in the 2D scene. You can get more information from [Unity's Vector2.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-left.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: right
+    summary: |
+      The 'right' property lends you a Vector2 that points towards the right (the positive x direction). It is used often when you want to point or move objects in the 'rightwards' direction in the 2D space. For more specifics, check the [Unity's Vector2.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-right.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: positiveInfinity
+    summary: |
+      The 'positiveInfinity' property delivers a Vector2 with both x and y components set to positive infinity. This property is handy when you need a Vector2 with the largest possible value. Visit [Unity's Vector2.positiveInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-positiveInfinity.html) for more insights.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: negativeInfinity
+    summary: |
+      The 'negativeInfinity' property affords a Vector2 with both x and y components set to negative infinity, providing the smallest possible Vector2 value. More information is available at [Unity's Vector2.negativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-negativeInfinity.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: kEpsilon
+    summary: |
+      The 'kEpsilon' property holds a very small positive number bigger than zero. While dealing with Vector2s, it is generally used to check if its components are approximately equal to zero, considering the minute errors due to floating point precision. To delve deeper, check [Unity's Vector2.kEpsilon Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-kEpsilon.html).
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: kEpsilonNormalSqrt
+    summary: |
+      The 'kEpsilonNormalSqrt' property contains a minute, positive number primarily used in Vector2 computations that need a square root operation, representing an insignificant threshold value when comparing Vector2 magnitudes. More details can be found in [Unity's Vector2.kEpsilonNormalSqrt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-kEpsilonNormalSqrt.html).
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
   - name: Set
     summary: |
       The 'Set' method allows you to change the x and y components of the Vector2 at once. It's a quicker alternative than setting the 'x' and 'y' components individually. For its usage and further details, you can check the [Unity's Vector2.Set documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Set.html).

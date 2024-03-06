@@ -1,7 +1,13 @@
 name: Transform
 type: classes
 summary: |
-  The Transform class in Unity is a foundational component that all GameObjects in your game will have. It is used to store and manipulate the position, rotation and scale of your objects in the 3D space, which are fundamental parameters for 3D environments. Every GameObject has a Transform component attached, and it cannot be removed. To precisely understand how to best use Transform in your game, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.html).
+  The 'Transform' class in Unity is the invisible puppet master that dictates where and how GameObjects exist within the game's spatial dimension. It's a control hub for manipulating the position, rotation, and scale of GameObjects, and where they fit into the game scene's hierarchy.
+  
+  Think of GameObjects as characters on a theatre stage - While components like Mesh and Material determine what the characters look like, 'Transform' is the stage director, instructing them where to be, which way to face, and how large their presence is. The position of a GameObject sets its location in 3D space, the rotation controls the direction the object is facing, and the scale dictates the size of the GameObject. Including local and global space settings, 'Transform' caters for both simple and complex movements, rotations, and scaling.
+  
+  Not just limited to single GameObjects, 'Transform' also enables hierarchy settings for GameObject relationships, like setting one GameObject as the child of another. These relationships form a tree-like hierarchy, useful for establishing parent-child associations, managing grouped objects, or creating complex GameObject structures.
+  
+  The positioning and movement of game elements are core to creating an interactive and engaging gaming experience. The 'Transform' class is therefore the lynchpin to most scripting operations in Unity. To explore more about 'Transform' and its effective use in Unity, the [official Unity Transform documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.html) is a great learning material.
 description:
 code_samples:
 inherits:
@@ -13,6 +19,8 @@ properties:
       This property represents the position of the GameObject in world space coordinates. It can be used to get or set the current position of your GameObject. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html).
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: DataType.Vector3
   - name: localPosition
@@ -27,6 +35,8 @@ properties:
       The 'eulerAngles' property represents the rotation of the GameObject in degrees around the x, y, and z axes. The angles are measured in a specific order: z, x, and then y. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html) to learn more.
     description:
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: DataType.Vector3
   - name: localEulerAngles
@@ -141,7 +151,21 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods:
+methods: 
+  - name: LookAt
+    summary: |
+      The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: targetPos
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: SetParent
     summary: |
       The 'SetParent' method is used to set the parent of the GameObject's transform. It's handy when you need to dynamically create parent-child relationships between GameObjects. For further understanding, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html).
@@ -210,25 +234,7 @@ methods:
       - name: angle
         type: number
         default:
-        summary: The angle by which the GameObject will rotate.
-    returns:
-      - type: void
         summary:
-  - name: LookAt
-    summary: |
-      The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html).
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: target
-        type: Class.Transform
-        default:
-        summary: The target Transform that the GameObject has to face.
-      - name: worldUp
-        type: DataType.Vector3
-        default:
-        summary: The Vector3 that defines the up direction.
     returns:
       - type: void
         summary:

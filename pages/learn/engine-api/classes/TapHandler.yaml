@@ -1,15 +1,16 @@
 name: TapHandler
 type: classes
 summary: |
-  A Behaviour that fires a LuaEvent when the attached Class.GameObject's Collider(s) are tapped.
+  A Behaviour that fires a Event when the attached Class.GameObject's Collider(s) are tapped.
 description:
 code_samples:
-inherits:
-constructors:
-properties:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
   - name: Tapped
     summary: |
-      The LuaEvent that is fired when the object is tapped. This requires the Class.GameObject to have a TapHandler attached to either a parent of or the same object as the Collider.
+      The Event that is fired when the object is tapped. This requires the Class.GameObject to have a TapHandler attached to either a parent of or the same object as the Collider.
     description:
     is_static: false
     code_samples: |
@@ -18,6 +19,13 @@ properties:
           print("Tapped")
       end)
       ```
-    type: LuaEvent
+    type: Event
+  - name: HasTapped
+    summary: |
+      'HasTapped' is a boolean property that indicates whether the attached Collider has been tapped. It returns either true or false and can be used to control specific reactions or game mechanics based on user interaction.
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
 methods:
 math_operations:

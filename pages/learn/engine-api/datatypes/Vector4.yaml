@@ -82,7 +82,42 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods:
+  - name: zero
+    summary: |
+      This property represents a Vector4 where all the components (x, y, z, w) are zero. Useful for certain operations or as an initial state.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector4
+  - name: one
+    summary: |
+      This property represents a Vector4 where all the components (x, y, z, w) are set to one. It can be useful when you need to perform certain mathematical operations or as a normalized state.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector4
+  - name: positiveInfinity
+    summary: |
+      This property gives you a Vector4 where all components (x, y, z, w) are set to positive infinity. That could be handy when setting maximum limits or dealing with ranges.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector4
+  - name: negativeInfinity
+    summary: |
+      This property provides a Vector4 where all components (x, y, z, w) are set to negative infinity. This is often used when setting lower limits or handling ranges.
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector4
+  - name: kEpsilon
+    summary: |
+      This property stands for a tiny positive number (approximately 1E-05) closer to zero. It's typically used to handle delicate calculations relating to precision or avoid division by zero errors.
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
   - name: Set
     summary: |
       The 'Set' method allows you to set the 'x', 'y', 'z', and 'w' components of the Vector4. This can save effort and improve readability when compared with setting these components individually. For more details, visit [Unity's Vector4.Set documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Set.html).

@@ -1,7 +1,11 @@
 name: UIView
 type: classes
 summary: |
-  The UIView class is a fundamental component in Highrise that defines and manages interface elements in a game's interface. Part of Highrise's VisualElement class, UIView provides enhanced control over the manipulation and display of UI elements.
+  To build an engaging game interface in Highrise, the UIView class surfaces as a crucial building block. It is a derivation of Highrise's VisualElement class, specializing in defining, controlling, and managing varied interface elements. A UIView links visual elements, controls their display properties, and manages their interactions, bringing your static game interface to life.
+
+  Think of UIViews as artistic canvases or stages on which the game's UI elements perform. They contribute to creating an engaging gaming environment by managing visibility, checking operational status, handling disposal states, and more. The power of UIView lies in its versatility. From handling aesthetic elements, controlling visibility, to executing asynchronous operations, UIViews play a central role in shaping your game's visual narrative.
+
+  Diving deep into this section enriches your understanding of Highrise's UI management and assists you to create uniquely interactive interface elements, thus enhancing the overall player experience.
 description:
 code_samples:
 inherits:
@@ -9,61 +13,68 @@ inherits:
 constructors:
   - name: new
     summary: |
-      Creates a new UIView instance. 
+      This operation creates a new UIView instance enabling customization of a game's interface. 
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: Class.UIView
-        summary: A new UIView object.
+        summary: Returns a newly created instance of UIView.
 properties:
   - name: IsDisposed
     summary: |
-      Indicates whether the UIView has been disposed.
+      A bool value indicating whether the UIView is disposed or not. When the UIView has been disposed, it's no longer functional.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: SortOrder
     summary: |
-      Represents the UIView's order in the visual hierarchy.
+      This property expresses the UIView's position in the visual hierarchy. The higher the value, the higher the UIView's priority.
     description:
     is_static: false
     code_samples:
     type: number
   - name: IsBound
     summary: |
-      Indicates if the UIView has been bound to a parent.
+      A bool value indicative of whether the UIView is bound to a parent VisualElement. Bound UIViews are linked to a parental hierarchy.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsDisplayed
     summary: |
-      Denotes if the UIView is currently visible on the screen.
+      A bool value showing if the UIView is currently visible on the screen. A true value indicates that the UIView is displayed; false implies it's not shown.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsRunningAsync
     summary: |
-      Determines if the UIView is currently running an asynchronous operation.
+      A bool value determining if the UIView is executing an asynchronous operation.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsStale
     summary: |
-      Indicates if the UIView has been marked as stale.
+      A bool value indicating whether the UIView's data is out-of-date or irrelevant and needs to be updated.
     description:
     is_static: false
     code_samples:
     type: boolean
+  - name: ModalBlockerContainer
+    summary: |
+      A static VisualElement acting as a container for the object that is currently preventing user interactions with the game interface.
+    description:
+    is_static: true
+    code_samples:
+    type: Class.VisualElement
 methods:
   - name: Reset
     summary: |
-      Restores all UIView properties to their default values.
+      This method resets all UIView properties to their initial default values, enabling a clean start for UIView manipulation.
     description:
     is_static: false
     code_samples:
@@ -73,7 +84,7 @@ methods:
         summary:
   - name: Dispose
     summary: |
-      Releases all resources used by the UIView.
+      This method systematically releases all resources used by the UIView, freeing up memory and improving overall game performance.
     description:
     is_static: false
     code_samples:
@@ -83,7 +94,7 @@ methods:
         summary:
   - name: BindHierarchy
     summary: |
-      Connects the UIView to a parent in the visual hierarchy.
+      This static method links or bounds the UIView to a parent VisualElement in the visual hierarchy, creating a hierarchical structure.
     description:
     is_static: true
     code_samples:
@@ -91,13 +102,13 @@ methods:
       - name: element
         type: Class.VisualElement
         default:
-        summary: The VisualElement parent to bind the UIView to.
+        summary: The parent VisualElement to which the UIView should be bound.
     returns:
       - type: void
         summary:
   - name: DisposeChildren
     summary: |
-      Disposes all children of the specified VisualElement.
+      This static method disposes of all child VisualElements of a specified parent VisualElement, efficiently managing resources and preventing memory leaks.
     description:
     is_static: true
     code_samples:
@@ -105,8 +116,8 @@ methods:
       - name: element
         type: Class.VisualElement
         default:
-        summary: The VisualElement whose children should be disposed.
+        summary: The parent VisualElement whose child elements need to be disposed of.
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:
