@@ -114,14 +114,4 @@ methods:
     returns:
       - type: Class.AudioClip
         summary: Returns a new instance of AudioClip.
-  - name: ToString
-    summary: |
-      The 'ToString' method is used to retrieve a human-readable string that represents the current AudioClip. You can get more details from [Unity's AudioClip.ToString documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip.ToString.html).
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary: Returns a string that represents the current AudioClip.
 math_operations:

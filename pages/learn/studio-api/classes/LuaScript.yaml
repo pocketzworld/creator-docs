@@ -30,14 +30,4 @@ properties:
     code_samples:
     type: string
 methods:
-  - name: ToString
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary:
 math_operations:

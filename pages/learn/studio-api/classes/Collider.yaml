@@ -98,14 +98,4 @@ methods:
     returns:
       - type: DataType.Vector3
         summary: Returns the point on the Collider's Bounds closest to the 'position'.
-  - name: ToString
-    summary: |
-      The 'ToString' method provides a string representation of the Collider. It can be useful for debugging. You can refer to the [Unity's Collider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ToString.html) for a deeper grasp of this method.
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary: Returns a string representing the Collider.
 math_operations:

@@ -5,7 +5,7 @@ summary: |
 
   It keeps track of various details of a pinch or drag gesture such as the change in position, start position, current position, direction, distance covered in the pinch, the scaling factor, and whether a pinch is currently happening. All these properties provide critical information to accurately detect and process pinch gestures for accomplishing sophisticated touch interactions.
 
-  It is primarily used in the Class.Input class an the PinchOrDragBegan event's parameter.
+  It is primarily used in the Service.Input class an the PinchOrDragBegan event's parameter.
 description:
 code_samples:
 inherits:
