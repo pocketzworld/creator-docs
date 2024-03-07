@@ -1,0 +1,58 @@
+name: Globals
+type: globals
+summary: |
+
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: self
+    summary: |
+      The 'self' property is used to access the object's instance. This is always the owning script of the object as a Class.LuaBehaviour. This is the primary way to get many of the core Unity MonoBehaviour methods and properties like `self.gameObject`, `self.Update` and `self.OnTriggerEnter`. It is highly recommended to familiarize yourself with the Class.LuaBehaviour documentation to understand how to use the 'self' property.
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: Class.LuaBehaviour
+  - name: client
+    summary: |
+      The 'client' property is used to access the current client instance. This is useful for when you want to access the client's information like the `client.localPlayer` property or `client.PlayerConnected` event. It is recommended to read and understand the Class.Client documentation to understand the Class.GameClient documentation.
+    code_samples:
+    type: Class.GameClient
+  - name: server
+    summary: |
+      The 'server' property is used to access the current server instance. This is useful for when you want to access the client's information like the `client.localPlayer` property or `client.PlayerConnected` event. It is recommended to read and understand the Class.Client documentation to understand the Class.GameClient documentation.
+    code_samples:
+    tags:
+      - ServerOnly
+    type: Class.GameClient
+methods:
+  - name: typeof
+    summary: |
+      Gets the string representation of the type of the object. This is useful for debugging and logging as well as learning about what types are being returned by complex methods.
+    tags:
+      - ServerAndClient
+    code_samples: |
+      ```lua
+        local v = Class.Vector3:New(1, 2, 3)
+        print(typeof(v)) -- prints "Vector3" instead of "userdata" or "(1, 2, 3)"
+      ```
+    parameters:
+    returns:
+      - type: string
+        summary: The Type of the object. In question.
+  - name: tostring
+    summary: |
+      Gets the string representation of the object if one has defined one. This is useful for debugging and logging.
+    tags:
+      - ServerAndClient
+    code_samples: |
+      ```lua
+        local v = Class.Vector3:New(1, 2, 3)
+        print(tostring(v)) -- prints "(1, 2, 3)" instead of "userdata" or "Vector3"
+      ```
+    parameters:
+    returns:
+      - type: string
+        summary:
+math_operations:
