@@ -1,7 +1,7 @@
 name: LuaBehaviour
 type: classes
 summary: |
-  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of JavaScript or C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to. 
+  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to. 
 description:
 code_samples:
 inherits:
