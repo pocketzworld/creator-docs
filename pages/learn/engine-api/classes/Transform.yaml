@@ -2,11 +2,11 @@ name: Transform
 type: classes
 summary: |
   The 'Transform' class in Unity is the invisible puppet master that dictates where and how GameObjects exist within the game's spatial dimension. It's a control hub for manipulating the position, rotation, and scale of GameObjects, and where they fit into the game scene's hierarchy.
-  
+
   Think of GameObjects as characters on a theatre stage - While components like Mesh and Material determine what the characters look like, 'Transform' is the stage director, instructing them where to be, which way to face, and how large their presence is. The position of a GameObject sets its location in 3D space, the rotation controls the direction the object is facing, and the scale dictates the size of the GameObject. Including local and global space settings, 'Transform' caters for both simple and complex movements, rotations, and scaling.
-  
+
   Not just limited to single GameObjects, 'Transform' also enables hierarchy settings for GameObject relationships, like setting one GameObject as the child of another. These relationships form a tree-like hierarchy, useful for establishing parent-child associations, managing grouped objects, or creating complex GameObject structures.
-  
+
   The positioning and movement of game elements are core to creating an interactive and engaging gaming experience. The 'Transform' class is therefore the lynchpin to most scripting operations in Unity. To explore more about 'Transform' and its effective use in Unity, the [official Unity Transform documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.html) is a great learning material.
 description:
 code_samples:
@@ -151,14 +151,14 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: LookAt
     summary: |
       The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: targetPos
         type: DataType.Vector3
         default:

@@ -165,7 +165,7 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
+methods:
   - name: Set
     summary: |
       The 'Set' method enables you to change the x, y, and z values of an existing Vector3 object. This is especially handy when you need to update all three components of the Vector3 simultaneously. More information is available on the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Set.html).
@@ -611,7 +611,7 @@ methods:
       - type: DataType.Vector3
         summary: A Vector3 that is composed of the largest components of the two Vector3s.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       This '==' operation checks for approximate equality between two Vector3s. Due to the limitations of floating point precision, two Vector3s are considered equal if the magnitude of their difference is less than a very small number. More details can be found in the [official Unity documentation on Vector3.operator_eq](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_eq.html).
     description:
@@ -619,7 +619,7 @@ math_operations:
     type_b: Vector3
     return_type: boolean
     code_samples:
-  - operation: '/'
+  - operation: "/"
     summary: |
       This '/' operation returns a new Vector3 that results from dividing each of the individual components of the original Vector3 by a specific number, effectively scaling it down. You can refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_divide.html) for further context.
     description:
@@ -627,7 +627,7 @@ math_operations:
     type_b: number
     return_type: Vector3
     code_samples:
-  - operation: '*'
+  - operation: "*"
     summary: |
       This binary '*' operation returns a new Vector3 whose components are each the result of multiplying the respective component of the original Vector3 by the input number. This operation effectively scales the Vector3. Consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_multiply.html) for more details.
     description:
@@ -635,7 +635,7 @@ math_operations:
     type_b: Vector3
     return_type: Vector3
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       This unary '-' operation results in a new Vector3 that is the mirror image of the original Vector3 across the origin of the coordinate system. It essentially negates each of the components (x, y, z) of the original Vector3.
     description:
@@ -643,7 +643,7 @@ math_operations:
     type_b:
     return_type: Vector3
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       This binary '-' operation generates a new Vector3 that results from subtracting each component in the second Vector3 from the corresponding component in the first Vector3. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_subtract.html) for more detailed information.
     description:
@@ -651,7 +651,7 @@ math_operations:
     type_b: Vector3
     return_type: Vector3
     code_samples:
-  - operation: '+'
+  - operation: "+"
     summary: |
       This '+' operation results in a new Vector3 whose components are each the sum of the corresponding components of two given Vector3s. This is analogous to moving along a certain direction by a certain distance. See more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_add.html).
     description:

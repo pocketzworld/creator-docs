@@ -4,10 +4,10 @@ summary: |
   [Unity's SphereCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SphereCollider.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Collider
-constructors: 
-properties: 
+constructors:
+properties:
   - name: center
     summary: |
       [Unity's SphereCollider.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SphereCollider-center.html)
@@ -22,15 +22,15 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: ToString
     summary: |
       [Unity's SphereCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SphereCollider.ToString.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

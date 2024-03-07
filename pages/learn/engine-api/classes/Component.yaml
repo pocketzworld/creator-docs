@@ -104,4 +104,4 @@ methods:
     returns:
       - type: boolean
         summary: Returns true if the GameObject's tag matches the specified string, false otherwise.
-math_operations: 
+math_operations:

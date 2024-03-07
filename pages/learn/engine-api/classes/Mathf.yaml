@@ -288,7 +288,7 @@ methods:
         summary: The power to which 'e' is raised
     returns:
       - type: float
-        summary: | 
+        summary: |
           The mathematical constant 'e' raised to the given power
   - name: Floor
     summary: |

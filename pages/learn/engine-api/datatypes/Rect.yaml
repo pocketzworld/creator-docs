@@ -4,15 +4,15 @@ summary: |
   [Unity's Rect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+constructors:
   - name: new
     summary: |
       [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
@@ -32,7 +32,7 @@ constructors:
     returns:
       - type: DataType.Rect
         summary:
-properties: 
+properties:
   - name: x
     summary: |
       [Unity's Rect.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-x.html)
@@ -131,14 +131,14 @@ properties:
     is_static: true
     code_samples:
     type: DataType.Rect
-methods: 
+methods:
   - name: Set
     summary: |
       [Unity's Rect.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Set.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
@@ -164,7 +164,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: point
         type: DataType.Vector2
         default:
@@ -178,7 +178,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: other
         type: DataType.Rect
         default:
@@ -192,7 +192,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: xmin
         type: number
         default:
@@ -218,7 +218,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: rectangle
         type: DataType.Rect
         default:
@@ -236,7 +236,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: rectangle
         type: DataType.Rect
         default:
@@ -248,8 +248,8 @@ methods:
     returns:
       - type: DataType.Vector2
         summary:
-math_operations: 
-  - operation: '=='
+math_operations:
+  - operation: "=="
     summary: |
       [Unity's Rect.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-operator_eq.html)
     description:

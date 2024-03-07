@@ -234,7 +234,7 @@ methods:
       - type: DataType.Color
         summary: Returns a Color object in RGB color space.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       The '==' operator performs an equality check between two Color objects. If all corresponding RGBA components are equal, the colors are considered equal. You can find more details at [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_eq.html).
     description:
@@ -242,7 +242,7 @@ math_operations:
     type_b: Color
     return_type: boolean
     code_samples:
-  - operation: '/'
+  - operation: "/"
     summary: |
       The '/' operator performs a division operation either between two Color objects or a Color and a scalar (a single number). Each component of the color is divided separately. For more information, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_divide.html).
     description:
@@ -250,7 +250,7 @@ math_operations:
     type_b: number
     return_type: Color
     code_samples:
-  - operation: '*'
+  - operation: "*"
     summary: |
       The '*' operator multiplies a Color and a scalar. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html) for more details.
     description:
@@ -258,7 +258,7 @@ math_operations:
     type_b: number
     return_type: Color
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       The '-' operator subtracts two Color objects. Each component of the ensuing color is the result of the subtraction of the corresponding components of the minuend and subtrahend. More details are available in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_subtract.html).
     description:
@@ -266,7 +266,7 @@ math_operations:
     type_b: Color
     return_type: Color
     code_samples:
-  - operation: '+'
+  - operation: "+"
     summary: |
       The '+' operator adds two Color objects. The resulting color comprises the sum of the corresponding components from the two colors being added. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_add.html) for more detailed explanation.
     description:

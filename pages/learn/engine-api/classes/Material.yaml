@@ -2,9 +2,9 @@ name: Material
 type: classes
 summary: |
   Imagine your game's 3D models as a stage, the Material class in Unity is the set designer, impacting the look and feel of the stage by determining how light interacts with the models. It influences their appearance, creating the essential visual ambiance of your game world.
-  
+
   This class enables you to manipulate properties of materials used in rendering both 2D and 3D graphics. Whether it's to give a shiny metallic texture to a robot, a semi-transparent glaze to a ghostly apparition, or make a surface react to light in a specific way, the Material class aids in achieving these visual effects.
-  
+
   Being a fundamental part of shader programming - the magic behind the colors, lighting effects, and textures in your game, the Material class is an indispensable tool in Unity. To have a comprehensive understanding of how to leverage it to enrich the aesthetics of your game environment, the [official Unity Material Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.html) is your go-to guide.
 description:
 code_samples:
@@ -727,4 +727,4 @@ methods:
     returns:
       - type: DataType.Vector2
         summary: The current texture tiling of the material's property.
-math_operations: 
+math_operations:

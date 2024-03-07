@@ -4,7 +4,7 @@ summary: |
   As a game developer, you create a world with characters that players can interact with. In Highrise, the Character class is your starting point for creating such characters. It allows you to design characters with attributes such as animations, behaviours and more. It is also the base to other move complex character types, like Class.Avatar .
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
 constructors:
 properties:
@@ -202,4 +202,4 @@ methods:
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:

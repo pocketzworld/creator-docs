@@ -2,9 +2,9 @@ name: Object
 type: classes
 summary: |
   The 'Object' class serves as the foundational layer for all elements in Unity scenes. Whether building intricate environments with GameObjects, infusing functionality through Components, or enhancing realism with Unity's pre-built assets such as textures and meshes, everything stems from the root 'Object' class.
-  
+
   Moreover, the 'Object' class provides an interactive gateway to Unity's lifecycle events. This includes initialization of objects upon creation, updates occurring in tandem with the game's frame rate, and the clean-up processes when objects are destroyed. This understanding of the object lifecycle is pivotal in managing memory usage, performance optimisation, and orchestrating smooth gameplay sequences.
-  
+
   To grasp the full extent of how the 'Object' class shapes the world of Unity, head over to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.html) for detailed insights.
 description:
 code_samples:
@@ -128,7 +128,7 @@ methods:
       - type: Class.Object
         summary: All objects found.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       A description of the Object equality operator can be found at [Unity's Object.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-operator_eq.html)
     description:

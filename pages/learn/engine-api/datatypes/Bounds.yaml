@@ -178,7 +178,7 @@ methods:
       - type: DataType.Vector3
         summary: Returns the closest point within or on the bounding box to the given point.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       The '==' operation checks if two bounding boxes are equal in terms of their center and extents. Get further details in the [Unity Bounds.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-operator_eq.html).
     description:

@@ -7,7 +7,7 @@ summary: |
 
   Quaternions are especially handy because they avoid an issue known as "gimbal lock," which can limit an object's freedom of rotation. Understanding Quaternions may feel a bit challenging at first, but they're incredibly powerful for 3D movement and rotation, making them a core part of 3D game development.
 
-  For a deeper dive, the [official Unity Quaternion documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html) provides comprehensive insights. 
+  For a deeper dive, the [official Unity Quaternion documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html) provides comprehensive insights.
 description:
 code_samples:
 inherits:
@@ -415,7 +415,7 @@ methods:
       - type: DataType.Quaternion
         summary: Returns the normalized version of the quaternion.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       The '==' operator checks if two quaternions are equal or not. It compares the x, y, z and w components of both. Check out the [Unity Quaternion.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_eq.html) for additional details.
     description:
@@ -423,7 +423,7 @@ math_operations:
     type_b: Quaternion
     return_type: boolean
     code_samples:
-  - operation: '*'
+  - operation: "*"
     summary: |
       The '*' operator multiplies a quaternion with a Vector3 or another Quaternion. It can be used to rotate vectors or combine rotations. Refer to the [Unity Quaternion.operator_multiply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_multiply.html) for more.
     description:

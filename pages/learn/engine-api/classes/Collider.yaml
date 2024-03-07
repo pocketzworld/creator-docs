@@ -4,10 +4,10 @@ summary: |
   [Unity's Collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Component
-constructors: 
-properties: 
+constructors:
+properties:
   - name: enabled
     summary: |
       [Unity's Collider.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-enabled.html)
@@ -64,14 +64,14 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: ClosestPoint
     summary: |
       [Unity's Collider.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPoint.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: position
         type: DataType.Vector3
         default:
@@ -85,7 +85,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: position
         type: DataType.Vector3
         default:
@@ -99,8 +99,8 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

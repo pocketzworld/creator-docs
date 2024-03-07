@@ -4,10 +4,10 @@ summary: |
   [Unity's AudioClip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Object
-constructors: 
-properties: 
+constructors:
+properties:
   - name: length
     summary: |
       [Unity's AudioClip.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-length.html)
@@ -57,14 +57,14 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: LoadAudioData
     summary: |
       [Unity's AudioClip.LoadAudioData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip.LoadAudioData.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -74,7 +74,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -84,7 +84,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: name
         type: string
         default:
@@ -114,8 +114,8 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

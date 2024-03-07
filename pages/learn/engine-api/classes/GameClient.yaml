@@ -13,18 +13,18 @@ code_samples: |
     localAvatarConnection = client.localPlayer.AvatarInstantiated:Connect(function(player, avatar)
       OnLocalAvatar(player, avatar)
     end)
-  
+
     function OnLocalAvatar(player, avatar)
       localAvatarConnection:Disconnect()
       localAvatarConnection = nil
-  
+
       print("The local user's avatar has finished loading and has now spawned!")
     end
-  
+
     client.PlayerConnected:Connect(function(player)
       print("Another player has connected named " .. player.name)
     end)
-  ```  
+  ```
 inherits:
 constructors:
 properties:
@@ -44,7 +44,7 @@ properties:
     type: Class.Camera
   - name: PlayerConnected
     summary: |
-      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player . 
+      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player .
     description:
     is_static: false
     code_samples:

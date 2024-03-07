@@ -13,7 +13,7 @@ inherits:
 constructors:
   - name: new
     summary: |
-      This operation creates a new UIView instance enabling customization of a game's interface. 
+      This operation creates a new UIView instance enabling customization of a game's interface.
     description:
     is_static: false
     code_samples:

@@ -1,43 +1,43 @@
 name: LuaScript
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Object
-constructors: 
-properties: 
+constructors:
+properties:
   - name: PropertyCount
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: RunsOnServer
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: FullName
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: string
-methods: 
+methods:
   - name: ToString
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

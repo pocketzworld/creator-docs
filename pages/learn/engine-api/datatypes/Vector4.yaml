@@ -117,7 +117,7 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
+methods:
   - name: Set
     summary: |
       The 'Set' method allows you to set the 'x', 'y', 'z', and 'w' components of the Vector4. This can save effort and improve readability when compared with setting these components individually. For more details, visit [Unity's Vector4.Set documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Set.html).
@@ -395,7 +395,7 @@ methods:
       - type: number
         summary: Returns the square of the magnitude (length) of the Vector4.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       The '==' operator checks if all components in two Vector4's are equal. If all x, y, z, and w components from both Vector4's are equal, it returns true otherwise it returns false. Refer to the [official Unity Vector4.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_eq.html) for more info.
     description:
@@ -403,7 +403,7 @@ math_operations:
     type_b: Vector4
     return_type: boolean
     code_samples:
-  - operation: '/'
+  - operation: "/"
     summary: |
       The '/' operator lets you divide a Vector4 by a number, which results in each component of the Vector4 being divided by that number. For example if you divide Vector4(4, 4, 4, 4) by 2, the resultant Vector4 would be Vector4(2, 2, 2, 2). Find more details in [Unity's Vector4.operator_divide documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_divide.html).
     description:
@@ -411,7 +411,7 @@ math_operations:
     type_b: number
     return_type: Vector4
     code_samples:
-  - operation: '*'
+  - operation: "*"
     summary: |
       The '*' operator allows you to scale a Vector4 by multiplying it by a number. Each component of the vector is multiplied by this number. A real world scenario can be increasing the RGBA values of color vector uniformly. For more, see [official Unity Vector4.operator_multiply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_multiply.html).
     description:
@@ -419,7 +419,7 @@ math_operations:
     type_b: Vector4
     return_type: Vector4
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       The '-' operator when applied to a Vector4, negates each component of the Vector4. For example, applying '-' to Vector4(2, 2, 2, 2) would result in Vector4(-2, -2, -2, -2). This operation is helpful for operations such as reversing directions, flipping normals, etc.
     description:
@@ -427,7 +427,7 @@ math_operations:
     type_b:
     return_type: Vector4
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       The '-' operator when used between two Vector4's, subtracts the second Vector4 from the first one component-wise. So, if Vector4(4, 4, 4, 4) and Vector4(2, 2, 2, 2) are subtracted, the result will be Vector4(2, 2, 2, 2). This operation can be used to find the relative difference between two vectors. More info can be found in the [official Unity Vector4.operator_subtract documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_subtract.html).
     description:
@@ -435,7 +435,7 @@ math_operations:
     type_b: Vector4
     return_type: Vector4
     code_samples:
-  - operation: '+'
+  - operation: "+"
     summary: |
       The '+' operator adds two Vector4's component-wise, resulting in a new Vector4. Each component of the resulting Vector4 is the sum of the corresponding components of the original Vector4's. For example if you add Vector4(2, 3, 2, 2) and Vector4(1, 2, 1, 1), the result will be Vector4(3, 5, 3, 3). You can find more about addition operation in vector algebra from the [official Unity Vector4.operator_add documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_add.html).
     description:

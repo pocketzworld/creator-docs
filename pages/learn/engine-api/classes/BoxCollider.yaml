@@ -4,10 +4,10 @@ summary: |
   [Unity's BoxCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Collider
-constructors: 
-properties: 
+constructors:
+properties:
   - name: center
     summary: |
       [Unity's BoxCollider.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-center.html)
@@ -22,15 +22,15 @@ properties:
     is_static: false
     code_samples:
     type: DataType.Vector3
-methods: 
+methods:
   - name: ToString
     summary: |
       [Unity's BoxCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.ToString.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

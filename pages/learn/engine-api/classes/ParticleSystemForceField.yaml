@@ -4,10 +4,10 @@ summary: |
   [Unity's ParticleSystemForceField Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+constructors:
+properties:
   - name: startRange
     summary: |
       [Unity's ParticleSystemForceField.startRange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-startRange.html)
@@ -64,15 +64,15 @@ properties:
     is_static: false
     code_samples:
     type: Class.Texture3D
-methods: 
+methods:
   - name: ToString
     summary: |
       [Unity's ParticleSystemForceField.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField.ToString.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

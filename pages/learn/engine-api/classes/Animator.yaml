@@ -2,9 +2,9 @@ name: Animator
 type: classes
 summary: |
   Think of the Animator class in Unity as a conductor directing the animations in your Unity projects. This class synergistically teams up with the Animator Controller, a behind-the-scenes maestro that choreographs the transitions and interactions between animations through a state-machine.
-  
+
   You can envision the Animator class as your animations specialist in Unity. This class equips you with the tools to create, animate, tweak animations, and much more, offering an array of methods and properties to control how animations sway and move on your GameObjects.
-  
+
   The Animator is an essential tool to bringing life to your world through animation. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.html) to explore further.
 description:
 code_samples:

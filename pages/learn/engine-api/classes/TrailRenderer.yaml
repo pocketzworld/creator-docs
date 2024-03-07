@@ -4,10 +4,10 @@ summary: |
   [Unity's TrailRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Renderer
-constructors: 
-properties: 
+constructors:
+properties:
   - name: time
     summary: |
       [Unity's TrailRenderer.time Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-time.html)
@@ -120,14 +120,14 @@ properties:
     is_static: false
     code_samples:
     type: Class.AnimationCurve
-methods: 
+methods:
   - name: SetPosition
     summary: |
       [Unity's TrailRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.SetPosition.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -145,7 +145,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -159,7 +159,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -169,7 +169,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: mesh
         type: Class.Mesh
         default:
@@ -187,7 +187,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: position
         type: DataType.Vector3
         default:
@@ -201,8 +201,8 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:
