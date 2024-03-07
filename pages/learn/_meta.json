@@ -4,7 +4,7 @@
     "redirectTo": "/learn/guides/bots/creating-a-bot"
   },
   "engine-api": {
-    "title": "Engine Api",
+    "title": "Studio Api",
     "redirectTo": "/learn/engine-api/classes/GameObject"
   },
   "bots-api": {

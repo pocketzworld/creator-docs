@@ -1,0 +1,106 @@
+name: Collider
+type: classes
+summary: |
+  [Unity's Collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.html)
+description:
+code_samples:
+inherits: 
+  - Class.Component
+constructors: 
+properties: 
+  - name: enabled
+    summary: |
+      [Unity's Collider.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-enabled.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: attachedRigidbody
+    summary: |
+      [Unity's Collider.attachedRigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-attachedRigidbody.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Rigidbody
+  - name: isTrigger
+    summary: |
+      [Unity's Collider.isTrigger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-isTrigger.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: contactOffset
+    summary: |
+      [Unity's Collider.contactOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-contactOffset.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: bounds
+    summary: |
+      [Unity's Collider.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-bounds.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Bounds
+  - name: hasModifiableContacts
+    summary: |
+      [Unity's Collider.hasModifiableContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-hasModifiableContacts.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: providesContacts
+    summary: |
+      [Unity's Collider.providesContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-providesContacts.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: layerOverridePriority
+    summary: |
+      [Unity's Collider.layerOverridePriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-layerOverridePriority.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: ClosestPoint
+    summary: |
+      [Unity's Collider.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: ClosestPointOnBounds
+    summary: |
+      [Unity's Collider.ClosestPointOnBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPointOnBounds.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: ToString
+    summary: |
+      [Unity's Collider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+math_operations: 

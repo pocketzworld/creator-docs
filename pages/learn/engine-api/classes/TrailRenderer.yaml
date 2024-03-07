@@ -1,0 +1,208 @@
+name: TrailRenderer
+type: classes
+summary: |
+  [Unity's TrailRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.html)
+description:
+code_samples:
+inherits: 
+  - Class.Renderer
+constructors: 
+properties: 
+  - name: time
+    summary: |
+      [Unity's TrailRenderer.time Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-time.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: startWidth
+    summary: |
+      [Unity's TrailRenderer.startWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-startWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: endWidth
+    summary: |
+      [Unity's TrailRenderer.endWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-endWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: widthMultiplier
+    summary: |
+      [Unity's TrailRenderer.widthMultiplier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-widthMultiplier.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: autodestruct
+    summary: |
+      [Unity's TrailRenderer.autodestruct Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-autodestruct.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: emitting
+    summary: |
+      [Unity's TrailRenderer.emitting Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-emitting.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: numCornerVertices
+    summary: |
+      [Unity's TrailRenderer.numCornerVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-numCornerVertices.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: numCapVertices
+    summary: |
+      [Unity's TrailRenderer.numCapVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-numCapVertices.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: minVertexDistance
+    summary: |
+      [Unity's TrailRenderer.minVertexDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-minVertexDistance.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: startColor
+    summary: |
+      [Unity's TrailRenderer.startColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-startColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: endColor
+    summary: |
+      [Unity's TrailRenderer.endColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-endColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: positionCount
+    summary: |
+      [Unity's TrailRenderer.positionCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-positionCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: textureScale
+    summary: |
+      [Unity's TrailRenderer.textureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-textureScale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: shadowBias
+    summary: |
+      [Unity's TrailRenderer.shadowBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-shadowBias.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: generateLightingData
+    summary: |
+      [Unity's TrailRenderer.generateLightingData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-generateLightingData.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: widthCurve
+    summary: |
+      [Unity's TrailRenderer.widthCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-widthCurve.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.AnimationCurve
+methods: 
+  - name: SetPosition
+    summary: |
+      [Unity's TrailRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.SetPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary:
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPosition
+    summary: |
+      [Unity's TrailRenderer.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.GetPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: Clear
+    summary: |
+      [Unity's TrailRenderer.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.Clear.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: BakeMesh
+    summary: |
+      [Unity's TrailRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.BakeMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: mesh
+        type: Class.Mesh
+        default:
+        summary:
+      - name: useTransform
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddPosition
+    summary: |
+      [Unity's TrailRenderer.AddPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.AddPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ToString
+    summary: |
+      [Unity's TrailRenderer.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:
+math_operations: 

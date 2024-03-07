@@ -1,403 +1,423 @@
 name: Quaternion
 type: datatypes
 summary: |
-  [Unity's Quaternion Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html)
+  Imagine you're playing a 3D game and you have full control to rotate your character or vehicle in any direction. In Unity, the feature that enables this seamless 3D rotation is powered by a datatype known as Quaternion.
+
+  A Quaternion, consisting of four parts—x, y, z, and another one called "w"—is able to represent rotation and direction in 3D space. Think of x, y, and z as the direction and w as the degree of rotation around that direction. 
+
+  Quaternions are especially handy because they avoid an issue known as "gimbal lock," which can limit an object's freedom of rotation. Understanding Quaternions may feel a bit challenging at first, but they're incredibly powerful for 3D movement and rotation, making them a core part of 3D game development.
+
+  For a deeper dive, the [official Unity Quaternion documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html) provides comprehensive insights. 
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+constructors:
   - name: new
     summary: |
-      [Unity's Quaternion.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-ctor.html)
+      The 'new' constructor creates a new Quaternion by providing the values for x, y, z, and w components. More insights are available in the [Unity Quaternion.new documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-ctor.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
-        summary:
+        summary: The x component of the Quaternion.
       - name: y
         type: number
         default:
-        summary:
+        summary: The y component of the Quaternion.
       - name: z
         type: number
         default:
-        summary:
+        summary: The z component of the Quaternion.
       - name: w
         type: number
         default:
-        summary:
+        summary: The w component of the Quaternion.
     returns:
       - type: DataType.Quaternion
-        summary:
-properties: 
+        summary: Returns a new Quaternion with given x, y, z and w components.
+properties:
   - name: eulerAngles
     summary: |
-      [Unity's Quaternion.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-eulerAngles.html)
+      The 'eulerAngles' property returns the rotation of a Quaternion in the Euler angles representation (as a Vector3). To know more, consult the [Unity Quaternion.eulerAngles documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-eulerAngles.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: normalized
     summary: |
-      [Unity's Quaternion.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html)
+      The 'normalized' property returns a copy of the Quaternion normalized to unit length. It's recommended when dealing with a Quaternion over time, which might led to a drifting scale. Learn more in the [Unity Quaternion.normalized documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: x
     summary: |
-      [Unity's Quaternion.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-x.html)
+      The 'x' property represents the x component of the Quaternion. You can find more details in the [Unity Quaternion.x documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-x.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: |
-      [Unity's Quaternion.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-y.html)
+      The 'y' property represents the y component of the Quaternion. Detailed insights are available in the [Unity Quaternion.y documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-y.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: z
     summary: |
-      [Unity's Quaternion.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-z.html)
+      The 'z' property holds the z component of the Quaternion. More details can be found in the [Unity Quaternion.z documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-z.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: w
     summary: |
-      [Unity's Quaternion.w Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-w.html)
+      The 'w' property represents the w (scalar) component of the Quaternion. You can read more about it in the [Unity Quaternion.w documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-w.html).
     description:
     is_static: false
     code_samples:
     type: number
-methods: 
+  - name: identity
+    summary: |
+      The 'identity' property represents a Quaternion that corresponds to "no rotation" - it effectively represents an identity rotation operation. In other words, the object will not be rotated at all. This is extremely valuable when you need to reset an object's rotation. For a deeper understanding, refer to the [official Unity documentation on Quaternion.identity](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-identity.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Quaternion
+  - name: kEpsilon
+    summary: |
+      Similar to Vector2 and Vector3, Quaternions in Unity have a 'kEpsilon' property that represents a small number greater than zero. This is useful for comparing Quaternion components with small tolerances, commonly used for floating-point precision issues. More information can be accessed from the [official Unity Quaternion.kEpsilon documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-kEpsilon.html).
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods:
   - name: Set
     summary: |
-      [Unity's Quaternion.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Set.html)
+      The 'Set' method assigns a new value to the x, y, z, and w components of the Quaternion. For additional information, you can check the [Unity Quaternion.Set documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Set.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: newX
         type: number
         default:
-        summary:
+        summary: The new value for the x component.
       - name: newY
         type: number
         default:
-        summary:
+        summary: The new value for the y component.
       - name: newZ
         type: number
         default:
-        summary:
+        summary: The new value for the z component.
       - name: newW
         type: number
         default:
-        summary:
+        summary: The new value for the w component.
     returns:
       - type: void
         summary:
   - name: SetLookRotation
     summary: |
-      [Unity's Quaternion.SetLookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetLookRotation.html)
+      The 'SetLookRotation' method aligns the Quaternion's z-axis (forward) towards a target direction. This method is typically used to orient an object to face towards a target direction. Get more information in the [Unity Quaternion.SetLookRotation documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetLookRotation.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: view
         type: DataType.Vector3
         default:
-        summary:
+        summary: The target direction vector.
     returns:
       - type: void
         summary:
   - name: SetFromToRotation
     summary: |
-      [Unity's Quaternion.SetFromToRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetFromToRotation.html)
+      The 'SetFromToRotation' method sets the Quaternion to rotate from one direction to another. It is useful when you want an object to rotate facing towards a new direction. The method's usage and more are described in the [Unity Quaternion.SetFromToRotation documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetFromToRotation.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: fromDirection
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to rotate from.
       - name: toDirection
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to rotate to.
     returns:
       - type: void
         summary:
   - name: Normalize
     summary: |
-      [Unity's Quaternion.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html)
+      The 'Normalize' method brings the Quaternion to a unit length, hello again. Useful for fixing drifting scale issues. This method's implications and usage are covered in the [Unity Quaternion.Normalize documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html).
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: FromToRotation
     summary: |
-      [Unity's Quaternion.FromToRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.FromToRotation.html)
+      The 'FromToRotation' static method creates a Quaternion that rotates from one direction to another. For a comprehensive understanding, refer to the [Unity Quaternion.FromToRotation documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.FromToRotation.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: fromDirection
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to rotate from.
       - name: toDirection
         type: DataType.Vector3
         default:
-        summary:
+        summary: The vector to rotate to.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a rotation that rotates from fromDirection to toDirection.
   - name: Inverse
     summary: |
-      [Unity's Quaternion.Inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Inverse.html)
+      The 'Inverse' static method returns the inverse of the Quaternion. It's typically used when you want to apply the opposite rotation. More details are in the [Unity Quaternion.Inverse documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Inverse.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: rotation
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The rotation to inverse.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a Quaternion that represents the inverse rotation.
   - name: Slerp
     summary: |
-      [Unity's Quaternion.Slerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Slerp.html)
+      The 'Slerp' (or Spherical Linear Interpolation) static method gradually changes a Quaternion from one rotation to another over time in a smooth and controlled way. Refer to the [Unity Quaternion.Slerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Slerp.html) for detailed insights.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The starting rotation.
       - name: b
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The end rotation.
       - name: t
         type: number
         default:
-        summary:
+        summary: The amount to interpolate.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a new interpolated quaternion rotation from rotation 'a' towards 'b'.
   - name: SlerpUnclamped
     summary: |
-      [Unity's Quaternion.SlerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SlerpUnclamped.html)
+      The 'SlerpUnclamped' method is like Slerp, but the interpolation factor isn't clamped between [0, 1]. To know more, check out the [Unity Quaternion.SlerpUnclamped documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SlerpUnclamped.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The starting rotation.
       - name: b
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The end rotation.
       - name: t
         type: number
         default:
-        summary:
+        summary: The unclamped interpolation amount.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a new interpolated quaternion rotation, letting the user interpolate over an arbitrary range.
   - name: Lerp
     summary: |
-      [Unity's Quaternion.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Lerp.html)
+      The 'Lerp' static method linearly interpolates between two quaternions. It is a more direct calculation than Slerp, but less visually desirable. For detailed insights, check out the [Unity Quaternion.Lerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Lerp.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The starting rotation.
       - name: b
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The end rotation.
       - name: t
         type: number
         default:
-        summary:
+        summary: The amount to interpolate.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns an interpolated quaternion rotation between 'a' and 'b'.
   - name: LerpUnclamped
     summary: |
-      [Unity's Quaternion.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LerpUnclamped.html)
+      The 'LerpUnclamped' method is similar to Lerp, but here the interpolation factor isn't clamped to the range [0, 1]. Refer to the [Unity Quaternion.LerpUnclamped documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LerpUnclamped.html) for more information.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The starting rotation.
       - name: b
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The end rotation.
       - name: t
         type: number
         default:
-        summary:
+        summary: The unclamped interpolation amount.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a Quaternion that is interpolated over an arbitrary range.
   - name: AngleAxis
     summary: |
-      [Unity's Quaternion.AngleAxis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.AngleAxis.html)
+      The 'AngleAxis' static method creates a Quaternion rotation around an axis. This is typically used when you need to rotate an object around a certain axis by a specific angle. More details can be found in the [Unity Quaternion.AngleAxis documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.AngleAxis.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: angle
         type: number
         default:
-        summary:
+        summary: The angle of rotation.
       - name: axis
         type: DataType.Vector3
         default:
-        summary:
+        summary: The rotation axis.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a Quaternion around the 'axis' passed in with angle 'angle'.
   - name: LookRotation
     summary: |
-      [Unity's Quaternion.LookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LookRotation.html)
+      The 'LookRotation' static method takes a vector and provides a quaternion that looks along that vector. It makes an object's forward direction point along that vector. Check out the [Unity Quaternion.LookRotation documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LookRotation.html) for a comprehensive understanding.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: forward
         type: DataType.Vector3
         default:
-        summary:
+        summary: The direction to be faced.
       - name: upwards
         type: DataType.Vector3
         default:
-        summary:
+        summary: The direction to be used as 'upwards'.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a Quaternion that makes an object face towards the 'forward' direction.
   - name: Dot
     summary: |
-      [Unity's Quaternion.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Dot.html)
+      The 'Dot' static method calculates the dot product of two quaternions. The dot product can be used to find the cosine of the angle between two vectors. Refer to the [Unity Quaternion.Dot documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Dot.html) for more details.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The first quaternion.
       - name: b
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The second quaternion.
     returns:
       - type: number
-        summary:
+        summary: Returns the dot product of Quaternions a and b.
   - name: Angle
     summary: |
-      [Unity's Quaternion.Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Angle.html)
+      The 'Angle' static method returns the angle in degrees between two rotations a and b. To know more, look into the [Unity Quaternion.Angle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Angle.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The first rotation.
       - name: b
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The second rotation.
     returns:
       - type: number
-        summary:
+        summary: Returns the angle in degrees between the two rotations.
   - name: Euler
     summary: |
-      [Unity's Quaternion.Euler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Euler.html)
+      The 'Euler' static method creates a Quaternion rotation from the given Euler angles. It is typically used when you want to rotate an object by specific degrees along the x, y, and z axes. More details are in the [Unity Quaternion.Euler documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Euler.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
-        summary:
+        summary: The angle around the x-axis in degrees.
       - name: y
         type: number
         default:
-        summary:
+        summary: The angle around the y-axis in degrees.
       - name: z
         type: number
         default:
-        summary:
+        summary: The angle around the z-axis in degrees.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a Quaternion from the Euler angles.
   - name: RotateTowards
     summary: |
-      [Unity's Quaternion.RotateTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.RotateTowards.html)
+      The 'RotateTowards' static method gradually changes a Quaternion from the current rotation towards a target rotation. It's useful when you want to smoothly rotate an object towards a target. Details are in the [Unity Quaternion.RotateTowards documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.RotateTowards.html).
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: from
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The current rotation.
       - name: to
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The target rotation.
       - name: maxDegreesDelta
         type: number
         default:
-        summary:
+        summary: The maximum number of degrees to rotate by in each call.
     returns:
       - type: DataType.Quaternion
-        summary:
+        summary: Returns a Quaternion that is the quaternion from rotated towards to.
   - name: Normalize
     summary: |
-      [Unity's Quaternion.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html)
+      The 'Normalize' static method modifies the quaternion to a unit length version of itself. Check out the [Unity Quaternion.Normalize documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html) for more understanding.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: q
         type: DataType.Quaternion
         default:
-        summary:
+        summary: The Quaternion to be normalized.
     returns:
       - type: DataType.Quaternion
-        summary:
-math_operations: 
+        summary: Returns the normalized version of the quaternion.
+math_operations:
   - operation: '=='
     summary: |
-      [Unity's Quaternion.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_eq.html)
+      The '==' operator checks if two quaternions are equal or not. It compares the x, y, z and w components of both. Check out the [Unity Quaternion.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_eq.html) for additional details.
     description:
     type_a: Quaternion
     type_b: Quaternion
@@ -405,7 +425,7 @@ math_operations:
     code_samples:
   - operation: '*'
     summary: |
-      [Unity's Quaternion.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_multiply.html)
+      The '*' operator multiplies a quaternion with a Vector3 or another Quaternion. It can be used to rotate vectors or combine rotations. Refer to the [Unity Quaternion.operator_multiply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_multiply.html) for more.
     description:
     type_a: Quaternion
     type_b: Vector3

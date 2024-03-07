@@ -1,40 +1,41 @@
 # **Creating Your First World**
 
 ## **Introduction**
-In this guide you will learn how to use Studio Hub to create, light, and test your first project.
+Looking to craft your first immersive, virtual world? You're in the right place at the right time! Let's dive into the process of using Studio Hub to generate, illuminate, and test your inaugural creation. It's easier than you think and a lot more fun!
 
-### **Step 1: Open The Studio Hub and select New Project**
-**Installing the correct Unity Editor**
-1. Launch the Studio Hub.
-2. If you do not have Unity's **2022.3.16f1** version installed, follow the Studio prompts to install it.
+### **Step 1: Creating a New World**
+1. Download [Unity Hub](https://unity3d.com/get-unity/download), the key to utilizing Highrise Studio Hub.
+2. Launch Studio Hub. You will be prompted to install the correct Unity version if needed.
+3. Click "New Project" and opt for the Basic Template.
 
-**Creating your Project**
-1. If you don't have any projects yet, click "New Project"
-2. Choose a Template to start with then choose a destination for your project. Create a new folder for your world within that location.
-3. With the _New Folder_ selected, Click _Select Folder_ to confirm your choice.
+![open studio hub](/assets/learn/guides/studio/open-studio-hub.png)
 
+4. Now that we're in Unity, on the top left toolbar you can use the "Sign in" button to sign into your Highrise Account.
 
-### **Step 2: Sign in to your Highrise Account**
+![before sign in](/assets/learn/guides/studio/before-sign-in.png)    ![after sign in](/assets/learn/guides/studio/after-sign-in.png)
 
-1. After creating your project you will be taken to the Template's Scene. In the Assets panel you will see the "Template" folder, this you can either delete to start fresh or build off of.
-2. On the top left toolbar you can use the "Sign in" button to sign into your HR Account.
-3. You can now test your world with the "Play" button in the middle of the top toolbar.
+5. You can now test your world with the "Play" button in the middle of the top toolbar.
 
+![play button](/assets/learn/guides/studio/play-button.png)
+
+### **Step 2: Adding Assets and Scripts**
+There are many ways to import assets like textures and meshes into Unity. Here are a few common methods:
+- **Asset Store:** Unity's built-in Asset Store is a treasure trove of ready-made assets. To access, simply click on `Window > Asset Store`, select your chosen asset, and import directly into your project.
+- **Manual Import:** To import locally stored files, right-click within the Project panel, select `Import New Asset`, and browse to your desired file.
+- **Drag & Drop:** An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel. 
+- ---- Note that Highrise Studio does not support adding new C# runtime scripts.
+
+In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua > Script`, and name your script.
+
+![add-lua-script](/assets/learn/guides/studio/add-lua-script.png)
 
 ### **Step 3: Adjust The Room Lighting and Background**
 
-1. Go to "Window > Rendering > Lighting". Or press (CMD/CNTRL) + 9 to open the window.
+1. Go to `Window > Rendering > Lighting`. Or press `(CMD/CNTRL) + 9` to open the window.
 2. Here you can access the **Scene** and **Environment** settings.
-3. The **Scene** settings include:
-    - Lightmap settings
-    - Map Resolution
-    - and Samples
-    - The Template's settings are provided in the *.lighting* file in **Assets > Template > Scenes > Room**
-4. The **Environment** settings include:
-    - Skybox Material
-    - and Environment Lighting
-    - The Environment Lighting can be a Color, Gradient, or the Skybox itself
-5. The **Skybox** is a Gradient material named *Sky* located in **Assets > Template > Art**
+3. The **Scene** settings allow you to control the lightmap, map resolution, and samples.
+4. The **Environment** settings allow you to adjust the Skybox material and environment lighting.
+5. The **Skybox** is a Gradient material named *Sky* located in `Assets > Template > Art` in Unity's Project tab.
 
 
 ### **Step 4: Add Lights**
