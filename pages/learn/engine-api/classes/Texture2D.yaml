@@ -2,9 +2,9 @@ name: Texture2D
 type: classes
 summary: |
   The Texture2D class in Unity is like your canvas for drawing in the digital realm. A powerhouse for handling 2D textures and images, it is used for constructing and customizing visual elements in your game world, one pixel at a time. From generating a fresh texture dynamically, tailoring pre-existing textures, to applying those as the backdrop or developing intricate sprite animations, the Texture2D class gives you the reins.
-  
+
   Beyond its basic form, the Texture2D class dives deeper into the realm of advanced graphical rendering. Paired with Shader programming, it allows you to create diverse visual effects, playing with lighting and transforming visuals in complex ways.
-  
+
   To unravel the vast applications and techniques you can achieve with the Texture2D class and carve detailed, interactive, and visually appealing experiences in your games, head over to the in-depth guide in the [official Unity Texture2D Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.html).
 description:
 code_samples:

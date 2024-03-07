@@ -4,10 +4,10 @@ summary: |
   [Unity's ParticleSystem Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Component
-constructors: 
-properties: 
+constructors:
+properties:
   - name: isPlaying
     summary: |
       [Unity's ParticleSystem.isPlaying Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isPlaying.html)
@@ -92,14 +92,14 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: Stop
     summary: |
       [Unity's ParticleSystem.Stop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Stop.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: includeChildren
         type: boolean
         default:
@@ -113,7 +113,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -139,7 +139,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: withChildren
         type: boolean
         default:
@@ -153,7 +153,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: withChildren
         type: boolean
         default:
@@ -167,7 +167,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: withChildren
         type: boolean
         default:
@@ -181,7 +181,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: withChildren
         type: boolean
         default:
@@ -195,7 +195,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: count
         type: number
         default:
@@ -209,7 +209,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: subEmitterIndex
         type: number
         default:
@@ -223,7 +223,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -233,7 +233,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -243,7 +243,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -253,7 +253,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: vertexBuffersCount
         type: number
         default:
@@ -271,8 +271,8 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

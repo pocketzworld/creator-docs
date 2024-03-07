@@ -4,10 +4,10 @@ summary: |
   [Unity's MeshCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Collider
-constructors: 
-properties: 
+constructors:
+properties:
   - name: sharedMesh
     summary: |
       [Unity's MeshCollider.sharedMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-sharedMesh.html)
@@ -22,15 +22,15 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: ToString
     summary: |
       [Unity's MeshCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider.ToString.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

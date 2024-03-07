@@ -22,4 +22,4 @@ methods:
     returns:
       - type: number
         summary: An identifier unique to the opened popup is returned, which can be used for any subsequent reference to the popup.
-math_operations: 
+math_operations:

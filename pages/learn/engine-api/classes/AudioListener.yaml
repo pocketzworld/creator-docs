@@ -4,10 +4,10 @@ summary: |
   [Unity's AudioListener Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+constructors:
+properties:
   - name: volume
     summary: |
       [Unity's AudioListener.volume Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener-volume.html)
@@ -22,15 +22,15 @@ properties:
     is_static: true
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: ToString
     summary: |
       [Unity's AudioListener.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener.ToString.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

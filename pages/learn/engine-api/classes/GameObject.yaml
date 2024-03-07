@@ -283,4 +283,4 @@ methods:
     returns:
       - type: Class.GameObject
         summary: Returns the first active GameObject with the specified name.
-math_operations: 
+math_operations:

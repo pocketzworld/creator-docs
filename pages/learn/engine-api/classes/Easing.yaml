@@ -1,20 +1,20 @@
 name: Easing
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+constructors:
+properties:
+methods:
   - name: EaseQuadratic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -28,11 +28,11 @@ methods:
         summary:
   - name: EaseCubic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -46,11 +46,11 @@ methods:
         summary:
   - name: EaseBack
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -64,11 +64,11 @@ methods:
         summary:
   - name: EaseBounce
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -82,11 +82,11 @@ methods:
         summary:
   - name: EaseElastic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -100,11 +100,11 @@ methods:
         summary:
   - name: EaseSine
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -118,11 +118,11 @@ methods:
         summary:
   - name: EaseCircle
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -136,11 +136,11 @@ methods:
         summary:
   - name: EaseExponential
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -154,11 +154,11 @@ methods:
         summary:
   - name: EaseCubicBezier
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -170,4 +170,4 @@ methods:
     returns:
       - type: number
         summary:
-math_operations: 
+math_operations:

@@ -130,7 +130,7 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
+methods:
   - name: Set
     summary: |
       The 'Set' method allows you to change the x and y components of the Vector2 at once. It's a quicker alternative than setting the 'x' and 'y' components individually. For its usage and further details, you can check the [Unity's Vector2.Set documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Set.html).
@@ -440,7 +440,7 @@ methods:
       - type: DataType.Vector2
         summary: Returns a new Vector2 whose components are the maximum of the corresponding components of the input Vector2's.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       The '==' operator checks if two Vector2's are equal, both in x and y components. If both x's are equal and both y's are equal, it returns true. Otherwise, it returns false. More details can be gathered from the [official Unity Vector2.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_eq.html).
     description:
@@ -448,7 +448,7 @@ math_operations:
     type_b: Vector2
     return_type: boolean
     code_samples:
-  - operation: '/'
+  - operation: "/"
     summary: |
       The '/' operator allows you to divide each component of a Vector2 by a number. So, if you divide Vector2(4, 6) by 2, the result will be Vector2(2, 3). More details can be found in the [official Unity Vector2.operator_divide documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_divide.html).
     description:
@@ -456,7 +456,7 @@ math_operations:
     type_b: number
     return_type: Vector2
     code_samples:
-  - operation: '*'
+  - operation: "*"
     summary: |
       The '*' operator lets you multiply a number and a Vector2. It returns a new Vector2 where each component of the original Vector2 has been multiplied by the number. For example, 2 * Vector2(2, 3) results in Vector2(4, 6). More info can be found in the [official Unity Vector2.operator_multiply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_multiply.html).
     description:
@@ -464,7 +464,7 @@ math_operations:
     type_b: Vector2
     return_type: Vector2
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       The '-' operator applied to one Vector2 simply negates the 'x' and 'y' components of the Vector2. So, if you have a Vector2(2, 3), applying '-' would result in Vector2(-2, -3). This operation can be helpful in flipping the direction of a Vector2.
     description:
@@ -472,7 +472,7 @@ math_operations:
     type_b:
     return_type: Vector2
     code_samples:
-  - operation: '-'
+  - operation: "-"
     summary: |
       The '-' operator can be used between two Vector2's to subtract the second one from the first one component-wise. So, Vector2(4, 6) - Vector2(2, 3) will yield Vector2(2, 3). This operation is often used to find the relative Vector2 from one position to another. More details can be found in the [official Unity Vector2.operator_subtract documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_subtract.html).
     description:
@@ -480,7 +480,7 @@ math_operations:
     type_b: Vector2
     return_type: Vector2
     code_samples:
-  - operation: '+'
+  - operation: "+"
     summary: |
       The '+' operator adds two Vector2's together, component-wise. Hence if you're adding Vector2(2, 3) and Vector2(4, 6), the resultant Vector2 will be Vector2(6, 9). This operation is often used for combining offsets or changes. For its usage and further details, you can check the [official Unity Vector2.operator_add documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_add.html).
     description:

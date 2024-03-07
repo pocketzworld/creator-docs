@@ -1,0 +1,27 @@
+name: Lint yaml files
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches-ignore: [main]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: pages/**/*.yaml
+          config_data: |
+            extends: default
+            rules:
+              line-length: disable
+              document-start: disable
+              new-line-at-end-of-file:
+                level: warning
+              trailing-spaces:
+                level: warning

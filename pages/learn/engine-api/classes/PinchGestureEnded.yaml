@@ -1,63 +1,63 @@
 name: PinchGestureEnded
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: DeltaPosition
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: StartPosition
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: Position
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: Velocity
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: Distance
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: Scale
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: ToString
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

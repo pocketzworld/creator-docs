@@ -201,7 +201,7 @@ properties:
     is_static: true
     code_samples:
     type: DataType.Matrix4x4
-methods: 
+methods:
   - name: ValidTRS
     summary: |
       The 'ValidTRS' method checks if a matrix is a valid transformation matrix. It returns a boolean indicating whether the matrix holds valid translation, rotation, and scale values. More substance regarding this can be found in [Unity's Matrix4x4.ValidTRS Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.ValidTRS.html).
@@ -573,7 +573,7 @@ methods:
       - type: DataType.Matrix4x4
         summary: Returns a rotation matrix created from the specified quaternion.
 math_operations:
-  - operation: '=='
+  - operation: "=="
     summary: |
       The '==' operator checks if two Matrix4x4 matrices are equal, element-wise. Two matrices are considered equal if all their corresponding elements are equal. For more details, refer to [Unity's Matrix4x4.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-operator_eq.html).
     description:
@@ -581,7 +581,7 @@ math_operations:
     type_b: Matrix4x4
     return_type: boolean
     code_samples:
-  - operation: '*'
+  - operation: "*"
     summary: |
       The '*' operator multiplies a Matrix4x4 by a Vector4. This operation results in a transformed Vector4 that has been scaled, rotated, and positioned according to the Matrix4x4. More insights can be gained from [Unity's Matrix4x4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4-operator_multiply.html).
     description:

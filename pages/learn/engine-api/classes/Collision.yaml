@@ -4,9 +4,9 @@ summary: |
   [Unity's Collision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: impulse
     summary: |
       [Unity's Collision.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-impulse.html)
@@ -63,15 +63,15 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: ToString
     summary: |
       [Unity's Collision.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.ToString.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

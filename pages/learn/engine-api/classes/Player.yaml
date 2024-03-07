@@ -9,18 +9,18 @@ code_samples: |
     localAvatarConnection = client.localPlayer.AvatarInstantiated:Connect(function(player, avatar)
       OnLocalAvatar(player, avatar)
     end)
-  
+
     function OnLocalAvatar(player, avatar)
       localAvatarConnection:Disconnect()
       localAvatarConnection = nil
-  
+
       print("The local user's avatar has finished loading and has now spawned!")
     end
-  
+
     client.PlayerConnected:Connect(function(player)
       print("Another player has connected named " .. player.name)
     end)
-  ```  
+  ```
 inherits:
 constructors:
 properties:
@@ -44,7 +44,7 @@ properties:
     type: Class.Avatar
   - name: AvatarInstantiated
     summary: |
-      An event that is triggered when the local player's avatar is instantiated. This is useful for performing actions that require the avatar to be fully loaded and ready to be manipulated. 
+      An event that is triggered when the local player's avatar is instantiated. This is useful for performing actions that require the avatar to be fully loaded and ready to be manipulated.
     description:
     is_static: false
     tags:

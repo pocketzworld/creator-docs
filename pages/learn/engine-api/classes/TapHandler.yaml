@@ -4,10 +4,10 @@ summary: |
   A Behaviour that fires a Event when the attached Class.GameObject's Collider(s) are tapped.
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+constructors:
+properties:
   - name: Tapped
     summary: |
       The Event that is fired when the object is tapped. This requires the Class.GameObject to have a TapHandler attached to either a parent of or the same object as the Collider.

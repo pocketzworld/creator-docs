@@ -4,10 +4,10 @@ summary: |
   [Unity's LineRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Renderer
-constructors: 
-properties: 
+constructors:
+properties:
   - name: startWidth
     summary: |
       [Unity's LineRenderer.startWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startWidth.html)
@@ -106,14 +106,14 @@ properties:
     is_static: false
     code_samples:
     type: Class.AnimationCurve
-methods: 
+methods:
   - name: SetPosition
     summary: |
       [Unity's LineRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.SetPosition.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -131,7 +131,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -145,7 +145,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: tolerance
         type: number
         default:
@@ -159,7 +159,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: mesh
         type: Class.Mesh
         default:
@@ -177,8 +177,8 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:
