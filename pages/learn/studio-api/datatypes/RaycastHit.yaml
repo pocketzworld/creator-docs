@@ -1,7 +1,7 @@
 name: RaycastHit
 type: datatypes
 summary: |
-  A RaycastHit object in Unity is used to store information returned by a raycast (see Class.Physics ), a common technique used in video games to detect what lies in a certain path or direction. This can be viewed as shooting a laser beam from a point in a specific direction to see what it hits. For example, a first-person shooter may use a raycast to determine what the player is aiming at.
+  A RaycastHit object in Unity is used to store information returned by a raycast (see Service.Physics ), a common technique used in video games to detect what lies in a certain path or direction. This can be viewed as shooting a laser beam from a point in a specific direction to see what it hits. For example, a first-person shooter may use a raycast to determine what the player is aiming at.
 
   A raycast creates a RaycastHit object, storing information about the closest object hit by the ray (where the hit occurred, surface normal at the point of contact, the distance from the beginning of the ray, etc.). This object can be used to determine the specific reaction to the raycast.
 
