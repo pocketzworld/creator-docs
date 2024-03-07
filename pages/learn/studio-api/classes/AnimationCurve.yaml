@@ -187,14 +187,4 @@ methods:
     returns:
       - type: Class.AnimationCurve
         summary: Returns a new AnimationCurve with smooth transitions at start and end.
-  - name: ToString
-    summary: |
-      The 'ToString' method is used to get a string representing the AnimationCurve, which can be useful for debugging or logging. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ToString.html).
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary: Returns a string representing the AnimationCurve.
 math_operations:

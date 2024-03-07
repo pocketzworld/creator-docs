@@ -1,7 +1,13 @@
 name: ParticleSystem
 type: classes
 summary: |
-  [Unity's ParticleSystem Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.html)
+  The ParticleSystem class in Unity allows you to create visually complex and dynamic simulations like fire, smoke, or a flock of birds. From sparks flying in a firefight to the delicate dust particles in a sunbeam, particle systems bring a game to life.
+
+  At its core, a ParticleSystem shoots out particles in a certain direction and for a certain duration, but there's much more to it than that. You can control over a wide range of properties like the color, size, and shape of the particles, the speed and direction of their emission, and their behavior over their lifetime.
+
+  Want to have physics applied to your particles or intricate collisions? That's possible too. Given its scalability and rich feature set, ParticleSystem is a powerful tool for adding atmospheric and stylistic flair to your game.
+
+  To understand how to use ParticleSystem to its full potential, refer to [Unity's ParticleSystem Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.html).
 description:
 code_samples:
 inherits:
@@ -10,84 +16,84 @@ constructors:
 properties:
   - name: isPlaying
     summary: |
-      [Unity's ParticleSystem.isPlaying Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isPlaying.html)
+      The 'isPlaying' property tells you if the ParticleSystem is currently playing. It's helpful to alter behavior based on the state of the ParticleSystem. Check out [Unity's ParticleSystem.isPlaying Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isPlaying.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isEmitting
     summary: |
-      [Unity's ParticleSystem.isEmitting Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isEmitting.html)
+      The 'isEmitting' property helps you to determine if the ParticleSystem is currently emitting particles. This can be particularly useful for performance optimization. See [Unity's ParticleSystem.isEmitting Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isEmitting.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isStopped
     summary: |
-      [Unity's ParticleSystem.isStopped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isStopped.html)
+      The 'isStopped' property indicates whether the ParticleSystem has been stopped, thereby not emitting particles. It's ideal for enabling/disabling other game features based on Particle System's activity. More information in [Unity's ParticleSystem.isStopped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isStopped.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isPaused
     summary: |
-      [Unity's ParticleSystem.isPaused Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isPaused.html)
+      The 'isPaused' property signifies whether the ParticleSystem is currently paused or not. This can give you finer control over the game flow based on the ParticleSystem's state. Consult [Unity's ParticleSystem.isPaused Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-isPaused.html) for details.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: particleCount
     summary: |
-      [Unity's ParticleSystem.particleCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-particleCount.html)
+      The 'particleCount' property provides the current number of particles in the ParticleSystem, which is useful for performance tuning and diagnostics. Refer to [Unity's ParticleSystem.particleCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-particleCount.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: time
     summary: |
-      [Unity's ParticleSystem.time Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-time.html)
+      The 'time' property returns how long the Particle System has been playing. It's particularly useful when you need to trigger events based on the playback time of your Particle System. More details at [Unity's ParticleSystem.time Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-time.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: totalTime
     summary: |
-      [Unity's ParticleSystem.totalTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-totalTime.html)
+      The 'totalTime' property reflects the total lifetime of the Particle System in seconds. It's beneficial for initiating actions once the Particle System has ended. Check [Unity's ParticleSystem.totalTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-totalTime.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: randomSeed
     summary: |
-      [Unity's ParticleSystem.randomSeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-randomSeed.html)
+      The 'randomSeed' property allows you to seed the random number generator for reproducible effects. This can be beneficial for creating predictable visual effects. More at [Unity's ParticleSystem.randomSeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-randomSeed.html).
     description:
     is_static: false
     code_samples:
     type: number
   - name: useAutoRandomSeed
     summary: |
-      [Unity's ParticleSystem.useAutoRandomSeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-useAutoRandomSeed.html)
+      The 'useAutoRandomSeed' property, when set to true, lets Unity automatically generate a random seed allowing different effect each time. For more insights, check [Unity's ParticleSystem.useAutoRandomSeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-useAutoRandomSeed.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: proceduralSimulationSupported
     summary: |
-      [Unity's ParticleSystem.proceduralSimulationSupported Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-proceduralSimulationSupported.html)
+      The 'proceduralSimulationSupported' property indicates whether procedural simulation is supported on the Particle System. If supported, you can manipulate the Particle System without the overhead of enabling it. For further details, visit [Unity's ParticleSystem.proceduralSimulationSupported Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-proceduralSimulationSupported.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: has3DParticleRotations
     summary: |
-      [Unity's ParticleSystem.has3DParticleRotations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-has3DParticleRotations.html)
+      The 'has3DParticleRotations' property tells you if any particles in the Particle System have 3D rotations. Useful for optimizing processing when 3D rotations are not needed. Detailed info at [Unity's ParticleSystem.has3DParticleRotations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-has3DParticleRotations.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: hasNonUniformParticleSizes
     summary: |
-      [Unity's ParticleSystem.hasNonUniformParticleSizes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-hasNonUniformParticleSizes.html)
+      The 'hasNonUniformParticleSizes' property indicates whether the Particle System contains particles of non-uniform sizes. When true, this could influence specific rendering techniques. Check [Unity's ParticleSystem.hasNonUniformParticleSizes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem-hasNonUniformParticleSizes.html) for more information.
     description:
     is_static: false
     code_samples:
@@ -95,7 +101,7 @@ properties:
 methods:
   - name: Stop
     summary: |
-      [Unity's ParticleSystem.Stop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Stop.html)
+      The 'Stop' method halts the emission of particles, providing the option to stop instantaneously or let live particles die out naturally. Extremely helpful in controlling the lifecycle of particle emissions. See [Unity's ParticleSystem.Stop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Stop.html) for finer details.
     description:
     is_static: false
     code_samples:
@@ -103,13 +109,13 @@ methods:
       - name: includeChildren
         type: boolean
         default:
-        summary:
+        summary: Should the method affect all children of this Particle System?
     returns:
       - type: void
         summary:
   - name: Simulate
     summary: |
-      [Unity's ParticleSystem.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Simulate.html)
+      The 'Simulate' method advances the simulation of the ParticleSystem by the given number of seconds. It's particularly useful when creating effects that happen instantly, rather than over time. Visit [Unity's ParticleSystem.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Simulate.html).
     description:
     is_static: false
     code_samples:
@@ -117,25 +123,25 @@ methods:
       - name: t
         type: number
         default:
-        summary:
+        summary: The number of seconds to advance the Particle System simulation by.
       - name: withChildren
         type: boolean
         default:
-        summary:
+        summary: Should the simulation include all children of this Particle System?
       - name: restart
         type: boolean
         default:
-        summary:
+        summary: Should the Particle System be restarted before the simulation is run?
       - name: fixedTimeStep
         type: boolean
         default:
-        summary:
+        summary: Should Unity simulate each individual time step for the full duration of 't'?
     returns:
       - type: void
         summary:
   - name: Play
     summary: |
-      [Unity's ParticleSystem.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Play.html)
+      To restart the Particle System or resume it after a pause, use the 'Play' method. It includes an optional parameter to include all child systems. Read more at [Unity's ParticleSystem.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Play.html).
     description:
     is_static: false
     code_samples:
@@ -143,13 +149,13 @@ methods:
       - name: withChildren
         type: boolean
         default:
-        summary:
+        summary: Should the play request be propagated to all child systems?
     returns:
       - type: void
         summary:
   - name: Pause
     summary: |
-      [Unity's ParticleSystem.Pause Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Pause.html)
+      The 'Pause' method halts the simulation of the Particle System in its current state. It can be resumed later using the Play method. More details in [Unity's ParticleSystem.Pause Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Pause.html).
     description:
     is_static: false
     code_samples:
@@ -157,13 +163,13 @@ methods:
       - name: withChildren
         type: boolean
         default:
-        summary:
+        summary: Should the pause request apply to all child systems?
     returns:
       - type: void
         summary:
   - name: Clear
     summary: |
-      [Unity's ParticleSystem.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Clear.html)
+      The 'Clear' method removes all particles in the Particle System. It's a handy way to reset the Particle System to an empty state. Check [Unity's ParticleSystem.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Clear.html) for more details.
     description:
     is_static: false
     code_samples:
@@ -171,13 +177,13 @@ methods:
       - name: withChildren
         type: boolean
         default:
-        summary:
+        summary: Should the clear request include all child systems?
     returns:
       - type: void
         summary:
   - name: IsAlive
     summary: |
-      [Unity's ParticleSystem.IsAlive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.IsAlive.html)
+      The 'IsAlive' method lets you know if the ParticleSystem is still alive, meaning if it is still emitting particles or any of its particles are still alive. Allows for decision-making based on Particle System's state of activity. More info at [Unity's ParticleSystem.IsAlive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.IsAlive.html).
     description:
     is_static: false
     code_samples:
@@ -185,13 +191,13 @@ methods:
       - name: withChildren
         type: boolean
         default:
-        summary:
+        summary: Should the check include all child systems?
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if the ParticleSystem is still alive.
   - name: Emit
     summary: |
-      [Unity's ParticleSystem.Emit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Emit.html)
+      The 'Emit' method allows you to create new particles, emits the specified amount instantly. Useful to create a burst of particles at a particular time. [Unity's ParticleSystem.Emit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Emit.html) provides more details.
     description:
     is_static: false
     code_samples:
@@ -199,13 +205,13 @@ methods:
       - name: count
         type: number
         default:
-        summary:
+        summary: The number of particles to emit.
     returns:
       - type: void
         summary:
   - name: TriggerSubEmitter
     summary: |
-      [Unity's ParticleSystem.TriggerSubEmitter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.TriggerSubEmitter.html)
+      The 'TriggerSubEmitter' method triggers all sub-emitters on this Particle System, which means it starts their emission. Sub-Emitter allows to spawn new particles based on the state or behaviour of a particle in the parent system. More details are available in [Unity's ParticleSystem.TriggerSubEmitter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.TriggerSubEmitter.html).
     description:
     is_static: false
     code_samples:
@@ -213,13 +219,13 @@ methods:
       - name: subEmitterIndex
         type: number
         default:
-        summary:
+        summary: The index of the sub-emitter in the ParticleSystem's sub-emitters list.
     returns:
       - type: void
         summary:
   - name: AllocateAxisOfRotationAttribute
     summary: |
-      [Unity's ParticleSystem.AllocateAxisOfRotationAttribute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.AllocateAxisOfRotationAttribute.html)
+      The 'AllocateAxisOfRotationAttribute' method allocates particle attribute data for storing a separate axis of rotation per particle. Check the [Unity's ParticleSystem.AllocateAxisOfRotationAttribute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.AllocateAxisOfRotationAttribute.html) for further information.
     description:
     is_static: false
     code_samples:
@@ -229,7 +235,7 @@ methods:
         summary:
   - name: AllocateMeshIndexAttribute
     summary: |
-      [Unity's ParticleSystem.AllocateMeshIndexAttribute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.AllocateMeshIndexAttribute.html)
+      The 'AllocateMeshIndexAttribute' method allows for particle attribute data allocation to store a separate mesh index per particle. Visit [Unity's ParticleSystem.AllocateMeshIndexAttribute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.AllocateMeshIndexAttribute.html).
     description:
     is_static: false
     code_samples:
@@ -239,7 +245,7 @@ methods:
         summary:
   - name: ResetPreMappedBufferMemory
     summary: |
-      [Unity's ParticleSystem.ResetPreMappedBufferMemory Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.ResetPreMappedBufferMemory.html)
+      The 'ResetPreMappedBufferMemory' method resets the pre-allocated memory used to store particle data for external read/write access. More information is available at [Unity's ParticleSystem.ResetPreMappedBufferMemory Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.ResetPreMappedBufferMemory.html).
     description:
     is_static: true
     code_samples:
@@ -249,7 +255,7 @@ methods:
         summary:
   - name: SetMaximumPreMappedBufferCounts
     summary: |
-      [Unity's ParticleSystem.SetMaximumPreMappedBufferCounts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.SetMaximumPreMappedBufferCounts.html)
+      The 'SetMaximumPreMappedBufferCounts' method allows you to set the maximum buffer sizes for pre-mapped fixed buffers. Useful for optimizing memory usage. You can refer to [Unity's ParticleSystem.SetMaximumPreMappedBufferCounts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.SetMaximumPreMappedBufferCounts.html) for more details.
     description:
     is_static: true
     code_samples:
@@ -257,22 +263,12 @@ methods:
       - name: vertexBuffersCount
         type: number
         default:
-        summary:
+        summary: The maximum number of vertex buffers.
       - name: indexBuffersCount
         type: number
         default:
-        summary:
+        summary: The maximum number of index buffers.
     returns:
       - type: void
-        summary:
-  - name: ToString
-    summary: |
-      [Unity's ParticleSystem.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.ToString.html)
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
         summary:
 math_operations:

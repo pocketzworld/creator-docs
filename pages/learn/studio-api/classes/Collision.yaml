@@ -1,7 +1,12 @@
 name: Collision
 type: classes
 summary: |
-  [Unity's Collision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.html)
+  When your game objects start moving in your Unity game, you'll want them to interact with each other, and that's where the Collision class comes in handy. A Collision occurs when a moving object hits another object. The Collision class contains all the details about that collision, such as the velocity of the collision, the object hit, and the exact point the collision happened.
+
+  This class is packed with a variety of properties reflecting different aspects of a collision event. Whether you need to know the force behind the collision or the components attached to the collided object, these details are all at your fingertips provided by the Collision class.
+
+  The most common use of this is during "OnCollision" events that can be found in the Class.LuaBehaviour documentation. For more info, visit the [Unity's Collision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.html).
+
 description:
 code_samples:
 inherits:
@@ -9,69 +14,59 @@ constructors:
 properties:
   - name: impulse
     summary: |
-      [Unity's Collision.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-impulse.html)
+      The 'impulse' property gives you the total impulse applied by the physics engine to simulate the collision. This measurement helps gauging the "impact" of a collision. More details in [Unity's Collision.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-impulse.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: relativeVelocity
     summary: |
-      [Unity's Collision.relativeVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-relativeVelocity.html)
+      The 'relativeVelocity' property provides the relative linear velocity of the two colliding objects. It's a handy property that could be used for determining the speed of the collision. Visit [Unity's Collision.relativeVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-relativeVelocity.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rigidbody
     summary: |
-      [Unity's Collision.rigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-rigidbody.html)
+      The 'rigidbody' property refers to the Rigidbody component involved in the collision. Useful for manipulating the physical properties of the collided object. Check the [Unity's Collision.rigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-rigidbody.html).
     description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
   - name: body
     summary: |
-      [Unity's Collision.body Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-body.html)
+      The 'body' property behaves much like the 'rigidbody' property providing reference to the body of the collided object. Refer to [Unity's Collision.body Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-body.html).
     description:
     is_static: false
     code_samples:
     type: Class.Component
   - name: collider
     summary: |
-      [Unity's Collision.collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-collider.html)
+      The 'collider' property references the Collider involved in the collision. This is especially useful when you need to access or manipulate the properties of the Collider during a collision event. Visit [Unity's Collision.collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-collider.html) for more details.
     description:
     is_static: false
     code_samples:
     type: Class.Collider
   - name: transform
     summary: |
-      [Unity's Collision.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-transform.html)
+      The 'transform' property allows you to access the Transform of the collided object, providing potential manipulation of its position and rotation during collision events. Refer to [Unity's Collision.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-transform.html) for more.
     description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: gameObject
     summary: |
-      [Unity's Collision.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-gameObject.html)
+      The 'gameObject' property grants access to the GameObject involved in the collision. This can be useful for applying game logic based on the GameObject that was hit during the collision. More details in [Unity's Collision.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-gameObject.html).
     description:
     is_static: false
     code_samples:
     type: Class.GameObject
   - name: contactCount
     summary: |
-      [Unity's Collision.contactCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-contactCount.html)
+      The 'contactCount' property tells you how many individual points have come into contact during the collision. This is helpful in determining the extent of the collision. Learn more in [Unity's Collision.contactCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-contactCount.html).
     description:
     is_static: false
     code_samples:
     type: number
 methods:
-  - name: ToString
-    summary: |
-      [Unity's Collision.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.ToString.html)
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary:
 math_operations:

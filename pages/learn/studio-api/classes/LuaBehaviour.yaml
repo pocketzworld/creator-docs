@@ -1,7 +1,7 @@
 name: LuaBehaviour
 type: classes
 summary: |
-  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of JavaScript or C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to.
+  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to. 
 description:
 code_samples:
 inherits:
@@ -125,7 +125,7 @@ properties:
     code_samples: |
       ```lua
       self.Update:Connect(function()
-      print("This frame took " .. Time.deltaTime .. "seconds")
+        print("This frame took " .. Time.deltaTime .. "seconds")
       end)
       ```
     type: Class.Event
@@ -140,7 +140,7 @@ properties:
     code_samples: |
       ```lua
       self.LateUpdate:Connect(function()
-      print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
+        print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
       end)
       ```
     type: Class.Event
@@ -153,7 +153,7 @@ properties:
     code_samples: |
       ```lua
       self.FixedUpdate:Connect(function()
-      print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
+        print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
       end)
       ```
     type: Class.Event
@@ -168,7 +168,7 @@ properties:
     code_samples: |
       ```lua
       self.Start:Connect(function()
-      print("I started. This is still the first frame I am alive!")
+        print("I started. This is still the first frame I am alive!")
       end)
 
       print("I executed immediately! Not being in a function is kind of like Awake()")

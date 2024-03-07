@@ -1,7 +1,11 @@
 name: BoxCollider
 type: classes
 summary: |
-  [Unity's BoxCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.html)
+  In a virtual world, objects need to interact with each other — something as simple as not going through each other. That's where Unity's BoxCollider class plays its part. A BoxCollider is an invisible shape that’s attached to a GameObject and defines the GameObject's physical boundaries for interactions with other GameObjects. 
+
+  BoxCollider is often used for simple and axis-aligned objects like crates or buildings. It features properties such as 'center' and 'size' to define its position and dimensions respectively. It can be combined with the use of Class.RigidBody and used to determine an area for triggering events or even to detect collisions.
+
+  In essence, it gives solidity to a GameObject in a way that the GameObject can physically interact with the environment or other GameObjects. For instance, preventing a character from walking through a wall or detecting when a bullet hits a target. To gain deeper insights, check out the [official Unity BoxCollider documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.html).
 description:
 code_samples:
 inherits:
@@ -10,27 +14,17 @@ constructors:
 properties:
   - name: center
     summary: |
-      [Unity's BoxCollider.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-center.html)
+      The 'center' property establishes the position of the BoxCollider relative to the GameObject’s local coordinates. So, we can shift the placement of the BoxCollider without moving the GameObject it resides inside. You can visit the [Unity BoxCollider.center documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-center.html) to learn more.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: size
     summary: |
-      [Unity's BoxCollider.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-size.html)
+      The 'size' property is used to adjust the total size of the BoxCollider, in the GameObject’s local space. You might need to tune the size of a BoxCollider when the default boundary does not fit well with the shape of your GameObject. More information can be found in the [Unity BoxCollider.size documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-size.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
 methods:
-  - name: ToString
-    summary: |
-      [Unity's BoxCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.ToString.html)
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary:
 math_operations:
