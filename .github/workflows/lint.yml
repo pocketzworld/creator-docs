@@ -8,7 +8,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  lintAllTheThings:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,6 +20,7 @@ jobs:
             extends: default
             rules:
               line-length: disable
+              document-start: disable
               new-line-at-end-of-file:
                 level: warning
               trailing-spaces:
