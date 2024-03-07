@@ -1,7 +1,11 @@
 name: Screen
 type: classes
 summary: |
-  [Unity's Screen Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen.html)
+  A game interacts with players through screens, and displays different visuals based on the game state. The 'Screen' class in Unity provides a way to control and query the properties of the game screen.
+
+  The properties exposed by this class, such as 'width' and 'height', give the dimensions of the screen. The 'dpi', or dots per inch, provides the pixel density of the screen, which can be useful for ensuring that the game visuals look sharp across different screen sizes or resolution densities.
+
+  The 'Screen' class plays an important role in adapting things like UI elements to a user's device. To gain a deeper understanding about how to utilize this class to its full potential, check out the [official Unity Screen documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen.html).
 description:
 code_samples:
 inherits:
@@ -9,49 +13,49 @@ constructors:
 properties:
   - name: width
     summary: |
-      [Unity's Screen.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-width.html)
+      The 'width' property returns the current width of the game screen in pixels. This is particularly helpful when placing UI elements or adjusting game visuals based on screen size. Check out the [Unity Screen.width documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-width.html).
     description:
     is_static: true
     code_samples:
     type: number
   - name: height
     summary: |
-      [Unity's Screen.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-height.html)
+      The 'height' property retrieves the current height of the game screen in pixels. As with the width property, this can be used to adjust game visuals or position UI elements. More details can be found in the [Unity Screen.height documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-height.html).
     description:
     is_static: true
     code_samples:
     type: number
   - name: dpi
     summary: |
-      [Unity's Screen.dpi Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-dpi.html)
+      The 'dpi' property provides the current screen resolution, in dots per inch. This can help ensure your game visuals maintain high quality across devices with various screen sizes and resolution densities. To learn more, refer to the [Unity Screen.dpi documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-dpi.html).
     description:
     is_static: true
     code_samples:
     type: number
   - name: fullScreen
     summary: |
-      [Unity's Screen.fullScreen Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-fullScreen.html)
+      The 'fullScreen' property allows you to control whether the game is displayed in fullscreen mode. When set to true, the game occupies the entire display, otherwise it is displayed in a window. For more information, see the [Unity Screen.fullScreen documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-fullScreen.html).
     description:
     is_static: true
     code_samples:
     type: boolean
   - name: safeArea
     summary: |
-      [Unity's Screen.safeArea Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-safeArea.html)
+      The 'safeArea' property gives you a rectangle that excludes certain areas of the screen like the notch on mobile devices or the taskbar on desktop platforms. This ensures that your game content will be fully visible on all screens. More details can be found at the [Unity Screen.safeArea documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-safeArea.html).
     description:
     is_static: true
     code_samples:
     type: DataType.Rect
   - name: sleepTimeout
     summary: |
-      [Unity's Screen.sleepTimeout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-sleepTimeout.html)
+      The 'sleepTimeout' property lets you set a timeout after which the device's screen will go to sleep. This is especially important in mobile games to save battery, handle screen locking, or control when the system can idle and dim the game display. Visit the [Unity Screen.sleepTimeout documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-sleepTimeout.html) for more insights.
     description:
     is_static: true
     code_samples:
     type: number
   - name: brightness
     summary: |
-      [Unity's Screen.brightness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-brightness.html)
+      The 'brightness' property provides a mechanism to adjust the brightness of the game screen. This can be essential in offering players a way to fine-tune their screen's brightness based on their surroundings or personal preference. More information is available in [Unity Screen.brightness documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-brightness.html).
     description:
     is_static: true
     code_samples:
