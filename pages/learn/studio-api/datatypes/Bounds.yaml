@@ -1,0 +1,188 @@
+name: Bounds
+type: datatypes
+summary: |
+  The Bounds datatype in Unity represents an axis-aligned bounding box. It acts as a simple container for a center position and the extents (further subdivided into size, min, max) of a box that can be used for collision detection, visibility testing, or other similar tasks in your game. For understanding how it functions in a Unity environment, have a look at the [official Unity Bounds documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.html).
+description:
+code_samples:
+inherits:
+constructors:
+  - name: new
+    summary: |
+      Using the 'new' constructor, we create a new Bounds object by providing a central point and the size of the box. To dive deeper, read the [Unity Bounds.new documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-ctor.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        default:
+        summary: This specifies the center of the bounding box in three-dimensional space.
+      - name: size
+        type: DataType.Vector3
+        default:
+        summary: This represents the total size of the bounding box along each axis.
+    returns:
+      - type: DataType.Bounds
+        summary: Returns a Bounds object with the provided center and size.
+properties:
+  - name: center
+    summary: |
+      The 'center' property is a Vector3 value that signifies the central point of the bounding box. The [Unity Bounds.center documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-center.html) provides more detailed information.
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: size
+    summary: |
+      The 'size' property represents the size of the bounding box for each dimension - how wide, tall, and deep it is. For more information, you can check the [Unity Bounds.size documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-size.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: extents
+    summary: |
+      The 'extents' property is similar to size but it represents half the size of the bounding box in each dimension. This can be used when you need to measure from the center of the bounding box. Refer to the [Unity Bounds.extents documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-extents.html) for more details.
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: min
+    summary: |
+      The 'min' property tells you the minimum value (lower-left-front corner) of the bounding box coordinates. For additional information, visit the [Unity Bounds.min documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-min.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: max
+    summary: |
+      The 'max' property provides the maximal value (upper-right-back corner) of the bounding box coordinates. The [Unity Bounds.max documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-max.html) explores this in more detail.
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+methods:
+  - name: SetMinMax
+    summary: |
+      With the 'SetMinMax' method, you can define the minimum and maximum corners of the bounding box. To learn more about it, check the [Unity Bounds.SetMinMax documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.SetMinMax.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: min
+        type: DataType.Vector3
+        default:
+        summary: This specifies the smallest value for each coordinate of the bounding box.
+      - name: max
+        type: DataType.Vector3
+        default:
+        summary: This represents the largest value for each coordinate of the bounding box.
+    returns:
+      - type: void
+        summary:
+  - name: Encapsulate
+    summary: |
+      The 'Encapsulate' method grows the Bounds to include a point or bounds. You would typically use this when you have a set of points and you want a bounding box that encloses all these points. More details are available in the [Unity Bounds.Encapsulate documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Encapsulate.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        default:
+        summary: The new point to include within the bounding box.
+    returns:
+      - type: void
+        summary:
+  - name: Expand
+    summary: |
+      The 'Expand' method increases the size of the bounding box by the given amount (in both directions). Refer to the [Unity Bounds.Expand documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Expand.html) to understand it better.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: amount
+        type: number
+        default:
+        summary: The amount by which the bounding box should be expanded (shrank if negative).
+    returns:
+      - type: void
+        summary:
+  - name: Intersects
+    summary: |
+      The 'Intersects' method checks whether the current bounding box intersects with another bounding box. You can use this to determine if two objects are likely to be colliding. Details are in the [Unity Bounds.Intersects documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Intersects.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: bounds
+        type: DataType.Bounds
+        default:
+        summary: The other bounding box to test intersection with.
+    returns:
+      - type: boolean
+        summary: Returns true if the bounding boxes intersect, false otherwise.
+  - name: IntersectRay
+    summary: |
+      The 'IntersectRay' method is particularly useful in determining if a specified Ray intersects the bounds. This can prove vital in various game scenarios for interaction detection such as determining if a projectile is in range of an object or if a click or tap in screen space intersects a game object. It evaluates the intersection and returns true if the Ray intersects with the bounds, otherwise it returns false. More information about this can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.IntersectRay.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        default:
+        summary: The Ray instance against which the intersection is to be checked.
+    returns:
+      - type: boolean
+        summary: Returns true if the Ray intersects with the bounds, otherwise false.
+  - name: Contains
+    summary: |
+      The 'Contains' method is used to check whether a specific point is within the current bounding box. To get a deeper understanding, you can check the [Unity Bounds.Contains documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Contains.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        default:
+        summary: This is the point which you want to check.
+    returns:
+      - type: boolean
+        summary: Returns true if the point is inside the bounding box, false otherwise.
+  - name: SqrDistance
+    summary: |
+      The 'SqrDistance' method returns the squared distance from a point to the bounding box. Squared distances can be useful for comparison without needing the computationally expensive square root operation. See the [Unity Bounds.SqrDistance documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.SqrDistance.html) for more information.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        default:
+        summary: The point from which the distance is measured.
+    returns:
+      - type: number
+        summary: Returns the squared distance from the bounding box to the point.
+  - name: ClosestPoint
+    summary: |
+      The 'ClosestPoint' method gives the closest point on or inside the bounding box to a given point. This can be helpful in figuring out how close an object is to entering a bounding box. More details are in the [Unity Bounds.ClosestPoint documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.ClosestPoint.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        default:
+        summary: This is the location from which the closest point is determined.
+    returns:
+      - type: DataType.Vector3
+        summary: Returns the closest point within or on the bounding box to the given point.
+math_operations:
+  - operation: "=="
+    summary: |
+      The '==' operation checks if two bounding boxes are equal in terms of their center and extents. Get further details in the [Unity Bounds.operator_eq documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds-operator_eq.html).
+    description:
+    type_a: Bounds
+    type_b: Bounds
+    return_type: boolean
+    code_samples:

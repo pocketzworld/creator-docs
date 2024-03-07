@@ -1,0 +1,36 @@
+name: BoxCollider
+type: classes
+summary: |
+  [Unity's BoxCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.html)
+description:
+code_samples:
+inherits:
+  - Class.Collider
+constructors:
+properties:
+  - name: center
+    summary: |
+      [Unity's BoxCollider.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-center.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: size
+    summary: |
+      [Unity's BoxCollider.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-size.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+methods:
+  - name: ToString
+    summary: |
+      [Unity's BoxCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+math_operations:

@@ -1,0 +1,511 @@
+name: VisualElement
+type: classes
+summary: |
+  VisualElement forms the backbone of Unity's UI Toolkit, serving as the foundational class from which all interface components - buttons, text fields, images, and more - derive. Each visual element within Unity's design system inherits from this class, effectively unlocking a treasure trove of properties and methods that power the creation of intricate user interfaces.
+
+  What sets VisualElement apart is its versatility. It not only provides control over the layout and behavior of each interface element but also introduces the ability to manipulate styling and handle various events with ease. Additionally, it embraces the utility of stylesheets, enabling the application of consistent and reusable styles across different interface elements to maintain a coherent look and feel across the user interface.
+
+  To delve deeper into its capabilities, refer to the [official Unity Documentation on the VisualElement class](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.html). Understanding VisualElement is foundational to mastering game UI development in Unity. From beginners taking their first steps, to seasoned professionals refining their craft, the VisualElement class remains a critical tool within Unity's design system.
+description:
+code_samples:
+inherits:
+constructors:
+  - name: new
+    summary: |
+      The constructor for the VisualElement class. It creates a new instance of an object of the VisualElement class. To understand more about its usage, consult the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-ctor.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.VisualElement
+        summary: Return a new instance of VisualElement.
+properties:
+  - name: viewDataKey
+    summary: |
+      The 'viewDataKey' property is used to fetch or modify the key that represents a VisualElement's persistent data.understand more about how this key is used in persisting data across different states, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-viewDataKey.html).
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: canGrabFocus
+    summary: |
+      The 'canGrabFocus' property is used to determine whether the VisualElement can receive focus or not. It is especially important when dealing with input elements in your user interface. Find additional details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-canGrabFocus.html).
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: layout
+    summary: |
+      The 'layout' property gives access to a Rect that represents the layout of the VisualElement. This property encapsulates the x and y positions, width and height that work together to determine the position and size of the VisualElement. To understand more about unity layouts, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-layout.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: contentRect
+    summary: |
+      The 'contentRect' property provides a Rect type value that represents the area dedicated to the content of the VisualElement, excluding the border and padding. To learn more about its usage, visit [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentRect.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: worldBound
+    summary: |
+      The 'worldBound' property gives a Rect representing the bonding box of the VisualElement relative to the root of the hierarchy. For more information about how this can be useful, check out the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldBound.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: localBound
+    summary: |
+      The 'localBound' property provides a Rect representing the bounding box of the VisualElement relative to its own space. For more contextual details on how this property is used, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-localBound.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: worldTransform
+    summary: |
+      The 'worldTransform' property provides a Matrix4x4 representing the transform of the VisualElement relative to the root of the hierarchy. It can be used to convert positions from local space to world space and vice versa. For more details, visit the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldTransform.html).
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: name
+    summary: |
+      The 'name' property of the VisualElement is used to get or set the name of the element. Often, naming elements can be useful for accessing them quickly, debugging, or providing unique identifiers when necessary. To get more insights, refer to the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-name.html).
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: enabledInHierarchy
+    summary: |
+      The 'enabledInHierarchy' property is a read-only property that indicates if a VisualElement is enabled and is in an active hierarchy. More contextual information can be found in the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledInHierarchy.html).
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: enabledSelf
+    summary: |
+      The 'enabledSelf' property allows you to check and change whether the element is enabled. This is independent of its status in the hierarchy. For more information on enabling and disabling VisualElements, check the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledSelf.html).
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: visible
+    summary: |
+      The 'visible' property allows you to get or set the visibility of the VisualElement. Changing this value will hide or display the VisualElement on the screen. For more detailed insights on its usage, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-visible.html).
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: parent
+    summary: |
+      The 'parent' property returns a reference to the parent of this VisualElement. It can be useful when navigating the hierarchy of visual elements. Additional context can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-parent.html).
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: contentContainer
+    summary: |
+      The 'contentContainer' property is used to access the Immediate child where the VisualElement's content is drawn. It is typically used by derived classes that wish to provide a VisualElement that can be styled from user code. For more context, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentContainer.html).
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: childCount
+    summary: |
+      The 'childCount' property can be used to get the number of children owned by this VisualElement. It streamlined the process of iterating through a VisualElement's children. For more details, check out the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-childCount.html).
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: tooltip
+    summary: |
+      The 'tooltip' property lets you get or set the tooltip for this VisualElement. Tooltips can be quite useful to provide additional contextual information when the user hovers over a VisualElement. Further details can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-tooltip.html).
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: disabledUssClassName
+    summary: |
+      [Unity's VisualElement.disabledUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-disabledUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+methods:
+  - name: Q
+    summary: |
+      The 'Q' method is a querying function that can be used to find a child VisualElement from the current VisualElement by name. This is particularly helpful when you need to fetch a specific child element without iterating through all elements. Deep dive into this method by visiting the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Q.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: The name of the child VisualElement to find.
+    returns:
+      - type: Class.VisualElement
+        summary: Returns the found VisualElement, if any.
+  - name: RegisterCallback
+    summary: |
+      The 'RegisterCallback' method is instrumental in setting up event handlers for different types of events triggered by the VisualElement, like clicks or keyboard input. However, the exact details about what this method does would be based on the Unity documentation link provided (which is missing).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+  - name: RegisterPressCallback
+    summary: |
+      The 'RegisterPressCallback' method provides a mechanism to set up event handlers specifically for press events. It could be useful when you want to do something when the user presses on a VisualElement - a button click, for example. Detailed usage of this method can be inferred from the official Unity documentation link (which is missing here).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterLongPressCallback
+    summary: |
+      The 'RegisterLongPressCallback' method is used to setup event handlers specifically for long press events. This can be quite useful if you want to treat a long press differently than a regular press, for example showing context menu on long press. However, the specific details on how to use this method would be based on official Unity documentation link - which is missing.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Focus
+    summary: |
+      The 'Focus' method brings focus to this VisualElement. This could be useful when the user has a lot of UI elements and you want to control where the input events need to go, for example focusing a text field for user to input text. For more information on its usage, refer to the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Focus.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetEnabled
+    summary: |
+      The 'SetEnabled' method allows you to enable or disable the VisualElement. When disabled, a VisualElement will not receive input events and will be skipped in the UI rendering process. For more context, check out the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.SetEnabled.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: boolean
+        default:
+        summary: The boolean value to enable or disable the VisualElement.
+    returns:
+      - type: void
+        summary:
+  - name: MarkDirtyRepaint
+    summary: |
+      The 'MarkDirtyRepaint' method marks the VisualElement as dirty and schedules a repaint of the element. This method can be used when you have updated the VisualElement and want to ensure that the changes are visually reflected on the screen. More information can be found in the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.MarkDirtyRepaint.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ContainsPoint
+    summary: |
+      The 'ContainsPoint' method checks if the given point lies within the VisualElement. It's particularly useful for hit detection, for instance, checking if a mouse click point is within a button's area. To understand more about its use and workings, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ContainsPoint.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: localPoint
+        type: DataType.Vector2
+        default:
+        summary: The local point to check.
+    returns:
+      - type: boolean
+        summary: Returns true if the point is within the element, false otherwise.
+  - name: Overlaps
+    summary: |
+      The 'Overlaps' method checks if the VisualElement overlaps with a given rectangle. It's useful, for example, in UI design for testing if elements are visually intersecting. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Overlaps.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: rectangle
+        type: DataType.Rect
+        default:
+        summary: The rectangle to check for an overlap.
+    returns:
+      - type: boolean
+        summary: Returns true if the VisualElement overlaps with the rectangle, false otherwise.
+  - name: ClearClassList
+    summary: |
+      The 'ClearClassList' method is used to clear the list of class names applied to the VisualElement. It is useful when resetting the styles applied to the VisualElement. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ClearClassList.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: AddToClassList
+    summary: |
+      The 'AddToClassList' method enables adding a class to the VisualElement. It can be useful when styling UI components or when adding functional classes to elements. More use cases can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.AddToClassList.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: The class name to be added.
+    returns:
+      - type: void
+        summary:
+  - name: RemoveFromClassList
+    summary: |
+      The 'RemoveFromClassList' method is utilized to remove a class from a VisualElement. It's great for dynamically switching styles or functionality of elements during runtime. Detailed context can be obtained from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveFromClassList.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: The class name to be removed.
+    returns:
+      - type: void
+        summary:
+  - name: ToggleInClassList
+    summary: |
+      The 'ToggleInClassList' method either adds or removes a class to/from the VisualElement based on its current presence. This toggling can be useful when some UI elements need to alternate between two states/styles. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ToggleInClassList.html) provides additional context.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: The class name to be toggled.
+    returns:
+      - type: void
+        summary:
+  - name: EnableInClassList
+    summary: |
+      The 'EnableInClassList' method controls whether a class is applied to the VisualElement. It is great for switching on/off certain class functionality based on user actions or other events. More information can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.EnableInClassList.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: The class name to be enabled or disabled.
+      - name: enable
+        type: boolean
+        default:
+        summary: True to enable the class name and false to disable.
+    returns:
+      - type: void
+        summary:
+  - name: ClassListContains
+    summary: |
+      The 'ClassListContains' method checks if a VisualElement has a specific class. It is handy when there is a need to perform actions based on whether a VisualElement has a specific class. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ClassListContains.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: cls
+        type: string
+        default:
+        summary: The class to check.
+    returns:
+      - type: boolean
+        summary: Returns true if the VisualElement has the class, false otherwise.
+  - name: Add
+    summary: |
+      The 'Add' method enables you to add a child to the VisualElement. It's especially useful when constructing user interfaces by nesting VisualElements. Please refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Add.html) to learn more about it.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: child
+        type: Class.VisualElement
+        default:
+        summary: The VisualElement to be added as a child.
+    returns:
+      - type: void
+        summary:
+  - name: Insert
+    summary: |
+      The 'Insert' method is used to insert a VisualElement at a specific position in the list of children. It's valuable when order matters in your UI and you want to insert elements in places other than the start or end of the list. More context can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Insert.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary: The index at which the element will be inserted.
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary: The VisualElement to be inserted.
+    returns:
+      - type: void
+        summary:
+  - name: Remove
+    summary: |
+      The 'Remove' method removes a child from the VisualElement. This operation is useful when updating the structure of your UI in response to changes in game state or user input. More information can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Remove.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary: The VisualElement to be removed.
+    returns:
+      - type: void
+        summary:
+  - name: RemoveAt
+    summary: |
+      The 'RemoveAt' method removes the child VisualElement at a given index. It's handy when you want to deal with elements at specific positions in your UI hierarchy. For additional details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveAt.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary: The index of the child element to remove.
+    returns:
+      - type: void
+        summary:
+  - name: Clear
+    summary: |
+      The 'Clear' method removes all children from the VisualElement. It's particularly effective when you want to completely refresh a portion of your UI or clear out a container element. More use cases can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Clear.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ElementAt
+    summary: |
+      The 'ElementAt' method retrieves a child VisualElement at a specific index. This is helpful when dealing with child elements in your user interface. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ElementAt.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary: The index of the child VisualElement to retrieve.
+    returns:
+      - type: Class.VisualElement
+        summary: Returns the child VisualElement at the specified index.
+  - name: IndexOf
+    summary: |
+      The 'IndexOf' method retrieves the index of a child VisualElement. This can be utilized when you have a reference to a VisualElement and want to know its order in the parent. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.IndexOf.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary: The child VisualElement whose index to retrieve.
+    returns:
+      - type: number
+        summary: Returns the index of the child VisualElement.
+  - name: BringToFront
+    summary: |
+      The 'BringToFront' method moves the VisualElement to the front of its siblings, changing the visual stacking order. It's useful when you want to ensure a specific element appears above others, for example in a stack of cards. More context can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.BringToFront.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SendToBack
+    summary: |
+      The 'SendToBack' method sends the VisualElement to the back of its siblings. Like 'BringToFront', this affects the visual stacking order of elements. It's beneficial when you want to send a specific element behind all others. For more detailed understanding, check out the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.SendToBack.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: PlaceBehind
+    summary: |
+      The 'PlaceBehind' method places the VisualElement behind a specified sibling. It allows more fine-tuned control over the visual stacking order of elements. More context can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.PlaceBehind.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: sibling
+        type: Class.VisualElement
+        default:
+        summary: The VisualElement behind which this element will be placed.
+    returns:
+      - type: void
+        summary:
+  - name: PlaceInFront
+    summary: |
+      The 'PlaceInFront' method places the VisualElement in front of a specified sibling. This method can be used to finely control the visual stacking order of elements. Additional insights can be gleaned from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.PlaceInFront.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: sibling
+        type: Class.VisualElement
+        default:
+        summary: The VisualElement in front of which this element will be placed.
+    returns:
+      - type: void
+        summary:
+  - name: RemoveFromHierarchy
+    summary: |
+      The 'RemoveFromHierarchy' method detaches the VisualElement from its parent in the VisualElement hierarchy. It's useful for moving elements between parents or temporarily removing elements from the UI. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveFromHierarchy.html) provides more context.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Contains
+    summary: |
+      The 'Contains' method checks if the VisualElement contains a certain child. It's useful for verifying the existence of a VisualElement in a collection of children. For more advanced use and examples, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Contains.html).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: child
+        type: Class.VisualElement
+        default:
+        summary: The child to check for.
+    returns:
+      - type: boolean
+        summary: Returns true if the child is contained, false otherwise.
+  - name: FindCommonAncestor
+    summary: |
+      The 'FindCommonAncestor' method seeks the shared ancestor of this VisualElement and another specified VisualElement. This operation can be useful in various contexts, such as determining the relationship between two elements within a hierarchy. Checking out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.FindCommonAncestor.html) might help understand its usage better.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: other
+        type: Class.VisualElement
+        default:
+        summary: The other VisualElement to find the common ancestor with.
+    returns:
+      - type: Class.VisualElement
+        summary: The common ancestor VisualElement, if any.
+math_operations:

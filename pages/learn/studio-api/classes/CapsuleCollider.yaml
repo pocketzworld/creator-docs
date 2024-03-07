@@ -1,0 +1,50 @@
+name: CapsuleCollider
+type: classes
+summary: |
+  [Unity's CapsuleCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CapsuleCollider.html)
+description:
+code_samples:
+inherits:
+  - Class.Collider
+constructors:
+properties:
+  - name: center
+    summary: |
+      [Unity's CapsuleCollider.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CapsuleCollider-center.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: radius
+    summary: |
+      [Unity's CapsuleCollider.radius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CapsuleCollider-radius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: height
+    summary: |
+      [Unity's CapsuleCollider.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CapsuleCollider-height.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: direction
+    summary: |
+      [Unity's CapsuleCollider.direction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CapsuleCollider-direction.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:
+  - name: ToString
+    summary: |
+      [Unity's CapsuleCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CapsuleCollider.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+math_operations:

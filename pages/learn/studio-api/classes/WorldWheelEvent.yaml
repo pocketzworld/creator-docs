@@ -1,0 +1,28 @@
+name: WorldWheelEvent
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: delta
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods:
+  - name: ToString
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+math_operations:

@@ -1,0 +1,184 @@
+name: LineRenderer
+type: classes
+summary: |
+  [Unity's LineRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.html)
+description:
+code_samples:
+inherits:
+  - Class.Renderer
+constructors:
+properties:
+  - name: startWidth
+    summary: |
+      [Unity's LineRenderer.startWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: endWidth
+    summary: |
+      [Unity's LineRenderer.endWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-endWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: widthMultiplier
+    summary: |
+      [Unity's LineRenderer.widthMultiplier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-widthMultiplier.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: numCornerVertices
+    summary: |
+      [Unity's LineRenderer.numCornerVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-numCornerVertices.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: numCapVertices
+    summary: |
+      [Unity's LineRenderer.numCapVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-numCapVertices.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: useWorldSpace
+    summary: |
+      [Unity's LineRenderer.useWorldSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-useWorldSpace.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: loop
+    summary: |
+      [Unity's LineRenderer.loop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-loop.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: startColor
+    summary: |
+      [Unity's LineRenderer.startColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: endColor
+    summary: |
+      [Unity's LineRenderer.endColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-endColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: positionCount
+    summary: |
+      [Unity's LineRenderer.positionCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-positionCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: textureScale
+    summary: |
+      [Unity's LineRenderer.textureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-textureScale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: shadowBias
+    summary: |
+      [Unity's LineRenderer.shadowBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-shadowBias.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: generateLightingData
+    summary: |
+      [Unity's LineRenderer.generateLightingData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-generateLightingData.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: widthCurve
+    summary: |
+      [Unity's LineRenderer.widthCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-widthCurve.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.AnimationCurve
+methods:
+  - name: SetPosition
+    summary: |
+      [Unity's LineRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.SetPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary:
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPosition
+    summary: |
+      [Unity's LineRenderer.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.GetPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: Simplify
+    summary: |
+      [Unity's LineRenderer.Simplify Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.Simplify.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: tolerance
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: BakeMesh
+    summary: |
+      [Unity's LineRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.BakeMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: mesh
+        type: Class.Mesh
+        default:
+        summary:
+      - name: useTransform
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ToString
+    summary: |
+      [Unity's LineRenderer.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+math_operations:

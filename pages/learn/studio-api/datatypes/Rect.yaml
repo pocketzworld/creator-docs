@@ -1,0 +1,259 @@
+name: Rect
+type: datatypes
+summary: |
+  [Unity's Rect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.html)
+description:
+code_samples:
+inherits:
+constructors:
+  - name: new
+    summary: |
+      [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+      - name: width
+        type: number
+        default:
+        summary:
+      - name: height
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Rect
+        summary:
+properties:
+  - name: x
+    summary: |
+      [Unity's Rect.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-x.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: y
+    summary: |
+      [Unity's Rect.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-y.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: position
+    summary: |
+      [Unity's Rect.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-position.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: center
+    summary: |
+      [Unity's Rect.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-center.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: min
+    summary: |
+      [Unity's Rect.min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-min.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: max
+    summary: |
+      [Unity's Rect.max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-max.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: width
+    summary: |
+      [Unity's Rect.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-width.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: height
+    summary: |
+      [Unity's Rect.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-height.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: size
+    summary: |
+      [Unity's Rect.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-size.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: xMin
+    summary: |
+      [Unity's Rect.xMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMin.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: yMin
+    summary: |
+      [Unity's Rect.yMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-yMin.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: xMax
+    summary: |
+      [Unity's Rect.xMax Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMax.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: yMax
+    summary: |
+      [Unity's Rect.yMax Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-yMax.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: zero
+    summary: |
+      The 'zero' property produces a Rect (Rectangle) instance with all of its positional and size values (x, y, width, and height) set to zero. This represents a rectangle at the origin of the 2D space, with no width nor height. In other words, it's a point at the origin. Learn more in [Unity's Rect.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-zero.html).
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Rect
+methods:
+  - name: Set
+    summary: |
+      [Unity's Rect.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Set.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary:
+      - name: y
+        type: number
+        default:
+        summary:
+      - name: width
+        type: number
+        default:
+        summary:
+      - name: height
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Contains
+    summary: |
+      [Unity's Rect.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Contains.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: point
+        type: DataType.Vector2
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Overlaps
+    summary: |
+      [Unity's Rect.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Overlaps.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: other
+        type: DataType.Rect
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: MinMaxRect
+    summary: |
+      [Unity's Rect.MinMaxRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.MinMaxRect.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: xmin
+        type: number
+        default:
+        summary:
+      - name: ymin
+        type: number
+        default:
+        summary:
+      - name: xmax
+        type: number
+        default:
+        summary:
+      - name: ymax
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Rect
+        summary:
+  - name: NormalizedToPoint
+    summary: |
+      [Unity's Rect.NormalizedToPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.NormalizedToPoint.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: rectangle
+        type: DataType.Rect
+        default:
+        summary:
+      - name: normalizedRectCoordinates
+        type: DataType.Vector2
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: PointToNormalized
+    summary: |
+      [Unity's Rect.PointToNormalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.PointToNormalized.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: rectangle
+        type: DataType.Rect
+        default:
+        summary:
+      - name: point
+        type: DataType.Vector2
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+math_operations:
+  - operation: "=="
+    summary: |
+      [Unity's Rect.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-operator_eq.html)
+    description:
+    type_a: Rect
+    type_b: Rect
+    return_type: boolean
+    code_samples:

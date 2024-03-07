@@ -1,0 +1,22 @@
+name: TerrainCollider
+type: classes
+summary: |
+  [Unity's TerrainCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TerrainCollider.html)
+description:
+code_samples:
+inherits:
+  - Class.Collider
+constructors:
+properties:
+methods:
+  - name: ToString
+    summary: |
+      [Unity's TerrainCollider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TerrainCollider.ToString.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+math_operations:

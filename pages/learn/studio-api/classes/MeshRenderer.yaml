@@ -1,0 +1,37 @@
+name: MeshRenderer
+type: classes
+summary: |
+  In Unity's toolbox, the MeshRenderer is akin to a paintbrush which 'draws' the 3D objects onto the screen. It is a crucial component class within Unity's render system, taking the raw geometry data from the Mesh Filter and using it to render the object onto the game's window.
+
+  Working interdependently with the object's Class.Transform component, the MeshRenderer displays the 3D graphics at the precise position, rotation, and scale defined by the Transform. Additionally, it features the capability to tweak a GameObject's Material properties, allowing developers to adjust the visual appearance of their objects.
+
+  The partnership between MeshRenderer and Mesh Filter is fundamental to Unity's method of rendering 3D objects. For in-depth insights into how you can wield the MeshRenderer to influence the visual aesthetics of your game, dive into the [official Unity MeshRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer.html).
+description:
+code_samples:
+inherits:
+  - Class.Renderer
+constructors:
+properties:
+  - name: additionalVertexStreams
+    summary: |
+      The additionalVertexStreams property is a Mesh that contains additional vertex data Streams. It is a highly advanced property that should be used with Shader Inputs that are expecting to receive this data. More can be found in [documentation link](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-additionalVertexStreams.html).
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Mesh
+  - name: enlightenVertexStream
+    summary: |
+      The enlightenVertexStream property provides a Mesh that has the Enlighten data Vertex Stream. Enlighten is the lighting system used in Unity's Render to provide Real-time Global Illumination. For more details, refer to [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-enlightenVertexStream.html).
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Mesh
+  - name: subMeshStartIndex
+    summary: |
+      The subMeshStartIndex of a mesh represents the first index of the submesh within the MeshRenderer. Submeshes are subsets of a mesh, and are often used to apply different materials to different parts of a mesh. Further details can be found [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshRenderer-subMeshStartIndex.html).
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:
+math_operations:

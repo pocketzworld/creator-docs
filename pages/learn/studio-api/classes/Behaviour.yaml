@@ -1,0 +1,26 @@
+name: Behaviour
+type: classes
+summary: |
+  The Behaviour class in Unity is a special kind of Component that can enable or disable a GameObject's functionality. This forms the base class from which different kinds of active functionalities, like scripts (MonoBehaviour), physics (Rigidbody), and renderers (MeshRenderer) derive from. For a deeper dive, consider checking out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour.html).
+description:
+code_samples:
+inherits:
+  - Class.Component
+constructors:
+properties:
+  - name: enabled
+    summary: |
+      The 'enabled' property allows you to dynamically enable or disable a Behaviour at runtime. This can be used to control the active state of scripts, physics behaviours, renderers and more on a GameObject. For extensive details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-enabled.html).
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isActiveAndEnabled
+    summary: |
+      The 'isActiveAndEnabled' property returns true if the Behaviour is enabled and the GameObject it is attached to is active, otherwise false. This is particularly useful when you want to check if any specific behaviour of a GameObject is currently active or not. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-isActiveAndEnabled.html).
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods:
+math_operations:
