@@ -1,11 +1,11 @@
 {
   "guides": {
     "title": "Guides",
-    "redirectTo": "/learn/guides/bots/creating-a-bot"
+    "redirectTo": "/learn/guides/studio/creating-your-first-world"
   },
-  "engine-api": {
+  "studio-api": {
     "title": "Studio Api",
-    "redirectTo": "/learn/engine-api/classes/GameObject"
+    "redirectTo": "/learn/studio-api/classes/GameObject"
   },
   "bots-api": {
     "title": "Bots Api",
