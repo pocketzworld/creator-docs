@@ -1,7 +1,11 @@
 name: Physics
 type: classes
 summary: |
-  [Unity's Physics Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.html)
+  The Physics class is a central part of Unity's physics engine, responsible for various global physical simulations in your Scene. Whether it's simulating gravity, handling collisions, or detecting the interplay between GameObjects, the Physics class plays a significant role. It also provides information and controls over global settings such as gravity and layer collision settings.
+
+  Imagine you're playing a game of pool. In this scenario, the Physics class serves as the invisible hand that defines the direction and speed of balls when hit, determines when collisions occur, and decides how balls should bounce off each other or the pool table edges.
+
+  This is your one stop shop for controlling and getting information about the physics simulation. For more information, explore the details in [Unity's Physics Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.html).
 description:
 code_samples:
 inherits:
@@ -9,147 +13,42 @@ constructors:
 properties:
   - name: gravity
     summary: |
-      [Unity's Physics.gravity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-gravity.html)
+      The 'gravity' property gives you control over the global gravity applied in the physics simulation. By default, it acts downward with a force of 9.8 m/s squared, much like gravity on Earth. Dive deeper into [Unity's Physics.gravity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-gravity.html) to understand its impact.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: defaultContactOffset
     summary: |
-      [Unity's Physics.defaultContactOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultContactOffset.html)
+      The 'defaultContactOffset' property holds information about the default contact offset. When two Collider components approach closer than this distance, they are considered in contact. For more understanding, review [Unity's Physics.defaultContactOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultContactOffset.html).
     description:
     is_static: true
     code_samples:
     type: number
   - name: sleepThreshold
     summary: |
-      [Unity's Physics.sleepThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-sleepThreshold.html)
+      The 'sleepThreshold' property demarcates the speed below which GameObjects will not move or react to collisions. This helps in optimizing the simulation for static or slow-moving objects. You can learn more from [Unity's Physics.sleepThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-sleepThreshold.html).
     description:
     is_static: true
     code_samples:
     type: number
   - name: queriesHitTriggers
     summary: |
-      [Unity's Physics.queriesHitTriggers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-queriesHitTriggers.html)
+      The 'queriesHitTriggers' property helps control whether physics queries (like raycasts) should interact with Collider components marked as Trigger. If you want to know more, check out the [Unity's Physics.queriesHitTriggers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-queriesHitTriggers.html).
     description:
     is_static: true
     code_samples:
     type: boolean
   - name: queriesHitBackfaces
     summary: |
-      [Unity's Physics.queriesHitBackfaces Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-queriesHitBackfaces.html)
+      The 'queriesHitBackfaces' property is responsible for determining if physics queries should register hits on the backfaces (the side opposite to the normal direction) of Collider components. You will find additional details in [Unity's Physics.queriesHitBackfaces Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-queriesHitBackfaces.html).
     description:
     is_static: true
     code_samples:
     type: boolean
   - name: bounceThreshold
     summary: |
-      [Unity's Physics.bounceThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-bounceThreshold.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: defaultMaxDepenetrationVelocity
-    summary: |
-      [Unity's Physics.defaultMaxDepenetrationVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultMaxDepenetrationVelocity.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: defaultSolverIterations
-    summary: |
-      [Unity's Physics.defaultSolverIterations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultSolverIterations.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: defaultSolverVelocityIterations
-    summary: |
-      [Unity's Physics.defaultSolverVelocityIterations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultSolverVelocityIterations.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: defaultMaxAngularSpeed
-    summary: |
-      [Unity's Physics.defaultMaxAngularSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultMaxAngularSpeed.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: improvedPatchFriction
-    summary: |
-      [Unity's Physics.improvedPatchFriction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-improvedPatchFriction.html)
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: invokeCollisionCallbacks
-    summary: |
-      [Unity's Physics.invokeCollisionCallbacks Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-invokeCollisionCallbacks.html)
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: autoSyncTransforms
-    summary: |
-      [Unity's Physics.autoSyncTransforms Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-autoSyncTransforms.html)
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: reuseCollisionCallbacks
-    summary: |
-      [Unity's Physics.reuseCollisionCallbacks Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-reuseCollisionCallbacks.html)
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: interCollisionDistance
-    summary: |
-      [Unity's Physics.interCollisionDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-interCollisionDistance.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: interCollisionStiffness
-    summary: |
-      [Unity's Physics.interCollisionStiffness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-interCollisionStiffness.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: interCollisionSettingsToggle
-    summary: |
-      [Unity's Physics.interCollisionSettingsToggle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-interCollisionSettingsToggle.html)
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: clothGravity
-    summary: |
-      [Unity's Physics.clothGravity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-clothGravity.html)
-    description:
-    is_static: true
-    code_samples:
-    type: DataType.Vector3
-  - name: IgnoreRaycastLayer
-    summary: |
-      [Unity's Physics.IgnoreRaycastLayer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-IgnoreRaycastLayer.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: DefaultRaycastLayers
-    summary: |
-      [Unity's Physics.DefaultRaycastLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-DefaultRaycastLayers.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: AllLayers
-    summary: |
-      [Unity's Physics.AllLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-AllLayers.html)
+      The 'bounceThreshold' property controls the smallest relative velocity a collision may have before an object is treated as bouncing. More information is available in [Unity's Physics.bounceThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-bounceThreshold.html).
     description:
     is_static: true
     code_samples:
@@ -157,7 +56,7 @@ properties:
 methods:
   - name: Raycast
     summary: |
-      [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
+      The 'Raycast' method is used for tracing a path from one point in 3D space to another and detecting any Collider that the path intersects. This can be used to implement features like shooting a bullet in an FPS game, or knowing if an enemy is in the line-of-sight. More precise details can be found in [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html).
     description:
     is_static: true
     code_samples:
@@ -165,43 +64,43 @@ methods:
       - name: ray
         type: DataType.Ray
         default:
-        summary:
+        summary: A Ray object defining the origin and direction of the ray.
       - name: maxDistance
         type: number
         default:
-        summary:
+        summary: The max distance the ray should check for collisions.
       - name: layerMask
         type: number
         default:
-        summary:
+        summary: LayerMask to selectively ignore Colliders when casting a ray.
     returns:
       - type: (boolean, DataType.RaycastHit)
-        summary:
+        summary: Returns boolean if the ray hits any Collider and out RaycastHit argument contains the collision detail.
   - name: OverlapSphere
     summary: |
-      [Unity's Physics.OverlapSphere Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.OverlapSphere.html)
+      The 'OverlapSphere' method creates an imaginary sphere at a given position and finds all colliders touching or inside this sphere. It's similar to casting a net and seeing what it catches. This method is often used for area damage or to check if objects are in a proximity from a given point. Explore in detail at [Unity's Physics.OverlapSphere Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.OverlapSphere.html).
     description:
     is_static: true
     code_samples:
     parameters:
-      - name: ray
-        type: DataType.Ray
+      - name: position
+        type: DataType.Vector3
         default:
-        summary:
-      - name: maxDistance
+        summary: The center of the sphere.
+      - name: radius
         type: number
         default:
-        summary:
+        summary: The radius of the sphere.
       - name: layerMask
         type: number
         default:
-        summary:
+        summary: LayerMask to selectively ignore Colliders.
     returns:
       - type: Collider[]
-        summary:
+        summary: Returns an array of all the Collider components caught by the sphere.
   - name: IgnoreCollision
     summary: |
-      [Unity's Physics.IgnoreCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.IgnoreCollision.html)
+      The 'IgnoreCollision' method is used to make Unity's physics engine ignore all collisions between collider1 and collider2. It's like instructing two objects to pass through each other without any physical interaction. Discover more at [Unity's Physics.IgnoreCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.IgnoreCollision.html).
     description:
     is_static: true
     code_samples:
@@ -209,21 +108,21 @@ methods:
       - name: collider1
         type: Class.Collider
         default:
-        summary:
+        summary: The first of the pair of Colliders to ignore collisions between.
       - name: collider2
         type: Class.Collider
         default:
-        summary:
+        summary: The second of the pair of Colliders to ignore collisions between.
       - name: ignore
         type: boolean
         default:
-        summary:
+        summary: Whether to ignore or unignore the collision.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: IgnoreLayerCollision
     summary: |
-      [Unity's Physics.IgnoreLayerCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.IgnoreLayerCollision.html)
+      The 'IgnoreLayerCollision' method allows you to make the physics engine ignore all collisions between any Collider in layer1 and any Collider in layer2, akin to creating invisible barriers that only affect certain groups of objects. Learn more with [Unity's Physics.IgnoreLayerCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.IgnoreLayerCollision.html).
     description:
     is_static: true
     code_samples:
@@ -231,21 +130,21 @@ methods:
       - name: layer1
         type: number
         default:
-        summary:
+        summary: The ID of the first layer to ignore collisions with.
       - name: layer2
         type: number
         default:
-        summary:
+        summary: The ID of the second layer to ignore collisions with.
       - name: ignore
         type: boolean
         default:
-        summary:
+        summary: Whether to ignore or unignore the collision.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: GetIgnoreLayerCollision
     summary: |
-      [Unity's Physics.GetIgnoreLayerCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.GetIgnoreLayerCollision.html)
+      The 'GetIgnoreLayerCollision' method checks whether the physics engine is set to ignore collisions between any Collider in layer1 and layer2. For deeper understanding, check [Unity's Physics.GetIgnoreLayerCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.GetIgnoreLayerCollision.html).
     description:
     is_static: true
     code_samples:
@@ -253,17 +152,17 @@ methods:
       - name: layer1
         type: number
         default:
-        summary:
+        summary: The ID of the first layer to check.
       - name: layer2
         type: number
         default:
-        summary:
+        summary: The ID of the second layer to check.
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if collisions are ignored between the Colliders of layer1 and layer2, false otherwise.
   - name: GetIgnoreCollision
     summary: |
-      [Unity's Physics.GetIgnoreCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.GetIgnoreCollision.html)
+      The 'GetIgnoreCollision' method checks whether the physics engine is set to ignore collisions between two specific colliders. It's like checking whether two objects have been instructed to avoid each other during physical interactions. Find more at [Unity's Physics.GetIgnoreCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.GetIgnoreCollision.html).
     description:
     is_static: true
     code_samples:
@@ -271,17 +170,17 @@ methods:
       - name: collider1
         type: Class.Collider
         default:
-        summary:
+        summary: The first Collider to check.
       - name: collider2
         type: Class.Collider
         default:
-        summary:
+        summary: The second Collider to check.
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if collisions are ignored between collider1 and collider2, false otherwise.
   - name: Simulate
     summary: |
-      [Unity's Physics.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Simulate.html)
+      The 'Simulate' method advances the physics simulation by a specified amount of time, measured in seconds. It's akin to fast-forwarding the physical world for a certain duration. To fully understand its functionality, refer to [Unity's Physics.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Simulate.html).
     description:
     is_static: true
     code_samples:
@@ -289,49 +188,41 @@ methods:
       - name: step
         type: number
         default:
-        summary:
+        summary: The increment of time to advance physics simulation by, in seconds.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: SyncTransforms
     summary: |
-      [Unity's Physics.SyncTransforms Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SyncTransforms.html)
+      The 'SyncTransforms' method enables you to synchronize all transform data used in the physics simulation with the actual transform data of the GameObjects. Its function is similar to pressing a 'Refresh' button to sync the current state of GameObjects with the physics engine. Check out [Unity's Physics.SyncTransforms Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SyncTransforms.html) for more details.
     description:
     is_static: true
     code_samples:
     parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: ClosestPoint
     summary: |
-      [Unity's Physics.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.ClosestPoint.html)
+      The 'ClosestPoint' method calculates and retrieves the closest point to a given position on the surface of a collider, useful for determining contacts or collision points. More details can be found in [Unity's Physics.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.ClosestPoint.html).
     description:
     is_static: true
     code_samples:
     parameters:
-      - name: point
-        type: DataType.Vector3
-        default:
-        summary:
-      - name: collider
-        type: Class.Collider
-        default:
-        summary:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
-      - name: rotation
-        type: DataType.Quaternion
+        summary: The point in the 3D space for which to find the closest point on the collider.
+      - name: collider
+        type: Class.Collider
         default:
-        summary:
+        summary: The Collider to find the closest point on.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns the position in 3D space of the closest point on the collider.
   - name: RebuildBroadphaseRegions
     summary: |
-      [Unity's Physics.RebuildBroadphaseRegions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RebuildBroadphaseRegions.html)
+      The 'RebuildBroadphaseRegions' method forces a rebuild of the tree used for broad-phase collision detection, typically after moving static colliders within the simulation. For a deeper understanding, consult [Unity's Physics.RebuildBroadphaseRegions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RebuildBroadphaseRegions.html).
     description:
     is_static: true
     code_samples:
@@ -339,22 +230,11 @@ methods:
       - name: worldBounds
         type: DataType.Bounds
         default:
-        summary:
+        summary: The new world boundaries for the physics simulation.
       - name: subdivisions
         type: number
         default:
-        summary:
+        summary: The desired number of subdivisions in the broadphase tree.
     returns:
       - type: void
-        summary:
-  - name: ToString
-    summary: |
-      [Unity's Physics.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.ToString.html)
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary:
-math_operations:
+        summary: This method does not return a value.

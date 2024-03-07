@@ -1,7 +1,12 @@
 name: Collider
 type: classes
 summary: |
-  [Unity's Collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.html)
+  The Collider class in Unity is like an invisible force field that surrounds an object and swings into action when actions such as collisions or clicks occur. They are essential building blocks for any interactive environment, allowing game objects to react to interaction, whether it is with other objects or input from the user. Just like in real life, imagine you couldn't identify a door to not walk into it or couldn't engage an item because you can't touch it!
+
+  Colliders truly shine when used in conjunction with the Class.RigidBody class. A Rigidbody is what brings physics into play in Unity. On its own, a Collider can detect when a collision has occurred, but it cannot respond physically to it - this means it will not produce a realistic believable interaction. However, when a Rigidbody is attached to the GameObject with the Collider, the GameObject will react to collisions according to the laws of physics. The Rigidbody component takes care of things like gravity, velocity and other forces that ensure realistic movements, while the Collider provides the shape that those forces act upon. This integration of Colliders with Rigidbodies is fundamental for creating immersive and dynamic environments where objects can fall, bounce, slide, and interact in a way that the player expects.
+
+  There are various types of Colliders, each designed to wrap around different shaped objects. In this way, you can choose the one that best matches the shape of your GameObject and ensures accurate interaction within the game environment. Check the [Unity's Collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.html) for more details.
+
 description:
 code_samples:
 inherits:
@@ -10,56 +15,56 @@ constructors:
 properties:
   - name: enabled
     summary: |
-      [Unity's Collider.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-enabled.html)
+      The 'enabled' property allows for enabling or disabling the Collider; when disabled, the Collider won't trigger any interactions. It's akin to toggling the visibility of an invisible force field. Further details in [Unity's Collider.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-enabled.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: attachedRigidbody
     summary: |
-      [Unity's Collider.attachedRigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-attachedRigidbody.html)
+      The 'attachedRigidbody' property refers to the Rigidbody component that the Collider is attached to. This is especially important for applying physics to the GameObject. See [Unity's Collider.attachedRigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-attachedRigidbody.html).
     description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
   - name: isTrigger
     summary: |
-      [Unity's Collider.isTrigger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-isTrigger.html)
+      The 'isTrigger' property, when set to true, transforms the Collider to a Trigger, which notifies when other colliders enter or exit, but doesn't react physically. More details in [Unity's Collider.isTrigger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-isTrigger.html).
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: contactOffset
     summary: |
-      [Unity's Collider.contactOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-contactOffset.html)
+      The 'contactOffset' property controls how much GameObjects can interpenetrate before the physics engine detects a collision. Navigate to [Unity's Collider.contactOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-contactOffset.html) for more information.
     description:
     is_static: false
     code_samples:
     type: number
   - name: bounds
     summary: |
-      [Unity's Collider.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-bounds.html)
+      The 'bounds' property gets the world space bounding volume of the Collider. It represents the outer edges of the Collider. More details can be found in the [Unity's Collider.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-bounds.html).
     description:
     is_static: false
     code_samples:
     type: DataType.Bounds
   - name: hasModifiableContacts
     summary: |
-      [Unity's Collider.hasModifiableContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-hasModifiableContacts.html)
+      The 'hasModifiableContacts' property indicates whether the Collider can alter collision contact data. Check the [Unity's Collider.hasModifiableContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-hasModifiableContacts.html) for more insights.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: providesContacts
     summary: |
-      [Unity's Collider.providesContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-providesContacts.html)
+      The 'providesContacts' property signifies whether this Collider currently provides collision contact data. Visit [Unity's Collider.providesContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-providesContacts.html) for additional information.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: layerOverridePriority
     summary: |
-      [Unity's Collider.layerOverridePriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-layerOverridePriority.html)
+      The 'layerOverridePriority' assigns override ordering in case of multiple matching Layer Collision Matrix entrance. Details in [Unity's Collider.layerOverridePriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-layerOverridePriority.html).
     description:
     is_static: false
     code_samples:
@@ -67,7 +72,7 @@ properties:
 methods:
   - name: ClosestPoint
     summary: |
-      [Unity's Collider.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPoint.html)
+      The 'ClosestPoint' method returns the point on the Collider that is closest to a particular position. You can check the [Unity's Collider.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPoint.html) for more information.
     description:
     is_static: false
     code_samples:
@@ -75,13 +80,13 @@ methods:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position relative to the Collider.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns the point on the Collider closest to the 'position'.
   - name: ClosestPointOnBounds
     summary: |
-      [Unity's Collider.ClosestPointOnBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPointOnBounds.html)
+      The 'ClosestPointOnBounds' method is similar to 'ClosestPoint', but it only considers the Bounds of the Collider. For more details, check out the [Unity's Collider.ClosestPointOnBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPointOnBounds.html).
     description:
     is_static: false
     code_samples:
@@ -89,18 +94,18 @@ methods:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The position relative to the Collider's Bounds.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: Returns the point on the Collider's Bounds closest to the 'position'.
   - name: ToString
     summary: |
-      [Unity's Collider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ToString.html)
+      The 'ToString' method provides a string representation of the Collider. It can be useful for debugging. You can refer to the [Unity's Collider.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ToString.html) for a deeper grasp of this method.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: string
-        summary:
+        summary: Returns a string representing the Collider.
 math_operations:

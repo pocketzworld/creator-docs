@@ -1,7 +1,9 @@
 name: Input
 type: classes
 summary: |
+  Interactions form the basis of any game. The 'Input' class caters to this need by providing an interface to gather information from various external inputs. 'Input' works like a monitoring station, keeping track of user actions and triggering responses within the game.  
 
+  Each of these properties contain events that are fired when the corresponding action is performed, and game developers can add listeners to these events to trigger custom game logic.
 description:
 code_samples:
 inherits:
@@ -9,62 +11,52 @@ constructors:
 properties:
   - name: IsAltPressed
     summary: |
-
+      The 'IsAltPressed' property indicates if the Alt key is currently being pressed on the keyboard. This can be useful for creating keyboard shortcuts or alternate modes within the game.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsMouseInput
     summary: |
-
+      The 'IsMouseInput' property helps to detect whether a mouse device is providing input. false == touch input
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: Tap
     summary: |
-
+      The 'Tap' property listens for a tap event on the touchpad/screen. A tap starts when a finger touches the surface and ends when it lifts off within a short duration of time. 'Tap' can be used for detecting basic interaction across platforms. The parameter of the event is a Vector2 that represents the position of the tap on the screen (not in the game world).
     description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: PinchOrDragBegan
     summary: |
-
+      The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.
     description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: PinchOrDragChanged
     summary: |
-
+      The 'PinchOrDragChanged' property fires an event whenever there is a change in an ongoing pinch or drag gesture on the touch screen. This allows the game to continuously track such gestures and make corresponding adjustments in its state. See Class.PinchGestureChanged for more details on the parameter of the event.
     description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: PinchOrDragEnded
     summary: |
-
+      The 'PinchOrDragEnded' property listens for the end of a pinch or drag gesture on a touch screen. This allows the game to know precisely when such a gesture ends and probably trigger appropriate actions thereafter. See Class.PinchGestureEnded for more details on the parameter of the event.
     description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: MouseWheel
     summary: |
-
+      The 'MouseWheel' property listens for movements of the mouse wheel. This input allows interactions like zooming in or out or scrolling through menus, especially on platforms with a mouse device. See Class.MouseWheel for more details on the parameter of the event.
     description:
     is_static: false
     code_samples:
     type: Class.Event
 methods:
-  - name: ToString
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary:
 math_operations:
