@@ -1,7 +1,13 @@
 name: AudioListener
 type: classes
 summary: |
-  [Unity's AudioListener Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener.html)
+  In a game scene, it's not enough to have sound-producing elements. We also need something to 'listen' to these sounds to create an immersive audio experience. The AudioListener class in Unity acts as the ears of your game! 
+
+  Much like in the real world where sound seems louder when you're closer to the source, in Unity, the AudioListener class and AudioSource class work together to create a similar aural effect in your game world. Think of an AudioSource object as a speaker playing sound and an AudioListener object as an ear catching that sound.
+
+  An AudioListener class is typically attached to the camera or the player character in the game scene. It has properties to control the volume and to pause all audio playing in the scene for times when you might want to halt or mute the game sounds.
+
+  Get a deeper understanding of how AudioListeners can enhance your audio environment by referring to the [official Unity AudioListener documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener.html).
 description:
 code_samples:
 inherits:
@@ -10,27 +16,17 @@ constructors:
 properties:
   - name: volume
     summary: |
-      [Unity's AudioListener.volume Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener-volume.html)
+      The 'volume' property controls the overall volume of the audio playing in the scene. It acts as a master volume controller, impacting every AudioSource heard by the AudioListener. Get more details from [Unity's AudioListener.volume documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener-volume.html).
     description:
     is_static: true
     code_samples:
     type: number
   - name: pause
     summary: |
-      [Unity's AudioListener.pause Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener-pause.html)
+      The 'pause' property is a toggle to pause or resume all audio in the game scene. It becomes handy when you want to mute the game sounds on specific events. More information is available at [Unity's AudioListener.pause documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener-pause.html).
     description:
     is_static: true
     code_samples:
     type: boolean
 methods:
-  - name: ToString
-    summary: |
-      [Unity's AudioListener.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener.ToString.html)
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: string
-        summary:
 math_operations:
