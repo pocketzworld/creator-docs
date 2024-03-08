@@ -1,7 +1,7 @@
 name: Globals
 type: globals
 summary: |
-
+  In Lua scripting, Globals are essential values or variables that can be accessed from any part of the script without the need to pass them explicitly. They are context-specific and readily available. On the other hand, a Service in Lua script is like a toolbox of static functions that offer convenient utilities for developers to use in their scripts.
 description:
 code_samples:
 inherits:
