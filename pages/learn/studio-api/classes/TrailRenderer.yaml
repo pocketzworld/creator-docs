@@ -1,7 +1,7 @@
 name: TrailRenderer
 type: classes
 summary: |
-  [Unity's TrailRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.html)
+  TrailRenderer is a Unity component that creates visually appealing trails behind moving objects, like the tail of a comet streaking through the sky. These trails can enhance the realism of fast-paced games or add visual flair to various effects. Dive into the [Unity's TrailRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.html) to explore its capabilities in more detail.
 description:
 code_samples:
 inherits:
@@ -9,121 +9,104 @@ inherits:
 constructors:
 properties:
   - name: time
-    summary: |
-      [Unity's TrailRenderer.time Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-time.html)
+    summary: Retrieves or sets the duration in seconds that the trail takes to fade away completely.
     description:
     is_static: false
     code_samples:
     type: number
   - name: startWidth
-    summary: |
-      [Unity's TrailRenderer.startWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-startWidth.html)
+    summary: Determines the starting width of the trail at its base.
     description:
     is_static: false
     code_samples:
     type: number
   - name: endWidth
-    summary: |
-      [Unity's TrailRenderer.endWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-endWidth.html)
+    summary: Specifies the ending width of the trail at its tip.
     description:
     is_static: false
     code_samples:
     type: number
   - name: widthMultiplier
-    summary: |
-      [Unity's TrailRenderer.widthMultiplier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-widthMultiplier.html)
+    summary: Scales the width of the trail uniformly.
     description:
     is_static: false
     code_samples:
     type: number
   - name: autodestruct
-    summary: |
-      [Unity's TrailRenderer.autodestruct Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-autodestruct.html)
+    summary: Enables or disables automatic destruction of the trail renderer when it finishes emitting particles.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: emitting
-    summary: |
-      [Unity's TrailRenderer.emitting Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-emitting.html)
+    summary: Indicates whether the trail renderer is currently emitting particles.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: numCornerVertices
-    summary: |
-      [Unity's TrailRenderer.numCornerVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-numCornerVertices.html)
+    summary: Sets the number of vertices to use for each corner of the trail.
     description:
     is_static: false
     code_samples:
     type: number
   - name: numCapVertices
-    summary: |
-      [Unity's TrailRenderer.numCapVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-numCapVertices.html)
+    summary: Specifies the number of vertices for each cap of the trail.
     description:
     is_static: false
     code_samples:
     type: number
   - name: minVertexDistance
-    summary: |
-      [Unity's TrailRenderer.minVertexDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-minVertexDistance.html)
+    summary: Defines the minimum distance between consecutive vertices in the trail.
     description:
     is_static: false
     code_samples:
     type: number
   - name: startColor
-    summary: |
-      [Unity's TrailRenderer.startColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-startColor.html)
+    summary: Determines the color of the trail at its start.
     description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: endColor
-    summary: |
-      [Unity's TrailRenderer.endColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-endColor.html)
+    summary: Specifies the color of the trail at its end.
     description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: positionCount
-    summary: |
-      [Unity's TrailRenderer.positionCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-positionCount.html)
+    summary: Provides the number of positions in the trail's vertex array.
     description:
     is_static: false
     code_samples:
     type: number
   - name: textureScale
-    summary: |
-      [Unity's TrailRenderer.textureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-textureScale.html)
+    summary: Sets the tiling of the trail's texture along its length.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: shadowBias
-    summary: |
-      [Unity's TrailRenderer.shadowBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-shadowBias.html)
+    summary: Adjusts the distance of the shadow cast by the trail from the visible geometry.
     description:
     is_static: false
     code_samples:
     type: number
   - name: generateLightingData
-    summary: |
-      [Unity's TrailRenderer.generateLightingData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-generateLightingData.html)
+    summary: Enables or disables the generation of lighting data for the trail.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: widthCurve
-    summary: |
-      [Unity's TrailRenderer.widthCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer-widthCurve.html)
+    summary: Defines a curve that modifies the width of the trail along its length.
     description:
     is_static: false
     code_samples:
     type: Class.AnimationCurve
 methods:
   - name: SetPosition
-    summary: |
-      [Unity's TrailRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.SetPosition.html)
+    summary: Updates the position of a specific vertex in the trail.
     description:
     is_static: false
     code_samples:
@@ -131,17 +114,16 @@ methods:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the vertex to update.
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The new position for the vertex.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: GetPosition
-    summary: |
-      [Unity's TrailRenderer.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.GetPosition.html)
+    summary: Retrieves the position of a vertex in the trail.
     description:
     is_static: false
     code_samples:
@@ -149,23 +131,21 @@ methods:
       - name: index
         type: number
         default:
-        summary:
+        summary: The index of the vertex to retrieve.
     returns:
       - type: DataType.Vector3
-        summary:
+        summary: The position of the specified vertex.
   - name: Clear
-    summary: |
-      [Unity's TrailRenderer.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.Clear.html)
+    summary: Clears all positions and resets the trail to its initial state.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: BakeMesh
-    summary: |
-      [Unity's TrailRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.BakeMesh.html)
+    summary: Generates a mesh based on the current trail configuration.
     description:
     is_static: false
     code_samples:
@@ -173,17 +153,16 @@ methods:
       - name: mesh
         type: Class.Mesh
         default:
-        summary:
+        summary: The mesh to bake the trail into.
       - name: useTransform
         type: boolean
         default:
-        summary:
+        summary: Flag indicating whether to transform the mesh into world space.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: AddPosition
-    summary: |
-      [Unity's TrailRenderer.AddPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.AddPosition.html)
+    summary: Adds a new position to the trail, creating a continuous line.
     description:
     is_static: false
     code_samples:
@@ -191,8 +170,8 @@ methods:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The new position to add.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
 math_operations:
