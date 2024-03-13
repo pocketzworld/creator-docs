@@ -46,9 +46,9 @@ We review top-voted entries for Concepts in chronological order. If your entry w
 
 #### What's your policy on AI art?
 
-AI can be a powerful aid in finding inspiration or refining an existing idea. We allow AI entries as long as they're created using ethical models: if you have cultivated your own AI tools, or have access to an ethical AI tool built by somone else, you may use them for your concept entries. 
+AI can be a powerful aid in finding inspiration. While we allow the use of AI to help you come up with design ideas, your final Concept submissions should be your own, original work.
 
-AI entries crafted using unethical models will be removed from a Concept. Please flag any entry you're uncertain about, and our team will take a look. 
+AI entries will be removed prior to voting. Please flag any entry you're uncertain about, and our team will take a look. 
 
 #### My design was shadow banned on the newsfeed. Is it shadow banned in the Concept as well?
 
