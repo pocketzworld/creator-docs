@@ -10,7 +10,8 @@ Every Concept will have a brief description of the theme and item type you shoul
 
 **4. Drawing Assistance:** You may use references, drawing aids, and staff-made Highrise items as bases in your Concepts. We’re looking for good ideas, which is not necessarily the same thing as good art!
 
-**5. References:** Any Highrise-made item can be used as a base or reference for any concept. Using an item as a base or reference means using it as a foundation upon which you build your finished work. Ideally, we won't be able to tell which item you used in your creative process! 
+**5. References:** Any basic Highrise-made item can be used as a base or reference for any concept. Using an item as a base or reference means using it as a foundation upon which you build your finished work. Ideally, we won't be able to tell which item you used in your creative process! 
+We consider "basic" items to be any starter look, or any Common item available year-round in the Shop for Bubbles. This includes basic tees, hoodies, pants, boots, etc. More complex, unique, and high-value items are not considered basic, and are ineligible to be used as a base for a regular Concept. If you want to use a unique item as your base, save your entry for a _**Redesign Concept**_! 
 If you're participating in a _**Redesign Concept**_, you rework any Highrise item. These items do not have a name in the _Inspired By_ field. They are free game to recolor, reshape, and edit however you like!
 
 **6. Player Items:**  Anyone may freely use Highrise items designed by staff as references and in redesigned items. However, you may not trace items designed by other players. Please report any designs you believe to be using player material, and our team will review the submission.
