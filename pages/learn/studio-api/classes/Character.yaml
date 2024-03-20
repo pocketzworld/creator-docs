@@ -1,7 +1,6 @@
 name: Character
 type: classes
-summary: |
-
+summary: Represents an in-game character, providing properties and methods to control its movement, appearance, and interaction within the game environment.
 description:
 code_samples:
 inherits:
@@ -9,79 +8,68 @@ inherits:
 constructors:
 properties:
   - name: isMoving
-    summary: |
-
+    summary: Indicates whether the character is currently moving.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: distanceToDestination
-    summary: |
-
+    summary: Returns the distance from the character to its destination.
     description:
     is_static: false
     code_samples:
     type: number
   - name: destination
-    summary: |
-
+    summary: The target destination of the character in the game world.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: renderLayer
-    summary: |
-
+    summary: Specifies the rendering layer of the character for drawing order.
     description:
     is_static: false
     code_samples:
     type: number
   - name: renderPosition
-    summary: |
-
+    summary: The position of the character in the game world for rendering purposes.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: renderRotation
-    summary: |
-
+    summary: The rotation of the character in the game world for rendering purposes.
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: renderScale
-    summary: |
-
+    summary: The scale of the character in the game world for rendering purposes.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: player
-    summary: |
-
+    summary: Reference to the player object that controls or owns the character.
     description:
     is_static: false
     code_samples:
     type: Class.Player
   - name: StateChanged
-    summary: |
-
+    summary: An event that is triggered when the character's state changes.
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: MoveFinished
-    summary: |
-
+    summary: An event that is triggered when the character finishes moving to a destination.
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
 methods:
   - name: SetIdle
-    summary: |
-
+    summary: Sets the character to an idle state.
     description:
     is_static: false
     code_samples:
@@ -90,8 +78,7 @@ methods:
       - type: void
         summary:
   - name: PlayEmote
-    summary: |
-
+    summary: Plays a specified emote animation on the character.
     description:
     is_static: false
     code_samples:
@@ -99,21 +86,20 @@ methods:
       - name: emoteName
         type: string
         default:
-        summary:
+        summary: The name of the emote to play.
       - name: loop
         type: boolean
         default:
-        summary:
+        summary: Whether the emote should loop.
       - name: callback
         type: Class.LuaFunction
         default:
-        summary:
+        summary: A callback function to execute when the emote playback is complete.
     returns:
       - type: void
         summary:
   - name: MoveTo
-    summary: |
-
+    summary: Moves the character to a specified position.
     description:
     is_static: false
     code_samples:
@@ -121,21 +107,20 @@ methods:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The target position for the character to move to.
       - name: areaMask
         type: number
         default:
-        summary:
+        summary: An optional mask to specify allowed movement areas.
       - name: callback
         type: Class.LuaFunction
         default:
-        summary:
+        summary: A callback function to execute when movement is complete.
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if movement is successfully initiated.
   - name: MoveWithinRangeOf
-    summary: |
-
+    summary: Moves the character within a specified range of a position.
     description:
     is_static: false
     code_samples:
@@ -143,25 +128,24 @@ methods:
       - name: position
         type: DataType.Vector3
         default:
-        summary:
+        summary: The target position for the character to approach.
       - name: distance
         type: number
         default:
-        summary:
+        summary: The desired distance from the target position.
       - name: areaMask
         type: number
         default:
-        summary:
+        summary: An optional mask to specify allowed movement areas.
       - name: callback
         type: Class.LuaFunction
         default:
-        summary:
+        summary: A callback function to execute when movement is complete.
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if movement is successfully initiated.
   - name: TweenRenderPosition
-    summary: |
-
+    summary: Smoothly transitions the character's render position from one point to another.
     description:
     is_static: false
     code_samples:
@@ -169,17 +153,16 @@ methods:
       - name: from
         type: DataType.Vector3
         default:
-        summary:
+        summary: The starting position for the tween.
       - name: to
         type: DataType.Vector3
         default:
-        summary:
+        summary: The ending position for the tween.
     returns:
       - type: DataType.Tween
-        summary:
+        summary: A Tween object representing the transition.
   - name: TweenRenderPositionTo
-    summary: |
-
+    summary: Initiates a smooth transition for the character's render position to a specified destination.
     description:
     is_static: false
     code_samples:
@@ -187,8 +170,8 @@ methods:
       - name: to
         type: DataType.Vector3
         default:
-        summary:
+        summary: The target position for the character's render position.
     returns:
       - type: DataType.Tween
-        summary:
+        summary: A Tween object representing the transition.
 math_operations:

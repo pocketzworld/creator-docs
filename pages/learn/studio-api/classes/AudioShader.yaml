@@ -1,96 +1,88 @@
 name: AudioShader
 type: classes
-summary: |
+summary: Provides functionality for audio manipulation and playback, including volume and pitch adjustments, spatial considerations, and muting capabilities.
 
-description:
+description: The AudioShader class is a comprehensive solution for managing audio within game scenes. It allows developers to control various aspects of audio playback, such as muting, volume level, pitch adjustments, and spatial audio effects. This class supports dynamic audio experiences by offering properties for random volume and pitch variations, thus enabling more immersive and varied audio effects in games. Inherits from `Class.Object`, providing a base for audio-related functionalities in a game engine similar to Unity or Roblox.
+
 code_samples:
 inherits:
   - Class.Object
 constructors:
 properties:
   - name: IsMuted
-    summary: |
-
-    description:
+    summary: Indicates whether the audio is currently muted.
+    description: This property allows developers to check or set the muted state of the audio. When set to `true`, the audio will not play.
     is_static: false
     code_samples:
     type: boolean
   - name: SpatialRange
-    summary: |
-
-    description:
+    summary: Defines the range in which the audio can be heard.
+    description: This property sets the maximum distance at which the audio is audible. Beyond this range, the audio volume decreases to silence, simulating spatial audio effects.
     is_static: false
     code_samples:
     type: number
   - name: volume
-    summary: |
-
-    description:
+    summary: Controls the playback volume of the audio.
+    description: This property allows for adjusting the volume level of the audio. The value ranges from 0 (silent) to 1 (maximum volume).
     is_static: false
     code_samples:
     type: number
   - name: randomVolume
-    summary: |
-
-    description:
+    summary: Sets a range for random volume variation.
+    description: This property enables random variation in volume within the specified range, adding dynamic changes to the audio playback volume.
     is_static: false
     code_samples:
     type: number
   - name: pitch
-    summary: |
-
-    description:
+    summary: Adjusts the pitch of the audio playback.
+    description: This property allows for changing the pitch of the audio, with higher values increasing the pitch and lower values decreasing it.
     is_static: false
     code_samples:
     type: number
   - name: randomPitch
-    summary: |
-
-    description:
+    summary: Sets a range for random pitch variation.
+    description: This property allows for random variation in pitch within a specified range, making the audio playback more dynamic and varied.
     is_static: false
     code_samples:
     type: number
 methods:
   - name: Play
-    summary: |
-
-    description:
+    summary: Begins playback of the audio with optional volume and pitch parameters.
+    description: This method starts the audio playback. Developers can optionally specify volume and pitch to customize the playback for this instance.
     is_static: false
     code_samples:
     parameters:
       - name: volume
         type: number
         default:
-        summary:
+        summary: The volume at which to play the audio. Overrides the instance's volume property for this playback.
       - name: pitch
         type: number
         default:
-        summary:
+        summary: The pitch at which to play the audio. Overrides the instance's pitch property for this playback.
     returns:
       - type: void
-        summary:
+        summary: This method does not return a value.
   - name: GetRandomClip
-    summary: |
-
-    description:
+    summary: Returns a randomly selected AudioClip from the available set.
+    description: This method selects and returns a random AudioClip object, allowing for varied audio playback without manually selecting clips.
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: Class.AudioClip
-        summary:
+        summary: The randomly selected AudioClip object.
   - name: Create
-    summary: |
-
-    description:
+    summary: Creates a new instance of AudioShader with a specified AudioClip.
+    description: This static method instantiates a new AudioShader object, initialized with the provided AudioClip, ready for playback and manipulation.
     is_static: true
     code_samples:
     parameters:
       - name: clip
         type: Class.AudioClip
         default:
-        summary:
+        summary: The AudioClip to associate with the new AudioShader instance.
     returns:
       - type: Class.AudioShader
-        summary:
+        summary: A new instance of AudioShader configured with the provided AudioClip.
 math_operations:

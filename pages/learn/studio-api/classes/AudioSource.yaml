@@ -1,13 +1,6 @@
 name: AudioSource
 type: classes
-summary: |
-  Consider a DJ set, where the music is prepared and played to the audience. In Unity, an AudioSource is like a DJ’s deck. By assigning an AudioClip to an AudioSource, you can control when a specific sound plays, how loud it plays, and even how it changes as it moves around in a 3D environment. 
-
-  The AudioSource class further enhances audio playback with a variety of properties such as 'volume' for adjusting the loudness of the clip, 'pitch' to change the speed of the sound playback, 'clip' to hold the AudioClip data and 'loop' to replay the sound continuously. You can also check whether the audio source is currently playing with the 'isPlaying' property or if it is set to 'mute'.
-
-  There are more advanced controls available such as spatial blending for a 3d sound effect, handling stereo panning with 'panStereo', specifying playback points in an AudioClip using 'time' and 'timeSamples', and the control to ignore sound effect processing using 'bypassEffects'.
-
-  AudioSource is integral to sound control in your Unity applications, yielding a high degree of flexibility in manipulating audio outputs. To learn more about AudioSource, you can check out the [official Unity AudioSource documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.html).
+summary: AudioSource is a component used to play sounds. You can assign an AudioClip to an AudioSource to control sound playback, adjust volume, change pitch, loop sounds, and manage spatial effects for 3D audio.
 description:
 code_samples:
 inherits:
@@ -15,184 +8,159 @@ inherits:
 constructors:
 properties:
   - name: volume
-    summary: |
-      The 'volume' property manages the loudness of the audio playing through the AudioSource. You can change this property to increase or decrease volume levels as per your needs. Visit the [Unity AudioSource.volume documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-volume.html) for more details.
+    summary: Manages the loudness of the audio playing through the AudioSource. Adjust this property to control volume levels.
     description:
     is_static: false
     code_samples:
     type: number
   - name: pitch
-    summary: |
-      The 'pitch' property corresponds to the speed of sound playback. Changing the pitch alters the played speed and changes the perceived pitch of the sound accordingly. More information can be found in the [Unity AudioSource.pitch documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-pitch.html).
+    summary: Controls the speed of sound playback. Adjusting the pitch changes the sound's speed and pitch.
     description:
     is_static: false
     code_samples:
     type: number
   - name: time
-    summary: |
-      The 'time' property sets or returns the current playback position in seconds. This is useful when you want to play or resume the audio at a certain point. To know more, visit the [Unity AudioSource.time documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-time.html).
+    summary: Sets or returns the current playback position in seconds, allowing for precise control over playback.
     description:
     is_static: false
     code_samples:
     type: number
   - name: timeSamples
-    summary: |
-      The 'timeSamples' property allows you to set and retrieve the current playback position in PCM samples. This property can be used for high precision in time-sensitive audio implementations. Find out more at the [Unity AudioSource.timeSamples documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-timeSamples.html).
+    summary: Allows setting and retrieving the playback position in PCM samples for precise audio timing.
     description:
     is_static: false
     code_samples:
     type: number
   - name: clip
-    summary: |
-      The 'clip' property holds the AudioClip that will be played by the AudioSource. Remember, this is where you assign the actual sound the AudioSource will be playing. More details about this can be found in the [Unity AudioSource.clip documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-clip.html).
+    summary: Holds the AudioClip to be played, allowing for the assignment of sound to the AudioSource.
     description:
     is_static: false
     code_samples:
     type: Class.AudioClip
   - name: isPlaying
-    summary: |
-      The 'isPlaying' property tells you if the AudioSource is currently playing any sound. This is useful to check the audio status before performing any audio operations. Visit the [Unity AudioSource.isPlaying documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-isPlaying.html) for more insights.
+    summary: Indicates if the AudioSource is currently playing sound, useful for checking audio status.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isVirtual
-    summary: |
-      The 'isVirtual' property indicates whether the AudioSource is virtualized or not. A virtual AudioSource won't actually play the audio but takes virtually no resources. For more information, refer to [Unity's AudioSource.isVirtual documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-isVirtual.html).
+    summary: Indicates whether the AudioSource is virtualized, which has minimal resource usage.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: loop
-    summary: |
-      The 'loop' property, when set to true, makes the audio clip play indefinitely in a loop. This becomes helpful when dealing with recurring sounds like the background music. Understand more by visiting [Unity's AudioSource.loop documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-loop.html).
+    summary: When true, the audio clip will play indefinitely in a loop, useful for background music or repeating sounds.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: ignoreListenerVolume
-    summary: |
-      The 'ignoreListenerVolume' property, when set to true, makes the AudioSource ignore global volume controls, and thus playing the audio at the volume specified in the AudioSource itself. Learn more at [Unity's AudioSource.ignoreListenerVolume documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-ignoreListenerVolume.html).
+    summary: When true, AudioSource ignores global volume controls, playing audio at its own volume level.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: playOnAwake
-    summary: |
-      The 'playOnAwake' property determines if the audio clip will commence playing automatically upon the script's activation. For more information, refer to the [Unity AudioSource.playOnAwake documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-playOnAwake.html).
+    summary: Determines if the audio clip will start playing automatically when the script activates.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: ignoreListenerPause
-    summary: |
-      The 'ignoreListenerPause' property allows the AudioSource to keep playing despite a pause all sounds call via AudioListener.pause, when set to true. See more at [Unity's AudioSource.ignoreListenerPause documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-ignoreListenerPause.html).
+    summary: Allows the AudioSource to keep playing despite a global pause, when set to true.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: panStereo
-    summary: |
-      The 'panStereo' property controls the left and right stereo pan of the AudioSource, helping achieve desired sound effects. More details are available in [Unity AudioSource.panStereo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-panStereo.html).
+    summary: Controls the left and right stereo pan, aiding in achieving desired sound effects.
     description:
     is_static: false
     code_samples:
     type: number
   - name: spatialBlend
-    summary: |
-      The 'spatialBlend' property sets how much the AudioSource's 3D engine affects the audio playback. Understand more by visiting [Unity AudioSource.spatialBlend documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-spatialBlend.html).
+    summary: Sets the level of 3D audio effect application on the audio playback.
     description:
     is_static: false
     code_samples:
     type: number
   - name: spatialize
-    summary: |
-      The 'spatialize' property, when set to true, activates the AudioSource's spatializer effect, creating a more immersive 3D audio experience. More details can be found at [Unity's AudioSource.spatialize documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-spatialize.html).
+    summary: Activates spatializer effect for immersive 3D audio when set to true.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: spatializePostEffects
-    summary: |
-      The 'spatializePostEffects' property allows the application of spatial effects to the AudioSource when set to true. Visit the [Unity AudioSource.spatializePostEffects documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-spatializePostEffects.html) for more information.
+    summary: Applies spatial effects to the AudioSource for enhanced audio experience when true.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: reverbZoneMix
-    summary: |
-      The 'reverbZoneMix' property controls the mix (from 0.0 to 1.0) of spatialized AudioSource into the global reverb associated with reverb zones. Check out the [Unity AudioSource.reverbZoneMix documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-reverbZoneMix.html).
+    summary: Controls the mix of spatialized AudioSource into global reverb, enhancing audio depth.
     description:
     is_static: false
     code_samples:
     type: number
   - name: bypassEffects
-    summary: |
-      The 'bypassEffects' property, when set to true, tells Unity to bypass any effects applied to the audio, playing the original sound. More details are in [Unity's AudioSource.bypassEffects documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-bypassEffects.html).
+    summary: Bypasses applied effects, playing the original sound when true.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: bypassListenerEffects
-    summary: |
-      The 'bypassListenerEffects' property bypasses the volume and pitch changes effected by 3D spatialization and Doppler calculations, when set to true. You can learn more from [Unity's AudioSource.bypassListenerEffects documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-bypassListenerEffects.html).
+    summary: Bypasses 3D spatialization effects when true, affecting volume and pitch directly.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: bypassReverbZones
-    summary: |
-      The 'bypassReverbZones' property allows the AudioSource to bypass any Global Reverb Zones, when set to true. Visit the [Unity AudioSource.bypassReverbZones documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-bypassReverbZones.html) for more insights.
+    summary: Allows bypassing Global Reverb Zones for direct sound play when true.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: dopplerLevel
-    summary: |
-      The 'dopplerLevel' property sets the amount of Doppler effect applied to the audio source. In simple words, it's the change in frequency or wavelength of a waveform as viewed by an observer moving relative to the audio source. Check out the [Unity's AudioSource.dopplerLevel documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-dopplerLevel.html) for more details.
+    summary: Sets the amount of Doppler effect, changing sound frequency based on movement.
     description:
     is_static: false
     code_samples:
     type: number
   - name: spread
-    summary: |
-      The 'spread' property controls how audio is spread across speakers in 3D audio playback. Lower values provide more focused, while higher values provide a more diffused audio source. More information is available at [Unity's AudioSource.spread documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-spread.html).
+    summary: Controls audio spread across speakers in 3D playback, affecting sound directionality.
     description:
     is_static: false
     code_samples:
     type: number
   - name: priority
-    summary: |
-      The 'priority' property determines the priority of the AudioSource among others. If you have more AudioSource objects active than specified by the AudioSettings, the one with the lowest priority value will be chosen first for audio playback. To understand more, visit [Unity's AudioSource.priority documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-priority.html).
+    summary: Determines the AudioSource's
+    priority among others for managing active AudioSource objects and playback selection based on priority value.
     description:
     is_static: false
     code_samples:
     type: number
   - name: mute
-    summary: |
-      The 'mute' property, when true, mutes the AudioSource, and no sound will be played from it. Learn more at [Unity's AudioSource.mute documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-mute.html).
+    summary: Mutes the AudioSource when true, stopping any sound from being played.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: minDistance
-    summary: |
-      The 'minDistance' property refers to the minimum distance at which the AudioSource will start to attenuate. Sound from an AudioSource closer than 'minDistance' units will be perceived as at its loudest. You can learn more from [Unity's AudioSource.minDistance documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-minDistance.html).
+    summary: Sets the minimum distance for the AudioSource to start attenuating, controlling volume over distance.
     description:
     is_static: false
     code_samples:
     type: number
   - name: maxDistance
-    summary: |
-      The 'maxDistance' property sets the maximum distance where attenuation stops. AudioSource will not further reduce volume logarithmically below this distance. For more details, refer to [Unity's AudioSource.maxDistance documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource-maxDistance.html).
+    summary: Defines the maximum distance where attenuation stops, setting the farthest point for audio volume reduction.
     description:
     is_static: false
     code_samples:
     type: number
 methods:
   - name: Play
-    summary: |
-      The 'Play' method is your cue to start playing the assigned audio clip. Tap into [Unity's AudioSource.Play documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.Play.html) for more information.
+    summary: Starts playing the assigned audio clip, allowing for sound playback control.
     description:
     is_static: false
     code_samples:
@@ -201,78 +169,67 @@ methods:
       - type: void
         summary:
   - name: PlayDelayed
-    summary: |
-      The 'PlayDelayed' method allows you to play the assigned audio clip after a certain delay time, specified in seconds. This can be used to time the sound effect with some event. You can learn more from the [Unity AudioSource.PlayDelayed documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.PlayDelayed.html).
+    summary: Plays the assigned audio clip after a delay, useful for timed sound effects.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: delay
         type: number
-        default:
-        summary: The delay time, in seconds, after which the audio clip will start playing.
+        summary: The delay time in seconds before the audio clip starts playing.
     returns:
       - type: void
         summary:
   - name: PlayScheduled
-    summary: |
-      The 'PlayScheduled' method schedules the assigned audio clip to be played at a specified time in seconds. This method is useful when you want to precisely synchronize audio playback to time-coded events. Find more details at [Unity's AudioSource.PlayScheduled documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.PlayScheduled.html).
+    summary: Schedules audio clip playback at a precise time, aiding in synchronized audio events.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: time
         type: number
-        default:
-        summary: The scheduling time, in seconds, when the audio clip will be played.
+        summary: The time in seconds when the audio clip will start playing.
     returns:
       - type: void
         summary:
   - name: PlayOneShot
-    summary: |
-      The 'PlayOneShot' method plays the clip once when called, ignoring the regular audio clip provided to the AudioSource. This is useful for sound effects that need to be triggered on demand, without interrupting the main audio clip. Refer to the [Unity AudioSource.PlayOneShot documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.PlayOneShot.html) for more details.
+    summary: Plays an audio clip once on demand, ignoring the AudioSource's regular clip.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: clip
         type: Class.AudioClip
-        default:
-        summary: The audio clip to be played once.
+        summary: The audio clip to play once.
     returns:
       - type: void
         summary:
   - name: SetScheduledStartTime
-    summary: |
-      The 'SetScheduledStartTime' method allows scheduling the playback of an audio clip to start at a specified time. This comes into play for organizing audio playback in a precise manner. Find out more from [Unity's AudioSource.SetScheduledStartTime documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.SetScheduledStartTime.html).
+    summary: Schedules the start time for audio clip playback, organizing audio in precise manner.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: time
         type: number
-        default:
-        summary: The scheduled start time for the audio clip, in seconds.
+        summary: The scheduled start time in seconds for the audio clip.
     returns:
       - type: void
         summary:
   - name: SetScheduledEndTime
-    summary: |
-      The 'SetScheduledEndTime' method lets you schedule a time when the playback of an audio clip should stop. This method is handy when you need to halt audio playback in matching precision with other time-coded events. Visit the [Unity AudioSource.SetScheduledEndTime documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.SetScheduledEndTime.html) for more details.
+    summary: Schedules a stop time for audio clip playback, useful for precise audio event control.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: time
         type: number
-        default:
-        summary: The scheduled end time for the audio clip, in seconds.
+        summary: The scheduled end time in seconds for the audio clip.
     returns:
       - type: void
         summary:
   - name: Stop
-    summary: |
-      The 'Stop' method stops the audio that is currently playing through the AudioSource. For example, this could be used when the player character exits a particular region in the game world. See the [Unity AudioSource.Stop documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.Stop.html) for more information.
+    summary: Stops currently playing audio, useful for immediate sound halt.
     description:
     is_static: false
     code_samples:
@@ -281,8 +238,7 @@ methods:
       - type: void
         summary:
   - name: Pause
-    summary: |
-      The 'Pause' method pauses the playback of the audio on call. The paused audio can be resumed from the point where it was paused. Understand more from [Unity's AudioSource.Pause documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.Pause.html).
+    summary: Pauses the audio playback, allowing for later resumption from the same point.
     description:
     is_static: false
     code_samples:
@@ -291,8 +247,7 @@ methods:
       - type: void
         summary:
   - name: UnPause
-    summary: |
-      The 'UnPause' method performs opposite to the 'Pause' method. If the audio playback has been paused through the 'Pause' method, the 'UnPause' method will resume playback from where it was paused. More details can be found in [Unity's AudioSource.UnPause documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.UnPause.html).
+    summary: Resumes paused audio playback from where it was stopped.
     description:
     is_static: false
     code_samples:
@@ -301,56 +256,48 @@ methods:
       - type: void
         summary:
   - name: SetSpatializerFloat
-    summary: |
-      The 'SetSpatializerFloat' method allows you to set a selected float parameter within a spatializer effect that is attached to the AudioSource. Get more information from [Unity's AudioSource.SetSpatializerFloat documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.SetSpatializerFloat.html).
+    summary: Sets a float parameter for a spatializer effect attached to the AudioSource.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: index
         type: number
-        default:
         summary: The index of the parameter in the spatializer effect.
       - name: value
         type: number
-        default:
         summary: The new value for the specified parameter.
     returns:
       - type: boolean
         summary:
   - name: SetAmbisonicDecoderFloat
-    summary: |
-      The 'SetAmbisonicDecoderFloat' method allows you to set a selected float parameter within an ambisonic decoder plugin that is attached to the AudioSource. More details are in the [Unity AudioSource.SetAmbisonicDecoderFloat documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.SetAmbisonicDecoderFloat.html).
+    summary: Sets a float parameter for an ambisonic decoder plugin attached to the AudioSource.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: index
         type: number
-        default:
         summary: The index of the parameter in the ambisonic decoder plugin.
       - name: value
         type: number
-        default:
         summary: The new value for the specified parameter.
     returns:
       - type: boolean
         summary:
   - name: PlayClipAtPoint
-    summary: |
-      The 'PlayClipAtPoint' method plays an AudioClip at a given position in the world. Since it is a static method, it can be called without having an AudioSource instance first. You can learn more by visiting [Unity's AudioSource.PlayClipAtPoint documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.PlayClipAtPoint.html).
+    summary: Plays an AudioClip at a specified world position, as a static method.
     description:
     is_static: true
     code_samples:
     parameters:
-      - name: clip
+      - name:
+        clip
         type: Class.AudioClip
-        default:
-        summary: The audio clip that you want to play.
+        summary: The AudioClip to be played.
       - name: position
         type: DataType.Vector3
-        default:
-        summary: The world position where the audio clip should be played.
+        summary: The world position where the AudioClip will be played.
     returns:
       - type: void
         summary:

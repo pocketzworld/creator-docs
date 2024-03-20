@@ -1,20 +1,14 @@
 name: EventConnection
 type: classes
-summary: |
-  In game development, events play a vital role in driving gameplay by notifying objects about changes in the game's state, triggering actions or responses. The EventConnection class is an essential part of this system.
-
-  Every time an Class.Event is 'Connected' in Highrise, a special bond called 'EventConnection' is created. This 'EventConnection' is like an invisible link between the trigger and the responder of an event. It is through this connection that they communicate.
-
-  Class.EventConnection governs the handling of these connectors. A connection can be 'Disconnected' when it's no longer necessary, effectively halting the communication between the scripts or entities that were linked. It's like unplugging a power cord connecting two devices, turning off the flow of information. For more information about events, you may refer to Class.Event.
+summary: EventConnection class manages the connections between event triggers and their corresponding responders in Highrise, facilitating communication and action triggering based on game state changes. These connections are established when events are connected and can be severed using the Disconnect method when no longer needed, halting further communication between linked entities. It serves as a crucial component in event-driven programming, ensuring responsive and dynamic gameplay.
 constructors:
 methods:
   - name: Disconnect
-    summary: |
-      The 'Disconnect' method works like an 'off switch' for an Event Connection. Once it's called, the connection between the event trigger and its responder is severed, stopping any further communication or operation under the original event.
+    summary: Terminates the event connection, halting communication between the event trigger and its responder.
     description:
     is_static: false
     parameters:
     returns:
       - type: void
-        summary:
+        summary: No return value, the connection is severed.
 math_operations:

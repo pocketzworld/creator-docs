@@ -1,13 +1,6 @@
 name: Component
 type: classes
-summary: |
-  Think of a Class.GameObject in Unity as an empty box. On its own, it can't do much. However, once you add Components to it, the GameObject becomes lively and capable of interacting with the virtual world you're building. Components are the essence of a GameObject, molding its characteristics and behaviors. They are the DNA of a GameObject, shaping how it interacts within the game environment.
-
-  There's a wide variety of Components that factor into different functionalities. For instance, physical components like Class.Collider that allow GameObjects to physically interact with the environment or other GameObjects. Rendering components such as Class.MeshRenderer and Class.Camera are vital as they provide your GameObject form and control how the player views the game world.
-
-  Adding a Lua script to your GameObject makes it a Component known as a Class.LuaBehaviour. These scripts offer immense creativity, enabling your GameObject to behave in unique ways, from playing animations to responding to inputs or interacting with other GameObjects.
-
-  In summary, Components convert static GameObjects into interactive, dynamic game elements. They're the cornerstone of Unity project development, making your game world immersive and engaging. For a deeper understanding, check out the [official Unity documentation on Components](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.html).
+summary: Component acts as the core of GameObject customization, enabling GameObjects to exhibit specific characteristics and behaviors. It's the foundation for a wide range of functionalities, from physics interactions with Collider to visual presentations via MeshRenderer and Camera components. Components transform GameObjects from static entities to dynamic actors within the game world. Scripting through LuaBehaviour further expands potential behaviors, allowing for unique game mechanics and interactions. Components are pivotal for developing immersive, interactive game environments. Explore Unity's Component documentation for detailed insights.
 description:
 code_samples:
 inherits:
@@ -15,8 +8,7 @@ inherits:
 constructors:
 properties:
   - name: transform
-    summary: |
-      The 'transform' property gives you a handle to the Transform component of the GameObject to which this component is attached. The Transform component controls the position, rotation, and scale of a GameObject in the scene. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html) for more information.
+    summary: Provides access to the GameObject's Transform, facilitating position, rotation, and scale adjustments.
     description:
     is_static: false
     tags:
@@ -24,8 +16,7 @@ properties:
     code_samples:
     type: Class.Transform
   - name: gameObject
-    summary: |
-      The 'gameObject' property allows you to access the GameObject that this component is attached to. Many operations in Unity involve manipulating GameObjects, often via the components attached to them. For more details, refer to the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html).
+    summary: Allows access to the GameObject this component is attached to, central to numerous Unity operations.
     description:
     is_static: false
     tags:
@@ -33,85 +24,73 @@ properties:
     code_samples:
     type: Class.GameObject
   - name: tag
-    summary: |
-      The 'tag' property gives you access to the tag of the GameObject this component is attached to. A GameObject can be tagged with a label allowing it to be easily identified and selected within the development environment. For more information, see the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-tag.html).
+    summary: Accesses the GameObject's tag for identification and selection purposes within Unity's environment.
     description:
     is_static: false
     code_samples:
     type: string
 methods:
   - name: GetComponent
-    summary: |
-      The 'GetComponent' method is used to retrieve a component of a specified type, if it exists, from the GameObject to which this component is attached. For example, if your GameObject has a Rigidbody component attached, you can retrieve it using this method. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponent.html) for more details.
+    summary: Retrieves a component of a specified type from the GameObject, crucial for accessing and manipulating attached components.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: type
         type: Class.Type
-        default:
-        summary: The type of component to retrieve.
+        summary: Component type to retrieve.
     returns:
       - type: Class.Component
-        summary: Returns the requested component if it exists on the GameObject.
+        summary: The component, if present.
   - name: GetComponentInChildren
-    summary: |
-      The 'GetComponentInChildren' method retrieves the specified component type from the first child of the GameObject this component is attached to. This is useful when you need to manipulate a specific component present in one of the GameObject's child objects. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInChildren.html).
+    summary: Searches the GameObject's children for a component of a specific type, extending component access to child GameObjects.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: t
         type: Class.Type
-        default:
-        summary: The type of component to retrieve from child GameObjects.
+        summary: Component type to search for in children.
       - name: includeInactive
         type: boolean
-        default:
-        summary: If set to true, this method will also search within inactive GameObjects.
+        summary: Includes inactive GameObjects in the search.
     returns:
       - type: Class.Component
-        summary: Returns the requested component from child GameObjects if it exists.
+        summary: The component, if found among children.
   - name: GetComponentInParent
-    summary: |
-      The 'GetComponentInParent' method works similarly to 'GetComponentInChildren', but instead of searching for the component in children of the GameObject, it looks for it in the parents of the GameObject. For more information, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInParent.html).
+    summary: Looks for a specified component type in the GameObject's parent hierarchy, useful for accessing shared components in parent objects.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: t
         type: Class.Type
-        default:
-        summary: The type of component to retrieve from parent GameObjects.
+        summary: Component type to search for in parents.
       - name: includeInactive
         type: boolean
-        default:
-        summary: If true, this method will also search within inactive GameObjects.
+        summary: Includes inactive GameObjects in the search.
     returns:
       - type: Class.Component
-        summary: Returns the requested component from parent GameObjects if it exists.
+        summary: The component, if located in a parent.
   - name: GetComponentIndex
-    summary: |
-      [Unity's Component.GetComponentIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentIndex.html)
+    summary: Retrieves the index of a component, enabling more advanced management of multiple components of the same type.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: number
-        summary:
+        summary: The index of the component.
   - name: CompareTag
-    summary: |
-      The 'CompareTag' method is useful for comparing if the GameObject's tag matches a specified string. It can be used to differentiate behavior among different groups of GameObjects or implement specific logic based on tags. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.CompareTag.html).
+    summary: Compares the GameObject's tag with a specified string, streamlining GameObject categorization and behavior customization based on tags.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: tag
         type: string
-        default:
-        summary: The tag to compare with the GameObject's tag.
+        summary: Tag for comparison.
     returns:
       - type: boolean
-        summary: Returns true if the GameObject's tag matches the specified string, false otherwise.
+        summary: True if tags match, otherwise false.
 math_operations:

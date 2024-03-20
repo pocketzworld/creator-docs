@@ -1,44 +1,14 @@
 name: BoolValue
 type: classes
-summary: |
-  The BoolValue class is used to store a single boolean value. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single boolean value that all clients should be synchronized on.
+summary: BoolValue class stores a single boolean value, extending from Class.Value. It's designed for synchronizing a boolean value across all clients in a networked environment, ensuring consistency of a specific flag or state, such as a game over condition. To effectively utilize BoolValue, familiarity with the base Class.Value documentation is advised.
 description:
-code_samples: |
-  #### Synchronizing a Boolean
-  description: This example demonstrates how to use a BoolValue to synchronize a game over state across all clients.
-  ```lua
-    local gameOver : BoolValue = BoolValue.new("GameOver", 0)
-    local onGameOver : Event = Event.new("OnGameOver")
-
-    -- not local so that another script can find this one and call this function
-    function EndGame()
-      onGameOver:FireServer()
-    end
-
-    local function Client()
-      gameOver.Changed:Connect(function()
-          print("Is the game over? " .. gameOver.value)
-      end)
-    end
-
-    local function Server()
-      onGameOver:Connect(function()
-          gameOver.value = true
-      end)
-    end
-
-    if server then
-      Server()
-    else
-      Client()
-    end
-  ```
+code_samples:
 inherits:
 tags:
   - ServerAndClient
 constructors:
   - name: new
-    summary:
+    summary: Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
     description:
     is_static: true
     tags:
@@ -47,19 +17,16 @@ constructors:
     parameters:
       - name: name
         type: string
-        default:
-        summary: The name of the BoolValue. This must be unique as it is used as the key to synchronize the value across all clients.
+        summary: Unique name for the BoolValue, serving as a key for synchronization.
       - name: initialValue
         type: boolean
-        default:
-        summary: The initial value of the BoolValue.
+        summary: Initial boolean value of the BoolValue.
     returns:
       - type: Class.BoolValue
-        summary: A BoolValue instance with the specified value.
+        summary: An instance of BoolValue with the provided initial value.
 properties:
   - name: value
-    summary: |
-      The currently synchronized boolean value of the BoolValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+    summary: Represents the synchronized boolean value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
     tags:

@@ -1,201 +1,171 @@
 name: AudioService
 type: classes
-summary: |
-
-description:
+summary: Manages and controls all aspects of audio playback, including music, sound effects, and voice within the game environment. Offers functionalities like playing, stopping, and adjusting audio properties.
+description: |
+  The AudioService class is designed to handle various audio-related tasks within a game. It allows developers to play background music, sound effects, and manage audio sources and listeners. Features include dynamic music intensity adjustments, audio ducking, and playing sounds from URLs or shaders.
 code_samples:
 inherits:
 constructors:
 properties:
 methods:
   - name: IsPlaying
-    summary: |
-
-    description:
+    summary: Checks if any audio is currently playing.
+    description: |
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: boolean
-        summary:
+        summary: Returns true if audio is playing; otherwise, false.
   - name: MusicIntensity
-    summary: |
-
-    description:
+    summary: Retrieves the current music intensity level.
+    description: |
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: number
-        summary:
+        summary: Current intensity of the playing music.
   - name: MusicDuckVolume
-    summary: |
-
-    description:
+    summary: Gets the volume level music is ducked to during audio ducking.
+    description: |
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: number
-        summary:
+        summary: The volume level music is ducked to.
   - name: DuckMusic
-    summary: |
-
-    description:
+    summary: Temporarily lowers the music volume for a specified duration.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: duration
         type: number
-        default:
-        summary:
+        summary: How long the music volume is lowered.
       - name: duckOutDuration
         type: number
-        default:
-        summary:
+        summary: Time to transition music volume to the ducked level.
       - name: duckInDuration
         type: number
-        default:
-        summary:
+        summary: Time to restore music volume back to normal after ducking.
     returns:
       - type: void
-        summary:
+        summary: |
   - name: PlayMusic
-    summary: |
-
-    description:
+    summary: Plays music using an AudioShader.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: shader
         type: Class.AudioShader
-        default:
-        summary:
+        summary: The AudioShader used to play music.
       - name: volume
         type: number
-        default:
-        summary:
+        summary: The volume at which the music should be played.
     returns:
       - type: void
-        summary:
+        summary: |
   - name: PlayMusicURL
-    summary: |
-
-    description:
+    summary: Plays music from a specified URL.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: url
         type: string
-        default:
-        summary:
+        summary: The URL of the music to be played.
       - name: volume
         type: number
-        default:
-        summary:
+        summary: The volume at which the music should be played.
     returns:
       - type: void
-        summary:
+        summary: |
   - name: StopMusic
-    summary: |
-
-    description:
+    summary: Stops currently playing music, with an option to fade out.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: fadeOut
         type: boolean
-        default:
-        summary:
+        summary: Whether the music should fade out instead of stopping abruptly.
     returns:
       - type: void
-        summary:
+        summary: |
   - name: PlayShader
-    summary: |
-
-    description:
+    summary: Plays an audio effect using an AudioShader.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: shader
         type: Class.AudioShader
-        default:
-        summary:
+        summary: The AudioShader used to play the audio effect.
     returns:
       - type: void
-        summary:
+        summary: |
   - name: PlaySoundGlobal
-    summary: |
-
-    description:
+    summary: Plays a sound effect globally, without spatialization.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: shader
         type: Class.AudioShader
-        default:
-        summary:
+        summary: The AudioShader representing the sound to be played.
       - name: volume
         type: number
-        default:
-        summary:
+        summary: Volume of the sound.
       - name: pitch
         type: number
-        default:
-        summary:
+        summary: Pitch adjustment of the sound.
       - name: spatialize
         type: boolean
-        default:
-        summary:
+        summary: Whether the sound should be spatialized.
       - name: loop
         type: boolean
-        default:
-        summary:
+        summary: Whether the sound should loop.
     returns:
       - type: Class.AudioSource
-        summary:
+        summary: The AudioSource through which the sound is played.
   - name: PlaySound
-    summary: |
-
-    description:
+    summary: Plays a sound effect attached to a specific GameObject, allowing for spatial audio effects.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: shader
         type: Class.AudioShader
-        default:
-        summary:
+        summary: The AudioShader used to play the sound.
       - name: gameObject
         type: Class.GameObject
-        default:
-        summary:
+        summary: The GameObject to which the sound
+        summary: The GameObject to which the sound is attached, allowing it to emit sound from its location in the game world.
       - name: volume
         type: number
-        default:
-        summary:
+        summary: Volume at which the sound should be played.
       - name: pitch
         type: number
-        default:
-        summary:
+        summary: Pitch adjustment for the sound, allowing for higher or lower playback tones.
       - name: spatialize
         type: boolean
-        default:
-        summary:
+        summary: Whether the sound should be spatialized, giving it a position in the 3D space of the game.
     returns:
       - type: Class.AudioSource
-        summary:
+        summary: The AudioSource instance through which the sound is played, allowing for further manipulation.
   - name: StopAudioSource
-    summary: |
-
-    description:
+    summary: Stops playback of an audio source.
+    description: |
     is_static: false
     code_samples:
     parameters:
       - name: source
         type: Class.AudioSource
-        default:
-        summary:
+        summary: The AudioSource instance that should be stopped.
     returns:
       - type: void
-        summary:
+        summary: |
 math_operations:
