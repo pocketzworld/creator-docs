@@ -1,20 +1,14 @@
 name: Plane
 type: datatypes
 summary: |
-  The Plane data type in Unity represents a plane in 3D space, defined by its normal (a Vector3 representing the direction perpendicular to the plane surface) and its distance from the origin along this normal. 
-
-  Utility of Plane includes geometric computations like calculating intersection points between a line (or ray) and a plane, determining which side of a plane a point is on, or the closest point on the plane to another point in space. 
-
-  This data type is crucial in 3D graphics and physics simulations, serving as a useful tool in many game development scenarios like collision detection, lighting systems, reflection, and more.
-
-  For more in-depth knowledge, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.html).
+  Represents a plane in 3D space defined by a normal vector and a distance from the origin. Used for geometric calculations like intersection points, containment tests, and distance measurements.
 description:
 code_samples:
 inherits:
 constructors:
   - name: new
     summary: |
-      The 'new' constructor lets you create a new plane given a normal and a point in 3D space. The normal specifies the plane's orientation, while the point specifies its distance from the origin. The result is a versatile geometric construct used in many algorithms and calculations. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-ctor.html).
+      Creates a new plane with the specified normal and a point on the plane.
     description:
     is_static: true
     code_samples:
@@ -22,32 +16,32 @@ constructors:
       - name: normal
         type: DataType.Vector3
         default:
-        summary: The normal of the plane.
+        summary: The normal vector of the plane.
       - name: point
         type: DataType.Vector3
         default:
-        summary: A point in the plane.
+        summary: A point on the plane.
     returns:
       - type: DataType.Plane
-        summary: Returns a Plane instance with the specified normal and containing the specified point.
+        summary: Returns a new Plane instance.
 properties:
   - name: normal
     summary: |
-      The 'normal' property represents the perpendicular direction to the plane's surface (its orientation). This Vector3 normal is unit length and can be used to calculate the orientation of angled surfaces or the angle between two intersecting planes. See the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-normal.html) for more information.
+      The normal vector of the plane, perpendicular to its surface.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: distance
     summary: |
-      The 'distance' property gives the shortest distance between the plane and the origin, along the plane's normal. This value is often used for computations involving the plane and other 3D objects. Please refer to [Unity's Plane.distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-distance.html) for further specifics.
+      The shortest distance between the plane and the origin along its normal.
     description:
     is_static: false
     code_samples:
     type: number
   - name: flipped
     summary: |
-      The 'flipped' property returns a new plane that is identical to this one, but with the normal vector flipped to point in the opposite direction. This altered plane essentially represents the same geometric plane in 3D space but with its front and back sides swapped. View more in [Unity's Plane.flipped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-flipped.html).
+      Returns a new plane with the normal vector flipped.
     description:
     is_static: false
     code_samples:
@@ -55,7 +49,7 @@ properties:
 methods:
   - name: Raycast
     summary: |
-      The 'Raycast' method determines if a ray intersects the plane, and if so, how far along the ray the intersection point occurs. This is a commonly performed operation in 3D graphics, useful for scenarios like mouse picking, where you want to determine what object in the 3D world the user has clicked on. See [Unity's Plane.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Raycast.html) for more details.
+      Determines if a ray intersects the plane and returns the intersection point distance.
     description:
     is_static: false
     code_samples:
@@ -66,10 +60,10 @@ methods:
         summary: The ray to test for intersection.
     returns:
       - type: (boolean, number)
-        summary: A tuple containing a boolean that indicates whether the ray intersected the Plane and the distance at which it intersected.
+        summary: A tuple containing intersection status and distance.
   - name: SetNormalAndPosition
     summary: |
-      The 'SetNormalAndPosition' method allows you to alter the plane's normal vector and adjust its position directly, redefining the plane in 3D space. This can be useful when the orientation or position of an existing Plane needs to be adjusted. More information is available in [Unity's Plane.SetNormalAndPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.SetNormalAndPosition.html).
+      Sets the normal vector and a point on the plane to redefine its position.
     description:
     is_static: false
     code_samples:
@@ -77,17 +71,17 @@ methods:
       - name: inNormal
         type: DataType.Vector3
         default:
-        summary: The new normal of the plane.
+        summary: The new normal vector of the plane.
       - name: inPoint
         type: DataType.Vector3
         default:
-        summary: A new point in the plane.
+        summary: A new point on the plane.
     returns:
       - type: void
         summary:
   - name: Set3Points
     summary: |
-      The 'Set3Points' method recalculates the plane to contain the three specified points. You can consider this as stretching or reshaping the plane to pass through the provided three points in space. This can prove useful when a plane needs to wrap around a newly defined area in space. More context can be found in [Unity's Plane.Set3Points Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Set3Points.html).
+      Recalculates the plane to contain three specified points.
     description:
     is_static: false
     code_samples:
@@ -95,21 +89,21 @@ methods:
       - name: a
         type: DataType.Vector3
         default:
-        summary: The first point in 3D space.
+        summary: The first point.
       - name: b
         type: DataType.Vector3
         default:
-        summary: The second point in 3D space.
+        summary: The second point.
       - name: c
         type: DataType.Vector3
         default:
-        summary: The third point in 3D space.
+        summary: The third point.
     returns:
       - type: void
         summary:
   - name: Flip
     summary: |
-      The 'Flip' method flips the plane's normal to point in the opposite direction. This changes which side of the plane is considered the "front". If you have a one-sided surface and want to make it face the other way without moving the plane, 'Flip' can be useful. Check out [Unity's Plane.Flip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Flip.html) for a better understanding.
+      Flips the plane's normal vector.
     description:
     is_static: false
     code_samples:
@@ -119,7 +113,7 @@ methods:
         summary:
   - name: Translate
     summary: |
-      The 'Translate' method moves the plane in 3D space by an offset specified by a Vector3. If you have a defined plane and you want to shift it in space without changing its orientation, this method is a good choice. You can learn more in [Unity's Plane.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Translate.html).
+      Moves the plane by a specified offset in 3D space.
     description:
     is_static: true
     code_samples:
@@ -131,13 +125,13 @@ methods:
       - name: translation
         type: DataType.Vector3
         default:
-        summary: The shift in each direction of 3D space.
+        summary: The translation offset.
     returns:
       - type: DataType.Plane
         summary: Returns the translated plane.
   - name: ClosestPointOnPlane
     summary: |
-      The 'ClosestPointOnPlane' method determines the point in 3D space that is closest to the given point and lies on the plane. This can be used in several different calculations, for example, if you want to place an object on the plane, but at the position closest to a certain point. More details can be found in [Unity's Plane.ClosestPointOnPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.ClosestPointOnPlane.html).
+      Finds the point on the plane closest to a given point.
     description:
     is_static: false
     code_samples:
@@ -148,10 +142,10 @@ methods:
         summary: The point in 3D space.
     returns:
       - type: DataType.Vector3
-        summary: Returns a point on the plane that is closest to the given point.
+        summary: Returns the closest point on the plane.
   - name: GetDistanceToPoint
     summary: |
-      The 'GetDistanceToPoint' method calculates the shortest distance from a point in 3D space to the plane. This method is useful when testing whether a point is near a plane within a certain threshold. More information can be found in [Unity's Plane.GetDistanceToPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.GetDistanceToPoint.html).
+      Calculates the shortest distance from a point to the plane.
     description:
     is_static: false
     code_samples:
@@ -159,13 +153,12 @@ methods:
       - name: point
         type: DataType.Vector3
         default:
-        summary: The point from which the distance is calculated.
+        summary: The point to calculate the distance from.
     returns:
       - type: number
-        summary: Returns the shortest distance from the point to the plane.
   - name: GetSide
     summary: |
-      The 'GetSide' method determines which side of the plane a given point is on. This can be useful when sorting points based on their position relative to the plane. For further insights, you can visit [Unity's Plane.GetSide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.GetSide.html).
+      Determines which side of the plane a point lies on.
     description:
     is_static: false
     code_samples:
@@ -173,13 +166,13 @@ methods:
       - name: point
         type: DataType.Vector3
         default:
-        summary: The point to test for side.
+        summary: The point to test.
     returns:
       - type: boolean
-        summary: Returns 'true' if the point is on the same side as the plane normal.
+        summary: Returns true if the point is on the same side as the plane's normal.
   - name: SameSide
     summary: |
-      The 'SameSide' method checks if two points are on the same side of the plane. This is useful in situations like determining if two objects are on the same side of a game level or a wall, for example. More context can be gathered from [Unity's Plane.SameSide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.SameSide.html).
+      Checks if two points are on the same side of the plane.
     description:
     is_static: false
     code_samples:
@@ -194,10 +187,10 @@ methods:
         summary: The second point.
     returns:
       - type: boolean
-        summary: Returns 'true' if the two points are on the same side of the plane.
+        summary: Returns true if the points are on the same side of the plane.
   - name: Translate
     summary: |
-      The 'Translate' method provides a modified plane that is translated by the given Vector3 and does not change its normal direction. It is useful when needing to move a defined plane to a new location in 3D space. For more details, visit [Unity's Plane.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Translate.html).
+      Moves the plane in 3D space by a specified offset without changing its normal direction.
     description:
     is_static: true
     code_samples:
@@ -205,12 +198,12 @@ methods:
       - name: plane
         type: DataType.Plane
         default:
-        summary: The defined plane to translate.
+        summary: The plane to translate.
       - name: translation
         type: DataType.Vector3
         default:
-        summary: The adjust in 3D space.
+        summary: The translation offset.
     returns:
       - type: DataType.Plane
-        summary: Returns a new Plane instance that's been translated.
-math_operations:
+        summary: Returns a new Plane instance that has been translated.
+math_operations: 

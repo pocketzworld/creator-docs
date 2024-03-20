@@ -1,11 +1,8 @@
+
 name: RaycastHit
 type: datatypes
 summary: |
-  A RaycastHit object in Unity is used to store information returned by a raycast (see Service.Physics ), a common technique used in video games to detect what lies in a certain path or direction. This can be viewed as shooting a laser beam from a point in a specific direction to see what it hits. For example, a first-person shooter may use a raycast to determine what the player is aiming at.
-
-  A raycast creates a RaycastHit object, storing information about the closest object hit by the ray (where the hit occurred, surface normal at the point of contact, the distance from the beginning of the ray, etc.). This object can be used to determine the specific reaction to the raycast.
-
-  For further details, consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit.html).
+  Stores information returned by a raycast, a technique used to detect objects in a certain path or direction in video games. It contains data such as the hit collider, hit point, surface normal, distance from the ray's origin, etc.
 description:
 code_samples:
 inherits:
@@ -13,84 +10,84 @@ constructors:
 properties:
   - name: collider
     summary: |
-      The 'collider' property contains the collider hit by the ray. This allows you to retrieve information regarding the object that was hit by the raycast. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-collider.html).
+      Contains the collider hit by the ray.
     description:
     is_static: false
     code_samples:
     type: Class.Collider
   - name: colliderInstanceID
     summary: |
-      The 'colliderInstanceID' property holds the unique identifier for the collider hit by the ray. This can be useful when wanting to interact with or track the specific object hit by the raycast on a deeper level. You can read more in [Unity's documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-colliderInstanceID.html).
+      Holds the unique identifier for the collider hit by the ray.
     description:
     is_static: false
     code_samples:
     type: number
   - name: point
     summary: |
-      The 'point' property is where the hit actually happened. It accesses the point in world space where the raycast hit the collider. It can be used, for instance, to spawn a visual effect at the point where a bullet hit. Learn more by checking out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-point.html).
+      The point in world space where the raycast hit the collider.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: normal
     summary: |
-      The 'normal' property gives the normal of the surface hit by the ray. This can be particularly useful for effects that require to know the orientation of the hit surface, like bouncing off a surface upon hitting it. Consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-normal.html) for more information.
+      Gives the normal of the surface hit by the ray.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: barycentricCoordinate
     summary: |
-      The 'barycentricCoordinate' property gives the barycentric coordinates of the hit point on the mesh. These coordinates can be helpful in various advanced techniques like texture blending or displacement. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-barycentricCoordinate.html) for more specifics.
+      Provides the barycentric coordinates of the hit point on the mesh.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: distance
     summary: |
-      The 'distance' property refers to the distance from the ray's origin to the hit point. This can be useful to know how far away the hit object is from the origin of the raycast. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-distance.html).
+      Refers to the distance from the ray's origin to the hit point.
     description:
     is_static: false
     code_samples:
     type: number
   - name: triangleIndex
     summary: |
-      The 'triangleIndex' property holds the index of the triangle hit by the ray. This is specifically useful when dealing with mesh colliders, allowing access to the specific triangle hit. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-triangleIndex.html) for further context.
+      Holds the index of the triangle hit by the ray.
     description:
     is_static: false
     code_samples:
     type: number
   - name: textureCoord
     summary: |
-      The 'textureCoord' property provides the coordinates of the texture hit by the ray. This allows you to access the specific point on the texture mapped to the hit point on the object, and can be useful for manipulating the texture at the hit location. Learn more at [Unity's RaycastHit.textureCoord documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-textureCoord.html).
+      Provides the coordinates of the texture hit by the ray.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: textureCoord2
     summary: |
-      Similar to the 'textureCoord' property, 'textureCoord2' property provides the coordinates of the second texture hit by the ray. This is useful in multiple-UV workflows, specifically when you need to map two textures on the same surface. For more insights, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-textureCoord2.html).
+      Provides the coordinates of the second texture hit by the ray.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: transform
     summary: |
-      The 'transform' property provides the Transform of the object that was hit. This is useful if you want to know the position, rotation or scale of the hit object, or if you want to manipulate these properties. For a deeper understanding, refer to [Unity's RaycastHit.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-transform.html).
+      Provides the Transform of the object that was hit.
     description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: rigidbody
     summary: |
-      The 'rigidbody' property offers access to the Rigidbody of the hit object, if it has one. This is very handy if you want to apply physics-related changes to the hit object, such as adding forces or changing its velocity. Detailed info can be found in [Unity's RaycastHit.rigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-rigidbody.html).
+      Offers access to the Rigidbody of the hit object, if it has one.
     description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
   - name: lightmapCoord
     summary: |
-      The 'lightmapCoord' property provides the coordinates of the lightmap hit by the ray. This can help to determine the specific point on the lightmap that corresponds to the hit point on the object, and is especially useful when trying to create effects that interact with the lighting of the scene. Consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-lightmapCoord.html) for more information.
+      Provides the coordinates of the lightmap hit by the ray.
     description:
     is_static: false
     code_samples:

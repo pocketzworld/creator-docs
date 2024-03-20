@@ -1,18 +1,14 @@
 name: Ray
 type: datatypes
 summary: |
-  A Ray in Unity is a construct used to represent a line in 3D space emanating from a source point (origin) and extending indefinitely in a specified direction. Various actions such as ray casting (see Service.Physics ) use this construct extensively, which sends an invisible line into the world from a certain place and in a certain direction, to collect information about what lies in the path of the ray.
-
-  The Ray datatype has two main components: an origin represented by a Vector3 and a direction, also represented by a Vector3. The Service.Physics system can use Rays to detect the objects that are hit by the Ray, this can be useful in a variety of contexts such as shooting a laser towards an object or testing line of sight for AI.
-
-  Learn more in [Unity's Ray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray.html).
+  Represents a line in 3D space extending indefinitely from a source point (origin) in a specified direction. It is utilized extensively for ray casting and collision detection.
 description:
 code_samples:
 inherits:
 constructors:
   - name: new
     summary: |
-      The 'new' constructor of the Ray class allows you to create a new Ray instance by specifying its origin and direction vector. The origin is a Vector3 from where the ray starts, and the direction is another Vector3 that shows the path where the ray extends. If the magnitude of the direction Vector3 is not 1, it'll be normalized to avoid internal inaccuracies. For more details, consult the [Unity's Ray.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray-ctor.html).
+      Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized. 
     description:
     is_static: false
     code_samples:
@@ -27,18 +23,18 @@ constructors:
         summary: The direction of the ray in 3D space.
     returns:
       - type: DataType.Ray
-        summary: Returns a new Ray instance with the specified origin and direction.
+        summary: Returns a new Ray instance with specified origin and direction.
 properties:
   - name: origin
     summary: |
-      The 'origin' property represents the starting point of the ray in 3D space. This field gives you control over the location from where the ray emerges. [Unity's Ray.origin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray-origin.html) has more details.
+      Represents the starting point of the ray in 3D space.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: direction
     summary: |
-      The 'direction' property depicts the path in 3D space along which the ray extends. It gives you control over where the ray is pointing. To dive deeper into the mechanics of the 'direction' property, check [Unity's Ray.direction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray-direction.html).
+      Depicts the path along which the ray extends in 3D space.
     description:
     is_static: false
     code_samples:
@@ -46,7 +42,7 @@ properties:
 methods:
   - name: GetPoint
     summary: |
-      The 'GetPoint' method retrieves a Vector3 that lies a certain 'distance' along the ray from the origin point. It's often used when you need to place an object along the ray at a specific distance from its origin. For further information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray.GetPoint.html).
+      Retrieves a point along the ray at a specified distance from the origin.
     description:
     is_static: false
     code_samples:
@@ -57,5 +53,5 @@ methods:
         summary: The distance along the ray from the origin point.
     returns:
       - type: DataType.Vector3
-        summary: Returns the point that lies a given distance along the ray from the origin.
+        summary: Returns the point at the given distance along the ray.
 math_operations:
