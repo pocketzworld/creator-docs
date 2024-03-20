@@ -1,58 +1,48 @@
 name: Mathf
 type: classes
-summary: |
-  The Mathf class is like the master craftsman's toolset for numbers in your game. It is an incredible treasure trove of mathematical functions and constants that make it extremely useful for any mathematical operations you might have to perform in your game code.
+summary: Provides a comprehensive set of mathematical functions and constants for game development, including operations like absolute value, square root, and trigonometric calculations, as well as game-specific algorithms like smooth damping and lerp.
 
-  From calculating absolute values, square roots, to sealing and flooring numbers, Mathf class gives you the power of mathematics in a game friendly way. Whether you are calculating your game character's jump velocity, converting angles or creating a quaternion rotation, Mathf is the class you will interact with a lot!
-
-  It includes methods for basic mathematical functions such as sine, cosine, or tangents as well as more specific game-related algorithms such as smooth damping, lerp, clamp, and more. For more information, refer to the [official Unity Mathf documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.html).
 constructors:
 tags:
   - ServerAndClient
 properties:
   - name: PI
-    summary: |
-      The 'PI' property represents the mathematical constant Pi, ideal for circular and trigonometric calculations. Read more from [Unity's PI documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PI.html).
+    summary: Represents the mathematical constant Pi for circular and trigonometric calculations.
     description:
     is_static: true
     tags:
       - ServerAndClient
     type: double
   - name: Infinity
-    summary: |
-      'Infinity' represents positive infinity. Useful for setting values to unrealistic high when comparing. Check [Unity's Infinity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Infinity.html).
+    summary: Represents positive infinity, useful for comparisons.
     description:
     is_static: true
     tags:
       - ServerAndClient
     type: double
   - name: NegativeInfinity
-    summary: |
-      'NegativeInfinity' represents negative infinity, aiding in assigning unrealistically low values during comparisons. See [Unity's NegativeInfinity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.NegativeInfinity.html).
+    summary: Represents negative infinity, useful for comparisons.
     description:
     is_static: true
     tags:
       - ServerAndClient
     type: double
   - name: Deg2Rad
-    summary: |
-      'Deg2Rad' is a conversion factor used to transform degrees to radians. Explore more in [Unity's Deg2Rad documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Deg2Rad.html).
+    summary: Conversion factor for degrees to radians.
     description:
     is_static: true
     tags:
       - ServerAndClient
     type: double
   - name: Rad2Deg
-    summary: |
-      'Rad2Deg' is a conversion factor used to transform radians to degrees. Find out more at [Unity's Rad2Deg documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Rad2Deg.html).
+    summary: Conversion factor for radians to degrees.
     description:
     is_static: true
     tags:
       - ServerAndClient
     type: double
   - name: Epsilon
-    summary: |
-      'Epsilon' represents the smallest positive double greater than zero. Useful in preventing division by zero errors. Learn more at [Unity's Epsilon documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Epsilon.html).
+    summary: Represents the smallest positive double greater than zero, preventing division by zero errors.
     description:
     is_static: true
     tags:
@@ -60,8 +50,7 @@ properties:
     type: double
 methods:
   - name: Abs
-    summary: |
-      The 'Abs' method calculates and returns the absolute value of its input. Check [Unity's Abs documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Abs.html) for more details.
+    summary: Calculates and returns the absolute value of its input.
     description:
     is_static: true
     tags:
@@ -70,13 +59,12 @@ methods:
       - name: value
         type: float
         default:
-        summary: A number for which to find the absolute value
+        summary: A number to find the absolute value of
     returns:
       - type: float
         summary: The absolute value of the input number.
   - name: Acos
-    summary: |
-      The 'Acos' method returns the angle in radians whose cosine is the specified number, useful in trigonometric math operations. More info at [Unity's Acos documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Acos.html).
+    summary: Returns the angle in radians whose cosine is the specified number, for trigonometric math operations.
     description:
     is_static: true
     tags:
@@ -90,8 +78,7 @@ methods:
       - type: float
         summary: Angle in radians, within the range [0, π].
   - name: Approximately
-    summary: |
-      The 'Approximately' method compares two floating point values, checking if they are approximately equal to handle inconsistencies in floating point arithmetic. Read [Unity's Approximately documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Approximately.html).
+    summary: Compares two floating point values for approximate equality, to handle floating point arithmetic inconsistencies.
     description:
     is_static: true
     tags:
@@ -109,8 +96,7 @@ methods:
       - type: boolean
         summary: True if the values are approximately equal, else false.
   - name: Asin
-    summary: |
-      The 'Asin' method returns the angle in radians whose sine is the specified number. Useful for trigonometry operations involving sine. Check [Unity's Asin documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Asin.html).
+    summary: Returns the angle in radians whose sine is the specified number, useful for trigonometric operations.
     description:
     is_static: true
     tags:
@@ -124,8 +110,7 @@ methods:
       - type: float
         summary: Angle in radians within the range [-1/2π, 1/2π].
   - name: Atan
-    summary: |
-      The 'Atan' method returns the angle in radians whose tangent is the specified number. Useful for trigonometry operations involving tangent. See [Unity's Atan documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Atan.html) for more.
+    summary: Returns the angle in radians whose tangent is the specified number, for trigonometric operations.
     description:
     is_static: true
     tags:
@@ -139,8 +124,7 @@ methods:
       - type: float
         summary: Angle in radians within the range [-π/2, π/2].
   - name: Atan2
-    summary: |
-      The 'Atan2' method returns the angle in radians whose tan is y/x, where the signs of both arguments are used to determine the quadrant of the result. It is often useful in game physics calculations. Check [Unity's Atan2 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Atan2.html).
+    summary: Returns the angle in radians whose tan is y/x, useful in game physics calculations.
     description:
     is_static: true
     tags:
@@ -158,8 +142,7 @@ methods:
       - type: float
         summary: Angle in radians within the range [-π, π].
   - name: Ceil
-    summary: |
-      The 'Ceil' method rounds a number up to the closest integer value that is not less than a specified number. Helpful in setting upper limit values. More details in [Unity's Ceil documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Ceil.html).
+    summary: Rounds a number up to the closest integer not less than the specified number, useful for setting upper limit values.
     description:
     is_static: true
     tags:
@@ -171,10 +154,9 @@ methods:
         summary: The number to round up
     returns:
       - type: float
-        summary: The smallest integer not less than f
+        summary: The smallest integer not less than f.
   - name: CeilToInt
-    summary: |
-      The 'CeilToInt' method rounds a number up to the nearest integer, returning an integer value. Useful when working with discrete values. Read more at [Unity's CeilToInt documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.CeilToInt.html).
+    summary: Rounds a number up to the nearest integer, returning an integer value, useful when working with discrete values.
     description:
     is_static: true
     tags:
@@ -188,8 +170,7 @@ methods:
       - type: integer
         summary: The smallest integer not less than f.
   - name: Clamp
-    summary: |
-      The 'Clamp' method restricts a number to be within a specified range. Great for setting limits on a variable or return value. See more at [Unity's Clamp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Clamp.html).
+    summary: Restricts a number to be within a specified range, great for setting limits on variables or return values.
     description:
     is_static: true
     tags:
@@ -211,8 +192,7 @@ methods:
       - type: float
         summary: The clamped number between min and max.
   - name: Clamp01
-    summary: |
-      The 'Clamp01' method restricts a number to be within the range [0,1]. This function can be handy when a proportion or percentage value needs to be ensured. Check out [Unity's Clamp01 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Clamp01.html).
+    summary: Restricts a number to be within the range [0,1], handy for ensuring proportions or percentages.
     description:
     is_static: true
     tags:
@@ -226,8 +206,7 @@ methods:
       - type: float
         summary: The clamped value between 0 and 1.
   - name: ClosestPowerOfTwo
-    summary: |
-      The 'ClosestPowerOfTwo' method returns the power of two that is closest to a provided number. Particularly useful when dealing with texture resolutions. Learn more from [Unity's ClosestPowerOfTwo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.ClosestPowerOfTwo.html).
+    summary: Returns the power of two closest to a provided number, useful in texture resolutions.
     description:
     is_static: true
     tags:
@@ -236,13 +215,12 @@ methods:
       - name: value
         type: int32
         default:
-        summary: The number for which to find the closest power of two
+        summary: The number to find the closest power of two for
     returns:
       - type: int32
-        summary: The power of two closest to the input value
+        summary: The power of two closest to the input value.
   - name: Cos
-    summary: |
-      The 'Cos' method computes and returns the cosine of the angle specified in radians. Helps in trigonometry operations involving cosine. See [Unity's Cos documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Cos.html) for more.
+    summary: Computes and returns the cosine of the specified angle in radians, for trigonometric operations.
     description:
     is_static: true
     tags:
@@ -251,13 +229,12 @@ methods:
       - name: a
         type: float
         default:
-        summary: A number as an angle, in radians
+        summary: An angle, in radians
     returns:
       - type: float
-        summary: The cosine of the angle
+        summary: The cosine of the angle.
   - name: DeltaAngle
-    summary: |
-      The 'DeltaAngle' method determines and returns the difference between two angles. Key to angle comparisons, ensuring minimal rotation direction. For details, refer to [Unity's DeltaAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.DeltaAngle.html).
+    summary: Determines and returns the smallest difference between two angles, key to minimal rotation direction.
     description:
     is_static: true
     tags:
@@ -273,10 +250,11 @@ methods:
         summary: The second angle, in degrees
     returns:
       - type: float
-        summary: The shortest angle difference, in degrees
+        summary: The shortest angle difference, in degrees.
+  # Additional methods would continue in the same structured manner.
+math_operations:
   - name: Exp
-    summary: |
-      The 'Exp' method calculates and returns 'e' raised to the specified power. Essential for exponential growth calculations. Check [Unity's Exp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Exp.html).
+    summary: Calculates 'e' raised to the specified power, essential for exponential growth calculations.
     description:
     is_static: true
     tags:
@@ -285,14 +263,12 @@ methods:
       - name: power
         type: float
         default:
-        summary: The power to which 'e' is raised
+        summary: The power to raise 'e' to
     returns:
       - type: float
-        summary: |
-          The mathematical constant 'e' raised to the given power
+        summary: 'e' raised to the given power.
   - name: Floor
-    summary: |
-      The 'Floor' method rounds a number down towards negative infinity to the closest integer value, and returns that integer. Handy for assigning lower limit values. More at [Unity's Floor documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Floor.html).
+    summary: Rounds a number down towards negative infinity to the closest integer, handy for lower limit values.
     description:
     is_static: true
     tags:
@@ -304,10 +280,9 @@ methods:
         summary: The number to round down
     returns:
       - type: float
-        summary: The largest integer less than or equal to f
+        summary: The largest integer less than or equal to f.
   - name: InverseLerp
-    summary: |
-      The 'InverseLerp' method linearly interpolates between two numbers, returning the fraction of the way 'value' is between 'a' and 'b'. Essential for finding relative positions or progress percentage. Read [Unity's InverseLerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.InverseLerp.html).
+    summary: Linearly interpolates between two numbers, returning the fraction of the way between them.
     description:
     is_static: true
     tags:
@@ -316,21 +291,20 @@ methods:
       - name: a
         type: float
         default:
-        summary: The first number
+        summary: The start value
       - name: b
         type: float
         default:
-        summary: The second number
+        summary: The end value
       - name: value
         type: float
         default:
-        summary: The value to linearly interpolate
+        summary: The value to interpolate
     returns:
       - type: float
-        summary: Fraction of the way 'value' is between 'a' and 'b'
+        summary: Fraction of the way the value is between 'a' and 'b'.
   - name: IsPowerOfTwo
-    summary: |
-      The 'IsPowerOfTwo' method checks if a given number is a power of two. Crucial in bit manipulation and efficient division and multiplication. Read [Unity's IsPowerOfTwo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.IsPowerOfTwo.html) for more details.
+    summary: Checks if a number is a power of two, crucial for efficient calculations.
     description:
     is_static: true
     tags:
@@ -342,10 +316,9 @@ methods:
         summary: The number to check
     returns:
       - type: boolean
-        summary: True if the value is a power of two, false otherwise
+        summary: True if the number is a power of two, false otherwise.
   - name: Lerp
-    summary: |
-      The 'Lerp' method linearly interpolates between two numbers by a specific proportion. Very common in smoothing transitions or animations. Check [Unity's Lerp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Lerp.html).
+    summary: Linearly interpolates between two numbers by a specific proportion, common in smoothing transitions.
     description:
     is_static: true
     tags:
@@ -354,21 +327,20 @@ methods:
       - name: a
         type: number
         default:
-        summary: The first number
+        summary: The start value
       - name: b
         type: number
         default:
-        summary: The second number
+        summary: The end value
       - name: t
         type: number
         default:
-        summary: The interpolation proportion, a value from 0 to 1
+        summary: The interpolation value, between 0 and 1
     returns:
       - type: number
-        summary: The interpolated value between a and b
+        summary: The interpolated value between 'a' and 'b'.
   - name: LerpAngle
-    summary: |
-      The 'LerpAngle' method linearly interpolates between two angles. It is useful in smoothly transitioning angles over time. Read [Unity's LerpAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LerpAngle.html).
+    summary: Linearly interpolates between two angles, smoothing angle transitions over time.
     description:
     is_static: true
     tags:
@@ -377,21 +349,20 @@ methods:
       - name: a
         type: number
         default:
-        summary: The first angle in degrees
+        summary: The start angle in degrees
       - name: b
         type: number
         default:
-        summary: The second angle in degrees
+        summary: The end angle in degrees
       - name: t
         type: number
         default:
-        summary: The interpolation proportion, a value from 0 to 1
+        summary: The interpolation value, between 0 and 1
     returns:
       - type: number
-        summary: The interpolated angle in degrees
+        summary: The interpolated angle in degrees.
   - name: LerpUnclamped
-    summary: |
-      The 'LerpUnclamped' method linearly interpolates between two numbers based on the third input, even exceeding 1. Useful for values beyond the standard boundaries. See [Unity's LerpUnclamped documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LerpUnclamped.html).
+    summary: Linearly interpolates between two numbers based on a third input, allowing values beyond 0 and 1.
     description:
     is_static: true
     tags:
@@ -400,21 +371,21 @@ methods:
       - name: a
         type: number
         default:
-        summary: The first number
+        summary: The start value
       - name: b
         type: number
         default:
-        summary: The second number
+        summary: The end value
       - name: t
         type: number
         default:
-        summary: The interpolation value, can be greater than 1
+        summary: The interpolation value, can be beyond 0 to 1
     returns:
       - type: number
-        summary: The interpolated value between a and b
+        summary: The interpolated value between 'a' and 'b', not clamped.
+  # The documentation would continue in a similar format for the remaining methods.
   - name: Log
-    summary: |
-      The 'Log' function calculates and returns the natural logarithm (base e) of a number. Useful in several scientific calculations. More in [Unity's Log documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Log.html).
+    summary: Calculates the natural logarithm (base e) of a number, useful in scientific calculations.
     description:
     is_static: true
     tags:
@@ -423,13 +394,12 @@ methods:
       - name: f
         type: number
         default:
-        summary: The number for which to find the logarithm
+        summary: The number to find the logarithm of
     returns:
       - type: number
-        summary: The natural logarithm of the number
+        summary: The natural logarithm of the number.
   - name: Log10
-    summary: |
-      The 'Log10' method calculates and returns the base 10 logarithm of a number. Essential in scaling problems and for checking the number of decimal digits in the given number. Check [Unity's Log10 documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Log10.html).
+    summary: Calculates the base 10 logarithm of a number, essential for determining order of magnitude.
     description:
     is_static: true
     tags:
@@ -438,13 +408,12 @@ methods:
       - name: f
         type: number
         default:
-        summary: The number for which to find the logarithm
+        summary: The number to find the logarithm of
     returns:
       - type: number
-        summary: The base 10 logarithm of the number
+        summary: The base 10 logarithm of the number.
   - name: Max
-    summary: |
-      The 'Max' method returns the larger of two or more values. Ideal for finding highest score, fastest time, largest size, etc. Find more at [Unity's Max documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Max.html).
+    summary: Returns the larger of two or more values, ideal for finding highest scores or largest sizes.
     description:
     is_static: true
     tags:
@@ -453,13 +422,12 @@ methods:
       - name: values
         type: number[]
         default:
-        summary: An array of two or more numbers for comparison
+        summary: An array of numbers for comparison
     returns:
       - type: number
-        summary: The largest value among the given numbers
+        summary: The largest value among the given numbers.
   - name: Min
-    summary: |
-      The 'Min' method returns the smaller of two or more numbers. Practical for setting lower limit, comparing scores or ordering. See [Unity's Min documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Min.html).
+    summary: Returns the smaller of two or more values, practical for setting lower limits or ordering.
     description:
     is_static: true
     tags:
@@ -468,13 +436,12 @@ methods:
       - name: values
         type: number[]
         default:
-        summary: An array of two or more numbers for comparison
+        summary: An array of numbers for comparison
     returns:
       - type: number
-        summary: The smallest value among the given numbers
+        summary: The smallest value among the given numbers.
   - name: MoveTowards
-    summary: |
-      The 'MoveTowards' method shifts a number towards a target by a specified maximum step and returns the result. It can be used to create smooth transitions between numbers or limit the rate of change. Refer to [Unity's MoveTowards documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.MoveTowards.html).
+    summary: Gradually shifts a number towards a target by a specified maximum step, useful for smooth transitions.
     description:
     is_static: true
     tags:
@@ -487,17 +454,16 @@ methods:
       - name: target
         type: number
         default:
-        summary: The value to approach
+        summary: The target value
       - name: maxDelta
         type: number
         default:
         summary: The maximum step size
     returns:
       - type: number
-        summary: The new number, closer to the target
+        summary: The new number, closer to the target.
   - name: MoveTowardsAngle
-    summary: |
-      The 'MoveTowardsAngle' method works similarly to 'MoveTowards', but it moves the current angle towards a target angle. Angles are taken modulo 360 degrees to compute the shortest way around the circle. Check [Unity's MoveTowardsAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.MoveTowardsAngle.html) for more details.
+    summary: Moves the current angle towards a target angle, computing the shortest way around the circle.
     description:
     is_static: true
     tags:
@@ -517,10 +483,9 @@ methods:
         summary: The maximum angle change allowed per call
     returns:
       - type: number
-        summary: The new angle, closer to the target, in degrees
+        summary: The new angle, closer to the target, in degrees.
   - name: NextPowerOfTwo
-    summary: |
-      The 'NextPowerOfTwo' method rounds a number up to the next highest power of two. Useful when dealing with things like texture sizes in computer graphics. Explore [Unity's NextPowerOfTwo documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.NextPowerOfTwo.html).
+    summary: Rounds a number up to the next highest power of two, relevant for texture sizes in graphics.
     description:
     is_static: true
     tags:
@@ -532,10 +497,9 @@ methods:
         summary: The number to round up
     returns:
       - type: number
-        summary: The next power of two
+        summary: The next power of two.
   - name: PingPong
-    summary: |
-      The 'PingPong' method swings a value between zero and a maximum, similar to how a ping pong ball would bounce between two sides. Vital for creating oscillating effects. For more see [Unity's PingPong documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PingPong.html).
+    summary: Alternates a value between zero and a maximum, creating oscillating effects.
     description:
     is_static: true
     tags:
@@ -544,17 +508,16 @@ methods:
       - name: t
         type: number
         default:
-        summary: The number to ping-pong
+        summary: The value to oscillate
       - name: length
         type: number
         default:
         summary: The maximum value
     returns:
       - type: number
-        summary: The ping-ponged number
+        summary: The oscillated value.
   - name: Pow
-    summary: |
-      The 'Pow' method raises a number to the given power. Highly used in exponential growth or decrease calculations. Explore more at [Unity's Pow documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Pow.html).
+    summary: Raises a number to a given power, commonly used in growth calculations.
     description:
     is_static: true
     tags:
@@ -570,16 +533,16 @@ methods:
         summary: The exponent
     returns:
       - type: number
-        summary: The base number raised to the power of exponent
+        summary: The base number raised to the power of the exponent.
   - name: Repeat
-    summary: |
-      The 'Repeat' method loops the value t, such that it is never larger than length and never smaller than 0. It is useful for creating cyclic or repeating effects. Read [Unity's Repeat documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Repeat.html).
+    summary: Loops a value so that it never exceeds a certain length, useful for cyclic effects.
     description:
     is_static: true
     tags:
       - ServerAndClient
     parameters:
       - name: t
+        type
         type: number
         default:
         summary: The value to loop
@@ -589,10 +552,9 @@ methods:
         summary: The length of the loop
     returns:
       - type: number
-        summary: The looped number
+        summary: The looped number, always between 0 and the specified length.
   - name: Round
-    summary: |
-      The 'Round' method rounds a number to the nearest integer value and returns this integer. This is useful when you need discrete steps or levels. Learn more from [Unity's Round documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Round.html).
+    summary: Rounds a number to the nearest integer, useful for discrete step or level calculations.
     description:
     is_static: true
     tags:
@@ -601,13 +563,12 @@ methods:
       - name: f
         type: number
         default:
-        summary: The number to round off
+        summary: The number to round
     returns:
       - type: number
-        summary: The rounded integer
+        summary: The nearest integer.
   - name: Sign
-    summary: |
-      The 'Sign' function returns the sign of a number. It is an essential method for determining the positivity or negativity of a number. Check out more on [Unity's Sign documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sign.html).
+    summary: Returns the sign of a number, determining if it is positive, negative, or zero.
     description:
     is_static: true
     tags:
@@ -616,13 +577,12 @@ methods:
       - name: a
         type: number
         default:
-        summary: A number to check the sign of
+        summary: The number to check the sign of
     returns:
       - type: number
-        summary: 1 if a is positive or zero, -1 if a is negative
+        summary: 1 if positive or zero, -1 if negative.
   - name: Sin
-    summary: |
-      The 'Sin' method computes and returns the sine of an angle specified in radians. Helpful in many trigonometric calculations during game mechanics scripting. See [Unity's Sin documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sin.html).
+    summary: Computes the sine of a specified angle in radians, useful in trigonometric calculations.
     description:
     is_static: true
     tags:
@@ -631,13 +591,12 @@ methods:
       - name: a
         type: number
         default:
-        summary: A number as an angle, in radians
+        summary: The angle in radians
     returns:
       - type: number
-        summary: The sine of angle a
+        summary: The sine of the angle.
   - name: SmoothDamp
-    summary: |
-      The 'SmoothDamp' method gradually changes a number towards a desired goal over time. The value is smoothed by some spring-damper like function, which will never overshoot. Ideal for smooth transitions to a target value. Learn more from [Unity's SmoothDamp documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothDamp.html).
+    summary: Gradually changes a number towards a desired goal over time, using a damping function.
     description:
     is_static: true
     tags:
@@ -650,31 +609,28 @@ methods:
       - name: target
         type: number
         default:
-        summary: The value we are trying to reach
+        summary: The goal value
       - name: currentV
         type: number
         default:
-        summary: The current velocity, this value is modified by the function every time you call it and returned as the second return
+        summary: The current velocity, modified by the method
       - name: smoothTime
         type: number
         default:
-        summary: Approximately the time it will take to reach the target. A smaller value will reach the target faster
+        summary: Time to reach the target
       - name: maxS
         type: number
         default:
-        summary: Optional, maximum speed at which the value may change magnitude
+        summary: Optional maximum speed
       - name: deltaTime
         type: number
         default:
-        summary: Optional, the time difference between this and the last call. Defaults to Time.deltaTime
+        summary: Time difference since the last call
     returns:
       - type: number, number
-        summary: |
-          1. The new smoothed value
-          2. The new velocity
+        summary: The new smoothed value and the new velocity.
   - name: SmoothDampAngle
-    summary: |
-      The 'SmoothDampAngle' method is identical to 'SmoothDamp' but operates over angles instead. It rotates a value current towards target. Given the nature of rotation, it smoothly interpolates between the two. Check [Unity's SmoothDampAngle documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothDampAngle.html).
+    summary: Similar to 'SmoothDamp', but specifically for angles, ensuring smooth rotation towards a target angle.
     description:
     is_static: true
     tags:
@@ -691,27 +647,24 @@ methods:
       - name: currentV
         type: number
         default:
-        summary: The current angular velocity, this value is modified by the function every time you call it and returned as the second return
+        summary: The current angular velocity
       - name: smoothTime
         type: number
         default:
-        summary: Approximately the time it will take to reach the target. A smaller value will reach the target faster
+        summary: Time to reach the target
       - name: maxS
         type: number
         default:
-        summary: Optional, maximum speed at which the angle may change magnitude
+        summary: Optional maximum angular speed
       - name: deltaTime
         type: number
         default:
-        summary: Optional, the time difference between this and the last call. Defaults to Time.deltaTime
+        summary: Time difference since the last call
     returns:
       - type: number, number
-        summary: |
-          1. The new, smoothed angle over time
-          2. The new, velocity
+        summary: The new, smoothed angle and the new angular velocity.
   - name: SmoothStep
-    summary: |
-      The 'SmoothStep' method interpolates between two numbers in a smooth and gradual manner. It is similar to 'Lerp', but has ease-in and ease-out of the values. See [Unity's SmoothStep documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothStep.html).
+    summary: Interpolates between two values with smoothing at the start and end, providing ease-in and ease-out effects.
     description:
     is_static: true
     tags:
@@ -720,21 +673,20 @@ methods:
       - name: from
         type: number
         default:
-        summary: The start value
+        summary: The starting value
       - name: to
         type: number
         default:
-        summary: The end value
+        summary: The ending value
       - name: t
         type: number
         default:
-        summary: The interpolation proportion, a value from 0 to 1
+        summary: The interpolation proportion, between 0 and 1
     returns:
       - type: number
-        summary: The interpolated value between 'from' and 'to', inclusively
+        summary: The smoothed value between 'from' and 'to'.
   - name: Sqrt
-    summary: |
-      The 'Sqrt' method calculates and returns the square root of a specified number, useful in distance and trigonometric calculations. For more details, refer to [Unity's Sqrt documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sqrt.html).
+    summary: Calculates the square root of a specified number, important in distance and geometry calculations.
     description:
     is_static: true
     tags:
@@ -743,13 +695,12 @@ methods:
       - name: f
         type: number
         default:
-        summary: The number to find the square root of
+        summary: The number to square root
     returns:
       - type: number
-        summary: The square root of the number
+        summary: The square root of the number.
   - name: Tan
-    summary: |
-      The 'Tan' method returns the tangent of a specified angle in radians. It is typically used in trigonometric calculations. Check out more at [Unity's Tan documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Tan.html).
+    summary: Returns the tangent of a specified angle in radians, typically used in trigonometric calculations.
     description:
     is_static: true
     tags:
@@ -761,5 +712,4 @@ methods:
         summary: An angle, in radians
     returns:
       - type: number
-        summary: The tangent of the angle
-math_operations:
+        summary: The tangent of the angle.
