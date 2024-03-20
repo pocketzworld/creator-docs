@@ -1,13 +1,6 @@
 name: Camera
 type: classes
-summary: |
-  The Camera in Unity is your lens into the game world; it serves as the eyes through which players interact with the game environment. Like using a camera to capture a scene in real life, the Camera class in Unity defines the perspectives and extent of what the player sees on their screen.
-
-  The Camera allows transformation between world and screen space, enabling developers to position and control how the game world is displayed. Screen space refers to the coordinates on the player's screen (the viewport), measured in pixels, while world space represents the actual positions of GameObjects in the game scene.
-
-  In addition to position and rotation, the Camera also handles projection settings that affect depth perception and perspective. It allows you to specify rendering settings and culling properties.
-
-  Check out [Unity's Camera Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.html) to explore all the possibilities of interactive game creation through the eyes of a virtual camera.
+summary: Camera in Unity acts as the player's viewpoint into the game world, capturing scenes much like a real camera. It defines the field of view, perspective, and what is visible on the screen. Cameras can transform between world and screen space, control projection settings for depth and perspective, specify rendering settings, and manage culling properties. For comprehensive functionalities, explore Unity's Camera documentation.
 description:
 code_samples:
 inherits:
@@ -15,734 +8,637 @@ inherits:
 constructors:
 properties:
   - name: nearClipPlane
-    summary: |
-      The 'nearClipPlane' property determines the closest distance at which the Camera renders objects. Any GameObjects in the scene that are closer to the Camera than this value will not be displayed. For more details, see the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-nearClipPlane.html).
+    summary: Defines the closest distance at which the Camera starts rendering objects.
     description:
     is_static: false
     code_samples:
     type: number
   - name: farClipPlane
-    summary: |
-      The 'farClipPlane' property sets the maximum distance that the Camera will render objects in the scene. Any GameObjects positioned further from the Camera than this value will not be displayed. Learn more by visiting the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-farClipPlane.html).
+    summary: Sets the maximum distance up to which the Camera renders objects in the scene.
     description:
     is_static: false
     code_samples:
     type: number
   - name: fieldOfView
-    summary: |
-      The 'fieldOfView' property manages the height of the Camera's view angle, measured in degrees along the local Y-axis. Think of it as the vertical extent of the scene that's visible at a given moment. It's one crucial aspect in creating a broader or narrower perspective of the game world. Detailed explanations are provided in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-fieldOfView.html).
+    summary: Manages the vertical extent of the scene visible at any moment, measured in degrees.
     description:
     is_static: false
     code_samples:
     type: number
   - name: allowHDR
-    summary: |
-      The 'allowHDR' property controls if the Camera will use High Dynamic Range (HDR) rendering. HDR can significantly enhance detail in the game's light and dark areas, creating an overall more visually detailed image on supported hardware. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allowHDR.html) to learn more about this property.
+    summary: Controls if the Camera uses High Dynamic Range rendering for enhanced visual details.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: allowMSAA
-    summary: |
-      The 'allowMSAA' property activates or deactivate Multi-Sample Anti-Aliasing (MSAA), an algorithm to smooth jagged edges ("jaggies") in rendered images, providing a more polished visual output. Learn more about how this property can improve your game's visual quality in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allowMSAA.html).
+    summary: Enables or disables Multi-Sample Anti-Aliasing for smoother image edges.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: allowDynamicResolution
-    summary: |
-      The 'allowDynamicResolution' property can be used to enable or disable dynamic resolution for the Camera, a technique to improve performance by reducing the resolution in complex scenes or enhancing rendering resolution when ample processing power is available. You can find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allowDynamicResolution.html).
+    summary: Allows dynamic resolution adjustment for performance optimization.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: forceIntoRenderTexture
-    summary: |
-      The 'forceIntoRenderTexture' determines if Unity should always render the Camera's view to a render texture. This can be useful when you need fine control over image post-processing. Check how to properly use this property in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-forceIntoRenderTexture.html).
+    summary: Forces Camera's view to always render to a texture for advanced image processing.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: orthographicSize
-    summary: |
-      The 'orthographicSize' property defines the size of the Orthographic Camera's view in the world scene units. You can adjust this to control the amount of the scene visible through the camera. For more information, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-orthographicSize.html).
+    summary: Defines the size of the view in world units for Orthographic Cameras.
     description:
     is_static: false
     code_samples:
     type: number
   - name: orthographic
-    summary: |
-      The 'orthographic' property toggles between Perspective and Orthographic modes for the Camera. In Perspective mode, objects that are further away seem smaller, creating a sense of depth. In Orthographic mode, the object's size remains constant, regardless of its distance from the Camera. For more details, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-orthographic.html).
+    summary: Toggles between Perspective and Orthographic modes for the Camera.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: transparencySortAxis
-    summary: |
-      The 'transparencySortAxis' is the custom axis that Unity uses to sort transparent objects when Transparency Sort Mode is set to Custom Axis. It's useful to correctly render overlapping transparent objects. More explanations can be obtained from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-transparencySortAxis.html).
+    summary: Custom axis for sorting transparent objects when using Custom Axis mode.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: depth
-    summary: |
-      The 'depth' property specifies the Camera's depth in the camera rendering order. This property defines the order in which the cameras will render; lower numbers first and equal numbers at the same time. To learn more, please visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-depth.html).
+    summary: Specifies the Camera's depth in the rendering order.
     description:
     is_static: false
     code_samples:
     type: number
   - name: aspect
-    summary: |
-      The 'aspect' property sets the aspect ratio (width/height) for the Camera. You can control the aspect ratio of the camera output on screen with this property. If you want to know more, read the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-aspect.html).
+    summary: Sets the aspect ratio (width/height) for the Camera.
     description:
     is_static: false
     code_samples:
     type: number
   - name: velocity
-    summary: |
-      The 'velocity' property gives the velocity of the Camera. This property can be handy for estimating motion blur among other effects. For a better understanding, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-velocity.html).
+    summary: Provides the Camera's velocity, useful for motion blur effects.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: cullingMask
-    summary: |
-      The 'cullingMask' is a bit mask that allows the Camera to render GameObjects from specified Layers. It's a powerful way to control what the Camera sees and does not see in your scene. For a closer look, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-cullingMask.html).
+    summary: Bit mask for rendering GameObjects on specific Layers.
     description:
     is_static: false
     code_samples:
     type: number
   - name: eventMask
-    summary: |
-      The 'eventMask' is a bit mask to selectively ignore GameObjects when sending events. Events, such as raycasts, will not consider GameObjects included within this mask. Find more details at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-eventMask.html).
+    summary: Bit mask to selectively ignore GameObjects when sending events.
     description:
     is_static: false
     code_samples:
     type: number
   - name: layerCullSpherical
-    summary: |
-      The 'layerCullSpherical' property modifies the Camera's per-layer culling distance. When enabled, Unity uses spherical bounds instead of 2D bounds for per-layer culling computation, which can enhance performance in larger scenes. For more information, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-layerCullSpherical.html).
+    summary: Uses spherical bounds for layer culling computation when enabled.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: overrideSceneCullingMask
-    summary: |
-      The 'overrideSceneCullingMask' is a bit mask override for Scene culling on this Camera. This is useful in scenarios where you want to modify which parts of the scene are included or excluded from rendering for a particular Camera. For a deeper understanding, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-overrideSceneCullingMask.html).
+    summary: Bit mask override for Scene culling on this Camera.
     description:
     is_static: false
     code_samples:
     type: number
   - name: useOcclusionCulling
-    summary: |
-      The 'useOcclusionCulling' property is a flag that determines whether Unity should perform occlusion culling for this Camera. Occlusion culling optimizes game performance by not rendering unseen GameObjects blocked by other objects. You can learn more in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-useOcclusionCulling.html).
+    summary: Determines if Unity performs occlusion culling for this Camera.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: cullingMatrix
-    summary: |
-      The 'cullingMatrix' property allows you to set a custom projection matrix in order to adjust the rendering of the Camera. You might want to modify this for advanced effects like oblique frustum. To delve more into this topic, visit [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-cullingMatrix.html).
+    summary: Custom projection matrix for the Camera to adjust rendering.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: backgroundColor
-    summary: |
-      The 'backgroundColor' property sets the color that fills the screen after clearing and before rendering the scene when the Camera's clear flag is set to 'SolidColor'. Adjusting this can change the mood of your scene or provide a certain stylistic aesthetic. For more details, please consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-backgroundColor.html).
+    summary: Sets the background color for the Camera's view.
     description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: clearStencilAfterLightingPass
-    summary: |
-      The 'clearStencilAfterLightingPass' property would behave as an optimization procedure, clearing the stencil buffer after the light pass. For the implementation details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-clearStencilAfterLightingPass.html).
+    summary: Clears the stencil buffer after lighting pass as an optimization.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: usePhysicalProperties
-    summary: |
-      The 'usePhysicalProperties' property lets you enable the physical camera settings of Unity's camera model to simulate properties like perspective shift or depth of field based on lens physics. Details on using physical properties in a camera setup can be found at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-usePhysicalProperties.html).
+    summary: Enables physical camera settings to simulate real camera properties.
     description:
     is_static: false
     code_samples:
     type: boolean
-  - name: iso
-    summary: |
-      The 'iso' property emulates the ISO setting of a physical camera. A higher ISO setting results in a brighter image and may also increase perceived noise. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-iso.html) for more on how this is used.
+  - name
+    : iso
+    summary: Simulates the ISO setting of a physical camera, affecting image brightness and noise.
     description:
     is_static: false
     code_samples:
     type: number
   - name: shutterSpeed
-    summary: |
-      The 'shutterSpeed' property simulates the effect of a physical camera's shutter speed. It primarily affects the camera's exposure time. The lower the number, the shorter the exposure time and hence the lower the amount of light that hits the camera's sensor, making the final image darker. For a detailed explanation, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-shutterSpeed.html).
+    summary: Mimics a camera's shutter speed, influencing exposure and motion blur.
     description:
     is_static: false
     code_samples:
     type: number
   - name: aperture
-    summary: |
-      The 'aperture' property imitates the aperture setting of a physical camera. It primarily controls the width of the camera's lens diaphragm, influencing the amount of light that reaches the sensor. It also affects the depth of field—the range in a scene where objects appear sharp. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-aperture.html) provides further details.
+    summary: Emulates the aperture of a physical camera, impacting light intake and depth of field.
     description:
     is_static: false
     code_samples:
     type: number
   - name: focusDistance
-    summary: |
-      The 'focusDistance' property sets the world-space distance from the Camera to the plane of focus. This can be used in combination with aperture settings to create a shallow depth of field effect, which can help focus player attention or create cinematic effects. Find more information on focus distances in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-focusDistance.html).
+    summary: Adjusts the distance to the focus plane, useful for depth of field effects.
     description:
     is_static: false
     code_samples:
     type: number
   - name: focalLength
-    summary: |
-      The 'focalLength' property refers to the distance (in millimeters) between the lens and the image sensor when the subject is in focus. This is often used creatively in photography and film to achieve varying degrees of field view or depth perception. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-focalLength.html) provides a deeper understanding of this property.
+    summary: Represents the focal length of the camera lens, affecting the field of view.
     description:
     is_static: false
     code_samples:
     type: number
   - name: bladeCount
-    summary: |
-      The 'bladeCount' property gets or sets the number of diaphragm blades on a physical Camera. This setting contributes to the shape of the out-of-focus areas (bokeh) in the rendered image. For more in-depth knowledge, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-bladeCount.html).
+    summary: Sets the number of diaphragm blades, affecting the shape of out-of-focus areas.
     description:
     is_static: false
     code_samples:
     type: number
   - name: curvature
-    summary: |
-      The 'curvature' property simulates the curvature of the Camera's lens. This can bring about unique visual effects to the final rendered image by distorting the perspective. Keen to know more about creating such effects? Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-curvature.html).
+    summary: Simulates lens curvature, affecting perspective distortion in the rendered image.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: barrelClipping
-    summary: |
-      The 'barrelClipping' property sets the apparent "cut off" point for light coming into the Camera, simulating the visual effect of a camera lens's outermost coverage being clipped. To learn more about this property, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-barrelClipping.html).
+    summary: Determines the clipping level for light entering the camera, affecting edge brightness.
     description:
     is_static: false
     code_samples:
     type: number
   - name: anamorphism
-    summary: |
-      The 'anamorphism' property can be used to create anamorphic lens effects by yielding a disproportionate amount of squeeze (compression) to the final image in the horizontal or vertical dimension. For detailed discussions, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-anamorphism.html).
+    summary: Creates anamorphic lens effects by compressing the image in one dimension.
     description:
     is_static: false
     code_samples:
     type: number
   - name: sensorSize
-    summary: |
-      The 'sensorSize' property mimics the dimensions of the film or sensor in a physical camera. The sensor measurement influences the camera's angle of view. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-sensorSize.html) provides more context.
+    summary: Imitates the physical dimensions of the camera sensor, affecting the angle of view.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: lensShift
-    summary: |
-      The 'lensShift' property corresponds to the optical property of a camera lens that allows shifting the lens in relation to the image sensor. This shift alters the camera's view frustum and can be used to correct distortion, like keystone distortion in architectural photography. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-lensShift.html) for more details.
+    summary: Allows shifting the lens in relation to the sensor, correcting for keystone distortion.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: rect
-    summary: |
-      The 'rect' property signifies the viewport rectangle of the Camera, which denotes the portion of the screen that the current Camera view occupies. You can use this property to create split-screen games or to display a mini-map. Find extensive details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-rect.html).
+    summary: Specifies the Camera's viewport rectangle, controlling which part of the screen it occupies.
     description:
     is_static: false
     code_samples:
     type: DataType.Rect
   - name: pixelRect
-    summary: |
-      The 'pixelRect' property corresponds to a rectangle described by pixel values that the Camera renders to. Similar to 'rect', it denotes the portion of the screen where the output of the camera is drawn. Yet 'pixelRect' uses pixels as measurement instead of the relative size used by 'rect'. Learn more from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-pixelRect.html).
+    summary: Defines the rectangle, in pixels, that the Camera renders to on the screen.
     description:
     is_static: false
     code_samples:
     type: DataType.Rect
   - name: pixelWidth
-    summary: |
-      The 'pixelWidth' property provides the width of the Camera's rendering area in pixels. This can be helpful for certain computations where precise control over pixels is required. Find more context in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-pixelWidth.html).
+    summary: Gives the width in pixels of the Camera's rendering area.
     description:
     is_static: false
     code_samples:
     type: number
   - name: pixelHeight
-    summary: |
-      The 'pixelHeight' property gets the height of the Camera's rendering area in pixels. This can be useful when you need to forge calculations based on the specific number of pixels in the camera's height. For more information, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-pixelHeight.html).
+    summary: Provides the height in pixels of the Camera's rendering area.
     description:
     is_static: false
     code_samples:
     type: number
   - name: scaledPixelWidth
-    summary: |
-      The 'scaledPixelWidth' property retrieves the width of the Camera's output image that is multiplied by the desired scaling factor. Scaling can be beneficial in scenarios where optimization is needed, such as reducing the rendering load on lower-performance devices. You can learn more by visiting the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-scaledPixelWidth.html).
+    summary: Gets the width of the Camera's image after applying the scaling factor.
     description:
     is_static: false
     code_samples:
     type: number
   - name: scaledPixelHeight
-    summary: |
-      The 'scaledPixelHeight' property accesses the height of the Camera's output image with the scaling factor applied. This is another optimization tool, especially useful for tailoring the game's performance across a broad spectrum of devices. More information is available in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-scaledPixelHeight.html).
+    summary: Retrieves the height of the Camera's image with the scaling factor applied.
     description:
     is_static: false
     code_samples:
     type: number
   - name: targetDisplay
-    summary: |
-      The 'targetDisplay' property sets the index of the display where you want the Camera's output to appear when you have multiple displays. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-targetDisplay.html) contains a discussion on this property.
+    summary: Sets the display for the Camera's output, useful for multi-display setups.
     description:
     is_static: false
     code_samples:
     type: number
   - name: cameraToWorldMatrix
-    summary: |
-      The 'cameraToWorldMatrix' property provides a Matrix4x4 that transforms from camera space to world space. You can use this matrix to convert a point from the camera's local space to a point in world space. Please refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-cameraToWorldMatrix.html) for in-depth details.
+    summary: Provides a matrix transforming from camera space to world space.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: worldToCameraMatrix
-    summary: |
-      The 'worldToCameraMatrix' property sets a custom Matrix4x4 that defines a transformation from world space into camera space. The inverse of this matrix can be used to convert coordinates from camera space to world space. To further understand this matrix transformation process, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-worldToCameraMatrix.html).
+    summary: Allows setting a custom transformation from world space to camera space.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: projectionMatrix
-    summary: |
-      The 'projectionMatrix' property provides a projection matrix that performs a perspective transformation. Essentially, it maps the Camera's view onto a 2D plane - the screen. When you need a custom projection for unique requirements, you can modify this matrix. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-projectionMatrix.html).
+    summary: Offers a custom projection matrix for perspective transformations.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: nonJitteredProjectionMatrix
-    summary: |
-      The 'nonJitteredProjectionMatrix' property provides a projection matrix that does not incorporate the jittering used in anti-aliasing techniques. When dealing with post-processing effects or shader calculations, this property can be helpful. Please consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-nonJitteredProjectionMatrix.html) for further insights.
+    summary: Gives a projection matrix without jittering for anti-aliasing.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: useJitteredProjectionMatrixForTransparentRendering
-    summary: |
-      The 'useJitteredProjectionMatrixForTransparentRendering' property toggles whether to use the jittering incorporated in the projection matrix for rendering transparent objects. If enabled, Unity uses the jittered version of projectionMatrix for transparent rendering. For understanding the implications of using jittered projection matrices, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-useJitteredProjectionMatrixForTransparentRendering.html).
+    summary: Decides whether to use a jittered projection matrix for rendering transparent objects.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: previousViewProjectionMatrix
-    summary: |
-      The 'previousViewProjectionMatrix' property pertains to the matrix resulting from multiplying the previous frame's projection matrix by its world-to-camera matrix. This is often used in post-processing and effects for motion vectors and reprojection. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-previousViewProjectionMatrix.html) provides more information on this.
+     summary: Holds the matrix from multiplying the previous frame's projection matrix by its world-to-camera matrix, useful for effects needing historical comparison.
     description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: stereoEnabled
-    summary: |
-      The 'stereoEnabled' property indicates whether the camera supports stereoscopic rendering, a technique used for creating a 3D effect by capturing a scene from two slightly different perspectives. Dive into the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-stereoEnabled.html) for more information on stereo rendering in Unity.
+    summary: Indicates if stereoscopic rendering is enabled for creating 3D effects.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: stereoSeparation
-    summary: |
-      The 'stereoSeparation' property adjusts the distance between the Camera's stereo view. Changing this property adjusts the interocular distance, affecting the stereoscopic effect's strength. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-stereoSeparation.html).
+    summary: Adjusts the distance between the stereo camera's views to alter the 3D effect's intensity.
     description:
     is_static: false
     code_samples:
     type: number
   - name: stereoConvergence
-    summary: |
-      The 'stereoConvergence' property determines the zero parallax setting, controlling the point of convergence where the left and right eye views overlap. This can help fine-tune the 3D perception of your stereo images. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-stereoConvergence.html) discloses more about this.
+    summary: Sets the point where the left and right views converge, affecting the depth of the 3D scene.
     description:
     is_static: false
     code_samples:
     type: number
   - name: areVRStereoViewMatricesWithinSingleCullTolerance
-    summary: |
-      The 'areVRStereoViewMatricesWithinSingleCullTolerance' property is a flag indicating whether the stereo view matrices are within the stereo culling tolerance. This can be useful when determining the efficiency for stereo rendering in Virtual Reality. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-areVRStereoViewMatricesWithinSingleCullTolerance.html).
+    summary: Checks if the view matrices for VR rendering fall within a tolerance for efficient culling.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: commandBufferCount
-    summary: |
-      The 'commandBufferCount' property gives you the count of command buffers set up in this Camera. Command buffers allow you to extend Unity’s built-in render pipeline. More details about command buffers in Unity can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-commandBufferCount.html).
+    summary: Returns the total number of command buffers attached to the Camera, for extending rendering.
     description:
     is_static: false
     code_samples:
     type: number
   - name: main
-    summary: |
-      The 'main' property allows you to gain access to the first enabled Camera component tagged 'MainCamera' in the scene. This does not locate a camera universally; instead, it finds the primary camera so tagged in the scene. For further information and nuances in usage, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-main.html).
+    summary: Accesses the main Camera in the scene, designated by the 'MainCamera' tag.
     description:
     is_static: true
     code_samples:
     type: Class.Camera
   - name: current
-    summary: |
-      The 'current' property gets the current rendering Camera (null if not rendering). It's mostly used by effect scripts or shaders that need to know about the currently rendering camera. For more context and usage cases, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-current.html).
+    summary: Retrieves the currently rendering Camera, useful for effects and scripts during rendering.
     description:
     is_static: true
     code_samples:
     type: Class.Camera
   - name: allCamerasCount
-    summary: |
-      The 'allCamerasCount' property returns the count of all enabled Cameras in the Scene. This handy property can be used to quickly ascertain the number of active cameras in your scene. For more information, consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allCamerasCount.html).
+    summary: Gives the count of all enabled Cameras within the Scene.
     description:
     is_static: true
     code_samples:
     type: number
   - name: kMinAperture
-    summary: |
-      The static 'kMinAperture' property is a constant that specifies the minimum logical aperture size for a physical camera. It can be useful when implementing controls or constraints on the camera's aperture size. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMinAperture.html).
+    summary: Specifies the minimum logical aperture size for cameras, constraining physical camera simulations.
     description:
     is_static: true
     code_samples:
     type: number
   - name: kMaxAperture
-    summary: |
-      The static 'kMaxAperture' property is a constant that specifies the maximum logical aperture size for a physical camera. It can be useful for implementing controls or constraints on the camera's aperture size. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMaxAperture.html) for a complete understanding.
+    summary: Defines the maximum logical aperture size for camera simulations, affecting depth of field and light intake.
     description:
     is_static: true
     code_samples:
     type: number
   - name: kMinBladeCount
-    summary: |
-      The static 'kMinBladeCount' property is a constant that defines the minimum number of blades that a camera's aperture can have. Understanding the blade count is essential when aiming to create specific visual effects, such as the shape of out-of-focus points of light, or bokeh. You can learn more at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMinBladeCount.html).
+    summary: Indicates the minimum number of aperture blades for simulating camera bokeh effects.
     description:
     is_static: true
     code_samples:
     type: number
   - name: kMaxBladeCount
-    summary: |
-      The static 'kMaxBladeCount' property is a constant that prescribes the maximum number of blades that a camera's aperture can have. Like kMinBladeCount, it's useful when you want to achieve specific bokeh shapes. You can find more detailed explanations in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMaxBladeCount.html).
+    summary: Sets the maximum number of aperture blades for detailed bokeh simulation in camera effects.
     description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: ScreenToWorldPoint
-    summary: |
-      The 'ScreenToWorldPoint' method transforms a point from screen space into world space, in the context of this Camera. This is useful for converting input coordinates into meaningful positions within your game world. The point's z-coordinate is usually the distance from the camera. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenToWorldPoint.html) for more detailed insights.
+    summary: Converts a point from screen space into world space for this Camera, useful for interaction with game objects.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: position
         type: DataType.Vector3
-        default:
-        summary: The position in screen space to convert to world space.
+        summary: The screen space position to convert.
     returns:
       - type: DataType.Vector3
-        summary: Returns the position in world space corresponding to the input screen point.
+        summary: The converted world space position.
   - name: WorldToScreenPoint
-    summary: |
-      The 'WorldToScreenPoint' method transforms a point from world space to screen space, relative to this Camera. It can be useful for positioning UI elements or determining what part of the screen a particular game object would appear on. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.WorldToScreenPoint.html) for more details and usage examples.
+    summary: Transforms a world space point to screen space, allowing UI alignment or visibility checks.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: position
         type: DataType.Vector3
-        default:
-        summary: The position in world space to convert to screen space.
+        summary: The world space position to convert.
     returns:
       - type: DataType.Vector3
-        summary: Returns the position in screen space corresponding to the input world point.
+        summary: The screen space representation of the point.
   - name: ScreenPointToRay
-    summary: |
-      The 'ScreenPointToRay' method generates a ray from the Camera passing through a given screen point. This technique is primarily used for picking objects with a raycast to interact with them. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenPointToRay.html) for more understanding and usage examples.
+    summary: Creates a ray from the Camera through a screen point, primarily for object selection via raycasting.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: position
         type: DataType.Vector3
-        default:
-        summary: The point in screen space where the ray should pass through.
+        summary: The screen point through which the ray passes.
     returns:
       - type: DataType.Ray
-        summary: Returns a ray passing from Camera through the screen point.
+        summary: The ray from the camera through the screen point.
   - name: Reset
-    summary: |
-      The 'Reset' method reverts all Camera settings to default values. This method is helpful when you want to quickly return a Camera to a clean state. For more information about this method, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.Reset.html).
+    summary: Resets all Camera settings to their defaults, useful for reinitializing camera properties.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary: 
   - name: ResetTransparencySortSettings
-    summary: |
-      The 'ResetTransparencySortSettings' method reverts the Camera's transparency sort settings to default. It's beneficial when you have customized the transparency sorting and want to return to Unity's original sorting configuration. Learn more about it in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetTransparencySortSettings.html).
+    summary: Reverts the Camera's transparency sort settings to the default state.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary: 
   - name: ResetAspect
-    summary: |
-      The 'ResetAspect' method resets the aspect ratio to the screen's aspect ratio. If you modified the Camera's aspect ratio for special effects or custom display configurations, you could revert it to the default aspect ratio of the screen using this method. Check out [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetAspect.html) to learn more about it.
+    summary: Resets the Camera's aspect ratio to the screen's aspect ratio, undoing
+        any custom aspect ratio settings.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: ResetCullingMatrix
-    summary: |
-      The 'ResetCullingMatrix' method resets the culling matrix of the Camera to the default value. If you modified the Camera's culling matrix for advanced effects, you could use this method to return it to its original state. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetCullingMatrix.html).
+    summary: Resets the Camera's culling matrix to the default, useful for undoing custom culling adjustments.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: ResetReplacementShader
-    summary: |
-      The 'ResetReplacementShader' method undoes the use of a replacement shader on the Camera. Replacement shaders allow you to override the rendering of certain objects based on their tag. If you want to stop using a replacement shader and return to regular rendering, this method is handy. More available on this can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetReplacementShader.html).
+    summary: Removes any replacement shader from the Camera, returning to standard rendering.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: GetGateFittedFieldOfView
-    summary: |
-      The 'GetGateFittedFieldOfView' method retrieves the field of view that results from gate fitting a sensor size based on the aspect ratio. It can be useful when working with physical camera properties. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.GetGateFittedFieldOfView.html) to understand more about it.
+    summary: Calculates the field of view based on gate fitting, useful for matching physical camera settings.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: number
-        summary: Returns the gate-fitted field of view.
+        summary: The calculated field of view.
   - name: GetGateFittedLensShift
-    summary: |
-      The 'GetGateFittedLensShift' method retrieves the lens shift that results from gate fitting a sensor size based on the aspect ratio. This property is useful when working with physical camera properties. You can check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.GetGateFittedLensShift.html) for more details.
+    summary: Determines the lens shift required based on gate fitting, aiding in accurate camera simulation.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: DataType.Vector2
-        summary: Returns a Vector2 for the gate-fitted lens shift.
+        summary: The required lens shift.
   - name: ResetWorldToCameraMatrix
-    summary: |
-      The 'ResetWorldToCameraMatrix' method reverts the camera-to-world matrix of this Camera to the identity matrix. This method is useful when you modify the camera-to-world matrix for effects and then want to reset the view to its original state. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetWorldToCameraMatrix.html) provides a more in-depth explanation.
+    summary: Resets the Camera's world-to-camera matrix to the identity matrix, clearing any transformations.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: ResetProjectionMatrix
-    summary: |
-      The 'ResetProjectionMatrix' method reverts the projection matrix of this Camera to the identity matrix. If you've modified the projection matrix to achieve a specific view effect, you can use this method to restore the original projection. For a deeper understanding, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetProjectionMatrix.html).
+    summary: Reverts the Camera's projection matrix to default, useful for standard perspective restoration.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: CalculateObliqueMatrix
-    summary: |
-      The 'CalculateObliqueMatrix' method calculates and returns a custom projection matrix that aligns the far plane with the provided plane. This is useful for adding a "tilt shift" effect to your camera or dealing with a refractive plane such as water or glass surface. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CalculateObliqueMatrix.html) sheds more light on this.
+    summary: Creates a custom projection matrix for oblique near-plane clipping, useful for mirror reflections or water surfaces.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: clipPlane
         type: DataType.Vector4
-        default:
-        summary: The plane with which to align the far plane.
+        summary: The clipping plane to align with.
     returns:
       - type: DataType.Matrix4x4
-        summary: A custom projection matrix as calculated by the method.
+        summary: The custom projection matrix.
   - name: ScreenToViewportPoint
-    summary: |
-      The 'ScreenToViewportPoint' method transforms a point from screen space to viewport space. While screen space coordinates are pixel-based, viewport space coordinates are normalized and relative to the camera. Detailed explanations are provided in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenToViewportPoint.html).
+    summary: Transforms a point from screen space to normalized viewport space.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: position
         type: DataType.Vector3
-        default:
-        summary: The position in screen space to convert to viewport space.
+        summary: The screen space point to convert.
     returns:
       - type: DataType.Vector3
-        summary: Returns the position in viewport space..
+        summary: The viewport space position.
   - name: ViewportToScreenPoint
-    summary: |
-      The 'ViewportToScreenPoint' method transforms a point from viewport space to screen space. While viewport space coordinates are normalized and relative to the camera, screen space coordinates are pixel-based. For more information, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ViewportToScreenPoint.html).
+    summary: Converts a point from normalized viewport space to screen space.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: position
         type: DataType.Vector3
-        default:
-        summary: The position in viewport space to convert to screen space.
+        summary: The viewport space point to convert.
     returns:
       - type: DataType.Vector3
-        summary: Returns the position in screen space.
+        summary: The screen space position.
   - name: ResetStereoProjectionMatrices
-    summary: |
-      The 'ResetStereoProjectionMatrices' method resets the projection matrices to Unity's defaults for the left and right eyes of a stereo display, cancelling the stereo effects. More information can be found in [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetStereoProjectionMatrices.html).
+    summary: Resets the stereo projection matrices for left and right eyes to the default values.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: ResetStereoViewMatrices
-    summary: |
-      The 'ResetStereoViewMatrices' method reverts the view matrices to Unity's defaults for the left and right eyes of a stereo display. This method can be used to stop adjusting the view matrices manually and revert to Unity's automated adjustments. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetStereoViewMatrices.html).
+    summary: Reverts the stereo view matrices for the left and right eyes to Unity's defaults.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: Render
-    summary: |
-      The 'Render' method forces the Camera to render the scene immediately instead of waiting for the normal render pass. It can be advantageous to achieve various effects, such as rendering the scene multiple times with different coloring in a single frame. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.Render.html) to learn more about this.
+    summary: Forces immediate rendering of the scene from this Camera's perspective.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: RenderDontRestore
-    summary: |
-      The 'RenderDontRestore' method forces the Camera to render the scene immediately but does not restore the camera state. This could be used when you manually control the camera state and want to keep specific settings. For additional information, refer to [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.RenderDontRestore.html).
+    summary: Renders the scene immediately without restoring the Camera's state afterwards.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: CopyFrom
-    summary: |
-      The 'CopyFrom' method makes the current Camera exactly match the settings of the specified Camera. It's often used when you want to create camera cuts, snaps, or transitions without having to manually sync camera properties. Check [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CopyFrom.html) for a complete understanding.
+    summary: Copies settings from another Camera, including all properties and transformation matrices.
     description:
     is_static: false
     code_samples:
     parameters:
       - name: other
         type: Class.Camera
-        default:
-        summary: The Camera from which to copy settings.
+        summary: The source Camera to copy from.
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: RemoveAllCommandBuffers
-    summary: |
-      The 'RemoveAllCommandBuffers' method deletes all command buffers set up on the Camera. This is useful when you want to discard extra rendering you added via command buffers to this Camera. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.RemoveAllCommandBuffers.html) to learn more about how this is used.
+    summary: Deletes all command buffers attached to this Camera.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary:
   - name: FocalLengthToFieldOfView
-    summary: |
-      The 'FocalLengthToFieldOfView' method is a static method that computes the vertical field of view based on the provided focal length and sensor size. This can help when you want to convert focal length to field of view, which is often more intuitive to control. Here's what the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.FocalLengthToFieldOfView.html) says about this.
+    summary: Converts focal length to vertical field of view for the Camera's sensor size.
     description:
     is_static: true
     code_samples:
     parameters:
       - name: focalLength
         type: number
-        default:
-        summary: The built-in camera's focal length.
+        summary: The focal length to convert.
       - name: sensorSize
         type: number
-        default:
-        summary: The built-in camera's sensor size.
+        summary: The vertical size of the sensor.
     returns:
       - type: number
-        summary: Returns the field of view computed based on the focal length and sensor size.
+        summary: The calculated vertical field of view.
   - name: FieldOfViewToFocalLength
-    summary: |
-      The 'FieldOfViewToFocalLength' method is a static method that calculates the focal length based on the provided field of view and sensor size. This is useful when you want to exactly match the focal lengths of physical lenses. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.FieldOfViewToFocalLength.html) provides more comprehensive details.
+    summary: Calculates the focal length from a given vertical field of view and sensor size.
     description:
     is_static: true
     code_samples:
     parameters:
       - name: fieldOfView
         type: number
-        default:
-        summary: A camera's field of view.
+        summary: The vertical field of view to convert.
       - name: sensorSize
         type: number
-        default:
-        summary: The sensor size of the camera.
+        summary: The vertical size of the sensor.
     returns:
       - type: number
-        summary: Returns the focal length calculated based on the field of view and sensor size.
+        summary: The focal length corresponding to the given field of view.
   - name: HorizontalToVerticalFieldOfView
-    summary: |
-      The 'HorizontalToVerticalFieldOfView' method is a static method that converts horizontal field of view to vertical field of view based on the provided aspect ratio. It's valuable when you have a known horizontal field of view and need to determine the vertical field of view. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.HorizontalToVerticalFieldOfView.html) explains this in depth.
+    summary: Converts a horizontal field of view to a vertical field of view based on the aspect ratio.
     description:
     is_static: true
     code_samples:
     parameters:
       - name: horizontalFieldOfView
         type: number
-        default:
-        summary: A camera's horizontal field of view.
+        summary: The horizontal field of view to convert.
       - name: aspectRatio
         type: number
-        default:
         summary: The aspect ratio of the camera.
     returns:
       - type: number
-        summary: Returns the vertical field of view computed from the horizontal field of view and aspect ratio.
+        summary: The vertical field of view.
   - name: VerticalToHorizontalFieldOfView
-    summary: |
-      The 'VerticalToHorizontalFieldOfView' method is a static method that converts vertical field of view to horizontal field of view based on the provided aspect ratio. It's useful when you know the vertical field of view and need to find out the horizontal field of view. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.VerticalToHorizontalFieldOfView.html) elucidates this topic.
+    summary: Converts a vertical field of view to a horizontal field of view based on the aspect ratio.
     description:
     is_static: true
     code_samples:
     parameters:
       - name: verticalFieldOfView
         type: number
-        default:
-        summary: A camera's vertical field of view.
+        summary: The vertical field of view to convert.
       - name: aspectRatio
         type: number
-        default:
         summary: The aspect ratio of the camera.
     returns:
       - type: number
-        summary: Returns the horizontal field of view computed from the vertical field of view and aspect ratio.
+        summary: The horizontal field of view.
   - name: SetupCurrent
-    summary: |
-      The 'SetupCurrent' method is a static method that sets up the specified Camera as the "main" Camera. This is useful when you want to quickly change the active camera during your game. For instance, switching between different game perspectives or instantly setting another camera for a split-screen game mode are examples of how 'SetupCurrent' can be used. For more context, you can take a look at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.SetupCurrent.html).
+    summary: Sets a specified Camera as the current active Camera, useful for dynamic camera switching.
     description:
     is_static: true
     code_samples:
     parameters:
       - name: cur
         type: Class.Camera
-        default:
-        summary: The Camera to be set as the main camera.
+        summary: The Camera to set as current.
     returns:
       - type: void
-        summary: This method does not return a value.
+        summary: 
 math_operations:
+

@@ -1,12 +1,6 @@
 name: Event
 type: classes
-summary: |
-  In the realm of event-driven programming, an 'event' corresponds to a specific moment or occurrence to which we attach significance. The Event class in Highrise encapsulates this idea, signifying specific moments or changes within the game environment that are worth reacting to. 
-
-  For instance, consider a scenario where a player joins or leaves a game. These situations can be construed as 'events'. With each occurrence of such an event, specific actions or responses need to be triggered: Maybe display a welcome message when a player joins, or update the player count when a player leaves.
-
-  The Event class caters to these needs, providing methods to 'fire' or trigger actions on the occurrence of these events, either on the client-side (on the user's device), all clients, or on the server. Importantly, the Event class also provides the ability to 'connect' events to specific functions responsible for carrying out these actions or responses. This is incredibly useful in creating a dynamic and reactive gaming environment in Highrise.
-
+summary: Event in Highrise signifies key moments or changes in the game environment, facilitating dynamic and responsive gameplay. It provides a structured way to define, trigger, and respond to in-game occurrences, such as a player joining or leaving. Events can be triggered on specific clients, all clients, or on the server, with corresponding actions attached through connections to functions. This mechanism is pivotal for creating interactive and adaptive game experiences.
 description:
 code_samples:
 inherits:
@@ -14,8 +8,7 @@ tags:
   - ServerAndClient
 constructors:
   - name: new
-    summary: |
-      Creates a new instance of the Event class. In essence, this means defining a new incident or event in the Highrise game that is worthy of triggering specific actions or responses.
+    summary: Initializes a new event, marking a specific occurrence within the game that warrants reaction or handling.
     is_static: true
     tags:
       - ServerAndClient
@@ -23,11 +16,10 @@ constructors:
     parameters:
     returns:
       - type: Event
-        summary: Returns an instance of the Event class representing the newly defined event.
+        summary: An instance of the Event class, representing the defined event.
 properties:
   - name: name
-    summary: |
-      This property denotes the name or identifier of the particular event, which could be anything like 'PlayerJoined' or 'PlayerMoved'.
+    summary: Identifies the event, aiding in differentiation and specific event handling.
     is_static: false
     tags:
       - ServerAndClient
@@ -35,8 +27,7 @@ properties:
     type: string
 methods:
   - name: FireClient
-    summary: |
-      This method triggers or 'fires' the event on a specific client's side, i.e., the user's device. For instance, this might be useful to display a custom message on a player's screen.
+    summary: Activates the event for a particular client, enabling targeted notifications or actions.
     is_static: false
     tags:
       - ServerAndClient
@@ -44,10 +35,9 @@ methods:
     parameters:
     returns:
       - type: void
-        summary: The method does not return a value.
+        summary: No return value, action is triggered client-side.
   - name: FireAllClients
-    summary: |
-      This method triggers the event across all connected clients - useful for game-wide notifications like an announcement reaching all players or for a server to relay information about one client to the rest.
+    summary: Broadcasts the event to all connected clients, useful for global notifications or updates.
     is_static: false
     code_samples:
     tags:
@@ -55,19 +45,17 @@ methods:
     parameters:
     returns:
       - type: void
-        summary: The method does not return any value.
+        summary: No return value, action impacts all clients.
   - name: FireServer
-    summary: |
-      This method triggers the event on the game server. For instance, an event might prompt the server to update the game state or the leaderboard.
+    summary: Triggers the event on the server side, often leading to updates in game state or other server-managed data.
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method does not return any value.
+        summary: No return value, action takes place on the server.
   - name: Connect
-    summary: |
-      This method is employed to create a connection between an event and a specific function. When the event is 'fired', the connected function is also automatically executed or 'called'.
+    summary: Establishes a linkage between the event and a specific response function, ensuring automatic execution upon event triggering.
     is_static: false
     code_samples:
     tags:
@@ -75,5 +63,5 @@ methods:
     parameters:
     returns:
       - type: Class.EventConnection
-        summary: Returns an EventConnection instance, representing the newly formed connection between the event and the function.
+        summary: An EventConnection instance denoting the connection between the event and its response function.
 math_operations:

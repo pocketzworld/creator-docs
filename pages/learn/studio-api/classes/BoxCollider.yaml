@@ -1,11 +1,6 @@
 name: BoxCollider
 type: classes
-summary: |
-  In a virtual world, objects need to interact with each other — something as simple as not going through each other. That's where Unity's BoxCollider class plays its part. A BoxCollider is an invisible shape that’s attached to a GameObject and defines the GameObject's physical boundaries for interactions with other GameObjects. 
-
-  BoxCollider is often used for simple and axis-aligned objects like crates or buildings. It features properties such as 'center' and 'size' to define its position and dimensions respectively. It can be combined with the use of Class.RigidBody and used to determine an area for triggering events or even to detect collisions.
-
-  In essence, it gives solidity to a GameObject in a way that the GameObject can physically interact with the environment or other GameObjects. For instance, preventing a character from walking through a wall or detecting when a bullet hits a target. To gain deeper insights, check out the [official Unity BoxCollider documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider.html).
+summary: BoxCollider is an invisible, box-shaped component that defines the physical boundaries for GameObject interactions, crucial for collision detection and physical simulations. Ideal for simple, axis-aligned shapes like crates or buildings, it can be used with Rigidbody for physics-based interactions or for event triggering areas. It allows for specifying position and dimensions relative to the GameObject it's attached to. For comprehensive understanding, the official Unity BoxCollider documentation is recommended.
 description:
 code_samples:
 inherits:
@@ -13,15 +8,13 @@ inherits:
 constructors:
 properties:
   - name: center
-    summary: |
-      The 'center' property establishes the position of the BoxCollider relative to the GameObject’s local coordinates. So, we can shift the placement of the BoxCollider without moving the GameObject it resides inside. You can visit the [Unity BoxCollider.center documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-center.html) to learn more.
+    summary: Specifies the BoxCollider's position relative to the GameObject's local coordinates, enabling offset adjustments.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: size
-    summary: |
-      The 'size' property is used to adjust the total size of the BoxCollider, in the GameObject’s local space. You might need to tune the size of a BoxCollider when the default boundary does not fit well with the shape of your GameObject. More information can be found in the [Unity BoxCollider.size documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/BoxCollider-size.html).
+    summary: Adjusts the BoxCollider's dimensions within the GameObject's local space, suitable for aligning the collider accurately with the GameObject.
     description:
     is_static: false
     code_samples:

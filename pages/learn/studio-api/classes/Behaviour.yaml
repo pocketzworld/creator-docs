@@ -1,7 +1,6 @@
 name: Behaviour
 type: classes
-summary: |
-  The Behaviour class in Unity is a special kind of Component that can enable or disable a GameObject's functionality. This forms the base class from which different kinds of active functionalities, like scripts (MonoBehaviour), physics (Rigidbody), and renderers (MeshRenderer) derive from. For a deeper dive, consider checking out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour.html).
+summary: Behaviour serves as the foundational class for enabling or disabling functionality on GameObjects, acting as a base for various active components such as scripts (MonoBehaviour), physics components (Rigidbody), and renderers (MeshRenderer). It facilitates dynamic control over the active states of attached functionalities. For comprehensive information, the official Unity documentation on Behaviour is recommended.
 description:
 code_samples:
 inherits:
@@ -9,15 +8,13 @@ inherits:
 constructors:
 properties:
   - name: enabled
-    summary: |
-      The 'enabled' property allows you to dynamically enable or disable a Behaviour at runtime. This can be used to control the active state of scripts, physics behaviours, renderers and more on a GameObject. For extensive details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-enabled.html).
+    summary: Permits runtime toggling of a Behaviour's active state, affecting scripts, physics, renderers, etc.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isActiveAndEnabled
-    summary: |
-      The 'isActiveAndEnabled' property returns true if the Behaviour is enabled and the GameObject it is attached to is active, otherwise false. This is particularly useful when you want to check if any specific behaviour of a GameObject is currently active or not. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Behaviour-isActiveAndEnabled.html).
+    summary: Indicates whether the Behaviour is active, considering both its own state and the GameObject's activity.
     description:
     is_static: false
     code_samples:

@@ -1,11 +1,6 @@
 name: Animator
 type: classes
-summary: |
-  Think of the Animator class in Unity as a conductor directing the animations in your Unity projects. This class synergistically teams up with the Animator Controller, a behind-the-scenes maestro that choreographs the transitions and interactions between animations through a state-machine.
-
-  You can envision the Animator class as your animations specialist in Unity. This class equips you with the tools to create, animate, tweak animations, and much more, offering an array of methods and properties to control how animations sway and move on your GameObjects.
-
-  The Animator is an essential tool to bringing life to your world through animation. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.html) to explore further.
+summary: The Animator class is a core component in Unity for managing animations. It works with the Animator Controller to manage states and transitions in a state machine, enabling complex animation setups. This class provides a variety of methods and properties to control animations on GameObjects, essential for dynamic and interactive game environments.
 description:
 code_samples:
 inherits:
@@ -13,275 +8,236 @@ inherits:
 constructors:
 properties:
   - name: isOptimizable
-    summary: |
-      The 'isOptimizable' property indicates whether the Animator component can be optimized for performance enhancement. You can find further information in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-isOptimizable.html).
+    summary: Indicates if the Animator can be optimized for performance.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isHuman
-    summary: |
-      The 'isHuman' property tells whether the Animator is controlling a humanoid model, that is, a character model with human-like features and joints. Refer to the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-isHuman.html) for more details.
+    summary: Checks if the Animator controls a humanoid model.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: hasRootMotion
-    summary: |
-      The 'hasRootMotion' property indicates whether the animation data in the Animator has root motion. If true, it’s possible the Animator’s GameObject might move based on the animation data. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-hasRootMotion.html) for further explanation.
+    summary: Determines if the Animator's animation data contains root motion.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: humanScale
-    summary: |
-      The 'humanScale' property provides the scale of the current Avatar for a humanoid Animator in meters. It's essentially the size of the humanoid character. More details can be found in the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-humanScale.html).
+    summary: Provides the scale of the humanoid Avatar in meters.
     description:
     is_static: false
     code_samples:
     type: number
   - name: isInitialized
-    summary: |
-      The 'isInitialized' property indicates whether the animator is initialized effectively. An animator needs to be initialized before it’s able to control any animation. Check out the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-isInitialized.html) to know more.
+    summary: Checks if the Animator is initialized and ready to control animations.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: deltaPosition
-    summary: |
-      The 'deltaPosition' property gives the change in position of the GameObject controlled by the Animator during the last frame. This can be useful to calculate movement derived from animations. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-deltaPosition.html) has insightful details.
+    summary: Returns the GameObject's position change during the last frame.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: deltaRotation
-    summary: |
-      The 'deltaRotation' property returns the rotation difference of the GameObject during the last frame. This can be used to calculate rotation derived from animations. For more details, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-deltaRotation.html).
+    summary: Provides the rotation difference of the GameObject during the last frame.
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: velocity
-    summary: |
-      The 'velocity' property provides the velocity vector of the GameObject controlled by the Animator. This can be useful for various calculations or conditions involving the GameObject's speed or direction. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-velocity.html).
+    summary: Gives the velocity vector of the GameObject controlled by the Animator.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: angularVelocity
-    summary: |
-      The 'angularVelocity' property gives the angular velocity vector of the GameObject. This can be utilized in computations or conditions relating to the GameObject's rotational speed or direction. For more information, check out this [Unity reference page](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-angularVelocity.html).
+    summary: Returns the angular velocity vector of the GameObject.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rootPosition
-    summary: |
-      The 'rootPosition' property provides the position of the root of the GameObject controlled by the Animator. This property in conjunction with 'rootRotation' is particularly useful when scripting root-motion. Detailed info can be found in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-rootPosition.html).
+    summary: Provides the position of the root of the GameObject controlled by the Animator.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rootRotation
-    summary: |
-      The 'rootRotation' property offers the rotation of the root of the GameObject controlled by the Animator. This is especially useful when scripting root-motion. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-rootRotation.html).
+    summary: Offers the rotation of the root of the GameObject controlled by the Animator.
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: applyRootMotion
-    summary: |
-      The 'applyRootMotion' property controls whether the root motion in animations should be applied. When true, root motion data from animations will move the GameObject that the Animator component is attached to. More about root motion can be learned from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-applyRootMotion.html).
+    summary: Controls whether root motion in animations should be applied to the GameObject.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: hasTransformHierarchy
-    summary: |
-      The 'hasTransformHierarchy' property indicates if the Animator has a transform hierarchy. When true, it signifies that the GameObject controlled by the animator has a parent. Get a deeper understanding from the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-hasTransformHierarchy.html).
+    summary: Indicates if the Animator has a transform hierarchy.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: gravityWeight
-    summary: |
-      The 'gravityWeight' property represents the gravity weight based on current animations that are being played. When it equals 0, no gravity is applied. And when it equals 1, full gravity is applied. Check out the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-gravityWeight.html) for extensive details.
+    summary: Represents the gravity weight based on current animations being played.
     description:
     is_static: false
     code_samples:
     type: number
   - name: bodyPosition
-    summary: |
-      The 'bodyPosition' property allows you to get or set the position of the body mass. This can be useful when creating physics simulations. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-bodyPosition.html).
+    summary: Allows getting or setting the position of the body mass.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: bodyRotation
-    summary: |
-      The 'bodyRotation' property lets you get or set the rotation of the body mass. This is useful in a variety of physics calculations. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-bodyRotation.html) for more details.
+    summary: Lets you get or set the rotation of the body mass.
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: stabilizeFeet
-    summary: |
-      The 'stabilizeFeet' property is a feature for plant and IK feet stabilization, which can make animated characters appear more firmly planted on the ground. Learn more from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-stabilizeFeet.html).
+    summary: Controls feet stabilization for plant and IK feet.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: layerCount
-    summary: |
-      The 'layerCount' property represents the total number of layers within the Animator. This can be used to iterate through all the layers of an animator, or to check the complexity of animator. Detailed info can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-layerCount.html).
+    summary: Represents the total number of layers within the Animator.
     description:
     is_static: false
     code_samples:
     type: number
   - name: parameterCount
-    summary: |
-      The 'parameterCount' property pertains to the count of parameters in the Animator Controller. Parameters in an Animator Controller are variables that can be accessed from script code or used by animations in the controller itself. Refer to the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-parameterCount.html) for more information.
+    summary: Pertains to the count of parameters in the Animator Controller.
     description:
     is_static: false
     code_samples:
     type: number
   - name: feetPivotActive
-    summary: |
-      The 'feetPivotActive' property is a blend variable for calculating the position of each foot during a transition. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-feetPivotActive.html) provides further explanation.
+    summary: A blend variable for calculating the position of each foot during a transition.
     description:
     is_static: false
     code_samples:
     type: number
   - name: pivotWeight
-    summary: |
-      The 'pivotWeight' property indicates the current weight of the pivot, as determined by foot animations. Transitional animations use this property value to calculate the character's foot pivot point. For more details, look into the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-pivotWeight.html).
+    summary: Indicates the current weight of the pivot, as determined by foot animations.
     description:
     is_static: false
     code_samples:
     type: number
   - name: pivotPosition
-    summary: |
-      The 'pivotPosition' property offers the current position of the pivot in the avatar root, relative to world space. The pivot point is where the GameObject rotates around on the y-axis. You can find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-pivotPosition.html).
+    summary: Offers the current position of the pivot in the avatar root, relative to world space.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: isMatchingTarget
-    summary: |
-      The 'isMatchingTarget' property indicates whether the character in the animator is currently matching a target via script using MatchTarget. More details can be found in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-isMatchingTarget.html).
+    summary: Indicates whether the character is currently matching a target via script.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: speed
-    summary: |
-      The 'speed' property allows you to manipulate the current Animator playback speed. This can be used to slow down or speed up the Animator's playback, thus affecting animations' playback speed. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-speed.html) for more information.
+    summary: Allows manipulation of the Animator's playback speed.
     description:
     is_static: false
     code_samples:
     type: number
   - name: targetPosition
-    summary: |
-      The 'targetPosition' property gets the target position for MatchTarget function. When the Animator is set to match a target, this property will output the target position. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-targetPosition.html) provides complete information.
+    summary: Gets the target position for the MatchTarget function.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: targetRotation
-    summary: |
-      The 'targetRotation' property fetches the position the animation is trying to reach for MatchTarget function. If an Animator is set to match a target, this property gives the target rotation it is trying to reach. More details are available in the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-targetRotation.html).
+    summary: Fetches the target rotation for the MatchTarget function.
     description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: avatarRoot
-    summary: |
-      The 'avatarRoot' property refers to the root Transform of the humanoid Avatar in the animator, which is typically  the transform of the game object this component is attached to. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-avatarRoot.html) for more details related to humanoid avatars.
+    summary: Refers to the root Transform of the humanoid Avatar in the animator.
     description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: playbackTime
-    summary: |
-      The 'playbackTime' property gets the current playback time of the Animator recorder. This can be useful if you need to know the position of the Animator's playback time for various uses. For more information, look into the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-playbackTime.html).
+    summary: Gets the current playback time of the Animator recorder.
     description:
     is_static: false
     code_samples:
     type: number
   - name: recorderStartTime
-    summary: |
-      The 'recorderStartTime' property represents the start time of the first frame of the Animator recorder, relative to the frame where StartRecording was called. You can refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-recorderStartTime.html) for more information.
+    summary: Represents the start time of the first frame of the Animator recorder.
     description:
     is_static: false
     code_samples:
     type: number
   - name: recorderStopTime
-    summary: |
-      The 'recorderStopTime' property provides the stop time of the last frame of the Animator recorder, relative to the frame where StartRecording was called. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-recorderStopTime.html) provides a comprehensive understanding.
+    summary: Provides the stop time of the last frame of the Animator recorder.
     description:
     is_static: false
     code_samples:
     type: number
   - name: hasBoundPlayables
-    summary: |
-      The 'hasBoundPlayables' property indicates whether any playable graphs are attached to the Animator. If set to true, it means one or more playable graphs are currently controlling the Animator's output. You can find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-hasBoundPlayables.html).
+    summary: Indicates whether any playable graphs are attached to the Animator.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: layersAffectMassCenter
-    summary: |
-      The 'layersAffectMassCenter' property controls whether the mass center of the characters is being affected by all layers or only by the base layer. More information about the mass center of characters and how layers can affect it is available in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-layersAffectMassCenter.html).
+    summary: Controls whether the mass center is affected by all layers or only the base layer.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: leftFeetBottomHeight
-    summary: |
-      The 'leftFeetBottomHeight' property allows you to get the current position of the bottom of the left foot in relation to the root in the humanoid Avatar. This property can be helpful if you are creating a script to control a humanoid Avatar's feet position. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-leftFeetBottomHeight.html) for more insights.
+    summary: Provides the position of the bottom of the left foot relative to the root.
     description:
     is_static: false
     code_samples:
     type: number
   - name: rightFeetBottomHeight
-    summary: |
-      The 'rightFeetBottomHeight' property is similar to 'leftFeetBottomHeight', but it represents the position of the bottom of the right foot. It can be a vital property when the script needs to track the position of the right foot of a humanoid Avatar. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-rightFeetBottomHeight.html) provides more details.
+    summary: Represents the position of the bottom of the right foot relative to the root.
     description:
     is_static: false
     code_samples:
     type: number
   - name: logWarnings
-    summary: |
-      The 'logWarnings' property controls whether warnings are logged when there are issues with AnimatorController setup. Errors could include incorrect transitions, missing parameters etc. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-logWarnings.html) for more information.
+    summary: Controls whether warnings are logged for issues with AnimatorController setup.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: fireEvents
-    summary: |
-      The 'fireEvents' property dictates whether the Animator is allowed to emit events. Disabling this can be helpful if you are going to destroy the GameObject controlled by the Animator but some scripts are waiting for animation events. [This is Unity's documentation page](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-fireEvents.html) for extra information.
+    summary: Dictates whether the Animator is allowed to emit events.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: keepAnimatorStateOnDisable
-    summary: |
-      The 'keepAnimatorStateOnDisable' property allows you to keep the current Animator state and its time when disabling the GameObject. This can be used to resume the animator from the same point once the GameObject is enabled again. Look into the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-keepAnimatorStateOnDisable.html) for more details.
+    summary: Keeps the current Animator state and its time when the GameObject is disabled.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: writeDefaultValuesOnDisable
-    summary: |
-      The 'writeDefaultValuesOnDisable' property can be used to write default values into the GameObject when the animator component is disabled. This can be useful to avoid the GameObject staying at the last animated state. Check out the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator-writeDefaultValuesOnDisable.html) for more insights.
+    summary: Writes default values into the GameObject when the animator component is disabled.
     description:
     is_static: false
     code_samples:
     type: boolean
 methods:
   - name: GetFloat
-    summary: |
-      The 'GetFloat' method is used to get a float parameter from the Animator. This could be beneficial, for example, to get progress of some parameters inside transitions. Read more about it in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetFloat.html).
+    summary: Retrieves a float parameter from the Animator.
     description:
     is_static: false
     code_samples:
@@ -292,10 +248,9 @@ methods:
         summary: The name of the parameter to retrieve.
     returns:
       - type: number
-        summary: Returns the float value of the specified parameter.
+        summary: The float value of the specified parameter.
   - name: SetFloat
-    summary: |
-      The 'SetFloat' method sets the value of a float parameter. This can be used to control behaviors within the animations or transitions. Go through the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetFloat.html) for more information.
+    summary: Sets the value of a float parameter.
     description:
     is_static: false
     code_samples:
@@ -312,8 +267,7 @@ methods:
       - type: void
         summary: This method doesn't return a value.
   - name: GetBool
-    summary: |
-      The 'GetBool' method is used to get the value of a boolean parameter in the Animator. It could be used for determining the state of certain parameters controlling the behavior of animations. For more details, refer to the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetBool.html).
+    summary: Retrieves the value of a boolean parameter in the Animator.
     description:
     is_static: false
     code_samples:
@@ -324,10 +278,9 @@ methods:
         summary: Name of the parameter.
     returns:
       - type: boolean
-        summary: Returns the current state (true or false) of the specified parameter.
+        summary: The current state (true or false) of the specified parameter.
   - name: SetBool
-    summary: |
-      The 'SetBool' method lets you set the value of a boolean parameter in the Animator. Doing so can be as important as triggering different behaviors or changing transitions in animations. You can find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetBool.html).
+    summary: Sets the value of a boolean parameter in the Animator.
     description:
     is_static: false
     code_samples:
@@ -344,8 +297,8 @@ methods:
       - type: void
         summary: This method doesn't return a value.
   - name: GetInteger
-    summary: |
-      The 'GetInteger' method fetches the value of an integer parameter in the Animator. This can be used to know the state of certain parameters controlling behaviors of animations. For more info, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetInteger.html).
+    summary: Fetches the value of an integer parameter in the
+    Animator.
     description:
     is_static: false
     code_samples:
@@ -356,10 +309,9 @@ methods:
         summary: Name of the parameter.
     returns:
       - type: number
-        summary: Returns the current state of the specified parameter.
+        summary: The current state of the specified parameter.
   - name: SetInteger
-    summary: |
-      The 'SetInteger' method lets you assign an integer value to one of the integer parameters in the Animator. This can be used to control various aspects of animation behavior. More details are available in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetInteger.html).
+    summary: Assigns an integer value to an integer parameter in the Animator.
     description:
     is_static: false
     code_samples:
@@ -374,10 +326,9 @@ methods:
         summary: The value to be set.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: SetTrigger
-    summary: |
-      The 'SetTrigger' method sets a trigger parameter to trigger a change in the animator's state. This could be used to move your animation from one state to another, like from walking to jumping. [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetTrigger.html) explains it well.
+    summary: Activates a trigger parameter to change the animator's state.
     description:
     is_static: false
     code_samples:
@@ -390,8 +341,7 @@ methods:
       - type: void
         summary: This method doesn't return a value.
   - name: ResetTrigger
-    summary: |
-      The 'ResetTrigger' method clears the trigger parameter, in case it's needed to prevent the trigger from impacting future transitions. Use this to reset your triggers so they don't affect other animations or transitions. Check out the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.ResetTrigger.html) to learn more.
+    summary: Clears a trigger parameter.
     description:
     is_static: false
     code_samples:
@@ -402,10 +352,9 @@ methods:
         summary: Name of the trigger parameter to reset.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: IsParameterControlledByCurve
-    summary: |
-      The 'IsParameterControlledByCurve' method checks if a specific parameter in the animator is controlled by a curve. This can be helpful if you're looking to know whether a parameter's value is being driven by an animation curve. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.IsParameterControlledByCurve.html).
+    summary: Checks if a parameter is controlled by a curve.
     description:
     is_static: false
     code_samples:
@@ -416,10 +365,9 @@ methods:
         summary: The name of the parameter to check.
     returns:
       - type: boolean
-        summary: Returns 'true' if the parameter is controlled by a curve, 'false' otherwise.
+        summary: True if the parameter is controlled by a curve, false otherwise.
   - name: SetLookAtPosition
-    summary: |
-      The 'SetLookAtPosition' method sets a target position for the head of the character to look at. This method in conjunction with 'SetLookAtWeight' can be used to create compelling character animation where the character looks at a specified target. Check out the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLookAtPosition.html) for more information.
+    summary: Sets a target position for the character's head to look at.
     description:
     is_static: false
     code_samples:
@@ -430,10 +378,9 @@ methods:
         summary: Position for the character to look at.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: SetLookAtWeight
-    summary: |
-      The 'SetLookAtWeight' method allows you to set the weights for the head and the body parts to look at position set by 'SetLookAtPosition'. It controls how much influence the 'lookAtPosition' has on the body parts. For further information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLookAtWeight.html).
+    summary: Sets the weights for the head and body parts to look at a position.
     description:
     is_static: false
     code_samples:
@@ -441,13 +388,12 @@ methods:
       - name: weight
         type: number
         default:
-        summary: The weight by which the body parts follow 'lookAtPosition.'
+        summary: The weight by which the body parts follow the lookAtPosition.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: GetLayerName
-    summary: |
-      The 'GetLayerName' method allows you to get the name of the layer by its index. This can be helpful when you're dealing with complex animator controller with multiple layers. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetLayerName.html) provides more insights.
+    summary: Retrieves the name of a layer by its index.
     description:
     is_static: false
     code_samples:
@@ -458,10 +404,9 @@ methods:
         summary: The index of the layer.
     returns:
       - type: string
-        summary: Returns the name of the layer.
+        summary: The name of the layer.
   - name: GetLayerIndex
-    summary: |
-      The 'GetLayerIndex' method retrieves the index of a layer by its name. This can be useful when you are working with an animator controller with many layers and need to find the index of a specific layer. More info can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetLayerIndex.html).
+    summary: Finds the index of a layer by its name.
     description:
     is_static: false
     code_samples:
@@ -472,10 +417,9 @@ methods:
         summary: The name of the layer.
     returns:
       - type: number
-        summary: Returns the index of the layer.
+        summary: The index of the layer.
   - name: GetLayerWeight
-    summary: |
-      The 'GetLayerWeight' method is used to get the weight of a layer. This weight defines how much of an influence each layer has on the final animation. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetLayerWeight.html) to understand more.
+    summary: Gets the weight of a layer, defining its influence on the final animation.
     description:
     is_static: false
     code_samples:
@@ -486,10 +430,9 @@ methods:
         summary: The index of the layer.
     returns:
       - type: number
-        summary: Returns the weight of the layer.
+        summary: The weight of the layer.
   - name: SetLayerWeight
-    summary: |
-      The 'SetLayerWeight' method allows you to set the weight of a layer. The layer weights can be seen as the extent to which each layer influences the final outcome of the animation. More information can be obtained from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLayerWeight.html).
+    summary: Sets the weight of a layer, adjusting its influence on the final animation outcome.
     description:
     is_static: false
     code_samples:
@@ -504,10 +447,9 @@ methods:
         summary: The weight to set for the layer.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: GetCurrentAnimatorClipInfoCount
-    summary: |
-      The 'GetCurrentAnimatorClipInfoCount' method accumulates the count of AnimatorClipInfo instances related to the current layer. AnimatorClipInfo contains information about an animation clip. For more information, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetCurrentAnimatorClipInfoCount.html).
+    summary: Returns the count of AnimatorClipInfo instances for the current layer.
     description:
     is_static: false
     code_samples:
@@ -517,11 +459,11 @@ methods:
         default:
         summary: The index of the layer.
     returns:
-      - type: number
-        summary: Returns the count of AnimatorClipInfo instances.
+      -
+      type: number
+        summary: The count of AnimatorClipInfo instances.
   - name: GetNextAnimatorClipInfoCount
-    summary: |
-      The 'GetNextAnimatorClipInfoCount' method fetches the count of AnimatorClipInfo from the next layer the animator will transition to. Just like 'GetCurrentAnimatorClipInfoCount', but for the next layer. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetNextAnimatorClipInfoCount.html) explains more.
+    summary: Gets the count of AnimatorClipInfo for the next layer the animator will transition to.
     description:
     is_static: false
     code_samples:
@@ -532,10 +474,9 @@ methods:
         summary: The index of the layer.
     returns:
       - type: number
-        summary: Returns the count of AnimatorClipInfo instances.
+        summary: The count of AnimatorClipInfo instances for the next layer.
   - name: IsInTransition
-    summary: |
-      The 'IsInTransition' method checks whether the animator is currently in a transition between animations in the state machine. It can be useful to avoid triggering new actions while transitions are ongoing. For more details, consider the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.IsInTransition.html).
+    summary: Checks if the animator is in a transition between animations in the state machine.
     description:
     is_static: false
     code_samples:
@@ -546,20 +487,18 @@ methods:
         summary: The index of the layer.
     returns:
       - type: boolean
-        summary: Returns true if the animator is in transition, false otherwise.
+        summary: True if the animator is in transition, false otherwise.
   - name: InterruptMatchTarget
-    summary: |
-      The 'InterruptMatchTarget' method interrupts the automatic target matching. This can be useful if you want to take control of the target yourself in some cases. You can get more insights from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.InterruptMatchTarget.html).
+    summary: Interrupts automatic target matching, allowing manual control.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: CrossFadeInFixedTime
-    summary: |
-      The 'CrossFadeInFixedTime' method gradually blends from the current animation to another over a fixed amount of time. It’s great for creating smooth transitions between animations. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html).
+    summary: Gradually blends from the current animation to another over a fixed time.
     description:
     is_static: false
     code_samples:
@@ -567,7 +506,7 @@ methods:
       - name: stateName
         type: string
         default:
-        summary: The name of the state that it would transition to.
+        summary: The name of the state to transition to.
       - name: fixedTransitionDuration
         type: number
         default:
@@ -576,18 +515,16 @@ methods:
       - type: void
         summary: This method doesn't return a value.
   - name: WriteDefaultValues
-    summary: |
-      The 'WriteDefaultValues' method writes the default values to the Animator. This can be used to ensure that particular values are reset to their defaults regularly. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.WriteDefaultValues.html) for further information.
+    summary: Writes default values to the Animator, resetting runtime modifications.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: CrossFade
-    summary: |
-      The 'CrossFade' method transitions from the current state to another over a transition duration. Unlike 'CrossFadeInFixedTime', this method transitions over a duration relative to the length of the animation clips. For an in-depth explanation, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html).
+    summary: Transitions from the current state to another over a relative duration.
     description:
     is_static: false
     code_samples:
@@ -595,25 +532,24 @@ methods:
       - name: stateName
         type: string
         default:
-        summary: Name of the state.
+        summary: The name of the state.
       - name: normalizedTransitionDuration
         type: number
         default:
-        summary: Duration of the transition.
+        summary: Duration of the transition relative to animation length.
       - name: layer
         type: number
         default:
-        summary: The index of the layer.
+        summary: Index of the layer.
       - name: normalizedTimeOffset
         type: number
         default:
-        summary: A parameter that adjusts the starting point of the transition.
+        summary: Adjusts the starting point of the transition.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: PlayInFixedTime
-    summary: |
-      The'PlayInFixedTime' method begins the playback of an animation in a specified time scale. This method plays an animator state using a fixed time counter which isn't affected by speed or Animator.speed. More insights can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.PlayInFixedTime.html).
+    summary: Plays an animation state at a specified time scale, unaffected by Animator speed.
     description:
     is_static: false
     code_samples:
@@ -625,13 +561,12 @@ methods:
       - name: layer
         type: number
         default:
-        summary: The index of the layer to play the state in.
+        summary: The layer index.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: Play
-    summary: |
-      The 'Play' method plays an animation state in the state machine. This can be used to control which animations play in response to defined triggers. For a detailed explanation on how to use this method, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Play.html).
+    summary: Plays an animation state, allowing direct control over animation playback.
     description:
     is_static: false
     code_samples:
@@ -639,37 +574,34 @@ methods:
       - name: stateName
         type: string
         default:
-        summary: Name of the state.
+        summary: The name of the state.
       - name: layer
         type: number
         default:
-        summary: The index of the layer.
+        summary: The layer index.
     returns:
       - type: void
         summary: This method doesn't return a value.
   - name: StartPlayback
-    summary: |
-      The 'StartPlayback' method starts the animator playback mode. This method can be used to test the Animator's functionality by simulating its playback without requiring the game to be running. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.StartPlayback.html) for more information.
+    summary: Begins animator playback mode, useful for testing Animator functionality.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: StopPlayback
-    summary: |
-      The 'StopPlayback' method stops the animator playback mode that got started by 'StartPlayback' method. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.StopPlayback.html) for further understanding.
+    summary: Stops animator playback mode initiated by StartPlayback.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: StartRecording
-    summary: |
-      The 'StartRecording' method starts recording the animator in play mode. Use this method when you want to capture the current state of an Animator for further analysis or for replaying animation sequences. More insights can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.StartRecording.html).
+    summary: Starts recording the Animator in play mode for analysis or replaying sequences.
     description:
     is_static: false
     code_samples:
@@ -677,23 +609,21 @@ methods:
       - name: frameCount
         type: number
         default:
-        summary: The number of frames to be recorded. Mandatory to specify for recording.
+        summary: Number of frames to record.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: StopRecording
-    summary: |
-      The 'StopRecording' method stops the recording that started with the StartRecording. This is typically used in conjunction with the 'StartRecording' to control the duration of the recording. Get a deeper understanding from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.StopRecording.html).
+    summary: Stops recording started by StartRecording, controlling recording duration.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: HasState
-    summary: |
-      The 'HasState' method checks if the Animator has a particular state in a layer. This can be especially useful if you have a complex state machine and need to check if certain states exist. More about this method is explained in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.HasState.html).
+    summary: Checks if a specific state exists within a layer of the Animator.
     description:
     is_static: false
     code_samples:
@@ -705,13 +635,12 @@ methods:
       - name: stateID
         type: number
         default:
-        summary: The id of the state.
+        summary: The ID of the state to check for existence.
     returns:
       - type: boolean
-        summary: Returns true if the state exists, false otherwise.
+        summary: True if the state exists in the specified layer, false otherwise.
   - name: Update
-    summary: |
-      The 'Update' method advances the Animator state machine based on deltaTime input. This is a way to manual updating the Animator when FixedUpdate and Update are not applicable. The [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Update.html) offers more details.
+    summary: Manually advances the Animator state machine by a specified amount of time.
     description:
     is_static: false
     code_samples:
@@ -719,23 +648,21 @@ methods:
       - name: deltaTime
         type: number
         default:
-        summary: Amount of time to advance the state machine.
+        summary: The amount of time to advance the state machine.
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: Rebind
-    summary: |
-      The 'Rebind' method resets the Animator component to its default values, removing all runtime modifications. More details are provided in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Rebind.html).
+    summary: Resets the Animator to its default state, removing all runtime modifications.
     description:
     is_static: false
     code_samples:
     parameters:
     returns:
       - type: void
-        summary: The method doesn't return a value.
+        summary: This method doesn't return a value.
   - name: ApplyBuiltinRootMotion
-    summary: |
-      The 'ApplyBuiltinRootMotion' method applies the built-in root motion. If your animation clips have root motion and you want Unity to use it, call this function from OnAnimatorMove. [This official Unity page](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.ApplyBuiltinRootMotion.html) provides more information.
+    summary: Applies built-in root motion from animation clips, if present.
     description:
     is_static: false
     code_samples:
@@ -744,8 +671,7 @@ methods:
       - type: void
         summary: This method doesn't return a value.
   - name: StringToHash
-    summary: |
-      The 'StringToHash' method is used to convert a string to a hash id. If you’re using a string to identify a state or parameter by name in your code, converting it to a hash using this function can be more efficient. [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.StringToHash.html) explains it well.
+    summary: Converts a string into a hash ID for efficient parameter identification.
     description:
     is_static: true
     code_samples:
@@ -753,8 +679,8 @@ methods:
       - name: name
         type: string
         default:
-        summary: The string to convert to a hash.
+        summary: The string to convert into a hash ID.
     returns:
       - type: number
-        summary: Returns the integer hash of the string.
+        summary: The hash ID of the string.
 math_operations:
