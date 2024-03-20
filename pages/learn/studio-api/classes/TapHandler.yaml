@@ -1,7 +1,7 @@
 name: TapHandler
 type: classes
 summary: |
-  A Behaviour that fires a Event when the attached Class.GameObject's Collider(s) are tapped.
+
 description:
 code_samples:
 inherits:
@@ -10,7 +10,7 @@ constructors:
 properties:
   - name: Tapped
     summary: |
-      The Event that is fired when the object is tapped. This requires the Class.GameObject to have a TapHandler attached to either a parent of or the same object as the Collider.
+
     description:
     is_static: false
     code_samples: |
@@ -19,13 +19,30 @@ properties:
           print("Tapped")
       end)
       ```
-    type: Event
-  - name: HasTapped
+    type: Class.Event
+  - name: MoveTo
     summary: |
-      'HasTapped' is a boolean property that indicates whether the attached Collider has been tapped. It returns either true or false and can be used to control specific reactions or game mechanics based on user interaction.
+
     description:
     is_static: false
     code_samples:
     type: boolean
+  - name: Distance
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
 methods:
+  - name: Perform
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
 math_operations:

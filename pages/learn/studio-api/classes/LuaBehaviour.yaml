@@ -1,7 +1,7 @@
 name: LuaBehaviour
 type: classes
 summary: |
-  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to. 
+  At the heart of Highrise game logic lies the LuaBehaviour class, which facilitates the use of Lua scripts in the same way Unity employs MonoBehaviour to allow the use of C# for scripting. This class allows the binding of Lua scripts to GameObjects, acting as a bridge between them. When you run your Lua scripts, you typically access this LuaBehaviour object with the keyword `self`. Thus, `self` in your Lua scripts is actually an instance of LuaBehaviour, serving as the direct line of communication between your script and the GameObject it's attached to.
 description:
 code_samples:
 inherits:
@@ -44,11 +44,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnCollisionExit:Connect(function(collision : Collision)
+      function self:OnCollisionExit(collision : Collision)
           print("I stopped colliding with and touching a collider named " .. collision.gameObject.name)
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: OnCollisionStay
     summary: |
       The OnCollisionStay event triggers when a GameObject continues to collide with another GameObject. This can be handy for scenarios where an action must be continuously performed while collision is ongoing - maybe your character loses health as long as it keeps touching a spiky wall. Similar to OnCollisionExit, both GameObjects require a Class.Collider and one needs a Class.RigidBody attached.
@@ -57,11 +57,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnCollisionStay:Connect(function(collision : Collision)
+      function self:OnCollisionStay(collision : Collision)
           print("I am still colliding with and touching a collider named " .. collision.gameObject.name)
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: OnCollisionEnter
     summary: |
       The OnCollisionEnter event is triggered when a GameObject, equipped with a Class.Collider, collides with another GameObject. Handy for scenarios when an action should occur as soon as a collision begins - for example, when your character touches a coin, the coin disappears and the score increases. Like the other collision events, both GameObjects need a collider and the IsTrigger property on both colliders must be set to false.
@@ -70,11 +70,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnCollisionEnter:Connect(function(collision : Collision)
+      function self:OnCollisionEnter(collision : Collision)
           print("I collided with a collider named " .. collision.gameObject.name)
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: OnTriggerExit
     summary: |
       The OnTriggerExit event signals when a GameObject exits a trigger Collider. This implies a GameObject ceases to intersect with the collider's trigger space. Examples of its usage include teleporting a character when it steps out of a magical portal. Note that both GameObjects require a Class.Collider, while at least one GameObject must have a set IsTrigger to true.
@@ -83,11 +83,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnTriggerEnd:Connect(function(other : Collider)
+      function self:OnTriggerEnter(other : Collider)
         print("This triggering collider left: " .. other.gameObject.name)
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: OnTriggerStay
     summary: |
       The OnTriggerStay event is invoked continuously for every physics update where a GameObject intersects a trigger collider. It is useful for scenarios where an action must continue while a GameObject is within a certain area, like a player receiving healing effects while inside a healing zone. This event requires both GameObjects to have a Class.Collider with at least one GameObject having its IsTrigger set to true.
@@ -96,11 +96,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnTriggerStay:Connect(function(other : Collider)
+      function self:OnTriggerStay(other : Collider)
         print("The triggering collider that has not left is named " .. other.gameObject.name)
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: OnTriggerEnter
     summary: |
       The OnTriggerEnter event is triggered when a GameObject intersects a trigger collider. This can be useful for a variety of scenarios, like a player stepping on a tripwire that witnesses a trap. Again, both GameObjects require a Class.Collider component with at least one GameObject having its IsTrigger property set to true.
@@ -109,11 +109,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnTriggerEnter:Connect(function(other : Collider)
+      function self:OnTriggerEnter(other : Collider)
         print("I was triggered by a collider named " .. other.gameObject.name)
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: Update
     summary: |
       The Update event is fired every frame to update non-physics related changes or input. It's commonly used for updating animations, game logic, collecting input, or debugging. Note that the frequency of the Update call might not be consistent as it depends on the frame rate.
@@ -123,12 +123,12 @@ properties:
     tags:
       - ServerAndClient
     code_samples: |
-      ```lua
-      self.Update:Connect(function()
+      ``` lua
+      function self:Update()
         print("This frame took " .. Time.deltaTime .. "seconds")
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: LateUpdate
     summary: |
       LateUpdate is called every frame, just like Update but it is always called after all Update functions are called. This is especially useful if you need to order actions to happen in a sequence. For instance, you would want to move your character in the Update function, then adjust the camera position in the LateUpdate to correspond to the character's new position.
@@ -138,12 +138,13 @@ properties:
     tags:
       - ServerAndClient
     code_samples: |
+      #### Initialize With EventConnection
       ```lua
-      self.LateUpdate:Connect(function()
+      function self:LateUpdate()
         print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: FixedUpdate
     summary: |
       FixedUpdate is called every fixed frame-rate frame to perform physics-related changes. Use this for applying forces, gravity or tweaking physics-related game settings. Unlike Update, FixedUpdate is consistent, ensuring that physics plays out the same way regardless of the frame rate of the game.
@@ -152,11 +153,11 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.FixedUpdate:Connect(function()
+      function self:FixedUpdate()
         print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
-      end)
+      end
       ```
-    type: Class.Event
+    type: function
   - name: Start
     summary: |
       The Start event is triggered when a LuaBehaviour is enabled just before any Update methods are called for the first time. This can be useful for initializing variables or performing setup operations. Note that unlike Unity, Highrise does not have an Awake function. Code that you would typically place in the Awake function is placed within the Lua script outside of any function, which Highrise will execute immediately when the script loads.
@@ -167,12 +168,12 @@ properties:
       - ServerAndClient
     code_samples: |
       ```lua
-      self.Start:Connect(function()
+      function self:Start()
         print("I started. This is still the first frame I am alive!")
-      end)
+      end
 
       print("I executed immediately! Not being in a function is kind of like Awake()")
       ```
-    type: Class.Event
+    type: function
 methods:
 math_operations:

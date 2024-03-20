@@ -1,0 +1,70 @@
+name: IntValue
+type: classes
+summary: |
+  The IntValue class is used to store a single integer value, which is a number without decimals. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
+description:
+code_samples: |
+  #### Synchronizing an Integer
+  description: This example demonstrates how to use an IntValue to synchronize a score across all clients.
+  ```lua
+    local score : IntValue = IntValue.new("SynchronizedScore", 0)
+    local onScoredPoint : Event = Event.new("OnScoredPoint")
+
+    -- not local so that another script can find this one and call this function
+    function ScorePoint()
+      onScoredPoint:FireServer()
+    end
+
+    local function Client()
+      score.Changed:Connect(function()
+          print("The score is now " .. score.value)
+      end)
+    end
+
+    local function Server()
+      onScoredPoint:Connect(function()
+          score.value = score.value + 1
+      end)
+    end
+
+    if server then
+      Server()
+    else
+      Client()
+    end
+  ```
+inherits:
+tags:
+  - ServerAndClient
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    tags:
+      - ServerAndClient
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: The name of the IntValue. This must be unique as it is used as the key to synchronize the value across all clients.
+      - name: initialValue
+        type: number
+        default:
+        summary: The initial value of the IntValue.
+    returns:
+      - type: Class.IntValue
+        summary: An IntValue instance with the specified value.
+properties:
+  - name: value
+    summary: |
+      The currently synchronized integer value of the IntValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: number
+methods:
+math_operations:

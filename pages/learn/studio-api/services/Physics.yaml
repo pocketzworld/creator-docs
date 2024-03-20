@@ -54,6 +54,111 @@ properties:
     code_samples:
     type: number
 methods:
+  - name: defaultMaxDepenetrationVelocity
+    summary: |
+      [Unity's Physics.defaultMaxDepenetrationVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultMaxDepenetrationVelocity.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: defaultSolverIterations
+    summary: |
+      [Unity's Physics.defaultSolverIterations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultSolverIterations.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: defaultSolverVelocityIterations
+    summary: |
+      [Unity's Physics.defaultSolverVelocityIterations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultSolverVelocityIterations.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: defaultMaxAngularSpeed
+    summary: |
+      [Unity's Physics.defaultMaxAngularSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-defaultMaxAngularSpeed.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: improvedPatchFriction
+    summary: |
+      [Unity's Physics.improvedPatchFriction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-improvedPatchFriction.html)
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: invokeCollisionCallbacks
+    summary: |
+      [Unity's Physics.invokeCollisionCallbacks Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-invokeCollisionCallbacks.html)
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: autoSyncTransforms
+    summary: |
+      [Unity's Physics.autoSyncTransforms Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-autoSyncTransforms.html)
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: reuseCollisionCallbacks
+    summary: |
+      [Unity's Physics.reuseCollisionCallbacks Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-reuseCollisionCallbacks.html)
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: interCollisionDistance
+    summary: |
+      [Unity's Physics.interCollisionDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-interCollisionDistance.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: interCollisionStiffness
+    summary: |
+      [Unity's Physics.interCollisionStiffness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-interCollisionStiffness.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: interCollisionSettingsToggle
+    summary: |
+      [Unity's Physics.interCollisionSettingsToggle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-interCollisionSettingsToggle.html)
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: clothGravity
+    summary: |
+      [Unity's Physics.clothGravity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-clothGravity.html)
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: IgnoreRaycastLayer
+    summary: |
+      [Unity's Physics.IgnoreRaycastLayer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-IgnoreRaycastLayer.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: DefaultRaycastLayers
+    summary: |
+      [Unity's Physics.DefaultRaycastLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-DefaultRaycastLayers.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: AllLayers
+    summary: |
+      [Unity's Physics.AllLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-AllLayers.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
   - name: Raycast
     summary: |
       The 'Raycast' method is used for tracing a path from one point in 3D space to another and detecting any Collider that the path intersects. This can be used to implement features like shooting a bullet in an FPS game, or knowing if an enemy is in the line-of-sight. More precise details can be found in [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html).
@@ -209,14 +314,22 @@ methods:
     is_static: true
     code_samples:
     parameters:
-      - name: position
+      - name: point
         type: DataType.Vector3
         default:
-        summary: The point in the 3D space for which to find the closest point on the collider.
+        summary:
       - name: collider
         type: Class.Collider
         default:
-        summary: The Collider to find the closest point on.
+        summary:
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: rotation
+        type: DataType.Quaternion
+        default:
+        summary:
     returns:
       - type: DataType.Vector3
         summary: Returns the position in 3D space of the closest point on the collider.

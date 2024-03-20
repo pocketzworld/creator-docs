@@ -1,11 +1,7 @@
 name: AnimationCurve
 type: classes
 summary: |
-  The AnimationCurve is a class native to Unity, adopted by Highrise, that provides the ability to visually shape and manipulate an animation curve. Animation curves are used within game development to smoothly control variable values over time, whether that be object movement, color fading, AI decision-making, or any other time-dependent value changes, providing a huge improvement to an animation's quality.
-
-  Each AnimationCurve constitutes an array of 'keyframes', corresponding to a value occurring at a specific point in time. The interpolation between these points results in a curved graph known as the AnimationCurve. Developers can shape this curve to dictate how values will oscillate over time, giving complete control with visual cues. Regularly seen in tweening animations, lerping between positions, fading in and out audio tracks, and much more. 
-
-  Highrise exposes this Unity tool with an array of useful methods such as 'Evaluate', 'AddKey', 'ClearKeys' and more that allow developers to manipulate the curve within their game’s runtime.
+  The AnimationCurve class represents a curve that defines the interpolation between keyframes over time. It's commonly used in animation systems to define smooth transitions between different values over time.
 
 description:
 code_samples: |
@@ -19,7 +15,7 @@ constructors:
 properties:
   - name: length
     summary: |
-      The 'length' property gives you the count of keys present in the curve. Useful for iterating over all keys or for general informational purposes, it returns the total number of keys in the curve. You can find more information in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve-length.html).
+      The number of keys in the curve. (Read Only)
     description:
     is_static: false
     code_samples:
@@ -27,7 +23,7 @@ properties:
 methods:
   - name: Evaluate
     summary: |
-      The 'Evaluate' method is used extensively to interpolate the value from the curve at a given time point. The curve is evaluated, giving the value of the curve at that exact time. This becomes very handy when lerping between two values in a non-linear way for smoother transitions, as described in [Unity's documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Evaluate.html).
+      Interpolates the value from the curve at a given time point. The curve is evaluated, giving the value of the curve at that exact time. This becomes very handy when lerping between two values in a non-linear way for smoother transitions.
     description:
     is_static: false
     code_samples:
@@ -41,7 +37,7 @@ methods:
         summary: Returns the value of the curve at the specified time.
   - name: AddKey
     summary: |
-      The 'AddKey' method is a tool designed to insert a new key into your AnimationCurve. This provides a powerful way to dynamically shape your animation by adding keyframes at certain times with specific values. For more information on adding keys, refer to the [Unity's AnimationCurve.AddKey documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.AddKey.html).
+      Tool designed to insert a new key into your AnimationCurve. A way to dynamically shape your animation by adding keyframes at certain times with specific values.
     description:
     is_static: false
     code_samples:
@@ -59,7 +55,7 @@ methods:
         summary: Returns the index of the added key, or of the existing key if one already exists at the given time.
   - name: ClearKeys
     summary: |
-      The 'ClearKeys' method allows you to erase all keys from the AnimationCurve. It can be beneficial when you need to reset the curve or want to dynamically generate a new one. Further detail can be found in the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ClearKeys.html).
+      Erase all keys from the AnimationCurve. It can be beneficial when you need to reset the curve or want to dynamically generate a new one.
     description:
     is_static: false
     code_samples:
@@ -69,7 +65,7 @@ methods:
         summary: This method does not return a value.
   - name: RemoveKey
     summary: |
-      The 'RemoveKey' method is a utility function that removes the key at a specified index from your AnimationCurve. Varying curves dynamically can lead to interesting gameplay possibilities and variation in animations. For more on removing keys, visit the [Unity's AnimationCurve.RemoveKey documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.RemoveKey.html).
+      Removes the key at a specified index from your AnimationCurve. Varying curves dynamically can lead to interesting gameplay possibilities and variation in animations.
     description:
     is_static: false
     code_samples:
@@ -83,7 +79,7 @@ methods:
         summary: This method does not return a value.
   - name: SmoothTangents
     summary: |
-      The 'SmoothTangents' method updates the tangent of a key in the AnimationCurve to create a smooth transition in the curve. This becomes essential while crafting natural and organic animations. For a deeper insight, you can check the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.SmoothTangents.html).
+      Updates the tangent of a key in the AnimationCurve to create a smooth transition in the curve. This becomes essential while crafting natural and organic animations.
     description:
     is_static: false
     code_samples:
@@ -101,7 +97,7 @@ methods:
         summary: This method does not return a value.
   - name: CopyFrom
     summary: |
-      The 'CopyFrom' method copies all settings, including all keys from the given curve. This can prove useful when you want to duplicate the behavior of an existing curve. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.CopyFrom.html).
+      Copies all settings, including all keys from the given curve. This can prove useful when you want to duplicate the behavior of an existing curve.
     description:
     is_static: false
     code_samples:
@@ -115,7 +111,7 @@ methods:
         summary: This method does not return a value.
   - name: Constant
     summary: |
-      The 'Constant' static method creates a new AnimationCurve where all values are the same (constant). This can come in handy when creating a stable, unchanging behavior. For a deeper insight, you can check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Constant.html).
+      Creates a new AnimationCurve where all values are the same (constant). This can come in handy when creating a stable, unchanging behavior.
     description:
     is_static: true
     code_samples:
@@ -137,7 +133,7 @@ methods:
         summary: Returns a new AnimationCurve with a constant value.
   - name: Linear
     summary: |
-      The 'Linear' static method creates a new AnimationCurve representing a linear interpolation between a start and end value (valueStart and valueEnd) over a specified time period (timeStart to timeEnd). This is particularly useful when a linear transition between two states is required over a given duration. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Linear.html).
+      Creates a new AnimationCurve representing a linear interpolation between a start and end value (valueStart and valueEnd) over a specified time period (timeStart to timeEnd). This is particularly useful when a linear transition between two states is required over a given duration.
     description:
     is_static: true
     code_samples:
@@ -163,7 +159,7 @@ methods:
         summary: Returns a new AnimationCurve representing a linear interpolation.
   - name: EaseInOut
     summary: |
-      The 'EaseInOut' static function creates a new AnimationCurve that smoothly transitions between the start and end values over a specified time period. This method is especially useful to create animations with smooth starts and ends, providing a more natural look. You can refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.EaseInOut.html) for more detail.
+      Creates a new AnimationCurve that smoothly transitions between the start and end values over a specified time period. This method is especially useful to create animations with smooth starts and ends, providing a more natural look.
     description:
     is_static: true
     code_samples:

@@ -1,0 +1,710 @@
+name: Tween
+type: datatypes
+summary: |
+
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: isPlaying
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isPaused
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isValid
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: time
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: normalizedTime
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: duration
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: IsAnyTweenAnimating
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+methods:
+  - name: Play
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Stop
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: executeCallbacks
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Pause
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Update
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: deltaTime
+        type: number
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Priority
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: priority
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Delay
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: seconds
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: AddDelay
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: seconds
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Duration
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: seconds
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Id
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: id
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: DestroyOnStop
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: DeactivateOnStop
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: DisableOnStop
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: AutoStop
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: PingPong
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: From
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Loop
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: count
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: UnscaledTime
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: unscaled
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Element
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: element
+        type: DataType.Tween
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInQuadratic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutQuadratic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutQuadratic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInCubic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutCubic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutCubic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInBack
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: amplitude
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutBack
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: amplitude
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutBack
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: amplitude
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInElastic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: oscillations
+        type: number
+        default:
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutElastic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: oscillations
+        type: number
+        default:
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutElastic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: oscillations
+        type: number
+        default:
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInBounce
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: oscillations
+        type: number
+        default:
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutBounce
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: oscillations
+        type: number
+        default:
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutBounce
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: oscillations
+        type: number
+        default:
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInSine
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutSine
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutSine
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInCircle
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutCircle
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutCircle
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInExponential
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: exponent
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutExponential
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: exponent
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutExponential
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: exponent
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInCubicBezier
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: p0
+        type: number
+        default:
+        summary:
+      - name: p1
+        type: number
+        default:
+        summary:
+      - name: p2
+        type: number
+        default:
+        summary:
+      - name: p3
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutCubicBezier
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: p0
+        type: number
+        default:
+        summary:
+      - name: p1
+        type: number
+        default:
+        summary:
+      - name: p2
+        type: number
+        default:
+        summary:
+      - name: p3
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutCubicBezier
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: p0
+        type: number
+        default:
+        summary:
+      - name: p1
+        type: number
+        default:
+        summary:
+      - name: p2
+        type: number
+        default:
+        summary:
+      - name: p3
+        type: number
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Reset
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: StopAll
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: executeCallbacks
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

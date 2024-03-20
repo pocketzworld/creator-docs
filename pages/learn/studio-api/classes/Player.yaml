@@ -33,6 +33,23 @@ properties:
       - ClientAndServer
     code_samples:
     type: string
+  - name: id
+    summary: |
+      The 'id' property holds the unique identifier of the player. This is an alternative way to track players via number.
+    description:
+    is_static: false
+    tags:
+      - ClientAndServer
+    code_samples:
+    type: number
+  - name: isLocal
+    summary: |
+      The 'isLocal' property is whether or not this Player is the local user.
+    description:
+    is_static: false
+    tags:
+    code_samples:
+    type: number
   - name: avatar
     summary: |
       This property gives you access to the local player's avatar. It allows you to manipulate the avatar's properties and behavior, such as changing its appearance or controlling its movement.

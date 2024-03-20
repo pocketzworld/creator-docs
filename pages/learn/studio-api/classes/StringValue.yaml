@@ -1,0 +1,70 @@
+name: StringValue
+type: classes
+summary: |
+  The StringValue class is used to store a single string value. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single string value that all clients should be synchronized on.
+description:
+code_samples: |
+  #### Synchronizing a String
+  description: This example demonstrates how to use a StringValue to synchronize an objective string across all clients.
+  ```lua
+    local currentObjective : StringValue = StringValue.new("currentObjective", "None")
+    local setObjective : Event = Event.new("setObjective")
+
+    -- not local so that another script can find this one and call this function
+    function GetNewObjective()
+      setObjective:FireServer()
+    end
+
+    local function Client()
+      currentObjective.Changed:Connect(function()
+          print("New Objective: " .. currentObjective.value)
+      end)
+    end
+
+    local function Server()
+      setObjective:Connect(function(objective)
+          currentObjective.value = "Find the key"
+      end)
+    end
+
+    if server then
+      Server()
+    else
+      Client()
+    end
+  ```
+inherits:
+tags:
+  - ServerAndClient
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    tags:
+      - ServerAndClient
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: The name of the StringValue. This must be unique as it is used as the key to synchronize the value across all clients.
+      - name: initialValue
+        type: string
+        default:
+        summary: The initial value of the StringValue.
+    returns:
+      - type: Class.StringValue
+        summary: A StringValue instance with the specified value.
+properties:
+  - name: value
+    summary: |
+      The currently synchronized string value of the StringValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: string
+methods:
+math_operations:

@@ -1,0 +1,35 @@
+name: Value
+type: classes
+summary: |
+  In games, we often want clients to inform servers that the state of certain data has changed and have every other client be informed of that state change. Maybe a door has been opened or a score has increased. This base class is the common ancestor of all other Values like Class.Vector3Value and Class.NumberValue that allow you to specifically track a single variable as one that all clients should be synchronized on.
+description:
+code_samples:
+inherits:
+tags:
+  - ServerAndClient
+constructors:
+properties:
+  - name: parent
+    summary: |
+      The 'parent' property is used to access the parent of the object. This is always the owning script of the object as a LuaBehaviour.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: Class.LuaBehaviour
+  - name: Changed
+    summary: |
+      An event that is triggered when the value of the object changes. This is useful for when you want to trigger an action that should be performed when the value of the object changes.
+
+      NOTE: Changed will occur the moment a client joins the server, that way they can be synchronized with the current state of the variable from the server.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+
+    returns:
+    type: Class.Event
+methods:
+math_operations:

@@ -1,0 +1,32 @@
+name: LongPressEndedEvent
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: Position
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: Cancelled
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: Progress
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:
+math_operations:

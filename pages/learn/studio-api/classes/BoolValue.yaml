@@ -1,0 +1,70 @@
+name: BoolValue
+type: classes
+summary: |
+  The BoolValue class is used to store a single boolean value. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single boolean value that all clients should be synchronized on.
+description:
+code_samples: |
+  #### Synchronizing a Boolean
+  description: This example demonstrates how to use a BoolValue to synchronize a game over state across all clients.
+  ```lua
+    local gameOver : BoolValue = BoolValue.new("GameOver", 0)
+    local onGameOver : Event = Event.new("OnGameOver")
+
+    -- not local so that another script can find this one and call this function
+    function EndGame()
+      onGameOver:FireServer()
+    end
+
+    local function Client()
+      gameOver.Changed:Connect(function()
+          print("Is the game over? " .. gameOver.value)
+      end)
+    end
+
+    local function Server()
+      onGameOver:Connect(function()
+          gameOver.value = true
+      end)
+    end
+
+    if server then
+      Server()
+    else
+      Client()
+    end
+  ```
+inherits:
+tags:
+  - ServerAndClient
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    tags:
+      - ServerAndClient
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: The name of the BoolValue. This must be unique as it is used as the key to synchronize the value across all clients.
+      - name: initialValue
+        type: boolean
+        default:
+        summary: The initial value of the BoolValue.
+    returns:
+      - type: Class.BoolValue
+        summary: A BoolValue instance with the specified value.
+properties:
+  - name: value
+    summary: |
+      The currently synchronized boolean value of the BoolValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: boolean
+methods:
+math_operations:

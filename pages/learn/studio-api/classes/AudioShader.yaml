@@ -1,0 +1,96 @@
+name: AudioShader
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.Object
+constructors:
+properties:
+  - name: IsMuted
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: SpatialRange
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: volume
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: randomVolume
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: pitch
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: randomPitch
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:
+  - name: Play
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: volume
+        type: number
+        default:
+        summary:
+      - name: pitch
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetRandomClip
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.AudioClip
+        summary:
+  - name: Create
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: clip
+        type: Class.AudioClip
+        default:
+        summary:
+    returns:
+      - type: Class.AudioShader
+        summary:
+math_operations:

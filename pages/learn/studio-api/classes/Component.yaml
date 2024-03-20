@@ -90,6 +90,16 @@ methods:
     returns:
       - type: Class.Component
         summary: Returns the requested component from parent GameObjects if it exists.
+  - name: GetComponentIndex
+    summary: |
+      [Unity's Component.GetComponentIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: number
+        summary:
   - name: CompareTag
     summary: |
       The 'CompareTag' method is useful for comparing if the GameObject's tag matches a specified string. It can be used to differentiate behavior among different groups of GameObjects or implement specific logic based on tags. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.CompareTag.html).
