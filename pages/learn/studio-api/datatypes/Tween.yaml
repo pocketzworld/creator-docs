@@ -1,65 +1,56 @@
 name: Tween
 type: datatypes
-summary: |
-
+summary: Tween object for creating smooth animations and transitions.
 description:
 code_samples:
 inherits:
 constructors:
 properties:
   - name: isPlaying
-    summary: |
-
+    summary: Indicates if the tween is currently playing.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isPaused
-    summary: |
-
+    summary: Indicates if the tween is currently paused.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isValid
-    summary: |
-
+    summary: Indicates if the tween is valid and can be used.
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: time
-    summary: |
-
+    summary: Current time of the tween.
     description:
     is_static: false
     code_samples:
     type: number
   - name: normalizedTime
-    summary: |
-
+    summary: Current time of the tween normalized to the range [0, 1].
     description:
     is_static: false
     code_samples:
     type: number
   - name: duration
-    summary: |
-
+    summary: Total duration of the tween.
     description:
     is_static: false
     code_samples:
     type: number
   - name: IsAnyTweenAnimating
-    summary: |
-
+    summary: Checks if any tween is currently animating.
     description:
     is_static: true
     code_samples:
     type: boolean
 methods:
   - name: Play
-    summary: |
-
+    summary: Plays the tween animation.
     description:
     is_static: false
     code_samples:
@@ -68,8 +59,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Stop
-    summary: |
-
+    summary: Stops the tween animation.
     description:
     is_static: false
     code_samples:
@@ -82,8 +72,7 @@ methods:
       - type: void
         summary:
   - name: Pause
-    summary: |
-
+    summary: Pauses the tween animation.
     description:
     is_static: false
     code_samples:
@@ -92,8 +81,7 @@ methods:
       - type: void
         summary:
   - name: Update
-    summary: |
-
+    summary: Updates the tween animation for the given delta time.
     description:
     is_static: false
     code_samples:
@@ -106,8 +94,7 @@ methods:
       - type: boolean
         summary:
   - name: Priority
-    summary: |
-
+    summary: Sets the priority of the tween.
     description:
     is_static: false
     code_samples:
@@ -120,8 +107,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Delay
-    summary: |
-
+    summary: Delays the start of the tween animation.
     description:
     is_static: false
     code_samples:
@@ -134,8 +120,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: AddDelay
-    summary: |
-
+    summary: Adds additional delay to the tween animation.
     description:
     is_static: false
     code_samples:
@@ -148,8 +133,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Duration
-    summary: |
-
+    summary: Sets the duration of the tween animation.
     description:
     is_static: false
     code_samples:
@@ -162,8 +146,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Id
-    summary: |
-
+    summary: Sets the ID of the tween.
     description:
     is_static: false
     code_samples:
@@ -176,8 +159,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: DestroyOnStop
-    summary: |
-
+    summary: Sets whether the tween should be destroyed when stopped.
     description:
     is_static: false
     code_samples:
@@ -190,8 +172,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: DeactivateOnStop
-    summary: |
-
+    summary: Sets whether the tween should be deactivated when stopped.
     description:
     is_static: false
     code_samples:
@@ -204,8 +185,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: DisableOnStop
-    summary: |
-
+    summary: Sets whether the tween should be disabled when stopped.
     description:
     is_static: false
     code_samples:
@@ -218,8 +198,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: AutoStop
-    summary: |
-
+    summary: Sets whether the tween should automatically stop when finished.
     description:
     is_static: false
     code_samples:
@@ -232,8 +211,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: PingPong
-    summary: |
-
+    summary: Creates a ping-pong effect for the tween animation.
     description:
     is_static: false
     code_samples:
@@ -242,8 +220,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: From
-    summary: |
-
+    summary: Starts the tween animation from a specified point.
     description:
     is_static: false
     code_samples:
@@ -252,8 +229,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Loop
-    summary: |
-
+    summary: Loops the tween animation a specified number of times.
     description:
     is_static: false
     code_samples:
@@ -266,8 +242,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: UnscaledTime
-    summary: |
-
+    summary: Sets whether the tween should use unscaled time for its animation.
     description:
     is_static: false
     code_samples:
@@ -280,8 +255,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Element
-    summary: |
-
+    summary: Sets the element associated with the tween animation.
     description:
     is_static: false
     code_samples:
@@ -294,8 +268,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInQuadratic
-    summary: |
-
+    summary: Applies an ease-in quadratic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -304,8 +277,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutQuadratic
-    summary: |
-
+    summary: Applies an ease-out quadratic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -314,8 +286,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutQuadratic
-    summary: |
-
+    summary: Applies an ease-in-out quadratic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -324,8 +295,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInCubic
-    summary: |
-
+    summary: Applies an ease-in cubic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -334,8 +304,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutCubic
-    summary: |
-
+    summary: Applies an ease-out cubic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -344,8 +313,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutCubic
-    summary: |
-
+    summary: Applies an ease-in-out cubic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -354,8 +322,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInBack
-    summary: |
-
+    summary: Applies an ease-in back easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -368,8 +335,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutBack
-    summary: |
-
+    summary: Applies an ease-out back easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -382,8 +348,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutBack
-    summary: |
-
+    summary: Applies an ease-in-out back easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -396,8 +361,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInElastic
-    summary: |
-
+    summary: Applies an ease-in elastic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -414,8 +378,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutElastic
-    summary: |
-
+    summary: Applies an ease-out elastic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -432,8 +395,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutElastic
-    summary: |
-
+    summary: Applies an ease-in-out elastic easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -450,8 +412,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInBounce
-    summary: |
-
+    summary: Applies an ease-in bounce easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -468,8 +429,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutBounce
-    summary: |
-
+    summary: Applies an ease-out bounce easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -486,8 +446,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutBounce
-    summary: |
-
+    summary: Applies an ease-in-out bounce easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -504,8 +463,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInSine
-    summary: |
-
+    summary: Applies an ease-in sine easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -514,8 +472,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutSine
-    summary: |
-
+    summary: Applies an ease-out sine easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -524,8 +481,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutSine
-    summary: |
-
+    summary: Applies an ease-in-out sine easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -534,8 +490,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInCircle
-    summary: |
-
+    summary: Applies an ease-in circular easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -544,8 +499,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutCircle
-    summary: |
-
+    summary: Applies an ease-out circular easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -554,8 +508,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutCircle
-    summary: |
-
+    summary: Applies an ease-in-out circular easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -564,8 +517,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInExponential
-    summary: |
-
+    summary: Applies an ease-in exponential easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -578,8 +530,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutExponential
-    summary: |
-
+    summary: Applies an ease-out exponential easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -592,8 +543,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutExponential
-    summary: |
-
+    summary: Applies an ease-in-out exponential easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -606,8 +556,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInCubicBezier
-    summary: |
-
+    summary: Applies an ease-in cubic Bezier easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -632,8 +581,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseOutCubicBezier
-    summary: |
-
+    summary: Applies an ease-out cubic Bezier easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -658,8 +606,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: EaseInOutCubicBezier
-    summary: |
-
+    summary: Applies an ease-in-out cubic Bezier easing function to the tween.
     description:
     is_static: false
     code_samples:
@@ -684,8 +631,7 @@ methods:
       - type: DataType.Tween
         summary:
   - name: Reset
-    summary: |
-
+    summary: Resets all tweens.
     description:
     is_static: true
     code_samples:
@@ -694,8 +640,7 @@ methods:
       - type: void
         summary:
   - name: StopAll
-    summary: |
-
+    summary: Stops all tweens.
     description:
     is_static: true
     code_samples:

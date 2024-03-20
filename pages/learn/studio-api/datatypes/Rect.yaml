@@ -1,7 +1,7 @@
 name: Rect
 type: datatypes
 summary: |
-  The Rect datatype in Unity represents a rectangle defined by its position x, y, and size width, height. It's commonly used in 2D game development to manage areas, positions, and sizes within a game scene. Check out the [official Unity documentation on Rect](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.html) for more details.
+  The Rect datatype in Unity represents a rectangle defined by its position x, y, and size width, height. It's commonly used in 2D game development to manage areas, positions, and sizes within a game scene.
 
 description:
 code_samples:
@@ -9,7 +9,7 @@ inherits:
 constructors:
   - name: new
     summary: |
-      Represents a new instance of Rect with specified x, y position, and width, height size. Check out the [official Unity documentation on Rect.new](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html).
+      Represents a new instance of Rect with specified x, y position, and width, height size.
     description:
     is_static: true
     code_samples:
@@ -36,98 +36,98 @@ constructors:
 properties:
   - name: x
     summary: |
-      Retrieve or assign the x-coordinate of the Rect. Learn more in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-x.html).
+      Retrieve or assign the x-coordinate of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: |
-      Access or modify the y-coordinate of the Rect. Explore further in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-y.html).
+      Access or modify the y-coordinate of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: position
     summary: |
-      Get or set the position of the Rect as a Vector2. For detailed information, check [Unity's Rect.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-position.html).
+      Get or set the position of the Rect as a Vector2.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: center
     summary: |
-      Obtain or modify the center position of the Rect. Refer to [Unity's Rect.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-center.html) for additional details.
+      Obtain or modify the center position of the Rect.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: min
     summary: |
-      Access the min point of the Rect. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-min.html) for details on Rect.min.
+      Access the min point of the Rect.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: max
     summary: |
-      Get the max point of the Rect. Learn more about Rect.max in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-max.html).
+      Get the max point of the Rect.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: width
     summary: |
-      Access or modify the width of the Rect. Detailed information available at [Unity's Rect.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-width.html).
+      Access or modify the width of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: height
     summary: |
-      Retrieve or set the height of the Rect. Refer to [Unity's Rect.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-height.html) for more information.
+      Retrieve or set the height of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: size
     summary: |
-      Get or set the size of the Rect as a Vector2. For more insights, visit [Unity's Rect.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-size.html).
+      Get or set the size of the Rect as a Vector2.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: xMin
     summary: |
-      Access the minimum x-coordinate of the Rect. Learn more in [Unity's Rect.xMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMin.html).
+      Access the minimum x-coordinate of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: yMin
     summary: |
-      Access the minimum y-coordinate of the Rect. Explore further in [Unity's Rect.yMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-yMin.html).
+      Access the minimum y-coordinate of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: xMax
     summary: |
-      Get the maximum x-coordinate of the Rect. Refer to [Unity's Rect.xMax Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMax.html) for additional insights.
+      Get the maximum x-coordinate of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: yMax
     summary: |
-      Access the maximum y-coordinate of the Rect. Review [Unity's Rect.yMax Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-yMax.html) for more details.
+      Access the maximum y-coordinate of the Rect.
     description:
     is_static: false
     code_samples:
     type: number
   - name: zero
     summary: |
-      Obtain a Rect instance positioned at the origin (0, 0) with zero width and height. This represents a point at the origin. Discover more about Rect.zero in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-zero.html).
+      Obtain a Rect instance positioned at the origin (0, 0) with zero width and height. This represents a point at the origin.
     description:
     is_static: true
     code_samples:
@@ -135,7 +135,7 @@ properties:
 methods:
   - name: Set
     summary: |
-      Set the position and size of the Rect. Check out [Unity's Rect.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Set.html) for detailed usage instructions.
+      Set the position and size of the Rect.
     description:
     is_static: false
     code_samples:
@@ -161,7 +161,7 @@ methods:
         summary:
   - name: Contains
     summary: |
-      Check if a point is within the Rect. View [Unity's Rect.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Contains.html) for further details.
+      Check if a point is within the Rect.
     description:
     is_static: false
     code_samples:
@@ -175,7 +175,7 @@ methods:
         summary:
   - name: Overlaps
     summary: |
-      Determine if the Rect overlaps with another Rect. See [Unity's Rect.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Overlaps.html) for more information.
+      Determine if the Rect overlaps with another Rect.
     description:
     is_static: false
     code_samples:
@@ -189,7 +189,7 @@ methods:
         summary:
   - name: MinMaxRect
     summary: |
-      Create a new Rect from minimum and maximum coordinates. Dive into [Unity's Rect.MinMaxRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.MinMaxRect.html) for usage guidelines.
+      Create a new Rect from minimum and maximum coordinates.
     description:
     is_static: true
     code_samples:
@@ -215,7 +215,7 @@ methods:
         summary:
   - name: NormalizedToPoint
     summary: |
-      Convert normalized coordinates to a point within the Rect. Refer to [Unity's Rect.NormalizedToPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.NormalizedToPoint.html) for implementation details.
+      Convert normalized coordinates to a point within the Rect.
     description:
     is_static: true
     code_samples:
@@ -233,7 +233,7 @@ methods:
         summary:
   - name: PointToNormalized
     summary: |
-      Convert a point within the Rect to normalized coordinates. Check out [Unity's Rect.PointToNormalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.PointToNormalized.html) for detailed instructions.
+      Convert a point within the Rect to normalized coordinates.
     description:
     is_static: true
     code_samples:
@@ -252,7 +252,7 @@ methods:
 math_operations:
   - operation: "=="
     summary: |
-      Compare two Rect instances for equality. Refer to [Unity's Rect.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-operator_eq.html) for more information.
+      Compare two Rect instances for equality.
     description:
     type_a: Rect
     type_b: Rect

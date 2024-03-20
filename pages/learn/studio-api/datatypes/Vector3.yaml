@@ -1,7 +1,6 @@
 name: Vector3
 type: datatypes
-summary: |
-  Vector3 is a foundational data type in Unity used to represent three-dimensional space in the forms of coordinates, physical quantities, or directions. A Vector3 contains three numerical components: x, y, and z. It's widely used throughout the Unity engine in various contexts which include but are not limited to physics calculations, animations, and transformation manipulations. Dive deeper into Vector3 by checking out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.html).
+summary: Vector3 represents three-dimensional space as coordinates, physical quantities, or directions, containing three numerical components (x, y, and z). It is used in Unity for physics, animations, and transformations.
 description:
 code_samples:
 inherits:
@@ -9,8 +8,7 @@ tags:
   - ServerAndClient
 constructors:
   - name: new
-    summary: |
-      The 'new' constructor allows the creation of a new instance of Vector3 by providing values for x, y, and z coordinates individually. It offers an ideal way of instantiating a new Vector3 object that can be used to represent a point in the 3D space of your Unity game world. More on this in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-ctor.html).
+    summary: Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
     description:
     is_static: true
     tags:
@@ -34,29 +32,25 @@ constructors:
         summary: A Vector3 instance with the specified coordinates.
 properties:
   - name: normalized
-    summary: |
-      The 'normalized' property returns a version of this Vector3 with a magnitude (length) of one, but in the same direction. This is useful when you want a Vector3 that points in a particular direction but the magnitude is irrelevant. For more information, refer to the [official Unity documentation on Vector3.normalized](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-normalized.html).
+    summary: Returns a version of this Vector3 with a magnitude of one, maintaining its direction. Useful for unit direction vectors.
     description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: magnitude
-    summary: |
-      The 'magnitude' property provides the length of a Vector3, calculated as the square root of the sum of the squares of its x, y, and z components (the Euclidean distance to (0,0,0)). This is particularly helpful when determining the distance between two positions in 3D space. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-magnitude.html) for more specifics.
+    summary: Provides the length of a Vector3, calculated as the Euclidean distance to (0,0,0), useful for distance calculations in 3D space.
     description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
-    summary: |
-      The 'sqrMagnitude' property returns the square of the magnitude of the vector provided, an alternative when precise distance is not necessary, offering better performance than the square root operation used to calculate magnitude. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-sqrMagnitude.html) for more insight.
+    summary: Returns the square of the magnitude, an alternative for performance-sensitive calculations where exact distance is not necessary.
     description:
     is_static: false
     code_samples:
     type: number
   - name: x
-    summary: |
-      The 'x' property represents the x-coordinate of the Vector3. This can be used to manipulate the x-component of the Vector3 directly, or to read its current value. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-x.html) for more detail.
+    summary: Represents the x-coordinate of the Vector3, allowing direct manipulation or reading of its x-component.
     description:
     is_static: false
     tags:
@@ -64,8 +58,7 @@ properties:
     code_samples:
     type: number
   - name: y
-    summary: |
-      The 'y' property corresponds to the y-coordinate of the Vector3. Similarly to the 'x' property, it can be used for both writing to and reading from the y-component of your Vector3. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-y.html) for further details.
+    summary: Corresponds to the y-coordinate of the Vector3, for manipulating or reading the y-component.
     description:
     is_static: false
     tags:
@@ -73,8 +66,7 @@ properties:
     code_samples:
     type: number
   - name: z
-    summary: |
-      The 'z' property represents the z-coordinate of the Vector3. It can be utilized directly to read or write to the z-component of the Vector3. The [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-z.html) contains more information on this.
+    summary: Represents the z-coordinate of the Vector3, used for direct manipulation or reading of the z-component.
     description:
     is_static: false
     tags:
@@ -82,93 +74,79 @@ properties:
     code_samples:
     type: number
   - name: zero
-    summary: |
-      'zero' is a property that generates a new Vector3 instance with zero values for all its coordinates (x, y, z), essentially representing the origin in 3D space or indicating no motion or rotation. Learn more in [Unity's Vector3.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-zero.html).
+    summary: Generates a Vector3 with zero values for all coordinates, representing the origin in 3D space or indicating no motion or rotation.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: one
-    summary: |
-      The 'one' property generates a new Vector3 object with all of its components (x, y, and z) set to 1. This is useful when needing a Vector3 instance that points diagonally along the axis in a 3D space. For additional details, refer to [Unity's Vector3.one Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-one.html).
+    summary: Generates a Vector3 object with all components set to 1, useful for pointing diagonally in 3D space.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: forward
-    summary: |
-      The 'forward' property returns a Vector3 that points towards the positive Z-axis direction, useful for designating a forward direction in 3D space. More information can be accessed in [Unity's Vector3.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-forward.html).
+    summary: Returns a Vector3 pointing towards the positive Z-axis, useful for designating a forward direction.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: back
-    summary: |
-      The 'back' property provides a Vector3 instance that points towards the negative Z-axis, used often to designate a backward direction in 3D environments. You can find more about it in [Unity's Vector3.back Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-back.html).
+    summary: Provides a Vector3 pointing towards the negative Z-axis, often used to designate a backward direction.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: up
-    summary: |
-      The 'up' property offers a Vector3 that points upwards along the positive Y-axis. This is especially handy when working with 3D objects that need to move or face the upward direction. For more insights, check out [Unity's Vector3.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-up.html).
+    summary: Offers a Vector3 pointing upwards along the positive Y-axis, handy for upward movements or orientations.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: down
-    summary: |
-      The 'down' property represents a Vector3 that points downwards along the negative Y-axis. Typically it is used to dictate a downward direction in 3D applications. More information can be found in [Unity's Vector3.down Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-down.html).
+    summary: Represents a Vector3 pointing downwards along the negative Y-axis, typically used for downward directions.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: left
-    summary: |
-      The 'left' property returns a Vector3 pointing in the negative X-axis direction, generally used to signify a left direction in 3D space. Dive deeper in [Unity's Vector3.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-left.html).
+    summary: Returns a Vector3 pointing in the negative X-axis direction, used to signify left direction in 3D space.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: right
-    summary: |
-      The 'right' property provides a Vector3 that points towards the positive X-axis direction which is generally recognized as right direction in the 3D space. For more details, refer to  [Unity's Vector3.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-right.html).
+    summary: Provides a Vector3 pointing towards the positive X-axis, recognized as the right direction in 3D space.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: positiveInfinity
-    summary: |
-      The 'positiveInfinity' property of Vector3 yields a Vector3 with all components (x, y, z) initialized to positive infinity. It can be handy when you need a Vector3 with the largest possible value. Detailed explanation can be found in [Unity's Vector3.positiveInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-positiveInfinity.html).
+    summary: Yields a Vector3 with all components set to positive infinity, useful for representing very large values.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: negativeInfinity
-    summary: |
-      The 'negativeInfinity' property is used to generate a Vector3 where all components (x, y, z) are set to negative infinity, representing the smallest possible value of a Vector3. You can learn more in [Unity's Vector3.negativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-negativeInfinity.html).
+    summary: Generates a Vector3 with all components set to negative infinity, representing the smallest possible values in 3D space.
     description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: kEpsilon
-    summary: |
-      'kEpsilon' is a property that provides a very small positive number greater than 0. In the context of Vector3s, this is generally used to test whether its components are approximately zero, factoring in small errors due to floating point inaccuracies. Take a look at [Unity's Vector3.kEpsilon Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-kEpsilon.html) for more details.
+    summary: Provides a very small positive number, used for comparisons to determine if Vector3 components are approximately zero, considering floating-point inaccuracies.
     description:
     is_static: true
     code_samples:
-    type: number
   - name: kEpsilonNormalSqrt
-    summary: |
-      'kEpsilonNormalSqrt' is a property holding a very small, positive number that is used in calculations requiring square root, usually representing a negligible threshold value for comparing Vector3 magnitudes. More can be learned from [Unity's Vector3.kEpsilonNormalSqrt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-kEpsilonNormalSqrt.html).
+    summary: A small positive number used in square root calculations, representing a negligible threshold value for comparing Vector3 magnitudes.
     description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: Set
-    summary: |
-      The 'Set' method enables you to change the x, y, and z values of an existing Vector3 object. This is especially handy when you need to update all three components of the Vector3 simultaneously. More information is available on the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Set.html).
+    summary: Changes the x, y, and z values of an existing Vector3 object, useful for simultaneous updates to all three components.
     description:
     is_static: false
     code_samples:
@@ -176,21 +154,20 @@ methods:
       - name: newX
         type: number
         default:
-        summary: The new value for x-coordinate.
+        summary: The new value for the x-coordinate.
       - name: newY
         type: number
         default:
-        summary: The new value for y-coordinate.
+        summary: The new value for the y-coordinate.
       - name: newZ
         type: number
         default:
-        summary: The new value for z-coordinate.
+        summary: The new value for the z-coordinate.
     returns:
       - type: void
         summary:
   - name: Scale
-    summary: |
-      The 'Scale' method is used to multiply each component (x, y, and z) of the Vector3 by the corresponding components of another Vector3 passed as an argument. This proves effective when aiming to alter the scale of a Vector3 without changing its direction. More details can be accessed in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html).
+    summary: Multiplies each component of the Vector3 by the corresponding components of another Vector3, used to alter the scale without changing its direction.
     description:
     is_static: false
     code_samples:
@@ -198,13 +175,12 @@ methods:
       - name: scale
         type: DataType.Vector3
         default:
-        summary: A Vector3 that the instance vector is scaled by.
+        summary: A Vector3 by which the instance vector is scaled.
     returns:
       - type: void
         summary:
   - name: Normalize
-    summary: |
-      The 'Normalize' method adjusts the Vector3 to a length of one, maintaining its direction. This is useful when the magnitude of the Vector3 is not important, and only the direction matters, such as when specifying a direction for a character to face or move. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html).
+    summary: Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
     description:
     is_static: false
     code_samples:
@@ -213,8 +189,7 @@ methods:
       - type: void
         summary:
   - name: Slerp
-    summary: |
-      The 'Slerp' method, short for 'spherical linear interpolation', creates a smooth transition between two Vector3 points on the surface of a sphere. This is particularly useful in creating smooth transitions between rotations, positions, or directions in 3D space. The method takes in two Vector3 points, 'a' and 'b', and another float, 't', between 0 and 1 that describes the ratio along the shortest path between points 'a' and 'b'. It returns a Vector3 point along this path. Find additional insights in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Slerp.html).
+    summary: Creates a smooth transition between two Vector3 points on a sphere's surface, ideal for smooth transitions in rotations or positions.
     description:
     is_static: true
     code_samples:
@@ -230,13 +205,12 @@ methods:
       - name: t
         type: number
         default:
-        summary: A value between 0 and 1 representing the interpolation factor.
+        summary: The interpolation factor between 0 and 1.
     returns:
       - type: DataType.Vector3
-        summary: A new Vector3 point that lies between the original 'a' and 'b'.
+        summary: A Vector3 point along the shortest path between 'a' and 'b'.
   - name: SlerpUnclamped
-    summary: |
-      The 'SlerpUnclamped' method works similarly to the 'Slerp' method, offering spherical linear interpolation between two points. However, in this case, the 't' value can exceed the normal 0 to 1 range, allowing for extrapolation beyond the original points. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SlerpUnclamped.html) for detailed information.
+    summary: Similar to 'Slerp' but allows the 't' value to exceed the 0 to 1 range, enabling extrapolation beyond the original points.
     description:
     is_static: true
     code_samples:
@@ -252,13 +226,12 @@ methods:
       - name: t
         type: number
         default:
-        summary: An extrapolation factor that is not limited to between 0 and 1.
+        summary: An extrapolation factor beyond 0 and 1.
     returns:
       - type: DataType.Vector3
-        summary: A new Vector3 point that lies in the direction from 'a' to 'b', possibly extrapolated beyond 'b'.
+        summary: A new Vector3 point potentially extrapolated beyond 'b'.
   - name: RotateTowards
-    summary: |
-      The 'RotateTowards' method takes a Vector3 'current' and gradually rotates it to align with a 'target' Vector3, with a maximum rotation of 'maxRadiansDelta', and a maximum magnitude change of 'maxMagnitudeDelta'. It's usually used to rotate a character or an object towards a target. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.RotateTowards.html) for better understanding.
+    summary: Gradually rotates a Vector3 'current' to align with a 'target' Vector3, with specified maximum rotation and magnitude change limits.
     description:
     is_static: true
     code_samples:
@@ -266,25 +239,24 @@ methods:
       - name: current
         type: DataType.Vector3
         default:
-        summary: The current Vector3 from which the rotation is done.
+        summary: The current Vector3 from which rotation starts.
       - name: target
         type: DataType.Vector3
         default:
-        summary: The target Vector3 towards which the current one is to be rotated.
+        summary: The target Vector3 towards which rotation is aimed.
       - name: maxRadiansDelta
         type: number
         default:
-        summary: The maximum number of radians the Vector3 can change by.
+        summary: Maximum rotation allowed in radians.
       - name: maxMagnitudeDelta
         type: number
         default:
-        summary: The maximum change in magnitude of the Vector3.
+        summary: Maximum change in magnitude allowed.
     returns:
       - type: DataType.Vector3
-        summary: The Vector3 after rotation toward the target direction.
+        summary: The Vector3 after rotating towards the target.
   - name: Lerp
-    summary: |
-      The 'Lerp' method performs a Linear Interpolation between two Vector3s. It transitions from Vector3 'a' to Vector3 'b' and 't' represents the ratio of the transition. A 't' of 0 will result in Vector3 a, a 't' of 1 will result in Vector3 b, and 't' values between 0 and 1 will return a Vector3 that is part way between 'a' and 'b'. More information is available in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Lerp.html).
+    summary: Performs linear interpolation between two Vector3s, transitioning from 'a' to 'b' based on the 't' ratio.
     description:
     is_static: true
     code_samples:
@@ -300,13 +272,12 @@ methods:
       - name: t
         type: number
         default:
-        summary: The interpolation factor, should be in the range of 0 to 1.
+        summary: The interpolation factor, in the range 0 to 1.
     returns:
       - type: DataType.Vector3
         summary: A new Vector3 point interpolated between 'a' and 'b'.
   - name: LerpUnclamped
-    summary: |
-      The 'LerpUnclamped' method is like the 'Lerp' method, offering linear interpolation between two points. But with this method, the 't' value can go beyond the normal 0 to 1 range, allowing for extrapolation beyond 'a' and 'b'. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.LerpUnclamped.html).
+    summary: Similar to 'Lerp', this method performs linear interpolation between two points, but allows 't' to exceed the 0 to 1 range, enabling extrapolation.
     description:
     is_static: true
     code_samples:
@@ -322,13 +293,12 @@ methods:
       - name: t
         type: number
         default:
-        summary: The interpolation factor, which is not limited to between 0 and 1.
+        summary: The interpolation factor, not limited to between 0 and 1.
     returns:
       - type: DataType.Vector3
         summary: A new Vector3 point interpolated (or extrapolated) between 'a' and 'b'.
   - name: MoveTowards
-    summary: |
-      The 'MoveTowards' method in Unity allows you to incrementally move a Vector3 value ('current') towards a target Vector3 value ('target') at a maximum distance ('maxDistanceDelta'). It is incredibly useful for smoothly moving objects towards a target point. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.MoveTowards.html) for more information.
+    summary: Moves a Vector3 ('current') incrementally towards a target Vector3 ('target') at a specified 'maxDistanceDelta'.
     description:
     is_static: true
     code_samples:
@@ -336,21 +306,20 @@ methods:
       - name: current
         type: DataType.Vector3
         default:
-        summary: The current Vector3 which is to be moved.
+        summary: The current Vector3 to move.
       - name: target
         type: DataType.Vector3
         default:
-        summary: The target Vector3 towards which the current Vector3 should move.
+        summary: The target Vector3 to move towards.
       - name: maxDistanceDelta
         type: number
         default:
-        summary: The maximum distance that the Vector3 can move in one call.
+        summary: The maximum distance the Vector3 can move in one call.
     returns:
       - type: DataType.Vector3
-        summary: Returns a Vector3 that is moved towards the target.
+        summary: A Vector3 moved towards the target.
   - name: Scale
-    summary: |
-      The 'Scale' method is used to create a new Vector3 whose x, y, and z components are the product of the corresponding components of two given Vector3s. This method is often used in transformation calculations and affects the size without changing direction. More information can be found on the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html).
+    summary: Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
     description:
     is_static: true
     code_samples:
@@ -367,8 +336,7 @@ methods:
       - type: DataType.Vector3
         summary: The resulting Vector3 after scaling.
   - name: Cross
-    summary: |
-      The 'Cross' method is used to calculate the cross product of two Vector3 instances. The cross product is a Vector3 pointing perpendicular to both input vectors, following the right-hand rule. It has a magnitude equal to the area of the parallelogram with the input vectors for sides. Primary uses of this method include finding normals to surfaces, or finding out the rotation axis for a quaternion. For more details, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Cross.html).
+    summary: Calculates the cross product of two Vector3 instances, resulting in a Vector3 perpendicular to both, used for finding normals or rotation axes.
     description:
     is_static: true
     code_samples:
@@ -385,8 +353,7 @@ methods:
       - type: DataType.Vector3
         summary: The cross product of the two Vector3s.
   - name: Reflect
-    summary: |
-      The 'Reflect' method is used to reflect a Vector3 off a surface with a specified normal Vector3. It can be handy for simulations, like a bullet ricocheting off a wall. For more details, you can refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Reflect.html).
+    summary: Reflects a Vector3 off a surface with a specified normal, useful for simulating reflections or ricochets.
     description:
     is_static: true
     code_samples:
@@ -403,8 +370,7 @@ methods:
       - type: DataType.Vector3
         summary: The reflected Vector3.
   - name: Normalize
-    summary: |
-      The 'Normalize' method takes in a Vector3 and returns a new Vector3 with the same direction but a magnitude of 1. This method is useful when you want a direction but are not interested in the magnitude of the vector. Further details are available in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html).
+    summary: Normalizes a Vector3, returning a new Vector3 with the same direction but a magnitude of 1, useful for direction without magnitude concern.
     description:
     is_static: true
     code_samples:
@@ -417,8 +383,7 @@ methods:
       - type: DataType.Vector3
         summary: A normalized version of the input Vector3.
   - name: Dot
-    summary: |
-      The 'Dot' method calculates the Dot Product of two Vector3s. The Dot Product is equal to the cosine of the angle between the two vectors times their magnitudes. It's often used to test whether two vectors are facing in generally the same direction (dot product > 0), facing generally in opposite directions (dot product < 0), or are perpendicular (dot product = 0). The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Dot.html) can provide more information.
+    summary: Calculates the Dot Product of two Vector3s, useful for determining directional alignment or the angle between vectors.
     description:
     is_static: true
     code_samples:
@@ -433,10 +398,9 @@ methods:
         summary: The second Vector3 for the dot product.
     returns:
       - type: number
-        summary: The dot product of the input Vector3s.
+        summary: The dot product of the two Vector3s.
   - name: Project
-    summary: |
-      The 'Project' method calculates the projection of a Vector3 onto another Vector3. It represents a shadow the first Vector3 would cast on the other Vector3 if a light source was positioned perpendicularly above it, giving you the part of the Vector3 that's in the same direction as another Vector3. For further information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Project.html).
+    summary: Projects a Vector3 onto another, useful for finding the component of one vector in the direction of another.
     description:
     is_static: true
     code_samples:
@@ -451,10 +415,9 @@ methods:
         summary: The Vector3 on which the projection occurs.
     returns:
       - type: DataType.Vector3
-        summary: The result of the Projection of the first Vector3 onto the second.
+        summary: The projection of the first Vector3 onto the second.
   - name: ProjectOnPlane
-    summary: |
-      The 'ProjectOnPlane' method calculates the projection of a Vector3 onto a plane defined by a normal orthogonal Vector3. This is similar to the 'Project' method, but instead projects onto a plane rather than a Vector3. This method comes in handy when you want to align an object to a surface. Consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.ProjectOnPlane.html) for greater insight.
+    summary: Projects a Vector3 onto a plane defined by a normal orthogonal Vector3, useful for aligning objects to surfaces.
     description:
     is_static: true
     code_samples:
@@ -471,8 +434,7 @@ methods:
       - type: DataType.Vector3
         summary: The Vector3 after being projected onto a plane.
   - name: Angle
-    summary: |
-      The 'Angle' method is used to calculate the angle in degrees between two Vector3s. This can be useful to determine the angle required to get from one direction to another. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Angle.html).
+    summary: Calculates the angle in degrees between two Vector3s, useful for determining the required rotation to align one Vector3 with another.
     description:
     is_static: true
     code_samples:
@@ -480,17 +442,16 @@ methods:
       - name: from
         type: DataType.Vector3
         default:
-        summary: The Vector3 from where the angle is measured.
+        summary: The origin Vector3 for angle measurement.
       - name: to
         type: DataType.Vector3
         default:
-        summary: The Vector3 to which the angle is measured.
+        summary: The destination Vector3 for angle measurement.
     returns:
       - type: number
         summary: The angle in degrees between the two Vector3s.
   - name: SignedAngle
-    summary: |
-      The 'SignedAngle' method is used to calculate the angle between two Vector3s, but with a sign that indicates the direction of the rotation to get from the first to the second Vector3 around a given axis. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SignedAngle.html).
+    summary: Calculates the angle between two Vector3s with a sign indicating rotation direction around a given axis.
     description:
     is_static: true
     code_samples:
@@ -498,21 +459,20 @@ methods:
       - name: from
         type: DataType.Vector3
         default:
-        summary: The Vector3 from where the angle is measured.
+        summary: The Vector3 from where the angle measurement starts.
       - name: to
         type: DataType.Vector3
         default:
-        summary: The Vector3 to which the angle is measured.
+        summary: The Vector3 to which the angle measurement is made.
       - name: axis
         type: DataType.Vector3
         default:
-        summary: The axis around which the Vector3s are rotated.
+        summary: The axis around which the rotation angle is measured.
     returns:
       - type: number
         summary: The signed angle in degrees between the two Vector3s.
   - name: Distance
-    summary: |
-      The 'Distance' method is used to calculate the distance between two points represented by Vector3s. This is generally used to determine how far apart two points or objects are in the 3D space. For more details, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Distance.html).
+    summary: Calculates the distance between two Vector3 points, typically used to determine how far apart two objects are in 3D space.
     description:
     is_static: true
     code_samples:
@@ -529,8 +489,7 @@ methods:
       - type: number
         summary: The distance between the two Vector3 points.
   - name: ClampMagnitude
-    summary: |
-      The 'ClampMagnitude' method allows you to limit the length (magnitude) of a Vector3 to a specific max length. Despite the change in magnitude, the direction of the Vector3 remains the same. This can be useful for constraining character movement speed or other similar uses. Details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.ClampMagnitude.html).
+    summary: Limits the magnitude of a Vector3 to a specified maximum, useful for constraining movement or other vector magnitudes.
     description:
     is_static: true
     code_samples:
@@ -538,17 +497,16 @@ methods:
       - name: vector
         type: DataType.Vector3
         default:
-        summary: The Vector3 of which the magnitude is to be clamped.
+        summary: The Vector3 to clamp.
       - name: maxLength
         type: number
         default:
-        summary: The max length that the Vector3's magnitude is clamped to.
+        summary: The maximum length to which the Vector3's magnitude is clamped.
     returns:
       - type: DataType.Vector3
         summary: The Vector3 with its magnitude clamped.
   - name: Magnitude
-    summary: |
-      The 'Magnitude' method calculates the length (or magnitude) of a Vector3. Can be used to determine the distance a Vector3 extends from the origin point (0, 0, 0) in 3D space. For more information, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Magnitude.html).
+    summary: Returns the magnitude (length) of a Vector3, useful for distance calculations from the origin.
     description:
     is_static: true
     code_samples:
@@ -556,13 +514,12 @@ methods:
       - name: vector
         type: DataType.Vector3
         default:
-        summary: The Vector3 of which the magnitude is calculated.
+        summary: The Vector3 of which to calculate the magnitude.
     returns:
       - type: number
         summary: The magnitude of the Vector3.
   - name: SqrMagnitude
-    summary: |
-      The 'SqrMagnitude' method allows you to calculate the square of the magnitude of a Vector3. This is often used instead of 'Magnitude' when dealing with relative lengths for performance reasons, as calculating the square root can be computationally expensive. For more information, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SqrMagnitude.html).
+    summary: Calculates the square of the magnitude of a Vector3, often used for performance reasons in relative length comparisons.
     description:
     is_static: true
     code_samples:
@@ -570,13 +527,12 @@ methods:
       - name: vector
         type: DataType.Vector3
         default:
-        summary: The Vector3 of which the square of the magnitude is calculated.
+        summary: The Vector3 of which to calculate the square of the magnitude.
     returns:
       - type: number
         summary: The square of the magnitude of the Vector3.
   - name: Min
-    summary: |
-      The 'Min' method returns a new Vector3 made from the smallest components (x, y, and z) of two given Vector3s. For example, for Vector3(a1, b1, c1) and Vector3(a2, b2, c2), it would return Vector3(min(a1, a2), min(b1, b2), min(c1, c2)). More details can be found on the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Min.html).
+    summary: Returns a Vector3 composed of the smallest x, y, and z components from two given Vector3s, useful for bounding calculations.
     description:
     is_static: true
     code_samples:
@@ -584,17 +540,17 @@ methods:
       - name: lhs
         type: DataType.Vector3
         default:
-        summary: The first of two Vector3s to compare.
+        summary: The first Vector3 for comparison.
       - name: rhs
         type: DataType.Vector3
         default:
-        summary: The second of two Vector3s to compare.
+        summary: The second Vector3 for comparison.
     returns:
       - type: DataType.Vector3
-        summary: A Vector3 that is composed of the smallest components of the two Vector3s.
+        summary
+        : A Vector3 made up of the smallest components from the two input Vector3s.
   - name: Max
-    summary: |
-      The 'Max' method, the counterpart to 'Min', returns a new Vector3 made from the largest components (x, y, and z) of two given Vector3s. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Max.html) for further information.
+    summary: Produces a Vector3 from the largest x, y, and z components of two given Vector3s, useful for defining bounds or extents.
     description:
     is_static: true
     code_samples:
@@ -609,53 +565,50 @@ methods:
         summary: The second of two Vector3s to compare.
     returns:
       - type: DataType.Vector3
-        summary: A Vector3 that is composed of the largest components of the two Vector3s.
+        summary: A Vector3 composed of the largest components of the two compared Vector3s.
 math_operations:
   - operation: "=="
-    summary: |
-      This '==' operation checks for approximate equality between two Vector3s. Due to the limitations of floating point precision, two Vector3s are considered equal if the magnitude of their difference is less than a very small number. More details can be found in the [official Unity documentation on Vector3.operator_eq](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_eq.html).
+    summary: Checks for approximate equality between two Vector3s, considering the precision limitations of floating-point representation.
     description:
     type_a: Vector3
     type_b: Vector3
     return_type: boolean
     code_samples:
   - operation: "/"
-    summary: |
-      This '/' operation returns a new Vector3 that results from dividing each of the individual components of the original Vector3 by a specific number, effectively scaling it down. You can refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_divide.html) for further context.
+    summary: Scales down a Vector3 by dividing its components by a given scalar value, effectively reducing its magnitude.
     description:
     type_a: Vector3
     type_b: number
     return_type: Vector3
     code_samples:
   - operation: "*"
-    summary: |
-      This binary '*' operation returns a new Vector3 whose components are each the result of multiplying the respective component of the original Vector3 by the input number. This operation effectively scales the Vector3. Consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_multiply.html) for more details.
+    summary: Scales a Vector3 by multiplying its components by a scalar value, changing its magnitude without altering direction.
     description:
     type_a: number
     type_b: Vector3
     return_type: Vector3
     code_samples:
   - operation: "-"
-    summary: |
-      This unary '-' operation results in a new Vector3 that is the mirror image of the original Vector3 across the origin of the coordinate system. It essentially negates each of the components (x, y, z) of the original Vector3.
+    summary: Produces a new Vector3 as the mirror image of the original across the origin, negating each of its components.
     description:
     type_a: Vector3
     type_b:
     return_type: Vector3
     code_samples:
   - operation: "-"
-    summary: |
-      This binary '-' operation generates a new Vector3 that results from subtracting each component in the second Vector3 from the corresponding component in the first Vector3. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_subtract.html) for more detailed information.
+    summary: Results in a Vector3 from subtracting each component of the second Vector3 from the corresponding component of the first.
     description:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
     code_samples:
   - operation: "+"
-    summary: |
-      This '+' operation results in a new Vector3 whose components are each the sum of the corresponding components of two given Vector3s. This is analogous to moving along a certain direction by a certain distance. See more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_add.html).
+    summary: Yields a new Vector3 whose components are the sums of the corresponding components of two given Vector3s, analogous to vector addition.
     description:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
     code_samples:
+
+
+
