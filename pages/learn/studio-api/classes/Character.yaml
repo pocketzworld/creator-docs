@@ -1,205 +1,194 @@
 name: Character
 type: classes
 summary: |
-  As a game developer, you create a world with characters that players can interact with. In Highrise, the Character class is your starting point for creating such characters. It allows you to design characters with attributes such as animations, behaviours and more. It is also the base to other move complex character types, like Class.Avatar .
+
 description:
 code_samples:
 inherits:
   - Class.Behaviour
 constructors:
 properties:
-  - name: BillboardTransform
-    summary: This property allows you to control a character's position and its orientation in the virtual game world.
+  - name: isMoving
+    summary: |
+
+    description:
     is_static: false
-    type: Class.Transform
-  - name: AnimationName
-    summary: This property lets you control which animation is currently playing for the character.
-    is_static: false
-    type: string
-  - name: Owner
-    summary: This property indicates which player has control over the character.
-    is_static: false
-    type: Class.Character
-  - name: Name
-    summary: This property assigns a unique identifying name to each character.
-    is_static: false
-    type: string
-  - name: IsRunning
-    summary: This property tells you whether the character is currently in running motion.
-    is_static: false
+    code_samples:
     type: boolean
-  - name: IsWalking
-    summary: This property indicates whether the character is currently in walking motion.
+  - name: distanceToDestination
+    summary: |
+
+    description:
     is_static: false
-    type: boolean
-  - name: IsSitting
-    summary: This property allows you to know if the character is currently resting in a sitting position.
-    is_static: false
-    type: boolean
-  - name: IsLoaded
-    summary: This property confirms whether all assets related to the character have been successfully loaded into the game.
-    is_static: false
-    type: boolean
-  - name: IsMoving
-    summary: This property checks whether the character is currently in any kind of motion.
-    is_static: false
-    type: boolean
-  - name: IsAnchored
-    summary: This property can be used to check if the character is fixed or anchored to a particular position.
-    is_static: false
-    type: boolean
-  - name: IsFacingFront
-    summary: Use this property to know if the character is currently facing towards the game camera.
-    is_static: false
-    type: boolean
-  - name: Height
-    summary: This property corresponds to the character's height.
-    is_static: false
+    code_samples:
     type: number
+  - name: destination
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: renderLayer
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: renderPosition
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: renderRotation
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Quaternion
+  - name: renderScale
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: player
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Player
+  - name: StateChanged
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: MoveFinished
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
 methods:
-  - name: HasAnimation
-    summary: This method allows you to check if a specific animation exists for your character.
+  - name: SetIdle
+    summary: |
+
+    description:
     is_static: false
+    code_samples:
     parameters:
-      - name: name
-        type: string
-        default:
-        summary: Animation name to check.
-    returns:
-      - type: boolean
-        summary: It returns true if the named animation exists for your character.
-  - name: StopAnimation
-    summary: This method is used to halt the character's current animation.
-    is_static: false
     returns:
       - type: void
         summary:
-  - name: GetAnimationTime
-    summary: This method helps in getting the current time of a specific animation.
+  - name: PlayEmote
+    summary: |
+
+    description:
     is_static: false
+    code_samples:
     parameters:
-      - name: name
+      - name: emoteName
         type: string
         default:
-        summary: The name of the animation for retrieving time.
-      - name: unitTime
-        type: number
-        default:
-        summary: The current time of animation in seconds.
-    returns:
-      - type: number
-        summary: Returns the current time of the specified animation.
-  - name: GetAnimationUnitTime
-    summary: This method is used to retrieve the current unit time of a specific animation.
-    is_static: false
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: The name of the animation for retrieving unit time.
-      - name: time
-        type: number
-        default:
-        summary: The current time of animation in seconds.
-    returns:
-      - type: number
-        summary: Returns the current unit time of the specified animation.
-  - name: SetAnimationTime
-    summary: This method will set the time of a specific animation.
-    is_static: false
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: The given animation name to set the time.
-      - name: time
-        type: number
-        default:
-        summary: The time you want to set for the animation in seconds.
-    returns:
-      - type: void
         summary:
-  - name: SetAnimationUnitTime
-    summary: This method is used to set the unit time of a specific animation.
-    is_static: false
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: The name of the animation for setting unit time.
-      - name: unitTime
-        type: number
-        default:
-        summary: The unit time you want to set for the animation.
-    returns:
-      - type: void
-        summary:
-  - name: CurrentAnimationSupportsBackFacing
-    summary: This method checks if the current animation has frames that support a rear-facing character.
-    is_static: false
-    returns:
-      - type: boolean
-        summary: Returns true if the current animation supports rear-facing frames.
-  - name: PlayErrorAnimation
-    summary: This method plays a predefined error animation and can optionally play a sound along with it.
-    is_static: false
-    parameters:
-      - name: playSound
+      - name: loop
         type: boolean
         default:
-        summary: If set to true, an error sound will also play.
+        summary:
+      - name: callback
+        type: Class.LuaFunction
+        default:
+        summary:
     returns:
       - type: void
         summary:
-  - name: FaceFront
-    summary: This method allows the character to face the front, towards the game camera.
+  - name: MoveTo
+    summary: |
+
+    description:
     is_static: false
-    returns:
-      - type: void
-        summary:
-  - name: FaceBack
-    summary: This method makes the character face the opposite of the game camera.
-    is_static: false
-    returns:
-      - type: void
-        summary:
-  - name: Hide
-    summary: This method makes the character temporarily invisible in the game scene.
-    is_static: false
-    returns:
-      - type: void
-        summary:
-  - name: Show
-    summary: This method makes an invisible character visible again in the game scene.
-    is_static: false
-    returns:
-      - type: void
-        summary:
-  - name: SetEmptyBehaviour
-    summary: This method sets the character's behavior to default, undoing any ongoing actions or behaviors.
-    is_static: false
-    returns:
-      - type: void
-        summary:
-  - name: Look
-    summary: This method prompts the character to face towards a specific direction.
-    is_static: false
+    code_samples:
     parameters:
-      - name: direction
+      - name: position
         type: DataType.Vector3
         default:
-        summary: The Vector3 correspond to the direction for the character to look towards.
-      - name: leftRightOnly
-        type: boolean
-        default:
-        summary: If set to true, the character only changes its horizontal direction.
-    returns:
-      - type: void
         summary:
-  - name: CancelCurrentBehaviour
-    summary: This method stops any ongoing behavior or action that the character was performing and sets them to a default state.
-    is_static: false
+      - name: areaMask
+        type: number
+        default:
+        summary:
+      - name: callback
+        type: Class.LuaFunction
+        default:
+        summary:
     returns:
-      - type: void
+      - type: boolean
+        summary:
+  - name: MoveWithinRangeOf
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: distance
+        type: number
+        default:
+        summary:
+      - name: areaMask
+        type: number
+        default:
+        summary:
+      - name: callback
+        type: Class.LuaFunction
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: TweenRenderPosition
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: TweenRenderPositionTo
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
         summary:
 math_operations:

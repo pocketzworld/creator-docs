@@ -1,11 +1,6 @@
 name: Easing
 type: classes
 summary: |
-  Creating smooth and easy transitions over time is often vital in game programming. The Easing class provides a collection of easing functions that help perform this task. Easing functions, as covered in this class, create a bridge between the start and end points of an animation or a transition, applying a specific rate of change to give a distinct look and feel to the movement.
-
-  Each method in this class represents a different easing function. They all accept two parameters: 't', the normalized time (usually between 0-1), representing the current timing/progress of the easing; and 'p', a Vector4 parameter that can hold extra data needed for certain easing functions.
-
-  The easing functions covered here manipulates the 't' parameter in a unique way to generate a desired easing effect.
 
 description:
 code_samples:
@@ -13,9 +8,9 @@ inherits:
 constructors:
 properties:
 methods:
-  - name: EaseQuadratic
+  - name: Quadratic
     summary: |
-      The 'EaseQuadratic' method calculates easing with a quadratic function: f(t) = t^2. This gives a parabolic curve that represents an even, smooth rate of change. The parameter 'p' is not used in this method.
+
     description:
     is_static: true
     code_samples:
@@ -23,17 +18,13 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
-        default:
-        summary: Not used in EaseQuadratic.
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseCubic
+        summary:
+  - name: Cubic
     summary: |
-      The 'EaseCubic' method applies a cubic function: f(t) = t^3. This produces a curve with a sharper increase and decrease in speed than the quadratic method, giving a more prominent easing effect. Again, the 'p' parameter is not utilized here.
+
     description:
     is_static: true
     code_samples:
@@ -41,17 +32,13 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
-        default:
-        summary: Not used in EaseCubic.
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseBack
+        summary:
+  - name: Back
     summary: |
-      The 'EaseBack' method creates a "pullback" or "overshoot" effect by manipulating a cubic function with a sine function: f(t)= t^3 - t * max(0, p.x) * sin(pi * t). The effect results in the eased value exceeding the target value temporarily before settling back, giving the impression of pulling back like a rubber band. 'p.x' determines the magnitude of the pullback.
+
     description:
     is_static: true
     code_samples:
@@ -59,17 +46,17 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
+        summary:
       - name: p
-        type: DataType.Vector4
+        type: number
         default:
-        summary: The first component, 'p.x', defines the magnitude of the pullback on the overshoot.
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseBounce
+        summary:
+  - name: Circle
     summary: |
-      The 'EaseBounce' function creates a bouncing effect by calculating bounces and bounciness using the respective 'p.x' and 'p.y' values and then applying a quadratic function on the parameters. It gives an impression of an object bouncing against a solid surface and is great for creating playful, lively animations.
+
     description:
     is_static: true
     code_samples:
@@ -77,17 +64,13 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
-        default:
-        summary: The first component 'p.x' is the number of bounces and the second component 'p.y' is the level of bounciness.
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseElastic
+        summary:
+  - name: Exponential
     summary: |
-      The 'EaseElastic' function creates an elastic effect by computing a damped sine wave based on 'p.x' oscillations and 'p.y' springiness. The effect is a value that overshoots the target multiple times, each time getting closer to the target value, giving the sensation of an elastic band being extended and then released.
+
     description:
     is_static: true
     code_samples:
@@ -95,17 +78,17 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
+        summary:
       - name: p
-        type: DataType.Vector4
+        type: number
         default:
-        summary: The first component 'p.x' is the number of oscillations and the second component 'p.y' is the level of springiness.
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseSine
+        summary:
+  - name: Sine
     summary: |
-      The 'EaseSine' function applies a sinusoidal function on the 't' parameter. So, the easing starts slowly, accelerates in the middle, and then slows again towards the end. It's excellent for simulating natural and harmonic motion like the pendulum of a clock. The parameter 'p' is disregarded for this function.
+
     description:
     is_static: true
     code_samples:
@@ -113,17 +96,13 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
-        default:
-        summary: Unused in EaseSine.
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseCircle
+        summary:
+  - name: CubicBezier
     summary: |
-      The 'EaseCircle' function provides an easing effect that is faster towards the midpoint and slower towards the beginning and end. Interestingly, despite its name, the EaseCircle function applies a square root operation, not a circular function, to get the desired effect. The 'p' parameter is not used.
+
     description:
     is_static: true
     code_samples:
@@ -131,17 +110,29 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
+        summary:
+      - name: x1
+        type: number
         default:
-        summary: Unused in EaseCircle.
+        summary:
+      - name: y1
+        type: number
+        default:
+        summary:
+      - name: x2
+        type: number
+        default:
+        summary:
+      - name: y2
+        type: number
+        default:
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseExponential
+        summary:
+  - name: Bounce
     summary: |
-      The 'EaseExponential' function applies an exponent to the 't' value. The exponent could be any number but is typically set as 'p.x'. This function will behave like a linear transition when 'p.x' is zero, otherwise the easing will start slowly and speed up exponentially. This can be highly effective when you want to make an element quickly rush towards the endpoint.
+
     description:
     is_static: true
     code_samples:
@@ -149,17 +140,21 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
+        summary:
+      - name: bounces
+        type: number
         default:
-        summary: The first component 'p.x' is the exponent that is applied to function.
+        summary:
+      - name: bounciness
+        type: number
+        default:
+        summary:
     returns:
       - type: number
-        summary: The eased value.
-  - name: EaseCubicBezier
+        summary:
+  - name: Elastic
     summary: |
-      The 'EaseCubicBezier' function calculates a Cubic Bezier curve to create a sophisticated easing effect. All four components of 'p' are used as the four coefficients for the Cubic Bezier curve. Bezier curves give you more control over the acceleration and deceleration of the transition, providing a highly customizable easing function.
+
     description:
     is_static: true
     code_samples:
@@ -167,12 +162,16 @@ methods:
       - name: t
         type: number
         default:
-        summary: Normalized time (or position) in the easing function, range should be between 0 and 1.
-      - name: p
-        type: DataType.Vector4
+        summary:
+      - name: oscillations
+        type: number
         default:
-        summary: All four components are used as the four coefficients for the Cubic Bezier curve.
+        summary:
+      - name: springiness
+        type: number
+        default:
+        summary:
     returns:
       - type: number
-        summary: The eased value.
+        summary:
 math_operations:

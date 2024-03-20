@@ -350,6 +350,20 @@ methods:
     returns:
       - type: DataType.Vector3
         summary: Returns a Vector3 as a result of the multiplication.
+  - name: TransformPlane
+    summary: |
+      [Unity's Matrix4x4.TransformPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.TransformPlane.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: plane
+        type: DataType.Plane
+        default:
+        summary:
+    returns:
+      - type: DataType.Plane
+        summary:
   - name: Determinant
     summary: |
       The static 'Determinant' method returns the determinant of a given Matrix4x4. The determinant of a matrix is a special scalar value that can be computed from its elements and can provide useful information about the matrix. You can learn more about it from [Unity's Matrix4x4.Determinant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.Determinant.html).

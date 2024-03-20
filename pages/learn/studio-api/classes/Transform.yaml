@@ -166,6 +166,70 @@ methods:
     returns:
       - type: void
         summary:
+  - name: TweenPositionTo
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: TweenLocalPositionTo
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: TweenPosition
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: TweenLocalPosition
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
   - name: SetParent
     summary: |
       The 'SetParent' method is used to set the parent of the GameObject's transform. It's handy when you need to dynamically create parent-child relationships between GameObjects. For further understanding, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html).

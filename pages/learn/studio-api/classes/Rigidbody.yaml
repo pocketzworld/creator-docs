@@ -171,6 +171,20 @@ properties:
     is_static: false
     code_samples:
     type: number
+  - name: excludeLayers
+    summary: |
+      [Unity's Rigidbody.excludeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-excludeLayers.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.LayerMask
+  - name: includeLayers
+    summary: |
+      [Unity's Rigidbody.includeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-includeLayers.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.LayerMask
 methods:
   - name: AddExplosionForce
     summary: |

@@ -1,0 +1,138 @@
+name: Sounds
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.Object
+constructors:
+properties:
+  - name: HapticsSlider
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: HapticsLight
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: NonWalkable
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: Walkable
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: ButtonClick
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: LongPressComplete
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: ToggleOn
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: ToggleOff
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: Alert
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: Toast
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: Like
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: TradeLocked
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: PullToRefresh
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: ReadyToRefresh
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: JoinRoom
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: GachaSpin1x
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: GachaSpin10x
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+  - name: DrumRoll
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.AudioShader
+methods:
+math_operations:

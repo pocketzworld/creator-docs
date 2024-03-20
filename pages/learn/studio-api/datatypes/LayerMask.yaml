@@ -1,0 +1,46 @@
+name: LayerMask
+type: datatypes
+summary: |
+  [Unity's LayerMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.html)
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: value
+    summary: |
+      [Unity's LayerMask.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:
+  - name: NameToLayer
+    summary: |
+      [Unity's LayerMask.NameToLayer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.NameToLayer.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: LayerToName
+    summary: |
+      [Unity's LayerMask.LayerToName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.LayerToName.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: layer
+        type: number
+        default:
+        summary:
+    returns:
+      - type: string
+        summary:
+math_operations:

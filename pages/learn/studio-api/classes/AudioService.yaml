@@ -1,0 +1,201 @@
+name: AudioService
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+methods:
+  - name: IsPlaying
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: MusicIntensity
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: MusicDuckVolume
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: DuckMusic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: duration
+        type: number
+        default:
+        summary:
+      - name: duckOutDuration
+        type: number
+        default:
+        summary:
+      - name: duckInDuration
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayMusic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: shader
+        type: Class.AudioShader
+        default:
+        summary:
+      - name: volume
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayMusicURL
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: url
+        type: string
+        default:
+        summary:
+      - name: volume
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: StopMusic
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: fadeOut
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayShader
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: shader
+        type: Class.AudioShader
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlaySoundGlobal
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: shader
+        type: Class.AudioShader
+        default:
+        summary:
+      - name: volume
+        type: number
+        default:
+        summary:
+      - name: pitch
+        type: number
+        default:
+        summary:
+      - name: spatialize
+        type: boolean
+        default:
+        summary:
+      - name: loop
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: Class.AudioSource
+        summary:
+  - name: PlaySound
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: shader
+        type: Class.AudioShader
+        default:
+        summary:
+      - name: gameObject
+        type: Class.GameObject
+        default:
+        summary:
+      - name: volume
+        type: number
+        default:
+        summary:
+      - name: pitch
+        type: number
+        default:
+        summary:
+      - name: spatialize
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: Class.AudioSource
+        summary:
+  - name: StopAudioSource
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: source
+        type: Class.AudioSource
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

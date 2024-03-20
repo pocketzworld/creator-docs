@@ -23,13 +23,41 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-  - name: Tap
+  - name: Client
     summary: |
-      The 'Tap' property listens for a tap event on the touchpad/screen. A tap starts when a finger touches the surface and ends when it lifts off within a short duration of time. 'Tap' can be used for detecting basic interaction across platforms. The parameter of the event is a Vector2 that represents the position of the tap on the screen (not in the game world).
+
     description:
     is_static: false
     code_samples:
-    type: Class.Event
+    type: Class.GameClient
+  - name: Tapped
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: LongPressBegan
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: LongPressContinue
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: LongPressEnded
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
   - name: PinchOrDragBegan
     summary: |
       The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.

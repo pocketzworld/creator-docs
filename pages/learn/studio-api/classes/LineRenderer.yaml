@@ -162,4 +162,17 @@ methods:
       The 'BakeMesh' method allows you to create a static Mesh from the line. This could be extremely useful for saving the state of a line, or for use in other Mesh-based systems. More details can be found on [Unity's LineRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.BakeMesh.html).
     description:
     is_static: false
+    code_samples:
+    parameters:
+      - name: mesh
+        type: Class.Mesh
+        default:
+        summary:
+      - name: useTransform
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:
