@@ -44,7 +44,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnCollisionExit = function(self, collision : Collision)
+      function self:OnCollisionExit(collision : Collision)
           print("I stopped colliding with and touching a collider named " .. collision.gameObject.name)
       end
       ```
@@ -57,7 +57,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnCollisionStay = function(self, collision : Collision)
+      function self:OnCollisionStay(collision : Collision)
           print("I am still colliding with and touching a collider named " .. collision.gameObject.name)
       end
       ```
@@ -70,7 +70,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnCollisionEnter = function(self, collision : Collision)
+      function self:OnCollisionEnter(collision : Collision)
           print("I collided with a collider named " .. collision.gameObject.name)
       end
       ```
@@ -83,7 +83,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnTriggerEnd = function(self, other : Collider)
+      function self:OnTriggerEnter(other : Collider)
         print("This triggering collider left: " .. other.gameObject.name)
       end
       ```
@@ -96,7 +96,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnTriggerStay = function(self, other : Collider)
+      function self:OnTriggerStay(other : Collider)
         print("The triggering collider that has not left is named " .. other.gameObject.name)
       end
       ```
@@ -109,7 +109,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.OnTriggerEnter = function(self, other : Collider)
+      function self:OnTriggerEnter(other : Collider)
         print("I was triggered by a collider named " .. other.gameObject.name)
       end
       ```
@@ -124,7 +124,7 @@ properties:
       - ServerAndClient
     code_samples: |
       ``` lua
-      self.Update = function()
+      function self:Update()
         print("This frame took " .. Time.deltaTime .. "seconds")
       end
       ```
@@ -140,7 +140,7 @@ properties:
     code_samples: |
       #### Initialize With EventConnection
       ```lua
-      self.LateUpdate = function()
+      function self:LateUpdate()
         print("This frame took " .. Time.deltaTime .. "seconds, but I'm happening after all the other normal Updates occured")
       end
       ```
@@ -153,7 +153,7 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-      self.FixedUpdate = function()
+      function self:FixedUpdate()
         print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
       end
       ```
@@ -168,7 +168,7 @@ properties:
       - ServerAndClient
     code_samples: |
       ```lua
-      self.Start = function()
+      function self:Start()
         print("I started. This is still the first frame I am alive!")
       end
 
