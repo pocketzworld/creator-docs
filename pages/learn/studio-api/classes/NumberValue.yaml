@@ -1,7 +1,7 @@
 name: NumberValue
 type: classes
 summary: |
-  The NumberValue class is used to store a single number value, which unlike Class.IntValue supports decimal points. It is a subclass of the Class.Value and it is recommended to check out that documentation before conitnuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
+  The NumberValue class is used to store a single number value, which unlike Class.IntValue supports decimal points. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single number value that all clients should be synchronized on.
 description:
 code_samples: |
   #### Synchronizing a Number
@@ -59,7 +59,7 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized integer value of the NumberValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      The currently synchronized number value of the NumberValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
     description:
     is_static: false
     tags:

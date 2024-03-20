@@ -1,7 +1,7 @@
 name: IntValue
 type: classes
 summary: |
-  The IntValue class is used to store a single integer value, which is a number without decimals. It is a subclass of the Class.Value and it is recommended to check out that documentation before conitnuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
+  The IntValue class is used to store a single integer value, which is a number without decimals. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
 description:
 code_samples: |
   #### Synchronizing an Integer

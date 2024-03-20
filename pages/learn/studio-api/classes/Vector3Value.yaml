@@ -1,0 +1,70 @@
+name: Vector3Value
+type: classes
+summary: |
+  The Vector3Value class is used to store a single Datatype.Vector3 value. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
+description:
+code_samples: |
+  #### Synchronizing a Vector3
+  description: This example demonstrates how to use an Vector3Value to synchronize a position across all clients.
+  ```lua
+    local objectivePosition : Vector3Value = Vector3Value.new("objectivePosition", Vector3.new(0,0,0))
+    local onNewObjPos : Event = Event.new("onNewObjPos")
+
+    -- not local so that another script can find this one and call this function
+    function GetNewObjPos()
+      onNewObjPos:FireServer()
+    end
+
+    local function Client()
+      objectivePosition.Changed:Connect(function()
+          print("The score is now " .. objectivePosition.value)
+      end)
+    end
+
+    local function Server()
+      onNewObjPos:Connect(function()
+          objectivePosition.value = Vector3.new(1,2,3) -- your logic here
+      end)
+    end
+
+    if server then
+      Server()
+    else
+      Client()
+    end
+  ```
+inherits:
+tags:
+  - ServerAndClient
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    tags:
+      - ServerAndClient
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: The name of the Vector3Value. This must be unique as it is used as the key to synchronize the value across all clients.
+      - name: initialValue
+        type: number
+        default:
+        summary: The initial value of the Vector3Value.
+    returns:
+      - type: Class.Vector3Value
+        summary: An Vector3Value instance with the specified value.
+properties:
+  - name: value
+    summary: |
+      The currently synchronized Vector3 value of the Vector3Value. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+    description:
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: Datatype.Vector3
+methods:
+math_operations:
