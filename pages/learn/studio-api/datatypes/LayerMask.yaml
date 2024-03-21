@@ -11,10 +11,9 @@ summary: |
 
   In the following script example, Physics.Raycast sends a ray into the world. Camera.main can be rotated around the y-axis and fire a ray. Three GameObjects represent walls that can be hit by the fired ray. Each GameObject has GameObject.label set to the "Wall" layerMask.
 
-
+  [Unity's LayerMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.html)
 description:
 code_samples:
-  [Unity's LayerMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.html)
 inherits:
 constructors:
 properties:

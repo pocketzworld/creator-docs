@@ -1,7 +1,7 @@
 name: PinchGestureBegan
 type: classes
 summary: |
-  For those times when you need to interact with touch-enabled screens in your application, this class is a data container for the start of a pinch or drag gesture, usually used for operations like zooming, panning, or scaling. 
+  For those times when you need to interact with touch-enabled screens in your application, this class is a data container for the start of a pinch or drag gesture, usually used for operations like zooming, panning, or scaling.
 
   It keeps track of various details of a pinch or drag gesture such as the change in position, start position, current position, direction, distance covered in the pinch, the scaling factor, and whether a pinch is currently happening. All these properties provide critical information to accurately detect and process pinch gestures for accomplishing sophisticated touch interactions.
 

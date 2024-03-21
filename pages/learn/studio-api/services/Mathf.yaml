@@ -251,7 +251,6 @@ methods:
     returns:
       - type: float
         summary: The shortest angle difference, in degrees.
-  # Additional methods would continue in the same structured manner.
 math_operations:
   - name: Exp
     summary: Calculates 'e' raised to the specified power, essential for exponential growth calculations.
@@ -266,7 +265,7 @@ math_operations:
         summary: The power to raise 'e' to
     returns:
       - type: float
-        summary: 'e' raised to the given power.
+        summary: returns 'e' raised to the given power.
   - name: Floor
     summary: Rounds a number down towards negative infinity to the closest integer, handy for lower limit values.
     description:

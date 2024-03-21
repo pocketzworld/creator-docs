@@ -1,9 +1,9 @@
 name: ParticleSystemForceField
 type: classes
 summary: |
-  The Unity class ParticleSystemForceField gives you the power of controlling the behavior of your particles based on their interactions with force fields in the environment. Specially made for use with the Class.ParticleSystem class, it offers a broader degree of freedom over the movement of particles within a scene. 
+  The Unity class ParticleSystemForceField gives you the power of controlling the behavior of your particles based on their interactions with force fields in the environment. Specially made for use with the Class.ParticleSystem class, it offers a broader degree of freedom over the movement of particles within a scene.
 
-  These force fields are essentially areas designated within the Particle System that exert specific forces on the particles, guiding their motion and behavior. This could be used to simulate natural forces like gravity, magnetic fields, wind or even custom forces that serve your game's specific needs. 
+  These force fields are essentially areas designated within the Particle System that exert specific forces on the particles, guiding their motion and behavior. This could be used to simulate natural forces like gravity, magnetic fields, wind or even custom forces that serve your game's specific needs.
 
   The properties of these force fields, like their range, length and the gravity focus, can be tweaked to design various appealing and realistic particle effects. You'll find it an indispensable tool in building vibrant and interactive environments.
 

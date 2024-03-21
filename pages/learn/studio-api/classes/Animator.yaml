@@ -297,8 +297,7 @@ methods:
       - type: void
         summary: This method doesn't return a value.
   - name: GetInteger
-    summary: Fetches the value of an integer parameter in the
-    Animator.
+    summary: Fetches the value of an integer parameter in the Animator.
     description:
     is_static: false
     code_samples:

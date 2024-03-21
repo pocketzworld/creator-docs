@@ -133,7 +133,7 @@ methods:
     summary: Scales a Vector4 by another Vector4's components, useful for dimension or shape scaling.
     description:
     is_static: false
-    code_samples
+    code_samples:
     parameters:
       - name: scale
         type: DataType.Vector4
@@ -287,7 +287,6 @@ methods:
     returns:
       - type: DataType.Vector4
         summary: Returns the projection of 'a' onto 'b'.
- 
   - name: Distance
     summary: Computes the distance between two Vector4's, useful for object spacing or collision detection.
     description:

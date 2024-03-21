@@ -5,7 +5,7 @@ summary: |
 
   At its core, a MeshCollider leverages a Mesh - an assemblage of vertices, edges, and faces that define the shape of a 3D object - to create complex collision spaces. Similar to how a sculpture is formed by molding clay, a Mesh is shaped by positioning vertices in 3D space and connecting them with edges to form a network of faces.
 
-  Note that due to their complexity, MeshColliders are more computationally intensive. Hence, they should be avoided or used only when absolutely necessary. 
+  Note that due to their complexity, MeshColliders are more computationally intensive. Hence, they should be avoided or used only when absolutely necessary.
 
   Visit [Unity's MeshCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider.html) for a better understanding.
 

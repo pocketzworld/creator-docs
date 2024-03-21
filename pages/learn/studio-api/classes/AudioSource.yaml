@@ -134,8 +134,7 @@ properties:
     code_samples:
     type: number
   - name: priority
-    summary: Determines the AudioSource's
-    priority among others for managing active AudioSource objects and playback selection based on priority value.
+    summary: Determines the AudioSource's priority among others for managing active AudioSource objects and playback selection based on priority value.
     description:
     is_static: false
     code_samples:
