@@ -1,4 +1,4 @@
-# Highrise Studio Overview Documentation
+# Highrise Studio Overview
 
 ## Introduction
 
