@@ -1,12 +1,12 @@
 {
-  "classes": {
-    "title": "Classes"
+  "globals": {
+    "title": "Globals"
   },
   "datatypes": {
     "title": "Datatypes"
   },
-  "globals": {
-    "title": "Globals"
+  "classes": {
+    "title": "Classes"
   },
   "services": {
     "title": "Services"

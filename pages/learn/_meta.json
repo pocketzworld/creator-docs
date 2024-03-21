@@ -1,18 +1,14 @@
 {
-  "guides": {
-    "title": "Guides",
-    "redirectTo": "/learn/guides/studio/creating-your-first-world"
+  "studio": {
+    "title": "Studio",
+    "redirectTo": "/learn/studio/overview"
   },
-  "studio-api": {
-    "title": "Studio Api",
-    "redirectTo": "/learn/studio-api/classes/GameObject"
-  },
-  "bots-api": {
-    "title": "Bots Api",
-    "redirectTo": "/learn/bots-api/general/overview"
+  "bots": {
+    "title": "Bots",
+    "redirectTo": "learn/bots/overview"
   },
   "web-api": {
-    "title": "Web Api",
+    "title": "Web API",
     "redirectTo": "/learn/web-api/general/overview"
   },
   "designer-resources": {
