@@ -541,7 +541,6 @@ math_operations:
       - ServerAndClient
     parameters:
       - name: t
-        type
         type: number
         default:
         summary: The value to loop

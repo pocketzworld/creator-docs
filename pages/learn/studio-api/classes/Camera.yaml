@@ -278,7 +278,7 @@ properties:
     code_samples:
     type: boolean
   - name: previousViewProjectionMatrix
-     summary: Holds the matrix from multiplying the previous frame's projection matrix by its world-to-camera matrix, useful for effects needing historical comparison.
+    summary: Holds the matrix from multiplying the previous frame's projection matrix by its world-to-camera matrix, useful for effects needing historical comparison.
     description:
     is_static: false
     code_samples:

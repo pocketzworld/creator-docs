@@ -458,8 +458,7 @@ methods:
         default:
         summary: The index of the layer.
     returns:
-      -
-      type: number
+      - type: number
         summary: The count of AnimatorClipInfo instances.
   - name: GetNextAnimatorClipInfoCount
     summary: Gets the count of AnimatorClipInfo for the next layer the animator will transition to.
