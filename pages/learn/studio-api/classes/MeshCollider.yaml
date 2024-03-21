@@ -18,14 +18,12 @@ properties:
   - name: sharedMesh
     summary: |
       The 'sharedMesh' property refers to the Mesh object that the MeshCollider uses to determine its shape. By setting a different Mesh, you can instantly change the shape of the collider. More details in [Unity's MeshCollider.sharedMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-sharedMesh.html).
-    description:
     is_static: false
     code_samples:
     type: Class.Mesh
   - name: convex
     summary: |
       The 'convex' property, when set to true, forces the MeshCollider to fit a convex hull to the mesh, which means it cannot have any overhanging ledges. Concave meshes, although more accurate, are also more resource-intensive, and Unity restricts some interactions between Rigidbody items to only happen with convex colliders. Consult [Unity's MeshCollider.convex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-convex.html).
-    description:
     is_static: false
     code_samples:
     type: boolean

@@ -16,7 +16,6 @@ constructors:
   - name: new
     summary: |
       Represents the initializer or constructor for a new GameObject. This is where you can assign initial values to the GameObject upon its creation. For additional information, refer to [Unity's official documentation.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-ctor.html)
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -27,7 +26,6 @@ properties:
   - name: transform
     summary: |
       This property is used to access the Transform of the GameObject. The Transform controls the position, rotation, and scale of the GameObject in the scene. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-transform.html).
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -36,49 +34,42 @@ properties:
   - name: layer
     summary: |
       This property allows you to manipulate the layer that the GameObject is part of. Layers can be used for various purposes such as rendering and collision detection. [Refer to the official Unity documentation for more information.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-layer.html)
-    description:
     is_static: false
     code_samples:
     type: number
   - name: activeSelf
     summary: |
       The `activeSelf` property indicates whether the GameObject is active in the scene or not. If a GameObject is inactive, it will not be rendered and will not trigger any of its script events. For more information, visit the [official Unity documentation.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeSelf.html)
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: activeInHierarchy
     summary: |
       The `activeInHierarchy` property checks if the GameObject is active in its hierarchy. If a parent GameObject is inactive, then all of its children will also be inactive regardless of their activeSelf status. Find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeInHierarchy.html).
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: isStatic
     summary: |
       The `isStatic` property is used for designating whether a GameObject is static. A static GameObject will not move, rotate, or scale throughout its existence. This is useful for objects like buildings or landscape features. [More information here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-isStatic.html).
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: tag
     summary: |
       The `tag` property is a custom and flexible way of classifying GameObjects for quick and easy reference. You could tag a GameObject as a 'Player', 'Enemy', or any other descriptor. This can be largely beneficial when dealing with specific groups of objects. Details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-tag.html).
-    description:
     is_static: false
     code_samples:
     type: string
   - name: sceneCullingMask
     summary: |
       The `sceneCullingMask` property includes information about which scenes should be included in or excluded from certain operations. It is essentially a filter that can be applied to the scene. Additional information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-sceneCullingMask.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: gameObject
     summary: |
       The `gameObject` property is a reference to the GameObject itself. This is often used when a script attached to a GameObject needs to refer to the GameObject it is attached to. [Here is the link for more details](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-gameObject.html).
-    description:
     is_static: false
     code_samples:
     type: Class.GameObject
@@ -86,7 +77,6 @@ methods:
   - name: GetComponent
     summary: |
       The `GetComponent` method allows you to access a component attached to the GameObject, if it exists. This includes built-in components like a Transform or Collider, or custom scripts that you've written. For more information, refer to [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponent.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -96,7 +86,6 @@ methods:
   - name: AddScript
     summary: |
       The `AddScript` method enables you to attach a new LuaScript to the GameObject during runtime. This allows the GameObject to exhibit the defined behaviors in the script and execute it immediately.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -112,7 +101,6 @@ methods:
   - name: FindGameObjectsWithTag
     summary: |
       The `FindGameObjectsWithTag` method returns all active GameObjects with the specified tag. It allows you the convenience of accessing multiple GameObjects at once based on their tags in a single method. For more information, refer to [Unity's GameObject.FindGameObjectsWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectsWithTag.html).
-    description:
     is_static: true
     tags:
       - ServerAndClient
@@ -128,7 +116,6 @@ methods:
   - name: GetComponentInChildren
     summary: |
       The `GetComponentInChildren` method is similar to `GetComponent`, but it also searches through all the GameObject's children to find the requested component. This can be helpful when dealing with complex structures like character rigs. Learn more from the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInChildren.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -146,7 +133,6 @@ methods:
   - name: GetComponentInParent
     summary: |
       The `GetComponentInParent` method allows you to fetch a specific component from the GameObject's parent. If there are multiple instances of the same component, it will return the first component it finds. For more details, refer to [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInParent.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -164,7 +150,6 @@ methods:
   - name: AddComponent
     summary: |
       With the `AddComponent` method, you can add a new component of a specified type to a GameObject during runtime. This is useful for dynamically altering the behavior of GameObjects. [Click here for more information](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.AddComponent.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -178,7 +163,6 @@ methods:
   - name: GetComponentCount
     summary: |
       The `GetComponentCount` method allows you to get the total number of components attached to the GameObject. This can be useful when you want to know how many components a GameObject has for debugging or optimization purposes. To learn more, visit [Unity's GameObject.GetComponentCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentCount.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -188,7 +172,6 @@ methods:
   - name: GetComponentAtIndex
     summary: |
       The `GetComponentAtIndex` method is used to access a specific component attached to the GameObject based on its index. This can be helpful when dealing with multiple components of the same type. For additional details, visit [Unity's GameObject.GetComponentAtIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentAtIndex.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -202,7 +185,6 @@ methods:
   - name: GetComponentIndex
     summary: |
       The `GetComponentIndex` method returns the index of a specific Component attached to the GameObject. This is useful when you need to know the order of components attached to the GameObject. More information can be found at [Unity's GameObject.GetComponentIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentIndex.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -216,7 +198,6 @@ methods:
   - name: SetActive
     summary: |
       The `SetActive` method is used for activating or deactivating a GameObject during runtime. An inactive GameObject will not render in the scene and its scripts will not run. For further details, refer to the [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.SetActive.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -230,7 +211,6 @@ methods:
   - name: CompareTag
     summary: |
       The `CompareTag` method allows you to determine if a GameObject's tag matches a specified string. It's a helpful tool when you want to perform certain operations on a specific group of GameObjects. [Details found here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.CompareTag.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -244,7 +224,6 @@ methods:
   - name: FindWithTag
     summary: |
       The `FindWithTag` method returns the first active GameObject tagged with a specified string. This can be particularly useful to quickly access specific GameObjects in the scene. More information can be found in the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindWithTag.html).
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -258,7 +237,6 @@ methods:
   - name: FindGameObjectWithTag
     summary: |
       The 'FindGameObjectWithTag' method looks for an active GameObject in the scene that has the specified tag. If multiple GameObjects have the given tag, only the first one will be returned. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectWithTag.html) for more information.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -272,7 +250,6 @@ methods:
   - name: Find
     summary: |
       The 'Find' method allows you to search for an active GameObject by name in the entire scene. It is recommended to avoid using this method frequently as it can be performance intensive, especially in large scenes. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.Find.html).
-    description:
     is_static: true
     code_samples:
     parameters:

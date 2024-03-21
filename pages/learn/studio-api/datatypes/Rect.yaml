@@ -10,7 +10,6 @@ constructors:
   - name: new
     summary: |
       Represents a new instance of Rect with specified x, y position, and width, height size.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -37,98 +36,84 @@ properties:
   - name: x
     summary: |
       Retrieve or assign the x-coordinate of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: |
       Access or modify the y-coordinate of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: position
     summary: |
       Get or set the position of the Rect as a Vector2.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: center
     summary: |
       Obtain or modify the center position of the Rect.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: min
     summary: |
       Access the min point of the Rect.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: max
     summary: |
       Get the max point of the Rect.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: width
     summary: |
       Access or modify the width of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: height
     summary: |
       Retrieve or set the height of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: size
     summary: |
       Get or set the size of the Rect as a Vector2.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: xMin
     summary: |
       Access the minimum x-coordinate of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: yMin
     summary: |
       Access the minimum y-coordinate of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: xMax
     summary: |
       Get the maximum x-coordinate of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: yMax
     summary: |
       Access the maximum y-coordinate of the Rect.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: zero
     summary: |
       Obtain a Rect instance positioned at the origin (0, 0) with zero width and height. This represents a point at the origin.
-    description:
     is_static: true
     code_samples:
     type: DataType.Rect
@@ -136,7 +121,6 @@ methods:
   - name: Set
     summary: |
       Set the position and size of the Rect.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -162,7 +146,6 @@ methods:
   - name: Contains
     summary: |
       Check if a point is within the Rect.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -176,7 +159,6 @@ methods:
   - name: Overlaps
     summary: |
       Determine if the Rect overlaps with another Rect.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -190,7 +172,6 @@ methods:
   - name: MinMaxRect
     summary: |
       Create a new Rect from minimum and maximum coordinates.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -216,7 +197,6 @@ methods:
   - name: NormalizedToPoint
     summary: |
       Convert normalized coordinates to a point within the Rect.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -234,7 +214,6 @@ methods:
   - name: PointToNormalized
     summary: |
       Convert a point within the Rect to normalized coordinates.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -253,7 +232,6 @@ math_operations:
   - operation: "=="
     summary: |
       Compare two Rect instances for equality.
-    description:
     type_a: Rect
     type_b: Rect
     return_type: boolean

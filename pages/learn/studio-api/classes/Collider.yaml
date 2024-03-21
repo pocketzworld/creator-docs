@@ -9,68 +9,57 @@ constructors:
 properties:
   - name: enabled
     summary: Toggles the Collider's interaction capabilities; disabling prevents collision detection.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: attachedRigidbody
     summary: Points to the Rigidbody component associated with the Collider, crucial for physics interactions.
-    description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
   - name: isTrigger
     summary: Converts the Collider into a Trigger, which notifies of entering or exiting objects without physical collisions.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: contactOffset
     summary: Adjusts collision detection sensitivity, controlling the threshold for collision recognition.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: bounds
     summary: Retrieves the Collider's world space bounds, outlining its physical extent.
-    description:
     is_static: false
     code_samples:
     type: DataType.Bounds
   - name: hasModifiableContacts
     summary: Indicates the capability to modify collision contacts, useful for custom collision handling.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: providesContacts
     summary: Identifies if the Collider supplies collision contact data, facilitating detailed interaction analysis.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: layerOverridePriority
     summary: Determines override precedence in Layer Collision Matrix conflicts, guiding collision layer resolution.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: excludeLayers
     summary: Specifies layers to exclude from collision detection, enhancing control over interaction scope.
-    description:
     is_static: false
     code_samples:
     type: DataType.LayerMask
   - name: includeLayers
     summary: Defines layers to include in collision detection, allowing targeted interaction setups.
-    description:
     is_static: false
     code_samples:
     type: DataType.LayerMask
 methods:
   - name: ClosestPoint
     summary: Determines the nearest point on the Collider to a specified location, useful for proximity-based interactions.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -82,7 +71,6 @@ methods:
         summary: The nearest point on the Collider.
   - name: ClosestPointOnBounds
     summary: Identifies the nearest point on the Collider's bounds to a given location, focusing solely on outer limits.
-    description:
     is_static: false
     code_samples:
     parameters:

@@ -17,14 +17,12 @@ properties:
   - name: depth
     summary: |
       The 'depth' property refers to the third dimension of the 3D texture. It lets you know how many layers deep the texture is. For more details, check out the [Unity Texture3D.depth documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-depth.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: isReadable
     summary: |
       The 'isReadable' property tells you if the Texture3D data can be read or not. To know more about this property, refer to the [Unity Texture3D.isReadable documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D-isReadable.html).
-    description:
     is_static: false
     code_samples:
     type: boolean
@@ -32,7 +30,6 @@ methods:
   - name: Apply
     summary: |
       The 'Apply' method is used to apply all previous set pixel and color changes. You can specify whether to update mipmap levels and if the texture should become unreadable after applying changes. For a detailed explanation, see the [Unity Texture3D.Apply documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.Apply.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -50,7 +47,6 @@ methods:
   - name: SetPixel
     summary: |
       The 'SetPixel' method allows you to modify a pixel color at the specified position in the texture. It takes the position coordinates and new color as parameters. For more information, consult the [Unity Texture3D.SetPixel documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.SetPixel.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -76,7 +72,6 @@ methods:
   - name: GetPixel
     summary: |
       The 'GetPixel' method retrieves the color of a specific pixel at the provided location within the texture. More details can be found in the [Unity Texture3D.GetPixel documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixel.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -98,7 +93,6 @@ methods:
   - name: GetPixelBilinear
     summary: |
       The 'GetPixelBilinear' method fetches the color of a pixel using bilinear interpolation from the coordinates provided. This can give smoother results when fetching colors from textures. Refer to the [Unity Texture3D.GetPixelBilinear documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixelBilinear.html) for a comprehensive understanding.
-    description:
     is_static: false
     code_samples:
     parameters:

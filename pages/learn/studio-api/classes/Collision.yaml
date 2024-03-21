@@ -8,49 +8,41 @@ constructors:
 properties:
   - name: impulse
     summary: Indicates the total impulse applied to simulate the collision, useful for measuring collision impact.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: relativeVelocity
     summary: Provides the speed difference at the moment of collision, aiding in speed-based logic.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rigidbody
     summary: References the Rigidbody of the collided object, enabling direct manipulation post-collision.
-    description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
   - name: body
     summary: Similar to 'rigidbody', it references the body involved in the collision for adjustments or analysis.
-    description:
     is_static: false
     code_samples:
     type: Class.Component
   - name: collider
     summary: Points to the Collider component of the object hit, crucial for accessing collision properties.
-    description:
     is_static: false
     code_samples:
     type: Class.Collider
   - name: transform
     summary: Accesses the Transform of the collided object, offering positional and rotational control.
-    description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: gameObject
     summary: Grants access to the GameObject that was part of the collision, enabling game logic application.
-    description:
     is_static: false
     code_samples:
     type: Class.GameObject
   - name: contactCount
     summary: Reveals the number of contact points in the collision, informative for collision scope assessment.
-    description:
     is_static: false
     code_samples:
     type: number

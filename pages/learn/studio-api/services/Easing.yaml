@@ -11,7 +11,6 @@ methods:
   - name: Quadratic
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -25,7 +24,6 @@ methods:
   - name: Cubic
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -39,7 +37,6 @@ methods:
   - name: Back
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -57,7 +54,6 @@ methods:
   - name: Circle
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -71,7 +67,6 @@ methods:
   - name: Exponential
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -89,7 +84,6 @@ methods:
   - name: Sine
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -103,7 +97,6 @@ methods:
   - name: CubicBezier
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -133,7 +126,6 @@ methods:
   - name: Bounce
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -155,7 +147,6 @@ methods:
   - name: Elastic
     summary: |
 
-    description:
     is_static: true
     code_samples:
     parameters:

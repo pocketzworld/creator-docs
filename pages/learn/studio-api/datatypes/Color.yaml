@@ -12,7 +12,6 @@ constructors:
   - name: new
     summary: |
       Creates a new Color object with the provided red, green, blue, and optional alpha values. These values range from 0 to 1, where 0 represents no color and 1 represents full intensity of the color.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -35,133 +34,114 @@ properties:
   - name: grayscale
     summary: |
       The grayscale value of the color based on the intensities of the red, green, and blue components.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: linear
     summary: |
       The linear (gamma space) equivalent of this color object. Game graphics are usually rendered in a color space known as gamma space, but many computations are done in linear space, thus this property can be useful when such conversions are necessary.
-    description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: gamma
     summary: |
       The gamma space equivalent of this color object. When the computations are done in linear space, this conversion can be useful to switch back to Gamma space for rendering.
-    description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: maxColorComponent
     summary: |
       The maximum RGB component in the color. It can be useful when you want to identify the dominant color component.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: r
     summary: |
       Access or change the red component value of the color.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: g
     summary: |
       Access or change the green component value of the color.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: b
     summary: |
       Access or change the blue component value of the color.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: a
     summary: |
       Access or change the alpha (transparency) component of the color where '1' is fully opaque and '0' is fully transparent.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: red
     summary: |
       Predefined Color object with red component set to maximum and all other components set to zero. It's a static property, accessible directly from the class.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: green
     summary: |
       Predefined color object with green component at maximum while red, blue, and alpha components at zero. As a static property, it can be accessed directly from the class.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: blue
     summary: |
       Predefined color object with blue component set to maximum and all other components set to zero. One major use of this property can be for quick access to the pure blue color.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: white
     summary: |
       Predefined color object with all components set to maximum, producing white color. It is a static property accessible directly from the class.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: black
     summary: |
       Predefined black color object with all color components set to zero. As a static property, it can be accessed directly from the class.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: yellow
     summary: |
       Predefined yellow color object, offering a quick way to use yellow in your game. It is a static property, accessible directly from the class.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: cyan
     summary: |
       Predefined cyan color object. It provides a quick and convenient way to use cyan in your game.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: magenta
     summary: |
       Predefined magenta color object. It allows quick access to the magenta color.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: gray
     summary: |
       Predefined gray color object, allowing for quick utilization of gray in a game scene or interface. As a static property, it's accessible directly from the class.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: grey
     summary: |
       Predefined grey color object. As a static property, it can be accessed directly from the class. This makes it convenient to use grey color quickly and easily.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
   - name: clear
     summary: |
       Predefined color object with all components set to zero, resulting in a fully transparent color. Quick access to a transparent color can provide utility in many situations.
-    description:
     is_static: true
     code_samples:
     type: DataType.Color
@@ -169,7 +149,6 @@ methods:
   - name: Lerp
     summary: |
       Calculates and returns a color that is a certain percentage (defined by the third parameter) between two other colors. This can be used to smoothly transition between two colors.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -191,7 +170,6 @@ methods:
   - name: LerpUnclamped
     summary: |
       Works similarly to 'Lerp', but without clamping the percentage (third parameter) between 0 and 1. This allows for extrapolation beyond the two original colors.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -213,7 +191,6 @@ methods:
   - name: HSVToRGB
     summary: |
       Convert a color from HSV (Hue, Saturation, Value) color model to RGB (Red, Green, Blue) model. This function can be quite useful whenever you're dealing with HSV colors and need to convert them for use in RGB format.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -236,7 +213,6 @@ math_operations:
   - operation: "=="
     summary: |
       Equality check between two Color objects. If all corresponding RGBA components are equal, the colors are considered equal.
-    description:
     type_a: Color
     type_b: Color
     return_type: boolean
@@ -244,7 +220,6 @@ math_operations:
   - operation: "/"
     summary: |
       Division operation either between two Color objects or a Color and a scalar (a single number). Each component of the color is divided separately.
-    description:
     type_a: Color
     type_b: number
     return_type: Color
@@ -252,7 +227,6 @@ math_operations:
   - operation: "*"
     summary: |
       Multiplies a Color and a scalar.
-    description:
     type_a: Color
     type_b: number
     return_type: Color
@@ -260,7 +234,6 @@ math_operations:
   - operation: "-"
     summary: |
       Subtracts two Color objects. Each component of the ensuing color is the result of the subtraction of the corresponding components of the minuend and subtrahend.
-    description:
     type_a: Color
     type_b: Color
     return_type: Color
@@ -268,7 +241,6 @@ math_operations:
   - operation: "+"
     summary: |
       Adds two Color objects. The resulting color comprises the sum of the corresponding components from the two colors being added.
-    description:
     type_a: Color
     type_b: Color
     return_type: Color

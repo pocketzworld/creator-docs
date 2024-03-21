@@ -11,7 +11,6 @@ constructors:
   - name: new
     summary: |
       Creates a new Matrix4x4 instance given four Vector4 inputs for each column of the matrix. It constructs a 4x4 matrix using four 4-dimensional vectors.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -38,168 +37,144 @@ properties:
   - name: rotation
     summary: |
       Quaternion that represents the rotation part of this matrix. Accessing this property can be particularly useful if you want to extract the rotation information of a Matrix4x4 instance.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: lossyScale
     summary: |
       Vector3 representing the scale of the matrix. If the matrix has a uniform scale (the same scale along all axes), 'lossyScale' will correctly report it. If the matrix has a non-uniform scale (different scales along different axes), 'lossyScale' will not accurately reflect it.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: isIdentity
     summary: |
       Boolean indicating whether the matrix is the identity matrix. The identity matrix is a special type of matrix that doesn't change any vector when we multiply that vector with it.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: determinant
     summary: |
       Determinant of the matrix. The determinant is a special number that encapsulates some properties of the matrix. It is used for solving systems of equations, in calculus, and more.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: inverse
     summary: |
       Inverse of the matrix, assuming it exists. An inverse matrix is a matrix that, when multiplied by the original matrix, yields the identity matrix.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: transpose
     summary: |
       Transpose of the matrix. The transpose of a matrix is obtained by swapping its rows with columns and vice versa.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: m00
     summary: |
       Element at the first row and first column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m10
     summary: |
       Element at the second row and first column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m20
     summary: |
       Element in the third row and first column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m30
     summary: |
       Element at the fourth row and first column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m01
     summary: |
       Element in the first row and second column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m11
     summary: |
       Element at the second row and second column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m21
     summary: |
       Element at the third row and second column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m31
     summary: |
       Element in the fourth row and second column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m02
     summary: |
       Element at the first row and third column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m12
     summary: |
       Element in the second row and third column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m22
     summary: |
       Element in the third row and third column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m32
     summary: |
       Element at the fourth row and third column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m03
     summary: |
       Element in the first row and fourth column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m13
     summary: |
       Element at the second row and fourth column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m23
     summary: |
       Element in the third row and fourth column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: m33
     summary: |
       Element at the fourth row and fourth column of the matrix.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: zero
     summary: |
       Matrix4x4 where all elements are set to zero. This essentially signifies a "null" transformation, meaning no change will take place on applying this matrix to a vector or a point.
-    description:
     is_static: true
     code_samples:
     type: DataType.Matrix4x4
   - name: identity
     summary: |
       Identity Matrix4x4. An identity matrix, when used to transform a point or a vector, leaves it unaltered, just like the number '1' in multiplication. It plays a crucial role in matrix operations and can be very useful for resetting transformations.
-    description:
     is_static: true
     code_samples:
     type: DataType.Matrix4x4
@@ -207,7 +182,6 @@ methods:
   - name: ValidTRS
     summary: |
       Checks if a matrix is a valid transformation matrix. It returns a boolean indicating whether the matrix holds valid translation, rotation, and scale values.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -217,7 +191,6 @@ methods:
   - name: SetTRS
     summary: |
       Sets the matrix to a transformation matrix, given a Vector3 for position, a Quaternion for rotation, and a Vector3 for scale. It's quick and convenient when you want to set up a transform from position, rotation and scale values.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -239,7 +212,6 @@ methods:
   - name: GetColumn
     summary: |
       Vector4 representing a specified column of the matrix. This can be helpful when you need to extract specific column information from a matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -253,7 +225,6 @@ methods:
   - name: GetRow
     summary: |
       Vector4 representing a specified row of the matrix. This can be useful when you need to extract certain row information from a matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -267,7 +238,6 @@ methods:
   - name: GetPosition
     summary: |
       Vector3 representing the position stored in the transformation matrix. This is particularly useful when wanting to extract the position component from a transformation matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -277,7 +247,6 @@ methods:
   - name: SetColumn
     summary: |
       Vector4 to a specified column of the matrix. This method comes in handy when you want to replace a specific column of a matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -295,7 +264,6 @@ methods:
   - name: SetRow
     summary: |
       Vector4 to a specified row of the matrix. You can use this method to replace a certain row of a matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -313,7 +281,6 @@ methods:
   - name: MultiplyPoint
     summary: |
       Multiplies a Matrix4x4 and a Vector3 together. It treats the input Vector3 as a point in 3D space - this means it also considers the translation stored in the matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -327,7 +294,6 @@ methods:
   - name: MultiplyPoint3x4
     summary: |
       Multiplies a Matrix4x4 and a Vector3 together. It treats the matrix as if it's a 3x4 matrix, and thus the result will not have perspective projection applied.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -341,7 +307,6 @@ methods:
   - name: MultiplyVector
     summary: |
       Multiplies a Matrix4x4 and a Vector3 together. It treats the input Vector3 as a direction rather than a point, meaning it will not consider the translation part of the matrix.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -355,7 +320,6 @@ methods:
   - name: TransformPlane
     summary: |
       [Unity's Matrix4x4.TransformPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.TransformPlane.html)
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -369,7 +333,6 @@ methods:
   - name: Determinant
     summary: |
       Determinant of a given Matrix4x4. The determinant of a matrix is a special scalar value that can be computed from its elements and can provide useful information about the matrix.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -383,7 +346,6 @@ methods:
   - name: TRS
     summary: |
       Creates a transformation matrix from translation, rotation, and scale. The 'TRS' stands for 'Translate, Rotate, Scale'. It returns a Matrix4x4 built from the given Vector3 of position, Quaternion of rotation and another Vector3 of scale.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -405,7 +367,6 @@ methods:
   - name: Inverse
     summary: |
       Computes the inverse of a given Matrix4x4. The inverse of a matrix is a matrix that, when multiplied with the original matrix, yields the identity matrix.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -419,7 +380,6 @@ methods:
   - name: Transpose
     summary: |
       Creates the transpose of a given Matrix4x4. The transpose of a matrix is a new matrix whose rows are the columns of the original matrix and whose columns are the original's rows.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -433,7 +393,6 @@ methods:
   - name: Ortho
     summary: |
       Creates an orthogonal projection matrix. The resulting matrix can be used to transform coordinates in 3D into a 2D projection. This is particularly useful in things like 2D games or interfaces.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -467,7 +426,6 @@ methods:
   - name: Perspective
     summary: |
       Creates a perspective projection matrix from field of view, aspect ratio, and near and far clipping planes. The resulting matrix can be used to transform 3D coordinates into a 2D perspective.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -493,7 +451,6 @@ methods:
   - name: LookAt
     summary: |
       Creates a viewing matrix aimed at a target with a defined up direction. This method can be useful in a variety of situations, like setting the view matrix of a camera.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -515,7 +472,6 @@ methods:
   - name: Frustum
     summary: |
       Creates a perspective projection matrix that represents a view frustum. A frustum is a kind of pyramid with its top cut off. It is typically what a camera in 3D space sees with certain field of view and near and far clipping planes.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -549,7 +505,6 @@ methods:
   - name: Scale
     summary: |
       Creates a scaling matrix from a given Vector3. The resulting matrix can be used to scale an object in 3D space by the specified vector.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -563,7 +518,6 @@ methods:
   - name: Translate
     summary: |
       Creates a translation matrix from a given Vector3. It can be used to move an object in 3D space by a specified vector.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -577,7 +531,6 @@ methods:
   - name: Rotate
     summary: |
       Creates a rotation matrix from a Quaternion. The resulting matrix can be used to rotate an object in 3D space by the specified Quaternion.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -592,7 +545,6 @@ math_operations:
   - operation: "=="
     summary: |
       Checks if two Matrix4x4 matrices are equal, element-wise. Two matrices are considered equal if all their corresponding elements are equal.
-    description:
     type_a: Matrix4x4
     type_b: Matrix4x4
     return_type: boolean

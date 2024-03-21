@@ -11,21 +11,18 @@ properties:
   - name: PropertyCount
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: number
   - name: RunsOnServer
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: FullName
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: string

@@ -9,7 +9,6 @@ constructors:
   - name: new
     summary: |
       Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -28,14 +27,12 @@ properties:
   - name: origin
     summary: |
       Represents the starting point of the ray in 3D space.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: direction
     summary: |
       Depicts the path along which the ray extends in 3D space.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
@@ -43,7 +40,6 @@ methods:
   - name: GetPoint
     summary: |
       Retrieves a point along the ray at a specified distance from the origin.
-    description:
     is_static: false
     code_samples:
     parameters:

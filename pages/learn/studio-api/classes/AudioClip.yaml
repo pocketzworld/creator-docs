@@ -9,50 +9,42 @@ constructors:
 properties:
   - name: length
     summary: Returns the clip's duration in seconds, akin to a song's length.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: samples
     summary: Refers to the total number of audio samples within the clip.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: channels
     summary: Represents the number of audio channels, such as 1 for mono or 2 for stereo.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: frequency
     summary: Denotes the sample rate of the clip in kHz, indicating the samples per second.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: preloadAudioData
     summary: Controls whether the audio data should be preloaded upon clip asset loading.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: ambisonic
     summary: Indicates if the clip is ambisonic, providing 3D audio capabilities.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: loadInBackground
     summary: Specifies if the clip should load in the background, allowing gameplay to continue.
-    description:
     is_static: false
     code_samples:
     type: boolean
 methods:
   - name: LoadAudioData
     summary: Initiates loading of the clip's audio data, particularly when 'preloadAudioData' is false.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -61,7 +53,6 @@ methods:
         summary: True if data loading starts successfully.
   - name: UnloadAudioData
     summary: Unloads the clip's audio data from memory, aiding in efficient memory usage.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -70,7 +61,6 @@ methods:
         summary: True if data unloading begins successfully.
   - name: Create
     summary: Generates a new AudioClip with specified parameters, optionally streaming from disk.
-    description:
     is_static: true
     code_samples:
     parameters:

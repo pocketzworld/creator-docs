@@ -9,25 +9,21 @@ constructors:
 properties:
   - name: center
     summary: Defines the center position of the CapsuleCollider relative to the GameObject, adjustable to move the Collider from the GameObject's center.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: radius
     summary: Controls the size of the CapsuleCollider by adjusting its radius, allowing expansion or contraction.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: height
     summary: Adjusts the vertical dimension of the CapsuleCollider, affecting its height.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: direction
     summary: Sets the orientation axis of the Collider's height, with values "0" for X-axis, "1" for Y-axis, and "2" for Z-axis.
-    description:
     is_static: false
     code_samples:
     type: number

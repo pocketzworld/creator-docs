@@ -7,7 +7,6 @@ inherits:
 constructors:
   - name: new
     summary: Creates a new Vector4 instance with specified 'x', 'y', 'z', and 'w' components, useful for RGBA color representation or spatial coordinates.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -33,80 +32,67 @@ constructors:
 properties:
   - name: normalized
     summary: Provides a normalized version of the Vector4, with a length of 1, useful for direction-only applications.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector4
   - name: magnitude
     summary: Provides the length of the Vector4, useful for distance calculations or scaling vectors.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
     summary: Returns the square of the magnitude of the Vector4, a performance-friendly alternative for length comparisons.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: x
     summary: Accesses the 'x' component of the Vector4, representing different dimensions or the 'Red' component in RGBA.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: Accesses the 'y' component of the Vector4, representing different dimensions or the 'Green' component in RGBA.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: z
     summary: Accesses the 'z' component of the Vector4, representing different dimensions or the 'Blue' component in RGBA.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: w
     summary: Accesses the 'w' component of the Vector4, representing different dimensions or the 'Alpha' component in RGBA.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: zero
     summary: Represents a Vector4 with all components set to zero.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector4
   - name: one
     summary: Represents a Vector4 with all components set to one, useful for certain mathematical operations.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector4
   - name: positiveInfinity
     summary: Represents a Vector4 with all components set to positive infinity, useful for setting maximum limits.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector4
   - name: negativeInfinity
     summary: Represents a Vector4 with all components set to negative infinity, useful for setting minimum limits.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector4
   - name: kEpsilon
     summary: Represents a tiny positive number close to zero, used to handle calculations related to precision.
-    description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: Set
     summary: Sets the 'x', 'y', 'z', and 'w' components of the Vector4, enhancing code readability and efficiency.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -131,7 +117,6 @@ methods:
         summary:
   - name: Scale
     summary: Scales a Vector4 by another Vector4's components, useful for dimension or shape scaling.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -144,7 +129,6 @@ methods:
         summary:
   - name: Normalize
     summary: Transforms the Vector4 into a vector of same direction but with length 1, ideal for direction-only uses.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -153,7 +137,6 @@ methods:
         summary:
   - name: SqrMagnitude
     summary: Provides the square of the magnitude of the Vector4, an efficient method for length comparisons.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -162,7 +145,6 @@ methods:
         summary: Returns the square of the magnitude.
   - name: Lerp
     summary: Performs Linear Interpolation between two Vector4's based on a parameter 't', useful for smooth transitions.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -183,7 +165,6 @@ methods:
         summary: Returns an interpolated Vector4.
   - name: LerpUnclamped
     summary: Similar to 'Lerp' but without clamping the 't' parameter, offering more freedom in interpolation.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -204,7 +185,6 @@ methods:
         summary: Returns an unclamped interpolated Vector4.
   - name: MoveTowards
     summary: Moves a Vector4 'current' towards 'target', limited by 'maxDistanceDelta', useful for smooth object movement.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -225,7 +205,6 @@ methods:
         summary: Returns a Vector4 closer to the target.
   - name: Scale
     summary: Multiplies two Vector4's component-wise, useful for component-wise data manipulation.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -242,7 +221,6 @@ methods:
         summary: Returns a new Vector4 from component-wise multiplication.
   - name: Normalize
     summary: Normalizes a Vector4 and returns a new Vector4 with length 1, ideal for direction-only vectors.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -255,7 +233,6 @@ methods:
         summary: Returns a normalized Vector4.
   - name: Dot
     summary: Computes the dot product of two Vector4's, reflecting their angular relationship.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -272,7 +249,6 @@ methods:
         summary: Returns the dot product.
   - name: Project
     summary: Projects a Vector4 onto another Vector4, useful for finding the nearest point on a defined line.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -289,7 +265,6 @@ methods:
         summary: Returns the projection of 'a' onto 'b'.
   - name: Distance
     summary: Computes the distance between two Vector4's, useful for object spacing or collision detection.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -306,7 +281,6 @@ methods:
         summary: Returns the distance between the two Vector4's.
   - name: Magnitude
     summary: Calculates the length of the Vector4, useful for finding the distance it spans in 4D space.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -319,7 +293,6 @@ methods:
         summary: Returns the magnitude of the Vector4.
   - name: Min
     summary: Returns a Vector4 with the smallest components of two Vector4's, useful for bounding box operations.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -336,7 +309,6 @@ methods:
         summary: Returns a Vector4 with the smallest components.
   - name: Max
     summary: Returns a Vector4 with the largest components of two Vector4's, useful for limiting operations.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -353,7 +325,6 @@ methods:
         summary: Returns a Vector4 with the largest components.
   - name: SqrMagnitude
     summary: Gives the square of the magnitude of a Vector4, an efficient comparison method that avoids square root calculations.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -367,42 +338,36 @@ methods:
 math_operations:
   - operation: "=="
     summary: Checks if two Vector4's are equal by comparing their components.
-    description:
     type_a: Vector4
     type_b: Vector4
     return_type: boolean
     code_samples:
   - operation: "/"
     summary: Divides each component of a Vector4 by a number, useful for scaling down vector components.
-    description:
     type_a: Vector4
     type_b: number
     return_type: Vector4
     code_samples:
   - operation: "*"
     summary: Multiplies each component of a Vector4 by a number, useful for uniform scaling of vector components.
-    description:
     type_a: number
     type_b: Vector4
     return_type: Vector4
     code_samples:
   - operation: "-"
     summary: Negates each component of a Vector4, useful for reversing directions or flipping normals.
-    description:
     type_a: Vector4
     type_b:
     return_type: Vector4
     code_samples:
   - operation: "-"
     summary: Subtracts one Vector4 from another component-wise, useful for finding relative differences.
-    description:
     type_a: Vector4
     type_b: Vector4
     return_type: Vector4
     code_samples:
   - operation: "+"
     summary: Adds two Vector4's component-wise, resulting in a new Vector4.
-    description:
     type_a: Vector4
     type_b: Vector4
     return_type: Vector4

@@ -5,7 +5,6 @@ constructors:
 methods:
   - name: Disconnect
     summary: Terminates the event connection, halting communication between the event trigger and its responder.
-    description:
     is_static: false
     parameters:
     returns:

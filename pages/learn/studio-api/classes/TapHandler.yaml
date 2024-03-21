@@ -11,7 +11,6 @@ properties:
   - name: Tapped
     summary: |
 
-    description:
     is_static: false
     code_samples: |
       ```lua
@@ -23,14 +22,12 @@ properties:
   - name: MoveTo
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: Distance
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: number
@@ -38,7 +35,6 @@ methods:
   - name: Perform
     summary: |
 
-    description:
     is_static: false
     code_samples:
     parameters:

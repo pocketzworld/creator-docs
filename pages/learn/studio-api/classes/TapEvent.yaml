@@ -10,14 +10,12 @@ properties:
   - name: Position
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: StartFrame
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: number

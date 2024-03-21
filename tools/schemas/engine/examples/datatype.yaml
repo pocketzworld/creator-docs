@@ -4,23 +4,19 @@ summary: |-
   Sample summary.
 description: |-
   Sample description.
-code_samples:
-  - sample1
 tags: []
 deprecation_message: ''
 constructors:
   - name: new
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     parameters:
       - name: pos
         type: Vector3
         default:
         summary: |-
           Sample summary.
-    code_samples: []
+    code_samples:
     tags: []
     deprecation_message: ''
 constants:
@@ -28,8 +24,6 @@ constants:
     type: undefined
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     code_samples:
     tags: []
     deprecation_message: ''
@@ -37,8 +31,6 @@ constants:
     type: undefined
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     code_samples:
     tags: ['Deprecated']
     deprecation_message: 'Use Constant1 instead.'
@@ -48,9 +40,7 @@ properties:
     type: undefined
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
-    code_samples: []
+    code_samples:
     tags: []
     deprecation_message: ''
 
@@ -58,8 +48,6 @@ methods:
   - name: Method1
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     parameters:
       - name: p1
         type: DataType
@@ -74,7 +62,7 @@ methods:
     returns:
       - type: string
         summary: Sample summary.
-    code_samples: []
+    code_samples:
     tags: []
     deprecation_message: ''
 
@@ -82,8 +70,6 @@ functions:
   - name: Function1
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     parameters:
       - name: p1
         type: DataType
@@ -106,11 +92,9 @@ math_operations:
   - operation: '*'
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     type_a: DataType
     type_b: DataType
     return_type: DataType
-    code_samples: []
+    code_samples:
     tags: []
     deprecation_message: ''

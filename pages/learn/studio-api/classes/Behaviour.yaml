@@ -9,13 +9,11 @@ constructors:
 properties:
   - name: enabled
     summary: Permits runtime toggling of a Behaviour's active state, affecting scripts, physics, renderers, etc.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: isActiveAndEnabled
     summary: Indicates whether the Behaviour is active, considering both its own state and the GameObject's activity.
-    description:
     is_static: false
     code_samples:
     type: boolean

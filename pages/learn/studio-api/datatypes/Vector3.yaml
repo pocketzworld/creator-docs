@@ -9,7 +9,6 @@ tags:
 constructors:
   - name: new
     summary: Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
-    description:
     is_static: true
     tags:
       - ServerAndClient
@@ -33,25 +32,21 @@ constructors:
 properties:
   - name: normalized
     summary: Returns a version of this Vector3 with a magnitude of one, maintaining its direction. Useful for unit direction vectors.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: magnitude
     summary: Provides the length of a Vector3, calculated as the Euclidean distance to (0,0,0), useful for distance calculations in 3D space.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
     summary: Returns the square of the magnitude, an alternative for performance-sensitive calculations where exact distance is not necessary.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: x
     summary: Represents the x-coordinate of the Vector3, allowing direct manipulation or reading of its x-component.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -59,7 +54,6 @@ properties:
     type: number
   - name: y
     summary: Corresponds to the y-coordinate of the Vector3, for manipulating or reading the y-component.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -67,7 +61,6 @@ properties:
     type: number
   - name: z
     summary: Represents the z-coordinate of the Vector3, used for direct manipulation or reading of the z-component.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -75,79 +68,66 @@ properties:
     type: number
   - name: zero
     summary: Generates a Vector3 with zero values for all coordinates, representing the origin in 3D space or indicating no motion or rotation.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: one
     summary: Generates a Vector3 object with all components set to 1, useful for pointing diagonally in 3D space.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: forward
     summary: Returns a Vector3 pointing towards the positive Z-axis, useful for designating a forward direction.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: back
     summary: Provides a Vector3 pointing towards the negative Z-axis, often used to designate a backward direction.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: up
     summary: Offers a Vector3 pointing upwards along the positive Y-axis, handy for upward movements or orientations.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: down
     summary: Represents a Vector3 pointing downwards along the negative Y-axis, typically used for downward directions.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: left
     summary: Returns a Vector3 pointing in the negative X-axis direction, used to signify left direction in 3D space.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: right
     summary: Provides a Vector3 pointing towards the positive X-axis, recognized as the right direction in 3D space.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: positiveInfinity
     summary: Yields a Vector3 with all components set to positive infinity, useful for representing very large values.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: negativeInfinity
     summary: Generates a Vector3 with all components set to negative infinity, representing the smallest possible values in 3D space.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: kEpsilon
     summary: Provides a very small positive number, used for comparisons to determine if Vector3 components are approximately zero, considering floating-point inaccuracies.
-    description:
     is_static: true
     code_samples:
   - name: kEpsilonNormalSqrt
     summary: A small positive number used in square root calculations, representing a negligible threshold value for comparing Vector3 magnitudes.
-    description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: Set
     summary: Changes the x, y, and z values of an existing Vector3 object, useful for simultaneous updates to all three components.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -168,7 +148,6 @@ methods:
         summary:
   - name: Scale
     summary: Multiplies each component of the Vector3 by the corresponding components of another Vector3, used to alter the scale without changing its direction.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -181,7 +160,6 @@ methods:
         summary:
   - name: Normalize
     summary: Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -190,7 +168,6 @@ methods:
         summary:
   - name: Slerp
     summary: Creates a smooth transition between two Vector3 points on a sphere's surface, ideal for smooth transitions in rotations or positions.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -211,7 +188,6 @@ methods:
         summary: A Vector3 point along the shortest path between 'a' and 'b'.
   - name: SlerpUnclamped
     summary: Similar to 'Slerp' but allows the 't' value to exceed the 0 to 1 range, enabling extrapolation beyond the original points.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -232,7 +208,6 @@ methods:
         summary: A new Vector3 point potentially extrapolated beyond 'b'.
   - name: RotateTowards
     summary: Gradually rotates a Vector3 'current' to align with a 'target' Vector3, with specified maximum rotation and magnitude change limits.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -257,7 +232,6 @@ methods:
         summary: The Vector3 after rotating towards the target.
   - name: Lerp
     summary: Performs linear interpolation between two Vector3s, transitioning from 'a' to 'b' based on the 't' ratio.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -278,7 +252,6 @@ methods:
         summary: A new Vector3 point interpolated between 'a' and 'b'.
   - name: LerpUnclamped
     summary: Similar to 'Lerp', this method performs linear interpolation between two points, but allows 't' to exceed the 0 to 1 range, enabling extrapolation.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -299,7 +272,6 @@ methods:
         summary: A new Vector3 point interpolated (or extrapolated) between 'a' and 'b'.
   - name: MoveTowards
     summary: Moves a Vector3 ('current') incrementally towards a target Vector3 ('target') at a specified 'maxDistanceDelta'.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -320,7 +292,6 @@ methods:
         summary: A Vector3 moved towards the target.
   - name: Scale
     summary: Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -337,7 +308,6 @@ methods:
         summary: The resulting Vector3 after scaling.
   - name: Cross
     summary: Calculates the cross product of two Vector3 instances, resulting in a Vector3 perpendicular to both, used for finding normals or rotation axes.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -354,7 +324,6 @@ methods:
         summary: The cross product of the two Vector3s.
   - name: Reflect
     summary: Reflects a Vector3 off a surface with a specified normal, useful for simulating reflections or ricochets.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -371,7 +340,6 @@ methods:
         summary: The reflected Vector3.
   - name: Normalize
     summary: Normalizes a Vector3, returning a new Vector3 with the same direction but a magnitude of 1, useful for direction without magnitude concern.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -384,7 +352,6 @@ methods:
         summary: A normalized version of the input Vector3.
   - name: Dot
     summary: Calculates the Dot Product of two Vector3s, useful for determining directional alignment or the angle between vectors.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -401,7 +368,6 @@ methods:
         summary: The dot product of the two Vector3s.
   - name: Project
     summary: Projects a Vector3 onto another, useful for finding the component of one vector in the direction of another.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -418,7 +384,6 @@ methods:
         summary: The projection of the first Vector3 onto the second.
   - name: ProjectOnPlane
     summary: Projects a Vector3 onto a plane defined by a normal orthogonal Vector3, useful for aligning objects to surfaces.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -435,7 +400,6 @@ methods:
         summary: The Vector3 after being projected onto a plane.
   - name: Angle
     summary: Calculates the angle in degrees between two Vector3s, useful for determining the required rotation to align one Vector3 with another.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -452,7 +416,6 @@ methods:
         summary: The angle in degrees between the two Vector3s.
   - name: SignedAngle
     summary: Calculates the angle between two Vector3s with a sign indicating rotation direction around a given axis.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -473,7 +436,6 @@ methods:
         summary: The signed angle in degrees between the two Vector3s.
   - name: Distance
     summary: Calculates the distance between two Vector3 points, typically used to determine how far apart two objects are in 3D space.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -490,7 +452,6 @@ methods:
         summary: The distance between the two Vector3 points.
   - name: ClampMagnitude
     summary: Limits the magnitude of a Vector3 to a specified maximum, useful for constraining movement or other vector magnitudes.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -507,7 +468,6 @@ methods:
         summary: The Vector3 with its magnitude clamped.
   - name: Magnitude
     summary: Returns the magnitude (length) of a Vector3, useful for distance calculations from the origin.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -520,7 +480,6 @@ methods:
         summary: The magnitude of the Vector3.
   - name: SqrMagnitude
     summary: Calculates the square of the magnitude of a Vector3, often used for performance reasons in relative length comparisons.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -533,7 +492,6 @@ methods:
         summary: The square of the magnitude of the Vector3.
   - name: Min
     summary: Returns a Vector3 composed of the smallest x, y, and z components from two given Vector3s, useful for bounding calculations.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -550,7 +508,6 @@ methods:
         summary: A Vector3 made up of the smallest components from the two input Vector3s.
   - name: Max
     summary: Produces a Vector3 from the largest x, y, and z components of two given Vector3s, useful for defining bounds or extents.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -568,7 +525,6 @@ methods:
 math_operations:
   - operation: "=="
     summary: Checks for approximate equality between two Vector3s, considering the precision limitations of floating-point representation.
-    description:
     type_a: Vector3
     type_b: Vector3
     return_type: boolean

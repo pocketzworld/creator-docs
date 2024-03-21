@@ -9,7 +9,6 @@ constructors:
   - name: new
     summary: |
       Creates a new Bounds object by providing a central point and the size of the box.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -28,35 +27,30 @@ properties:
   - name: center
     summary: |
       Vector3 value that signifies the central point of the bounding box.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: size
     summary: |
       The size of the bounding box for each dimension - how wide, tall, and deep it is.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: extents
     summary: |
       Similar to size but it represents half the size of the bounding box in each dimension. This can be used when you need to measure from the center of the bounding box.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: min
     summary: |
       The minimum value (lower-left-front corner) of the bounding box coordinates.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: max
     summary: |
       The maximal value (upper-right-back corner) of the bounding box coordinates.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
@@ -64,7 +58,6 @@ methods:
   - name: SetMinMax
     summary: |
       The minimum and maximum corners of the bounding box.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -82,7 +75,6 @@ methods:
   - name: Encapsulate
     summary: |
       Grows the Bounds to include a point or bounds. You would typically use this when you have a set of points and you want a bounding box that encloses all these points.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -96,7 +88,6 @@ methods:
   - name: Expand
     summary: |
       Increases the size of the bounding box by the given amount (in both directions).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -110,7 +101,6 @@ methods:
   - name: Intersects
     summary: |
       Checks whether the current bounding box intersects with another bounding box. You can use this to determine if two objects are likely to be colliding.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -124,7 +114,6 @@ methods:
   - name: IntersectRay
     summary: |
       Determines if a specified Ray intersects the bounds. This can prove vital in various game scenarios for interaction detection such as determining if a projectile is in range of an object or if a click or tap in screen space intersects a game object. It evaluates the intersection and returns true if the Ray intersects with the bounds, otherwise it returns false.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -138,7 +127,6 @@ methods:
   - name: Contains
     summary: |
       Check whether a specific point is within the current bounding box.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -152,7 +140,6 @@ methods:
   - name: SqrDistance
     summary: |
       Returns the squared distance from a point to the bounding box. Squared distances can be useful for comparison without needing the computationally expensive square root operation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -166,7 +153,6 @@ methods:
   - name: ClosestPoint
     summary: |
       The closest point on or inside the bounding box to a given point. This can be helpful in figuring out how close an object is to entering a bounding box.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -181,7 +167,6 @@ math_operations:
   - operation: "=="
     summary: |
       Checks if two bounding boxes are equal in terms of their center and extents.
-    description:
     type_a: Bounds
     type_b: Bounds
     return_type: boolean

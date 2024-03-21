@@ -10,84 +10,72 @@ properties:
   - name: collider
     summary: |
       Contains the collider hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: Class.Collider
   - name: colliderInstanceID
     summary: |
       Holds the unique identifier for the collider hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: point
     summary: |
       The point in world space where the raycast hit the collider.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: normal
     summary: |
       Gives the normal of the surface hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: barycentricCoordinate
     summary: |
       Provides the barycentric coordinates of the hit point on the mesh.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: distance
     summary: |
       Refers to the distance from the ray's origin to the hit point.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: triangleIndex
     summary: |
       Holds the index of the triangle hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: textureCoord
     summary: |
       Provides the coordinates of the texture hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: textureCoord2
     summary: |
       Provides the coordinates of the second texture hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: transform
     summary: |
       Provides the Transform of the object that was hit.
-    description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: rigidbody
     summary: |
       Offers access to the Rigidbody of the hit object, if it has one.
-    description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
   - name: lightmapCoord
     summary: |
       Provides the coordinates of the lightmap hit by the ray.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2

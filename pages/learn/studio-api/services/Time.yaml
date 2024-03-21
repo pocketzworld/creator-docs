@@ -13,7 +13,6 @@ properties:
   - name: deltaTime
     summary: |
       'deltaTime' represents the time in seconds it took to complete the last frame. It's useful for smooth object motion or time-related calculations, reflecting real-world time more than game time.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -27,7 +26,6 @@ properties:
   - name: fixedDeltaTime
     summary: |
       'fixedDeltaTime' signifies the time in seconds between physics updates (FixedUpdate calls). It's consistent between frames, crucial for physics calculations requiring stable performance.
-    description:
     is_static: false
     code_samples: |
       ```lua

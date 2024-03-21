@@ -10,49 +10,42 @@ properties:
   - name: width
     summary: |
       Retrieves the current width of the game screen in pixels.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: height
     summary: |
       Retrieves the current height of the game screen in pixels.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: dpi
     summary: |
       Provides the current screen resolution in dots per inch.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: fullScreen
     summary: |
       Controls whether the game is displayed in fullscreen mode.
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: safeArea
     summary: |
       Gives a rectangle excluding certain areas of the screen like notches or taskbars.
-    description:
     is_static: true
     code_samples:
     type: DataType.Rect
   - name: sleepTimeout
     summary: |
       Sets a timeout after which the device's screen will go to sleep.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: brightness
     summary: |
       Adjusts the brightness of the game screen.
-    description:
     is_static: true
     code_samples:
     type: number

@@ -8,50 +8,42 @@ constructors:
 properties:
   - name: isPlaying
     summary: Indicates if the tween is currently playing.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: isPaused
     summary: Indicates if the tween is currently paused.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: isValid
     summary: Indicates if the tween is valid and can be used.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: time
     summary: Current time of the tween.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: normalizedTime
     summary: Current time of the tween normalized to the range [0, 1].
-    description:
     is_static: false
     code_samples:
     type: number
   - name: duration
     summary: Total duration of the tween.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: IsAnyTweenAnimating
     summary: Checks if any tween is currently animating.
-    description:
     is_static: true
     code_samples:
     type: boolean
 methods:
   - name: Play
     summary: Plays the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -60,7 +52,6 @@ methods:
         summary:
   - name: Stop
     summary: Stops the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -73,7 +64,6 @@ methods:
         summary:
   - name: Pause
     summary: Pauses the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -82,7 +72,6 @@ methods:
         summary:
   - name: Update
     summary: Updates the tween animation for the given delta time.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -95,7 +84,6 @@ methods:
         summary:
   - name: Priority
     summary: Sets the priority of the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -108,7 +96,6 @@ methods:
         summary:
   - name: Delay
     summary: Delays the start of the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -121,7 +108,6 @@ methods:
         summary:
   - name: AddDelay
     summary: Adds additional delay to the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -134,7 +120,6 @@ methods:
         summary:
   - name: Duration
     summary: Sets the duration of the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -147,7 +132,6 @@ methods:
         summary:
   - name: Id
     summary: Sets the ID of the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -160,7 +144,6 @@ methods:
         summary:
   - name: DestroyOnStop
     summary: Sets whether the tween should be destroyed when stopped.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -173,7 +156,6 @@ methods:
         summary:
   - name: DeactivateOnStop
     summary: Sets whether the tween should be deactivated when stopped.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -186,7 +168,6 @@ methods:
         summary:
   - name: DisableOnStop
     summary: Sets whether the tween should be disabled when stopped.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -199,7 +180,6 @@ methods:
         summary:
   - name: AutoStop
     summary: Sets whether the tween should automatically stop when finished.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -212,7 +192,6 @@ methods:
         summary:
   - name: PingPong
     summary: Creates a ping-pong effect for the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -221,7 +200,6 @@ methods:
         summary:
   - name: From
     summary: Starts the tween animation from a specified point.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -230,7 +208,6 @@ methods:
         summary:
   - name: Loop
     summary: Loops the tween animation a specified number of times.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -243,7 +220,6 @@ methods:
         summary:
   - name: UnscaledTime
     summary: Sets whether the tween should use unscaled time for its animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -256,7 +232,6 @@ methods:
         summary:
   - name: Element
     summary: Sets the element associated with the tween animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -269,7 +244,6 @@ methods:
         summary:
   - name: EaseInQuadratic
     summary: Applies an ease-in quadratic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -278,7 +252,6 @@ methods:
         summary:
   - name: EaseOutQuadratic
     summary: Applies an ease-out quadratic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -287,7 +260,6 @@ methods:
         summary:
   - name: EaseInOutQuadratic
     summary: Applies an ease-in-out quadratic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -296,7 +268,6 @@ methods:
         summary:
   - name: EaseInCubic
     summary: Applies an ease-in cubic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -305,7 +276,6 @@ methods:
         summary:
   - name: EaseOutCubic
     summary: Applies an ease-out cubic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -314,7 +284,6 @@ methods:
         summary:
   - name: EaseInOutCubic
     summary: Applies an ease-in-out cubic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -323,7 +292,6 @@ methods:
         summary:
   - name: EaseInBack
     summary: Applies an ease-in back easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -336,7 +304,6 @@ methods:
         summary:
   - name: EaseOutBack
     summary: Applies an ease-out back easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -349,7 +316,6 @@ methods:
         summary:
   - name: EaseInOutBack
     summary: Applies an ease-in-out back easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -362,7 +328,6 @@ methods:
         summary:
   - name: EaseInElastic
     summary: Applies an ease-in elastic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -379,7 +344,6 @@ methods:
         summary:
   - name: EaseOutElastic
     summary: Applies an ease-out elastic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -396,7 +360,6 @@ methods:
         summary:
   - name: EaseInOutElastic
     summary: Applies an ease-in-out elastic easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -413,7 +376,6 @@ methods:
         summary:
   - name: EaseInBounce
     summary: Applies an ease-in bounce easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -430,7 +392,6 @@ methods:
         summary:
   - name: EaseOutBounce
     summary: Applies an ease-out bounce easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -447,7 +408,6 @@ methods:
         summary:
   - name: EaseInOutBounce
     summary: Applies an ease-in-out bounce easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -464,7 +424,6 @@ methods:
         summary:
   - name: EaseInSine
     summary: Applies an ease-in sine easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -473,7 +432,6 @@ methods:
         summary:
   - name: EaseOutSine
     summary: Applies an ease-out sine easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -482,7 +440,6 @@ methods:
         summary:
   - name: EaseInOutSine
     summary: Applies an ease-in-out sine easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -491,7 +448,6 @@ methods:
         summary:
   - name: EaseInCircle
     summary: Applies an ease-in circular easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -500,7 +456,6 @@ methods:
         summary:
   - name: EaseOutCircle
     summary: Applies an ease-out circular easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -509,7 +464,6 @@ methods:
         summary:
   - name: EaseInOutCircle
     summary: Applies an ease-in-out circular easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -518,7 +472,6 @@ methods:
         summary:
   - name: EaseInExponential
     summary: Applies an ease-in exponential easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -531,7 +484,6 @@ methods:
         summary:
   - name: EaseOutExponential
     summary: Applies an ease-out exponential easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -544,7 +496,6 @@ methods:
         summary:
   - name: EaseInOutExponential
     summary: Applies an ease-in-out exponential easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -557,7 +508,6 @@ methods:
         summary:
   - name: EaseInCubicBezier
     summary: Applies an ease-in cubic Bezier easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -582,7 +532,6 @@ methods:
         summary:
   - name: EaseOutCubicBezier
     summary: Applies an ease-out cubic Bezier easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -607,7 +556,6 @@ methods:
         summary:
   - name: EaseInOutCubicBezier
     summary: Applies an ease-in-out cubic Bezier easing function to the tween.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -632,7 +580,6 @@ methods:
         summary:
   - name: Reset
     summary: Resets all tweens.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -641,7 +588,6 @@ methods:
         summary:
   - name: StopAll
     summary: Stops all tweens.
-    description:
     is_static: true
     code_samples:
     parameters:

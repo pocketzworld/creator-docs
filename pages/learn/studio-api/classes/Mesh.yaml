@@ -14,7 +14,6 @@ constructors:
   - name: new
     summary: |
       The 'new' method is invoked to create a new instance of the Mesh class. Its main use is to generate a Mesh object which can then be filled with custom data and applied to a GameObject. More details in [Unity's Mesh.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-ctor.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -25,56 +24,48 @@ properties:
   - name: vertexBufferCount
     summary: |
       The 'vertexBufferCount' property holds the count of vertex buffers, which are containers for all vertex related data like positions, normals, UVs etc, in a Mesh object. More details about it are in [Unity's Mesh.vertexBufferCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexBufferCount.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: blendShapeCount
     summary: |
       The 'blendShapeCount' property keeps track of the number of blend shapes found within a Mesh object. Blend shapes allow for smooth transitions between different facial expressions or body positions. Refer to [Unity's Mesh.blendShapeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-blendShapeCount.html) for more details.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: bindposeCount
     summary: |
       The 'bindposeCount' property gives the count of bind poses, which are transformations determining how Meshes move with joints, in a Mesh object. To learn more about this property, check [Unity's Mesh.bindposeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-bindposeCount.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: isReadable
     summary: |
       The 'isReadable' property informs whether the Mesh data is available for reading by scripting. For instance, you may want this to be true if you're creating procedural Meshes. Learn how to use this property effectively in [Unity's Mesh.isReadable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-isReadable.html).
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: vertexCount
     summary: |
       The 'vertexCount' property allows you to retrieve the amount of vertices present in the Mesh object. It's helpful for debugging or when performing operations on every vertex. More info can be found in [Unity's Mesh.vertexCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexCount.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: subMeshCount
     summary: |
       The 'subMeshCount' property provides the number of submeshes in a Mesh object. Submeshes can be useful when you want to apply different materials to different parts of a Mesh. Visit [Unity's Mesh.subMeshCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-subMeshCount.html) for more about this property.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: bounds
     summary: |
       The 'bounds' property represents the axis-aligned bounding box of the Mesh in its local space (i.e., not affected by the transform). This can be useful for things like collision detection and visibility testing. Learn more from [Unity's Mesh.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-bounds.html).
-    description:
     is_static: false
     code_samples:
     type: DataType.Bounds
   - name: vertexAttributeCount
     summary: |
       The 'vertexAttributeCount' property gives the count of vertex attributes like positions, normals, tangents, colors, and texture coordinates in the Mesh. To know more about these, see [Unity's Mesh.vertexAttributeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh-vertexAttributeCount.html).
-    description:
     is_static: false
     code_samples:
     type: number
@@ -82,7 +73,6 @@ methods:
   - name: GetVertexBufferStride
     summary: |
       The 'GetVertexBufferStride' method retrieves the byte size of one vertex in a vertex buffer. Information like this can be useful for advanced manipulation of Graphics APIs. Learn more in [Unity's Mesh.GetVertexBufferStride Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetVertexBufferStride.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -96,7 +86,6 @@ methods:
   - name: ClearBlendShapes
     summary: |
       The 'ClearBlendShapes' method deletes all blend shapes from the Mesh object. This might be useful in cases where you need to redefine the blend shapes on an existing Mesh object. Visit [Unity's Mesh.ClearBlendShapes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.ClearBlendShapes.html) to learn more.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -106,7 +95,6 @@ methods:
   - name: GetBlendShapeName
     summary: |
       'GetBlendShapeName' is a method that retrieves the name of a blend shape based on its index. This could be useful when rearranging or altering blend shapes programmatically. Refer to [Unity's Mesh.GetBlendShapeName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeName.html) for more info.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -120,7 +108,6 @@ methods:
   - name: GetBlendShapeIndex
     summary: |
       'GetBlendShapeIndex' method fetches the index of a blend shape given its name. This is useful when you need to manipulate blend shapes but only know their names. [Unity's Mesh.GetBlendShapeIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeIndex.html) provides more details.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -134,7 +121,6 @@ methods:
   - name: GetBlendShapeFrameCount
     summary: |
       'GetBlendShapeFrameCount' retrieves the number of frames in a blend shape of a given index. BlendShape frames are points of transition in blend shape animation sequences. Learn how to use this method in [Unity's Mesh.GetBlendShapeFrameCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeFrameCount.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -148,7 +134,6 @@ methods:
   - name: GetBlendShapeFrameWeight
     summary: |
       'GetBlendShapeFrameWeight' method returns the weight of a specific frame given the indices of blend shape and frame. BlendShape weights determine the influence of a BlendShape in the final outcome. Refer to [Unity's Mesh.GetBlendShapeFrameWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBlendShapeFrameWeight.html) for more details.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -166,7 +151,6 @@ methods:
   - name: MarkModified
     summary: |
       The 'MarkModified' method explicitly marks the Mesh as modified, which can be used to trigger certain updates. This is used mainly to optimize drawing by helping Unity understand what needs to be redrawn. Learn more about it in [Unity's Mesh.MarkModified Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.MarkModified.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -176,7 +160,6 @@ methods:
   - name: GetUVDistributionMetric
     summary: |
       'GetUVDistributionMetric' is a method that provides a UV metric for the Mesh, which is a key consideration for texture mapping and related operations. [Find out more in this Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetUVDistributionMetric.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -190,7 +173,6 @@ methods:
   - name: GetIndexStart
     summary: |
       'GetIndexStart' is a method that returns the start index of a specific submesh. This is useful when looping through individual submeshes in a Mesh object. More information is available in [Unity's Mesh.GetIndexStart Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetIndexStart.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -204,7 +186,6 @@ methods:
   - name: GetIndexCount
     summary: |
       'GetIndexCount' gets the total number of indices in a specific submesh. This information can be helpful when altering the geometry of submeshes. See [Unity's Mesh.GetIndexCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetIndexCount.html) for additional insights.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -218,7 +199,6 @@ methods:
   - name: GetBaseVertex
     summary: |
       'GetBaseVertex' is a method that retrieves the base vertex of a specific submesh. This can be useful when you're manipulating vertices at a low level, for example, in some procedural generation algorithms. [Unity's Mesh.GetBaseVertex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetBaseVertex.html) provides more details.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -232,7 +212,6 @@ methods:
   - name: Clear
     summary: |
       'Clear' method removes all vertex and index data from the Mesh. It's useful for cleaning up Meshes or if you need to rebuild a Mesh from scratch. Learn how to use the Clear(keepVertexLayout) method effectively in [Unity's Mesh.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.Clear.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -246,7 +225,6 @@ methods:
   - name: RecalculateBounds
     summary: |
       The 'RecalculateBounds' method recalculates the bounding volume of the Mesh from the vertices. This is useful when modifications have been made to the vertex positions and the bounding volume needs to be updated. More can be found out in [Unity's Mesh.RecalculateBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateBounds.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -256,7 +234,6 @@ methods:
   - name: RecalculateNormals
     summary: |
       The 'RecalculateNormals' method recomputes the normals of the Mesh from the vertices and triangles. This is useful when changes are made to vertex positions and the normals need to correspond to the new shape. Find more details in [Unity's Mesh.RecalculateNormals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateNormals.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -266,7 +243,6 @@ methods:
   - name: RecalculateTangents
     summary: |
       'RecalculateTangents' is a method that recalculates the tangents of the Mesh, which are used in normal mapping and other techniques. It's most useful when changes have been made to the vertex positions or texture coordinates and the tangents need to be updated. More can be learned from [Unity's Mesh.RecalculateTangents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateTangents.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -276,7 +252,6 @@ methods:
   - name: RecalculateUVDistributionMetric
     summary: |
       The 'RecalculateUVDistributionMetric' method recalculates the UV distribution metric for a specified UV set. This helps bring uniformity to the UV mapping which prevents texture distortion. Learn more in [Unity's Mesh.RecalculateUVDistributionMetric Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateUVDistributionMetric.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -294,7 +269,6 @@ methods:
   - name: RecalculateUVDistributionMetrics
     summary: |
       The 'RecalculateUVDistributionMetrics' method recalculates UV distribution metrics. It improves texture quality by reducing distortions in the mapping from texture space to 3D. Learn about its usage in [Unity's Mesh.RecalculateUVDistributionMetrics Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.RecalculateUVDistributionMetrics.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -308,7 +282,6 @@ methods:
   - name: MarkDynamic
     summary: |
       The 'MarkDynamic' method marks the Mesh as dynamic, hinting the engine that this Mesh will be updated frequently. This speeds up certain operations but uses slightly more memory. To learn more, refer to [Unity's Mesh.MarkDynamic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.MarkDynamic.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -318,7 +291,6 @@ methods:
   - name: UploadMeshData
     summary: |
       'UploadMeshData' uploads Mesh data to the GPU, making it available for rendering. It's crucial when creating procedural Meshes that need to be drawn in the scene. To know more, see [Unity's Mesh.UploadMeshData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.UploadMeshData.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -332,7 +304,6 @@ methods:
   - name: Optimize
     summary: |
       The 'Optimize' method optimizes the Mesh for rendering according to its usage patterns. This includes operations like reordering vertices and triangles for better vertex cache utilization. Learn more from [Unity's Mesh.Optimize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.Optimize.html).
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -342,7 +313,6 @@ methods:
   - name: OptimizeIndexBuffers
     summary: |
       'OptimizeIndexBuffers' optimizes the index buffers of the Mesh. This reduces the size of the index buffer and speeds up rendering. Visit [Unity's Mesh.OptimizeIndexBuffers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.OptimizeIndexBuffers.html) to learn more about this method.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -352,7 +322,6 @@ methods:
   - name: OptimizeReorderVertexBuffer
     summary: |
       The 'OptimizeReorderVertexBuffer' method optimizes the vertex buffer of the Mesh. This improves memory usage and rendering performance. More information on how this method operates can be found in [Unity's Mesh.OptimizeReorderVertexBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.OptimizeReorderVertexBuffer.html).
-    description:
     is_static: false
     code_samples:
     parameters:

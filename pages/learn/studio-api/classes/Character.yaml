@@ -9,68 +9,57 @@ constructors:
 properties:
   - name: isMoving
     summary: Indicates whether the character is currently moving.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: distanceToDestination
     summary: Returns the distance from the character to its destination.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: destination
     summary: The target destination of the character in the game world.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: renderLayer
     summary: Specifies the rendering layer of the character for drawing order.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: renderPosition
     summary: The position of the character in the game world for rendering purposes.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: renderRotation
     summary: The rotation of the character in the game world for rendering purposes.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: renderScale
     summary: The scale of the character in the game world for rendering purposes.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: player
     summary: Reference to the player object that controls or owns the character.
-    description:
     is_static: false
     code_samples:
     type: Class.Player
   - name: StateChanged
     summary: An event that is triggered when the character's state changes.
-    description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: MoveFinished
     summary: An event that is triggered when the character finishes moving to a destination.
-    description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
 methods:
   - name: SetIdle
     summary: Sets the character to an idle state.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -79,7 +68,6 @@ methods:
         summary:
   - name: PlayEmote
     summary: Plays a specified emote animation on the character.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -100,7 +88,6 @@ methods:
         summary:
   - name: MoveTo
     summary: Moves the character to a specified position.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -121,7 +108,6 @@ methods:
         summary: Returns true if movement is successfully initiated.
   - name: MoveWithinRangeOf
     summary: Moves the character within a specified range of a position.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -146,7 +132,6 @@ methods:
         summary: Returns true if movement is successfully initiated.
   - name: TweenRenderPosition
     summary: Smoothly transitions the character's render position from one point to another.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -163,7 +148,6 @@ methods:
         summary: A Tween object representing the transition.
   - name: TweenRenderPositionTo
     summary: Initiates a smooth transition for the character's render position to a specified destination.
-    description:
     is_static: false
     code_samples:
     parameters:

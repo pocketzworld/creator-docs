@@ -17,63 +17,54 @@ properties:
   - name: mipmapCount
     summary: |
       The 'mipmapCount' property returns the total number of mipmap levels present in the Texture. Mipmaps are a sequence of textures, each of which is a progressively lower resolution representation of the same image. They are used to increase rendering speed and reduce aliasing effects. You can learn more from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipmapCount.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: width
     summary: |
       The 'width' property represents the width of the texture in pixels. Knowing the dimensions of your textures can be crucial when working with UV mapping and texture application. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-width.html) provides additional insights into texture manipulation.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: height
     summary: |
       The 'height' property specifies the height of the texture in pixels. Knowing the texture dimensions can be crucial when working with texture manipulation such as UV mapping. More information can be found in the [Unity's Texture documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-height.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: isReadable
     summary: |
       The 'isReadable' property is a boolean flag that states if the texture data can be read or not. If set to true, scripts can read the pixel data of the texture. This is important while doing any kind of processing on the texture's pixel data. You can learn more about it from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isReadable.html).
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: anisoLevel
     summary: |
       The 'anisoLevel' property sets the Anisotropic filtering level of the texture. This filtering enhances the image quality of textures on surfaces that are at oblique viewing angles. A higher anisotropic level means better texture quality at such angles. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-anisoLevel.html).
-    description:
     is_static: false
     code_samples:
     type: number
   - name: mipMapBias
     summary: |
       The 'mipMapBias' property is used to adjust the mipmap level. Mipmaps are used to enhance the visual quality and rendering speed of scaled textures. This property allows for fine control over the use of mipmaps in your textures. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-mipMapBias.html) provides further information.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: texelSize
     summary: |
       The 'texelSize' property gives the size of a single texel (texture element). It represents the world space size of a single pixel of the texture. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-texelSize.html) has more detailed information.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: updateCount
     summary: |
       The 'updateCount' property shows how many times the texture has been updated since the scene was loaded. This can be used for debugging or profiling, to monitor how often a texture is updated. Refer to [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-updateCount.html) for more details.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: isDataSRGB
     summary: |
       The 'isDataSRGB' property determines whether the texture data is in gamma space (sRGB) or not. Gamma space is used to correct lighting calculations in computer graphics. True if the data is sRGB, false if linear. Learn more from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-isDataSRGB.html).
-    description:
     is_static: false
     code_samples:
     type: boolean
@@ -81,7 +72,6 @@ methods:
   - name: IncrementUpdateCount
     summary: |
       The 'IncrementUpdateCount' method increments the number of times the texture has been updated. Although this method is rarely used for scripting in Unity, it can be useful for advanced texture manipulation such as writing plugins or extensions. Check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.IncrementUpdateCount.html) for additional details.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -91,7 +81,6 @@ methods:
   - name: SetGlobalAnisotropicFilteringLimits
     summary: |
       The 'SetGlobalAnisotropicFilteringLimits' method sets the limits for Anisotropic filtering which is a method enhancing the image quality of textures on surfaces that are far away and steeply angled with respect to the camera. The [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.SetGlobalAnisotropicFilteringLimits.html) provides more information.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -109,7 +98,6 @@ methods:
   - name: SetStreamingTextureMaterialDebugProperties
     summary: |
       The 'SetStreamingTextureMaterialDebugProperties' method sets debug properties for streaming texture materials. More detailed information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture.SetStreamingTextureMaterialDebugProperties.html).
-    description:
     is_static: true
     code_samples:
     parameters:

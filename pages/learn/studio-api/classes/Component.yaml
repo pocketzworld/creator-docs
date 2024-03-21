@@ -9,7 +9,6 @@ constructors:
 properties:
   - name: transform
     summary: Provides access to the GameObject's Transform, facilitating position, rotation, and scale adjustments.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -17,7 +16,6 @@ properties:
     type: Class.Transform
   - name: gameObject
     summary: Allows access to the GameObject this component is attached to, central to numerous Unity operations.
-    description:
     is_static: false
     tags:
       - ServerAndClient
@@ -25,14 +23,12 @@ properties:
     type: Class.GameObject
   - name: tag
     summary: Accesses the GameObject's tag for identification and selection purposes within Unity's environment.
-    description:
     is_static: false
     code_samples:
     type: string
 methods:
   - name: GetComponent
     summary: Retrieves a component of a specified type from the GameObject, crucial for accessing and manipulating attached components.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -44,7 +40,6 @@ methods:
         summary: The component, if present.
   - name: GetComponentInChildren
     summary: Searches the GameObject's children for a component of a specific type, extending component access to child GameObjects.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -59,7 +54,6 @@ methods:
         summary: The component, if found among children.
   - name: GetComponentInParent
     summary: Looks for a specified component type in the GameObject's parent hierarchy, useful for accessing shared components in parent objects.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -74,7 +68,6 @@ methods:
         summary: The component, if located in a parent.
   - name: GetComponentIndex
     summary: Retrieves the index of a component, enabling more advanced management of multiple components of the same type.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -83,7 +76,6 @@ methods:
         summary: The index of the component.
   - name: CompareTag
     summary: Compares the GameObject's tag with a specified string, streamlining GameObject categorization and behavior customization based on tags.
-    description:
     is_static: false
     code_samples:
     parameters:

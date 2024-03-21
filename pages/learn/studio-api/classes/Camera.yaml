@@ -9,356 +9,297 @@ constructors:
 properties:
   - name: nearClipPlane
     summary: Defines the closest distance at which the Camera starts rendering objects.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: farClipPlane
     summary: Sets the maximum distance up to which the Camera renders objects in the scene.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: fieldOfView
     summary: Manages the vertical extent of the scene visible at any moment, measured in degrees.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: allowHDR
     summary: Controls if the Camera uses High Dynamic Range rendering for enhanced visual details.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: allowMSAA
     summary: Enables or disables Multi-Sample Anti-Aliasing for smoother image edges.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: allowDynamicResolution
     summary: Allows dynamic resolution adjustment for performance optimization.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: forceIntoRenderTexture
     summary: Forces Camera's view to always render to a texture for advanced image processing.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: orthographicSize
     summary: Defines the size of the view in world units for Orthographic Cameras.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: orthographic
     summary: Toggles between Perspective and Orthographic modes for the Camera.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: transparencySortAxis
     summary: Custom axis for sorting transparent objects when using Custom Axis mode.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: depth
     summary: Specifies the Camera's depth in the rendering order.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: aspect
     summary: Sets the aspect ratio (width/height) for the Camera.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: velocity
     summary: Provides the Camera's velocity, useful for motion blur effects.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: cullingMask
     summary: Bit mask for rendering GameObjects on specific Layers.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: eventMask
     summary: Bit mask to selectively ignore GameObjects when sending events.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: layerCullSpherical
     summary: Uses spherical bounds for layer culling computation when enabled.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: overrideSceneCullingMask
     summary: Bit mask override for Scene culling on this Camera.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: useOcclusionCulling
     summary: Determines if Unity performs occlusion culling for this Camera.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: cullingMatrix
     summary: Custom projection matrix for the Camera to adjust rendering.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: backgroundColor
     summary: Sets the background color for the Camera's view.
-    description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: clearStencilAfterLightingPass
     summary: Clears the stencil buffer after lighting pass as an optimization.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: usePhysicalProperties
     summary: Enables physical camera settings to simulate real camera properties.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: iso
     summary: Simulates the ISO setting of a physical camera, affecting image brightness and noise.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: shutterSpeed
     summary: Mimics a camera's shutter speed, influencing exposure and motion blur.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: aperture
     summary: Emulates the aperture of a physical camera, impacting light intake and depth of field.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: focusDistance
     summary: Adjusts the distance to the focus plane, useful for depth of field effects.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: focalLength
     summary: Represents the focal length of the camera lens, affecting the field of view.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: bladeCount
     summary: Sets the number of diaphragm blades, affecting the shape of out-of-focus areas.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: curvature
     summary: Simulates lens curvature, affecting perspective distortion in the rendered image.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: barrelClipping
     summary: Determines the clipping level for light entering the camera, affecting edge brightness.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: anamorphism
     summary: Creates anamorphic lens effects by compressing the image in one dimension.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: sensorSize
     summary: Imitates the physical dimensions of the camera sensor, affecting the angle of view.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: lensShift
     summary: Allows shifting the lens in relation to the sensor, correcting for keystone distortion.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: rect
     summary: Specifies the Camera's viewport rectangle, controlling which part of the screen it occupies.
-    description:
     is_static: false
     code_samples:
     type: DataType.Rect
   - name: pixelRect
     summary: Defines the rectangle, in pixels, that the Camera renders to on the screen.
-    description:
     is_static: false
     code_samples:
     type: DataType.Rect
   - name: pixelWidth
     summary: Gives the width in pixels of the Camera's rendering area.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: pixelHeight
     summary: Provides the height in pixels of the Camera's rendering area.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: scaledPixelWidth
     summary: Gets the width of the Camera's image after applying the scaling factor.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: scaledPixelHeight
     summary: Retrieves the height of the Camera's image with the scaling factor applied.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: targetDisplay
     summary: Sets the display for the Camera's output, useful for multi-display setups.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: cameraToWorldMatrix
     summary: Provides a matrix transforming from camera space to world space.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: worldToCameraMatrix
     summary: Allows setting a custom transformation from world space to camera space.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: projectionMatrix
     summary: Offers a custom projection matrix for perspective transformations.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: nonJitteredProjectionMatrix
     summary: Gives a projection matrix without jittering for anti-aliasing.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: useJitteredProjectionMatrixForTransparentRendering
     summary: Decides whether to use a jittered projection matrix for rendering transparent objects.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: previousViewProjectionMatrix
     summary: Holds the matrix from multiplying the previous frame's projection matrix by its world-to-camera matrix, useful for effects needing historical comparison.
-    description:
     is_static: false
     code_samples:
     type: DataType.Matrix4x4
   - name: stereoEnabled
     summary: Indicates if stereoscopic rendering is enabled for creating 3D effects.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: stereoSeparation
     summary: Adjusts the distance between the stereo camera's views to alter the 3D effect's intensity.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: stereoConvergence
     summary: Sets the point where the left and right views converge, affecting the depth of the 3D scene.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: areVRStereoViewMatricesWithinSingleCullTolerance
     summary: Checks if the view matrices for VR rendering fall within a tolerance for efficient culling.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: commandBufferCount
     summary: Returns the total number of command buffers attached to the Camera, for extending rendering.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: main
     summary: Accesses the main Camera in the scene, designated by the 'MainCamera' tag.
-    description:
     is_static: true
     code_samples:
     type: Class.Camera
   - name: current
     summary: Retrieves the currently rendering Camera, useful for effects and scripts during rendering.
-    description:
     is_static: true
     code_samples:
     type: Class.Camera
   - name: allCamerasCount
     summary: Gives the count of all enabled Cameras within the Scene.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: kMinAperture
     summary: Specifies the minimum logical aperture size for cameras, constraining physical camera simulations.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: kMaxAperture
     summary: Defines the maximum logical aperture size for camera simulations, affecting depth of field and light intake.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: kMinBladeCount
     summary: Indicates the minimum number of aperture blades for simulating camera bokeh effects.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: kMaxBladeCount
     summary: Sets the maximum number of aperture blades for detailed bokeh simulation in camera effects.
-    description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: ScreenToWorldPoint
     summary: Converts a point from screen space into world space for this Camera, useful for interaction with game objects.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -370,7 +311,6 @@ methods:
         summary: The converted world space position.
   - name: WorldToScreenPoint
     summary: Transforms a world space point to screen space, allowing UI alignment or visibility checks.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -382,7 +322,6 @@ methods:
         summary: The screen space representation of the point.
   - name: ScreenPointToRay
     summary: Creates a ray from the Camera through a screen point, primarily for object selection via raycasting.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -394,7 +333,6 @@ methods:
         summary: The ray from the camera through the screen point.
   - name: Reset
     summary: Resets all Camera settings to their defaults, useful for reinitializing camera properties.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -403,7 +341,6 @@ methods:
         summary:
   - name: ResetTransparencySortSettings
     summary: Reverts the Camera's transparency sort settings to the default state.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -413,7 +350,6 @@ methods:
   - name: ResetAspect
     summary: Resets the Camera's aspect ratio to the screen's aspect ratio, undoing
         any custom aspect ratio settings.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -422,7 +358,6 @@ methods:
         summary:
   - name: ResetCullingMatrix
     summary: Resets the Camera's culling matrix to the default, useful for undoing custom culling adjustments.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -431,7 +366,6 @@ methods:
         summary:
   - name: ResetReplacementShader
     summary: Removes any replacement shader from the Camera, returning to standard rendering.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -440,7 +374,6 @@ methods:
         summary:
   - name: GetGateFittedFieldOfView
     summary: Calculates the field of view based on gate fitting, useful for matching physical camera settings.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -449,7 +382,6 @@ methods:
         summary: The calculated field of view.
   - name: GetGateFittedLensShift
     summary: Determines the lens shift required based on gate fitting, aiding in accurate camera simulation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -458,7 +390,6 @@ methods:
         summary: The required lens shift.
   - name: ResetWorldToCameraMatrix
     summary: Resets the Camera's world-to-camera matrix to the identity matrix, clearing any transformations.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -467,7 +398,6 @@ methods:
         summary:
   - name: ResetProjectionMatrix
     summary: Reverts the Camera's projection matrix to default, useful for standard perspective restoration.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -476,7 +406,6 @@ methods:
         summary:
   - name: CalculateObliqueMatrix
     summary: Creates a custom projection matrix for oblique near-plane clipping, useful for mirror reflections or water surfaces.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -488,7 +417,6 @@ methods:
         summary: The custom projection matrix.
   - name: ScreenToViewportPoint
     summary: Transforms a point from screen space to normalized viewport space.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -500,7 +428,6 @@ methods:
         summary: The viewport space position.
   - name: ViewportToScreenPoint
     summary: Converts a point from normalized viewport space to screen space.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -512,7 +439,6 @@ methods:
         summary: The screen space position.
   - name: ResetStereoProjectionMatrices
     summary: Resets the stereo projection matrices for left and right eyes to the default values.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -521,7 +447,6 @@ methods:
         summary:
   - name: ResetStereoViewMatrices
     summary: Reverts the stereo view matrices for the left and right eyes to Unity's defaults.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -530,7 +455,6 @@ methods:
         summary:
   - name: Render
     summary: Forces immediate rendering of the scene from this Camera's perspective.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -539,7 +463,6 @@ methods:
         summary:
   - name: RenderDontRestore
     summary: Renders the scene immediately without restoring the Camera's state afterwards.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -548,7 +471,6 @@ methods:
         summary:
   - name: CopyFrom
     summary: Copies settings from another Camera, including all properties and transformation matrices.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -560,7 +482,6 @@ methods:
         summary:
   - name: RemoveAllCommandBuffers
     summary: Deletes all command buffers attached to this Camera.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -569,7 +490,6 @@ methods:
         summary:
   - name: FocalLengthToFieldOfView
     summary: Converts focal length to vertical field of view for the Camera's sensor size.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -584,7 +504,6 @@ methods:
         summary: The calculated vertical field of view.
   - name: FieldOfViewToFocalLength
     summary: Calculates the focal length from a given vertical field of view and sensor size.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -599,7 +518,6 @@ methods:
         summary: The focal length corresponding to the given field of view.
   - name: HorizontalToVerticalFieldOfView
     summary: Converts a horizontal field of view to a vertical field of view based on the aspect ratio.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -614,7 +532,6 @@ methods:
         summary: The vertical field of view.
   - name: VerticalToHorizontalFieldOfView
     summary: Converts a vertical field of view to a horizontal field of view based on the aspect ratio.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -629,7 +546,6 @@ methods:
         summary: The horizontal field of view.
   - name: SetupCurrent
     summary: Sets a specified Camera as the current active Camera, useful for dynamic camera switching.
-    description:
     is_static: true
     code_samples:
     parameters:

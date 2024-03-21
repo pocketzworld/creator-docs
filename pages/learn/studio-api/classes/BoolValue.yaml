@@ -9,7 +9,6 @@ tags:
 constructors:
   - name: new
     summary: Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
-    description:
     is_static: true
     tags:
       - ServerAndClient
@@ -27,7 +26,6 @@ constructors:
 properties:
   - name: value
     summary: Represents the synchronized boolean value. Changes trigger notifications across clients via the Value.Changed event.
-    description:
     is_static: false
     tags:
       - ServerAndClient

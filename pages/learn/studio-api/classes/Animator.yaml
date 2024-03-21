@@ -1,7 +1,6 @@
 name: Animator
 type: classes
 summary: The Animator class is a core component in Unity for managing animations. It works with the Animator Controller to manage states and transitions in a state machine, enabling complex animation setups. This class provides a variety of methods and properties to control animations on GameObjects, essential for dynamic and interactive game environments.
-description:
 code_samples:
 inherits:
   - Class.Behaviour
@@ -9,236 +8,197 @@ constructors:
 properties:
   - name: isOptimizable
     summary: Indicates if the Animator can be optimized for performance.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: isHuman
     summary: Checks if the Animator controls a humanoid model.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: hasRootMotion
     summary: Determines if the Animator's animation data contains root motion.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: humanScale
     summary: Provides the scale of the humanoid Avatar in meters.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: isInitialized
     summary: Checks if the Animator is initialized and ready to control animations.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: deltaPosition
     summary: Returns the GameObject's position change during the last frame.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: deltaRotation
     summary: Provides the rotation difference of the GameObject during the last frame.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: velocity
     summary: Gives the velocity vector of the GameObject controlled by the Animator.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: angularVelocity
     summary: Returns the angular velocity vector of the GameObject.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rootPosition
     summary: Provides the position of the root of the GameObject controlled by the Animator.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: rootRotation
     summary: Offers the rotation of the root of the GameObject controlled by the Animator.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: applyRootMotion
     summary: Controls whether root motion in animations should be applied to the GameObject.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: hasTransformHierarchy
     summary: Indicates if the Animator has a transform hierarchy.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: gravityWeight
     summary: Represents the gravity weight based on current animations being played.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: bodyPosition
     summary: Allows getting or setting the position of the body mass.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: bodyRotation
     summary: Lets you get or set the rotation of the body mass.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: stabilizeFeet
     summary: Controls feet stabilization for plant and IK feet.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: layerCount
     summary: Represents the total number of layers within the Animator.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: parameterCount
     summary: Pertains to the count of parameters in the Animator Controller.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: feetPivotActive
     summary: A blend variable for calculating the position of each foot during a transition.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: pivotWeight
     summary: Indicates the current weight of the pivot, as determined by foot animations.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: pivotPosition
     summary: Offers the current position of the pivot in the avatar root, relative to world space.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: isMatchingTarget
     summary: Indicates whether the character is currently matching a target via script.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: speed
     summary: Allows manipulation of the Animator's playback speed.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: targetPosition
     summary: Gets the target position for the MatchTarget function.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: targetRotation
     summary: Fetches the target rotation for the MatchTarget function.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: avatarRoot
     summary: Refers to the root Transform of the humanoid Avatar in the animator.
-    description:
     is_static: false
     code_samples:
     type: Class.Transform
   - name: playbackTime
     summary: Gets the current playback time of the Animator recorder.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: recorderStartTime
     summary: Represents the start time of the first frame of the Animator recorder.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: recorderStopTime
     summary: Provides the stop time of the last frame of the Animator recorder.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: hasBoundPlayables
     summary: Indicates whether any playable graphs are attached to the Animator.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: layersAffectMassCenter
     summary: Controls whether the mass center is affected by all layers or only the base layer.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: leftFeetBottomHeight
     summary: Provides the position of the bottom of the left foot relative to the root.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: rightFeetBottomHeight
     summary: Represents the position of the bottom of the right foot relative to the root.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: logWarnings
     summary: Controls whether warnings are logged for issues with AnimatorController setup.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: fireEvents
     summary: Dictates whether the Animator is allowed to emit events.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: keepAnimatorStateOnDisable
     summary: Keeps the current Animator state and its time when the GameObject is disabled.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: writeDefaultValuesOnDisable
     summary: Writes default values into the GameObject when the animator component is disabled.
-    description:
     is_static: false
     code_samples:
     type: boolean
 methods:
   - name: GetFloat
     summary: Retrieves a float parameter from the Animator.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -251,7 +211,6 @@ methods:
         summary: The float value of the specified parameter.
   - name: SetFloat
     summary: Sets the value of a float parameter.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -268,7 +227,6 @@ methods:
         summary: This method doesn't return a value.
   - name: GetBool
     summary: Retrieves the value of a boolean parameter in the Animator.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -281,7 +239,6 @@ methods:
         summary: The current state (true or false) of the specified parameter.
   - name: SetBool
     summary: Sets the value of a boolean parameter in the Animator.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -298,7 +255,6 @@ methods:
         summary: This method doesn't return a value.
   - name: GetInteger
     summary: Fetches the value of an integer parameter in the Animator.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -311,7 +267,6 @@ methods:
         summary: The current state of the specified parameter.
   - name: SetInteger
     summary: Assigns an integer value to an integer parameter in the Animator.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -328,7 +283,6 @@ methods:
         summary: This method doesn't return a value.
   - name: SetTrigger
     summary: Activates a trigger parameter to change the animator's state.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -341,7 +295,6 @@ methods:
         summary: This method doesn't return a value.
   - name: ResetTrigger
     summary: Clears a trigger parameter.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -354,7 +307,6 @@ methods:
         summary: This method doesn't return a value.
   - name: IsParameterControlledByCurve
     summary: Checks if a parameter is controlled by a curve.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -367,7 +319,6 @@ methods:
         summary: True if the parameter is controlled by a curve, false otherwise.
   - name: SetLookAtPosition
     summary: Sets a target position for the character's head to look at.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -380,7 +331,6 @@ methods:
         summary: This method doesn't return a value.
   - name: SetLookAtWeight
     summary: Sets the weights for the head and body parts to look at a position.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -393,7 +343,6 @@ methods:
         summary: This method doesn't return a value.
   - name: GetLayerName
     summary: Retrieves the name of a layer by its index.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -406,7 +355,6 @@ methods:
         summary: The name of the layer.
   - name: GetLayerIndex
     summary: Finds the index of a layer by its name.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -419,7 +367,6 @@ methods:
         summary: The index of the layer.
   - name: GetLayerWeight
     summary: Gets the weight of a layer, defining its influence on the final animation.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -432,7 +379,6 @@ methods:
         summary: The weight of the layer.
   - name: SetLayerWeight
     summary: Sets the weight of a layer, adjusting its influence on the final animation outcome.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -449,7 +395,6 @@ methods:
         summary: This method doesn't return a value.
   - name: GetCurrentAnimatorClipInfoCount
     summary: Returns the count of AnimatorClipInfo instances for the current layer.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -462,7 +407,6 @@ methods:
         summary: The count of AnimatorClipInfo instances.
   - name: GetNextAnimatorClipInfoCount
     summary: Gets the count of AnimatorClipInfo for the next layer the animator will transition to.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -475,7 +419,6 @@ methods:
         summary: The count of AnimatorClipInfo instances for the next layer.
   - name: IsInTransition
     summary: Checks if the animator is in a transition between animations in the state machine.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -488,7 +431,6 @@ methods:
         summary: True if the animator is in transition, false otherwise.
   - name: InterruptMatchTarget
     summary: Interrupts automatic target matching, allowing manual control.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -497,7 +439,6 @@ methods:
         summary: This method doesn't return a value.
   - name: CrossFadeInFixedTime
     summary: Gradually blends from the current animation to another over a fixed time.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -514,7 +455,6 @@ methods:
         summary: This method doesn't return a value.
   - name: WriteDefaultValues
     summary: Writes default values to the Animator, resetting runtime modifications.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -523,7 +463,6 @@ methods:
         summary: This method doesn't return a value.
   - name: CrossFade
     summary: Transitions from the current state to another over a relative duration.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -548,7 +487,6 @@ methods:
         summary: This method doesn't return a value.
   - name: PlayInFixedTime
     summary: Plays an animation state at a specified time scale, unaffected by Animator speed.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -565,7 +503,6 @@ methods:
         summary: This method doesn't return a value.
   - name: Play
     summary: Plays an animation state, allowing direct control over animation playback.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -582,7 +519,6 @@ methods:
         summary: This method doesn't return a value.
   - name: StartPlayback
     summary: Begins animator playback mode, useful for testing Animator functionality.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -591,7 +527,6 @@ methods:
         summary: This method doesn't return a value.
   - name: StopPlayback
     summary: Stops animator playback mode initiated by StartPlayback.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -600,7 +535,6 @@ methods:
         summary: This method doesn't return a value.
   - name: StartRecording
     summary: Starts recording the Animator in play mode for analysis or replaying sequences.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -613,7 +547,6 @@ methods:
         summary: This method doesn't return a value.
   - name: StopRecording
     summary: Stops recording started by StartRecording, controlling recording duration.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -622,7 +555,6 @@ methods:
         summary: This method doesn't return a value.
   - name: HasState
     summary: Checks if a specific state exists within a layer of the Animator.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -639,7 +571,6 @@ methods:
         summary: True if the state exists in the specified layer, false otherwise.
   - name: Update
     summary: Manually advances the Animator state machine by a specified amount of time.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -652,7 +583,6 @@ methods:
         summary: This method doesn't return a value.
   - name: Rebind
     summary: Resets the Animator to its default state, removing all runtime modifications.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -661,7 +591,6 @@ methods:
         summary: This method doesn't return a value.
   - name: ApplyBuiltinRootMotion
     summary: Applies built-in root motion from animation clips, if present.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -670,7 +599,6 @@ methods:
         summary: This method doesn't return a value.
   - name: StringToHash
     summary: Converts a string into a hash ID for efficient parameter identification.
-    description:
     is_static: true
     code_samples:
     parameters:

@@ -9,134 +9,112 @@ constructors:
 properties:
   - name: gravity
     summary: "Control the global gravity in the physics simulation, defaulting to Earth's gravity."
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: defaultContactOffset
     summary: "Define the minimum distance between colliders for them to be considered in contact."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: sleepThreshold
     summary: "Set the velocity threshold below which GameObjects are considered static or immobile."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: queriesHitTriggers
     summary: "Determine whether physics queries interact with trigger colliders."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: queriesHitBackfaces
     summary: "Decide if physics queries should detect hits on collider backfaces."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: bounceThreshold
     summary: "Specify the minimum collision velocity for an object to bounce."
-    description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: defaultMaxDepenetrationVelocity
     summary: "Refer to Unity's documentation for information on maximum depenetration velocity."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: defaultSolverIterations
     summary: "Refer to Unity's documentation for information on solver iterations."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: defaultSolverVelocityIterations
     summary: "Refer to Unity's documentation for information on solver velocity iterations."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: defaultMaxAngularSpeed
     summary: "Refer to Unity's documentation for information on maximum angular speed."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: improvedPatchFriction
     summary: "Refer to Unity's documentation for information on improved patch friction."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: invokeCollisionCallbacks
     summary: "Refer to Unity's documentation for information on collision callbacks invocation."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: autoSyncTransforms
     summary: "Refer to Unity's documentation for information on automatic transforms synchronization."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: reuseCollisionCallbacks
     summary: "Refer to Unity's documentation for information on reusing collision callbacks."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: interCollisionDistance
     summary: "Refer to Unity's documentation for information on inter-collision distance."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: interCollisionStiffness
     summary: "Refer to Unity's documentation for information on inter-collision stiffness."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: interCollisionSettingsToggle
     summary: "Refer to Unity's documentation for information on inter-collision settings toggle."
-    description:
     is_static: true
     code_samples:
     type: boolean
   - name: clothGravity
     summary: "Refer to Unity's documentation for information on cloth gravity."
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector3
   - name: IgnoreRaycastLayer
     summary: "Refer to Unity's documentation for information on the Ignore Raycast layer."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: DefaultRaycastLayers
     summary: "Refer to Unity's documentation for information on default raycast layers."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: AllLayers
     summary: "Refer to Unity's documentation for information on all layers."
-    description:
     is_static: true
     code_samples:
     type: number
   - name: Raycast
     summary: "Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -154,7 +132,6 @@ methods:
         summary: Returns true if any collider is hit, with collision details.
   - name: OverlapSphere
     summary: "Find all colliders touching or inside an imaginary sphere, useful for area damage or proximity checks."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -172,7 +149,6 @@ methods:
         summary: Array of colliders within the sphere.
   - name: IgnoreCollision
     summary: "Prevent physics engine from processing collisions between two specified colliders."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -190,7 +166,6 @@ methods:
         summary: Does not return a value.
   - name: IgnoreLayerCollision
     summary: "Make physics engine ignore all collisions between colliders in two specified layers."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -208,7 +183,6 @@ methods:
         summary: Does not return a value.
   - name: GetIgnoreLayerCollision
     summary: "Check if collisions between any colliders in two layers are ignored."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -223,7 +197,6 @@ methods:
         summary: True if collisions are ignored, false otherwise.
   - name: GetIgnoreCollision
     summary: "Check if collisions between two specific colliders are ignored."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -238,7 +211,6 @@ methods:
         summary: True if collisions are ignored, false otherwise.
   - name: Simulate
     summary: "Advance physics simulation by a specified time, useful for 'fast-forwarding' physics."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -250,7 +222,6 @@ methods:
         summary: Does not return a value.
   - name: SyncTransforms
     summary: "Synchronize transform data used in physics simulation with GameObjects' actual transform data."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -259,7 +230,6 @@ methods:
         summary: Does not return a value.
   - name: ClosestPoint
     summary: "Calculate the closest point to a given position on a collider's surface."
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -280,7 +250,6 @@ methods:
         summary: Closest point on the collider.
   - name: RebuildBroadphaseRegions
     summary: "Force a rebuild of the tree for broad-phase collision detection after static collider movements."
-    description:
     is_static: true
     code_samples:
     parameters:

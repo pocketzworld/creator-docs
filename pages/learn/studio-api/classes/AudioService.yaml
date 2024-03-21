@@ -10,7 +10,6 @@ properties:
 methods:
   - name: IsPlaying
     summary: Checks if any audio is currently playing.
-    description: |
     is_static: false
     code_samples:
     parameters:
@@ -19,7 +18,6 @@ methods:
         summary: Returns true if audio is playing; otherwise, false.
   - name: MusicIntensity
     summary: Retrieves the current music intensity level.
-    description: |
     is_static: false
     code_samples:
     parameters:

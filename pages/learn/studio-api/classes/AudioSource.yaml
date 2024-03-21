@@ -9,158 +9,132 @@ constructors:
 properties:
   - name: volume
     summary: Manages the loudness of the audio playing through the AudioSource. Adjust this property to control volume levels.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: pitch
     summary: Controls the speed of sound playback. Adjusting the pitch changes the sound's speed and pitch.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: time
     summary: Sets or returns the current playback position in seconds, allowing for precise control over playback.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: timeSamples
     summary: Allows setting and retrieving the playback position in PCM samples for precise audio timing.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: clip
     summary: Holds the AudioClip to be played, allowing for the assignment of sound to the AudioSource.
-    description:
     is_static: false
     code_samples:
     type: Class.AudioClip
   - name: isPlaying
     summary: Indicates if the AudioSource is currently playing sound, useful for checking audio status.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: isVirtual
     summary: Indicates whether the AudioSource is virtualized, which has minimal resource usage.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: loop
     summary: When true, the audio clip will play indefinitely in a loop, useful for background music or repeating sounds.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: ignoreListenerVolume
     summary: When true, AudioSource ignores global volume controls, playing audio at its own volume level.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: playOnAwake
     summary: Determines if the audio clip will start playing automatically when the script activates.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: ignoreListenerPause
     summary: Allows the AudioSource to keep playing despite a global pause, when set to true.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: panStereo
     summary: Controls the left and right stereo pan, aiding in achieving desired sound effects.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: spatialBlend
     summary: Sets the level of 3D audio effect application on the audio playback.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: spatialize
     summary: Activates spatializer effect for immersive 3D audio when set to true.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: spatializePostEffects
     summary: Applies spatial effects to the AudioSource for enhanced audio experience when true.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: reverbZoneMix
     summary: Controls the mix of spatialized AudioSource into global reverb, enhancing audio depth.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: bypassEffects
     summary: Bypasses applied effects, playing the original sound when true.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: bypassListenerEffects
     summary: Bypasses 3D spatialization effects when true, affecting volume and pitch directly.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: bypassReverbZones
     summary: Allows bypassing Global Reverb Zones for direct sound play when true.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: dopplerLevel
     summary: Sets the amount of Doppler effect, changing sound frequency based on movement.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: spread
     summary: Controls audio spread across speakers in 3D playback, affecting sound directionality.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: priority
     summary: Determines the AudioSource's priority among others for managing active AudioSource objects and playback selection based on priority value.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: mute
     summary: Mutes the AudioSource when true, stopping any sound from being played.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: minDistance
     summary: Sets the minimum distance for the AudioSource to start attenuating, controlling volume over distance.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: maxDistance
     summary: Defines the maximum distance where attenuation stops, setting the farthest point for audio volume reduction.
-    description:
     is_static: false
     code_samples:
     type: number
 methods:
   - name: Play
     summary: Starts playing the assigned audio clip, allowing for sound playback control.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -169,7 +143,6 @@ methods:
         summary:
   - name: PlayDelayed
     summary: Plays the assigned audio clip after a delay, useful for timed sound effects.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -181,7 +154,6 @@ methods:
         summary:
   - name: PlayScheduled
     summary: Schedules audio clip playback at a precise time, aiding in synchronized audio events.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -193,7 +165,6 @@ methods:
         summary:
   - name: PlayOneShot
     summary: Plays an audio clip once on demand, ignoring the AudioSource's regular clip.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -205,7 +176,6 @@ methods:
         summary:
   - name: SetScheduledStartTime
     summary: Schedules the start time for audio clip playback, organizing audio in precise manner.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -217,7 +187,6 @@ methods:
         summary:
   - name: SetScheduledEndTime
     summary: Schedules a stop time for audio clip playback, useful for precise audio event control.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -229,7 +198,6 @@ methods:
         summary:
   - name: Stop
     summary: Stops currently playing audio, useful for immediate sound halt.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -238,7 +206,6 @@ methods:
         summary:
   - name: Pause
     summary: Pauses the audio playback, allowing for later resumption from the same point.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -247,7 +214,6 @@ methods:
         summary:
   - name: UnPause
     summary: Resumes paused audio playback from where it was stopped.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -256,7 +222,6 @@ methods:
         summary:
   - name: SetSpatializerFloat
     summary: Sets a float parameter for a spatializer effect attached to the AudioSource.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -271,7 +236,6 @@ methods:
         summary:
   - name: SetAmbisonicDecoderFloat
     summary: Sets a float parameter for an ambisonic decoder plugin attached to the AudioSource.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -286,7 +250,6 @@ methods:
         summary:
   - name: PlayClipAtPoint
     summary: Plays an AudioClip at a specified world position, as a static method.
-    description:
     is_static: true
     code_samples:
     parameters:

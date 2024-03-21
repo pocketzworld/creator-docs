@@ -9,13 +9,11 @@ constructors:
 properties:
   - name: volume
     summary: Acts as a master volume control, affecting all AudioSource objects heard by the AudioListener.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: pause
     summary: Allows pausing or resuming all audio in the scene, useful for game events requiring silence.
-    description:
     is_static: true
     code_samples:
     type: boolean

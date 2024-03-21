@@ -27,7 +27,6 @@ properties:
   - name: name
     summary: |
       The 'name' property holds the name of the player. This can be used to identify the player in the game, for example, in the chat or in the leaderboard.
-    description:
     is_static: false
     tags:
       - ClientAndServer
@@ -36,7 +35,6 @@ properties:
   - name: id
     summary: |
       The 'id' property holds the unique identifier of the player. This is an alternative way to track players via number.
-    description:
     is_static: false
     tags:
       - ClientAndServer
@@ -45,7 +43,6 @@ properties:
   - name: isLocal
     summary: |
       The 'isLocal' property is whether or not this Player is the local user.
-    description:
     is_static: false
     tags:
     code_samples:
@@ -53,7 +50,6 @@ properties:
   - name: avatar
     summary: |
       This property gives you access to the local player's avatar. It allows you to manipulate the avatar's properties and behavior, such as changing its appearance or controlling its movement.
-    description:
     is_static: false
     tags:
       - ClientAndServer
@@ -62,7 +58,6 @@ properties:
   - name: AvatarInstantiated
     summary: |
       An event that is triggered when the local player's avatar is instantiated. This is useful for performing actions that require the avatar to be fully loaded and ready to be manipulated.
-    description:
     is_static: false
     tags:
       - ClientAndServer
@@ -73,7 +68,6 @@ properties:
   - name: AvatarDestroyed
     summary: |
       An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
-    description:
     is_static: false
     tags:
       - ClientAndServer
@@ -85,7 +79,6 @@ methods:
   - name: InstantiateAvatar
     summary: |
       An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
-    description:
     is_static: false
     tags:
       - ServerOnly

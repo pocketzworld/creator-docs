@@ -7,7 +7,6 @@ inherits:
 constructors:
   - name: new
     summary: Creates a Vector2 with specified x and y components.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -25,98 +24,82 @@ constructors:
 properties:
   - name: normalized
     summary: The normalized version of the Vector2.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: magnitude
     summary: The length of the Vector2.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: sqrMagnitude
     summary: The square of the Vector2's magnitude.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: x
     summary: The x-component of the Vector2.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: The y-component of the Vector2.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: zero
     summary: A Vector2 with both components set to zero.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: one
     summary: A Vector2 with both components set to one.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: up
     summary: A Vector2 pointing upwards.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: down
     summary: A Vector2 pointing downwards.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: left
     summary: A Vector2 pointing to the left.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: right
     summary: A Vector2 pointing to the right.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: positiveInfinity
     summary: A Vector2 with both components at positive infinity.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: negativeInfinity
     summary: A Vector2 with both components at negative infinity.
-    description:
     is_static: true
     code_samples:
     type: DataType.Vector2
   - name: kEpsilon
     summary: A very small positive number greater than zero.
-    description:
     is_static: true
     code_samples:
     type: number
   - name: kEpsilonNormalSqrt
     summary: A small positive number for Vector2 computations.
-    description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: Set
     summary: Sets the x and y components of the Vector2.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -132,7 +115,6 @@ methods:
       - type: void
   - name: Scale
     summary: Scales the Vector2 by another's components.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -144,7 +126,6 @@ methods:
       - type: void
   - name: Normalize
     summary: Converts Vector2 to a direction vector of length 1.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -152,7 +133,6 @@ methods:
       - type: void
   - name: SqrMagnitude
     summary: The square of the Vector2's magnitude.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -160,7 +140,6 @@ methods:
       - type: number
   - name: Lerp
     summary: Linearly interpolates between two Vector2's.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -180,7 +159,6 @@ methods:
       - type: DataType.Vector2
   - name: LerpUnclamped
     summary: Linearly interpolates between two Vector2's without clamping 't'.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -200,7 +178,6 @@ methods:
       - type: DataType.Vector2
   - name: MoveTowards
     summary: Moves a Vector2 towards another Vector2 within a maximum distance.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -220,7 +197,6 @@ methods:
       - type: DataType.Vector2
   - name: Scale
     summary: Multiplies two Vector2's component-wise.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -236,7 +212,6 @@ methods:
       - type: DataType.Vector2
   - name: Reflect
     summary: Reflects a Vector2 off a surface Vector2.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -248,21 +223,18 @@ methods:
       - type: DataType.Vector2
   - operation: "!="
     summary: Checks if two Vector2's are not equal by comparing components.
-    description:
     type_a: Vector2
     type_b: Vector2
     return_type: boolean
     code_samples:
   - operation: "-"
     summary: Negates the x and y components of a Vector2.
-    description:
     type_a: Vector2
     type_b:
     return_type: Vector2
     code_samples:
   - operation: "Normalize"
     summary: Transforms a Vector2 into a unit vector, maintaining direction.
-    description:
     type_a: Vector2
     type_b:
     return_type: Vector2

@@ -9,13 +9,11 @@ constructors:
 properties:
   - name: center
     summary: Specifies the BoxCollider's position relative to the GameObject's local coordinates, enabling offset adjustments.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: size
     summary: Adjusts the BoxCollider's dimensions within the GameObject's local space, suitable for aligning the collider accurately with the GameObject.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3

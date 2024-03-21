@@ -9,7 +9,6 @@ constructors:
   - name: new
     summary: |
       Creates a new plane with the specified normal and a point on the plane.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -28,21 +27,18 @@ properties:
   - name: normal
     summary: |
       The normal vector of the plane, perpendicular to its surface.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: distance
     summary: |
       The shortest distance between the plane and the origin along its normal.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: flipped
     summary: |
       Returns a new plane with the normal vector flipped.
-    description:
     is_static: false
     code_samples:
     type: DataType.Plane
@@ -50,7 +46,6 @@ methods:
   - name: Raycast
     summary: |
       Determines if a ray intersects the plane and returns the intersection point distance.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -64,7 +59,6 @@ methods:
   - name: SetNormalAndPosition
     summary: |
       Sets the normal vector and a point on the plane to redefine its position.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -82,7 +76,6 @@ methods:
   - name: Set3Points
     summary: |
       Recalculates the plane to contain three specified points.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -104,7 +97,6 @@ methods:
   - name: Flip
     summary: |
       Flips the plane's normal vector.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -114,7 +106,6 @@ methods:
   - name: Translate
     summary: |
       Moves the plane by a specified offset in 3D space.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -132,7 +123,6 @@ methods:
   - name: ClosestPointOnPlane
     summary: |
       Finds the point on the plane closest to a given point.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -146,7 +136,6 @@ methods:
   - name: GetDistanceToPoint
     summary: |
       Calculates the shortest distance from a point to the plane.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -159,7 +148,6 @@ methods:
   - name: GetSide
     summary: |
       Determines which side of the plane a point lies on.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -173,7 +161,6 @@ methods:
   - name: SameSide
     summary: |
       Checks if two points are on the same side of the plane.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -191,7 +178,6 @@ methods:
   - name: Translate
     summary: |
       Moves the plane in 3D space by a specified offset without changing its normal direction.
-    description:
     is_static: true
     code_samples:
     parameters:

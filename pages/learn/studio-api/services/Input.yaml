@@ -12,77 +12,66 @@ properties:
   - name: IsAltPressed
     summary: |
       The 'IsAltPressed' property indicates if the Alt key is currently being pressed on the keyboard. This can be useful for creating keyboard shortcuts or alternate modes within the game.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: IsMouseInput
     summary: |
       The 'IsMouseInput' property helps to detect whether a mouse device is providing input. false == touch input
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: Client
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: Class.GameClient
   - name: Tapped
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: LongPressBegan
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: LongPressContinue
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: LongPressEnded
     summary: |
 
-    description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: PinchOrDragBegan
     summary: |
       The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.
-    description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: PinchOrDragChanged
     summary: |
       The 'PinchOrDragChanged' property fires an event whenever there is a change in an ongoing pinch or drag gesture on the touch screen. This allows the game to continuously track such gestures and make corresponding adjustments in its state. See Class.PinchGestureChanged for more details on the parameter of the event.
-    description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: PinchOrDragEnded
     summary: |
       The 'PinchOrDragEnded' property listens for the end of a pinch or drag gesture on a touch screen. This allows the game to know precisely when such a gesture ends and probably trigger appropriate actions thereafter. See Class.PinchGestureEnded for more details on the parameter of the event.
-    description:
     is_static: false
     code_samples:
     type: Class.Event
   - name: MouseWheel
     summary: |
       The 'MouseWheel' property listens for movements of the mouse wheel. This input allows interactions like zooming in or out or scrolling through menus, especially on platforms with a mouse device. See Class.MouseWheel for more details on the parameter of the event.
-    description:
     is_static: false
     code_samples:
     type: Class.Event

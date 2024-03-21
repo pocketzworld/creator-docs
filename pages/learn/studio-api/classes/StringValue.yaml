@@ -39,7 +39,6 @@ tags:
 constructors:
   - name: new
     summary:
-    description:
     is_static: true
     tags:
       - ServerAndClient
@@ -60,7 +59,6 @@ properties:
   - name: value
     summary: |
       The currently synchronized string value of the StringValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
-    description:
     is_static: false
     tags:
       - ServerAndClient

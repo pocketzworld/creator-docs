@@ -31,21 +31,18 @@ properties:
   - name: localPlayer
     summary: |
       This property provides a direct handle to the game's local player from the client's perspective, facilitating easy interaction and local player management.
-    description:
     is_static: false
     code_samples:
     type: Class.Player
   - name: mainCamera
     summary: |
       This property helps you obtain the main camera for the game client. It fetches the first active, enabled camera tagged as "MainCamera" in the scene. If no such camera is found, it returns nil.
-    description:
     is_static: false
     code_samples:
     type: Class.Camera
   - name: PlayerConnected
     summary: |
       An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player .
-    description:
     is_static: false
     code_samples:
     returns:
@@ -53,7 +50,6 @@ properties:
   - name: PlayerDisconnected
     summary: |
       An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
-    description:
     is_static: false
     code_samples:
     type: Class.Event

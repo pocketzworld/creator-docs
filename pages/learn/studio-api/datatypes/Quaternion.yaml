@@ -8,7 +8,6 @@ inherits:
 constructors:
   - name: new
     summary: Creates a new Quaternion with specified x, y, z, and w components.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -34,56 +33,47 @@ constructors:
 properties:
   - name: eulerAngles
     summary: Returns the rotation of a Quaternion in Euler angles representation.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: normalized
     summary: Returns a normalized copy of the Quaternion.
-    description:
     is_static: false
     code_samples:
     type: DataType.Quaternion
   - name: x
     summary: Represents the x component of the Quaternion.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: y
     summary: Represents the y component of the Quaternion.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: z
     summary: Represents the z component of the Quaternion.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: w
     summary: Represents the w (scalar) component of the Quaternion.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: identity
     summary: Represents a Quaternion for no rotation.
-    description:
     is_static: true
     code_samples:
     type: DataType.Quaternion
   - name: kEpsilon
     summary: Represents a small number greater than zero for comparison.
-    description:
     is_static: true
     code_samples:
     type: number
 methods:
   - name: Set
     summary: Assigns new values to the Quaternion's components.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -107,7 +97,6 @@ methods:
       - type: void
   - name: SetLookRotation
     summary: Aligns the Quaternion's z-axis towards a target direction.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -119,7 +108,6 @@ methods:
       - type: void
   - name: SetFromToRotation
     summary: Sets the Quaternion to rotate from one direction to another.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -135,7 +123,6 @@ methods:
       - type: void
   - name: Normalize
     summary: Modifies the quaternion to a unit length version of itself.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -143,7 +130,6 @@ methods:
       - type: void
   - name: FromToRotation
     summary: Creates a Quaternion that rotates from one direction to another.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -160,7 +146,6 @@ methods:
         summary: A rotation from fromDirection to toDirection.
   - name: Inverse
     summary: Returns the inverse of the Quaternion.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -173,7 +158,6 @@ methods:
         summary: The inverse rotation.
   - name: Slerp
     summary: Gradually changes a Quaternion from one rotation to another.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -194,7 +178,6 @@ methods:
         summary: An interpolated quaternion rotation.
   - name: SlerpUnclamped
     summary: Interpolates a Quaternion over an arbitrary range.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -215,7 +198,6 @@ methods:
         summary: An interpolated quaternion rotation.
   - name: Lerp
     summary: Linearly interpolates between two quaternions.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -237,7 +219,6 @@ methods:
   - name: LerpUnclamped
     summary: |
       The 'LerpUnclamped' method is similar to Lerp, but here the interpolation factor isn't clamped to the range [0, 1].
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -258,7 +239,6 @@ methods:
         summary: Returns a Quaternion that is interpolated over an arbitrary range.
   - name: AngleAxis
     summary: Creates a Quaternion rotation around an axis by a specified angle.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -275,7 +255,6 @@ methods:
         summary: A Quaternion around the specified axis with the given angle.
   - name: LookRotation
     summary: Provides a quaternion that makes an object face towards a specified direction.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -292,7 +271,6 @@ methods:
         summary: A Quaternion that aligns an object's forward direction towards the specified direction.
   - name: Dot
     summary: Calculates the dot product of two quaternions.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -309,7 +287,6 @@ methods:
         summary: The dot product of the two quaternions.
   - name: Angle
     summary: Returns the angle in degrees between two rotations.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -326,7 +303,6 @@ methods:
         summary: The angle in degrees between the two rotations.
   - name: Euler
     summary: Creates a Quaternion rotation from Euler angles.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -347,7 +323,6 @@ methods:
         summary: A Quaternion from the Euler angles.
   - name: RotateTowards
     summary: Gradually changes a Quaternion towards a target rotation.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -368,7 +343,6 @@ methods:
         summary: A Quaternion rotated towards the target.
   - name: Normalize
     summary: Modifies the quaternion to a unit length version of itself.
-    description:
     is_static: true
     code_samples:
     parameters:
@@ -382,7 +356,6 @@ methods:
 math_operations:
   - operation: "=="
     summary: Checks if two quaternions are equal.
-    description:
     type_a: Quaternion
     type_b: Quaternion
     return_type: boolean

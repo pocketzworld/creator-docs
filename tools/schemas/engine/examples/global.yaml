@@ -4,16 +4,12 @@ summary: |-
   Sample summary.
 description: |-
   Sample description.
-code_samples:
-  - sample1
 
 properties:
   - name: Enum
     type: undefined
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     tags:
     code_samples:
 
@@ -21,8 +17,6 @@ functions:
   - name: delay
     summary: |-
       Sample summary.
-    description: |-
-      Sample description.
     parameters:
       - name: parameter1
         type: number

@@ -10,104 +10,87 @@ constructors:
 properties:
   - name: time
     summary: Retrieves or sets the duration in seconds that the trail takes to fade away completely.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: startWidth
     summary: Determines the starting width of the trail at its base.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: endWidth
     summary: Specifies the ending width of the trail at its tip.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: widthMultiplier
     summary: Scales the width of the trail uniformly.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: autodestruct
     summary: Enables or disables automatic destruction of the trail renderer when it finishes emitting particles.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: emitting
     summary: Indicates whether the trail renderer is currently emitting particles.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: numCornerVertices
     summary: Sets the number of vertices to use for each corner of the trail.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: numCapVertices
     summary: Specifies the number of vertices for each cap of the trail.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: minVertexDistance
     summary: Defines the minimum distance between consecutive vertices in the trail.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: startColor
     summary: Determines the color of the trail at its start.
-    description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: endColor
     summary: Specifies the color of the trail at its end.
-    description:
     is_static: false
     code_samples:
     type: DataType.Color
   - name: positionCount
     summary: Provides the number of positions in the trail's vertex array.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: textureScale
     summary: Sets the tiling of the trail's texture along its length.
-    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: shadowBias
     summary: Adjusts the distance of the shadow cast by the trail from the visible geometry.
-    description:
     is_static: false
     code_samples:
     type: number
   - name: generateLightingData
     summary: Enables or disables the generation of lighting data for the trail.
-    description:
     is_static: false
     code_samples:
     type: boolean
   - name: widthCurve
     summary: Defines a curve that modifies the width of the trail along its length.
-    description:
     is_static: false
     code_samples:
     type: Class.AnimationCurve
 methods:
   - name: SetPosition
     summary: Updates the position of a specific vertex in the trail.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -124,7 +107,6 @@ methods:
         summary: This method does not return a value.
   - name: GetPosition
     summary: Retrieves the position of a vertex in the trail.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -137,7 +119,6 @@ methods:
         summary: The position of the specified vertex.
   - name: Clear
     summary: Clears all positions and resets the trail to its initial state.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -146,7 +127,6 @@ methods:
         summary: This method does not return a value.
   - name: BakeMesh
     summary: Generates a mesh based on the current trail configuration.
-    description:
     is_static: false
     code_samples:
     parameters:
@@ -163,7 +143,6 @@ methods:
         summary: This method does not return a value.
   - name: AddPosition
     summary: Adds a new position to the trail, creating a continuous line.
-    description:
     is_static: false
     code_samples:
     parameters:
