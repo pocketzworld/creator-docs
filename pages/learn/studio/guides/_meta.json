@@ -2,11 +2,14 @@
   "creating-your-first-world": {
     "title": "Creating your First World"
   },
-  "creating-glowing-materials": {
-    "title": "Creating Glowing Materials"
-  },
   "downloading-assets":{
     "title": "Importing Assets"
+  },
+  "publishing":{
+    "title": "Publishing your World"
+  },
+  "scripting":{
+    "title": "Scripting"
   },
   "3d-modeling-and-animation": {
     "title": "3D Modeling and Animation"
