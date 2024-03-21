@@ -3,16 +3,16 @@
     "title": "Creating a Bot"
   },
   "earn-gold-with-a-bot": {
-    "title": "Earn Gold with a Bot"
+    "title": "Earn Gold"
   },
   "change-bot-appearance": {
-    "title": "Change bot appearance"
+    "title": "Change Bot Appearance"
   },
   "local": {
-    "title": "Running the Bot using your machine"
+    "title": "Self Hosting"
   },
   "cloud": {
-    "title": "Running the Bot using the Cloud"
+    "title": "Cloud Hosting"
   },
   "examples": {
     "title": "Examples"
