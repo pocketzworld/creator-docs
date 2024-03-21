@@ -8,7 +8,7 @@ inherits:
 constructors:
   - name: new
     summary: |
-      Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized. 
+      Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized.
     description:
     is_static: false
     code_samples:

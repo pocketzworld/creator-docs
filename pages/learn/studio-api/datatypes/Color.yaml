@@ -1,7 +1,7 @@
 name: Color
 type: datatypes
 summary: |
-  The Color datatype represents an RGBA (Red Green Blue Alpha) color. Colors are represented with numbers between 0 and 1, where 1 signifies the maximum intensity of a particular color component. RGB components define the color while the Alpha component defines the transparency. 
+  The Color datatype represents an RGBA (Red Green Blue Alpha) color. Colors are represented with numbers between 0 and 1, where 1 signifies the maximum intensity of a particular color component. RGB components define the color while the Alpha component defines the transparency.
 
   Provides various functions and predefined colors which ranges from common colors like red, green, blue, white, black, to more specific colors such as yellow, cyan, magenta, gray, etc. Further it also provides functionalities such as linear interpolation between two colors, conversion from/to HSV color model, and generating a grayscale color.
 

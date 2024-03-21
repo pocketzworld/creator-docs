@@ -1,7 +1,7 @@
 name: Input
 type: classes
 summary: |
-  The 'Input' class provides an interface to gather information from various external inputs. 'Input' works like a monitoring station, keeping track of user actions and triggering responses within the game.  
+  The 'Input' class provides an interface to gather information from various external inputs. 'Input' works like a monitoring station, keeping track of user actions and triggering responses within the game.
 
   Each of these properties contain events that are fired when the corresponding action is performed, and game developers can add listeners to these events to trigger custom game logic.
 description:

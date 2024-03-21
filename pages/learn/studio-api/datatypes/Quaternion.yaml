@@ -235,7 +235,8 @@ methods:
       - type: DataType.Quaternion
         summary: An interpolated quaternion rotation.
   - name: LerpUnclamped
-    summary: Interpolates a Quaternion over an arbitrary range.
+    summary: |
+      The 'LerpUnclamped' method is similar to Lerp, but here the interpolation factor isn't clamped to the range [0, 1].
     description:
     is_static: true
     code_samples:
@@ -251,11 +252,10 @@ methods:
       - name: t
         type: number
         default:
-       
-summary: The unclamped interpolation amount.
+        summary: The unclamped interpolation amount.
     returns:
       - type: DataType.Quaternion
-        summary: An interpolated quaternion rotation.
+        summary: Returns a Quaternion that is interpolated over an arbitrary range.
   - name: AngleAxis
     summary: Creates a Quaternion rotation around an axis by a specified angle.
     description:

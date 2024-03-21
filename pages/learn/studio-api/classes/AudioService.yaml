@@ -142,7 +142,6 @@ methods:
         summary: The AudioShader used to play the sound.
       - name: gameObject
         type: Class.GameObject
-        summary: The GameObject to which the sound
         summary: The GameObject to which the sound is attached, allowing it to emit sound from its location in the game world.
       - name: volume
         type: number

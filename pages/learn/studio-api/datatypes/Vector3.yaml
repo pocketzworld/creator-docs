@@ -547,8 +547,7 @@ methods:
         summary: The second Vector3 for comparison.
     returns:
       - type: DataType.Vector3
-        summary
-        : A Vector3 made up of the smallest components from the two input Vector3s.
+        summary: A Vector3 made up of the smallest components from the two input Vector3s.
   - name: Max
     summary: Produces a Vector3 from the largest x, y, and z components of two given Vector3s, useful for defining bounds or extents.
     description:
@@ -609,6 +608,3 @@ math_operations:
     type_b: Vector3
     return_type: Vector3
     code_samples:
-
-
-

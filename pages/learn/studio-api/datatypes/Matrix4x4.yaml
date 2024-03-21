@@ -2,9 +2,10 @@ name: Matrix4x4
 type: datatypes
 summary: |
   Operates as the cornerstone in modeling transformations in 3D space, holding critical data about translations, rotations, and scaling. Think of it as the mathematical blueprint that instructs your 3D objects on how to transform from one state to another – a fundamental tool in creating dynamic and interactive 3D environments. Like a guiding chart for your 3D objects, impacting how they move, turn, and resize in the 3D realm.
+
+  [Matrix4x4 section from the official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.html)
 description:
 code_samples:
-  [Matrix4x4 section from the official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Matrix4x4.html)
 inherits:
 constructors:
   - name: new

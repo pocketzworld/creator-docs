@@ -286,12 +286,10 @@ methods:
     parameters:
       - name: worldBounds
         type: DataType.Bounds
-        summary
-           summary: New world boundaries for the physics simulation.
+        summary: New world boundaries for the physics simulation.
       - name: subdivisions
         type: number
         summary: Number of subdivisions in the broadphase tree.
     returns:
       - type: void
         summary: Does not return a value.
-

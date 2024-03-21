@@ -139,8 +139,7 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-  - name
-    : iso
+  - name: iso
     summary: Simulates the ISO setting of a physical camera, affecting image brightness and noise.
     description:
     is_static: false
@@ -401,7 +400,7 @@ methods:
     parameters:
     returns:
       - type: void
-        summary: 
+        summary:
   - name: ResetTransparencySortSettings
     summary: Reverts the Camera's transparency sort settings to the default state.
     description:
@@ -410,7 +409,7 @@ methods:
     parameters:
     returns:
       - type: void
-        summary: 
+        summary:
   - name: ResetAspect
     summary: Resets the Camera's aspect ratio to the screen's aspect ratio, undoing
         any custom aspect ratio settings.
@@ -639,6 +638,5 @@ methods:
         summary: The Camera to set as current.
     returns:
       - type: void
-        summary: 
+        summary:
 math_operations:
-

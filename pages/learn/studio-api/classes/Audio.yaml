@@ -65,7 +65,7 @@ methods:
         summary: Duration for the volume to return to normal after the specified duration.
     returns:
       - type: void
-        summary: 
+        summary:
   - name: PlayMusic
     summary: Plays music using an AudioShader.
     description: |

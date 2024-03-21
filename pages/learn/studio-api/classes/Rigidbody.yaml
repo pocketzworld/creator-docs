@@ -1,7 +1,7 @@
 name: Rigidbody
 type: classes
 summary: |
-  The Rigidbody component adds physical properties to an object, allowing it to react to forces and torques, making it controlled by the unity physics engine. If you want an object to be affected by gravity, for instance, or if you want to be able to apply forces to it, you would attach a Rigidbody component to it. Rigidbody also keeps track of the object's position and orientation. 
+  The Rigidbody component adds physical properties to an object, allowing it to react to forces and torques, making it controlled by the unity physics engine. If you want an object to be affected by gravity, for instance, or if you want to be able to apply forces to it, you would attach a Rigidbody component to it. Rigidbody also keeps track of the object's position and orientation.
 
   One common application of Rigidbodies is for creating objects that move and interact under physics control. On the other hand, you could also use Rigidbody for objects which move kinematically or which you want to move around the world but want to avoid intersection with other Rigidbodies. For a more detailed understanding, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.html).
 description:

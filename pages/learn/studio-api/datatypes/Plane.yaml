@@ -206,4 +206,4 @@ methods:
     returns:
       - type: DataType.Plane
         summary: Returns a new Plane instance that has been translated.
-math_operations: 
+math_operations:
