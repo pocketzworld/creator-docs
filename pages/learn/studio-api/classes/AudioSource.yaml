@@ -290,8 +290,7 @@ methods:
     is_static: true
     code_samples:
     parameters:
-      - name:
-        clip
+      - name: clip
         type: Class.AudioClip
         summary: The AudioClip to be played.
       - name: position
