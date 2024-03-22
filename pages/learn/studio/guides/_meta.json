@@ -1,12 +1,15 @@
 {
   "creating-your-first-world": {
-    "title": "Creating Your First World"
+    "title": "Creating a World"
+  },
+  "importing-world": {
+    "title": "Importing a World"
   },
   "downloading-assets":{
     "title": "Importing Assets"
   },
-  "publishing":{
-    "title": "Publishing Your World"
+  "publishing-world":{
+    "title": "Publishing a World"
   },
   "scripting":{
     "title": "Scripting"
