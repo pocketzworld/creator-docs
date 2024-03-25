@@ -1,5 +1,14 @@
 {
-  "tic-tac-toe": {
-    "title": "Tic Tac Toe"
+  "multiplayer-button": {
+    "title": "Multiplayer Button"
+  },
+  "multiplayer-dice": {
+    "title": "Multiplayer Dice"
+  },
+  "multiplayer-door": {
+    "title": "Multiplayer Door"
+  },
+  "multiplayer-tic-tac-toe": {
+    "title": "Multiplayer Tic Tac Toe"
   }
 }
