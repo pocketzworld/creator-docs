@@ -3,8 +3,8 @@ In this example we see how to create a 3D Button that runs code on the Client an
 ### How to Create an Interactable Button in Studio
 
 #### Step 1: Create a New Project
-1. Open Studio Hub and create a new project.
-2. Choose a project name and location, then click "Create."
+- Open Studio Hub and create a new project.
+- Choose a project name and location, then click "Create."
 
 #### Step 2: Set Up Button Object
 - In the Hierarchy window, create a new 3D object, such as a cube, to act as your button.
@@ -14,10 +14,10 @@ In this example we see how to create a 3D Button that runs code on the Client an
   - Uncheck "WalkTo" for ease of testing.
 
 #### Step 3: Create Lua Script
-1. In the Project window, navigate to the desired location.
-2. Right-click and select "Create" > "Lua" > "Script."
-3. Name the script (e.g., `buttonscript.lua`).
-4. Set the script type to `Client and Server` in the Inspector.
+- In the Project window, navigate to the desired location.
+- Right-click and select "Create" > "Lua" > "Script."
+- Name the script (e.g., `buttonscript.lua`).
+- Set the script type to `Client and Server` in the Inspector.
 
 #### Step 4: Attach Script to Button
 - Drag and drop the newly created Lua script onto the button object in the Hierarchy window or onto the button's Inspector window.
@@ -58,9 +58,9 @@ end
 ```
 
 #### Step 6: Set Up Virtual Player
-1. Click the "Highrise" toolbar button.
-2. Navigate to `Studio` > `Virtual Player`.
-3. Dock the virtual player next to your game window.
+- Click the "Highrise" toolbar button.
+- Navigate to `Studio` > `Virtual Player`.
+- Dock the virtual player next to your game window.
 
 #### Step 7: Test the Button
 - Hit play in the Unity editor.
