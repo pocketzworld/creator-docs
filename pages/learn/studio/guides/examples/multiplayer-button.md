@@ -1,6 +1,5 @@
 # **Multiplayer Button**
-![image1](/assets/learn/guides/studio/open-studio-hub.png)
-
+In this example we see how to create a 3D Button that runs code on the Client and Server for Multiplayer functionality
 ### How to Create an Interactable Button in Studio
 
 #### Step 1: Create a New Project
