@@ -9,7 +9,7 @@ Life Cycle Functions are special functions that are automatically called at spec
 ![LifeCycle](/assets/learn/guides/studio/lifecycle.png)
 
 **Initialization Events**
-- Initializattion events are called before any updates.
+- Initialization events are called before any updates.
 - The Start function is called before any physics update and before the first frame, while the Awake function is called for each object in the scene when calling up a scene.
 
 - Start and Awake functions for different objects are called in a random order, but all Awake calls are finished before any Start is called.
