@@ -4,5 +4,8 @@
   },
   "script-properties":{
     "title": "Script Properties"
+  },
+  "unity-functions":{
+    "title": "Unity Functions"
   }
 }
