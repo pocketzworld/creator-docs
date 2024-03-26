@@ -55,3 +55,7 @@ In this guide you will learn how to create a basic Lua script and add it to a ga
 ![Console-Output](/assets/learn/guides/studio/console-print.png)
 
 By following these steps, you've successfully created a Lua script in Unity, attached it to a GameObject, and executed it to print "Hello World" in the Unity console. Happy coding!
+
+> 📖
+>For more detailed syntax, please refer to the Lua API Docs
+>https://create.highrise.game/learn/studio/api/classes/LuaBehaviour
