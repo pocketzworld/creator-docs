@@ -4,7 +4,7 @@
 In this guide you will learn how to connect to the built in Unity Lifecycle Functions with your lua script.
 
 ### **What is a Lifecycle Function?**
-Life Cycle Functions are special functions that are automatically called at specific intervals of an Object or Component
+Life Cycle Functions are special functions that are automatically called at specific intervals of an Object's or Component's Lifetime
 
 ![LifeCycle](/assets/learn/guides/studio/lifecycle.png)
 
