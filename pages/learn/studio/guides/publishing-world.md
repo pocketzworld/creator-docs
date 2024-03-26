@@ -3,7 +3,7 @@
 ## **Introduction**
 In this guide you will learn how to publish your world to Highrise.
 
-**Step1: Highrise Create Portal**
+### **Step1: Highrise Create Portal**
 - **Accessing Dashboard:** Navigate to the Highrise Create Portal and proceed to your [Dashboard](https://create.highrise.game/dashboard).
 - **Creating a New World:** Click on [Creations](https://create.highrise.game/dashboard/creations) in the dashboard menu, then select "Create World."
 
@@ -20,7 +20,7 @@ In this guide you will learn how to publish your world to Highrise.
 ![save-world](/assets/learn/guides/studio/save-world.png)
 
 
-**Step2: Unity**
+### **Step2: Unity**
 - **Accessing Project:** Open your project in Unity and ensure you're signed into your Highrise account using the button on the top left corner.
 
 ![before sign in](/assets/learn/guides/studio/before-sign-in.png)    ![after sign in](/assets/learn/guides/studio/after-sign-in.png)
@@ -36,7 +36,7 @@ In this guide you will learn how to publish your world to Highrise.
 
 ![publish-world](/assets/learn/guides/studio/publish-world.png)
 
-**Step3: Monitoring Progress**
+### **Step3: Monitoring Progress**
 
 - **Checking Build Status:** Return to the creations window in the Highrise Create Portal, select your world, then navigate to the "Builds" section.
 - **Viewing Processing:** Here, you can observe your world's processing status as it prepares for publication.
