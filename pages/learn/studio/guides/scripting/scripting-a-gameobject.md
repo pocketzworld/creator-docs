@@ -5,7 +5,6 @@ In this guide you will learn how to create a basic Lua script and add it to a ga
 
 ### **What is a Lua Script?**
 - Lua is the scripting language used for creating dynamic and interactive Highrise Worlds.
-- Lua is a fast, small, safe, gradually typed embeddable scripting language derived from Lua 5.1
 - Learn more about how we use Lua to connect to Unity GameObjects [Here.](https://create.highrise.game/learn/studio/api/classes/LuaBehaviour)
 
 >❗️Caution
