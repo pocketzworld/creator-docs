@@ -1,6 +1,6 @@
 {
-  "basic-scripting":{
-    "title": "Basic Scripting"
+  "scripting-a-gameobject":{
+    "title": "Scripting a GameObject"
   },
   "server-scripting":{
     "title": "Server Scripting"
