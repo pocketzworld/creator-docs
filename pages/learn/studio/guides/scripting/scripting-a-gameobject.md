@@ -20,7 +20,8 @@ In this guide you will learn how to create a basic Lua script and add it to a ga
    - Navigate to **Lua > Script** and select it.
    - Name your script file "HelloWorldScript".
 
-![Create-Script](/assets/learn/guides/studio/create-script.png) ![New-Script](/assets/learn/guides/studio/new-script.png)
+![Create-Script](/assets/learn/guides/studio/create-script.png) 
+![New-Script](/assets/learn/guides/studio/new-script.png)
 
 ### **Step2: Opening the Script in VS Code:**
    - Double-click the script file to open it in Visual Studio Code (VS Code).
@@ -44,11 +45,13 @@ In this guide you will learn how to create a basic Lua script and add it to a ga
    - Search for your Lua script by name ("HelloWorldScript").
    - Alternatively, you can drag your script directly onto the object in the Hierarchy or into the Inspector panel.
 
-   ![Add-Script](/assets/learn/guides/studio/add-comp.png) ![Added-Script](/assets/learn/guides/studio/added-comp.png)
+![Add-Script](/assets/learn/guides/studio/add-comp.png) 
+![Added-Script](/assets/learn/guides/studio/added-comp.png)
 
 ### **Step5: Running the Script:**
    - With the script attached to the GameObject, press **Play** in Unity to run the scene.
    - Click on the **Console** panel to see the output, which should display "Hello World".
+
 ![Console-Output](/assets/learn/guides/studio/console-print.png)
 
 By following these steps, you've successfully created a Lua script in Unity, attached it to a GameObject, and executed it to print "Hello World" in the Unity console. Happy coding!
