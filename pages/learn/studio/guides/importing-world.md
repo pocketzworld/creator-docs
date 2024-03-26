@@ -1,8 +1,5 @@
 # **Importing a World**
 
-## **Introduction**
-Looking to craft your first immersive, virtual world? You're in the right place at the right time! Let's dive into the process of using Studio Hub to generate, illuminate, and test your inaugural creation. It's easier than you think and a lot more fun!
-
 ### **Importing a World**
 1. Setup Studio Hub and the necessary Unity plugins.
 2. Open Studio Hub.
