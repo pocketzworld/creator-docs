@@ -5,10 +5,10 @@
   "serialized-fields":{
     "title": "Serialized Fields"
   },
-  "unity-functions":{
-    "title": "Unity Functions"
-  },
   "gameobjects-and-components":{
     "title": "GameObjects and Components"
+  },
+  "unity-functions":{
+    "title": "Unity Functions"
   }
 }
