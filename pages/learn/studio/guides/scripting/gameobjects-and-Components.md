@@ -82,3 +82,6 @@ end
 
 SpawnNewObject(myGameObject)
 ```
+Now set your Prefab as myGameObject and run your Script.
+
+![Set-Prefab](/assets/learn/guides/studio/set-object.png)
