@@ -18,7 +18,7 @@ local myBool = true
 
 Variables defined this way are not visible in the Inspector.
 To access variables via the Editor they need to be in a `SerializeField` as well as `Typed`
-When you `Type` a Property you have the fundamental types `number` `boolean` `string` as well as Unity's built in Types such as: `GameObject` `Transform` and `Vector3`
+When you `Type` a variable you have the fundamental types `number` `boolean` `string` as well as Unity's built in Types such as: `GameObject` `Transform` and `Vector3`
 ``` lua
 --!SerializeField
 local myNumber : number = 0
