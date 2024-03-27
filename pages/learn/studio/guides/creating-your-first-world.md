@@ -5,7 +5,7 @@ Looking to craft your first immersive, virtual world? You're in the right place 
 
 ### **Step 1: Creating a New World**
 1. Download [Unity Hub](https://unity3d.com/get-unity/download), the key to utilizing Highrise Studio Hub.
-2. Launch Studio Hub. You will be prompted to install the correct Unity version if needed.
+2. Launch [Studio Hub](https://createforum.highrise.game/t/highrise-studio-hub-0-3-0/887). You will be prompted to install the correct Unity version if needed.
 3. Click "New Project" and opt for the Basic Template.
 
 ![open studio hub](/assets/learn/guides/studio/open-studio-hub.png)
@@ -20,12 +20,12 @@ Looking to craft your first immersive, virtual world? You're in the right place 
 
 ### **Step 2: Adding Assets and Scripts**
 There are many ways to import assets like textures and meshes into Unity. Here are a few common methods:
-- **Asset Store:** Unity's built-in Asset Store is a treasure trove of ready-made assets. To access, simply click on `Window > Asset Store`, select your chosen asset, and import directly into your project.
+- **Asset Store:** Unity's built-in Asset Store is a treasure trove of ready-made assets. To access, simply click on `Window > Asset Store`, then search online to select your chosen asset, and import directly into your project.
 - **Manual Import:** To import locally stored files, right-click within the Project panel, select `Import New Asset`, and browse to your desired file.
 - **Drag & Drop:** An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel. 
 - ---- Note that Highrise Studio does not support adding new C# runtime scripts.
 
-In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua > Script`, and name your script.
+In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua > Script`, and name your script. To get started scripting with Lua for Highrise check out [Scripting a GameObject](https://create.highrise.game/learn/studio/guides/scripting/scripting-a-gameobject)
 
 ![add-lua-script](/assets/learn/guides/studio/add-lua-script.png)
 
@@ -56,7 +56,7 @@ In order to create a new Lua script to harness the power of Highrise Studio, you
 ### **Step 5: Bake your lights and Navmesh**
 After laying out your **Lights** and **Objects**:
 1. Select the "NavMesh" Object in the Hierarchy
-2. Click **Bake** in the NavMeshSurface component in the Inspector Panel. *this will update the navigation map in your room*
+2. Click **Bake** in the NavMeshSurface component in the Inspector Panel. *this will update the navigation map in your world that outlines where characters can walk*
 3. Make sure all Lights and stationary Meshes are marked **Static** or **Baked**
 4. In the Lighting Panel select **Generate Lighting** to calculate your new Lights and Shadows.
 
