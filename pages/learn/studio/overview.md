@@ -28,7 +28,7 @@ Highrise Studio boasts a wide array of features designed to support the developm
    - Spend some time exploring the Highrise Studio interface. Check out the different panels, toolbars, and settings available to you.
 
 5. **Learn Lua Scripting:**
-   - Basic knowledge of Lua is essential for adding functionality to your games. Many resources and tutorials are available online to help you learn Lua scripting for Highrise. Here's a great resource to get started: (https://tylerneylon.com/a/learn-lua/)
+   - Basic knowledge of Lua is essential for adding functionality to your games. Here's a great resource to get started with Lua scripting for Highrise.: [Scripting a GameObject](https://create.highrise.game/learn/studio/guides/scripting/scripting-a-gameobject)
 
 6. **Test and Publish Your Game:**
    - Use the built-in testing features to playtest your game. Once you're satisfied with your creation, publish it to the Highrise platform for others to enjoy.
