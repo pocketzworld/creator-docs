@@ -2,8 +2,11 @@
   "scripting-a-gameobject":{
     "title": "Scripting a GameObject"
   },
-  "script-properties":{
-    "title": "Script Properties"
+  "serialized-fields":{
+    "title": "Serialized Fields"
+  },
+  "gameobjects-and-components":{
+    "title": "GameObjects and Components"
   },
   "unity-functions":{
     "title": "Unity Functions"

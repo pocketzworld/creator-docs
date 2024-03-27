@@ -1,10 +1,10 @@
-# **Script Properties**
+# **Serialized Fields**
 
 ## **Introduction**
-In this guide you will learn how to create script properties and how to expose them to the Editor.
+In this guide you will learn how to create Serialized Fields to expose your variables to the Editor.
 
-### **What is a Property?**
-A Property is what we call a Lua variable that has been Serialized and Typed, making it avalible to control in the Editor.
+### **What is a Serialized Field?**
+A Serialized Field is what we call a Lua variable that has been Serialized and Typed, making it avalible to control in the Editor.
 
 ![Properties](/assets/learn/guides/studio/properties.png)
 
