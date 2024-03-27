@@ -85,3 +85,11 @@ SpawnNewObject(myGameObject)
 Now set your Prefab as myGameObject and run your Script.
 
 ![Set-Prefab](/assets/learn/guides/studio/set-object.png)
+
+>Click the links below to learn more about Unity GameObjects and Components
+
+[Creating GameObjects](https://docs.unity3d.com/2020.3/Documentation/ScriptReference/Object.Instantiate.html)
+
+[Destroying GameObjects](https://docs.unity3d.com/2020.3/Documentation/ScriptReference/Object.Destroy.html)
+
+[Using components](https://docs.unity3d.com/2022.3/Documentation/Manual/UsingComponents.html)
