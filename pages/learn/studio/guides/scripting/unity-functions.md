@@ -23,9 +23,6 @@ Life Cycle Functions are special functions that are automatically called at spec
 - Deconstruction events are called in all activated objects in a scene.
 - The OnDisable function is called when a given object is disabled or is inactive.
 
->❗️ALERT
->Unlike Unity, Highrise does not have an Awake function. Code that you would typically place in the Awake function is placed within the Lua script outside of any function, which Highrise will execute immediately when the script loads.
-
 ### Below is an example script with supported LifeCycle functions:
 
 ```lua
