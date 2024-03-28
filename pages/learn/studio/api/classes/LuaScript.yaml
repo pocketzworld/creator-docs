@@ -8,13 +8,13 @@ inherits:
   - Class.Object
 constructors:
 properties:
-  - name: PropertyCount
+  - name: propertyCount
     summary: |
 
     is_static: false
     code_samples:
     type: number
-  - name: RunsOnServer
+  - name: runsOnServer
     summary: |
 
     is_static: false

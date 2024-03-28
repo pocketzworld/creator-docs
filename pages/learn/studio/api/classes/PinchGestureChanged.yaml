@@ -11,43 +11,43 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: DeltaPosition
+  - name: deltaPosition
     summary: |
       The 'DeltaPosition' property provides the change in position of the pinch from the last frame to the current one. This helps track the motion vector of the pinch in real time.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: StartPosition
+  - name: startPosition
     summary: |
       The 'StartPosition' property keeps the coordinates of the initial pinch position as a reference. It helps calculate the relative movement from the very start of the pinch gesture.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Position
+  - name: position
     summary: |
       The 'Position' property indicates the current position of the pinch gesture. As the fingers move during the pinch, this property gets updated with the latest position.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Direction
+  - name: direction
     summary: |
       The 'Direction' attribute offers a directional vector that charts the directional movement of the pinch. It helps direct actions based on the pinch gesture, like zooming towards a specific direction.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Distance
+  - name: distance
     summary: |
       The 'Distance' property measures the gap between the two fingers involved in the pinch. This property is crucial in scaling operations where the amount of zoom is directly proportional to the pinch's distance covered.
     is_static: false
     code_samples:
     type: number
-  - name: Scale
+  - name: scale
     summary: |
       The 'Scale' property calculates the scaling factor based on the covered 'Distance' of the pinch. It's essentially the amount of magnification or reduction applied when the pinch gesture is used to zoom in or out.
     is_static: false
     code_samples:
     type: number
-  - name: IsPinching
+  - name: isPinching
     summary: |
       The 'IsPinching' property is a boolean flag that denotes if the pinch gesture is currently occurring. It can be used to initiate or cease operations as long as the pinch gesture is active.
     is_static: false

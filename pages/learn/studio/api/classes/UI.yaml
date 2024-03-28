@@ -1,0 +1,60 @@
+name: UI
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: EmotesOpened
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: EmotesClosed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: EmoteSelected
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+methods: 
+  - name: OpenMiniProfile
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OpenPopup
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: ve
+        type: Class.UIView
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+math_operations: 

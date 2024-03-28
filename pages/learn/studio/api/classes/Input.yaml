@@ -1,0 +1,88 @@
+name: Input
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: isAltPressed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isMouseInput
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: client
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.GameClient
+  - name: Tapped
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: LongPressBegan
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: LongPressContinue
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: LongPressEnded
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: PinchOrDragBegan
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: PinchOrDragChanged
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: PinchOrDragEnded
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: MouseWheel
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+methods: 
+math_operations: 
