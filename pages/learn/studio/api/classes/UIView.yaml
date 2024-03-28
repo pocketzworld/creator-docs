@@ -1,100 +1,100 @@
 name: UIView
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
+constructors:
   - name: new
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.UIView
         summary:
-properties: 
+properties:
   - name: isDisposed
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: sortOrder
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: isBound
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isDisplayed
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isRunningAsync
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isStale
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: modalBlockerContainer
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: Class.VisualElement
-methods: 
+methods:
   - name: Reset
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: Dispose
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: BindHierarchy
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
@@ -104,11 +104,11 @@ methods:
         summary:
   - name: DisposeChildren
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
@@ -118,11 +118,11 @@ methods:
         summary:
   - name: ClearAndDisposeChildren
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
@@ -130,4 +130,4 @@ methods:
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:

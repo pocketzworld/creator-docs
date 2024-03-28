@@ -4,9 +4,9 @@ summary: |
   [Unity's Screen Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: width
     summary: |
       [Unity's Screen.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-width.html)
@@ -56,5 +56,5 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
-math_operations: 
+methods:
+math_operations:

@@ -4,9 +4,9 @@ summary: |
   [Unity's Physics Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: gravity
     summary: |
       [Unity's Physics.gravity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics-gravity.html)
@@ -154,14 +154,14 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
+methods:
   - name: Raycast
     summary: |
       [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: ray
         type: DataType.Ray
         default:
@@ -183,7 +183,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: ray
         type: DataType.Vector3
         default:
@@ -205,7 +205,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: collider1
         type: Class.Collider
         default:
@@ -227,7 +227,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: layer1
         type: number
         default:
@@ -249,7 +249,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: layer1
         type: number
         default:
@@ -267,7 +267,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: collider1
         type: Class.Collider
         default:
@@ -285,7 +285,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: step
         type: number
         default:
@@ -299,7 +299,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -309,7 +309,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: point
         type: DataType.Vector3
         default:
@@ -335,7 +335,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: worldBounds
         type: DataType.Bounds
         default:
@@ -347,4 +347,4 @@ methods:
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:
