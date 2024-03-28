@@ -5,20 +5,12 @@ summary: |
 description:
 code_samples: |
   ```lua
-    local localAvatarConnection = nil
-    localAvatarConnection = client.localPlayer.AvatarInstantiated:Connect(function(player, avatar)
-      OnLocalAvatar(player, avatar)
-    end)
-
-    function OnLocalAvatar(player, avatar)
-      localAvatarConnection:Disconnect()
-      localAvatarConnection = nil
-
-      print("The local user's avatar has finished loading and has now spawned!")
-    end
-
-    client.PlayerConnected:Connect(function(player)
-      print("Another player has connected named " .. player.name)
+    scene.PlayerJoined:Connect(function(scene, player)
+      player.CharacterChanged:Connect(function(player, newCharacter, oldCharacter)
+        if not oldCharacter then
+          -- Player just got a new character! Do any setup here
+        end
+      end)
     end)
   ```
 inherits:
@@ -40,34 +32,21 @@ properties:
       - ClientAndServer
     code_samples:
     type: number
-  - name: isLocal
+  - name: character
     summary: |
-      The 'isLocal' property is whether or not this Player is the local user.
-    is_static: false
-    tags:
-    code_samples:
-    type: number
-  - name: avatar
-    summary: |
-      This property gives you access to the local player's avatar. It allows you to manipulate the avatar's properties and behavior, such as changing its appearance or controlling its movement.
+      This property gives you access to the player's. It allows you to manipulate the character's properties and behavior, such as changing its appearance or controlling its movement.
+
+      Only server scripts can set the character
     is_static: false
     tags:
       - ClientAndServer
     code_samples:
-    type: Class.Avatar
-  - name: AvatarInstantiated
+    type: Class.Character
+  - name: CharacterChanged
     summary: |
-      An event that is triggered when the local player's avatar is instantiated. This is useful for performing actions that require the avatar to be fully loaded and ready to be manipulated.
-    is_static: false
-    tags:
-      - ClientAndServer
-    parameters:
-    code_samples:
-    returns:
-    type: Class.Event
-  - name: AvatarDestroyed
-    summary: |
-      An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
+      An event that is triggered when the player's character is changed. This is useful for performing actions that need to be executed when the player's character is updated, including from nil to anything.
+
+      Parameters are Player player, Character newCharacter, Character oldCharacter
     is_static: false
     tags:
       - ClientAndServer
@@ -76,23 +55,4 @@ properties:
     returns:
     type: Class.Event
 methods:
-  - name: InstantiateAvatar
-    summary: |
-      An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
-    is_static: false
-    tags:
-      - ServerOnly
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        default:
-        summary: The position where the avatar should be instantiated.
-      - name: rotation
-        type: DataType.Vector3
-        default:
-        summary: The euler angles of the avatar when it is instantiated.
-    code_samples:
-    returns:
-      - type: Class.Avatar
-        summary: This method fires off an Event indicating that a player has just disconnected from the game.
 math_operations:
