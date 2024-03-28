@@ -1,0 +1,40 @@
+name: Scene
+type: classes
+summary: |
+  The 'Scene' class in the scene or 'game area'. It manages events related to player interactions with the scene and allows you to section and differentiate portions of your world into smaller chunks.
+description:
+code_samples:
+constructors:
+properties:
+  - name: PlayerJoined
+    summary: |
+      An event triggered when a player joins the scene.
+    is_static: false
+    tags:
+      - ClientAndServer
+    code_samples:
+    type: Class.Event
+  - name: PlayerLeft
+    summary: |
+      An event triggered when a player leaves the scene.
+    is_static: false
+    tags:
+      - ClientAndServer
+    code_samples:
+    type: Class.Event
+  - name: id
+    summary: |
+      The unique identifier of the scene.
+    is_static: false
+    tags:
+      - ClientAndServer
+    code_samples:
+    type: number
+  - name: mainCamera
+    summary: |
+      The main camera associated with the scene.
+    is_static: false
+    code_samples:
+    type: number
+methods:
+math_operations:
