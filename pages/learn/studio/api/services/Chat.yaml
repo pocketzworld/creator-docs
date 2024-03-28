@@ -1,0 +1,186 @@
+name: Chat
+type: classes
+summary: |
+  The Chat service provides functionality for creating and managing chat channels to dictate how players communicate with each other, as well as how receiving messages work in the game.
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: allChannels
+    summary: |
+      All chat channels that exist in the game.
+    description:
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples:
+    type: ChannelInfo[]
+  - name: allJoinedChannels
+    summary: |
+      All chat channels that the player has joined.
+    description:
+    is_static: false
+    code_samples:
+    type: ChannelInfo[]
+  - name: TextMessageReceivedHandler
+    summary: |
+      An event that is fired when a client receives a text message. If this event has no connected listeners, the text message will display normally.
+
+      If you connect to this event to do custom messaging logic, use the `DisplayTextMessage` method to send the final results.
+
+      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
+  - name: WhisperReceivedHandler
+    summary: |
+      An event that is fired when a client receives a whisper. If this event has no connected listeners, the whisper will display normally.
+
+      If your game does not allow whispering at certain times or only with certain people, this event should be connected to and use the `DisplayTextMessage` method only when whispering is allowed.
+
+      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
+  - name: PlayerJoinedChannel
+    summary: |
+      An event that is fired by the server to all clients in the same channel as the player that joined. Class.ChannelInfo and Class.Player are passed as the parameters.
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
+  - name: PlayerLeftChannel
+    summary: |
+      An event that is fired by the server to all clients in the same channel as the player that left. Class.ChannelInfo and Class.Player are passed as the parameters.
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
+  - name: ChannelDestroyed
+    summary: |
+      An event that is fired by the server to all clients when a channel is destroyed. Class.ChannelInfo is passed as the parameter.
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
+methods:
+  - name: CreateChannel
+    summary: |
+      Creates a new channel. If the channel already exists, it will return the existing channel.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: channelName
+        type: string
+        default:
+        summary:
+      - name: allowText
+        type: boolean
+        default:
+        summary:
+      - name: allowVoice
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: Class.ChannelInfo
+        summary:
+  - name: DestroyChannel
+    summary: |
+      Destroys the given channel, removing all players from it.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddPlayerToChannel
+    summary: |
+      Adds the given player to the given channel.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RemovePlayerFromChannel
+    summary: |
+      Removes the given player from the given channel.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetDefaultChannel
+    summary: |
+      Sets the default channel for the player. This will be the default channel text messages are sent to.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: channelInfo
+        type: Class.ChannelInfo
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: DisplayTextMessage
+    summary: |
+      Displays the given text message to the channel's chat log with a speech bubble over the given player's head.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        default:
+        summary:
+      - name: from
+        type: Class.Player
+        default:
+        summary:
+      - name: message
+        type: string
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:
