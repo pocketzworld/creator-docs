@@ -7,19 +7,19 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: Position
+  - name: position
     summary: |
 
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: StartTime
+  - name: startTime
     summary: |
 
     is_static: false
     code_samples:
     type: number
-  - name: Progress
+  - name: progress
     summary: |
 
     is_static: false

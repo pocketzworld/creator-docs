@@ -1,0 +1,40 @@
+name: WorldScene
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: PlayerJoined
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: PlayerLeft
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.LuaEvent
+  - name: sceneId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: mainCamera
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Camera
+methods: 
+math_operations: 

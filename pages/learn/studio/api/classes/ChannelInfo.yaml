@@ -1,0 +1,46 @@
+name: ChannelInfo
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: players
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: UInt32[]
+  - name: name
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: allowsText
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: allowsVoice
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isWhisperChannel
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+math_operations: 

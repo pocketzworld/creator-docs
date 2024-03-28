@@ -1,0 +1,31 @@
+name: LuaBindingsTest
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.LuaBindingsTest
+        summary:
+properties: 
+methods: 
+  - name: InstanceFunction
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

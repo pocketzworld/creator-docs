@@ -1,0 +1,67 @@
+name: AnimationEvent
+type: classes
+summary: |
+  [Unity's AnimationEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: stringParameter
+    summary: |
+      [Unity's AnimationEvent.stringParameter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-stringParameter.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: floatParameter
+    summary: |
+      [Unity's AnimationEvent.floatParameter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-floatParameter.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: intParameter
+    summary: |
+      [Unity's AnimationEvent.intParameter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-intParameter.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: objectReferenceParameter
+    summary: |
+      [Unity's AnimationEvent.objectReferenceParameter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-objectReferenceParameter.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Object
+  - name: functionName
+    summary: |
+      [Unity's AnimationEvent.functionName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-functionName.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: time
+    summary: |
+      [Unity's AnimationEvent.time Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-time.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isFiredByLegacy
+    summary: |
+      [Unity's AnimationEvent.isFiredByLegacy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-isFiredByLegacy.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isFiredByAnimator
+    summary: |
+      [Unity's AnimationEvent.isFiredByAnimator Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-isFiredByAnimator.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+math_operations: 
