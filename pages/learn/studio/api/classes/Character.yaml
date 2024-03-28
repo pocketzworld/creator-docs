@@ -51,12 +51,12 @@ properties:
     summary: An event that is triggered when the character's state changes.
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: MoveFinished
     summary: An event that is triggered when the character finishes moving to a destination.
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
 methods:
   - name: SetIdle
     summary: Sets the character to an idle state.

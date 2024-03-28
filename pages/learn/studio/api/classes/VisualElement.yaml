@@ -4,19 +4,19 @@ summary: |
   [Unity's VisualElement Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+constructors:
   - name: new
     summary: |
       [Unity's VisualElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-ctor.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.VisualElement
         summary:
-properties: 
+properties:
   - name: viewDataKey
     summary: |
       [Unity's VisualElement.viewDataKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-viewDataKey.html)
@@ -129,14 +129,14 @@ properties:
     is_static: true
     code_samples:
     type: string
-methods: 
+methods:
   - name: Q
     summary: |
       [Unity's VisualElement.Q Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Q.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: name
         type: string
         default:
@@ -146,31 +146,31 @@ methods:
         summary:
   - name: RegisterCallback
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
   - name: RegisterPressCallback
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: RegisterLongPressCallback
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -180,7 +180,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -190,7 +190,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: boolean
         default:
@@ -204,7 +204,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -214,7 +214,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: localPoint
         type: DataType.Vector2
         default:
@@ -228,7 +228,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: rectangle
         type: DataType.Rect
         default:
@@ -242,7 +242,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -252,7 +252,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: className
         type: string
         default:
@@ -266,7 +266,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: className
         type: string
         default:
@@ -280,7 +280,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: className
         type: string
         default:
@@ -294,7 +294,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: className
         type: string
         default:
@@ -312,7 +312,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: cls
         type: string
         default:
@@ -326,7 +326,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: child
         type: Class.VisualElement
         default:
@@ -340,7 +340,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -358,7 +358,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
@@ -372,7 +372,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -386,7 +386,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -396,7 +396,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: index
         type: number
         default:
@@ -410,7 +410,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
@@ -424,7 +424,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -434,7 +434,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -444,7 +444,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: sibling
         type: Class.VisualElement
         default:
@@ -458,7 +458,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: sibling
         type: Class.VisualElement
         default:
@@ -472,7 +472,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
@@ -482,7 +482,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: child
         type: Class.VisualElement
         default:
@@ -496,7 +496,7 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: other
         type: Class.VisualElement
         default:
@@ -504,4 +504,4 @@ methods:
     returns:
       - type: Class.VisualElement
         summary:
-math_operations: 
+math_operations:

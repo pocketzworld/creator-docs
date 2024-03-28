@@ -4,9 +4,9 @@ summary: |
   [Unity's Mathf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: PI
     summary: |
       [Unity's Mathf.PI Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-PI.html)
@@ -49,14 +49,14 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
+methods:
   - name: ClosestPowerOfTwo
     summary: |
       [Unity's Mathf.ClosestPowerOfTwo Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.ClosestPowerOfTwo.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -70,7 +70,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -84,7 +84,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -98,7 +98,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -112,7 +112,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -126,7 +126,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: kelvin
         type: number
         default:
@@ -140,7 +140,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
@@ -158,7 +158,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: x
         type: number
         default:
@@ -172,7 +172,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -186,7 +186,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -200,7 +200,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -214,7 +214,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -228,7 +228,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -242,7 +242,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -256,7 +256,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: y
         type: number
         default:
@@ -274,7 +274,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -288,7 +288,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -302,7 +302,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -320,7 +320,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -338,7 +338,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -356,7 +356,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: power
         type: number
         default:
@@ -370,7 +370,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -388,7 +388,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -402,7 +402,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -416,7 +416,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -430,7 +430,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -444,7 +444,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -458,7 +458,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -472,7 +472,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -486,7 +486,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: f
         type: number
         default:
@@ -500,7 +500,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -522,7 +522,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -536,7 +536,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -558,7 +558,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -580,7 +580,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -602,7 +602,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: current
         type: number
         default:
@@ -624,7 +624,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: current
         type: number
         default:
@@ -646,7 +646,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: from
         type: number
         default:
@@ -668,7 +668,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: number
         default:
@@ -690,7 +690,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -708,7 +708,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -726,7 +726,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -744,7 +744,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: a
         type: number
         default:
@@ -766,7 +766,7 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: current
         type: number
         default:
@@ -784,8 +784,8 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: string
         summary:
-math_operations: 
+math_operations:

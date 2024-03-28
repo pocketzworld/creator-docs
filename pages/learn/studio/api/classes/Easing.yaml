@@ -1,20 +1,20 @@
 name: Easing
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+constructors:
+properties:
+methods:
   - name: Quadratic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -24,11 +24,11 @@ methods:
         summary:
   - name: Cubic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -38,11 +38,11 @@ methods:
         summary:
   - name: Back
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -56,11 +56,11 @@ methods:
         summary:
   - name: Circle
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -70,11 +70,11 @@ methods:
         summary:
   - name: Exponential
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -88,11 +88,11 @@ methods:
         summary:
   - name: Sine
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -102,11 +102,11 @@ methods:
         summary:
   - name: CubicBezier
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -132,11 +132,11 @@ methods:
         summary:
   - name: Bounce
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -154,11 +154,11 @@ methods:
         summary:
   - name: Elastic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: t
         type: number
         default:
@@ -174,4 +174,4 @@ methods:
     returns:
       - type: number
         summary:
-math_operations: 
+math_operations:

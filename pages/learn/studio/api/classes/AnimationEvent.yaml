@@ -4,9 +4,9 @@ summary: |
   [Unity's AnimationEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: stringParameter
     summary: |
       [Unity's AnimationEvent.stringParameter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationEvent-stringParameter.html)
@@ -63,5 +63,5 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-methods: 
-math_operations: 
+methods:
+math_operations:

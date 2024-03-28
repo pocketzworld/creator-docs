@@ -1,62 +1,62 @@
 name: Chat
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: allJoinedChannels
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: ChannelInfo[]
   - name: TextMessageReceivedHandler
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: WhisperReceivedHandler
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: PlayerJoinedChannel
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: PlayerLeftChannel
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
   - name: ChannelDestroyed
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.LuaEvent
-methods: 
+methods:
   - name: SetDefaultChannel
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: channelInfo
         type: Class.ChannelInfo
         default:
@@ -66,11 +66,11 @@ methods:
         summary:
   - name: DisplayTextMessage
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: channel
         type: Class.ChannelInfo
         default:
@@ -86,4 +86,4 @@ methods:
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:

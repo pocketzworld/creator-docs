@@ -32,25 +32,25 @@ properties:
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressBegan
     summary: |
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressContinue
     summary: |
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressEnded
     summary: |
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragBegan
     summary: |
       The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.
