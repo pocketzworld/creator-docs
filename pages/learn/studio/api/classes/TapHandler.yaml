@@ -8,7 +8,7 @@ inherits:
   - Class.Behaviour
 constructors:
 properties:
-  - name: Tapped
+  - name: tapped
     summary: |
 
     is_static: false
@@ -19,13 +19,13 @@ properties:
       end)
       ```
     type: Class.Event
-  - name: MoveTo
+  - name: moveTo
     summary: |
 
     is_static: false
     code_samples:
     type: boolean
-  - name: Distance
+  - name: distance
     summary: |
 
     is_static: false

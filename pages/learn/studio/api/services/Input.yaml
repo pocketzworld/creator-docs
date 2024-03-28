@@ -9,19 +9,19 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: IsAltPressed
+  - name: isAltPressed
     summary: |
       The 'IsAltPressed' property indicates if the Alt key is currently being pressed on the keyboard. This can be useful for creating keyboard shortcuts or alternate modes within the game.
     is_static: false
     code_samples:
     type: boolean
-  - name: IsMouseInput
+  - name: isMouseInput
     summary: |
       The 'IsMouseInput' property helps to detect whether a mouse device is providing input. false == touch input
     is_static: false
     code_samples:
     type: boolean
-  - name: Client
+  - name: client
     summary: |
 
     is_static: false

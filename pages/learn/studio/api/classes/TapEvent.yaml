@@ -7,13 +7,13 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: Position
+  - name: position
     summary: |
 
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: StartFrame
+  - name: startFrame
     summary: |
 
     is_static: false

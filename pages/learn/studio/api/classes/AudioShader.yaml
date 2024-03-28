@@ -9,13 +9,13 @@ inherits:
   - Class.Object
 constructors:
 properties:
-  - name: IsMuted
+  - name: isMuted
     summary: Indicates whether the audio is currently muted.
     description: This property allows developers to check or set the muted state of the audio. When set to `true`, the audio will not play.
     is_static: false
     code_samples:
     type: boolean
-  - name: SpatialRange
+  - name: spatialRange
     summary: Defines the range in which the audio can be heard.
     description: This property sets the maximum distance at which the audio is audible. Beyond this range, the audio volume decreases to silence, simulating spatial audio effects.
     is_static: false

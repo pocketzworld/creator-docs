@@ -11,37 +11,37 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: DeltaPosition
+  - name: deltaPosition
     summary: |
       The 'DeltaPosition' property captures the change in position of the pinch gesture from the previous frame to the end frame. This gives the final motion vector of the pinch gesture.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: StartPosition
+  - name: startPosition
     summary: |
       The 'StartPosition' property stores the initial position where the pinch gesture started, providing a reference point to calculate the total movement when the pinch ends.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Position
+  - name: position
     summary: |
       The 'Position' property holds the final position of the pinch gesture right before it concluded. It's the last recorded position of the pinch.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Velocity
+  - name: velocity
     summary: |
       The 'Velocity' property calculates the speed of the pinch gesture based on its distance and time. This is beneficial when the effect of the pinch gesture is influenced by its speed.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Distance
+  - name: distance
     summary: |
       The 'Distance' property represents the total gap between the two touch points in the pinch, from the start till the end. This measures the full spread of a pinch gesture.
     is_static: false
     code_samples:
     type: number
-  - name: Scale
+  - name: scale
     summary: |
       The 'Scale' property computes the final scaling factor considering the overall distance the pinch gesture covered. It comes in handy when applying the final touches in zoom or scale interaction based on pinch gesture.
     is_static: false

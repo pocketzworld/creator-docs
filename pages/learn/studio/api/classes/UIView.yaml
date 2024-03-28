@@ -1,0 +1,133 @@
+name: UIView
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.VisualElement
+constructors:
+  - name: new
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.UIView
+        summary:
+properties:
+  - name: isDisposed
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: sortOrder
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isBound
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isDisplayed
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isRunningAsync
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isStale
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: modalBlockerContainer
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    type: Class.VisualElement
+methods:
+  - name: Reset
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: BindHierarchy
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisposeChildren
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ClearAndDisposeChildren
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

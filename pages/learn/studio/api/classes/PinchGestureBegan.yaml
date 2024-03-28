@@ -11,43 +11,43 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: DeltaPosition
+  - name: deltaPosition
     summary: |
       The 'DeltaPosition' property holds the change in position from the last frame to the current one. It gives the motion vector of the pinch in the context of the screen space.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: StartPosition
+  - name: startPosition
     summary: |
       The 'StartPosition' property marks the initial position where the pinch gesture began. This serves as the reference point for further motion of the pinch.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Position
+  - name: position
     summary: |
       The 'Position' refers to the current position of the pinch gesture. This property updates in real-time as the pinch gesture moves.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Direction
+  - name: direction
     summary: |
       The 'Direction' property provides a directional vector signifying the direction of the pinch gesture. It senses the shifting orientation as the fingers move while pinching.
     is_static: false
     code_samples:
     type: DataType.Vector2
-  - name: Distance
+  - name: distance
     summary: |
       The 'Distance' property computes the distance between the two touch points in a pinch. This information often plays a crucial role while performing actions like zooming where the level of zoom is determined by how much distance is covered in the pinch.
     is_static: false
     code_samples:
     type: number
-  - name: Scale
+  - name: scale
     summary: |
       The 'Scale' property calculates the scaling factor based on the 'Distance' property. This scaling factor is typically used to resize objects according to the pinch gesture.
     is_static: false
     code_samples:
     type: number
-  - name: IsPinching
+  - name: isPinching
     summary: |
       The 'IsPinching' property is a boolean that indicates whether a pinch gesture is currently in progress. This can be used to trigger or halt certain actions in response to the pinch gesture's state.
     is_static: false
