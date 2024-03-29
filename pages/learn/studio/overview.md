@@ -4,6 +4,15 @@
 
 Highrise Studio is the official development environment for creating games and experiences on the Highrise platform. It provides a comprehensive set of tools for developers to design, build, and publish games that can be played by users across the globe on various devices. Highrise Studio's intuitive interface and powerful features make it accessible for beginners and professional developers alike.
 
+## Overview
+
+Highrise Studio consists of three components:
+
+- **Studio Hub:** The centralized launch point for all versions of the Highrise Studio Package and Unity Editor. It facilitates access to Highrise services and management of project templates and samples. 
+- **Studio Package:** This is the core of Highrise Studio and is what enables creators to build Worlds and publish to Highrise. It is a core collection of assets, tools, and plugins running on top of the Unity Editor.
+- **Studio Tools:** VSCode extension. This adds syntax highlighting and autocompletion to support the Highrise Studio API.
+
+
 ## Key Features
 
 Highrise Studio boasts a wide array of features designed to support the development of immersive and interactive 3D experiences:
