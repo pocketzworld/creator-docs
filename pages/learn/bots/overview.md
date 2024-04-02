@@ -1,4 +1,4 @@
-# Highrise Bots Overview
+   # Highrise Bots Overview
 
 ## Introduction
 
@@ -16,7 +16,7 @@ Highrise bots can perform various functions, including but not limited to:
 ## Creating a Highrise Bot
 
 1. **Create a Bot Account:**
-   - Visit the Highrise Create Portal (https://create.highrise.game/dashboard/credentials/api-keys).
+   - [Visit the Highrise Create Portal](https://create.highrise.game/dashboard/credentials/api-keys).
    - Click on "Create Bot" give it a name, and create the bot.
 
 2. **Develop Your Bot:**
