@@ -26,11 +26,16 @@ In this example we see how to create a 3D Button that runs code on the Client an
 - Double-click on the Lua script in the Project window to open it.
 - Write the following code inside the script:
 
+>Note:  
+>When creating a `Client/Server` lua script, you have access to two versions of the main Event Functions: `Client/Server` - `Awake` `Start` `Update`.  
+>Fore example: `ClientAwake` and `ServerAwake` are the same LifeCycle Function;  
+>However `ClientAwake` runs on the `Client` and `ServerAwake` runs on the `Server`.
+
 ```lua
 local buttonTapRequest = Event.new("ButtonTapRequest")
 local buttonTapEvent = Event.new("ButtonTapEvent")
 
-function Client()
+function self:ClientAwake()
     self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
         -- Insert code to execute locally when the button is tapped
         buttonTapRequest:FireServer() -- Send a Request to the Server
@@ -44,16 +49,10 @@ function Client()
     end)
 end
 
-function Server()
+function self:ServerAwake()
     buttonTapRequest:Connect(function()
         buttonTapEvent:FireAllClients() -- Send an Event to all Clients
     end)
-end
-
-if server then
-    Server()
-else
-    Client()
 end
 ```
 
