@@ -28,7 +28,7 @@ In this example we see how to create a 3D Button that runs code on the Client an
 
 >Note:  
 >When creating a `Client/Server` lua script, you have access to two versions of the main Event Functions: `Client/Server` - `Awake` `Start` `Update`.  
->Fore example: `ClientAwake` and `ServerAwake` are the same LifeCycle Function;  
+>For example: `ClientAwake` and `ServerAwake` are the same LifeCycle Function;  
 >However `ClientAwake` runs on the `Client` and `ServerAwake` runs on the `Server`.
 
 ```lua
