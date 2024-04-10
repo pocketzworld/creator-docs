@@ -10,5 +10,20 @@
   },
   "unity-functions":{
     "title": "Unity Functions"
+  },
+  "triggers":{
+    "title": "Triggers"
+  },
+  "taphandlers":{
+    "title": "Tap Handlers"
+  },
+  "client-and-server-scripts":{
+    "title": "Client and Server Interaction"
+  },
+  "player-character-events":{
+    "title": "Player and Character Events"
+  },
+  "network-values":{
+    "title": "Network Values"
   }
 }
