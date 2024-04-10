@@ -10,5 +10,11 @@
   },
   "unity-functions":{
     "title": "Unity Functions"
+  },
+  "taphandlers":{
+    "title": "Tap Handlers"
+  },
+  "client-and-server-scripts":{
+    "title": "Client and Server Interaction"
   }
 }
