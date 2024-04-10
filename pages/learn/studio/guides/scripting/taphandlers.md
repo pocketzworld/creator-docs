@@ -3,7 +3,7 @@
 ## **Introduction**
 In this guide, you will learn how to utilize TapHandlers in Lua scripting to trigger actions when an object is tapped by the user.
 
-### **What is a TapHandler**?
+### **What is a TapHandler?**
 A TapHandler is a built-in component that allows you to connect to an event triggered when a collider is tapped by a user in your Highrise world.
 
 ### Understanding TapHandler Properties:

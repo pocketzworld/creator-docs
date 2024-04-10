@@ -10,22 +10,28 @@ The `game.PlayerConnected` and `game.PlayerDisconnected` events are triggered wh
 #### Example:
 ```lua
 -- Client
-client.PlayerConnected:Connect(function(player)
-    print(player.name .. " connected to the world on this client")
-end)
+function self:ClientAwake()
 
-client.PlayerDisconnected:Connect(function(player)
-    print(player.name .. " disconnected from the world on this client")
-end)
+    client.PlayerConnected:Connect(function(player)
+        print(player.name .. " connected to the world on this client")
+    end)
+
+    client.PlayerDisconnected:Connect(function(player)
+        print(player.name .. " disconnected from the world on this client")
+    end)
+end
 
 -- Server
-server.PlayerConnected:Connect(function(player)
-    print(player.name .. " connected to the server")
-end)
+function self:ServerAwake()
 
-server.PlayerDisconnected:Connect(function(player)
-    print(player.name .. " disconnected from the server")
-end)
+    server.PlayerConnected:Connect(function(player)
+        print(player.name .. " connected to the server")
+    end)
+
+    server.PlayerDisconnected:Connect(function(player)
+        print(player.name .. " disconnected from the server")
+    end)
+end
 ```
 
 ### Player Joined and Left Events

@@ -16,7 +16,7 @@ In this guide, you will explore the intricacies of managing client and server lo
 
 ### Scripting Events and Connections:
 
-When writing a client/server script, you gain access to new versions of the main event functions: `Awake`, `Start`, `Update`, and `FixedUpdate`. These functions can be prefixed with `Client` or `Server` to differentiate their execution context:
+When writing a `Client/Server` script, you gain access to new versions of the main event functions: `Awake`, `Start`, `Update`, and `FixedUpdate`. These functions can be prefixed with `Client` or `Server` to differentiate their execution context:
 
 - `ClientAwake()`, `ServerAwake()`
 - `ClientStart()`, `ServerStart()`

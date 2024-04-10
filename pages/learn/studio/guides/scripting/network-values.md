@@ -1,7 +1,7 @@
-# **Server Values**
+# **Network Values**
 
 ## **Introduction**
-Server Values are server variables that send an event to the client when their value changes, enabling you to sync data between the client, server, and players.
+Network values are variables that send an event to the client when their value changes, enabling you to sync data between the client, server, and players. Network values need to be in either a `Client/Server` or `Module` script.
 
 ### **Value Types**
 
@@ -14,8 +14,9 @@ local myString = StringValue.new("MyString", "") -- Value.new(ServerIdentifier, 
 local myBool = BoolValue.new("MyBool", false) -- Value.new(ServerIdentifier, Default Value)
 ```
 
-### **Changing Server Values**
-In the server you can set server values with the variable's `.value` property.
+### **Changing Values**
+On the server you can change the value using the `.value` property.
+Changing a value on the server will automatically broadcast that change to all clients.
 
 #### Example:
 ```lua
@@ -30,14 +31,14 @@ function self:ServerAwake()
 end
 ```
 
-### **Connecting to value Changes on the Client**
-On the client you can connect to the value's `Changed` event, gaining access to the new value and the old value.
+### **Connecting to Value Changes on the Client**
+On the client you can connect to the value's `Changed` event, gaining access to the new value and the old value. This works on client and server
 
 
 #### Example:
 ```lua
 function self:ClientAwake()
-    --read the new server values after they are changed
+    --read the new network value after it is changed
     myInt.Changed:Connect(function(newVal, oldVal)
         print("the server value changed to " .. tostring(newVal))
     end)
@@ -45,4 +46,4 @@ function self:ClientAwake()
 end
 ```
 
-By utilizing server values effectively, you can create dynamic and engaging experiences for players in your Highrise Studio projects.
+By utilizing network value effectively, you can create dynamic and engaging experiences for players in your Highrise Studio projects.

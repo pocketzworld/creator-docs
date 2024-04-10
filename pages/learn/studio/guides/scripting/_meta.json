@@ -23,7 +23,7 @@
   "player-character-events":{
     "title": "Player and Character Events"
   },
-  "server-values":{
-    "title": "Server Values"
+  "network-values":{
+    "title": "Network Values"
   }
 }
