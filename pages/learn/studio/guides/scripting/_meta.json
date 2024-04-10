@@ -11,6 +11,9 @@
   "unity-functions":{
     "title": "Unity Functions"
   },
+  "triggers":{
+    "title": "Triggers"
+  },
   "taphandlers":{
     "title": "Tap Handlers"
   },
