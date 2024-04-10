@@ -19,5 +19,8 @@
   },
   "client-and-server-scripts":{
     "title": "Client and Server Interaction"
+  },
+  "player-character-events":{
+    "title": "Player and Character Events"
   }
 }
