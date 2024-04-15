@@ -120,7 +120,7 @@ You should use **Play Mode** in Unity and the built in tools to test your world 
 4. Walk around the world and make sure everything is as you'd expect.
 5. Exit **Play Mode** by pressing the `Play` button once again.
 
-### **Step 6: Uploading**
+### **Step 7: Uploading**
 
 You're now ready to upload your work to the [Highrise Creator Portal](https://create.highrise.game/). Once uploaded, your world will exist as a **private draft**, and you'll be able to enter it with your Highrise user from the Highrise app. You'll also be able to invite specific Highrise users to test your world with you.
 
@@ -134,7 +134,7 @@ Highrise Studio will upload and process your build to prepare it for deployment 
 
 Once the build has completed processing, you will see it under `My Worlds` in the world directory of the Highrise App.
 
-### **Step 7: Updating The Description and Images**
+### **Step 8: Updating The Description and Images**
 
 Next let's update the title, introduction, description, and images of our world in the Creator Portal.
 
@@ -148,7 +148,7 @@ Next let's update the title, introduction, description, and images of our world 
 5. Upload some sample images for the world
 6. Click `Save` to save your changes
 
-### **Step 8: Release**
+### **Step 9: Release**
 
 Visit the Builds tab once again and you'll notice a `Release` button next to the latest build you uploaded. When you're ready, hitting the `Release` button will make your world public for everyone to visit.
 
