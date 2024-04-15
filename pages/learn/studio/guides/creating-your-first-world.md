@@ -3,7 +3,9 @@
 ## **Introduction**
 Looking to craft your first immersive, virtual world? You're in the right place at the right time! Let's dive into the process of using Studio Hub to generate, illuminate, and test your inaugural creation. It's easier than you think and a lot more fun!
 
-This guide is split into multiple parts. In part 1, we will cover how to install the tools you'll need, make a simple World, add some assets and lighting to it, and testing it inside of Unity.
+In this guide, we will cover how to install the tools you'll need, make a simple World, add some assets and lighting to it, and testing it inside of Unity. We will also cover the full process of uploading your World to the Creator Portal, updating the name/images/description, and releasing it to the public.
+
+## **The Steps**
 
 ### **Step 1: Setting Up The Tools**
 Let's install and set up the tools you'll need to start building worlds.
@@ -96,6 +98,43 @@ Here you can access the **Scene** and **Environment** settings:
    After laying out your **Lights** and **Objects**:
    - Make sure all Lights and stationary Meshes are marked **Static** or **Baked**
    - In the Lighting Panel select **Generate Lighting** to calculate your new Lights and Shadows.
+
+### **Step 6: Testing**
+You should use **Play Mode** in Unity and the built in tools to test your world prior to uploading and publishing it to everyone.
+
+1. If you're not in Play Mode, go ahead and enter it by hitting the `Play` button.
+2. You should see your Highrise avatar appear in the World. The behavior will be the same as what you would see in the Highrise app.
+3. You can add additional users as **Virtual Players** via `Highrise > Studio > Virtual Player`. You'll see these additional avatars spawn in your world and they can be controlled in their own virtual player windows.
+4. Walk around the world and make sure everything is as you'd expect.
+5. Exit **Play Mode** by pressing the `Play` button once again.
+
+### **Step 6: Uploading**
+
+You're now ready to upload your work to the [Highrise Creator Portal](https://create.highrise.game/). Once uploaded, your world will exist as a **private draft**, and you'll be able to enter it with your Highrise user from the Highrise app. You'll also be able to invite specific Highrise users to test your world with you.
+
+1. Select the `Upload` button to the right of the `Play` button
+2. Select `Upload to a New World`
+3. Select `Upload`
+
+Highrise Studio will upload and process your build to prepare it for deployment to the different platforms (iOS/Android/etc.). This process happens automatically and you can check the status of it by going to the `Builds` tab of the uploaded world in the Creator Portal.
+
+Once the build has completed processing, you will see it under `My Worlds` in the world directory of the Highrise App.
+
+### **Step 7: Updating The Description and Images**
+
+Next let's update the title, introduction, description, and images of our world in the Creator Portal.
+
+1. In the world page, click on the `...` button on the top right
+2. Select `Edit World`
+3. Let's change the name to "Rotating Green Block", the introduction to "A green block that rotates", and the description to "My first tutorial world complete with a green block that rotates!"
+4. Upload an icon for the world
+5. Upload some sample images for the world
+6. Click `Save` to save your changes
+
+### **Step 8: Release**
+
+Visit the Builds tab once again and you'll notice a `Release` button next to the latest build you uploaded. When you're ready, hitting the `Release` button will make your world public for everyone to visit.
+
 
 ---
 **Congratulations! You've Created Your First World**
