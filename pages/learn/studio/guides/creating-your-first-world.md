@@ -51,6 +51,9 @@ You can use the editor to directly manipulate the objects in your World. You can
    Since we've made changes to the World that will affect where the avatars can walk, we'll need to update the walkable areas by updating (baking) the **NavMesh**.
 
    - Select the NavMesh in the object Hierarchy view on the left
+
+![navmesh](/assets/learn/guides/studio/creating-your-first-world/navmesh.png)
+
    - In the inspector view on the right, select `Bake`
    - Notice the blue area (indicating what's walkable) has now changed to cover the entire ground
 
@@ -71,7 +74,13 @@ You can use the editor to directly manipulate the objects in your World. You can
    ```
    - Save your changes in the Lua file and go back to the Unity editor.
    - Select the Green Block, in the top left of the inspector, uncheck the box that says `Static`.
+
+   ![static](/assets/learn/guides/studio/creating-your-first-world/static.png)
+
    - Next, select `Add Component` in the inspector view.
+
+   ![add component](/assets/learn/guides/studio/creating-your-first-world/add-component.png)
+
    - Type in Rotate in the search field, and select the Lua script you just created.
    - That's it, you've added the Rotate lua script to the Green Block. You can now hit play and see it in action.
 
@@ -105,6 +114,9 @@ You should use **Play Mode** in Unity and the built in tools to test your world 
 1. If you're not in Play Mode, go ahead and enter it by hitting the `Play` button.
 2. You should see your Highrise avatar appear in the World. The behavior will be the same as what you would see in the Highrise app.
 3. You can add additional users as **Virtual Players** via `Highrise > Studio > Virtual Player`. You'll see these additional avatars spawn in your world and they can be controlled in their own virtual player windows.
+
+![virtual player](/assets/learn/guides/studio/creating-your-first-world/virtual-player.png)
+
 4. Walk around the world and make sure everything is as you'd expect.
 5. Exit **Play Mode** by pressing the `Play` button once again.
 
@@ -116,6 +128,8 @@ You're now ready to upload your work to the [Highrise Creator Portal](https://cr
 2. Select `Upload to a New World`
 3. Select `Upload`
 
+![upload](/assets/learn/guides/studio/creating-your-first-world/upload-world.png)
+
 Highrise Studio will upload and process your build to prepare it for deployment to the different platforms (iOS/Android/etc.). This process happens automatically and you can check the status of it by going to the `Builds` tab of the uploaded world in the Creator Portal.
 
 Once the build has completed processing, you will see it under `My Worlds` in the world directory of the Highrise App.
@@ -126,6 +140,9 @@ Next let's update the title, introduction, description, and images of our world 
 
 1. In the world page, click on the `...` button on the top right
 2. Select `Edit World`
+
+![edit](/assets/learn/guides/studio/creating-your-first-world/edit-world.png)
+
 3. Let's change the name to "Rotating Green Block", the introduction to "A green block that rotates", and the description to "My first tutorial world complete with a green block that rotates!"
 4. Upload an icon for the world
 5. Upload some sample images for the world
@@ -135,8 +152,8 @@ Next let's update the title, introduction, description, and images of our world 
 
 Visit the Builds tab once again and you'll notice a `Release` button next to the latest build you uploaded. When you're ready, hitting the `Release` button will make your world public for everyone to visit.
 
+## **Conclusion**
 
----
-**Congratulations! You've Created Your First World**
+Congratulations! You've Created Your First World
 
 That's it! You've successfully created your first World using the Highrise Studio. Now, you can continue to build and customize your virtual world with rooms, models, and more. Continue to part 2 of this guide to learn how to publish and release the World you've just built.
