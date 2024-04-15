@@ -1,4 +1,4 @@
-# **Creating Your First World (part 1)**
+# **Creating Your First World**
 
 ## **Introduction**
 Looking to craft your first immersive, virtual world? You're in the right place at the right time! Let's dive into the process of using Studio Hub to generate, illuminate, and test your inaugural creation. It's easier than you think and a lot more fun!
