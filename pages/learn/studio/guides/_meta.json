@@ -11,11 +11,11 @@
   "publishing-world":{
     "title": "Publishing a World"
   },
+  "intro-game-dev": {
+    "title": "Game Development 101"
+  },
   "scripting":{
     "title": "Scripting"
-  },
-  "game-development": {
-    "title": "Game Development Tutorials"
   },
   "3d-modeling-and-animation": {
     "title": "3D Modeling and Animation"
