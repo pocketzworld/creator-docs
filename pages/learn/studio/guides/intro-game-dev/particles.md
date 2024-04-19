@@ -16,7 +16,7 @@ Water and Rain: To create effects of raindrops hitting the ground or waves in a 
 Sparks and Explosions: To add dramatic effects when something breaks or explodes
 Magic and Energy: To show magical spells or energy fields
 
-## **Why Use Particle Effects?**##
+## **Why Use Particle Effects?**
 Efficiency: They allow games to run smoothly because using lots of small particles can be easier for a game engine to handle than complex animations.
 Realism: They help make effects like fire and water look more natural and realistic.
 Dynamic Scenes: Particle effects can interact with game environments, like smoke spreading in a room, making the game world feel more dynamic and immersive.
