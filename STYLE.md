@@ -106,6 +106,7 @@ Use alerts to highlight critical information succinctly:
 <Alert severity="warning">
 This is a beta feature and may change.
 </Alert>
+```
 
 **Severity Types**:
 
