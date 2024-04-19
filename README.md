@@ -1,6 +1,6 @@
 # Highrise Creator Documentation
 
-This repository holds source code for the creator documentation at [create.highrise.com](https://create.highrise.com).
+This repository holds source code for the creator documentation at [create.highrise.com](https://create.highrise.game).
 
 If you're not sure about the process of contributing through GitHub, please refer to [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
