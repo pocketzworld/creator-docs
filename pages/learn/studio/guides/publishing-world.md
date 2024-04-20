@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide details the steps to upload and publish your world on Highrise.
+This guide details the steps to upload and publish your world on Highrise. Publishing a world makes public and available for everyone to access via their world directory.
 
 ## Step 1: Highrise Creator Portal
 

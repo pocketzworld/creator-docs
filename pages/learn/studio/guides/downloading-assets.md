@@ -1,8 +1,10 @@
-# Importing Assets from the Unity Asset Store
+# Adding Assets from the Unity Asset Store
 
 ## Introduction
 
-Learn how to download and import assets from the Unity Asset Store into your project.
+The Unity Asset Store contains a large collection of ready made assets you can use with Highrise Studio. 
+
+This guide will teach you how to download and import assets from the Unity Asset Store into your project.
 
 [Watch the Importing Assets Video Guide](https://www.youtube.com/watch?v=MltrDeGAwXk)
 

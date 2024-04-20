@@ -1,5 +1,9 @@
 # Importing a World
 
+## Introduction
+
+This guide details the steps to import an existing world to Highrise Studio. You can make changes, test in Play mode, and publish the world after import.
+
 ## Steps to Import a World
 
 ### Set Up Environment
