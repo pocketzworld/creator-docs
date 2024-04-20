@@ -1,18 +1,28 @@
-# **Importing a World**
+# Importing a World
 
-### **Importing a World**
-1. Setup Studio Hub and the necessary Unity plugins.
-2. Open Studio Hub.
-3. Click "Open Project" and navigate to the folder of the World you want to import. This will open the World in Unity.
+## Steps to Import a World
 
-== Note Unity doesnt auto open the scene when launching a World for the first time ==
-== Tip - You can filter the project window by type. Ex, t:scene will only show scenes. ==
+### Set Up Environment
 
-4. Open the main scene for the World by finding it in the Project Tab in Unity.
+1. Install Studio Hub and necessary Unity plugins.
 
-![select the scene](/assets/learn/guides/studio/select-scene.png)
+### Open Project
 
-5. You can now test your world with the "Play" button in the middle of the top toolbar.
+1. Launch Studio Hub.
+2. Use "Open Project" to find and select the world's folder. This action will load the world in Unity.
 
-![play button](/assets/learn/guides/studio/play-button.png)
+   **Note:** Unity doesn't automatically open the scene when you launch a world for the first time.
+   
+   **Tip:** Use `t:scene` in the project window to filter and display only scene files.
 
+### Open Main Scene
+
+1. Locate the main scene in Unity's Project Tab and open it.
+
+   ![Select the Scene](/assets/learn/guides/studio/select-scene.png)
+
+### Test Your World
+
+1. Click the "Play" button on the top toolbar to start testing the world.
+
+   ![Play Button](/assets/learn/guides/studio/play-button.png)
