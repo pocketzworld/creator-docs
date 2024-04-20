@@ -39,6 +39,8 @@ This guide will walk you through the process of creating your first virtual worl
    - In the inspector, click `Bake`.
 
 4. Add scripts:
+   - In the Project window, navigate to the desired location.
+   - Right-click and select `Create > Lua > Script`
    - Create a Lua script named "Rotate".
    - Add the following code:
      ```lua
