@@ -1,159 +1,97 @@
-# **Creating Your First World**
+# Creating Your First World
 
-## **Introduction**
-Looking to craft your first immersive, virtual world? You're in the right place at the right time! Let's dive into the process of using Studio Hub to generate, illuminate, and test your inaugural creation. It's easier than you think and a lot more fun!
+## Introduction
 
-In this guide, we will cover how to install the tools you'll need, make a simple World, add some assets and lighting to it, and testing it inside of Unity. We will also cover the full process of uploading your World to the Creator Portal, updating the name/images/description, and releasing it to the public.
+This guide will walk you through the process of creating your first virtual world using Highrise Studio. You will learn how to install the necessary tools, create a simple world, add assets and lighting, and test it in Unity. The guide also covers uploading your world to the Highrise Creator Portal, updating its details, and releasing it to the public.
 
-## **The Steps**
+## Steps
 
-### **Step 1: Setting Up The Tools**
-Let's install and set up the tools you'll need to start building worlds.
+### Step 1: Set Up the Tools
 
-1. Download the [Studio Hub](https://create.highrise.game/highrise-studio) and install it on your computer. The Studio Hub is designed to guide you through installing the correct version of Unity.
-2. Follow the instructions in Studio Hub and allow it to download and install Unity and the accompanying Highrise Studio Package. 
+1. Download and install [Studio Hub](https://create.highrise.game/highrise-studio).
+2. Follow Studio Hub's instructions to download and install Unity and the Highrise Studio Package.
 
-### **Step 2: Creating a New World**
-1. In Studio Hub, click on `New Project`
-2. Select the **Basic Template**. Templates can be a great way to learn how different games are structured.
-3. Name the Project *"My First World"*
-4. Leave the location to the default. This is where your project will be saved to on your computer.
-5. Click on `Create Project`
+### Step 2: Create a New World
 
-### **Step 3: Using Unity**
-Once you create the project, Studio Hub will launch Unity and you'll be loaded directly into the World you're about to build. From here, you can **Sign In** to your Highrise account to start testing with your Highrise avatar, and you can also hit the **Play** button to test the World you're working on.
+1. In Studio Hub, click `New Project`.
+2. Select the **Basic Template**.
+3. Name the project "My First World".
+4. Leave the location as default and click `Create Project`.
 
-1. Inside Unity, you can use the `Sign In` button to sign into your Highrise Account.
-2. You can now test your world with the `Play` button in the middle of the top toolbar.
+### Step 3: Use Unity
 
-![play button](/assets/learn/guides/studio/play-button.png)
+1. Sign in to your Highrise account using the `Sign In` button.
+2. Test your world using the `Play` button in the top toolbar.
 
-### **Step 4: Making Changes**
-You can use the editor to directly manipulate the objects in your World. You can either use the gizmos or alter the properties of an object directly in the inspector view. 
+![Play button](/assets/learn/guides/studio/play-button.png)
 
-1. **Moving and Changing Objects**
-	- Select the Green Block in the World. 
-	- Press and hold on the green arrow to move it up to 5 on the Y-aix _or_ change the Y value of the Green Block to 5 in the inspector window
-	- In the inspector window, change the scale to 0.5, 0.5, 0.5. Notice the Green Block is now much smaller than before
+### Step 4: Make Changes
 
-2. **Adding Objects** 
+1. Move and change objects:
+   - Select the Green Block and move it up to 5 on the Y-axis or change its Y value to 5 in the inspector.
+   - Change the Green Block's scale to 0.5, 0.5, 0.5 in the inspector.
 
-   There are many ways to add objects into your world. Here are a few common methods:
-   - **Highrise Asset Store:** The Highrise Studio Package comes with its own catalog of ready-made assets. You can drag and drop these objects directly into your World and they should work out of the box. 
-   - **Unity Asset Store:** Unity's official Asset Store is a treasure trove of ready-made assets created for all projects built with Unity. To access, simply click on `Window > Asset Store`, then search online to select your chosen asset, then follow the official Unity steps to import the asset directly into your project.
-   - **Manual Import:** To import locally stored files, right-click within the Project panel, select `Import New Asset`, and browse to your desired file.
-   - **Drag & Drop:** An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel. 
-   
-   Note: Highrise Studio does not support adding new C# runtime scripts.
+2. Add objects using the Highrise Asset Store, Unity Asset Store, manual import, or drag and drop.
 
-3. **Update The Walkable Area**
+3. Update the walkable area:
+   - Select the NavMesh in the Hierarchy view.
+   ![NavMesh](/assets/learn/guides/studio/creating-your-first-world/navmesh.png)
+   - In the inspector, click `Bake`.
 
-   Since we've made changes to the World that will affect where the avatars can walk, we'll need to update the walkable areas by updating (baking) the **NavMesh**.
+4. Add scripts:
+   - Create a Lua script named "Rotate".
+   - Add the following code:
+     ```lua
+     function self:Update()
+       local rotationAngle = 5 * Time.deltaTime
+       self.transform.localEulerAngles = self.transform.localEulerAngles + Vector3.new(0, rotationAngle, 0)
+     end
+     ```
+   - Uncheck `Static` for the Green Block in the inspector.
+   ![Static](/assets/learn/guides/studio/creating-your-first-world/static.png)
+   - Add the "Rotate" script to the Green Block using `Add Component`.
+   ![Add Component](/assets/learn/guides/studio/creating-your-first-world/add-component.png)
 
-   - Select the NavMesh in the object Hierarchy view on the left
+### Step 5: Adjust Lighting
 
-![navmesh](/assets/learn/guides/studio/creating-your-first-world/navmesh.png)
+1. Open the Lighting window via `Window > Rendering > Lighting` or `(CMD/CTRL) + 9`.
+2. Add lights and set their type to `Baked`.
+3. For stationary meshes, mark them as `Static`.
+4. For animated or moving meshes, create a Light Probe Grid.
+5. Bake the lights by clicking `Generate Lighting`.
 
-   - In the inspector view on the right, select `Bake`
-   - Notice the blue area (indicating what's walkable) has now changed to cover the entire ground
+### Step 6: Test
 
-4. **Adding Scripts**
+1. Enter Play Mode.
+2. Verify your avatar appears and behaves as expected.
+3. Add Virtual Players via `Highrise > Studio > Virtual Player`.
+![Virtual Player](/assets/learn/guides/studio/creating-your-first-world/virtual-player.png)
+4. Walk around and test the world.
+5. Exit Play Mode.
 
-   In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the **Project** panel, select `Create > Lua > Script`, and name your script. To get started scripting with Lua for Highrise check out [Scripting a GameObject](https://create.highrise.game/learn/studio/guides/scripting/scripting-a-gameobject)
+### Step 7: Upload
 
-   For this guide, we're going to make the Green Block rotate
-   - Create a script and name it "Rotate"
-   - Double click on it to open it with your code editor
-   - Add the following lua code:
-   ```lua
-   function self:Update()
-     local rotationAngle = 5 * Time.deltaTime
-     -- Rotate the object around its Y-axis (vertical axis)
-     self.transform.localEulerAngles = self.transform.localEulerAngles + Vector3.new(0, rotationAngle, 0)
-   end
-   ```
-   - Save your changes in the Lua file and go back to the Unity editor.
-   - Select the Green Block, in the top left of the inspector, uncheck the box that says `Static`.
+1. Click `Upload` and select `Upload to a New World`.
+![Upload](/assets/learn/guides/studio/creating-your-first-world/upload-world.png)
+2. The world will be processed and available as a private draft.
+3. You can now see the world in your Highrise app under "My Worlds" in the world directory.
 
-   ![static](/assets/learn/guides/studio/creating-your-first-world/static.png)
+### Step 8: Update Description and Images
 
-   - Next, select `Add Component` in the inspector view.
+1. Navigate to the page of the newly created world on the [Creator Portal Dashboard](https://create.highrise.game/dashboard/creations).
+2. Click `...` and select `Edit World`.
+![Edit](/assets/learn/guides/studio/creating-your-first-world/edit-world.png)
+3. Update the name, introduction, and description.
+4. Upload an icon and sample images.
+5. Click `Save`.
 
-   ![add component](/assets/learn/guides/studio/creating-your-first-world/add-component.png)
+### Step 9: Release
 
-   - Type in Rotate in the search field, and select the Lua script you just created.
-   - That's it, you've added the Rotate lua script to the Green Block. You can now hit play and see it in action.
+In the Builds tab of the world page, click `Release` to make your world public. This will make it available to everyone in Highrise.
 
-
-### **Step 5: Adjusting Lighting**
-
-Go to `Window > Rendering > Lighting` (or press `(CMD/CNTRL) + 9`) to open the window.
-
-Here you can access the **Scene** and **Environment** settings:
-   - The **Scene** settings allow you to control the lightmap, map resolution, and samples.
-   - The **Environment** settings allow you to adjust the Skybox material and environment lighting.
-       - The **Skybox** is a Gradient material named *Sky* located in `Assets > Template > Art` in Unity's Project tab.
-
-1. **Add Lights**
-   - Right click on the **Hierarchy** view on the left and create a light.
-   - Make sure the light **Type** is set to **Baked**
-
-   - **For Stationary Meshes** Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
-   - **For Animated or Moving Meshes** Make the Object 
-     - **Non-Static** Create a **Light Probe Grid** to light the dynamic meshes. [Light Probes tutorial](https://www.youtube.com/watch?v=_E0JXOZDTKA)
-
-2. **Bake the lights**
-
-   After laying out your **Lights** and **Objects**:
-   - Make sure all Lights and stationary Meshes are marked **Static** or **Baked**
-   - In the Lighting Panel select **Generate Lighting** to calculate your new Lights and Shadows.
-
-### **Step 6: Testing**
-You should use **Play Mode** in Unity and the built in tools to test your world prior to uploading and publishing it to everyone.
-
-1. If you're not in Play Mode, go ahead and enter it by hitting the `Play` button.
-2. You should see your Highrise avatar appear in the World. The behavior will be the same as what you would see in the Highrise app.
-3. You can add additional users as **Virtual Players** via `Highrise > Studio > Virtual Player`. You'll see these additional avatars spawn in your world and they can be controlled in their own virtual player windows.
-
-![virtual player](/assets/learn/guides/studio/creating-your-first-world/virtual-player.png)
-
-4. Walk around the world and make sure everything is as you'd expect.
-5. Exit **Play Mode** by pressing the `Play` button once again.
-
-### **Step 7: Uploading**
-
-You're now ready to upload your work to the [Highrise Creator Portal](https://create.highrise.game/). Once uploaded, your world will exist as a **private draft**, and you'll be able to enter it with your Highrise user from the Highrise app. You'll also be able to invite specific Highrise users to test your world with you.
-
-1. Select the `Upload` button to the right of the `Play` button
-2. Select `Upload to a New World`
-3. Select `Upload`
-
-![upload](/assets/learn/guides/studio/creating-your-first-world/upload-world.png)
-
-Highrise Studio will upload and process your build to prepare it for deployment to the different platforms (iOS/Android/etc.). This process happens automatically and you can check the status of it by going to the `Builds` tab of the uploaded world in the Creator Portal.
-
-Once the build has completed processing, you will see it under `My Worlds` in the world directory of the Highrise App.
-
-### **Step 8: Updating The Description and Images**
-
-Next let's update the title, introduction, description, and images of our world in the Creator Portal.
-
-1. In the world page, click on the `...` button on the top right
-2. Select `Edit World`
-
-![edit](/assets/learn/guides/studio/creating-your-first-world/edit-world.png)
-
-3. Let's change the name to "Rotating Green Block", the introduction to "A green block that rotates", and the description to "My first tutorial world complete with a green block that rotates!"
-4. Upload an icon for the world
-5. Upload some sample images for the world
-6. Click `Save` to save your changes
-
-### **Step 9: Release**
-
-Visit the Builds tab once again and you'll notice a `Release` button next to the latest build you uploaded. When you're ready, hitting the `Release` button will make your world public for everyone to visit.
-
-## **Conclusion**
+## Conclusion
 
 Congratulations! You've Created Your First World
 
 That's it! You've successfully created your first World using the Highrise Studio. Now, you can continue to build and customize your virtual world with rooms, models, and more. Continue to part 2 of this guide to learn how to publish and release the World you've just built.
+
