@@ -57,4 +57,4 @@ This guide details the steps to upload and publish your world on Highrise.
 
 ## Conclusion
 
-You've successfully published your world on Highrise, allowing others to explore your creation.
+You've successfully published your world on Highrise. It is now publically available for everyone to access via their world directory.
