@@ -1,63 +1,55 @@
-# **Box Modelling an Asset**
+# Box Modelling an Asset
 
-## **Introduction:**
+## Introduction
 
-In this series, we will learn how to create a custom Highrise 3D asset using Blender 3D. Follow along with the steps below to build your first 3D model.
+This tutorial guides you through creating a custom Highrise 3D asset using Blender 3D. The steps outlined below will introduce you to the basics of 3D modelling, specifically through the box modeling technique. For a comprehensive learning experience, we recommend following along with the accompanying video tutorial.
 
-We encourage you to follow along with the video tutorial to ensure a successful setup. 
-
-As well as this short video explaining the basic controlls of Blender 3D: [Introduction To Blender](https://www.youtube.com/watch?v=Rqhtw7dg6Wk)
+Additionally, familiarize yourself with Blender 3D's basic controls by watching this short introductory video: [Introduction to Blender](https://www.youtube.com/watch?v=Rqhtw7dg6Wk).
 
 <iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/VQHSCcRWyhI?si=o58lbYjm2LsU6ITb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## **Step 1: Preparing the Scene**
+## Step 1: Preparing the Scene
 
-1. Open Blender and load the default scene.
-2. Select everything in the scene and delete it by pressing 'X' or right-clicking and choosing 'Delete.'
-3. If your 3D cursor isn't centered, press 'Shift + C' to center it.
+1. Launch Blender and open the default scene.
+2. Delete all existing objects in the scene by selecting them and pressing 'X' or right-clicking and selecting 'Delete'.
+3. Center the 3D cursor if necessary by pressing 'Shift + C'.
 
-## **Step 2: Creating the Base**
+## Step 2: Creating the Base
 
-1. Click the 'Add' menu or press 'Shift + A.'
-2. Select 'Mesh' and then 'Circle.'
-3. In the lower-left corner, adjust the 'Vertices' count to 8 for a low-poly model.
-4. Press 'Tab' to enter Edit mode.
-5. Select the entire circle and press 'E' to extrude, then 'Z' to limit the extrusion to the Z-axis.
-6. Use 'S' to scale the bottom and 'G' to move the top until you achieve the desired shape for your ceramic pot.
-7. Select the bottom circle and press 'F' to fill it with a single face, or use 'Ctrl + F' and choose 'Grid Fill.'
-8. Select the top circle, press 'E' to extrude, 'S' to scale it down for the lip of the pot, and 'E' again, followed by 'Z' to extrude it down.
-9. Press 'Alt + Z' to toggle X-ray mode and adjust the inner loop to match the slope of the pot.
-10. Use 'Ctrl + F' to perform Grid Fill again.
-11. In Edit mode, press 'I' to inset the faces slightly and repeat for the dirt mound.
-12. Return to Object mode with the 'Tab' key.
+1. Access the 'Add' menu or press 'Shift + A' to add a new mesh.
+2. Choose 'Mesh' followed by 'Circle'.
+3. Set the 'Vertices' count to 8 in the tool settings at the bottom left to start a low-poly model.
+4. Press 'Tab' to switch to Edit mode.
+5. Extrude the selected circle by pressing 'E' then constrain the extrusion to the Z-axis by pressing 'Z'.
+6. Scale the extrusion using 'S' and adjust its position with 'G' to form the base of your pot.
+7. Fill the bottom face by selecting the bottom edge loop and pressing 'F', or use 'Ctrl + F' and select 'Grid Fill'.
+8. Shape the top of the pot by extruding the top edge loop using 'E', scaling it down with 'S', and extruding it again along the Z-axis.
+9. Activate X-ray mode with 'Alt + Z' to view and adjust internal vertices.
+10. Complete the top with another Grid Fill by pressing 'Ctrl + F'.
+11. Use 'I' to inset the top face slightly to prepare for adding soil.
+12. Press 'Tab' to return to Object mode.
 
-## **Step 3: Creating the Cactus**
+## Step 3: Creating the Cactus
 
-1. Create a new circle.
-2. Position it inside the pot and scale it down.
-3. Enter Edit mode and extrude it upwards.
-4. Select the top loop, extrude it up, scale it down, and repeat to create a rounded top.
-5. Perform Grid Fill to close the hole.
-6. Press ‘A’ in Edit mode to select all vertices.
-7. Duplicate the selection with 'Shift + D.'
-8. Before confirming, press 'R' to rotate.
-9. Enable Increment Snapping by holding 'Ctrl' and rotate it 90 degrees.
-10. Scale it down and position it to the side for the cactus limb.
-11. Delete the rounded end loops.
-12. Select the top vertex of the circle and press 'Shift + S' to set the 3D Cursor to the selection.
-13. Choose the Spin tool from the left-hand Toolbar.
-14. Ensure the Y-axis is selected for the tool.
-15. Holding 'Ctrl' for Increment Snapping, spin the whole loop -90 degrees to create the elbow.
-16. In the Context menu, reduce the steps to 3 to reduce the polygon count.
-17. Resolve duplicate vertices at the pivot point by selecting them in X-ray mode ('Alt + Z') and merging them at the center ('M' then 'Merge at Center').
-18. Extrude up and round off the top, similar to the pot.
+1. Add a new circle mesh inside the pot and scale it appropriately.
+2. Enter Edit mode, and extrude the circle upwards to form the main body of the cactus.
+3. Shape the cactus by extruding and scaling the top loop to create a rounded tip.
+4. Close the top by selecting the outer loop and performing a Grid Fill.
+5. Select all vertices with 'A', then duplicate them with 'Shift + D'.
+6. Rotate the duplicate by pressing 'R', using 'Ctrl' to snap the rotation angle, aiming for a 90-degree increment.
+7. Adjust the size and position of this new form to represent a cactus limb.
+8. Remove the ends of the limb loops and set the 3D cursor to a limb vertex using 'Shift + S'.
+9. Select the Spin tool from the toolbar, ensuring the Y-axis is active.
+10. Spin the limb segment to form an elbow, adjusting the tool settings for precision.
+11. Merge any overlapping vertices by selecting them in X-ray mode and using 'M' to merge at the center.
+12. Refine the limb’s shape by extruding and rounding off the top as done with the pot.
 
-## **Step 4: Duplicating the Limbs**
+## Step 4: Duplicating the Limbs
 
-1. Select part of the limb, then select the entire connected mesh by pressing 'Ctrl + L.'
-2. Duplicate the mesh and rotate it. To rotate around the center, center the cursor with 'Shift + C,' then set the pivot point to '3D Cursor' by pressing the 'Period' key.
-3. Select the limb, press 'Shift + D,' then 'R,' followed by 'Z,' and type '180' to rotate it 180 degrees around the Z-axis.
-4. Adjust the limbs as needed.
+1. Isolate a limb segment by selecting it and using 'Ctrl + L' to select linked vertices.
+2. Duplicate the limb with 'Shift + D' and rotate it about the Z-axis by setting the pivot point to '3D Cursor' and typing '180' after pressing 'R' and 'Z'.
+3. Position the duplicated limbs as needed to complete the model.
 
-**Tada!**
-You've successfully created a potted cactus plant. In the following video, we will explore coloring your 3D model.
+**Completion**
+
+Congratulations! You have successfully modeled a potted cactus in Blender. Stay tuned for the next tutorial where we will explore how to add color and texture to your 3D model.
