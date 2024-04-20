@@ -51,9 +51,9 @@ Alternatively, you can use the **GitHub** or **GitHub Pull Request** menus in gi
 
 ## Offline Workflow
 
-This repository is extremely large, so we recommend using the online options whenever possible. However, if you're already familiar with the general GitHub workflow and want to use an offline text editor, here are the basic steps for contributing to the documentation:
+If you're already familiar with the general GitHub workflow and want to use an offline text editor, here are the basic steps for contributing to the documentation:
 
-1. Set up [Git](https://docs.github.com/en/get-started/quickstart/set-up-git) and [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage). Alternatively, install a Git client like [GitHub Desktop](https://desktop.github.com).
+1. Set up [Git](https://docs.github.com/en/get-started/quickstart/set-up-git). Alternatively, install a Git client like [GitHub Desktop](https://desktop.github.com).
 1. Fork this repository.
 1. Clone your fork.
 1. Navigate to the repository root.
