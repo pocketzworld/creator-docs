@@ -1,23 +1,35 @@
-# **Creating Glowing Materials**
+# Creating Glowing Materials
 
-## **Introduction**
-In this guide you will learn how to create glowing/neon materials with emission and post processing.
+## Introduction
 
-### **Step 1: Setup the Post Processing**
-1. Create a new Empty Gameobject, named "PostProc", in the Hierarchy
-2. Use the Inspector to give _PostProc_ a **Volume Component**
-3. Click **New** in the component properties to create a new **Volume Profile**
-4. Add a Bloom **"Override"**
+This guide shows how to create glowing/neon materials using emission and post processing.
 
-### **Step 2: Add a Camera**
-1. Create a new Camera Object in the Hierarchy
-2. Enable **post processing** in the camera's properties. _This camera is just to preview the Bloom effect. Disable or Delete it before testing and publishing_
+## Steps
 
-### **Step 3: Create and Asign the Material**
-1. Create a new Material with the "Highrise Unlit" Shader. **(Highrise > Unlit)**
-2. Set your Emission color and strength
-3. Assign the material to your mesh
+### 1. Set up Post Processing
 
-# **Congratulations! You've Created Your neon material!**
+1. Create an empty GameObject named "PostProc" in the Hierarchy.
+2. Add a **Volume Component** to _PostProc_ using the Inspector.
+3. Click **New** in the component properties to create a **Volume Profile**.
+4. Add a Bloom **Override**.
 
-That's it! You've successfully created a glowing neon material. Now, you can light up your scene and build in Style!
+### 2. Add a Camera
+
+1. Create a Camera Object in the Hierarchy.
+2. Enable **Post Processing** in the camera's properties.
+
+<Alert severity="info">
+
+This camera is just to preview the Bloom effect. Disable or delete it before testing and publishing.
+
+</Alert>
+
+### 3. Create and Assign the Material
+
+1. Create a material with the "Highrise Unlit" shader (**Highrise > Unlit**).
+2. Set the emission color and strength.
+3. Assign the material to your mesh.
+
+## Conclusion
+
+You've successfully created a glowing neon material. Now you can light up your scene and build in style!
