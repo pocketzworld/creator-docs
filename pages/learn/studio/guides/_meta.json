@@ -11,6 +11,9 @@
   "publishing-world":{
     "title": "Publishing a World"
   },
+  "projects": {
+    "title": "Projects"
+  },
   "intro-game-dev": {
     "title": "Game Development 101"
   },
@@ -18,12 +21,9 @@
     "title": "Scripting"
   },
   "3d-modeling-and-animation": {
-    "title": "3D Modeling and Animation"
+    "title": "3D Modeling"
   },
   "examples": {
     "title": "Examples"
-  },
-  "collaboration": {
-    "title": "Working In Teams"
   }
 }
