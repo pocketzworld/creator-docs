@@ -6,7 +6,7 @@ This series teaches how to create a custom Highrise 3D asset using Blender 3D. F
 
 Watch the video tutorial to ensure a successful setup:
 
-<iframe width="100%" height="100%" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/VQHSCcRWyhI?si=o58lbYjm2LsU6ITb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/VQHSCcRWyhI?si=o58lbYjm2LsU6ITb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Also, watch this short video explaining the basic controls of Blender 3D: [Introduction To Blender](https://www.youtube.com/watch?v=Rqhtw7dg6Wk)
 
