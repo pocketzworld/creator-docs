@@ -18,11 +18,11 @@ This guide shows how to create glowing/neon materials using emission and post pr
 1. Create a Camera Object in the Hierarchy.
 2. Enable **Post Processing** in the camera's properties.
 
-<Alert severity="info">
+<Note>
 
 This camera is just to preview the Bloom effect. Disable or delete it before testing and publishing.
 
-</Alert>
+</Note>
 
 ### 3. Create and Assign the Material
 
