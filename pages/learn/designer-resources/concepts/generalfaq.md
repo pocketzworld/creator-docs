@@ -88,27 +88,28 @@ Join the club! There are plenty of design opportunities outide of Concepts. Find
 
 #### For Redesign Concepts, can I redesign my own collab entry? Can I collab with a **different** person to redesign my collab entry?
 
-You may only redesign a player-made Highrise item if your name is in the _**Inspired By**_ field. 
+You may only redesign a player-made Highrise item if your name is in the _**Inspired By**_ field, or if the item is by an artist on the Open Redesigns List. 
 
-This means that you cannot bring new collaborators into a redesign of a previous collab entry. 
+You cannot bring new collaborators into a redesign of a previous collab entry; likewise, any redesigns of items on the Open Redesign List must be solo efforts. 
 
-However, you may redesign any collab work _as a solo entry_ for future redesign concepts. Any successful redesign that you make solo, however, will retain the original duo's attribution. 
+You may redesign any collab work _as a solo entry_ for future redesign concepts. Any successful redesign that you make solo, however, will retain the original duo's attribution. Additionally, all prizes will be shared equally with your previous collab partner.  
 
 #### Can I redesign a player-made item if I have permission from the original designer?
 
-No, you may only redesign a player-made item if your name is in the "Inspired By" attribution field. 
-There are plenty of HR-original items to choose from! Any item that does not have a name on it is free game for Redesign Concepts.
+You may only redesign a player-made item if your name is in the "Inspired By" attribution field, or if the item is by a designer on the Open Redesigns List. 
+
  
  
  #### If a player was banned, or is no longer active, can I redesign their items?
  
- Nope! Authorship persists in all cases. Art is immortal!
+ Nope! Authorship persists when a user decides to leave Highrise. 
+ **If a player has been permanently removed from Highrise, all items will be attributed to the generic "Player Designed" profile.**
+
  
  #### I want to redesign an item, and I **THINK** it's player-made, but it has no attribution. Can I redesign it?
  
 Reach out to our Support team if you're unsure, and we can help verify an item's origin for you. 
 
-**If a player has been permanently removed from Highrise, all items will be stripped of attribution.**
 
 
 
