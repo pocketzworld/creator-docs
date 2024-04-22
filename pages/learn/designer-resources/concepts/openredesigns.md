@@ -2,7 +2,8 @@
 
 The Open Redesign List is a pilot program through which designers are empowered to freely share their catalogs with the rest of the art community. Departing from our usual guidelines, which prohibit item redesigns by anyone other than the original artist, items by Open Redesigns artists are available to the public. 
 
- *These items are eligible to be redesigned by anyone in the community for any redesign Concept.* ♻️🤝♻️ They may not be used as bases for any regular Concept.  
+♻️ *These items are eligible to be redesigned by anyone in the community for any redesign Concept.* ♻️ 
+They may not be used as bases for any regular Concept.  
 
 ### ✍️ Items attributed to the following designers are eligible for redesigning: 
 
@@ -12,11 +13,15 @@ The Open Redesign List is a pilot program through which designers are empowered 
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
 
+[feIine](https://highrise.game/catalog/designer-profile/feIine)
+
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
 [HxntaiBaby](https://highrise.game/catalog/designer-profile/HxntaiBaby)
 
 [irensa](https://highrise.game/catalog/designer-profile/irensa)
+
+[J4CY4NY](https://highrise.game/catalog/designer-profile/J4CY4NY)
 
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
 
@@ -24,9 +29,13 @@ The Open Redesign List is a pilot program through which designers are empowered 
 
 [Mockeri](https://highrise.game/catalog/designer-profile/Mockeri)
 
+[OhaiBambi](https://highrise.game/catalog/designer-profile/OhaiBambi)
+
 [Poppiana](https://highrise.game/catalog/designer-profile/Poppiana)
 
 [Rozovey](https://highrise.game/catalog/designer-profile/Rozovey)
+
+[Shaikuma](https://highrise.game/catalog/designer-profile/Shaikuma)
 
 [theCelia](https://highrise.game/catalog/designer-profile/theCelia)
 
@@ -47,7 +56,8 @@ The Open Redesign List is a pilot program through which designers are empowered 
 #### 📝 Redesigning From The List
 
 For Redesign Concepts only (Rainbowify, Hot Take, Romantify, etc.) you may treat any item from any of the designers above as if it were a regular Highrise item. Designers on this list do not require collaboration requests, advance notice, or communication for you to start redesigning their work. 
-_*Items that originally came from a collaboration are not eligible for redesign. If there are two names in the Attribution Field for any of the items listed above, please do not consider it open for redesigning.) 
+
+_*Items that originally came from a collaboration are not eligible for redesign.*_ 🤝 If there are two names in the Attribution Field for any of the items listed above, please do not consider it open for redesigning. 
 
 When you're ready to submit, please credit the original designer and include the name and image of the item you are redesigning. 
 
