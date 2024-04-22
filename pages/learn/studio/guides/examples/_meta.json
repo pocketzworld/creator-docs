@@ -1,5 +1,8 @@
 {
   "multiplayer-button": {
     "title": "Multiplayer Button"
+  },
+  "multiplayer-number-generator": {
+    "title": "Multiplayer Number Generator"
   }
 }
