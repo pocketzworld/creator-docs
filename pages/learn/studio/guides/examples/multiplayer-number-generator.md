@@ -46,5 +46,41 @@ tapRequest:Connect(function()
     currentNumber.value = math.random(1,maxNumber)
 end)
 ```
+
+# **Final Script**
+```lua
+--!SerializeField
+local maxNumber : number = 10
+
+local currentNumber = IntValue.new("CurrentNumber", 0)
+local tapRequest = Event.new("TapRequest")
+
+local myMaterial = nil
+
+function self:ClientAwake()
+
+    --Set myMaterial to the Objects material
+    myMaterial = self.gameObject:GetComponent(Renderer).material
+
+    --Connect to the Tapped event in the TapHandler Component
+    self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
+        tapRequest:FireServer()
+    end)
+
+    --Connect to the Chantged Event from out Network Integer Value
+    currentNumber.Changed:Connect(function(newVal, oldVal)
+        --Update Visual
+        myMaterial:SetFloat("_Tile", tonumber(newVal))
+    end)
+end
+
+function self:ServerAwake()
+    --Connect to the Tap Request from a Client
+    tapRequest:Connect(function()
+        --Set the Current Number to a random value
+        currentNumber.value = math.random(1,maxNumber)
+    end)
+end
+```
 #### **Summary**
 By following these steps, you can create a Lua script in Highrise Studio that functions as a random number generator, updating visual feedback based on user interactions. This script can be further customized or integrated into larger projects as needed.
