@@ -1,4 +1,4 @@
-# **Texturing**
+# **3D Texturing**
 
 ## **Introduction**
 Texturing is a crucial step in 3D asset creation, adding depth and style to digital objects. Using a color palette effectively in texturing enhances visual coherence and reinforces the desired mood or theme of the project.
