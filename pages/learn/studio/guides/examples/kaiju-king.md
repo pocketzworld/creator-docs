@@ -4,7 +4,7 @@
 "Kaiju King" is a multiplayer game project that takes players on a journey of becoming the ultimate kaiju ruler. This breakdown captures the process of bringing this game to life, showcasing the key features and mechanics used during development.
 
 <Note>
-Kaiju King is a Template that ca nbe found in the Highrise Stuido Hub.
+Kaiju King is a Template that can be found in the Highrise Stuido Hub.
 </Note>
 
 ## **Key Features**
