@@ -37,7 +37,11 @@ They may not be used as bases for any regular Concept.
 
 [Rozovey](https://highrise.game/catalog/designer-profile/Rozovey)
 
+[Serahnity](https://highrise.game/catalog/designer-profile/Serahnity)
+
 [Shaikuma](https://highrise.game/catalog/designer-profile/Shaikuma)
+
+[sunfnvp](https://highrise.game/catalog/designer-profile/sunfnvp)
 
 [theCelia](https://highrise.game/catalog/designer-profile/theCelia)
 
