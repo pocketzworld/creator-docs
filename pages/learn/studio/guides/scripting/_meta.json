@@ -20,6 +20,9 @@
   "client-and-server-scripts":{
     "title": "Client and Server Interaction"
   },
+  "module-scripts":{
+    "title": "Module Scripts"
+  },
   "player-character-events":{
     "title": "Player and Character Events"
   },

@@ -11,3 +11,7 @@ To populate a scene, you use 3D Modelling software to create digital objects. Th
 This is an easy to follow guide for creating a low poly world in Blender 4.0, and it is a great introduction to how 3D Modelling works.
 
 <iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/ELiqWceCk0Q?si=QuGqjKxamRYbjKts" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### **Exporting Models to Unity**
+This is an easy to follow guide for exporting FBX models from Blender to Unity.
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/dQWHU8yDpAo?si=t8QnuQXN2Jho2uOg" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
