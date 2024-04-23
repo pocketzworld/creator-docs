@@ -8,7 +8,7 @@ To create a module script, simply create a new Lua script and set the script typ
 
 > Note:  
 >`module` scripts, like `client/server` scripts run on both the `client` and `server`.  
->This will allow use of server function: `ClientAwake()`,`ServerAwake()`, etc.
+>This will allow use of client/server functions: `ClientAwake()`,`ServerAwake()`, etc.
 
 **Example:**
 ```lua
