@@ -1,8 +1,8 @@
-# Creating Glowing Materials
+# Post Processing and Emissive Materials
 
 ## Introduction
 
-This guide shows how to create glowing/neon materials using emission and post processing.
+This guide shows how to setup a Post Processing Volume and create glowing materials using emission.
 
 ## Steps
 
@@ -15,21 +15,16 @@ This guide shows how to create glowing/neon materials using emission and post pr
 
 ### 2. Add a Camera
 
-1. Create a Camera Object in the Hierarchy.
+1. Create a Camera Object in the Hierarchy or Select your existing Camera.
 2. Enable **Post Processing** in the camera's properties.
-
-<Note>
-
-This camera is just to preview the Bloom effect. Disable or delete it before testing and publishing.
-
-</Note>
 
 ### 3. Create and Assign the Material
 
-1. Create a material with the "Highrise Unlit" shader (**Highrise > Unlit**).
-2. Set the emission color and strength.
-3. Assign the material to your mesh.
+1. Create a material with the `Universal Render Pipeline > Particles > Unlit` shader.
+2. Enable emission
+3. Set the emission color and strength.
+4. Assign the material to your mesh.
 
 ## Conclusion
 
-You've successfully created a glowing neon material. Now you can light up your scene and build in style!
+You've successfully created a glowing material. Now you can light up your scene and build in style!
