@@ -65,7 +65,3 @@ end)
 ```
 
 By utilizing these player and character events effectively, you can create dynamic and engaging experiences for players in your Highrise Studio projects.
-
----
-
-Feel free to use this guide for your documentation purposes! Let me know if you need any further assistance.

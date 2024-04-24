@@ -33,5 +33,53 @@ properties:
       - ServerOnly
     code_samples:
     type: Class.Event
+  - name: isLoading
+    summary: Indicates whether the server is currently in a loading state.
+    is_static: false
+    code_samples:
+    type: boolean
 methods:
+  - name: LoadScene
+    summary: Loads a scene into the game environment.
+    is_static: false
+    tags:
+      - ServerOnly
+    parameters:
+      - name: sceneNameOrId
+        type: string or number
+        summary:
+      - name: additive
+        type: boolean
+        default: false
+        summary:
+    code_samples:
+    returns:
+      - type: Class.Scene
+  - name: MovePlayerToScene
+    summary: Moves a player to a specified scene within the game environment.
+    is_static: false
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        summary:
+      - name: scene
+        type: Class.Scene
+        summary:
+    code_samples:
+    returns:
+      - type: boolean
+  - name: LoadSceneAdditive
+    summary: Loads a scene additively into the game environment.
+    is_static: false
+    tags:
+      - ServerOnly
+    parameters:
+      - name: sceneNameOrId
+        type: string or number
+        summary:
+    code_samples:
+    returns:
+      - type: Class.Scene
 math_operations:

@@ -9,7 +9,7 @@ constructors:
 properties:
   - name: self
     summary: |
-      The 'self' property is used to access the object's instance. This is always the owning script of the object as a Class.LuaBehaviour. This is the primary way to get many of the core Unity MonoBehaviour methods and properties like `self.gameObject`, `self.Update` and `self.OnTriggerEnter`. It is highly recommended to familiarize yourself with the Class.LuaBehaviour documentation to understand how to use the 'self' property.
+      The 'self' property is used to access the current script's instance. This is always the owning script of the object as a Class.LuaBehaviour. This is the primary way to get many of the core Unity MonoBehaviour methods and properties like `self.gameObject`, `self:Update` and `self:OnTriggerEnter`. It is highly recommended to familiarize yourself with the Class.LuaBehaviour documentation to understand how to use the 'self' property.
     tags:
       - ServerAndClient
     code_samples:
@@ -26,7 +26,50 @@ properties:
     tags:
       - ServerOnly
     type: Class.GameServer
+  - name: scene
+    summary: |
+      The 'scene' property is used to access the currently active scene.
+    tags:
+      - ServerAndClient
+    code_samples:
+    type: Class.Scene
 methods:
+  - name: defer
+    summary: |
+      Defers the execution of a function to the next frame. This is useful for when you want to run a function after the current frame has finished.
+    tags:
+      - ServerAndClient
+    code_samples: |
+      ```lua
+        defer(function()
+          print("This will run in the next frame")
+        end)
+      ```
+    parameters:
+      - name: callback
+        type: function
+        summary: The function to run in the next frame.
+    returns:
+      - type: void
+        summary:
+  - name: require
+    summary: |
+      Gets a 'Module' typed script by name as a singleton behaviour, giving access to the hierarchy it is within.
+
+      Using the require method to retrieve a module will automatically load the singleton instance of the behaviour. This is equivalent to using Find and GetComponent to retrieve the behaviour.
+    tags:
+      - ServerAndClient
+    code_samples: |
+      ```lua
+        local myModuleScript = require("MyModuleScript")
+      ```
+    parameters:
+      - name: path
+        type: string
+        summary: The script name of the module to load.
+    returns:
+      - type: Class.LuaBehaviour
+        summary: The module that was loaded.
   - name: typeof
     summary: |
       Gets the string representation of the type of the object. This is useful for debugging and logging as well as learning about what types are being returned by complex methods.

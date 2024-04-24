@@ -1,0 +1,507 @@
+name: VisualElement
+type: classes
+summary: |
+  [Unity's VisualElement Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.html)
+description:
+code_samples:
+inherits:
+constructors:
+  - name: new
+    summary: |
+      [Unity's VisualElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-ctor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.VisualElement
+        summary:
+properties:
+  - name: viewDataKey
+    summary: |
+      [Unity's VisualElement.viewDataKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-viewDataKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: canGrabFocus
+    summary: |
+      [Unity's VisualElement.canGrabFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-canGrabFocus.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: layout
+    summary: |
+      [Unity's VisualElement.layout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-layout.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: contentRect
+    summary: |
+      [Unity's VisualElement.contentRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentRect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: worldBound
+    summary: |
+      [Unity's VisualElement.worldBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldBound.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: localBound
+    summary: |
+      [Unity's VisualElement.localBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-localBound.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: worldTransform
+    summary: |
+      [Unity's VisualElement.worldTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-worldTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: name
+    summary: |
+      [Unity's VisualElement.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-name.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: enabledInHierarchy
+    summary: |
+      [Unity's VisualElement.enabledInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledInHierarchy.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: enabledSelf
+    summary: |
+      [Unity's VisualElement.enabledSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-enabledSelf.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: visible
+    summary: |
+      [Unity's VisualElement.visible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-visible.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: parent
+    summary: |
+      [Unity's VisualElement.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-parent.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: contentContainer
+    summary: |
+      [Unity's VisualElement.contentContainer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-contentContainer.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: childCount
+    summary: |
+      [Unity's VisualElement.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-childCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: tooltip
+    summary: |
+      [Unity's VisualElement.tooltip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-tooltip.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: disabledUssClassName
+    summary: |
+      [Unity's VisualElement.disabledUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-disabledUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+methods:
+  - name: Q
+    summary: |
+      [Unity's VisualElement.Q Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Q.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary:
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: RegisterCallback
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: string
+        summary:
+  - name: RegisterPressCallback
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterLongPressCallback
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Focus
+    summary: |
+      [Unity's VisualElement.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Focus.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetEnabled
+    summary: |
+      [Unity's VisualElement.SetEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.SetEnabled.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: MarkDirtyRepaint
+    summary: |
+      [Unity's VisualElement.MarkDirtyRepaint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.MarkDirtyRepaint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ContainsPoint
+    summary: |
+      [Unity's VisualElement.ContainsPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ContainsPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: localPoint
+        type: DataType.Vector2
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Overlaps
+    summary: |
+      [Unity's VisualElement.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Overlaps.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: rectangle
+        type: DataType.Rect
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: ClearClassList
+    summary: |
+      [Unity's VisualElement.ClearClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ClearClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: AddToClassList
+    summary: |
+      [Unity's VisualElement.AddToClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.AddToClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RemoveFromClassList
+    summary: |
+      [Unity's VisualElement.RemoveFromClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveFromClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ToggleInClassList
+    summary: |
+      [Unity's VisualElement.ToggleInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ToggleInClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: EnableInClassList
+    summary: |
+      [Unity's VisualElement.EnableInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.EnableInClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary:
+      - name: enable
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ClassListContains
+    summary: |
+      [Unity's VisualElement.ClassListContains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ClassListContains.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: cls
+        type: string
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Add
+    summary: |
+      [Unity's VisualElement.Add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Add.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: child
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Insert
+    summary: |
+      [Unity's VisualElement.Insert Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Insert.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Remove
+    summary: |
+      [Unity's VisualElement.Remove Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Remove.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RemoveAt
+    summary: |
+      [Unity's VisualElement.RemoveAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveAt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Clear
+    summary: |
+      [Unity's VisualElement.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Clear.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ElementAt
+    summary: |
+      [Unity's VisualElement.ElementAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.ElementAt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: index
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: IndexOf
+    summary: |
+      [Unity's VisualElement.IndexOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.IndexOf.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: BringToFront
+    summary: |
+      [Unity's VisualElement.BringToFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.BringToFront.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SendToBack
+    summary: |
+      [Unity's VisualElement.SendToBack Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.SendToBack.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: PlaceBehind
+    summary: |
+      [Unity's VisualElement.PlaceBehind Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.PlaceBehind.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: sibling
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlaceInFront
+    summary: |
+      [Unity's VisualElement.PlaceInFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.PlaceInFront.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: sibling
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RemoveFromHierarchy
+    summary: |
+      [Unity's VisualElement.RemoveFromHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.RemoveFromHierarchy.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Contains
+    summary: |
+      [Unity's VisualElement.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.Contains.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: child
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: FindCommonAncestor
+    summary: |
+      [Unity's VisualElement.FindCommonAncestor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement.FindCommonAncestor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: other
+        type: Class.VisualElement
+        default:
+        summary:
+    returns:
+      - type: Class.VisualElement
+        summary:
+math_operations:

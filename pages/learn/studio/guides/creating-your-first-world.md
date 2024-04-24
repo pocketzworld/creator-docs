@@ -1,66 +1,99 @@
-# **Creating Your First World**
+# Creating Your First World
 
-## **Introduction**
-Looking to craft your first immersive, virtual world? You're in the right place at the right time! Let's dive into the process of using Studio Hub to generate, illuminate, and test your inaugural creation. It's easier than you think and a lot more fun!
+## Introduction
 
-### **Step 1: Creating a New World**
-1. Download [Unity Hub](https://unity3d.com/get-unity/download), the key to utilizing Highrise Studio Hub.
-2. Launch [Studio Hub](https://createforum.highrise.game/t/highrise-studio-hub-0-3-0/887). You will be prompted to install the correct Unity version if needed.
-3. Click "New Project" and opt for the Basic Template.
+This guide will walk you through the process of creating your first virtual world using Highrise Studio. You will learn how to install the necessary tools, create a simple world, add assets and lighting, and test it in Unity. The guide also covers uploading your world to the Highrise Creator Portal, updating its details, and releasing it to the public.
 
-![open studio hub](/assets/learn/guides/studio/open-studio-hub.png)
+## Steps
 
-4. Now that we're in Unity, on the top left toolbar you can use the "Sign in" button to sign into your Highrise Account.
+### Step 1: Set Up the Tools
 
-![before sign in](/assets/learn/guides/studio/before-sign-in.png)    ![after sign in](/assets/learn/guides/studio/after-sign-in.png)
+1. Download and install [Studio Hub](https://create.highrise.game/highrise-studio).
+2. Follow Studio Hub's instructions to download and install Unity and the Highrise Studio Package.
 
-5. You can now test your world with the "Play" button in the middle of the top toolbar.
+### Step 2: Create a New World
 
-![play button](/assets/learn/guides/studio/play-button.png)
+1. In Studio Hub, click `New Project`.
+2. Select the **Basic Template**.
+3. Name the project "My First World".
+4. Leave the location as default and click `Create Project`.
 
-### **Step 2: Adding Assets and Scripts**
-There are many ways to import assets like textures and meshes into Unity. Here are a few common methods:
-- **Asset Store:** Unity's built-in Asset Store is a treasure trove of ready-made assets. To access, simply click on `Window > Asset Store`, then search online to select your chosen asset, and import directly into your project.
-- **Manual Import:** To import locally stored files, right-click within the Project panel, select `Import New Asset`, and browse to your desired file.
-- **Drag & Drop:** An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel. 
-- ---- Note that Highrise Studio does not support adding new C# runtime scripts.
+### Step 3: Use Unity
 
-In order to create a new Lua script to harness the power of Highrise Studio, you simply right-click in the Project panel, select `Create > Lua > Script`, and name your script. To get started scripting with Lua for Highrise check out [Scripting a GameObject](https://create.highrise.game/learn/studio/guides/scripting/scripting-a-gameobject)
+1. Sign in to your Highrise account using the `Sign In` button.
+2. Test your world using the `Play` button in the top toolbar.
 
-![add-lua-script](/assets/learn/guides/studio/add-lua-script.png)
+![Play button](/assets/learn/guides/studio/play-button.png)
 
-### **Step 3: Adjust The Room Lighting and Background**
+### Step 4: Make Changes
 
-1. Go to `Window > Rendering > Lighting`. Or press `(CMD/CNTRL) + 9` to open the window.
-2. Here you can access the **Scene** and **Environment** settings.
-3. The **Scene** settings allow you to control the lightmap, map resolution, and samples.
-4. The **Environment** settings allow you to adjust the Skybox material and environment lighting.
-5. The **Skybox** is a Gradient material named *Sky* located in `Assets > Template > Art` in Unity's Project tab.
+1. Move and change objects:
+   - Select the Green Block and move it up to 5 on the Y-axis or change its Y value to 5 in the inspector.
+   - Change the Green Block's scale to 0.5, 0.5, 0.5 in the inspector.
 
+2. Add objects using the Highrise Asset Store, Unity Asset Store, manual import, or drag and drop.
 
-### **Step 4: Add Lights**
-1. Right click in the Hierarchy and create a light.
-2. Make sure the light **Type** is set to **Baked**
+3. Update the walkable area:
+   - Select the NavMesh in the Hierarchy view.
+   ![NavMesh](/assets/learn/guides/studio/creating-your-first-world/navmesh.png)
+   - In the inspector, click `Bake`.
 
-**For Stationary Meshes**
+4. Add scripts:
+   - In the Project window, navigate to the desired location.
+   - Right-click and select `Create > Lua > Script`
+   - Create a Lua script named "Rotate".
+   - Add the following code:
+     ```lua
+     function self:Update()
+       local rotationAngle = 5 * Time.deltaTime
+       self.transform.localEulerAngles = self.transform.localEulerAngles + Vector3.new(0, rotationAngle, 0)
+     end
+     ```
+   - Uncheck `Static` for the Green Block in the inspector.
+   ![Static](/assets/learn/guides/studio/creating-your-first-world/static.png)
+   - Add the "Rotate" script to the Green Block using `Add Component`.
+   ![Add Component](/assets/learn/guides/studio/creating-your-first-world/add-component.png)
 
-3. Make sure all the 3D Objects *(Meshes)* you want affected are set to **Static**. *static is a checkbox next to the Object's name in the inspector panel*
-   
-**For Animated or Moving Meshes**
+### Step 5: Adjust Lighting
 
-4. Make the Object **Non-Static**
-5. Create a **Light Probe Grid** to light the dynamic meshes.
-[Light Probes tutorial](https://www.youtube.com/watch?v=_E0JXOZDTKA)
+1. Open the Lighting window via `Window > Rendering > Lighting` or `(CMD/CTRL) + 9`.
+2. Add lights and set their type to `Baked`.
+3. For stationary meshes, mark them as `Static`.
+4. For animated or moving meshes, create a Light Probe Grid.
+5. Bake the lights by clicking `Generate Lighting`.
 
+### Step 6: Test
 
-### **Step 5: Bake your lights and Navmesh**
-After laying out your **Lights** and **Objects**:
-1. Select the "NavMesh" Object in the Hierarchy
-2. Click **Bake** in the NavMeshSurface component in the Inspector Panel. *this will update the navigation map in your world that outlines where characters can walk*
-3. Make sure all Lights and stationary Meshes are marked **Static** or **Baked**
-4. In the Lighting Panel select **Generate Lighting** to calculate your new Lights and Shadows.
+1. Enter Play Mode.
+2. Verify your avatar appears and behaves as expected.
+3. Add Virtual Players via `Highrise > Studio > Virtual Player`.
+![Virtual Player](/assets/learn/guides/studio/creating-your-first-world/virtual-player.png)
+4. Walk around and test the world.
+5. Exit Play Mode.
 
+### Step 7: Upload
 
-# **Congratulations! You've Created Your First 3D Room**
+1. Click `Upload` and select `Upload to a New World`.
+![Upload](/assets/learn/guides/studio/creating-your-first-world/upload-world.png)
+2. The world will be processed and available as a private draft.
+3. You can now see the world in your Highrise app under "My Worlds" in the world directory.
 
-That's it! You've successfully created your first 3D room using the Highrise Studio Hub. Now, you can continue to build and customize your virtual world with rooms, models, and more.
+### Step 8: Update Description and Images
+
+1. Navigate to the page of the newly created world on the [Creator Portal Dashboard](https://create.highrise.game/dashboard/creations).
+2. Click `...` and select `Edit World`.
+![Edit](/assets/learn/guides/studio/creating-your-first-world/edit-world.png)
+3. Update the name, introduction, and description.
+4. Upload an icon and sample images.
+5. Click `Save`.
+
+### Step 9: Release
+
+In the Builds tab of the world page, click `Release` to make your world public. This will make it available to everyone in Highrise.
+
+## Conclusion
+
+Congratulations! You've Created Your First World
+
+That's it! You've successfully created your first World using the Highrise Studio. Now, you can continue to build and customize your virtual world with rooms, models, and more. Continue to part 2 of this guide to learn how to publish and release the World you've just built.
+

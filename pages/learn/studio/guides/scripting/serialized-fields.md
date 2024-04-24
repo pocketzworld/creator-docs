@@ -4,7 +4,7 @@
 In this guide you will learn how to create Serialized Fields to expose your variables to the Editor.
 
 ### **What is a Serialized Field?**
-A Serialized Field is what we call a Lua variable that has been Serialized and Typed, making it avalible to control in the Editor.
+A Serialized Field is what we call a Lua variable that has been Serialized and Typed, making it available to control in the Editor.
 
 ![Properties](/assets/learn/guides/studio/properties.png)
 

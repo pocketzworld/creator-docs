@@ -75,9 +75,9 @@ function SpawnNewObject(obj)
     local newObjectTransform = newObject.transform
 
     -- Manipulate it's Position Rotation and Scale
-    newObjectTran.localPosition = Vector3.new(0,0,0)
-    newObjectTran.localEulerAngles = Vector3.new(0,0,0)
-    newObjectTran.localScale = Vector3.new(1,1,1)
+    newObjectTransform.localPosition = Vector3.new(0,0,0)
+    newObjectTransform.localEulerAngles = Vector3.new(0,0,0)
+    newObjectTransform.localScale = Vector3.new(1,1,1)
 end
 
 SpawnNewObject(myGameObject)

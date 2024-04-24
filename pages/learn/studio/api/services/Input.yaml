@@ -9,19 +9,19 @@ code_samples:
 inherits:
 constructors:
 properties:
-  - name: IsAltPressed
+  - name: isAltPressed
     summary: |
       The 'IsAltPressed' property indicates if the Alt key is currently being pressed on the keyboard. This can be useful for creating keyboard shortcuts or alternate modes within the game.
     is_static: false
     code_samples:
     type: boolean
-  - name: IsMouseInput
+  - name: isMouseInput
     summary: |
       The 'IsMouseInput' property helps to detect whether a mouse device is providing input. false == touch input
     is_static: false
     code_samples:
     type: boolean
-  - name: Client
+  - name: client
     summary: |
 
     is_static: false
@@ -32,25 +32,25 @@ properties:
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressBegan
     summary: |
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressContinue
     summary: |
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressEnded
     summary: |
 
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragBegan
     summary: |
       The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.

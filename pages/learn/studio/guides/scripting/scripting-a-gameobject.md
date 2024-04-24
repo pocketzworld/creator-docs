@@ -34,6 +34,7 @@ In this guide you will learn how to create a basic Lua script and add it to a ga
      ```lua
      print("Hello World")
      ```
+   - Save your script file.
 
 ### **Step4: Adding the Script to a GameObject:**
    - Back in Unity, click on the **+** icon in the top left corner of the **Hierarchy** panel.

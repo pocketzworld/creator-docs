@@ -31,6 +31,14 @@ properties:
       - ServerAndClient
     code_samples:
     type: Class.Transform
+  - name: owner
+    summary: |
+      The owner is the player associated with this GameObject. `nil` if there is no owner
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples:
+    type: Class.Player
   - name: layer
     summary: |
       This property allows you to manipulate the layer that the GameObject is part of. Layers can be used for various purposes such as rendering and collision detection. [Refer to the official Unity documentation for more information.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-layer.html)

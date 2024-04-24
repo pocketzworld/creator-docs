@@ -1,35 +1,45 @@
-# **Importing Assets from the Unity Asset Store**
+# Adding Assets from the Unity Asset Store
 
-## **Introduction**
-In this guide you will learn how to download and import assets from the Unity Asset Store.
+## Introduction
 
-[Importing Assets Video Guide](https://www.youtube.com/watch?v=MltrDeGAwXk)
+The Unity Asset Store contains a large collection of ready made assets you can use with Highrise Studio. 
 
-### **Step 1: Start a New Basic Project**
-1. Open the Studio Hub and create a new project.
+This guide will teach you how to download and import assets from the Unity Asset Store into your project.
 
-### **Step 2: Access the Asset Store**
-1. Navigate to the Asset Store in your Browser.
-2. Find and open the desired asset.
-3. Click on "Add to My Assets."
+[Watch the Importing Assets Video Guide](https://www.youtube.com/watch?v=MltrDeGAwXk)
 
-### **Step 3: Accept Terms of Service and Download**
-1. Return to Unity
-2. Open the Package Manager
-3. In the Package Manager, switch to the "My Assets" tab.
-2. Locate your new asset and click "Download."
+## Step 1: Start a New Project
 
-### **Step 4: Import the Package**
-1. Once downloaded, import the package into your project.
+1. Open Studio Hub.
+2. Create a new project.
 
-### **Step 5: Delete the Cube and Clear Baked Lighting**
-1. Delete the cube or any other default objects in your scene.
-2. If any lighting is baked, clear the baked lighting information.
+## Step 2: Access the Asset Store
 
-### **Step 6: Drop New Models into the Scene**
-1. Now, you can drag and drop the new models from the imported package into the scene.
-2. Adjust the placement and configuration of the models as needed.
+1. Go to the Asset Store in your browser.
+2. Search for and select the asset you want.
+3. Click "Add to My Assets."
 
-# **Congratulations! You've Integrated the Custom Asset into Your Unity Project**
+## Step 3: Download the Asset
 
-You have successfully set up a new Unity project, added a custom asset from the Asset Store, and incorporated it into your scene with Highrise shaders. Happy development!
+1. Open Unity.
+2. Open the Package Manager.
+3. Go to the "My Assets" tab.
+4. Find the asset and click "Download."
+
+## Step 4: Import the Asset
+
+1. Once the asset is downloaded, click "Import" to add it to your project.
+
+## Step 5: Prepare the Scene
+
+1. Delete the default cube and any other unwanted objects.
+2. Clear any baked lighting if present.
+
+## Step 6: Add Models to the Scene
+
+1. Drag and drop the new models from the package into the scene.
+2. Position and adjust the models as necessary.
+
+## Conclusion
+
+Congratulations! You've successfully imported a custom asset from the Unity Asset Store into your Unity project. These new assets are now ready to enhance your project, equipped with Highrise shaders for better integration. Happy developing!

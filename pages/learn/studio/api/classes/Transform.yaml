@@ -82,6 +82,8 @@ properties:
     summary: |
       The 'parent' property provides a way to get or set the parent of this GameObject. It's particularly useful for managing GameObject hierarchies. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html) for more information.
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: Class.Transform
   - name: worldToLocalMatrix
@@ -106,6 +108,8 @@ properties:
     summary: |
       The 'childCount' provides you with the number of children the Transform has. It can be handy when you are dealing with GameObject hierarchies and need to manage multiple child GameObjects. More details in the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html).
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     type: number
   - name: lossyScale
@@ -431,6 +435,8 @@ methods:
     summary: |
       The 'GetChild' method retrieves a child Transform by index. It can be tremendously useful when iterating over children in a parent-child hierarchy. Be aware that the Transform's sibling order also represents their order in the hierarchy. For more context, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetChild.html).
     is_static: false
+    tags:
+      - ServerAndClient
     code_samples:
     parameters:
       - name: index
