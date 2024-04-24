@@ -2,6 +2,9 @@
   "multiplayer-button": {
     "title": "Multiplayer Button"
   },
+  "multiplayer-nav-gate": {
+    "title": "Multiplayer Nav Mesh Gate"
+  },
   "kaiju-king": {
     "title": "Kaiju King"
   }
