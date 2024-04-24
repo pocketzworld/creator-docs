@@ -1,4 +1,0 @@
-# **Multiplayer Door**
-
-## **Introduction**
-
