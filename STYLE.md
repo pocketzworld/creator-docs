@@ -77,7 +77,7 @@ For linking to external websites, use standard Markdown links:
 
 When linking to internal documentation pages, use relative links including the `.md` extension:
 
-- `[Studio Overview](../pages/learn/studio/overview.md)`
+- `[Studio Overview](../pages/learn/studio/basics/overview.md)`
 
 ## Engine Reference Documentation (YAML)
 
