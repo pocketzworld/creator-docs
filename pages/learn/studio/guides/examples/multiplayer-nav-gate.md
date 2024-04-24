@@ -1,5 +1,6 @@
 # Multiplayer Nav Mesh Gate
 
+## **Introduction**
 This example demonstrates how to create Nav Mesh Gates that run code on the client and server for multiplayer functionality.
 
 ## Create an Interactable Nav Mesh Gate
@@ -15,7 +16,7 @@ This example demonstrates how to create Nav Mesh Gates that run code on the clie
   - Set the `Carve` option to `true`.
   - Set the `Shape`, `Center`, and `Size` of the obstacle component.
 
-### 3. Write Lua Script
+### 3. Write the Lua Script
 
 - Double-click the Lua script in the Project window to open it.
 - Write the following code inside the script:
@@ -57,17 +58,17 @@ function self:ServerAwake()
     end)
 end
 ```
-**Variables**:
+**Variable Declarations**:
 - `Obstacle`: Represents the gate object.
 - `toggleGateRequest`: Event triggered to toggle the gate.
 - `gateState`: Tracks the gate's current state on the network.
 
-**ClientAwake**:
+**Client-side Functionality** (`ClientAwake`):
 - Defines `SetGate` to toggle the gate's visibility.
 - Listens for taps on the gate and sends a request to toggle it.
 - Updates the gate's visibility when its state changes.
 
-**ServerAwake**:
+**Server-side Functionality** (`ServerAwake`):
 - Listens for toggle requests from the clients and toggles the gate's state on the network accordingly.
 
 
