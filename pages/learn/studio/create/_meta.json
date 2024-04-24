@@ -1,0 +1,26 @@
+{
+  "project": {
+    "title": "Projects"
+  },
+  "assets": {
+    "title": "Assets"
+  },
+  "3d": {
+    "title": "3D"
+  },
+  "scripting": {
+    "title": "Scripting"
+  },
+  "animation": {
+    "title": "Animation"
+  },
+  "chat": {
+    "title": "Chat"
+  },
+  "cloud": {
+    "title": "Cloud Services"
+  },
+  "examples": {
+    "title": "Examples"
+  }
+}

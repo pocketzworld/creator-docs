@@ -1,14 +1,17 @@
 {
-  "overview": {
-    "title": "Overview"
+  "basics": {
+    "title": "BASICS"
   },
-  "guides": {
-    "title": "Guides"
+  "create": {
+    "title": "CREATE"
+  },
+  "distribute": {
+    "title": "DISTRIBUTE"
+  },
+  "resources": {
+    "title": "RESOURCES"
   },
   "api": {
     "title": "API"
-  },
-  "resources": {
-    "title": "Resources"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "multiplayer-button": {
+    "title": "Button (Multiplayer)"
+  },
+  "multiplayer-nav-gate": {
+    "title": "Door (Multiplayer)"
+  },
+  "multiplayer-number-generator": {
+    "title": "Number Generator (Multiplayer)"
+  },
+  "multiplayer-dice": {
+    "title": "Dice (Multiplayer)"
+  }
+}
