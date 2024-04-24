@@ -1,53 +1,18 @@
 # **Random Number Generator**
 
 ## **Introduction**
-This guide explains how to wrtie the script for the Random Number Generator asset, which generates a random number within a specified range when a tap event is triggered:
+This example breaks down how to write the script for the Random Number Generator asset, which generates a random number within a specified range when a tap event is triggered:
 
+## Create an Interactable Random Number Generator
 
-> Create a Scripted Object:
-Follow steps 1-4 in the [Multiplayer Button Example.](../pages/learn/studio/guides/examples/multiplayer-button.md)
+### 1. Set Up an Interactable Object
 
-#### Step 1: Define Variables and Imports
-1. Declare the maximum number: Use the SerializeField attribute to set the maximum number to generate. This allows it to be editable in the Unity editor.
-```lua
---!SerializeField
-local maxNumber : number = 10
-```
-2. Declare variables: Define variables for the current number, tap request event, and material.
-```lua
-local currentNumber = IntValue.new("CurrentNumber", 0)
-local tapRequest = Event.new("TapRequest")
-local myMaterial = nil
-```
+- Follow steps 1-4 in the [Multiplayer Button Guide](../pages/learn/studio/guides/examples/multiplayer-button.md)
 
-#### Step 2: Client Awake Function
-1. **Set material:** In the `ClientAwake` function, retrieve the material of the game object and assign it to the `myMaterial` variable.
-```lua
-myMaterial = self.gameObject:GetComponent(Renderer).material
-```
-2. **Connect tap event:** Connect to the tapped event in the `TapHandler` component, and fire the tap request event when tapped.3
-```lua
-self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
-    tapRequest:FireServer()
-end)
-```
-3. **Update visual on number change:** Connect to the changed event of the network integer value `currentNumber` and update the visual by setting the material float value.
-```lua
-currentNumber.Changed:Connect(function(newVal, oldVal)
-    myMaterial:SetFloat("_Tile", tonumber(newVal))
-end)
-```
-> Note: `_Tile` is a custom float in the `RandomNumberShader` that controls `Flipbook` Node's `Tile` input.
+### 3. Write the Lua Script
 
-#### **Step 3: Server Awake Function**
-1. **Connect tap request:** In the `ServerAwake` function, connect to the tap request event from a client.
-```lua
-tapRequest:Connect(function()
-    currentNumber.value = math.random(1,maxNumber)
-end)
-```
-
-# **Final Script**
+- Double-click the Lua script in the Project window to open it.
+- Write the following code inside the script:
 ```lua
 --!SerializeField
 local maxNumber : number = 10
@@ -82,5 +47,25 @@ function self:ServerAwake()
     end)
 end
 ```
-#### **Summary**
+
+**Variable Declarations**:
+   - `maxNumber`: A constant defining the maximum value for a random number.
+   - `currentNumber`: A network-synced integer that tracks the current number.
+   - `tapRequest`: A network event that triggers when the object is tapped.
+   - `myMaterial`: A variable to store the material of the object (initially `nil`).
+
+**Client-side Functionality** (`ClientAwake`):
+- **Material Initialization**:
+    - Retrieves and stores the material of the game object for later modification.
+- **Tap Interaction**:
+    - Connects to the `Tapped` event of the object to fire a `tapRequest` to the server when tapped.
+- **Visual Update on Change**:
+    - Listens for changes to `currentNumber` and updates the material's `_Tile` property based on the new value to alter the object's visual appearance.
+
+**Server-side Functionality** (`ServerAwake`):
+- **Handling Tap Requests**:
+    - Responds to `tapRequest` events from clients by setting `currentNumber` to a random value between 1 and `maxNumber`.
+
+>`_Tile` is a custom property from the Shader included in the Random Number Generator Asset on the Asset Store.
+
 By following these steps, you can create a Lua script in Highrise Studio that functions as a random number generator, updating visual feedback based on user interactions. This script can be further customized or integrated into larger projects as needed.
