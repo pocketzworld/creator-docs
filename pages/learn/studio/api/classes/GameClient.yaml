@@ -53,5 +53,19 @@ properties:
     is_static: false
     code_samples:
     type: Class.Event
+  - name: worldBounds
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Bounds
+  - name: Reset
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
 methods:
 math_operations:
