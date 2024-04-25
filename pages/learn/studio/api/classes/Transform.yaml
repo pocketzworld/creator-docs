@@ -196,9 +196,28 @@ methods:
   - name: TweenLocalPosition
     summary: |
 
+    description:
     is_static: false
     code_samples:
     parameters:
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: TweenLocalScale
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
       - name: from
         type: DataType.Vector3
         default:
