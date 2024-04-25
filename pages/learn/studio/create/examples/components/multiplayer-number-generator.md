@@ -7,7 +7,7 @@ This example breaks down how to write the script for the Random Number Generator
 
 ### 1. Set Up an Interactable Object
 
-- Follow steps 1-4 in the [Multiplayer Button Guide](../pages/learn/studio/guides/examples/multiplayer-button.md)
+- Follow steps 1-4 in the [Multiplayer Button Guide](multiplayer-button.md)
 
 ### 3. Write the Lua Script
 
