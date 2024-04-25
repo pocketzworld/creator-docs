@@ -8,6 +8,20 @@ inherits:
   - Class.Behaviour
 constructors:
 properties:
+  - name: id
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: mainCamera
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Camera
   - name: PlayerJoined
     summary: |
 
@@ -22,19 +36,5 @@ properties:
     is_static: false
     code_samples:
     type: Class.LuaEvent
-  - name: sceneId
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: mainCamera
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Camera
 methods:
 math_operations:
