@@ -200,7 +200,6 @@ methods:
     is_static: false
     code_samples:
     parameters:
-    parameters:
       - name: from
         type: DataType.Vector3
         default:
