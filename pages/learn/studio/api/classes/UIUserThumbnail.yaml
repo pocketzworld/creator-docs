@@ -1,0 +1,32 @@
+name: UIUserThumbnail
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.UIView
+constructors: 
+properties: 
+methods: 
+  - name: Unload
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: new
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UIUserThumbnail
+        summary:
+math_operations: 

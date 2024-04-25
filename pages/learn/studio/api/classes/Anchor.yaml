@@ -1,0 +1,12 @@
+name: Anchor
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+methods: 
+math_operations: 

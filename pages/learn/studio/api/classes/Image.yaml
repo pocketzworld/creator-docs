@@ -1,0 +1,57 @@
+name: Image
+type: classes
+summary: |
+  [Unity's Image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image.html)
+description:
+code_samples:
+inherits: 
+  - Class.VisualElement
+constructors: 
+properties: 
+  - name: image
+    summary: |
+      [Unity's Image.image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-image.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Texture
+  - name: sourceRect
+    summary: |
+      [Unity's Image.sourceRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-sourceRect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: uv
+    summary: |
+      [Unity's Image.uv Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-uv.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: tintColor
+    summary: |
+      [Unity's Image.tintColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-tintColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: ussClassName
+    summary: |
+      [Unity's Image.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-ussClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+methods: 
+  - name: new
+    summary: |
+      [Unity's Image.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image.ctor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.Image
+        summary:
+math_operations: 
