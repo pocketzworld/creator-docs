@@ -4,10 +4,10 @@ summary: |
   [Unity's Label Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Label.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
-properties: 
+constructors:
+properties:
   - name: ussClassName
     summary: |
       [Unity's Label.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Label-ussClassName.html)
@@ -15,14 +15,14 @@ properties:
     is_static: true
     code_samples:
     type: string
-methods: 
+methods:
   - name: new
     summary: |
       [Unity's Label.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Label.ctor.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: text
         type: string
         default:
@@ -30,4 +30,4 @@ methods:
     returns:
       - type: Class.Label
         summary:
-math_operations: 
+math_operations:

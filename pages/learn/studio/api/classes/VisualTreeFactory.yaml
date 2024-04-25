@@ -1,28 +1,28 @@
 name: VisualTreeFactory
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Object
-constructors: 
-properties: 
+constructors:
+properties:
   - name: instance
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: Class.VisualTreeFactory
-methods: 
+methods:
   - name: Instantiate
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: type
         type: Class.Type
         default:
@@ -32,11 +32,11 @@ methods:
         summary:
   - name: FindEntry
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: name
         type: string
         default:
@@ -44,4 +44,4 @@ methods:
     returns:
       - type: Class.VisualElementFactory
         summary:
-math_operations: 
+math_operations:

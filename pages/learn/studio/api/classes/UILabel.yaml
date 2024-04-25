@@ -1,45 +1,45 @@
 name: UILabel
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
-properties: 
+constructors:
+properties:
   - name: text
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: string
   - name: uppercase
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: Dispose
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: SetPrelocalizedText
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: string
         default:
@@ -53,11 +53,11 @@ methods:
         summary:
   - name: SetEmojiPrelocalizedText
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: string
         default:
@@ -71,21 +71,21 @@ methods:
         summary:
   - name: AdjustFontSize
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: PreLocalized
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: text
         type: string
         default:
@@ -103,11 +103,11 @@ methods:
         summary:
   - name: EmojiPrelocalized
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
       - name: text
         type: string
         default:
@@ -123,4 +123,4 @@ methods:
     returns:
       - type: Class.UILabel
         summary:
-math_operations: 
+math_operations:

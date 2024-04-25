@@ -4,10 +4,10 @@ summary: |
   [Unity's Button Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Button.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
-properties: 
+constructors:
+properties:
   - name: ussClassName
     summary: |
       [Unity's Button.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Button-ussClassName.html)
@@ -15,5 +15,5 @@ properties:
     is_static: true
     code_samples:
     type: string
-methods: 
-math_operations: 
+methods:
+math_operations:

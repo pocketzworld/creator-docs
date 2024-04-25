@@ -4,9 +4,9 @@ summary: |
   [Unity's IStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+constructors:
+properties:
   - name: backgroundColor
     summary: |
       [Unity's IStyle.backgroundColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-backgroundColor.html)
@@ -343,5 +343,5 @@ properties:
     is_static: false
     code_samples:
     type: DataType.StyleLength
-methods: 
-math_operations: 
+methods:
+math_operations:

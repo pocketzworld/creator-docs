@@ -1,42 +1,42 @@
 name: UISlider
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.UIView
-constructors: 
-properties: 
+constructors:
+properties:
   - name: lowValue
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: highValue
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: value
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
-methods: 
+methods:
   - name: SetValueWithoutNotify
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: newValue
         type: number
         default:
@@ -46,22 +46,22 @@ methods:
         summary:
   - name: Instantiate
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.UISlider
         summary:
   - name: new
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.UISlider
         summary:
-math_operations: 
+math_operations:

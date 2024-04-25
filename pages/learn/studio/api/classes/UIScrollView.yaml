@@ -1,189 +1,189 @@
 name: UIScrollView
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
-properties: 
+constructors:
+properties:
   - name: scrollableSize
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: viewportSize
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: hasInertia
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isAtEnd
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: isScrolling
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: value
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: contentViewport
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.VisualElement
   - name: contentContainer
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: Class.VisualElement
   - name: scrollWheelRate
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: number
   - name: isClamped
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: boolean
   - name: isElastic
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: boolean
   - name: scrollDecelerationRate
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: number
   - name: ussScrollView
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewGradients
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewGradientsTop
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewGradientsBottom
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewViewport
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewContent
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewHorizontal
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewVertical
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: ussScrollViewFadeEdges
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: string
   - name: defaultScrollDecelerationRate
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: number
   - name: fastScrollDecelerationRate
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: number
   - name: minInertiaVelocity
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
     type: number
-methods: 
+methods:
   - name: ScrollTo
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: child
         type: Class.VisualElement
         default:
@@ -193,11 +193,11 @@ methods:
         summary:
   - name: ScrollToElement
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: element
         type: Class.VisualElement
         default:
@@ -211,11 +211,11 @@ methods:
         summary:
   - name: ScrollToOffset
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: offset
         type: number
         default:
@@ -229,11 +229,11 @@ methods:
         summary:
   - name: ScrollToEnd
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: animationDuration
         type: number
         default:
@@ -243,11 +243,11 @@ methods:
         summary:
   - name: ScrollToBeginning
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: animationDuration
         type: number
         default:
@@ -257,11 +257,11 @@ methods:
         summary:
   - name: SetValueWithoutNotify
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: newValue
         type: number
         default:
@@ -271,21 +271,21 @@ methods:
         summary:
   - name: AdjustScrollOffsetForNewContent
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: AdjustScrollOffset
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: delta
         type: number
         default:
@@ -295,12 +295,12 @@ methods:
         summary:
   - name: CancelAnimation
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:

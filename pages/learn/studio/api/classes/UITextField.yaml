@@ -1,63 +1,63 @@
 name: UITextField
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
-properties: 
+constructors:
+properties:
   - name: inputLengthLimit
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: number
   - name: disableAutocorrection
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: showSearchIcon
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: showClearButton
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: enableMarkup
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: showPlaceholderOnEmptyFocus
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
     type: boolean
-methods: 
+methods:
   - name: SetDecoratedValueWithoutNotify
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: value
         type: string
         default:
@@ -67,11 +67,11 @@ methods:
         summary:
   - name: SetValueWithoutNotify
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
       - name: newValue
         type: string
         default:
@@ -81,62 +81,62 @@ methods:
         summary:
   - name: Dispose
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: void
         summary:
   - name: MeasureTextHeight
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: number
         summary:
   - name: LeftTextMargin
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: number
         summary:
   - name: IsTextFieldFocused
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: boolean
         summary:
   - name: FocusedTextField
     summary: |
-      
+
     description:
     is_static: true
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.UITextField
         summary:
   - name: new
     summary: |
-      
+
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.UITextField
         summary:
-math_operations: 
+math_operations:

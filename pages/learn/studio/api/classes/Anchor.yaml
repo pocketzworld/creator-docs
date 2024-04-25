@@ -1,12 +1,12 @@
 name: Anchor
 type: classes
 summary: |
-  
+
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
-methods: 
-math_operations: 
+constructors:
+properties:
+methods:
+math_operations:

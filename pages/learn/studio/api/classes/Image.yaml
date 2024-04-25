@@ -4,10 +4,10 @@ summary: |
   [Unity's Image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
-properties: 
+constructors:
+properties:
   - name: image
     summary: |
       [Unity's Image.image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-image.html)
@@ -43,15 +43,15 @@ properties:
     is_static: true
     code_samples:
     type: string
-methods: 
+methods:
   - name: new
     summary: |
       [Unity's Image.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image.ctor.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    parameters:
     returns:
       - type: Class.Image
         summary:
-math_operations: 
+math_operations:
