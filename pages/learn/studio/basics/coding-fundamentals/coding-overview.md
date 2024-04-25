@@ -1,6 +1,6 @@
 # Coding Fundamentals Overview
 
-Before beginning this course, you should have basic knowledge of Highrise Studio, as demonstrated in [Introduction to Studio](/pages/learn/studio/basics/creating-your-first-world.md).
+Before beginning this course, you should have basic knowledge of Highrise Studio, as demonstrated in [Introduction to Studio](https://create.highrise.game/learn/studio/basics/creating-your-first-world.md).
 
 ## Introduction
 

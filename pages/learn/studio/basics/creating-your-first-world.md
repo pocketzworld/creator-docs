@@ -33,13 +33,13 @@ This guide will walk you through the process of creating your first virtual worl
    - Change the Green Block's scale to 0.5, 0.5, 0.5 in the inspector.
 
 2. Adding an object: 
-   - You can add objects to your world using the [Highrise Asset Catalog](/pages/learn/studio/create/assets/using-highrise-catalog.md), [Unity Asset Store](/pages/learn/studio/create/assets/using-unity-store.md), or manual import.
+   - You can add objects to your world using the [Highrise Asset Catalog](https://create.highrise.game/learn/studio/create/assets/using-highrise-catalog.md), [Unity Asset Store](https://create.highrise.game/learn/studio/create/assets/using-unity-store.md), or manual import.
    - Select a premade asset from the Highrise Catalog.
    - Click on the Install button on the asset.
    - Wait until the download finishes.
    - Now you can drag the object directly into your world.
 
-![Highrise Asset Catalog](/assets/learn/guides/studio/asset-catalog.png)
+![Highrise Asset Catalog](/assets/learn/guides/studio/creating-your-first-world/asset-catalog.png)
 
 3. Update the walkable area:
    - Select the NavMesh in the Hierarchy view.
