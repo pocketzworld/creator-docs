@@ -29,6 +29,20 @@ properties:
     code_samples:
     type: Class.LuaEvent
 methods:
+  - name: hud
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: aboveChat
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
   - name: OpenMiniProfile
     summary: |
 
