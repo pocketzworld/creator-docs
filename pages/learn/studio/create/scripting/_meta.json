@@ -11,6 +11,9 @@
   "unity-functions":{
     "title": "Unity Functions"
   },
+  "timers":{
+    "title": "Timers"
+  },
   "triggers":{
     "title": "Triggers"
   },
