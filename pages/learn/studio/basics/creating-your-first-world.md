@@ -28,10 +28,18 @@ This guide will walk you through the process of creating your first virtual worl
 ### Step 4: Make Changes
 
 1. Move and change objects:
-   - Select the Green Block and move it up to 5 on the Y-axis or change its Y value to 5 in the inspector.
+   - Select the Green Block and drag it to move move it around the scene.
+   - Alternatively, you can change the positional values in the inspector panel to the right of the scene.
    - Change the Green Block's scale to 0.5, 0.5, 0.5 in the inspector.
 
-2. Add objects using the Highrise Asset Store, Unity Asset Store, manual import, or drag and drop.
+2. Adding an object: 
+   - You can add objects to your world using the [Highrise Asset Catalog](/pages/learn/studio/create/assets/using-highrise-catalog.md), [Unity Asset Store](/pages/learn/studio/create/assets/using-unity-store.md), or manual import.
+   - Select a premade asset from the Highrise Catalog.
+   - Click on the Install button on the asset.
+   - Wait until the download finishes.
+   - Now you can drag the object directly into your world.
+
+![Highrise Asset Catalog](/assets/learn/guides/studio/asset-catalog.png)
 
 3. Update the walkable area:
    - Select the NavMesh in the Hierarchy view.
