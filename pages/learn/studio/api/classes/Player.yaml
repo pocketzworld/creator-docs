@@ -17,6 +17,7 @@ inherits:
 constructors:
 properties:
   - name: name
+  - name: chatBubbleTransform
     summary: |
       The 'name' property holds the name of the player. This can be used to identify the player in the game, for example, in the chat or in the leaderboard.
     is_static: false
