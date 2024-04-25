@@ -28,7 +28,6 @@ properties:
     is_static: false
     code_samples:
     type: Class.Event
-methods:
   - name: hud
     summary: |
 
@@ -43,6 +42,7 @@ methods:
     is_static: false
     code_samples:
     type: Class.VisualElement
+methods:
   - name: OpenMiniProfile
     summary: |
 

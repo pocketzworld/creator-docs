@@ -16,8 +16,14 @@ code_samples: |
 inherits:
 constructors:
 properties:
-  - name: name
   - name: chatBubbleTransform
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+  - name: name
     summary: |
       The 'name' property holds the name of the player. This can be used to identify the player in the game, for example, in the chat or in the leaderboard.
     is_static: false
