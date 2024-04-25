@@ -11,6 +11,9 @@
   "scripting": {
     "title": "Scripting"
   },
+  "ui": {
+    "title": "User Interface"
+  },
   "animation": {
     "title": "Animation"
   },
