@@ -12,6 +12,7 @@ This guide shows how to setup a Post Processing Volume and create glowing materi
 2. Add a **Volume Component** to _PostProc_ using the Inspector.
 3. Click **New** in the component properties to create a **Volume Profile**.
 4. Add a Bloom **Override**.
+5. Ensure the Bloom properties are enabled and the intesity is increased from 0.
 
 ### 2. Add a Camera
 
@@ -22,7 +23,7 @@ This guide shows how to setup a Post Processing Volume and create glowing materi
 
 1. Create a material with the `Universal Render Pipeline > Particles > Unlit` shader.
 2. Enable emission
-3. Set the emission color and strength.
+3. Set the emission color and intensity.
 4. Assign the material to your mesh.
 
 ## Conclusion
