@@ -8,6 +8,13 @@ inherits:
   - Class.Object
 constructors:
 properties:
+  - name: typeCode
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
   - name: propertyCount
     summary: |
 
@@ -17,10 +24,25 @@ properties:
   - name: runsOnServer
     summary: |
 
+    description:
     is_static: false
     code_samples:
     type: boolean
-  - name: FullName
+  - name: runsOnClient
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: runsOnClientAndServer
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: fullName
     summary: |
 
     is_static: false
