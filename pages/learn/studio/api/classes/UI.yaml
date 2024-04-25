@@ -13,21 +13,21 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: EmotesClosed
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: EmoteSelected
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
 methods:
   - name: hud
     summary: |

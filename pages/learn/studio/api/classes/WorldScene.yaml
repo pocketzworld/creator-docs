@@ -28,13 +28,13 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PlayerLeft
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
 methods:
 math_operations:

@@ -18,7 +18,7 @@ properties:
           print("Tapped")
       end)
       ```
-    type: Class.LuaEvent
+    type: Class.Event
   - name: moveTo
     summary: |
 
