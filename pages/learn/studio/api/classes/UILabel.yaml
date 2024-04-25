@@ -1,0 +1,126 @@
+name: UILabel
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.VisualElement
+constructors:
+properties:
+  - name: text
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: uppercase
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods:
+  - name: Dispose
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetPrelocalizedText
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: string
+        default:
+        summary:
+      - name: skipRtlValidation
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetEmojiPrelocalizedText
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: value
+        type: string
+        default:
+        summary:
+      - name: skipValidation
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AdjustFontSize
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: PreLocalized
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: text
+        type: string
+        default:
+        summary:
+      - name: skipValidation
+        type: boolean
+        default:
+        summary:
+      - name: skipRtlValidation
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: Class.UILabel
+        summary:
+  - name: EmojiPrelocalized
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+      - name: text
+        type: string
+        default:
+        summary:
+      - name: skipValidation
+        type: boolean
+        default:
+        summary:
+      - name: skipRtlValidation
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: Class.UILabel
+        summary:
+math_operations:

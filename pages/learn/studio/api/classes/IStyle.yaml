@@ -1,0 +1,347 @@
+name: IStyle
+type: classes
+summary: |
+  [Unity's IStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle.html)
+description:
+code_samples:
+inherits:
+constructors:
+properties:
+  - name: backgroundColor
+    summary: |
+      [Unity's IStyle.backgroundColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-backgroundColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: borderBottomColor
+    summary: |
+      [Unity's IStyle.borderBottomColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderBottomColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: borderBottomLeftRadius
+    summary: |
+      [Unity's IStyle.borderBottomLeftRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderBottomLeftRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: borderBottomRightRadius
+    summary: |
+      [Unity's IStyle.borderBottomRightRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderBottomRightRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: borderBottomWidth
+    summary: |
+      [Unity's IStyle.borderBottomWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderBottomWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: borderLeftColor
+    summary: |
+      [Unity's IStyle.borderLeftColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderLeftColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: borderLeftWidth
+    summary: |
+      [Unity's IStyle.borderLeftWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderLeftWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: borderRightColor
+    summary: |
+      [Unity's IStyle.borderRightColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderRightColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: borderRightWidth
+    summary: |
+      [Unity's IStyle.borderRightWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderRightWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: borderTopColor
+    summary: |
+      [Unity's IStyle.borderTopColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderTopColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: borderTopLeftRadius
+    summary: |
+      [Unity's IStyle.borderTopLeftRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderTopLeftRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: borderTopRightRadius
+    summary: |
+      [Unity's IStyle.borderTopRightRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderTopRightRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: borderTopWidth
+    summary: |
+      [Unity's IStyle.borderTopWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-borderTopWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: bottom
+    summary: |
+      [Unity's IStyle.bottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-bottom.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: color
+    summary: |
+      [Unity's IStyle.color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-color.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: flexBasis
+    summary: |
+      [Unity's IStyle.flexBasis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-flexBasis.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: flexGrow
+    summary: |
+      [Unity's IStyle.flexGrow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-flexGrow.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: flexShrink
+    summary: |
+      [Unity's IStyle.flexShrink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-flexShrink.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: fontSize
+    summary: |
+      [Unity's IStyle.fontSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-fontSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: height
+    summary: |
+      [Unity's IStyle.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-height.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: left
+    summary: |
+      [Unity's IStyle.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-left.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: letterSpacing
+    summary: |
+      [Unity's IStyle.letterSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-letterSpacing.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: marginBottom
+    summary: |
+      [Unity's IStyle.marginBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-marginBottom.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: marginLeft
+    summary: |
+      [Unity's IStyle.marginLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-marginLeft.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: marginRight
+    summary: |
+      [Unity's IStyle.marginRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-marginRight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: marginTop
+    summary: |
+      [Unity's IStyle.marginTop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-marginTop.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: maxHeight
+    summary: |
+      [Unity's IStyle.maxHeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-maxHeight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: maxWidth
+    summary: |
+      [Unity's IStyle.maxWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-maxWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: minHeight
+    summary: |
+      [Unity's IStyle.minHeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-minHeight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: minWidth
+    summary: |
+      [Unity's IStyle.minWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-minWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: opacity
+    summary: |
+      [Unity's IStyle.opacity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-opacity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: paddingBottom
+    summary: |
+      [Unity's IStyle.paddingBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-paddingBottom.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: paddingLeft
+    summary: |
+      [Unity's IStyle.paddingLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-paddingLeft.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: paddingRight
+    summary: |
+      [Unity's IStyle.paddingRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-paddingRight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: paddingTop
+    summary: |
+      [Unity's IStyle.paddingTop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-paddingTop.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: right
+    summary: |
+      [Unity's IStyle.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-right.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: top
+    summary: |
+      [Unity's IStyle.top Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-top.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: unityBackgroundImageTintColor
+    summary: |
+      [Unity's IStyle.unityBackgroundImageTintColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unityBackgroundImageTintColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: unityParagraphSpacing
+    summary: |
+      [Unity's IStyle.unityParagraphSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unityParagraphSpacing.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: unitySliceBottom
+    summary: |
+      [Unity's IStyle.unitySliceBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unitySliceBottom.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleInt
+  - name: unitySliceLeft
+    summary: |
+      [Unity's IStyle.unitySliceLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unitySliceLeft.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleInt
+  - name: unitySliceRight
+    summary: |
+      [Unity's IStyle.unitySliceRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unitySliceRight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleInt
+  - name: unitySliceScale
+    summary: |
+      [Unity's IStyle.unitySliceScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unitySliceScale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: unitySliceTop
+    summary: |
+      [Unity's IStyle.unitySliceTop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unitySliceTop.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleInt
+  - name: unityTextOutlineColor
+    summary: |
+      [Unity's IStyle.unityTextOutlineColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unityTextOutlineColor.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleColor
+  - name: unityTextOutlineWidth
+    summary: |
+      [Unity's IStyle.unityTextOutlineWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-unityTextOutlineWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleFloat
+  - name: width
+    summary: |
+      [Unity's IStyle.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-width.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+  - name: wordSpacing
+    summary: |
+      [Unity's IStyle.wordSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IStyle-wordSpacing.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.StyleLength
+methods:
+math_operations:

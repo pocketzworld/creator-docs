@@ -5,11 +5,11 @@ summary: |
 
   ```lua
     -- Client and Server script:
-      
+
     local remoteFunction = RemoteFunction.new("TestRemoteFunction");
     local lastSendTime = 0;
     local lastPlayer = nil;
-    
+
     function self:ClientStart()
         -- Get the tap handler on ourselves and invoke server on the remote function when tapped with a custom callback message
         self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
@@ -25,12 +25,12 @@ summary: |
             return true;
         end
     end
-    
+
     function self:ServerStart()
         server.PlayerConnected:Connect(function(player)
             lastPlayer = player
         end)
-    
+
         remoteFunction.OnInvokeServer = function(message)
             print (message)
             return "Hello from Server!";

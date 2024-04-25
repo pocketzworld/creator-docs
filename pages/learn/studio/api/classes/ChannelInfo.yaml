@@ -43,6 +43,13 @@ properties:
       - ClientAndServer
     code_samples:
     type: boolean
+  - name: priority
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
   - name: isWhisperChannel
     summary: |
       Whether or not this channel is specifically for whispering between participants.

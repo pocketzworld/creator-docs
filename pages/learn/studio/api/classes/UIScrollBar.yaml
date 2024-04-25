@@ -1,52 +1,57 @@
-name: LuaScript
+name: UIScrollBar
 type: classes
 summary: |
 
 description:
 code_samples:
 inherits:
-  - Class.Object
+  - Class.VisualElement
 constructors:
 properties:
-  - name: typeCode
+  - name: min
     summary: |
 
     description:
     is_static: false
     code_samples:
     type: number
-  - name: propertyCount
+  - name: max
     summary: |
 
+    description:
     is_static: false
     code_samples:
     type: number
-  - name: runsOnServer
+  - name: value
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: boolean
-  - name: runsOnClient
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: runsOnClientAndServer
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: fullName
-    summary: |
-
-    is_static: false
-    code_samples:
-    type: string
+    type: number
 methods:
+  - name: SetValueWithoutNotify
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: newValue
+        type: number
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: new
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.UIScrollBar
+        summary:
 math_operations:

@@ -1,0 +1,19 @@
+name: UIButton
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.VisualElement
+constructors:
+properties:
+  - name: contentContainer
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+methods:
+math_operations:

@@ -115,6 +115,13 @@ properties:
     is_static: false
     code_samples:
     type: number
+  - name: style
+    summary: |
+      [Unity's VisualElement.style Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-style.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IStyle
   - name: tooltip
     summary: |
       [Unity's VisualElement.tooltip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/VisualElement-tooltip.html)

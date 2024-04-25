@@ -1,0 +1,29 @@
+name: UIProgressBar
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.VisualElement
+constructors:
+properties:
+  - name: value
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:
+  - name: new
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.UIProgressBar
+        summary:
+math_operations:

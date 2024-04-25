@@ -1,0 +1,33 @@
+name: Label
+type: classes
+summary: |
+  [Unity's Label Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Label.html)
+description:
+code_samples:
+inherits:
+  - Class.VisualElement
+constructors:
+properties:
+  - name: ussClassName
+    summary: |
+      [Unity's Label.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Label-ussClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+methods:
+  - name: new
+    summary: |
+      [Unity's Label.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Label.ctor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: text
+        type: string
+        default:
+        summary:
+    returns:
+      - type: Class.Label
+        summary:
+math_operations:

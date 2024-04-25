@@ -7,6 +7,13 @@ inherits:
   - Class.Behaviour
 constructors:
 properties:
+  - name: destination
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
   - name: isMoving
     summary: Indicates whether the character is currently moving.
     is_static: false
@@ -22,6 +29,27 @@ properties:
     is_static: false
     code_samples:
     type: DataType.Vector3
+  - name: anchor
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Anchor
+  - name: isAnchored
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: usePathfinding
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
   - name: renderLayer
     summary: Specifies the rendering layer of the character for drawing order.
     is_static: false
@@ -57,7 +85,46 @@ properties:
     is_static: false
     code_samples:
     type: Class.Event
+  - name: AnimationEvent
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Event
+  - name: state
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: speed
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    type: number
 methods:
+  - name: Teleport
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        default:
+        summary:
+      - name: callback
+        type: Class.LuaFunction
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: SetIdle
     summary: Sets the character to an idle state.
     is_static: false
@@ -130,6 +197,50 @@ methods:
     returns:
       - type: boolean
         summary: Returns true if movement is successfully initiated.
+  - name: TeleportToAnchor
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: anchor
+        type: Class.Anchor
+        default:
+        summary:
+      - name: callback
+        type: Class.LuaFunction
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: MoveToAnchor
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: anchor
+        type: Class.Anchor
+        default:
+        summary:
+      - name: distance
+        type: number
+        default:
+        summary:
+      - name: areaMask
+        type: number
+        default:
+        summary:
+      - name: callback
+        type: Class.LuaFunction
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: TweenRenderPosition
     summary: Smoothly transitions the character's render position from one point to another.
     is_static: false

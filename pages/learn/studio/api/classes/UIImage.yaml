@@ -1,0 +1,50 @@
+name: UIImage
+type: classes
+summary: |
+
+description:
+code_samples:
+inherits:
+  - Class.Image
+constructors:
+properties:
+methods:
+  - name: Dispose
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ShowLoadingIndicator
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: show
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: new
+    summary: |
+
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: loadingIndicator
+        type: boolean
+        default:
+        summary:
+    returns:
+      - type: Class.UIImage
+        summary:
+math_operations:

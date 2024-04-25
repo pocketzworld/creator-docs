@@ -298,3 +298,22 @@ methods:
     returns:
       - type: void
         summary: This method does not return a value.
+  - name: new
+    summary: |
+      [Unity's Texture2D.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.ctor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: width
+        type: number
+        default:
+        summary:
+      - name: height
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.Texture2D
+        summary:
+math_operations:

@@ -34,55 +34,55 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressBegan
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressContinue
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: LongPressEnded
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragBegan
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragChanged
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: PinchOrDragEnded
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
   - name: MouseWheel
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.LuaEvent
+    type: Class.Event
 methods:
 math_operations:

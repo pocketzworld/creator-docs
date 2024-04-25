@@ -8,7 +8,7 @@ inherits:
   - Class.Behaviour
 constructors:
 properties:
-  - name: tapped
+  - name: Tapped
     summary: |
 
     is_static: false

@@ -1,74 +1,67 @@
-name: UI
+name: UISlider
 type: classes
 summary: |
 
 description:
 code_samples:
 inherits:
+  - Class.UIView
 constructors:
 properties:
-  - name: EmotesOpened
+  - name: lowValue
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.Event
-  - name: EmotesClosed
+    type: number
+  - name: highValue
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.Event
-  - name: EmoteSelected
+    type: number
+  - name: value
     summary: |
 
     description:
     is_static: false
     code_samples:
-    type: Class.Event
+    type: number
 methods:
-  - name: hud
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.VisualElement
-  - name: aboveChat
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.VisualElement
-  - name: OpenMiniProfile
+  - name: SetValueWithoutNotify
     summary: |
 
     description:
     is_static: false
     code_samples:
     parameters:
-      - name: player
-        type: Class.Player
+      - name: newValue
+        type: number
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: OpenPopup
+  - name: Instantiate
+    summary: |
+
+    description:
+    is_static: true
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.UISlider
+        summary:
+  - name: new
     summary: |
 
     description:
     is_static: false
     code_samples:
     parameters:
-      - name: ve
-        type: Class.UIView
-        default:
-        summary:
     returns:
-      - type: number
+      - type: Class.UISlider
         summary:
 math_operations:
