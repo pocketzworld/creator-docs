@@ -20,7 +20,7 @@ This guide will walk you through the process of creating your first virtual worl
 
 ### Step 3: Use Unity
 
-1. Sign in to your Highrise account using the `Sign In` button.
+1. Sign in to your Highrise account using the `Sign In` button. If you don't have an account, you can create one in the Highrise app.
 2. Test your world using the `Play` button in the top toolbar.
 
 ![Play button](/assets/learn/guides/studio/play-button.png)
@@ -33,7 +33,7 @@ This guide will walk you through the process of creating your first virtual worl
    - Change the Green Block's scale to 0.5, 0.5, 0.5 in the inspector.
 
 2. Adding an object: 
-   - You can add objects to your world using the [Highrise Asset Catalog](https://create.highrise.game/learn/studio/create/assets/using-highrise-catalog.md), [Unity Asset Store](https://create.highrise.game/learn/studio/create/assets/using-unity-store.md), or manual import.
+   - You can add objects to your world using the [Highrise Asset Catalog](https://create.highrise.game/learn/studio/create/assets/using-highrise-catalog), [Unity Asset Store](https://create.highrise.game/learn/studio/create/assets/using-unity-store), or manual import.
    - Select a premade asset from the Highrise Catalog.
    - Click on the Install button on the asset.
    - Wait until the download finishes.
