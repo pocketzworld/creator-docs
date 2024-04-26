@@ -7,7 +7,7 @@ This example demonstrates how to create Nav Mesh Gates that run code on the clie
 
 ### 1. Set Up an Interactable Object
 
-- Follow steps 1-4 in the [Multiplayer Button Guide](multiplayer-button.md)
+- Follow steps 1-4 in the [Multiplayer Button Guide](multiplayer-button)
 
 ### 2. Create a Nav Mesh Obstacle
 
