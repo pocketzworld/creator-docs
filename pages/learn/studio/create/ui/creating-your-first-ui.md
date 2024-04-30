@@ -28,7 +28,7 @@ Creating interactive user interfaces (UI) in your Highrise World can enhance pla
 
 1. **Add UI Elements Using UXML**:
    - Modify the UXML file to define the structure of your UI. For an Above Chat UI, add a UILabel inside your UILuaView:
-     ```uxml
+     ```xml
      <hr:UILuaView class="my-ui" picking-mode="Ignore">
          <hr:UILabel name="myLabel" picking-mode="Ignore">
          </hr:UILabel>
@@ -38,7 +38,7 @@ Creating interactive user interfaces (UI) in your Highrise World can enhance pla
 
 2. **Style the UI with USS**:
    - Open the USS file to style your UI elements:
-     ```uss
+     ```css
      .my-ui {
          -unity-text-align: middle-center;
          margin-top: auto;
