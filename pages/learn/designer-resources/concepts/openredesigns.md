@@ -13,6 +13,8 @@ They may not be used as bases for any regular Concept.
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
 
+[emooni](https://highrise.game/catalog/designer-profile/emooni)
+
 [feIine](https://highrise.game/catalog/designer-profile/feIine)
 
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
@@ -58,6 +60,8 @@ They may not be used as bases for any regular Concept.
 [variabIe](https://highrise.game/catalog/designer-profile/variabIe)
 
 [_ _yuppi_ _](https://highrise.game/catalog/designer-profile/_yuppi_)
+
+[xWitchi](https://highrise.game/catalog/designer-profile/xWitchi)
 
 [z.im](https://highrise.game/catalog/designer-profile/z.im)
 
