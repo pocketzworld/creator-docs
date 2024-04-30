@@ -99,6 +99,10 @@ This guide will walk you through the process of creating your first virtual worl
 
 In the Builds tab of the world page, click `Release` to make your world public. This will make it available to everyone in Highrise.
 
+## Video Guide
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/CXdOPMWKHko?si=o58lbYjm2LsU6ITb" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Congratulations! You've Created Your First World
