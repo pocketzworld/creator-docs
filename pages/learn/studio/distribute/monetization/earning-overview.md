@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Highrise is a platform that rewards Creators for building fun and engaging experiences. Creators can earn in two ways: Engagement-Based Payouts that are paid out by Highrise daily, and the Payments API that allows Creators to charge Earned Gold for content inside their experiences.
+Highrise is a platform that rewards Creators for building fun and engaging experiences. Creators can earn in two ways: **Engagement-Based Payouts** that are paid out by Highrise daily, and the **Payments API** that allows Creators to charge Earned Gold for content inside their experiences.
 
 ## The Creator Exchange
 
