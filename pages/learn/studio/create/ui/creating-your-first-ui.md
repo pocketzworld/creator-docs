@@ -1,5 +1,6 @@
-# Beginner's Guide to Creating UI in Highrise Studio
+# **Beginner's Guide to Creating UI in Highrise Studio**
 
+## **Introduction**
 Creating interactive user interfaces (UI) in your Highrise World can enhance player engagement significantly. Using Highrise Studio, you can efficiently implement UI elements using Lua scripts, along with UXML and USS files for layout and styling. Here's how you can get started:
 
 ## Step 1: Create Your UI Components
@@ -71,6 +72,6 @@ Creating interactive user interfaces (UI) in your Highrise World can enhance pla
 
 - **Run the Scene**: Click the play button in Unity to see your UI in action. For example, with the Above Chat setting, the UILabel should appear above the chat interface in the game.
 
-### Final Notes
+### Conclusion
 
 This guide walks you through the basics of setting up and customizing UI in Unity 3D using Highrise Studio. Experiment with different UI elements, styles, and interactions to create a dynamic and engaging user experience in your game.
