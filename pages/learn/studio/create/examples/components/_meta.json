@@ -10,5 +10,8 @@
   },
   "teleport-players": {
     "title": "Teleport Players (Multiplayer)"
+  },
+  "tracking-players": {
+    "title": "Tracking Player Data"
   }
 }
