@@ -17,7 +17,7 @@ This guide explains how to set up a teleportation trigger in Highrise Studio. Te
 
 ### 2. Writing and Understanding the Lua Script
 
-- Attach a Lua script to your trigger object and use the following script, which coordinates the teleportation process between the server and client:
+- Attach a `Client/Server` Lua script to your trigger object and use the following script, which coordinates the teleportation process between the server and client:
 
 ### **Teleport Trigger Lua Script**
 ```lua
