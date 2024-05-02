@@ -1,4 +1,4 @@
-# Multiplayer Nav Mesh Gate
+# **Multiplayer Nav Mesh Gate**
 
 ## **Introduction**
 This example demonstrates how to create Nav Mesh Gates that run code on the client and server for multiplayer functionality.

@@ -9,7 +9,7 @@ This example breaks down how to write the script for the Random Number Generator
 
 - Follow steps 1-4 in the [Multiplayer Button Guide](multiplayer-button)
 
-### 3. Write the Lua Script
+### 2. Write the Lua Script
 
 - Double-click the Lua script in the Project window to open it.
 - Write the following code inside the script:
@@ -54,7 +54,7 @@ end
    - `tapRequest`: A network event that triggers when the object is tapped.
    - `myMaterial`: A variable to store the material of the object (initially `nil`).
 
-**Client-side Functionality** (`ClientAwake`):
+**Client-side Logic** (`ClientAwake`):
 - **Material Initialization**:
     - Retrieves and stores the material of the game object for later modification.
 - **Tap Interaction**:
@@ -62,7 +62,7 @@ end
 - **Visual Update on Change**:
     - Listens for changes to `currentNumber` and updates the material's `_Tile` property based on the new value to alter the object's visual appearance.
 
-**Server-side Functionality** (`ServerAwake`):
+**Server-side Logic** (`ServerAwake`):
 - **Handling Tap Requests**:
     - Responds to `tapRequest` events from clients by setting `currentNumber` to a random value between 1 and `maxNumber`.
 

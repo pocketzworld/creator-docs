@@ -8,7 +8,7 @@
   "multiplayer-number-generator": {
     "title": "Number Generator (Multiplayer)"
   },
-  "multiplayer-dice": {
-    "title": "Dice (Multiplayer)"
+  "teleport-players": {
+    "title": "Teleport Players (Multiplayer)"
   }
 }
