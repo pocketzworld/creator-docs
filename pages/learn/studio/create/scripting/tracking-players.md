@@ -83,9 +83,16 @@ Initialize player tracking on the server side, which focuses on managing player 
 function self:ServerAwake()
     -- Start tracking players on the server side
     TrackPlayers(server)
+
+    -- Increase a players Score by 1
+    function addPointToPlayer(player)
+        local newScore = players[player].score.value + 1
+        players[player].score.value = newScore
+    end
 end
 ```
-- This part initiates player tracking on the server to handle player events like joining and disconnecting.
+- `TrackPlayers(server)` initiates player tracking on the server to handle player events like joining and disconnecting.
+- `addPointToPlayer(player)` Increases the given player's Network Value `score` by 1. This is to be called after connecting to an `Event` fired from the `client` depending on gameplay.
 
 ## **Complete Module Script:**
 
@@ -129,7 +136,7 @@ function self:ClientAwake()
 
         --The function to run everytime someones score changes
         playerinfo.score.Changed:Connect(function(newVal, oldVal)
-            print(tostring(newVal))
+            print(player.name .. ": " .. tostring(newVal))
         end)
     end
 
@@ -143,6 +150,12 @@ end
 function self:ServerAwake()
     -- Track players on the server, with no callback
     TrackPlayers(server)
+
+    -- Increase a players Score by 1
+    function addPointToPlayer(player)
+        local newScore = players[player].score.value + 1
+        players[player].score.value = newScore
+    end
 end
 ```
 
