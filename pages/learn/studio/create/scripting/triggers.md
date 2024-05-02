@@ -17,9 +17,9 @@ Triggers fire three main events when interactions occur:
 
 >The trigger or the collider interacting with it must have a Rigidbody component attached. However, the Rigidbody can be set to kinematic to disable physics simulation.
 
-### Example:
+### Examples:
 
-Here's an example demonstrating how to handle trigger events in Lua:
+**Object Entering and Exiting a Trigger:**
 
 ```lua
 function self:OnTriggerEnter(other : Collider)
@@ -31,3 +31,29 @@ function self:OnTriggerExit(other : Collider)
     local exitingGameObject = other.gameObject
     print(exitingGameObject.name .. " has left the trigger")
 end
+```
+
+**Local Player Entering and Exiting a Trigger:**
+
+```lua
+    function self:OnTriggerEnter(other : Collider)
+        local playerCharacter = other.gameObject:GetComponent(Character)
+        if playerCharacter == nil then return end  -- Break if no Character component
+
+        local player = playerCharacter.player
+        if client.localPlayer == player then
+            print(player.name .. " Entered")
+        end
+    end
+
+    function self:OnTriggerExit(other : Collider)
+        local playerCharacter = other.gameObject:GetComponent(Character)
+        if playerCharacter == nil then return end  -- Break if no Character component
+
+        local player = playerCharacter.player
+        if client.localPlayer == player then
+            print(player.name .. " Exited")
+        end
+    end
+```
+
