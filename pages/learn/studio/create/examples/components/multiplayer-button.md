@@ -1,5 +1,6 @@
-# Multiplayer Button
+# **Multiplayer Button**
 
+## **Introduction**
 This example demonstrates how to create a 3D button that runs code on the client and server for multiplayer functionality.
 
 ## Create an Interactable Button in Studio
