@@ -1,0 +1,38 @@
+name: Time
+type: classes
+summary: |
+  Provides controls over time-related aspects in your game Universe. It regulates the flow of time and pace of game actions, orchestrating object movements and animations.
+
+description:
+code_samples:
+inherits:
+tags:
+  - ServerAndClient
+constructors:
+properties:
+  - name: deltaTime
+    summary: |
+      'deltaTime' represents the time in seconds it took to complete the last frame. It's useful for smooth object motion or time-related calculations, reflecting real-world time more than game time.
+    is_static: false
+    tags:
+      - ServerAndClient
+    code_samples: |
+      ```lua
+        self.Update:Connect(function()
+          print("This frame took " .. Time.deltaTime .. " seconds")
+        end)
+      ```
+    type: number
+  - name: fixedDeltaTime
+    summary: |
+      'fixedDeltaTime' signifies the time in seconds between physics updates (FixedUpdate calls). It's consistent between frames, crucial for physics calculations requiring stable performance.
+    is_static: false
+    code_samples: |
+      ```lua
+        self.FixedUpdate:Connect(function()
+          print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
+        end)
+      ```
+    type: number
+methods:
+math_operations:
