@@ -15,10 +15,7 @@ methods:
       Retrieves a value from storage with the given key.  The callback parameters are the value and error code.  Value will be nil and the error code will be StorageError.None if the value does not exist.  Value will be nil and the error code will be a value other than StorageError.None if an error occurred.
     description:
     is_static: true
-    code_samples: |
-      ```lua
-        
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
@@ -35,7 +32,7 @@ methods:
         summary:
   - name: GetPlayerValue
     summary: |
-      This is the equivalent of calling GetValue(`{player.user.id}\{key}`, callback).  This retrieves a value that is specific to the player.  If you want to get a global value or use a different format for the key, use GetValue instead.
+      This is the equivalent of calling GetValue(player.user.id .. "/" .. key, callback).  This retrieves a value that is specific to the player.  If you want to get a global value or use a different format for the key, use GetValue instead.
     description:
     is_static: true
     code_samples:
@@ -62,10 +59,7 @@ methods:
       Sets a value in storage with the given key.  Currently supported types are string, number, boolean, table and Vector3.  If you have a global value whose value depends on the previous value, for example a leaderboard table where new high scores are inserted between existing ones, use UpdateValue instead or else data could be lost when multiple world instances set the value at the same time.  If your value is a number that needs to be increased or decreased, use IncrementValue instead.  The callback parameter is the error code.
     description:
     is_static: true
-    code_samples: |
-      ```lua
-        
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
@@ -86,7 +80,7 @@ methods:
         summary:
   - name: SetPlayerValue
     summary: |
-      This is the equivalent of calling SetValue(`{player.user.id}\{key}`, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
+      This is the equivalent of calling SetValue(player.user.id .. "/" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
     description:
     is_static: true
     code_samples:
@@ -117,10 +111,7 @@ methods:
       UpdateValue will use GetValue to retrieve the current value, then call the modifier function with the value as a parameter.  If the value does not exist, nil will be passed to the modifier function.  UpdateValue will then use SetValue to set the value to what is returned from the modifier function.  If the modifier function returns nil, the value will not be set and the callback will be immediately called.  The modifier function may be called multiple times if other world instances have made changes to the value.  Currently supported types are string, number, boolean, table and Vector3.  The callback parameter is the error code.
     description:
     is_static: true
-    code_samples: |
-      ```lua
-        
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
@@ -141,7 +132,7 @@ methods:
         summary:
   - name: UpdatePlayerValue
     summary: |
-      This is the equivalent of calling UpdateValue(`{player.user.id}\{key}`, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
+      This is the equivalent of calling UpdateValue(player.user.id .. "/" .. key, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
     description:
     is_static: true
     code_samples: |
@@ -217,7 +208,7 @@ methods:
         summary:
   - name: IncrementPlayerValue
     summary: |
-      This is the equivalent of calling IncrementValue(`{player.user.id}\{key}`, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
+      This is the equivalent of calling IncrementValue(player.user.id .. "/" .. key, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
     description:
     is_static: true
     code_samples:
@@ -248,10 +239,7 @@ methods:
       Deletes the value with the given key from storage.  The callback parameter is the error code. 
     description:
     is_static: true
-    code_samples: |
-      ```lua
-        
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
@@ -268,7 +256,7 @@ methods:
         summary:
   - name: DeletePlayerValue
     summary: |
-      This is the equivalent of calling DeleteValue(`{player.user.id}\{key}`, callback).  This deletes a value that is specific to the player.  If you want to delete a global value or use a different format for the key, use DeleteValue instead.
+      This is the equivalent of calling DeleteValue(player.user.id .. "/" .. key, callback).  This deletes a value that is specific to the player.  If you want to delete a global value or use a different format for the key, use DeleteValue instead.
     description:
     is_static: true
     code_samples:
@@ -292,7 +280,7 @@ methods:
         summary:
   - name: SearchValue
     summary: |
-      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursorId that can be passed to SearchValue to retrieve the next group of results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
+      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursorId that can be passed to SearchValue to retrieve the next group of results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value and the error code.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
     description:
     is_static: true
     code_samples: |
@@ -343,7 +331,7 @@ methods:
         summary:
   - name: SearchPlayerValue
     summary: |
-      This is the equivalent of calling SearchValue(`{player.user.id}\{key}`, callback).  This searches for values that are specific to the player.  If you want to search for global values or use a different format for the key, use SearchValue instead.
+      This is the equivalent of calling SearchValue(player.user.id .. "/" .. key, callback).  This searches for values that are specific to the player.  If you want to search for global values or use a different format for the key, use SearchValue instead.
     description:
     is_static: true
     code_samples:

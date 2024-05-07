@@ -1,0 +1,61 @@
+name: InventoryItem
+type: classes
+summary: |
+  InventoryItem contains the data for an item retrieved through either Inventory.GetItem or Inventory.GetItems.
+description:
+code_samples:
+inherits:
+  - Class.Object
+constructors:
+properties:
+  - name: id
+    summary: |
+      The id of the item
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: holderId
+    summary: |
+      The id of the holder which owns this item
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: amount
+    summary: |
+      How many of this item the owner owns.  Includes items that have been reserved.
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: available
+    summary: |
+      How many of this item the owner owns that are not reserved.
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: createdAt
+    summary: |
+      The time the holder first gained this item.  The time is in the UTC time zone expressed in unix epoch seconds.  You can use os.date to format this time into a human-readable format.
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: updatedAt
+    summary: |
+      The last time the state of this item changed.  The time is in the UTC time zone expressed in unix epoch seconds.  You can use os.date to format this time into a human-readable format.
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: reservations
+    summary: |
+      Returns an array of InventoryReservations which contain how many items are reserved and the purpose.
+    description:
+    is_static: false
+    code_samples:
+    type: 
+methods:
+math_operations:

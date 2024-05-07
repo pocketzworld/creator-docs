@@ -1,7 +1,7 @@
-name: StorageError
+name: InventoryError
 type: classes
 summary: |
-  Contains possible error codes that can be returned from Storage functions.
+  Contains possible error codes that can be returned from Inventory functions.
 description:
 code_samples:
 inherits:
@@ -11,7 +11,7 @@ constructors:
 properties:
   - name: None
     summary: |
-      The Storage function completed successfully.
+      The Inventory function completed successfully.
     is_static: true
     tags:
       - ServerOnly
@@ -33,49 +33,57 @@ properties:
       - ServerOnly
     code_samples:
     type: number
-  - name: InvalidKey
+  - name: InvalidItemId
     summary: |
-      The key must be 128 characters or less.
+      The item ID must be 128 characters or less.
     is_static: true
     tags:
       - ServerOnly
     code_samples:
     type: number
-  - name: InvalidValue
+  - name: InvalidHolderId
     summary: |
-      The value was not valid.
+      The holder ID must be 128 characters or less.
     is_static: true
     tags:
       - ServerOnly
     code_samples:
     type: number
-  - name: ValueTooLarge
-    summary: |
-      The value exceeded the maximum size.
-    is_static: true
-    tags:
-      - ServerOnly
-    code_samples:
-    type: number  
-  - name: ConcurrentModification
-    summary: |
-      The data was modified by another world instance.  If UpdateValue or UpdatePlayerValue will automatically retry when this error code is returned, if the callback receives this error code then the retry limit was exceeded.
-    is_static: true
-    tags:
-      - ServerOnly
-    code_samples:
-    type: number  
   - name: CursorInvalidLimit
     summary: |
-      The limit passed to SearchValue and SearchPlayerValue must be 100 or less.
+      The limit passed to GetItems must be 100 or less.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number  
+  - name: CursorInvalid
+    summary: |
+      The cursor ID passed to GetItems was not valid.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number  
+  - name: TransactionError
+    summary: |
+      The InventoryTransaction passed to CommitTransaction contained actions that could not be performed, such as using Take to remove more items than a player owns.
     is_static: true
     tags:
       - ServerOnly
     code_samples:
     type: number 
-  - name: CursorInvalid
+  - name: TooManyActions
     summary: |
-      The cursor ID passed to SearchValue or SearchPlayerValue was not valid.
+      The InventoryTransaction passed to CommitTransaction contained too many actions.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number 
+  - name: NoActions
+    summary: |
+      The InventoryTransaction passed to CommitTransaction did not contain any actions.  You must call at least one of the functions of InventoryTransaction before calling CommitTransaction.
     is_static: true
     tags:
       - ServerOnly

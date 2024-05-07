@@ -1,0 +1,169 @@
+name: Inventory
+type: classes
+summary: |
+  The Inventory service provides functionality for handling owned items and currencies.  Inventories can be stored per player, but also supports non-player ids to allow for features such as storage boxes for either a single player or group of players.  Changes to the inventory are handled through InventoryTransactions which contains actions that are either all processed when a operation succeeds or are all skipped if the operation fails.  This means you will never have cases such as a player buying an item from a shop within the world, losing their currency, but not getting the item, or cases such as two players trading items and the items end up duplicated or permanently lost.  See InventoryError for a list of errors that can be returned from Inventory functions.
+description:
+code_samples:
+inherits:
+tags:
+  - ServerOnly
+constructors:
+properties:
+methods:
+  - name: GetItem
+    summary: |
+      Returns the data for a particular item owned by the holder.  The callback parameters are an InventoryItem containing the item data and the error code.  The item will be nil and the error code will be StorageError.None if the holder does not own the item.  The item will be nil and the error code will be a value other than StorageError.None if an error occurred.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+        
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: holderId
+        type: string
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPlayerItem
+    summary: |
+      This is the equivalent of calling GetItem(player.user.id, callback).
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetItems
+    summary: |
+      Returns up to the given limit number of items the holder owns.  To get the first group of items, pass in nil for the cursorId.  The callback includes a cursorId that can be passed to GetItems to retrieve the next group of items.  The callback parameters are an array of InventoryItem and the error code.  The array will be empty and the error code will be StorageError.None if the holder owns no items.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+        
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: holderId
+        type: string
+        default:
+        summary:
+      - name: limit
+        type: number
+        default:
+        summary:
+      - name: cursorId
+        type: string
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPlayerItems
+    summary: |
+      This is the equivalent of calling GetItems(player.user.id, limit, cursorId, callback).
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+      - name: limit
+        type: number
+        default:
+        summary:
+      - name: cursorId
+        type: string
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CommitTransaction
+    summary: |
+      CommitTransaction will perform all the actions contained in the transaction if the returned error code is InventoryError.None or none of the actions if the returned error code is a value other than InventoryError.None.  The callback parameters are the transaction ID and error code.  The returned transaction ID can be used to call RollbackTransaction if the actions need to be undone.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+        
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: transaction
+        type: Class.InventoryTransaction
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RollbackTransaction
+    summary: |
+      Undos the actions of a committed transaction by passing in the transaction ID that was returned in the callback of CommitTransaction.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+        
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: transactionId
+        type: string
+        default:
+        summary:
+      - name: callback
+        type: function
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:
