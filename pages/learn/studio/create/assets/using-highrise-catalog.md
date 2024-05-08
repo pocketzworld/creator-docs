@@ -4,7 +4,9 @@ The Highrise Asset Catalog is a collection of premade assets, including models, 
 
 ## Accessing the Highrise Asset Catalog
 
-The Highrise Asset Catalog is available directly inside Unity (with the Highrise Studio Package). After the Highrise Studio Package is installed, you'll notice an Asset Catalog window appear below your scene editor. You can search, browse, filter, download/install, and drag objects directly into your world from this window.
+The Highrise Asset Catalog is available directly inside Unity (with the Highrise Studio Package). After the Highrise Studio Package is installed, you'll notice an Asset Catalog window appear below your scene editor. Alternatively, you can find the Highrise Asset Catalog under `Highrise > Studio > Asset Catalog`.
+
+You can search, browse, filter, download/install, and drag objects directly into your world from this window.
 
 ![Highrise Asset Catalog](/assets/learn/guides/studio/creating-your-first-world/asset-catalog.png)
 
