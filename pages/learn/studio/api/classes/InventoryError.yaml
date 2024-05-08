@@ -1,0 +1,109 @@
+name: InventoryError
+type: classes
+summary: |
+  Contains possible error codes that can be returned from Inventory functions.
+description:
+code_samples:
+inherits:
+tags:
+  - ServerOnly
+constructors:
+properties:
+  - name: None
+    summary: |
+      The Inventory function completed successfully.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number
+  - name: InternalError
+    summary: |
+      A server error occurred.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number
+  - name: RequestThrottled
+    summary: |
+      Your world is sending requests too frequently.  The limit for GetItem is 60 + (active players * 10) requests per minute.  The limit for GetItems is 10 + (active players * 5) requests per minute.  The limit for CommitTransaction and RollbackTransaction together is 10 + (active players * 2) requests per minute.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number
+  - name: InvalidItemId
+    summary: |
+      The item ID must be 128 characters or less.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number
+  - name: InvalidHolderId
+    summary: |
+      The holder ID must be 128 characters or less.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number
+  - name: CursorInvalidLimit
+    summary: |
+      The limit passed to GetItems must be 100 or less.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number  
+  - name: CursorInvalid
+    summary: |
+      The cursor ID passed to GetItems was not valid.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number  
+  - name: TransactionError
+    summary: |
+      The InventoryTransaction passed to CommitTransaction contained actions that could not be performed, such as using Take to remove more items than a player owns.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number 
+  - name: TooManyActions
+    summary: |
+      The InventoryTransaction passed to CommitTransaction must contain 32 or fewer actions.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number 
+  - name: NoActions
+    summary: |
+      The InventoryTransaction passed to CommitTransaction did not contain any actions.  You must call at least one of the functions of InventoryTransaction before calling CommitTransaction.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number 
+  - name: UnknownError
+    summary: |
+      An unexpected error occurred.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number 
+  - name: Timeout
+    summary: |
+      A response from the server was not received within the time limit.
+    is_static: true
+    tags:
+      - ServerOnly
+    code_samples:
+    type: number 
+methods:
+math_operations:

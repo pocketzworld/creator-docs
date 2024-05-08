@@ -1,0 +1,26 @@
+name: InventoryReservation
+type: classes
+summary: |
+  InventoryReservation is returned from InventoryItem.reservations and contains how many items have been reserved and their purpose.
+description:
+code_samples:
+inherits:
+  - Class.Object
+constructors:
+properties:
+  - name: amount
+    summary: |
+      The amount of items that have been reserved.
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: reservedFor
+    summary: |
+      The purpose the items were reserved for.  This corresponds to the reservedFor parameter passed into InventoryTransaction.Reserve and InventoryTransaction.Release
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods:
+math_operations:

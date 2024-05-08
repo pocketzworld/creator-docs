@@ -1,0 +1,309 @@
+name: InventoryTransaction
+type: classes
+summary: |
+  InventoryTransaction contains a list of actions that will be performed when the transaction is passed to Inventory.CommitTransaction.  Because each function returns the InventoryTransaction, they can be chained to quickly add all the actions to the object.
+description:
+code_samples:
+inherits:
+  - Class.Object
+constructors:
+  - name: new
+    summary: Instantiates a new InventoryTransaction object.
+    is_static: true
+    code_samples:
+    parameters:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+properties:
+methods:
+  - name: Give
+    summary: |
+      Adds the given quantity of the given item to the holder's inventory.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: holderId
+        type: string
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: GivePlayer
+    summary: |
+      This is the equivalent of calling Give(player.user.id, itemId, quantity).
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+        --!SerializeField
+        local itemId: string = "Money"
+
+        --!SerializeField
+        local amountPerPickup: number = 1
+
+        local collectPickupRequest = Event.new("CollectPickupRequest")
+
+        function self:ClientStart()
+          function self:OnTriggerEnter(other : Collider)
+            self.gameObject:SetActive(false)
+            collectPickupRequest:FireServer()
+          end
+        end
+
+        function self:ServerStart()
+          collectPickupRequest:Connect(function(player: Player)
+            local transaction = InventoryTransaction.new()
+              :GivePlayer(player, itemId, amountPerPickup)
+            Inventory.CommitTransaction(transaction)
+          end)
+        end
+      ```
+    parameters:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: Take
+    summary: |
+      Removes the given quantity of the given item from the holder's inventory.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: holderId
+        type: string
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: TakePlayer
+    summary: |
+      This is the equivalent of calling Take(player.user.id, itemId, quantity).
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+        function Purchase(player: Player, itemId: string, currencyId: string, cost: number)
+          local transaction = InventoryTransaction.new()
+            :GivePlayer(player, itemId, 1)
+            :TakePlayer(player, currencyId, cost)
+          Inventory.CommitTransaction(transaction)
+        end
+      ```
+    parameters:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: Move
+    summary: |
+      Removes the given quantity of the given item from the from holder's inventory and adds the same quantity of that item to the to holder's inventory.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: fromHolderId
+        type: string
+        default:
+        summary:
+      - name: toHolderId
+        type: string
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: MovePlayers
+    summary: |
+      This is the equivalent of calling Move(fromPlayer.user.id, toPlayer.user.id, itemId, quantity).
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+        function FinalizeTrade(playerA: Player, playerAItems: {string}, playerB: Player, playerBItems: {string})
+          local transaction = InventoryTransaction.new()
+          for index, itemId in playerAItems do
+            transaction:MovePlayers(playerA, playerB, itemId, 1)
+          end
+          for index, itemId in playerBItems do
+            transaction:MovePlayers(playerB, playerA, itemId, 1)
+          end
+
+          Inventory.CommitTransaction(transaction)
+        end
+      ```
+    parameters:
+      - name: fromPlayer
+        type: Class.Player
+        default:
+        summary:
+      - name: toPlayer
+        type: Class.Player
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: Reserve
+    summary: |
+      Adds the given quantity of the given item to the holder's reserved items.  Items that are reserved cannot be added or removed with Give, Take or Move.  Use Release to remove the items from the reserved items.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: holderId
+        type: string
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: reservedFor
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: ReservePlayer
+    summary: |
+      This is the equivalent of calling Reserve(player.user.id, itemId, reservedFor, quantity).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: reservedFor
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: Release
+    summary: |
+      Removes the given quantity of the given item from the player's reserved items.
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: player
+        type: Class.Player
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: reservedFor
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: ReleasePlayer
+    summary: |
+      This is the equivalent of calling Release(player.user.id, itemId, reservedFor, quantity).
+    description:
+    is_static: false
+    code_samples:
+    parameters:
+      - name: holderId
+        type: string
+        default:
+        summary:
+      - name: itemId
+        type: string
+        default:
+        summary:
+      - name: reservedFor
+        type: string
+        default:
+        summary:
+      - name: quantity
+        type: number
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+math_operations:
