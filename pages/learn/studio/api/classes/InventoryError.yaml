@@ -27,7 +27,7 @@ properties:
     type: number
   - name: RequestThrottled
     summary: |
-      Your world is sending requests too frequently.
+      Your world is sending requests too frequently.  The limit for GetItem is 60 + (active players * 10).  The limit for GetItems is 10 + (active players * 5).  The limit for CommitTransaction and RollbackTransaction together is 10 + (active players * 2)
     is_static: true
     tags:
       - ServerOnly
@@ -75,7 +75,7 @@ properties:
     type: number 
   - name: TooManyActions
     summary: |
-      The InventoryTransaction passed to CommitTransaction contained too many actions.
+      The InventoryTransaction passed to CommitTransaction must contain 32 or fewer actions.
     is_static: true
     tags:
       - ServerOnly

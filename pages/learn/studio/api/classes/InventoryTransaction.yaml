@@ -44,7 +44,31 @@ methods:
       This is the equivalent of calling Give(player.user.id, itemId, quantity).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        --!SerializeField
+        local itemId: string = "Money"
+
+        --!SerializeField
+        local amountPerPickup: number = 1
+
+        local collectPickupRequest = Event.new("CollectPickupRequest")
+
+        function self:ClientStart()
+          function self:OnTriggerEnter(other : Collider)
+            self.gameObject:SetActive(false)
+            collectPickupRequest:FireServer()
+          end
+        end
+
+        function self:ServerStart()
+          collectPickupRequest:Connect(function(player: Player)
+            local transaction = InventoryTransaction.new()
+              :GivePlayer(player, itemId, amountPerPickup)
+            Inventory.CommitTransaction(transaction)
+          end)
+        end
+      ```
     parameters:
       - name: player
         type: Class.Player
@@ -144,7 +168,20 @@ methods:
       This is the equivalent of calling Move(fromPlayer.user.id, toPlayer.user.id, itemId, quantity).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        function FinalizeTrade(playerA: Player, playerAItems: {string}, playerB: Player, playerBItems: {string})
+          local transaction = InventoryTransaction.new()
+          for index, itemId in playerAItems do
+            transaction:MovePlayers(playerA, playerB, itemId, 1)
+          end
+          for index, itemId in playerBItems do
+            transaction:MovePlayers(playerB, playerA, itemId, 1)
+          end
+
+          Inventory.CommitTransaction(transaction)
+        end
+      ```
     parameters:
       - name: fromPlayer
         type: Class.Player

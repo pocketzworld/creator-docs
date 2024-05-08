@@ -1,7 +1,7 @@
 name: Storage
 type: classes
 summary: |
-  The Storage service provides functionality for saving and loading persistent data.  This can be used for player-specific data such as storing player progress or a high score.  This can also be used for global data for tracking the progress of all players or a global leaderboard.  The Storage service is only available on the server.  For saving a player's obtained items or currency, use the Inventory service.  See StorageError for a list of errors that can be returned from Storage functions.
+  The Storage API provides functionality for saving and loading persistent data.  This can be used for player-specific data such as storing player progress or a high score.  This can also be used for global data for tracking the progress of all players or a global leaderboard.  The Storage API is only available on the server.  For saving a player's obtained items or currency, use the Inventory API.  See StorageError for a list of errors that can be returned from Storage functions.  There is a limit of how often Storage functions can be called before functions will start returning StorageError.RequestThrottled.  See the documentation for StorageError.RequestThrottled for details.
 description:
 code_samples:
 inherits:
@@ -280,7 +280,7 @@ methods:
         summary:
   - name: SearchValue
     summary: |
-      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursorId that can be passed to SearchValue to retrieve the next group of results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value and the error code.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
+      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursor ID that can be passed to SearchValue to retrieve the next group of results.  If the cursor ID is nil, then there are no more results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value, the cursor ID, and the error code.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
     description:
     is_static: true
     code_samples: |
