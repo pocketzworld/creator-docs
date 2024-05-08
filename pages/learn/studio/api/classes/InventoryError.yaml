@@ -27,7 +27,7 @@ properties:
     type: number
   - name: RequestThrottled
     summary: |
-      Your world is sending requests too frequently.  The limit for GetItem is 60 + (active players * 10).  The limit for GetItems is 10 + (active players * 5).  The limit for CommitTransaction and RollbackTransaction together is 10 + (active players * 2)
+      Your world is sending requests too frequently.  The limit for GetItem is 60 + (active players * 10) requests per minute.  The limit for GetItems is 10 + (active players * 5) requests per minute.  The limit for CommitTransaction and RollbackTransaction together is 10 + (active players * 2) requests per minute.
     is_static: true
     tags:
       - ServerOnly

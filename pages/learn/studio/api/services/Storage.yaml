@@ -15,7 +15,14 @@ methods:
       Retrieves a value from storage with the given key.  The callback parameters are the value and error code.  Value will be nil and the error code will be StorageError.None if the value does not exist.  Value will be nil and the error code will be a value other than StorageError.None if an error occurred.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        function PrintValue(key: string)
+          Storage.GetValue(key, function(value)
+            print(`{key} is {tostring(value)}`)
+          end)
+        end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -83,7 +90,27 @@ methods:
       This is the equivalent of calling SetValue(player.user.id .. "/" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        --!SerializeField
+        local spawnPoint: Transform = nil
+
+        local setSpawnPointRequest = Event.new("SetSpawnPoint")
+
+        function self:ClientStart()
+          function self:OnTriggerEnter(other : Collider)
+            setSpawnPointRequest:FireServer(spawnPoint.position)
+          end
+        end
+
+        function self:ServerStart()
+          setSpawnPointRequest:Connect(function(player: Player, spawnPoint: Vector3)
+            Storage.SetPlayerValue(player, "SpawnPoint", spawnPoint, function(errorCode)
+              print(`The error code was {StorageError[errorCode]}`)
+            end)
+          end)
+        end
+      ```
     tags:
       - ServerOnly
     parameters:
