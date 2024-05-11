@@ -1,5 +1,20 @@
 {
   "coding-overview": {
     "title": "Coding Overview"
+  },
+  "first-script": {
+    "title": "First Script"
+  },
+  "script-types": {
+    "title": "Script Types"
+  },
+  "variables-and-data-types": {
+    "title": "Variables and Data Types"
+  },
+  "functions": {
+    "title": "Functions"
+  },
+  "control-structures": {
+    "title": "Control Structures"
   }
 }

@@ -1,8 +1,11 @@
 {
-  "using-highrise-catalog":{
-    "title": "Using Highrise Asset Catalog"
+  "overview": {
+    "title": "Overview"
   },
-  "using-unity-store":{
-    "title": "Using Unity Asset Store"
+  "highrise-catalog": {
+    "title": "Highrise Catalog"
+  },
+  "unity-store": {
+    "title": "Unity Store"
   }
 }

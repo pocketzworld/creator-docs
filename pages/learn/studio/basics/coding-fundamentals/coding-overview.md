@@ -33,3 +33,5 @@ Highrise provides a comprehensive scripting API (Application Programming Interfa
 ## Community Resources
 
 In addition to official documentation and tutorials, Highrise has a vibrant community of developers who share resources, scripts, and tips for game creation. You can leverage [Discord](https://discord.gg/highrise), [forums](https://createforum.highrise.game/c/builders/studio/7), tutorials, and asset libraries to learn new techniques, troubleshoot issues, and collaborate with other creators.
+
+### Are you ready to dive into Lua scripting and create interactive worlds in Highrise Studio? Let's get started with the basics of coding! [YouTube Series](https://www.youtube.com/playlist?list=PL6F2U-o4hkiX3yg_17e2ZXzTCRl4V-1pq) or [Writing Your First Script](https://create.highrise.game/learn/studio/basics/coding-fundamentals/first-script). ⭐

@@ -1,60 +1,59 @@
-# **Scripting a GameObject**
+# Scripting a GameObject
 
-## **Introduction**
+## Introduction
 In this guide you will learn how to create a basic Lua script and add it to a game object.
 
-### **What is a Lua Script?**
+### What is a Lua Script?
 - Lua is the scripting language used for creating dynamic and interactive Highrise Worlds.
-- Learn more about how we use Lua to connect to Unity GameObjects [Here.](https://create.highrise.game/learn/studio/api/classes/LuaBehaviour)
+- [Learn more about Lua scripting](https://create.highrise.game/learn/studio/basics/coding-fundamentals/first-script).
 
->❗️Caution
->When building a Highrise World, C# scripts are not included in the package build.
->Make sure to only implement using Lua Scripts.
+> ❗️ When building a Highrise World, C# scripts are not included in the build. Make sure to use Lua scripts for your game objects.
 
-# **Creating a Hello World Script in Unity with Lua**
+## Creating a Hello World Script
+Let's create a simple script that prints "Hello, World!" to the console when the game starts.
 
-### **Step1: Creating the Script File:**
-   - Click on **Project** in the Unity editor panel.
-   - Click on the **+** icon on the top left corner of the panel to create a new asset.
-   - Navigate to **Lua > Script** and select it.
-   - Name your script file "HelloWorldScript".
+### Step 1: Create a Lua Script
 
-![Create-Script](/assets/learn/guides/studio/create-script.png) 
-![New-Script](/assets/learn/guides/studio/new-script.png)
+1. Open your project in Unity.
+2. In the **Project** panel, right-click and select **Create > Highrise > Lua Script**.
+3. Name the script `HelloWorldScript` and press **Enter**.
 
-### **Step2: Opening the Script in VS Code:**
-   - Double-click the script file to open it in Visual Studio Code (VS Code).
-   - In VS Code, press **Ctrl/Cmd + Shift + X** to open extensions.
-   - Search for "Highrise Studio Tools" and install it.
+### Step 2: Opening the Script
 
-![Studio-Extension](/assets/learn/guides/studio/studio-ext.png)
+1. Double-click the `HelloWorldScript` to open it in your code editor.
+2. Write the following code in the script:
 
-### **Step3: Writing the Script:**
-   - In your script file, type the following Lua code:
-     ```lua
-     print("Hello World")
-     ```
-   - Save your script file.
+```lua
+-- This script prints "Hello, World!" to the console
+print("Hello, World!")
+```
+[Learn more about coding fundamentals](https://create.highrise.game/learn/studio/basics/coding-fundamentals).
 
-### **Step4: Adding the Script to a GameObject:**
-   - Back in Unity, click on the **+** icon in the top left corner of the **Hierarchy** panel.
-   - Select **Create Empty** to create a new GameObject.
-   - Name your new object as desired.
-   - Select the newly created GameObject in the Hierarchy panel.
-   - In the **Inspector** panel, click on **Add Component**.
-   - Search for your Lua script by name ("HelloWorldScript").
-   - Alternatively, you can drag your script directly onto the object in the Hierarchy or into the Inspector panel.
+### Step 3: Attaching the Script to a GameObject
 
-![Add-Script](/assets/learn/guides/studio/add-comp.png) 
-![Added-Script](/assets/learn/guides/studio/added-comp.png)
+1. Right-click the `Hierarchy` panel.
+2. Select **3D Object > Create Empty** to create an empty game object.
+3. Rename the object to `HelloWorldObject`.
+4. Pick the `HelloWorldObject` in the `Hierarchy` panel.
+5. Drag the `HelloWorldScript` onto the `HelloWorldObject` in the `Inspector` panel.
 
-### **Step5: Running the Script:**
-   - With the script attached to the GameObject, press **Play** in Unity to run the scene.
-   - Click on the **Console** panel to see the output, which should display "Hello World".
+### Step 4: Testing the Script
 
-![Console-Output](/assets/learn/guides/studio/console-print.png)
+1. Hit **Play** in Unity to enter Play Mode.
+2. Check the console for the "Hello, World!" message.
 
-By following these steps, you've successfully created a Lua script in Unity, attached it to a GameObject, and executed it to print "Hello World" in the Unity console. Happy coding!
+## Conclusion
 
-> 📖
->For more detailed syntax, please refer to the [Lua API Docs.](https://create.highrise.game/learn/studio/api/classes/LuaBehaviour)
+You have successfully created a Lua script that prints "Hello, World!" to the console when the game starts. This simple script demonstrates the basics of scripting in Highrise Studio. Experiment with different scripts to add interactivity and functionality to your game objects.
+
+
+## Video Preview
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/iT6h-kq97S0" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Next Steps
+
+Delve deeper into lua scripting by learning about:
+- [Variables and Data Types](https://create.highrise.game/learn/studio/basics/coding-fundamentals/variables-and-data-types)
+- [Control Structures](https://create.highrise.game/learn/studio/basics/coding-fundamentals/control-structures)
+- [Functions](https://create.highrise.game/learn/studio/basics/coding-fundamentals/functions)
+- [Script Types](https://create.highrise.game/learn/studio/basics/coding-fundamentals/script-types)
