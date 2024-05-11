@@ -1,55 +1,41 @@
-# Highrise Studio Overview
+# Highrise Studio
 
 ## Introduction
+Highrise Studio is a development environment for creating games and experiences on the Highrise platform. It offers tools for designing, building, and publishing games playable worldwide on various devices.
+![Highrise Studio](/assets/learn/guides/studio/overview/highrise-studio.png)
 
-Highrise Studio is the official development environment for creating games and experiences on the Highrise platform. It provides a comprehensive set of tools for developers to design, build, and publish games that can be played by users across the globe on various devices. Highrise Studio's intuitive interface and powerful features make it accessible for beginners and professional developers alike.
+## Components of Highrise Studio:
 
-## Overview
+- **Studio Hub:** Your control center in Highrise Studio, providing access to different versions of Highrise Studio and Unity Editor, along with project templates and samples.
 
-Highrise Studio consists of three components:
+- **Studio Tools:** An extension for VSCode that simplifies coding for Highrise Studio, offering features like code highlighting and word suggestions.
 
-- **Studio Hub:** The centralized launch point for all versions of the Highrise Studio Package and Unity Editor. It facilitates access to Highrise services and management of project templates and samples. 
-- **Studio Package:** This is the core of Highrise Studio and enables creators to build Worlds and publish to Highrise. It is a core collection of assets, tools, and plugins running on the Unity Editor.
-- **Studio Tools:** VSCode extension. This adds syntax highlighting and autocompletion to support the Highrise Studio API.
+- **Studio Package:** The core of Highrise Studio, bundling essential assets, tools, and plugins for creating and sharing worlds on Highrise.
 
 
 ## Key Features
 
-Highrise Studio boasts a wide array of features designed to support the development of immersive and interactive 3D experiences:
+Highrise Studio offers various features to support the development of immersive 3D experiences:
 
-- **3D Modeling and World Building:** Utilize a variety of tools to create custom environments, structures, and objects.
-- **Lua Scripting:** Leverage the Lua programming language to add interactivity and gameplay mechanics to your creations.
-- **Multiplayer Testing:** Test games with real-time multiplayer functionality directly within the studio.
-- **Asset Marketplace:** Access a vast library of user-generated assets, including models, textures, and sounds, to enhance your game.
+- **3D Modeling and World Building:** Create unique environments, buildings, and objects using available tools.
+- **Lua Scripting:** Enhance interactivity and add gameplay features using the Lua programming language.
+- **Multiplayer Testing:** Test games with real-time multiplayer mode within the studio.
+- **Asset Marketplace:** Access a vast collection of user-made assets to enrich your game.
 
-## Getting Started with Highrise Studio
+## Benefits of Highrise Studio
 
-1. **Download and Install Highrise Studio Hub:**
-   - Download the Studio Hub (https://create.highrise.game/highrise-studio) and install it on your computer.
+Highrise Studio provides several benefits to developers:
 
-2. **Install Unity and the Highrise Studio plugin:**
-   - Follow the instructions in Studio Hub and allow it to download/install Unity and the accompanying Highrise Studio plugin.
+- **Game Contest Opportunities:** Participate in game contests and showcase your creations to a global audience.
 
-3. **Start a New Project:**
-   - Create a new project from scratch or select a template to start with. Templates can be a great way to learn how different game genres are structured.
+- **Earn Revenue:** Earn currency from engagement and monetization of your games. [Learn more](https://create.highrise.game/learn/studio/distribute/monetization/earning-overview).
 
-4. **Familiarize Yourself with the Interface:**
-   - Spend some time exploring the Highrise Studio interface. Check out the different panels, toolbars, and settings available to you.
+- **Community Support:** Connect with other developers, share knowledge, and collaborate on projects. [Join the Discord community](https://discord.gg/highrise).
 
-5. **Learn Lua Scripting:**
-   - Basic knowledge of Lua is essential for adding functionality to your games. Here's a great resource to get started with Lua scripting for Highrise: [Scripting a GameObject](https://create.highrise.game/learn/studio/create/scripting/scripting-a-gameobject)
-
-6. **Test and Publish Your Game:**
-   - Use the built-in testing features to playtest your game. Once you're satisfied with your creation, publish it to the Highrise platform for others to enjoy.
-
-## Best Practices
-
-- **Optimization:** Keep your game optimized for the best player experience. This includes managing asset sizes, scripting efficiently, and using Highrise's built-in optimization tools.
-- **User Interface Design:** Design intuitive and accessible user interfaces. Consider the diverse range of devices and screen sizes players might use.
-- **Security:** Implement security measures to protect your game from exploits and cheating.
-- **Engage the Community:** Listen to feedback from players and involve them in the development process. Regular updates and community engagement can help retain players and grow your game.
-- **Learn and Experiment:** The best way to improve your skills is by continuously learning and experimenting. Take advantage of the resources and tutorials available in the Roblox Developer Hub and the wider community.
+- **Regular Updates:** Stay up-to-date with new features, tools, and improvements to enhance your game development experience. [Check the official forum](https://createforum.highrise.game/).
 
 ## Conclusion
 
-Highrise Studio is a powerful and accessible platform for creating 3D games and experiences. By understanding its key features and following best practices, developers can unleash their creativity and reach millions of players worldwide. Whether you're a beginner or an experienced developer, Highrise Studio offers the tools and community support to bring your visions to life.
+Highrise Studio empowers developers to create 3D games and experiences with its powerful features and accessibility. Whether you're a novice or an expert, Highrise Studio provides the tools and community support to bring your visions to life.
+
+### Are you ready to embark on your game development journey with Highrise Studio? Let's get started! [Learn more](https://create.highrise.game/learn/studio/basics/getting-started).
