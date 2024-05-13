@@ -33,7 +33,7 @@ In Highise Studio, Lua is used to script game logic, create interactive experien
 
 ## Comparison to C#
 
-- [Introduction](https://create.highrise.game/learn/studio/create/scripting/lua/comparison-to-c%23) - Overview of Lua and C# differences.
+- [Introduction](https://create.highrise.game/learn/studio/create/scripting/lua/comparison-to-c) - Overview of Lua and C# differences.
 
 ## Best Practices
 
