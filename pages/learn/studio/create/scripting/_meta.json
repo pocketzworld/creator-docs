@@ -1,38 +1,17 @@
 {
-  "scripting-a-gameobject":{
-    "title": "Scripting a GameObject"
+  "overview": {
+    "title": "Overview"
   },
-  "serialized-fields":{
-    "title": "Serialized Fields"
+  "writing-your-first-script": {
+    "title": "Writing Your First Script"
   },
-  "gameobjects-and-components":{
-    "title": "GameObjects and Components"
+  "script-types": {
+    "title": "Script Types"
   },
-  "unity-functions":{
-    "title": "Unity Functions"
+  "lua": {
+    "title": "Lua"
   },
-  "timers":{
-    "title": "Timers"
-  },
-  "triggers":{
-    "title": "Triggers"
-  },
-  "taphandlers":{
-    "title": "Tap Handlers"
-  },
-  "client-and-server-scripts":{
-    "title": "Client and Server Interaction"
-  },
-  "module-scripts":{
-    "title": "Module Scripts"
-  },
-  "player-character-events":{
-    "title": "Player and Character Events"
-  },
-  "network-values":{
-    "title": "Network Values"
-  },
-  "tracking-players": {
-    "title": "Tracking Players"
+  "advanced": {
+    "title": "Advanced"
   }
 }

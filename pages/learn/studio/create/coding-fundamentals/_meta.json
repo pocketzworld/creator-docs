@@ -1,0 +1,14 @@
+{
+  "overview": {
+    "title": "Coding Overview"
+  },
+  "variables-and-data-types": {
+    "title": "Variables and Data Types"
+  },
+  "functions": {
+    "title": "Functions"
+  },
+  "control-structures": {
+    "title": "Control Structures"
+  }
+}

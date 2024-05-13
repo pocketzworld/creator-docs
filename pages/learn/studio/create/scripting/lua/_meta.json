@@ -1,0 +1,20 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "comparison-to-c#": {
+    "title": "Comparison to C#"
+  },
+  "types": {
+    "title": "Types"
+  },
+  "features": {
+    "title": "Features"
+  },
+  "attributes": {
+    "title": "Attributes"
+  },
+  "best-practices": {
+    "title": "Best Practices"
+  }
+}

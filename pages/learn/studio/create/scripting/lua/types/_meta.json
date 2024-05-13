@@ -1,0 +1,17 @@
+{
+  "nil": {
+    "title": "Nil"
+  },
+  "booleans": {
+    "title": "Booleans"
+  },
+  "numbers": {
+    "title": "Numbers"
+  },
+  "strings": {
+    "title": "Strings"
+  },
+  "tables": {
+    "title": "Tables"
+  }
+}

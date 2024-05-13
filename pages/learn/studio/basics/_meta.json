@@ -2,13 +2,10 @@
   "overview": {
     "title": "Overview"
   },
-  "starter": {
-    "title": "Starter"
+  "getting-started": {
+    "title": "Getting Started"
   },
-  "importing-an-existing-project": {
-    "title": "Importing an Existing Project"
-  },
-  "coding-fundamentals": {
-    "title": "Coding Fundamentals"
+  "best-practices": {
+    "title": "Best Practices"
   }
 }

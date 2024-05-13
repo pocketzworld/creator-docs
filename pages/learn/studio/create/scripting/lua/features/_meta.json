@@ -1,0 +1,23 @@
+{
+  "comments": {
+    "title": "Comments"
+  },
+  "variables": {
+    "title": "Variables"
+  },
+  "scope": {
+    "title": "Scope"
+  },
+  "operators": {
+    "title": "Operators"
+  },
+  "control-structures": {
+    "title": "Control Structures"
+  },
+  "functions": {
+    "title": "Functions"
+  },
+  "type-checking": {
+    "title": "Type Checking"
+  }
+}
