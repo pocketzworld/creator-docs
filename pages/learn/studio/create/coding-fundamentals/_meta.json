@@ -1,12 +1,6 @@
 {
-  "coding-overview": {
+  "overview": {
     "title": "Coding Overview"
-  },
-  "first-script": {
-    "title": "First Script"
-  },
-  "script-types": {
-    "title": "Script Types"
   },
   "variables-and-data-types": {
     "title": "Variables and Data Types"

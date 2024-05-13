@@ -1,10 +1,10 @@
 # Coding Fundamentals Overview
 
-Before beginning this course, you should have basic knowledge of Highrise Studio, as demonstrated in [Introduction to Studio](https://create.highrise.game/learn/studio/basics/creating-your-first-world).
+Before beginning this course, you should have basic knowledge of Highrise Studio, as demonstrated in [Introduction to Studio](https://create.highrise.game/learn/studio/basics/getting-started).
 
 ## Introduction
 
-At its core, Highrise utilizes a programming language called Lua, which is known for its simplicity and flexibility. Below is an overview of Highrise's coding fundamentals:
+In this section, you will learn the basic concepts of coding and scripting in Highrise Studio. For detailed information on Lua scripting, refer to the [Lua Scripting](https://create.highrise.game/learn/studio/create/scripting/lua/overview) section. Understanding coding fundamentals is essential for creating interactive worlds, implementing game mechanics, and developing engaging experiences for players.
 
 ## Lua Scripting
 
@@ -34,4 +34,4 @@ Highrise provides a comprehensive scripting API (Application Programming Interfa
 
 In addition to official documentation and tutorials, Highrise has a vibrant community of developers who share resources, scripts, and tips for game creation. You can leverage [Discord](https://discord.gg/highrise), [forums](https://createforum.highrise.game/c/builders/studio/7), tutorials, and asset libraries to learn new techniques, troubleshoot issues, and collaborate with other creators.
 
-### Are you ready to dive into Lua scripting and create interactive worlds in Highrise Studio? Let's get started with the basics of coding! [YouTube Series](https://www.youtube.com/playlist?list=PL6F2U-o4hkiX3yg_17e2ZXzTCRl4V-1pq) or [Writing Your First Script](https://create.highrise.game/learn/studio/basics/coding-fundamentals/first-script). ⭐
+### Are you ready to dive into Lua scripting and create interactive worlds in Highrise Studio? Let's get started with the basics of coding! [YouTube Series](https://www.youtube.com/playlist?list=PL6F2U-o4hkiX3yg_17e2ZXzTCRl4V-1pq) or [Writing Your First Script](https://create.highrise.game/learn/studio/create/scripting/first-script). ⭐

@@ -24,6 +24,8 @@ To begin with Highrise Studio, follow these steps. If you need assistance, you c
 4. Click `Create Project`.
 5. Wait for the project to load in Unity.
 
+Do you have an existing project? [Learn how to import it](https://create.highrise.game/learn/studio/create/projects/importing-an-existing-project).
+
 ### Step 3: Use Unity
 
 1. Sign in to your Highrise account via the `Sign In` button.
@@ -35,20 +37,20 @@ Customize your world by adding objects, changing properties, and scripting inter
 
 
 - **Adding Objects:** Use the `GameObject` menu to add objects like cubes, spheres, and lights to your scene.
-    - You can learn more about importing assets and creating objects in the [How to Import Assets](https://create.highrise.game/learn/studio/basics/create/assets/overview) guide.
+    - You can learn more about importing assets and creating objects in the [How to Import Assets](https://create.highrise.game/learn/studio/create/assets/overview) guide.
 
 - **Changing Properties:** Select an object in the scene view to view and edit its properties in the Inspector panel.
     - You can adjust properties like position, rotation, scale, and material to customize the appearance of objects.
   
 - **Scripting Interactions:** Use Lua scripts to add interactivity and gameplay mechanics to your world.
-    - You can learn more about scripting in the [Coding Fundamentals](https://create.highrise.game/learn/studio/basics/coding-fundamentals/coding-overview) course.
+    - You can learn more about scripting in the [Lua](https://create.highrise.game/learn/studio/create/scripting/lua/overview) course.
 
 ### Step 5: Test and Publish
 Ensure your world works as intended before publishing.
 
 1. Thoroughly test your world.
 2. Create a world in [Creations Tab](https://create.highrise.game/dashboard/creations).
-3. Provide a name, description, and cover image. [Learn more](https://create.highrise.game/learn/studio/basics/starter/publishing-world)
+3. Provide a name, description, and cover image. [Learn more](https://create.highrise.game/learn/studio/create/distribute/publishing-world)
 4. Click the `Upload` button in Unity to upload your world.
 5. Await review and approval.
 
@@ -62,10 +64,10 @@ Ensure your world works as intended before publishing.
 
 For a visual guide, watch our YouTube tutorial series covering the basics of creating your first world.
 
-<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/lTkaagXftEw" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/odl6rVEMXk4" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Conclusion
 
 With Highrise Studio, you can create and share immersive experiences effortlessly. Whether you're a novice or an expert, Highrise Studio equips you with the tools to bring your game ideas to life.
 
-### Done with the basics? Dive into more advanced topics in the [Coding Fundamentals](https://create.highrise.game/learn/studio/basics/coding-fundamentals/coding-overview) course. 🚀
+### Done with the basics? Dive into more advanced topics in the [Coding Fundamentals](https://create.highrise.game/learn/studio/create/coding-fundamentals/overview) or learn about [Asset Creation](https://create.highrise.game/learn/studio/create/assets/overview) to enhance your worlds further.

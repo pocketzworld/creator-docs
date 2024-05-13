@@ -30,7 +30,7 @@ If you are familiar with Unity and have an existing world, this guide will assis
 ### Step 5: Customize Your World
 
 - Make changes to your world by adding objects, changing properties, and scripting interactions.
-- Refer to the [Getting Started](https://create.highrise.game/learn/studio/basics/starter/getting-started) guide for detailed instructions.
+- Refer to the [Getting Started](https://create.highrise.game/learn/studio/basics/getting-started) guide for detailed instructions.
 
 ## Conclusion
 

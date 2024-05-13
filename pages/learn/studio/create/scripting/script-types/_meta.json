@@ -1,0 +1,20 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "client": {
+    "title": "Client"
+  },
+  "server": {
+    "title": "Server"
+  },
+  "client-and-server": {
+    "title": "Client and Server"
+  },
+  "module": {
+    "title": "Module"
+  },
+  "ui": {
+    "title": "UI"
+  }
+}

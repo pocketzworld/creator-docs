@@ -5,7 +5,7 @@ In this guide you will learn how to create a basic Lua script and add it to a ga
 
 ### What is a Lua Script?
 - Lua is the scripting language used for creating dynamic and interactive Highrise Worlds.
-- [Learn more about Lua scripting](https://create.highrise.game/learn/studio/basics/coding-fundamentals/first-script).
+- [Learn more about Lua scripting](https://create.highrise.game/learn/studio/create/scripting/lua/overview).
 
 > ❗️ When building a Highrise World, C# scripts are not included in the build. Make sure to use Lua scripts for your game objects.
 
@@ -27,7 +27,7 @@ Let's create a simple script that prints "Hello, World!" to the console when the
 -- This script prints "Hello, World!" to the console
 print("Hello, World!")
 ```
-[Learn more about coding fundamentals](https://create.highrise.game/learn/studio/basics/coding-fundamentals).
+[Learn more about coding fundamentals](https://create.highrise.game/learn/studio/create/coding-fundamentals/overview).
 
 ### Step 3: Attaching the Script to a GameObject
 
@@ -53,7 +53,7 @@ You have successfully created a Lua script that prints "Hello, World!" to the co
 ### Next Steps
 
 Delve deeper into lua scripting by learning about:
-- [Variables and Data Types](https://create.highrise.game/learn/studio/basics/coding-fundamentals/variables-and-data-types)
-- [Control Structures](https://create.highrise.game/learn/studio/basics/coding-fundamentals/control-structures)
-- [Functions](https://create.highrise.game/learn/studio/basics/coding-fundamentals/functions)
-- [Script Types](https://create.highrise.game/learn/studio/basics/coding-fundamentals/script-types)
+- [Variables and Data Types](https://create.highrise.game/learn/studio/create/coding-fundamentals/variables-and-data-types)
+- [Control Structures](https://create.highrise.game/learn/studio/create/coding-fundamentals/control-structures)
+- [Functions](https://create.highrise.game/learn/studio/create/coding-fundamentals/functions)
+- [Script Types](https://create.highrise.game/learn/studio/create/coding-fundamentals/script-types)

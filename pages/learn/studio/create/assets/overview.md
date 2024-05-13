@@ -19,7 +19,7 @@ The Highrise Asset Catalog offers an extensive array of free low-poly assets acr
 - **Highrise Compatibility:** Ensure compatibility with Highrise Studio and the platform.
 - **Animated & Scripted Assets:** Find assets with animations and scripts for interactive experiences.
 
-Install assets directly from the [Asset Catalog](https://create.highrise.game/asset-catalog) or learn more about in-unity catalog usage [here](https://create.highrise.game/learn/studio/basics/starter/assets/highrise-catalog).
+Install assets directly from the [Asset Catalog](https://create.highrise.game/asset-catalog) or learn more about in-unity catalog usage [here](https://create.highrise.game/learn/studio/create/assets/highrise-catalog).
 
 ## External Sources
 
