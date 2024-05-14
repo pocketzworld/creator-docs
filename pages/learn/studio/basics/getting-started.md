@@ -50,7 +50,7 @@ Ensure your world works as intended before publishing.
 
 1. Thoroughly test your world.
 2. Create a world in [Creations Tab](https://create.highrise.game/dashboard/creations).
-3. Provide a name, description, and cover image. [Learn more](https://create.highrise.game/learn/studio/create/distribute/publishing-world)
+3. Provide a name, description, and cover image. [Learn more](https://create.highrise.game/learn/studio/distribute/publishing-world)
 4. Click the `Upload` button in Unity to upload your world.
 5. Await review and approval.
 

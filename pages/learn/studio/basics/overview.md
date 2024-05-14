@@ -2,7 +2,7 @@
 
 ## Introduction
 Highrise Studio is a development environment for creating games and experiences on the Highrise platform. It offers tools for designing, building, and publishing games playable worldwide on various devices.
-![Highrise Studio](/assets/learn/guides/studio/overview/highrise-studio.png)
+![Highrise Studio](/assets/learn/guides/studio/Basics/highrise-studio.png)
 
 ## Components of Highrise Studio:
 

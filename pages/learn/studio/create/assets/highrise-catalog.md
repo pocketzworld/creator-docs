@@ -3,7 +3,7 @@
 The Highrise Asset Catalog is a comprehensive collection of premade assets, including models, decals, audio files, and plugins, designed to aid Highrise creators in enhancing their worlds. This guide elucidates how to effectively navigate and utilize the Highrise Asset Catalog.
 
 
-![Assets Catalog](/assets/learn/guides/studio/overview/assets-catalog.png)
+![Assets Catalog](/assets/learn/guides/studio/Assets/assets-catalog.png)
 
 ## Accessing the Asset Catalog
 

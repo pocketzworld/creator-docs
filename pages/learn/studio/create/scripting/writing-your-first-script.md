@@ -15,7 +15,7 @@ Lua scripts are text files containing instructions that dictate the behavior of 
 Before diving into scripting, grasp these fundamental concepts:
 
 
-- [Script Types](https://create.highrise.game/learn/studio/create/coding-fundamentals/script-types): Different scripts control various gameplay aspects.
+- [Script Types](https://create.highrise.game/learn/studio/create/scripting/script-types/overview): Different scripts control various gameplay aspects.
 - [Variables and Data Types](https://create.highrise.game/learn/studio/create/coding-fundamentals/variables-and-data-types): Containers for storing and manipulating data.
 - [Control Structures](https://create.highrise.game/learn/studio/create/coding-fundamentals/control-structures): Statements controlling code execution flow.
 - [Functions](https://create.highrise.game/learn/studio/create/coding-fundamentals/functions): Code blocks performing specific tasks.

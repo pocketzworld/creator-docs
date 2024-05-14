@@ -8,6 +8,9 @@
   "assets": {
     "title": "Assets"
   },
+  "environment": {
+    "title": "Environment"
+  },
   "3d": {
     "title": "3D"
   },
