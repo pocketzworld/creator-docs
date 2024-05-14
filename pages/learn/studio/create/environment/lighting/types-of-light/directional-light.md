@@ -2,7 +2,7 @@
 
 A **Directional Light** is a type of light source that emits light in a specific direction, similar to sunlight. It is commonly used to simulate the sun's light in outdoor scenes and provides a consistent light source that illuminates the entire scene uniformly. In this guide, you will learn how to create and configure a Directional Light in Unity to illuminate your scene effectively.
 
-![Directional Light](/assets/learn/guides/studio/lighting/directional-light.png)
+![Directional Light](/assets/learn/guides/studio/Lighting/directional-light.png)
 
 ## Creating a Directional Light
 
