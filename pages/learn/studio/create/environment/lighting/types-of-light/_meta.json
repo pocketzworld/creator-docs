@@ -1,0 +1,14 @@
+{
+  "directional-light": {
+    "title": "Directional Light"
+  },
+  "point-light": {
+    "title": "Point Light"
+  },
+  "spot-light": {
+    "title": "Spot Light"
+  },
+  "area-light": {
+    "title": "Area Light"
+  }
+}

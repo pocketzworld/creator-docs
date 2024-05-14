@@ -43,7 +43,7 @@ Custom assets created by yourself or your team can also be imported into Highris
 - **Test and Refine:** Test custom assets in your world and refine based on feedback.
 
 
-# Video Preview
+# Video Tutorial
 <iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/uE_BYKzIBy0" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Conclusion

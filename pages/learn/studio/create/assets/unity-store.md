@@ -2,7 +2,7 @@
 
 The Unity Asset Store is an expansive marketplace offering a wide array of assets, tools, and plugins to enhance your Unity projects. This guide provides insights into navigating and utilizing the Unity Asset Store to acquire assets for your Highrise Studio creations.
 
-![Unity Asset Store](/assets/learn/guides/studio/overview/unity-assets-store.png)
+![Unity Asset Store](/assets/learn/guides/studio/Assets/unity-assets-store.png)
 
 ## Accessing the Unity Asset Store
 

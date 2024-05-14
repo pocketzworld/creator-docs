@@ -13,12 +13,10 @@ In Highise Studio, Lua is used to script game logic, create interactive experien
 ## Data Types
 
 - [Nil](https://create.highrise.game/learn/studio/create/scripting/lua/types/nil) - Represents the absence of a value.
-- [Boolean](https://create.highrise.game/learn/studio/create/scripting/lua/types/boolean) - Represents true or false values.
-- [Number](https://create.highrise.game/learn/studio/create/scripting/lua/types/number) - Represents numerical values.
-- [String](https://create.highrise.game/learn/studio/create/scripting/lua/types/string) - Represents text or character data.
-- [Table](https://create.highrise.game/learn/studio/create/scripting/lua/types/table) - Represents a collection of key-value pairs.
-
-[Click here for shorter content](https://create.highrise.game/learn/studio/basics/coding-fundamentals/variables-and-data-types)
+- [Boolean](https://create.highrise.game/learn/studio/create/scripting/lua/types/booleans) - Represents true or false values.
+- [Number](https://create.highrise.game/learn/studio/create/scripting/lua/types/numbers) - Represents numerical values.
+- [String](https://create.highrise.game/learn/studio/create/scripting/lua/types/strings) - Represents text or character data.
+- [Table](https://create.highrise.game/learn/studio/create/scripting/lua/types/tables) - Represents a collection of key-value pairs.
 
 ## Features
 
@@ -33,7 +31,7 @@ In Highise Studio, Lua is used to script game logic, create interactive experien
 
 ## Comparison to C#
 
-- [Introduction](https://create.highrise.game/learn/studio/create/scripting/lua/comparison-to-c%23) - Overview of Lua and C# differences.
+- [Introduction](https://create.highrise.game/learn/studio/create/scripting/lua/comparison-to-c) - Overview of Lua and C# differences.
 
 ## Best Practices
 
@@ -41,7 +39,7 @@ In Highise Studio, Lua is used to script game logic, create interactive experien
 
 ## Getting Started
 
-- [Writing Your First Script](https://create.highrise.game/learn/studio/create/scripting/lua/first-script) - Creating your initial Lua script in Highrise Studio.
+- [Writing Your First Script](https://create.highrise.game/learn/studio/create/scripting/writing-your-first-script) - Creating your initial Lua script in Highrise Studio.
 
 ## Resources
 
