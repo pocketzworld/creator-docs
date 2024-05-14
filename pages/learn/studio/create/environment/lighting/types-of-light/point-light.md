@@ -2,7 +2,7 @@
 
 A **Point Light** is a type of light source that emits light in all directions from a single point in space. It is commonly used to create localized light sources, such as lamps, light bulbs, or other small light fixtures. In this guide, you will learn how to create and configure a Point Light in Unity to illuminate your scene effectively.
 
-![Point Light](/assets/learn/guides/studio/lighting/point-light.png)
+![Point Light](/assets/learn/guides/studio/Lighting/point-light.png)
 
 ## Creating a Point Light
 

@@ -2,7 +2,7 @@
 
 A **Spot Light** is a type of light source that projects light in a cone-shaped direction. It is commonly used to focus light on specific areas or objects in a scene, creating dramatic lighting effects and highlighting important elements. In this guide, you will learn how to create and configure a Spot Light in Unity to illuminate your scene effectively.
 
-![Spot Light](/assets/learn/guides/studio/lighting/spot-light.png)
+![Spot Light](/assets/learn/guides/studio/Lighting/spot-light.png)
 
 ## Creating a Spot Light
 
