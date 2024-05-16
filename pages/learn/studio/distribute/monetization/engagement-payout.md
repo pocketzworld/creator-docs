@@ -19,9 +19,9 @@ In order to receive engagement-based payouts for your World, your World must:
 
 In order to receive engagement-based payouts for your Room, your Room must:
 
-- Receive at least 50 visitors to qualify as a space for others.
-- Receive a minimum of 2.5 hours of total playtime from all users.
 - Engage at least 1 Highrise+ subscriber in the day (other than yourself).
+- Receive sum of at least 50 visitors over the course of 24 hours. These must be unique visitors, though they don't all have to present in the room at the same time.
+- Receive a minimum of 2.5 hours of total playtime from all users.
 - Be owned by you. Crew rooms are not eligible for monetization.
 
 ## Receiving Earned Gold
