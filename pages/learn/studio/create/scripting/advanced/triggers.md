@@ -35,6 +35,10 @@ end
 
 **Local Player Entering and Exiting a Trigger:**
 
+<Note type="warning">
+If the player isn't detecting the trigger, make sure the GameObject layer is set to "CharacterTrigger" for the player to interact with it.
+</Note>
+
 ```lua
     function self:OnTriggerEnter(other : Collider)
         local playerCharacter = other.gameObject:GetComponent(Character)

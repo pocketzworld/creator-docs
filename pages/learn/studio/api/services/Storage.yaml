@@ -44,11 +44,11 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      Storage.GetPlayerValue(player, "HighScore", function(highScore)
-        print(`The high score is {tostring(highScore)}`)
-      end)
-    ```
+      ```lua
+        Storage.GetPlayerValue(player, "HighScore", function(highScore)
+          print(`The high score is {tostring(highScore)}`)
+        end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -73,11 +73,11 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      Storage.SetValue("HighScore", 100, function(errorCode)
-        print(`The error code was {StorageError[errorCode]}`)
-      end)
-    ```
+      ```lua
+        Storage.SetValue("HighScore", 100, function(errorCode)
+          print(`The error code was {StorageError[errorCode]}`)
+        end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -150,15 +150,15 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      function self:ServerStart()
-        scene.PlayerJoined:Connect(function(scene, player)
-          Storage.UpdateValue("HighScore", function(currentScore)
-            return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
+      ```lua
+        function self:ServerStart()
+          scene.PlayerJoined:Connect(function(scene, player)
+            Storage.UpdateValue("HighScore", function(currentScore)
+              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
+            end)
           end)
-        end)
-      end
-    ```
+        end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -259,13 +259,13 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      function self:ServerStart()
-        scene.PlayerJoined:Connect(function(scene, player)
-          Storage.IncrementPlayerValue(player, "Visits", 1)
-        end)
-      end
-    ```
+      ```lua
+        function self:ServerStart()
+          scene.PlayerJoined:Connect(function(scene, player)
+            Storage.IncrementPlayerValue(player, "Visits", 1)
+          end)
+        end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -294,11 +294,11 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      Storage.DeleteValue("HighScore", function(errorCode)
-        print(`The error code was {StorageError[errorCode]}`)
-      end)
-    ```
+      ```lua
+        Storage.DeleteValue("HighScore", function(errorCode)
+          print(`The error code was {StorageError[errorCode]}`)
+        end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -319,11 +319,11 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      Storage.DeletePlayerValue(player, "HighScore", function(errorCode)
-        print(`The error code was {StorageError[errorCode]}`)
-      end)
-    ```
+      ```lua
+        Storage.DeletePlayerValue(player, "HighScore", function(errorCode)
+          print(`The error code was {StorageError[errorCode]}`)
+        end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -399,30 +399,30 @@ methods:
     description:
     is_static: true
     code_samples: |
-    ```lua
-      function self:ServerStart()
-        scene.PlayerJoined:Connect(function(scene, player)
-          Storage.SearchPlayerValue(player, "scores/", 10, nil, function(data, newCursorId, errorCode)
-            if(data == nil) then
-              print(`Got error {StorageError[errorCode]} while searching`)
-              return
-            end
-            
-            for index, entry in data do
-              for key, value in entry do
-                print(`{key} : {tostring(value)}`)
+      ```lua
+        function self:ServerStart()
+          scene.PlayerJoined:Connect(function(scene, player)
+            Storage.SearchPlayerValue(player, "scores/", 10, nil, function(data, newCursorId, errorCode)
+              if(data == nil) then
+                print(`Got error {StorageError[errorCode]} while searching`)
+                return
               end
-            end
-            
-            if(newCursorId ~= nil) then
-              Storage.SearchPlayerValue(player, "scores/", 10, newCursorId)
-            else
-              print("done")
-            end
+              
+              for index, entry in data do
+                for key, value in entry do
+                  print(`{key} : {tostring(value)}`)
+                end
+              end
+              
+              if(newCursorId ~= nil) then
+                Storage.SearchPlayerValue(player, "scores/", 10, newCursorId)
+              else
+                print("done")
+              end
+            end)
           end)
-        end)
-      end
-    ```
+        end
+      ```
     tags:
       - ServerOnly
     parameters:
