@@ -25,5 +25,8 @@
   },
   "tracking-players": {
     "title": "Tracking Players"
+  },
+  "client-server-communication": {
+    "title": "Client-Server Communication"
   }
 }

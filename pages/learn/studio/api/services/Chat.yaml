@@ -43,28 +43,55 @@ properties:
       Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local canWhisper = false
+    Chat.WhisperReceivedHandler:Connect(function(channel, player, message)
+      if canWhisper then
+        Chat:DisplayTextMessage(channel, player, message)
+      end
+    end)
+    ```
     type: Class.Event
   - name: PlayerJoinedChannel
     summary: |
       An event that is fired by the server to all clients in the same channel as the player that joined. Class.ChannelInfo and Class.Player are passed as the parameters.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    Chat.PlayerJoinedChannel:Connect(function(channel, player)
+      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
+        if message == "Hello" then
+          Chat:DisplayTextMessage(channel, player, "Hello, " .. player.name .. "!")
+        end
+      end)
+    end)
+    ```
     type: Class.Event
   - name: PlayerLeftChannel
     summary: |
       An event that is fired by the server to all clients in the same channel as the player that left. Class.ChannelInfo and Class.Player are passed as the parameters.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    Chat.PlayerLeftChannel:Connect(function(channel, player)
+      print(player.name .. " has left the channel.")
+    end)
+    ```
     type: Class.Event
   - name: ChannelDestroyed
     summary: |
       An event that is fired by the server to all clients when a channel is destroyed. Class.ChannelInfo is passed as the parameter.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    Chat.ChannelDestroyed:Connect(function(channel)
+      print("Channel " .. channel.name .. " has been destroyed.")
+    end)
+    ```
     type: Class.Event
 methods:
   - name: CreateChannel
@@ -72,7 +99,21 @@ methods:
       Creates a new channel. If the channel already exists, it will return the existing channel.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local isGameRunning = true
+
+    local ghostChannel = Chat:CreateChannel("Ghost", true, false)
+    local generalChannel = Chat:CreateChannel("General", true, true)
+    
+    server.PlayerConnected:Connect(function(player)
+      if isGameRunning then
+        Chat:AddPlayerToChannel(generalChannel, player) -- General channel is for players who are in the game
+      else
+        Chat:AddPlayerToChannel(ghostChannel, player) -- Ghost channel is for players who are not in the game
+      end
+    end)
+    ```
     tags:
       - ServerOnly
     parameters:
@@ -112,7 +153,14 @@ methods:
       Adds the given player to the given channel.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local channel = Chat:CreateChannel("General", true, true)
+
+    server.PlayerConnected:Connect(function(player)
+      Chat:AddPlayerToChannel(channel, player)
+    end)
+    ```
     tags:
       - ServerOnly
     parameters:
@@ -132,7 +180,17 @@ methods:
       Removes the given player from the given channel.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local isGameRunning = true
+
+    local function ResetGame(players)
+      for k, v in pairs(players) do
+        Chat:RemovePlayerFromChannel(generalChannel, v)
+        Chat:AddPlayerToChannel(ghostChannel, v)
+      end
+    end
+    ```
     tags:
       - ServerOnly
     parameters:

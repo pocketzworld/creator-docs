@@ -12,17 +12,31 @@ properties:
       The 'self' property is used to access the current script's instance. This is always the owning script of the object as a Class.LuaBehaviour. This is the primary way to get many of the core Unity MonoBehaviour methods and properties like `self.gameObject`, `self:Update` and `self:OnTriggerEnter`. It is highly recommended to familiarize yourself with the Class.LuaBehaviour documentation to understand how to use the 'self' property.
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: | 
+    ```lua
+    local objectName = self.gameObject.name
+    print("My name is: " .. objectName)
+    ```
+    parameters:
     type: Class.LuaBehaviour
   - name: client
     summary: |
       The 'client' property is used to access the current client instance. This is useful for when you want to access the client's information like the `client.localPlayer` property or `client.PlayerConnected` event. Read the Class.GameClient documentation to learn more.
-    code_samples:
+    code_samples: |
+    ```lua
+    local localPlayer = client.localPlayer
+    print("My name is: " .. localPlayer.name)
+    ```
     type: Class.GameClient
   - name: server
     summary: |
       The 'server' property is used to access the current server instance. This is useful for when you want to access the server' information like the `server.PlayerConnected` event. Read the Class.GameServer documentation to learn more.
-    code_samples:
+    code_samples: |
+    ```lua
+    server.PlayerConnected:Connect(function(player)
+      print("Player connected: " .. player.name)
+    end)
+    ```
     tags:
       - ServerOnly
     type: Class.GameServer
@@ -31,7 +45,12 @@ properties:
       The 'scene' property is used to access the currently active scene.
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
+    ```lua
+    scene.PlayerJoined:Connect(function(scene, player)
+      print("Player joined: " .. player.name)
+    end)
+    ```
     type: Class.Scene
 methods:
   - name: defer
@@ -98,4 +117,3 @@ methods:
     returns:
       - type: string
         summary:
-math_operations:
