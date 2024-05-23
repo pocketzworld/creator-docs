@@ -2,7 +2,14 @@ name: Vector3
 type: datatypes
 summary: Vector3 represents three-dimensional space as coordinates, physical quantities, or directions, containing three numerical components (x, y, and z). It is used in Unity for physics, animations, and transformations.
 description:
-code_samples:
+code_samples: |
+```lua
+local position = Vector3.new(1, 2, 3)
+
+print(position.x) -- 1
+print(position.y) -- 2
+print(position.z) -- 3
+```
 inherits:
 tags:
   - ServerAndClient
@@ -29,52 +36,107 @@ constructors:
     returns:
       - type: DataType.Vector3
         summary: A Vector3 instance with the specified coordinates.
-properties:
+properties:  
+  - name: new
+  summary: Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
+  is_static: true
+  tags:
+    - ServerAndClient
+  code_samples:
+  parameters:
+    - name: x
+      type: number
+      default:
+      summary: Specifies the x-coordinate value.
+    - name: y
+      type: number
+      default:
+      summary: Specifies the y-coordinate value.
+    - name: z
+      type: number
+      default:
+      summary: Specifies the z-coordinate value.
+  returns:
+    - type: DataType.Vector3
+      summary: A Vector3 instance with the specified coordinates.
+
   - name: normalized
     summary: Returns a version of this Vector3 with a magnitude of one, maintaining its direction. Useful for unit direction vectors.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local normalizedVector = position.normalized
+    print(normalizedVector) -- Vector3(0.26726123690605, 0.5345224738121, 0.80178368043899)
+    ```
     type: DataType.Vector3
   - name: magnitude
     summary: Provides the length of a Vector3, calculated as the Euclidean distance to (0,0,0), useful for distance calculations in 3D space.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local magnitude = position.magnitude
+    print(magnitude) -- 3.7416573867739
+    ```
     type: number
   - name: sqrMagnitude
     summary: Returns the square of the magnitude, an alternative for performance-sensitive calculations where exact distance is not necessary.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local sqrMagnitude = position.sqrMagnitude
+    print(sqrMagnitude) -- 14
+    ```
     type: number
   - name: x
     summary: Represents the x-coordinate of the Vector3, allowing direct manipulation or reading of its x-component.
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
+    ```lua
+    position.x = 5
+    print(position.x) -- 5
+    ```
     type: number
   - name: y
     summary: Corresponds to the y-coordinate of the Vector3, for manipulating or reading the y-component.
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
+    ```lua
+    position.y = 10
+    print(position.y) -- 10
+    ```
     type: number
   - name: z
     summary: Represents the z-coordinate of the Vector3, used for direct manipulation or reading of the z-component.
     is_static: false
     tags:
       - ServerAndClient
-    code_samples:
+    code_samples: |
+    ```lua
+    position.z = 15
+    print(position.z) -- 15
+    ```
     type: number
   - name: zero
     summary: Generates a Vector3 with zero values for all coordinates, representing the origin in 3D space or indicating no motion or rotation.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local zeroVector = Vector3.zero
+    print(zeroVector) -- Vector3(0, 0, 0)
+    ```
     type: DataType.Vector3
   - name: one
     summary: Generates a Vector3 object with all components set to 1, useful for pointing diagonally in 3D space.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local oneVector = Vector3.one
+    print(oneVector) -- Vector3(1, 1, 1)
+    ```
     type: DataType.Vector3
   - name: forward
     summary: Returns a Vector3 pointing towards the positive Z-axis, useful for designating a forward direction.
@@ -84,52 +146,92 @@ properties:
   - name: back
     summary: Provides a Vector3 pointing towards the negative Z-axis, often used to designate a backward direction.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local backVector = Vector3.back
+    print(backVector) -- Vector3(0, 0, -1)
+    ```
     type: DataType.Vector3
   - name: up
     summary: Offers a Vector3 pointing upwards along the positive Y-axis, handy for upward movements or orientations.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local upVector = Vector3.up
+    print(upVector) -- Vector3(0, 1, 0)
+    ```
     type: DataType.Vector3
   - name: down
     summary: Represents a Vector3 pointing downwards along the negative Y-axis, typically used for downward directions.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local downVector = Vector3.down
+    print(downVector) -- Vector3(0, -1, 0)
+    ```
     type: DataType.Vector3
   - name: left
     summary: Returns a Vector3 pointing in the negative X-axis direction, used to signify left direction in 3D space.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local leftVector = Vector3.left
+    print(leftVector) -- Vector3(-1, 0, 0)
+    ```
     type: DataType.Vector3
   - name: right
     summary: Provides a Vector3 pointing towards the positive X-axis, recognized as the right direction in 3D space.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local rightVector = Vector3.right
+    print(rightVector) -- Vector3(1, 0, 0)
+    ```
     type: DataType.Vector3
   - name: positiveInfinity
     summary: Yields a Vector3 with all components set to positive infinity, useful for representing very large values.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local positiveInfinityVector = Vector3.positiveInfinity
+    print(positiveInfinityVector) -- Vector3(inf, inf, inf)
+    ```
     type: DataType.Vector3
   - name: negativeInfinity
     summary: Generates a Vector3 with all components set to negative infinity, representing the smallest possible values in 3D space.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local negativeInfinityVector = Vector3.negativeInfinity
+    print(negativeInfinityVector) -- Vector3(-inf, -inf, -inf)
+    ```
     type: DataType.Vector3
   - name: kEpsilon
     summary: Provides a very small positive number, used for comparisons to determine if Vector3 components are approximately zero, considering floating-point inaccuracies.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local epsilon = Vector3.kEpsilon
+    print(epsilon) -- 1.4012984643248e-45
+    ```
   - name: kEpsilonNormalSqrt
     summary: A small positive number used in square root calculations, representing a negligible threshold value for comparing Vector3 magnitudes.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local epsilonSqrt = Vector3.kEpsilonNormalSqrt
+    print(epsilonSqrt) -- 1.1754943508223e-38
+    ```
     type: number
 methods:
   - name: Set
     summary: Changes the x, y, and z values of an existing Vector3 object, useful for simultaneous updates to all three components.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    position:Set(5, 10, 15)
+    print(position) -- Vector3(5, 10, 15)
+    ```
     parameters:
       - name: newX
         type: number
@@ -149,7 +251,11 @@ methods:
   - name: Scale
     summary: Multiplies each component of the Vector3 by the corresponding components of another Vector3, used to alter the scale without changing its direction.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    position:Scale(Vector3.new(2, 2, 2))
+    print(position) -- Vector3(10, 20, 30)
+    ```
     parameters:
       - name: scale
         type: DataType.Vector3
@@ -161,7 +267,11 @@ methods:
   - name: Normalize
     summary: Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    position:Normalize()
+    print(position) -- Vector3(0.26726123690605, 0.5345224738121, 0.80178368043899)
+    ```
     parameters:
     returns:
       - type: void
@@ -169,7 +279,14 @@ methods:
   - name: Slerp
     summary: Creates a smooth transition between two Vector3 points on a sphere's surface, ideal for smooth transitions in rotations or positions.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local start = Vector3.new(1, 0, 0)
+    local finish = Vector3.new(0, 1, 0)
+
+    local slerpVector = Vector3.Slerp(start, finish, 0.5)
+    print(slerpVector) -- Vector3(0.70710676908493, 0.70710676908493, 0)
+    ```
     parameters:
       - name: a
         type: DataType.Vector3
@@ -189,7 +306,18 @@ methods:
   - name: SlerpUnclamped
     summary: Similar to 'Slerp' but allows the 't' value to exceed the 0 to 1 range, enabling extrapolation beyond the original points.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local position = Vector3.new(1, 0, 0)
+
+    local a = Vector3.new(0, 1, 0)
+    local b = Vector3.new(0, 0, 1)
+
+    local t = 1.5
+    local result = Vector3.SlerpUnclamped(a, b, t)
+
+    print(result) -- Vector3(0, -0.5, 0.5)
+    ```
     parameters:
       - name: a
         type: DataType.Vector3
@@ -209,7 +337,18 @@ methods:
   - name: RotateTowards
     summary: Gradually rotates a Vector3 'current' to align with a 'target' Vector3, with specified maximum rotation and magnitude change limits.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local current = Vector3.new(1, 0, 0)
+    local target = Vector3.new(0, 1, 0)
+
+    local maxRadiansDelta = 0.1
+    local maxMagnitudeDelta = 0.1
+
+    local result = Vector3.RotateTowards(current, target, maxRadiansDelta, maxMagnitudeDelta)
+
+    print(result) -- Vector3(0.70710676908493, 0.70710676908493, 0)
+    ```
     parameters:
       - name: current
         type: DataType.Vector3
@@ -233,7 +372,14 @@ methods:
   - name: Lerp
     summary: Performs linear interpolation between two Vector3s, transitioning from 'a' to 'b' based on the 't' ratio.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local start = Vector3.new(1, 0, 0)
+    local finish = Vector3.new(0, 1, 0)
+
+    local lerpVector = Vector3.Lerp(start, finish, 0.5)
+    print(lerpVector) -- Vector3(0.5, 0.5, 0)
+    ```
     parameters:
       - name: a
         type: DataType.Vector3
@@ -253,7 +399,16 @@ methods:
   - name: LerpUnclamped
     summary: Similar to 'Lerp', this method performs linear interpolation between two points, but allows 't' to exceed the 0 to 1 range, enabling extrapolation.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local start = Vector3.new(1, 0, 0)
+    local finish = Vector3.new(0, 1, 0)
+
+    local t = 1.5
+    local result = Vector3.LerpUnclamped(start, finish, t)
+
+    print(result) -- Vector3(-0.5, 0.5, 0)
+    ```
     parameters:
       - name: a
         type: DataType.Vector3
@@ -273,7 +428,16 @@ methods:
   - name: MoveTowards
     summary: Moves a Vector3 ('current') incrementally towards a target Vector3 ('target') at a specified 'maxDistanceDelta'.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local current = Vector3.new(1, 0, 0)
+    local target = Vector3.new(0, 1, 0)
+
+    local maxDistanceDelta = 0.1
+    local result = Vector3.MoveTowards(current, target, maxDistanceDelta)
+
+    print(result) -- Vector3(0.9, 0.1, 0)
+    ```
     parameters:
       - name: current
         type: DataType.Vector3
@@ -293,7 +457,14 @@ methods:
   - name: Scale
     summary: Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local a = Vector3.new(1, 2, 3)
+    local b = Vector3.new(4, 5, 6)
+
+    local result = Vector3.Scale(a, b)
+    print(result) -- Vector3(4, 10, 18)
+    ```
     parameters:
       - name: a
         type: DataType.Vector3
@@ -309,7 +480,14 @@ methods:
   - name: Cross
     summary: Calculates the cross product of two Vector3 instances, resulting in a Vector3 perpendicular to both, used for finding normals or rotation axes.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local lhs = Vector3.new(1, 0, 0)
+    local rhs = Vector3.new(0, 1, 0)
+
+    local crossProduct = Vector3.Cross(lhs, rhs)
+    print(crossProduct) -- Vector3(0, 0, 1)
+    ```
     parameters:
       - name: lhs
         type: DataType.Vector3
@@ -325,7 +503,14 @@ methods:
   - name: Reflect
     summary: Reflects a Vector3 off a surface with a specified normal, useful for simulating reflections or ricochets.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local inDirection = Vector3.new(1, 0, 0)
+    local inNormal = Vector3.new(0, 1, 0)
+
+    local reflectedVector = Vector3.Reflect(inDirection, inNormal)
+    print(reflectedVector) -- Vector3(1, 0, 0)
+    ```
     parameters:
       - name: inDirection
         type: DataType.Vector3
@@ -341,7 +526,13 @@ methods:
   - name: Normalize
     summary: Normalizes a Vector3, returning a new Vector3 with the same direction but a magnitude of 1, useful for direction without magnitude concern.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local vector = Vector3.new(1, 2, 3)
+    local normalizedVector = Vector3.Normalize(vector)
+
+    print(normalizedVector) -- Vector3(0.26726123690605, 0.5345224738121, 0.80178368043899)
+    ```
     parameters:
       - name: value
         type: DataType.Vector3
@@ -353,7 +544,14 @@ methods:
   - name: Dot
     summary: Calculates the Dot Product of two Vector3s, useful for determining directional alignment or the angle between vectors.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local lhs = Vector3.new(1, 0, 0)
+    local rhs = Vector3.new(0, 1, 0)
+
+    local dotProduct = Vector3.Dot(lhs, rhs)
+    print(dotProduct) -- 0
+    ```
     parameters:
       - name: lhs
         type: DataType.Vector3
@@ -369,7 +567,14 @@ methods:
   - name: Project
     summary: Projects a Vector3 onto another, useful for finding the component of one vector in the direction of another.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local vector = Vector3.new(1, 2, 3)
+    local onNormal = Vector3.new(1, 0, 0)
+
+    local projectedVector = Vector3.Project(vector, onNormal)
+    print(projectedVector) -- Vector3(1, 0, 0)
+    ```
     parameters:
       - name: vector
         type: DataType.Vector3
@@ -385,7 +590,14 @@ methods:
   - name: ProjectOnPlane
     summary: Projects a Vector3 onto a plane defined by a normal orthogonal Vector3, useful for aligning objects to surfaces.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local vector = Vector3.new(1, 2, 3)
+    local planeNormal = Vector3.new(0, 1, 0)
+
+    local projectedVector = Vector3.ProjectOnPlane(vector, planeNormal)
+    print(projectedVector) -- Vector3(1, 0, 3)
+    ```
     parameters:
       - name: vector
         type: DataType.Vector3
@@ -401,7 +613,14 @@ methods:
   - name: Angle
     summary: Calculates the angle in degrees between two Vector3s, useful for determining the required rotation to align one Vector3 with another.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local from = Vector3.new(1, 0, 0)
+    local to = Vector3.new(0, 1, 0)
+
+    local angle = Vector3.Angle(from, to)
+    print(angle) -- 90
+    ```
     parameters:
       - name: from
         type: DataType.Vector3
@@ -417,7 +636,15 @@ methods:
   - name: SignedAngle
     summary: Calculates the angle between two Vector3s with a sign indicating rotation direction around a given axis.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local from = Vector3.new(1, 0, 0)
+    local to = Vector3.new(0, 1, 0)
+
+    local axis = Vector3.new(0, 0, 1)
+    local angle = Vector3.SignedAngle(from, to, axis)
+    print(angle) -- 90
+    ```
     parameters:
       - name: from
         type: DataType.Vector3
@@ -437,7 +664,14 @@ methods:
   - name: Distance
     summary: Calculates the distance between two Vector3 points, typically used to determine how far apart two objects are in 3D space.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local a = Vector3.new(1, 0, 0)
+    local b = Vector3.new(0, 1, 0)
+
+    local distance = Vector3.Distance(a, b)
+    print(distance) -- 1.4142135381699
+    ```
     parameters:
       - name: a
         type: DataType.Vector3
@@ -453,7 +687,14 @@ methods:
   - name: ClampMagnitude
     summary: Limits the magnitude of a Vector3 to a specified maximum, useful for constraining movement or other vector magnitudes.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local vector = Vector3.new(1, 2, 3)
+    local maxLength = 2
+
+    local clampedVector = Vector3.ClampMagnitude(vector, maxLength)
+    print(clampedVector) -- Vector3(0.55470019578934, 1.1094003915787, 1.6641006469727)
+    ```
     parameters:
       - name: vector
         type: DataType.Vector3
@@ -469,7 +710,13 @@ methods:
   - name: Magnitude
     summary: Returns the magnitude (length) of a Vector3, useful for distance calculations from the origin.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local vector = Vector3.new(1, 2, 3)
+    local magnitude = Vector3.Magnitude(vector)
+
+    print(magnitude) -- 3.7416573867739
+    ```
     parameters:
       - name: vector
         type: DataType.Vector3
@@ -481,7 +728,13 @@ methods:
   - name: SqrMagnitude
     summary: Calculates the square of the magnitude of a Vector3, often used for performance reasons in relative length comparisons.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local vector = Vector3.new(1, 2, 3)
+    local sqrMagnitude = Vector3.SqrMagnitude(vector)
+
+    print(sqrMagnitude) -- 14
+    ```
     parameters:
       - name: vector
         type: DataType.Vector3
@@ -493,7 +746,14 @@ methods:
   - name: Min
     summary: Returns a Vector3 composed of the smallest x, y, and z components from two given Vector3s, useful for bounding calculations.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local a = Vector3.new(1, 2, 3)
+    local b = Vector3.new(3, 2, 1)
+
+    local minVector = Vector3.Min(a, b)
+    print(minVector) -- Vector3(1, 2, 1)
+    ```
     parameters:
       - name: lhs
         type: DataType.Vector3
@@ -509,7 +769,14 @@ methods:
   - name: Max
     summary: Produces a Vector3 from the largest x, y, and z components of two given Vector3s, useful for defining bounds or extents.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local a = Vector3.new(1, 2, 3)
+    local b = Vector3.new(3, 2, 1)
+
+    local maxVector = Vector3.Max(a, b)
+    print(maxVector) -- Vector3(3, 2, 3)
+    ```
     parameters:
       - name: lhs
         type: DataType.Vector3
@@ -522,45 +789,3 @@ methods:
     returns:
       - type: DataType.Vector3
         summary: A Vector3 composed of the largest components of the two compared Vector3s.
-math_operations:
-  - operation: "=="
-    summary: Checks for approximate equality between two Vector3s, considering the precision limitations of floating-point representation.
-    type_a: Vector3
-    type_b: Vector3
-    return_type: boolean
-    code_samples:
-  - operation: "/"
-    summary: Scales down a Vector3 by dividing its components by a given scalar value, effectively reducing its magnitude.
-    description:
-    type_a: Vector3
-    type_b: number
-    return_type: Vector3
-    code_samples:
-  - operation: "*"
-    summary: Scales a Vector3 by multiplying its components by a scalar value, changing its magnitude without altering direction.
-    description:
-    type_a: number
-    type_b: Vector3
-    return_type: Vector3
-    code_samples:
-  - operation: "-"
-    summary: Produces a new Vector3 as the mirror image of the original across the origin, negating each of its components.
-    description:
-    type_a: Vector3
-    type_b:
-    return_type: Vector3
-    code_samples:
-  - operation: "-"
-    summary: Results in a Vector3 from subtracting each component of the second Vector3 from the corresponding component of the first.
-    description:
-    type_a: Vector3
-    type_b: Vector3
-    return_type: Vector3
-    code_samples:
-  - operation: "+"
-    summary: Yields a new Vector3 whose components are the sums of the corresponding components of two given Vector3s, analogous to vector addition.
-    description:
-    type_a: Vector3
-    type_b: Vector3
-    return_type: Vector3
-    code_samples:

@@ -6,14 +6,24 @@ summary: |
   Provides various functions and predefined colors which ranges from common colors like red, green, blue, white, black, to more specific colors such as yellow, cyan, magenta, gray, etc. Further it also provides functionalities such as linear interpolation between two colors, conversion from/to HSV color model, and generating a grayscale color.
 
 description:
-code_samples:
+code_samples: |
+```lua
+local color = Color.new(1, 0, 0) -- Red color
+
+print(color.r) -- 1
+print(color.g) -- 0
+print(color.b) -- 0
+```
 inherits:
 constructors:
   - name: new
     summary: |
       Creates a new Color object with the provided red, green, blue, and optional alpha values. These values range from 0 to 1, where 0 represents no color and 1 represents full intensity of the color.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    ```
     parameters:
       - name: r
         type: number
@@ -35,122 +45,195 @@ properties:
     summary: |
       The grayscale value of the color based on the intensities of the red, green, and blue components.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.grayscale) -- 0.299
+    ```
     type: number
   - name: linear
     summary: |
       The linear (gamma space) equivalent of this color object. Game graphics are usually rendered in a color space known as gamma space, but many computations are done in linear space, thus this property can be useful when such conversions are necessary.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.linear) -- 0.2126
+    ```
     type: DataType.Color
   - name: gamma
     summary: |
       The gamma space equivalent of this color object. When the computations are done in linear space, this conversion can be useful to switch back to Gamma space for rendering.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.gamma) -- 0.2126
+    ```
     type: DataType.Color
   - name: maxColorComponent
     summary: |
       The maximum RGB component in the color. It can be useful when you want to identify the dominant color component.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.maxColorComponent) -- 1
+    ```
     type: number
   - name: r
     summary: |
       Access or change the red component value of the color.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.r) -- 1
+    ```
     type: number
   - name: g
     summary: |
       Access or change the green component value of the color.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.g) -- 0
+    ```
     type: number
   - name: b
     summary: |
       Access or change the blue component value of the color.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    print(color.b) -- 0
+    ```
     type: number
   - name: a
     summary: |
       Access or change the alpha (transparency) component of the color where '1' is fully opaque and '0' is fully transparent.
     is_static: false
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.new(1, 0, 0) -- Red color
+    color.a = 0.5
+
+    print(color.a) -- 0.5
+    ```
     type: number
   - name: red
     summary: |
       Predefined Color object with red component set to maximum and all other components set to zero. It's a static property, accessible directly from the class.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.red) -- Color object with red component set to maximum
+    ```
     type: DataType.Color
   - name: green
     summary: |
       Predefined color object with green component at maximum while red, blue, and alpha components at zero. As a static property, it can be accessed directly from the class.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.green) -- Color object with green component set to maximum
+    ```
     type: DataType.Color
   - name: blue
     summary: |
       Predefined color object with blue component set to maximum and all other components set to zero. One major use of this property can be for quick access to the pure blue color.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.blue) -- Color object with blue component set to maximum
+    ```
     type: DataType.Color
   - name: white
     summary: |
       Predefined color object with all components set to maximum, producing white color. It is a static property accessible directly from the class.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.white) -- Color object with all components set to maximum
+    ```
     type: DataType.Color
   - name: black
     summary: |
       Predefined black color object with all color components set to zero. As a static property, it can be accessed directly from the class.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.black) -- Color object with all components set to zero
+    ```
     type: DataType.Color
   - name: yellow
     summary: |
       Predefined yellow color object, offering a quick way to use yellow in your game. It is a static property, accessible directly from the class.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.yellow) -- Color object with yellow component set to maximum
+    ```
     type: DataType.Color
   - name: cyan
     summary: |
       Predefined cyan color object. It provides a quick and convenient way to use cyan in your game.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.cyan) -- Color object with cyan component set to maximum
+    ```
     type: DataType.Color
   - name: magenta
     summary: |
       Predefined magenta color object. It allows quick access to the magenta color.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.magenta) -- Color object with magenta component set to maximum
+    ```
     type: DataType.Color
   - name: gray
     summary: |
       Predefined gray color object, allowing for quick utilization of gray in a game scene or interface. As a static property, it's accessible directly from the class.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.gray) -- Color object with gray component set to maximum
+    ```
     type: DataType.Color
   - name: grey
     summary: |
       Predefined grey color object. As a static property, it can be accessed directly from the class. This makes it convenient to use grey color quickly and easily.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.grey) -- Color object with grey component set to maximum
+    ```
     type: DataType.Color
   - name: clear
     summary: |
       Predefined color object with all components set to zero, resulting in a fully transparent color. Quick access to a transparent color can provide utility in many situations.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    print(Color.clear) -- Color object with all components set to zero
+    ```
     type: DataType.Color
 methods:
   - name: Lerp
     summary: |
       Calculates and returns a color that is a certain percentage (defined by the third parameter) between two other colors. This can be used to smoothly transition between two colors.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local colorA = Color.new(1, 0, 0) -- Red color
+    local colorB = Color.new(0, 1, 0) -- Green color
+
+    local transitionColor = Color.Lerp(colorA, colorB, 0.5) -- Transition color between red and green
+    ```
     parameters:
       - name: a
         type: DataType.Color
@@ -171,7 +254,13 @@ methods:
     summary: |
       Works similarly to 'Lerp', but without clamping the percentage (third parameter) between 0 and 1. This allows for extrapolation beyond the two original colors.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local colorA = Color.new(1, 0, 0) -- Red color
+    local colorB = Color.new(0, 1, 0) -- Green color
+
+    local transitionColor = Color.LerpUnclamped(colorA, colorB, 1.5) -- Extrapolated color beyond red and green
+    ```
     parameters:
       - name: a
         type: DataType.Color
@@ -192,7 +281,10 @@ methods:
     summary: |
       Convert a color from HSV (Hue, Saturation, Value) color model to RGB (Red, Green, Blue) model. This function can be quite useful whenever you're dealing with HSV colors and need to convert them for use in RGB format.
     is_static: true
-    code_samples:
+    code_samples: |
+    ```lua
+    local color = Color.HSVToRGB(0.5, 1, 1) -- RGB color from HSV color
+    ```
     parameters:
       - name: H
         type: number
@@ -209,39 +301,3 @@ methods:
     returns:
       - type: DataType.Color
         summary: Returns a Color object in RGB color space.
-math_operations:
-  - operation: "=="
-    summary: |
-      Equality check between two Color objects. If all corresponding RGBA components are equal, the colors are considered equal.
-    type_a: Color
-    type_b: Color
-    return_type: boolean
-    code_samples:
-  - operation: "/"
-    summary: |
-      Division operation either between two Color objects or a Color and a scalar (a single number). Each component of the color is divided separately.
-    type_a: Color
-    type_b: number
-    return_type: Color
-    code_samples:
-  - operation: "*"
-    summary: |
-      Multiplies a Color and a scalar.
-    type_a: Color
-    type_b: number
-    return_type: Color
-    code_samples:
-  - operation: "-"
-    summary: |
-      Subtracts two Color objects. Each component of the ensuing color is the result of the subtraction of the corresponding components of the minuend and subtrahend.
-    type_a: Color
-    type_b: Color
-    return_type: Color
-    code_samples:
-  - operation: "+"
-    summary: |
-      Adds two Color objects. The resulting color comprises the sum of the corresponding components from the two colors being added.
-    type_a: Color
-    type_b: Color
-    return_type: Color
-    code_samples:
