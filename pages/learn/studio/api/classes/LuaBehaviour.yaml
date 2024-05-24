@@ -114,7 +114,7 @@ properties:
     tags:
       - ServerAndClient
     code_samples: |
-      ``` lua
+      ```lua
       function self:Update()
         print("This frame took " .. Time.deltaTime .. "seconds")
       end
