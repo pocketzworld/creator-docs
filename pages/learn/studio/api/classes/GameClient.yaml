@@ -10,11 +10,11 @@ description:
 code_samples: |
   ```lua
     local localAvatarConnection = nil
-    localAvatarConnection = client.localPlayer.AvatarInstantiated:Connect(function(player, avatar)
-      OnLocalAvatar(player, avatar)
+    localAvatarConnection = client.localPlayer.CharacterChanged:Connect(function(player, newCharacter, oldCharacter)
+      OnLocalCharacter(player, newCharacter, oldCharacter)
     end)
 
-    function OnLocalAvatar(player, avatar)
+    function OnLocalCharacter(player, newCharacter, oldCharacter)
       localAvatarConnection:Disconnect()
       localAvatarConnection = nil
 
