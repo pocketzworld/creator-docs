@@ -17,6 +17,9 @@
   "scripting": {
     "title": "Scripting"
   },
+  "characters": {
+    "title": "Characters"
+  },
   "ui": {
     "title": "User Interface"
   },
