@@ -2,7 +2,12 @@ name: Vector2
 type: datatypes
 summary: Represents a 2D vector for positions, velocities, and directions.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  local position = Vector2.new(1, 2)
+  print(position.x) -- 1
+  print(position.y) -- 2
+  ```
 inherits:
 constructors:
   - name: new
@@ -25,83 +30,156 @@ properties:
   - name: normalized
     summary: The normalized version of the Vector2.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      local normalized = position.normalized
+
+      print(normalized.x) -- 0.44721359014511
+      ```
     type: DataType.Vector2
   - name: magnitude
     summary: The length of the Vector2.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position.magnitude) -- 2.2360679774998
+      ```
     type: number
   - name: sqrMagnitude
     summary: The square of the Vector2's magnitude.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position.sqrMagnitude) -- 5
+      ```
     type: number
   - name: x
     summary: The x-component of the Vector2.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position.x) -- 1
+      
+      position.x = 3
+      print(position.x) -- 3
+      ```
     type: number
   - name: y
     summary: The y-component of the Vector2.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position.y) -- 2
+
+      position.y = 3
+      print(position.y) -- 3
+      ```
     type: number
   - name: zero
     summary: A Vector2 with both components set to zero.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.zero.x) -- 0
+      print(Vector2.zero.y) -- 0
+      ```
     type: DataType.Vector2
   - name: one
     summary: A Vector2 with both components set to one.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.one.x) -- 1
+      print(Vector2.one.y) -- 1
+      ```
     type: DataType.Vector2
   - name: up
     summary: A Vector2 pointing upwards.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.up.x) -- 0
+      print(Vector2.up.y) -- 1
+      ```
     type: DataType.Vector2
   - name: down
     summary: A Vector2 pointing downwards.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.down.x) -- 0
+      print(Vector2.down.y) -- -1
+      ```
     type: DataType.Vector2
   - name: left
     summary: A Vector2 pointing to the left.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.left.x) -- -1
+      print(Vector2.left.y) -- 0
+      ```
     type: DataType.Vector2
   - name: right
     summary: A Vector2 pointing to the right.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.right.x) -- 1
+      print(Vector2.right.y) -- 0
+      ```
     type: DataType.Vector2
   - name: positiveInfinity
     summary: A Vector2 with both components at positive infinity.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.positiveInfinity.x) -- inf
+      print(Vector2.positiveInfinity.y) -- inf
+      ```
     type: DataType.Vector2
   - name: negativeInfinity
     summary: A Vector2 with both components at negative infinity.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.negativeInfinity.x) -- -inf
+      print(Vector2.negativeInfinity.y) -- -inf
+      ```
     type: DataType.Vector2
   - name: kEpsilon
     summary: A very small positive number greater than zero.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.kEpsilon) -- 1.4012984643248e-45
+      ```
     type: number
   - name: kEpsilonNormalSqrt
     summary: A small positive number for Vector2 computations.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      print(Vector2.kEpsilonNormalSqrt) -- 1.1754943508223e-38
+      ``` 
     type: number
 methods:
   - name: Set
     summary: Sets the x and y components of the Vector2.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+
+      position:Set(3, 4)
+      print(position.x) -- 3
+      print(position.y) -- 4
+      ```
     parameters:
       - name: newX
         type: number
@@ -116,7 +194,15 @@ methods:
   - name: Scale
     summary: Scales the Vector2 by another's components.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      local scale = Vector2.new(3, 4)
+      
+      position:Scale(scale)
+      print(position.x) -- 3
+      print(position.y) -- 8
+      ```
     parameters:
       - name: scale
         type: DataType.Vector2
@@ -127,21 +213,40 @@ methods:
   - name: Normalize
     summary: Converts Vector2 to a direction vector of length 1.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      position:Normalize()
+      
+      print(position.x) -- 0.44721359014511
+      print(position.y) -- 0.89442718029022
+      ```
     parameters:
     returns:
       - type: void
   - name: SqrMagnitude
     summary: The square of the Vector2's magnitude.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position:SqrMagnitude()) -- 5
+      ```
     parameters:
     returns:
       - type: number
   - name: Lerp
     summary: Linearly interpolates between two Vector2's.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Vector2.new(1, 2)
+      local b = Vector2.new(3, 4)
+      
+      local result = Vector2.Lerp(a, b, 0.5)
+      print(result.x) -- 2
+      print(result.y) -- 3
+      ```
     parameters:
       - name: a
         type: DataType.Vector2
@@ -160,7 +265,15 @@ methods:
   - name: LerpUnclamped
     summary: Linearly interpolates between two Vector2's without clamping 't'.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Vector2.new(1, 2)
+      local b = Vector2.new(3, 4)
+      
+      local result = Vector2.LerpUnclamped(a, b, 2)
+      print(result.x) -- 5
+      print(result.y) -- 6
+      ```
     parameters:
       - name: a
         type: DataType.Vector2
@@ -179,7 +292,15 @@ methods:
   - name: MoveTowards
     summary: Moves a Vector2 towards another Vector2 within a maximum distance.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local current = Vector2.new(1, 2)
+      local target = Vector2.new(3, 4)
+      
+      local result = Vector2.MoveTowards(current, target, 2)
+      print(result.x) -- 3
+      print(result.y) -- 4
+      ```
     parameters:
       - name: current
         type: DataType.Vector2
@@ -198,7 +319,15 @@ methods:
   - name: Scale
     summary: Multiplies two Vector2's component-wise.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Vector2.new(1, 2)
+      local b = Vector2.new(3, 4)
+      
+      local result = Vector2.Scale(a, b)
+      print(result.x) -- 3
+      print(result.y) -- 8
+      ```
     parameters:
       - name: a
         type: DataType.Vector2
@@ -213,7 +342,15 @@ methods:
   - name: Reflect
     summary: Reflects a Vector2 off a surface Vector2.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local inDirection = Vector2.new(1, 2)
+      local surfaceNormal = Vector2.new(0, 1)
+      
+      local result = Vector2.Reflect(inDirection, surfaceNormal)
+      print(result.x) -- 1
+      print(result.y) -- -2
+      ```
     parameters:
       - name: inDirection
         type: DataType.Vector2
