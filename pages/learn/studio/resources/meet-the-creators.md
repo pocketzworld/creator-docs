@@ -30,13 +30,13 @@ I also made use of a large camera screen, as well as a camera directly attached 
 
 ### Is there a world made by another creator that you really love? What do you look for in other people's world experiences?
 
-I liked [Lunar Blossoms](https://high.rs/world?id=66216d2cd3b91f38532f1e1f) by [@tanuhtanu](https://highrise.game/profile/tanuhtanu) a lot! This is the most beautiful world design I’ve seen so far, and whilst I’m focused mainly on scripting and games, I believe aesthetics of hangout worlds will be an important part of the worlds experience for many current HR users.
+I liked [Lunar Blossoms](https://high.rs/world?id=66216d2cd3b91f38532f1e1f) by [tanuhtanu](https://highrise.game/profile/tanuhtanu) a lot! This is the most beautiful world design I’ve seen so far, and whilst I’m focused mainly on scripting and games, I believe aesthetics of hangout worlds will be an important part of the worlds experience for many current HR users.
 
 ### How do you approach designing and building within the virtual environment?
 
 I usually start with a general concept of what I’d like to build, and begin looking at free assets online or simple assets I can create in Unity. After creating a basic build skeleton, I spend most of the time working on what interests me which is scripting and designing the experience with sounds/animations. I’ll then add finishing touches like lighting and more complex assets to the scene.
 
-The most useful resources in my approach have been the video demonstrations of building a world from Nautis and Hsein. Seeing and watching the full process has been helpful for someone who is totally unfamiliar with Unity and where to start.
+The most useful resources in my approach have been the video demonstrations of building a world from [Nautis](https://highrise.game/profile/NautisShadrick) and [Hsein](https://highrise.game/profile/ihsein). Seeing and watching the full process has been helpful for someone who is totally unfamiliar with Unity and where to start.
 
 ### What do you hope players will experience or take away from exploring your world?
 
@@ -46,7 +46,7 @@ I hoped that players would find it somewhat challenging and also kinda scary. I 
 
 If you have little experience with Unity like me, you should first start with the very basics and try to follow along with Highrise’s guides to get your first world uploaded, even if it's just a basic template room. 
 
-If your goal is building aesthetic rooms, I would recommend using Highrise’s premade assets to start and simply dragging and dropping a little world in a similar way to building a 2D HR room from the furniture store. 
+If your goal is building aesthetic rooms, I would recommend using Highrise’s pre-made assets to start and simply dragging and dropping a little world in a similar way to building a 2D HR room from the furniture store. 
 
 If you want to create games, I would learn the basics of scripting, with the initial goal of just printing something to the console, and work your way up!
 
@@ -64,7 +64,7 @@ My biggest challenge was learning and understanding Unity as a program. I mostly
 
 ### What do you think users will find most exciting about creating their first world?
 
-I believe the best part for most users will be learning Animations and Particle Systems. Neither of these require any coding knowledge, and can create really visually interesting effects not possible before in Highrise. People have been asking for animated furniture and interactable effects for a very long time, and now it’s easily possible! 
+I believe the best part for most users will be learning Animations and Particle Systems. Neither of these require any coding knowledge, and can create really visually interesting effects not possible before in Highrise. People have been asking for animated furniture and intractable effects for a very long time, and now it’s easily possible! 
 
 ### Lastly, do you have any upcoming projects or plans for the future you would like to share with us?
 
