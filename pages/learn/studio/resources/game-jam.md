@@ -20,24 +20,32 @@ After the theme is announced, participants have a limited amount of time to work
 
 ### Submission Deadline
 
-Once the development phase is complete, participants must submit their games before the deadline. Submissions typically include a playable version of the game, a description, and any additional materials required for judging.
+Once the development phase is complete, participants must submit their games before the deadline. Submissions typically include a playable version of the game, a description, and a game icon.
 
 ### Judging and Awards
 
-After the submission deadline, games are evaluated by a panel of judges. The top worlds with the highest ratings and engagement are recognized and awarded prizes at the end of the game jam. Participants also have the opportunity to showcase their games to the community and receive feedback.
+All submissions are posted in a special category of the Highrise Worlds Directory for 1 week. During this time, the Highrise players act as our judges. The top 3 games with the highest number of hours will be the winners and receive exclusive rewards!
+
+## Prizes and Awards
+
+The top 3 winners of the game jam will receive the following prizes:
+
+1. **🏆 1st Place**: 300.000 Earned gold
+2. **🥈 2nd Place**: 200.000 Earned gold
+3. **🥉 3rd Place**: 100.000 Earned gold
+
+The top 3 games will also win a 1 month in the Spotlight section of the Highrise World directory.
 
 ## Rules and Guidelines
 
-1. Worlds must be published during the game jam period.
-2. Game development should begin no sooner than the start of the game jam.
-3. You may use pre-existing assets, but the majority of the game should be created during the jam.
-4. Solo developers and group efforts are both allowed.
-5. You must be **13 years or older** to participate.
-6. Worlds must adhere to the [Highrise Community Guidelines](https://intercom.help/pocketworlds/en/articles/8043105-what-are-the-highrise-community-guidelines).
+1. Worlds must be published and tagged with the provided tag name by the submission deadline.
+2. Worlds must be created after the game jam theme announcement. Pre-existing worlds are disqualified.
+3. You may use pre-existing code, art, and audio assets you have legal rights to use, but worlds made before the announcement cannot be reused.
+4. Solo and group efforts are welcome. Teams of 2-4 people are recommended. Join the #studio-beta channel on our [Discord](https://discord.gg/highrise) to find teammates.
+5. Participants must be **13 or older** to join.
+6. Worlds must follow the [Highrise Community Guidelines](https://intercom.help/pocketworlds/en/articles/8043105-what-are-the-highrise-community-guidelines).
 7. In-world gold/items giveaways are not allowed during the judging period.
-8. Games must adhere to the theme announced at the start of the game jam.
-9. Bug fixes and updates are allowed after the submission deadline.
-10. If in team, gold prizes granted on a per team basis.
+8. Games must follow the announced theme.
 
 <Note>
 Rules and guidelines may vary depending on the specific game jam. Be sure to review the official rules and guidelines for the game jam you are participating in.
@@ -53,17 +61,7 @@ Participating in a game jam offers several benefits for game developers, includi
 4. **Feedback:** Participating in a game jam allows you to receive feedback on your game from judges and other participants, helping you improve your skills and design.
 5. **Rewards:** Winning a game jam can lead to recognition, prizes, and opportunities to showcase your game to a wider audience.
 
-## Prizes and Awards
-
-The top 3 winners of the game jam will receive the following prizes:
-
-1. **🏆 1st Place**: 300.000 Earned gold
-2. **🥈 2nd Place**: 200.000 Earned gold
-3. **🥉 3rd Place**: 100.000 Earned gold
-
-The top 3 games will also win a 1 month in the Spotlight section of the Highrise World directory.
-
-The **Earned gold** can later be [converted into real money](/pages/learn/studio/distribute/monetization/earning-overview) or used to purchase items in Highrise.
+The **Earned gold** can later be [converted into real money](/learn/studio/distribute/monetization/earning-overview) or used to purchase items in Highrise.
 
 
 ## Tips for Participating in a Game Jam
@@ -86,7 +84,7 @@ Stay tuned for updates and get ready to showcase your game development skills in
 
 ### Are we allowed to make amendments to our game after the submission deadline?
 
-Yes, you are allowed to make bug fixes and updates to your game after the submission deadline. However, major changes that significantly alter the gameplay or content of the game may not be allowed.
+Yes, you are allowed to make bug fixes and updates to your game after the submission deadline.
 
 ### Can I participate in the game jam as a solo developer?
 
@@ -98,11 +96,11 @@ Games are judged based on criteria such as creativity, gameplay, theme interpret
 
 ### How often are game jams held in Highrise?
 
-Game jams are held periodically in Highrise, with new themes and challenges announced for each jam. The gap between game jams may vary, but usually, it occurs after ~20 days of the previous jam.
+Game Jam Challenges are typically held on a monthly basis in Highrise and will begin on the first Monday of each month.
 
 ### Where do I submit my game for the game jam?
 
-You can submit your game for the game jam by publishing your world during the jam period and tagging it with the specified game jam tag. [Learn more about publishing worlds](/pages/learn/studio/distribute/publishing-world.md).
+You can submit your game for the game jam by publishing your world during the jam period and tagging it with the specified game jam tag. [Learn more about publishing worlds](/learn/studio/distribute/publishing-world.md).
 
 
 ## Additional Resources

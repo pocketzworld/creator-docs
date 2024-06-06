@@ -2,7 +2,11 @@ name: Vector4
 type: datatypes
 summary: Represents a vector or a point in four-dimensional space, commonly used for RGBA values, 4D transforms, or 3D transformations with homogeneous coordinates.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  local v1 = Vector4.new(1, 2, 3, 4)
+  print(v1.x, v1.y, v1.z, v1.w)  -- 1, 2, 3, 4
+  ```
 inherits:
 constructors:
   - name: new
@@ -33,68 +37,124 @@ properties:
   - name: normalized
     summary: Provides a normalized version of the Vector4, with a length of 1, useful for direction-only applications.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local v1 = Vector4.new(1, 2, 3, 4)
+      local v2 = v1.normalized
+
+      print(v2.x, v2.y, v2.z, v2.w)  -- 0.1826, 0.3651, 0.5477, 0.7303
+      ```
     type: DataType.Vector4
   - name: magnitude
     summary: Provides the length of the Vector4, useful for distance calculations or scaling vectors.
     is_static: false
-    code_samples:
+    code_samples: | 
+      ```lua 
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1.magnitude)  -- 5.4772
+      ```
     type: number
   - name: sqrMagnitude
     summary: Returns the square of the magnitude of the Vector4, a performance-friendly alternative for length comparisons.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1.sqrMagnitude)  -- 30
+      ```
     type: number
   - name: x
     summary: Accesses the 'x' component of the Vector4, representing different dimensions or the 'Red' component in RGBA.
     is_static: false
-    code_samples:
+    code_samples: | 
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1.x)  -- 1
+      ```
     type: number
   - name: y
     summary: Accesses the 'y' component of the Vector4, representing different dimensions or the 'Green' component in RGBA.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1.y)  -- 2
+      ```
     type: number
   - name: z
     summary: Accesses the 'z' component of the Vector4, representing different dimensions or the 'Blue' component in RGBA.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1.z)  -- 3
+      ```
     type: number
   - name: w
     summary: Accesses the 'w' component of the Vector4, representing different dimensions or the 'Alpha' component in RGBA.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1.w)  -- 4
+      ```
     type: number
   - name: zero
     summary: Represents a Vector4 with all components set to zero.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.zero
+        print(v1.x, v1.y, v1.z, v1.w)  -- 0, 0, 0, 0
+      ```
     type: DataType.Vector4
   - name: one
     summary: Represents a Vector4 with all components set to one, useful for certain mathematical operations.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.one
+        print(v1.x, v1.y, v1.z, v1.w)  -- 1, 1, 1, 1
+      ```
     type: DataType.Vector4
   - name: positiveInfinity
     summary: Represents a Vector4 with all components set to positive infinity, useful for setting maximum limits.
     is_static: true
-    code_samples:
+    code_samples: | 
+      ```lua
+        local v1 = Vector4.positiveInfinity
+        print(v1.x, v1.y, v1.z, v1.w)  -- inf, inf, inf, inf
+      ```
     type: DataType.Vector4
   - name: negativeInfinity
     summary: Represents a Vector4 with all components set to negative infinity, useful for setting minimum limits.
     is_static: true
-    code_samples:
+    code_samples: | 
+      ```lua
+        local v1 = Vector4.negativeInfinity
+        print(v1.x, v1.y, v1.z, v1.w)  -- -inf, -inf, -inf, -inf
+      ```
     type: DataType.Vector4
   - name: kEpsilon
     summary: Represents a tiny positive number close to zero, used to handle calculations related to precision.
     is_static: true
-    code_samples:
+    code_samples: | 
+      ```lua
+        local v1 = Vector4.kEpsilon
+        print(v1.x, v1.y, v1.z, v1.w)  -- 1e-05, 1e-05, 1e-05, 1e-05
+      ```
     type: number
 methods:
   - name: Set
     summary: Sets the 'x', 'y', 'z', and 'w' components of the Vector4, enhancing code readability and efficiency.
     is_static: false
-    code_samples:
+    code_samples: | 
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        v1:Set(5, 6, 7, 8)
+
+        print(v1.x, v1.y, v1.z, v1.w)  -- 5, 6, 7, 8
+      ```
     parameters:
       - name: newX
         type: number
@@ -118,7 +178,14 @@ methods:
   - name: Scale
     summary: Scales a Vector4 by another Vector4's components, useful for dimension or shape scaling.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(2, 3, 4, 5)
+        v1:Scale(v2)
+
+        print(v1.x, v1.y, v1.z, v1.w)  -- 2, 6, 12, 20
+      ```
     parameters:
       - name: scale
         type: DataType.Vector4
@@ -130,7 +197,13 @@ methods:
   - name: Normalize
     summary: Transforms the Vector4 into a vector of same direction but with length 1, ideal for direction-only uses.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        v1:Normalize()
+
+        print(v1.x, v1.y, v1.z, v1.w)  -- 0.1826, 0.3651, 0.5477, 0.7303
+      ```
     parameters:
     returns:
       - type: void
@@ -138,7 +211,11 @@ methods:
   - name: SqrMagnitude
     summary: Provides the square of the magnitude of the Vector4, an efficient method for length comparisons.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        print(v1:SqrMagnitude())  -- 30
+      ```
     parameters:
     returns:
       - type: number
@@ -146,7 +223,14 @@ methods:
   - name: Lerp
     summary: Performs Linear Interpolation between two Vector4's based on a parameter 't', useful for smooth transitions.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local v3 = Vector4.Lerp(v1, v2, 0.5)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 3, 4, 5, 6
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -166,7 +250,14 @@ methods:
   - name: LerpUnclamped
     summary: Similar to 'Lerp' but without clamping the 't' parameter, offering more freedom in interpolation.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local v3 = Vector4.LerpUnclamped(v1, v2, 2)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 9, 10, 11, 12
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -186,7 +277,14 @@ methods:
   - name: MoveTowards
     summary: Moves a Vector4 'current' towards 'target', limited by 'maxDistanceDelta', useful for smooth object movement.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local v3 = Vector4.MoveTowards(v1, v2, 2)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 3, 4, 5, 6
+      ```
     parameters:
       - name: current
         type: DataType.Vector4
@@ -206,8 +304,15 @@ methods:
   - name: Scale
     summary: Multiplies two Vector4's component-wise, useful for component-wise data manipulation.
     is_static: true
-    code_samples:
-    parameters:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(2, 3, 4, 5)
+        local v3 = Vector4.Scale(v1, v2)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 2, 6, 12, 20
+      ```
+    parameters: 
       - name: a
         type: DataType.Vector4
         default:
@@ -222,7 +327,13 @@ methods:
   - name: Normalize
     summary: Normalizes a Vector4 and returns a new Vector4 with length 1, ideal for direction-only vectors.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.Normalize(v1)
+
+        print(v2.x, v2.y, v2.z, v2.w)  -- 0.1826, 0.3651, 0.5477, 0.7303
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -234,7 +345,14 @@ methods:
   - name: Dot
     summary: Computes the dot product of two Vector4's, reflecting their angular relationship.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local dotProduct = Vector4.Dot(v1, v2)
+
+        print(dotProduct)  -- 70
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -250,7 +368,14 @@ methods:
   - name: Project
     summary: Projects a Vector4 onto another Vector4, useful for finding the nearest point on a defined line.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local v3 = Vector4.Project(v1, v2)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 2.5, 3, 3.5, 4
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -266,7 +391,14 @@ methods:
   - name: Distance
     summary: Computes the distance between two Vector4's, useful for object spacing or collision detection.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local distance = Vector4.Distance(v1, v2)
+
+        print(distance)  -- 8.0
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -282,7 +414,13 @@ methods:
   - name: Magnitude
     summary: Calculates the length of the Vector4, useful for finding the distance it spans in 4D space.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local magnitude = Vector4.Magnitude(v1)
+
+        print(magnitude)  -- 5.4772
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -294,7 +432,14 @@ methods:
   - name: Min
     summary: Returns a Vector4 with the smallest components of two Vector4's, useful for bounding box operations.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local v3 = Vector4.Min(v1, v2)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 1, 2, 3, 4
+      ```
     parameters:
       - name: lhs
         type: DataType.Vector4
@@ -310,7 +455,14 @@ methods:
   - name: Max
     summary: Returns a Vector4 with the largest components of two Vector4's, useful for limiting operations.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local v2 = Vector4.new(5, 6, 7, 8)
+        local v3 = Vector4.Max(v1, v2)
+
+        print(v3.x, v3.y, v3.z, v3.w)  -- 5, 6, 7, 8
+      ```
     parameters:
       - name: lhs
         type: DataType.Vector4
@@ -326,7 +478,13 @@ methods:
   - name: SqrMagnitude
     summary: Gives the square of the magnitude of a Vector4, an efficient comparison method that avoids square root calculations.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+        local v1 = Vector4.new(1, 2, 3, 4)
+        local sqrMagnitude = Vector4.SqrMagnitude(v1)
+
+        print(sqrMagnitude)  -- 30
+      ```
     parameters:
       - name: a
         type: DataType.Vector4
@@ -335,40 +493,3 @@ methods:
     returns:
       - type: number
         summary: Returns the square of the Vector4's magnitude.
-math_operations:
-  - operation: "=="
-    summary: Checks if two Vector4's are equal by comparing their components.
-    type_a: Vector4
-    type_b: Vector4
-    return_type: boolean
-    code_samples:
-  - operation: "/"
-    summary: Divides each component of a Vector4 by a number, useful for scaling down vector components.
-    type_a: Vector4
-    type_b: number
-    return_type: Vector4
-    code_samples:
-  - operation: "*"
-    summary: Multiplies each component of a Vector4 by a number, useful for uniform scaling of vector components.
-    type_a: number
-    type_b: Vector4
-    return_type: Vector4
-    code_samples:
-  - operation: "-"
-    summary: Negates each component of a Vector4, useful for reversing directions or flipping normals.
-    type_a: Vector4
-    type_b:
-    return_type: Vector4
-    code_samples:
-  - operation: "-"
-    summary: Subtracts one Vector4 from another component-wise, useful for finding relative differences.
-    type_a: Vector4
-    type_b: Vector4
-    return_type: Vector4
-    code_samples:
-  - operation: "+"
-    summary: Adds two Vector4's component-wise, resulting in a new Vector4.
-    type_a: Vector4
-    type_b: Vector4
-    return_type: Vector4
-    code_samples:
