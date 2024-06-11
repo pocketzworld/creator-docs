@@ -18,9 +18,9 @@ properties:
       - ServerAndClient
     code_samples: |
       ```lua
-        self.Update:Connect(function()
+        function self:Update()
           print("This frame took " .. Time.deltaTime .. " seconds")
-        end)
+        end
       ```
     type: number
   - name: fixedDeltaTime
@@ -29,9 +29,9 @@ properties:
     is_static: false
     code_samples: |
       ```lua
-        self.FixedUpdate:Connect(function()
+        function self:FixedUpdate()
           print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
-        end)
+        end
       ```
     type: number
 methods:
