@@ -15,30 +15,55 @@ properties:
   - name: Infinity
     summary: Represents positive infinity, useful for comparisons.
     is_static: true
+    code_samples: |
+      ```lua
+      local inf = Mathf.Infinity
+      print("Positive infinity: " .. inf)
+      ```
     tags:
       - ServerAndClient
     type: double
   - name: NegativeInfinity
     summary: Represents negative infinity, useful for comparisons.
     is_static: true
+    code_samples: |
+      ```lua
+      local negInf = Mathf.NegativeInfinity
+      print("Negative infinity: " .. negInf)
+      ```
     tags:
       - ServerAndClient
     type: double
   - name: Deg2Rad
     summary: Conversion factor for degrees to radians.
     is_static: true
+    code_samples: |
+      ```lua
+      local deg2Rad = Mathf.Deg2Rad
+      print("Degrees to radians: " .. deg2Rad)
+      ```
     tags:
       - ServerAndClient
     type: double
   - name: Rad2Deg
     summary: Conversion factor for radians to degrees.
     is_static: true
+    code_samples: |
+      ```lua
+      local rad2Deg = Mathf.Rad2Deg
+      print("Radians to degrees: " .. rad2Deg)
+      ```
     tags:
       - ServerAndClient
     type: double
   - name: Epsilon
     summary: Represents the smallest positive double greater than zero, preventing division by zero errors.
     is_static: true
+    code_samples: |
+      ```lua
+      local eps = Mathf.Epsilon
+      print("Smallest positive double: " .. eps)
+      ```
     tags:
       - ServerAndClient
     type: double
@@ -46,6 +71,12 @@ methods:
   - name: Abs
     summary: Calculates and returns the absolute value of its input.
     is_static: true
+    code_samples: |
+      ```lua
+      local value = -5
+      local absValue = Mathf.Abs(value)
+      print("Absolute value: " .. absValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -59,6 +90,12 @@ methods:
   - name: Acos
     summary: Returns the angle in radians whose cosine is the specified number, for trigonometric math operations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 0.5
+      local angle = Mathf.Acos(f)
+      print("Angle in radians: " .. angle)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -72,6 +109,13 @@ methods:
   - name: Approximately
     summary: Compares two floating point values for approximate equality, to handle floating point arithmetic inconsistencies.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = 0.1
+      local b = 0.2
+      local equal = Mathf.Approximately(a, b)
+      print("Approximately equal: " .. tostring(equal))
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -89,6 +133,12 @@ methods:
   - name: Asin
     summary: Returns the angle in radians whose sine is the specified number, useful for trigonometric operations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 0.5
+      local angle = Mathf.Asin(f)
+      print("Angle in radians: " .. angle)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -102,6 +152,12 @@ methods:
   - name: Atan
     summary: Returns the angle in radians whose tangent is the specified number, for trigonometric operations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 0.5
+      local angle = Mathf.Atan(f)
+      print("Angle in radians: " .. angle)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -115,6 +171,13 @@ methods:
   - name: Atan2
     summary: Returns the angle in radians whose tan is y/x, useful in game physics calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local y = 1
+      local x = 1
+      local angle = Mathf.Atan2(y, x)
+      print("Angle in radians: " .. angle)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -132,6 +195,12 @@ methods:
   - name: Ceil
     summary: Rounds a number up to the closest integer not less than the specified number, useful for setting upper limit values.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 5.5
+      local ceilValue = Mathf.Ceil(f)
+      print("Ceiling value: " .. ceilValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -145,6 +214,12 @@ methods:
   - name: CeilToInt
     summary: Rounds a number up to the nearest integer, returning an integer value, useful when working with discrete values.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 5.5
+      local ceilValue = Mathf.CeilToInt(f)
+      print("Ceiling value: " .. ceilValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -158,6 +233,14 @@ methods:
   - name: Clamp
     summary: Restricts a number to be within a specified range, great for setting limits on variables or return values.
     is_static: true
+    code_samples: |
+      ```lua
+      local value = 5
+      local min = 0
+      local max = 10
+      local clampedValue = Mathf.Clamp(value, min, max)
+      print("Clamped value: " .. clampedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -179,6 +262,12 @@ methods:
   - name: Clamp01
     summary: Restricts a number to be within the range [0,1], handy for ensuring proportions or percentages.
     is_static: true
+    code_samples: |
+      ```lua
+      local value = 5
+      local clampedValue = Mathf.Clamp01(value)
+      print("Clamped value: " .. clampedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -192,6 +281,12 @@ methods:
   - name: ClosestPowerOfTwo
     summary: Returns the power of two closest to a provided number, useful in texture resolutions.
     is_static: true
+    code_samples: |
+      ```lua
+      local value = 100
+      local closestPower = Mathf.ClosestPowerOfTwo(value)
+      print("Closest power of two: " .. closestPower)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -205,6 +300,12 @@ methods:
   - name: Cos
     summary: Computes and returns the cosine of the specified angle in radians, for trigonometric operations.
     is_static: true
+    code_samples: |
+      ```lua
+      local angle = 0.5
+      local cosine = Mathf.Cos(angle)
+      print("Cosine of the angle: " .. cosine)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -218,6 +319,13 @@ methods:
   - name: DeltaAngle
     summary: Determines and returns the smallest difference between two angles, key to minimal rotation direction.
     is_static: true
+    code_samples: |
+      ```lua
+      local current = 45
+      local target = 315
+      local delta = Mathf.DeltaAngle(current, target)
+      print("Angle difference: " .. delta)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -236,6 +344,12 @@ math_operations:
   - name: Exp
     summary: Calculates 'e' raised to the specified power, essential for exponential growth calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local power = 2
+      local expValue = Mathf.Exp(power)
+      print("Exponential value: " .. expValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -249,6 +363,12 @@ math_operations:
   - name: Floor
     summary: Rounds a number down towards negative infinity to the closest integer, handy for lower limit values.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 5.5
+      local floorValue = Mathf.Floor(f)
+      print("Floor value: " .. floorValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -262,6 +382,14 @@ math_operations:
   - name: InverseLerp
     summary: Linearly interpolates between two numbers, returning the fraction of the way between them.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = 0
+      local b = 10
+      local value = 5
+      local fraction = Mathf.InverseLerp(a, b, value)
+      print("Fraction: " .. fraction)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -283,6 +411,12 @@ math_operations:
   - name: IsPowerOfTwo
     summary: Checks if a number is a power of two, crucial for efficient calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local value = 16
+      local isPower = Mathf.IsPowerOfTwo(value)
+      print("Is power of two: " .. tostring(isPower))
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -296,6 +430,14 @@ math_operations:
   - name: Lerp
     summary: Linearly interpolates between two numbers by a specific proportion, common in smoothing transitions.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = 0
+      local b = 10
+      local t = 0.5
+      local interpolatedValue = Mathf.Lerp(a, b, t)
+      print("Interpolated value: " .. interpolatedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -317,6 +459,14 @@ math_operations:
   - name: LerpAngle
     summary: Linearly interpolates between two angles, smoothing angle transitions over time.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = 0
+      local b = 180
+      local t = 0.5
+      local interpolatedAngle = Mathf.LerpAngle(a, b, t)
+      print("Interpolated angle: " .. interpolatedAngle)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -338,6 +488,14 @@ math_operations:
   - name: LerpUnclamped
     summary: Linearly interpolates between two numbers based on a third input, allowing values beyond 0 and 1.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = 0
+      local b = 10
+      local t = 2
+      local interpolatedValue = Mathf.LerpUnclamped(a, b, t)
+      print("Interpolated value: " .. interpolatedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -360,6 +518,12 @@ math_operations:
   - name: Log
     summary: Calculates the natural logarithm (base e) of a number, useful in scientific calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 10
+      local logValue = Mathf.Log(f)
+      print("Natural logarithm: " .. logValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -373,6 +537,12 @@ math_operations:
   - name: Log10
     summary: Calculates the base 10 logarithm of a number, essential for determining order of magnitude.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 100
+      local logValue = Mathf.Log10(f)
+      print("Base 10 logarithm: " .. logValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -386,6 +556,12 @@ math_operations:
   - name: Max
     summary: Returns the larger of two or more values, ideal for finding highest scores or largest sizes.
     is_static: true
+    code_samples: |
+      ```lua
+      local values = {5, 10, 15}
+      local maxValue = Mathf.Max(values)
+      print("Maximum value: " .. maxValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -399,6 +575,12 @@ math_operations:
   - name: Min
     summary: Returns the smaller of two or more values, practical for setting lower limits or ordering.
     is_static: true
+    code_samples: |
+      ```lua
+      local values = {5, 10, 15}
+      local minValue = Mathf.Min(values)
+      print("Minimum value: " .. minValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -412,6 +594,14 @@ math_operations:
   - name: MoveTowards
     summary: Gradually shifts a number towards a target by a specified maximum step, useful for smooth transitions.
     is_static: true
+    code_samples: |
+      ```lua
+      local current = 5
+      local target = 10
+      local maxDelta = 2
+      local movedValue = Mathf.MoveTowards(current, target, maxDelta)
+      print("Moved value: " .. movedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -433,6 +623,14 @@ math_operations:
   - name: MoveTowardsAngle
     summary: Moves the current angle towards a target angle, computing the shortest way around the circle.
     is_static: true
+    code_samples: |
+      ```lua
+      local current = 0
+      local target = 180
+      local maxDelta = 90
+      local movedAngle = Mathf.MoveTowardsAngle(current, target, maxDelta)
+      print("Moved angle: " .. movedAngle)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -454,6 +652,12 @@ math_operations:
   - name: NextPowerOfTwo
     summary: Rounds a number up to the next highest power of two, relevant for texture sizes in graphics.
     is_static: true
+    code_samples: |
+      ```lua
+      local value = 100
+      local nextPower = Mathf.NextPowerOfTwo(value)
+      print("Next power of two: " .. nextPower)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -467,6 +671,13 @@ math_operations:
   - name: PingPong
     summary: Alternates a value between zero and a maximum, creating oscillating effects.
     is_static: true
+    code_samples: |
+      ```lua
+      local t = 5
+      local length = 10
+      local pingPongValue = Mathf.PingPong(t, length)
+      print("Ping-pong value: " .. pingPongValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -484,6 +695,13 @@ math_operations:
   - name: Pow
     summary: Raises a number to a given power, commonly used in growth calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 2
+      local p = 3
+      local powValue = Mathf.Pow(f, p)
+      print("Power value: " .. powValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -501,6 +719,13 @@ math_operations:
   - name: Repeat
     summary: Loops a value so that it never exceeds a certain length, useful for cyclic effects.
     is_static: true
+    code_samples: |
+      ```lua
+      local t = 5
+      local length = 10
+      local repeatedValue = Mathf.Repeat(t, length)
+      print("Repeated value: " .. repeatedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -518,6 +743,12 @@ math_operations:
   - name: Round
     summary: Rounds a number to the nearest integer, useful for discrete step or level calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 5.5
+      local roundValue = Mathf.Round(f)
+      print("Rounded value: " .. roundValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -531,6 +762,12 @@ math_operations:
   - name: Sign
     summary: Returns the sign of a number, determining if it is positive, negative, or zero.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = -5
+      local signValue = Mathf.Sign(a)
+      print("Sign value: " .. signValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -544,6 +781,12 @@ math_operations:
   - name: Sin
     summary: Computes the sine of a specified angle in radians, useful in trigonometric calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local angle = 0.5
+      local sine = Mathf.Sin(angle)
+      print("Sine of the angle: " .. sine)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -557,6 +800,18 @@ math_operations:
   - name: SmoothDamp
     summary: Gradually changes a number towards a desired goal over time, using a damping function.
     is_static: true
+    code_samples: |
+      ```lua
+      local current = 5
+      local target = 10
+      local currentV = 0
+      local smoothTime = 1
+      local maxSpeed = 2
+      local deltaTime = 0.1
+      local smoothedValue, newVelocity = Mathf.SmoothDamp(current, target, currentV, smoothTime, maxSpeed, deltaTime)
+      print("Smoothed value: " .. smoothedValue)
+      print("New velocity: " .. newVelocity)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -590,6 +845,18 @@ math_operations:
   - name: SmoothDampAngle
     summary: Similar to 'SmoothDamp', but specifically for angles, ensuring smooth rotation towards a target angle.
     is_static: true
+    code_samples: |
+      ```lua
+      local current = 0
+      local target = 180
+      local currentV = 0
+      local smoothTime = 1
+      local maxSpeed = 90
+      local deltaTime = 0.1
+      local smoothedAngle, newVelocity = Mathf.SmoothDampAngle(current, target, currentV, smoothTime, maxSpeed, deltaTime)
+      print("Smoothed angle: " .. smoothedAngle)
+      print("New velocity: " .. newVelocity)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -623,6 +890,14 @@ math_operations:
   - name: SmoothStep
     summary: Interpolates between two values with smoothing at the start and end, providing ease-in and ease-out effects.
     is_static: true
+    code_samples: |
+      ```lua
+      local a = 0
+      local b = 10
+      local t = 0.5
+      local smoothedValue = Mathf.SmoothStep(a, b, t)
+      print("Smoothed value: " .. smoothedValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -644,6 +919,12 @@ math_operations:
   - name: Sqrt
     summary: Calculates the square root of a specified number, important in distance and geometry calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local f = 25
+      local sqrtValue = Mathf.Sqrt(f)
+      print("Square root: " .. sqrtValue)
+      ```
     tags:
       - ServerAndClient
     parameters:
@@ -657,6 +938,12 @@ math_operations:
   - name: Tan
     summary: Returns the tangent of a specified angle in radians, typically used in trigonometric calculations.
     is_static: true
+    code_samples: |
+      ```lua
+      local angle = 0.5
+      local tangent = Mathf.Tan(angle)
+      print("Tangent of the angle: " .. tangent)
+      ```
     tags:
       - ServerAndClient
     parameters:
