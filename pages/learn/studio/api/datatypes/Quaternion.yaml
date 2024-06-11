@@ -7,9 +7,17 @@ code_samples:
 inherits:
 constructors:
   - name: new
-    summary: Creates a new Quaternion with specified x, y, z, and w components.
+    summary: Creates a new Quaternion with specified x, y, z, and w components. The default values are 0 for x, y, z, and 1 for w.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local x = 0
+      local y = 0
+      local z = 0
+      local w = 1
+
+      local quaternion = Quaternion.new(x, y, z, w)
+      ```
     parameters:
       - name: x
         type: number
@@ -32,34 +40,62 @@ constructors:
         summary: A new Quaternion with given components.
 properties:
   - name: eulerAngles
-    summary: Returns the rotation of a Quaternion in Euler angles representation.
+    summary: Returns the rotation of a Quaternion in Euler angles representation. Usually used for debugging and visualizing rotations.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      local euler = quaternion.eulerAngles
+
+      print(euler) -- (0, 0, 0)
+      ```
     type: DataType.Vector3
   - name: normalized
-    summary: Returns a normalized copy of the Quaternion.
+    summary: Returns a normalized copy of the Quaternion. Useful for ensuring the Quaternion has a magnitude of 1.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      local normalized = quaternion.normalized
+
+      print(normalized) -- (0, 0, 0, 1)
+      ```
     type: DataType.Quaternion
   - name: x
-    summary: Represents the x component of the Quaternion.
+    summary: Represents the x component of the Quaternion. It is the imaginary part of the Quaternion.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      print(quaternion.x) -- 0
+      ```
     type: number
   - name: y
-    summary: Represents the y component of the Quaternion.
+    summary: Represents the y component of the Quaternion. It is the imaginary part of the Quaternion.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      print(quaternion.y) -- 0
+      ```
     type: number
   - name: z
     summary: Represents the z component of the Quaternion.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      print(quaternion.z) -- 0
+      ```
     type: number
   - name: w
     summary: Represents the w (scalar) component of the Quaternion.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      print(quaternion.w) -- 1
+      ```
     type: number
   - name: identity
     summary: Represents a Quaternion for no rotation.
@@ -69,13 +105,40 @@ properties:
   - name: kEpsilon
     summary: Represents a small number greater than zero for comparison.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local epsilon = Quaternion.kEpsilon
+      print(epsilon) -- 1e-6
+      ```
     type: number
 methods:
+  - name: Equals
+    summary: Checks if two Quaternions or objects are equal.
+    is_static: false
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 0, 1)
+
+      local equal = a:Equals(b)
+      print(equal) -- true
+      ```
+    parameters:
+      - name: other
+        type: DataType.Quaternion
+        default:
+        summary: The Quaternion to compare with.
+    returns:
+      - type: boolean
+        summary: Returns true if the Quaternions are equal.
   - name: Set
     summary: Assigns new values to the Quaternion's components.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      quaternion:Set(1, 1, 1, 1)
+      ```
     parameters:
       - name: newX
         type: number
@@ -98,7 +161,13 @@ methods:
   - name: SetLookRotation
     summary: Aligns the Quaternion's z-axis towards a target direction.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      local target = Vector3.new(0, 0, 1)
+
+      quaternion:SetLookRotation(target)
+      ```
     parameters:
       - name: view
         type: DataType.Vector3
@@ -109,7 +178,14 @@ methods:
   - name: SetFromToRotation
     summary: Sets the Quaternion to rotate from one direction to another.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      local from = Vector3.new(0, 0, 0)
+      local to = Vector3.new(0, 0, 1)
+
+      quaternion:SetFromToRotation(from, to)
+      ```
     parameters:
       - name: fromDirection
         type: DataType.Vector3
@@ -124,14 +200,24 @@ methods:
   - name: Normalize
     summary: Modifies the quaternion to a unit length version of itself.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      quaternion:Normalize()
+      ```
     parameters:
     returns:
       - type: void
   - name: FromToRotation
     summary: Creates a Quaternion that rotates from one direction to another.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local from = Vector3.new(0, 0, 0)
+      local to = Vector3.new(0, 0, 1)
+
+      local quaternion = Quaternion.FromToRotation(from, to)
+      ```
     parameters:
       - name: fromDirection
         type: DataType.Vector3
@@ -147,7 +233,11 @@ methods:
   - name: Inverse
     summary: Returns the inverse of the Quaternion.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      local inverse = Quaternion.Inverse(quaternion)
+      ```
     parameters:
       - name: rotation
         type: DataType.Quaternion
@@ -159,7 +249,14 @@ methods:
   - name: Slerp
     summary: Gradually changes a Quaternion from one rotation to another.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+      local t = 0.5
+
+      local slerp = Quaternion.Slerp(a, b, t)
+      ```
     parameters:
       - name: a
         type: DataType.Quaternion
@@ -179,7 +276,14 @@ methods:
   - name: SlerpUnclamped
     summary: Interpolates a Quaternion over an arbitrary range.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+      local t = 0.5
+
+      local slerp = Quaternion.SlerpUnclamped(a, b, t)
+      ```
     parameters:
       - name: a
         type: DataType.Quaternion
@@ -199,7 +303,14 @@ methods:
   - name: Lerp
     summary: Linearly interpolates between two quaternions.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+      local t = 0.5
+
+      local lerp = Quaternion.Lerp(a, b, t)
+      ```
     parameters:
       - name: a
         type: DataType.Quaternion
@@ -220,7 +331,14 @@ methods:
     summary: |
       The 'LerpUnclamped' method is similar to Lerp, but here the interpolation factor isn't clamped to the range [0, 1].
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+      local t = 0.5
+
+      local lerp = Quaternion.LerpUnclamped(a, b, t)
+      ```
     parameters:
       - name: a
         type: DataType.Quaternion
@@ -240,7 +358,13 @@ methods:
   - name: AngleAxis
     summary: Creates a Quaternion rotation around an axis by a specified angle.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local angle = 90
+      local axis = Vector3.new(0, 1, 0)
+
+      local quaternion = Quaternion.AngleAxis(angle, axis)
+      ```
     parameters:
       - name: angle
         type: number
@@ -256,7 +380,13 @@ methods:
   - name: LookRotation
     summary: Provides a quaternion that makes an object face towards a specified direction.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local forward = Vector3.new(0, 0, 1)
+      local upwards = Vector3.new(0, 1, 0)
+
+      local quaternion = Quaternion.LookRotation(forward, upwards)
+      ```
     parameters:
       - name: forward
         type: DataType.Vector3
@@ -269,10 +399,39 @@ methods:
     returns:
       - type: DataType.Quaternion
         summary: A Quaternion that aligns an object's forward direction towards the specified direction.
+  - name: Multiply
+    summary: Multiplies two Quaternions together.
+    is_static: true
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+
+      local multiplied = Quaternion.Multiply(a, b)
+      print(multiplied) -- (0, 0, 0, -1)
+      ```
+    parameters:
+      - name: a
+        type: DataType.Quaternion
+        default:
+        summary: The first Quaternion.
+      - name: b
+        type: DataType.Quaternion
+        default:
+        summary: The second Quaternion.
+    returns:
+      - type: DataType.Quaternion
+        summary: The product of the two Quaternions.
   - name: Dot
     summary: Calculates the dot product of two quaternions.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+
+      local dot = Quaternion.Dot(a, b)
+      ```
     parameters:
       - name: a
         type: DataType.Quaternion
@@ -288,7 +447,13 @@ methods:
   - name: Angle
     summary: Returns the angle in degrees between two rotations.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local a = Quaternion.new(0, 0, 0, 1)
+      local b = Quaternion.new(0, 0, 1, 0)
+
+      local angle = Quaternion.Angle(a, b)
+      ```
     parameters:
       - name: a
         type: DataType.Quaternion
@@ -304,7 +469,14 @@ methods:
   - name: Euler
     summary: Creates a Quaternion rotation from Euler angles.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local x = 0
+      local y = 0
+      local z = 0
+
+      local quaternion = Quaternion.Euler(x, y, z)
+      ```
     parameters:
       - name: x
         type: number
@@ -324,7 +496,14 @@ methods:
   - name: RotateTowards
     summary: Gradually changes a Quaternion towards a target rotation.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local from = Quaternion.new(0, 0, 0, 1)
+      local to = Quaternion.new(0, 0, 1, 0)
+      local maxDegreesDelta = 0.5
+
+      local rotated = Quaternion.RotateTowards(from, to, maxDegreesDelta)
+      ```
     parameters:
       - name: from
         type: DataType.Quaternion
@@ -344,7 +523,11 @@ methods:
   - name: Normalize
     summary: Modifies the quaternion to a unit length version of itself.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local quaternion = Quaternion.new(0, 0, 0, 1)
+      local normalized = Quaternion.Normalize(quaternion)
+      ```
     parameters:
       - name: q
         type: DataType.Quaternion
@@ -353,17 +536,3 @@ methods:
     returns:
       - type: DataType.Quaternion
         summary: The normalized version of the quaternion.
-math_operations:
-  - operation: "=="
-    summary: Checks if two quaternions are equal.
-    type_a: Quaternion
-    type_b: Quaternion
-    return_type: boolean
-    code_samples:
-  - operation: "*"
-    summary: Multiplies a quaternion with a Vector3 or another Quaternion.
-    description: Used to rotate vectors or combine rotations.
-    type_a: Quaternion
-    type_b: Vector3
-    return_type: Vector3
-    code_samples:
