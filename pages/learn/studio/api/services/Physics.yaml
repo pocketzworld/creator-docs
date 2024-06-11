@@ -10,48 +10,76 @@ properties:
   - name: gravity
     summary: "Control the global gravity in the physics simulation, defaulting to Earth's gravity."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.gravity = Vector3.new(0, -9.81, 0)
+      ```
     type: DataType.Vector3
   - name: defaultContactOffset
     summary: "Define the minimum distance between colliders for them to be considered in contact."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.defaultContactOffset = 0.01
+      ```
     type: number
   - name: sleepThreshold
     summary: "Set the velocity threshold below which GameObjects are considered static or immobile."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.sleepThreshold = 0.01
+      ```
     type: number
   - name: queriesHitTriggers
     summary: "Determine whether physics queries interact with trigger colliders."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.queriesHitTriggers = false
+      ```
     type: boolean
   - name: queriesHitBackfaces
     summary: "Decide if physics queries should detect hits on collider backfaces."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.queriesHitBackfaces = false
+      ```
     type: boolean
   - name: bounceThreshold
     summary: "Specify the minimum collision velocity for an object to bounce."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.bounceThreshold = 0.1
+      ```
     type: number
 methods:
   - name: defaultMaxDepenetrationVelocity
     summary: "Refer to Unity's documentation for information on maximum depenetration velocity."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local maxDepenetrationVelocity = Physics.defaultMaxDepenetrationVelocity
+      print("Default max depenetration velocity: " .. maxDepenetrationVelocity)
+      ```
     type: number
   - name: defaultSolverIterations
     summary: "Refer to Unity's documentation for information on solver iterations."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.defaultSolverIterations = 10
+      ```
     type: number
   - name: defaultSolverVelocityIterations
     summary: "Refer to Unity's documentation for information on solver velocity iterations."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.defaultSolverVelocityIterations = 10
+      ```
     type: number
   - name: defaultMaxAngularSpeed
     summary: "Refer to Unity's documentation for information on maximum angular speed."
@@ -61,12 +89,18 @@ methods:
   - name: improvedPatchFriction
     summary: "Refer to Unity's documentation for information on improved patch friction."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.improvedPatchFriction = true
+      ```
     type: boolean
   - name: invokeCollisionCallbacks
     summary: "Refer to Unity's documentation for information on collision callbacks invocation."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.invokeCollisionCallbacks = true
+      ```
     type: boolean
   - name: autoSyncTransforms
     summary: "Refer to Unity's documentation for information on automatic transforms synchronization."
@@ -76,32 +110,51 @@ methods:
   - name: reuseCollisionCallbacks
     summary: "Refer to Unity's documentation for information on reusing collision callbacks."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.reuseCollisionCallbacks = true
+      ```
     type: boolean
   - name: interCollisionDistance
     summary: "Refer to Unity's documentation for information on inter-collision distance."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.interCollisionDistance = 0.1
+      ```
     type: number
   - name: interCollisionStiffness
     summary: "Refer to Unity's documentation for information on inter-collision stiffness."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.interCollisionStiffness = 0.5
+      ```
     type: number
   - name: interCollisionSettingsToggle
     summary: "Refer to Unity's documentation for information on inter-collision settings toggle."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.interCollisionSettingsToggle = true
+      ```
     type: boolean
   - name: clothGravity
     summary: "Refer to Unity's documentation for information on cloth gravity."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.clothGravity = Vector3.new(0, -9.81, 0)
+      ```
     type: DataType.Vector3
   - name: IgnoreRaycastLayer
     summary: "Refer to Unity's documentation for information on the Ignore Raycast layer."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local ignoreRaycastLayer = Physics.IgnoreRaycastLayer
+      print("Ignore Raycast layer: " .. ignoreRaycastLayer)
+      ```
     type: number
   - name: DefaultRaycastLayers
     summary: "Refer to Unity's documentation for information on default raycast layers."
@@ -111,12 +164,24 @@ methods:
   - name: AllLayers
     summary: "Refer to Unity's documentation for information on all layers."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local allLayers = Physics.AllLayers
+      print("All layers: " .. allLayers)
+      ```
     type: number
   - name: Raycast
     summary: "Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
+      local maxDistance = 10
+      local layerMask = 0
+
+      local hit, hitDetails = Physics.Raycast(ray, maxDistance, layerMask)
+      print("Hit: " .. tostring(hit))
+      ```
     parameters:
       - name: ray
         type: DataType.Ray
@@ -133,7 +198,15 @@ methods:
   - name: OverlapSphere
     summary: "Find all colliders touching or inside an imaginary sphere, useful for area damage or proximity checks."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector3.new(0, 0, 0)
+      local radius = 5
+      local layerMask = 0
+
+      local colliders = Physics.OverlapSphere(position, radius, layerMask)
+      print("Colliders count: " .. #colliders)
+      ```
     parameters:
       - name: position
         type: DataType.Vector3
@@ -150,7 +223,13 @@ methods:
   - name: IgnoreCollision
     summary: "Prevent physics engine from processing collisions between two specified colliders."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local collider1 = GameObject.Find("Collider1"):GetComponent(Collider)
+      local collider2 = GameObject.Find("Collider2"):GetComponent(Collider)
+
+      Physics.IgnoreCollision(collider1, collider2, true)
+      ```
     parameters:
       - name: collider1
         type: Class.Collider
@@ -167,7 +246,13 @@ methods:
   - name: IgnoreLayerCollision
     summary: "Make physics engine ignore all collisions between colliders in two specified layers."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local layer1 = 8
+      local layer2 = 9
+
+      Physics.IgnoreLayerCollision(layer1, layer2, true)
+      ```
     parameters:
       - name: layer1
         type: number
@@ -184,7 +269,14 @@ methods:
   - name: GetIgnoreLayerCollision
     summary: "Check if collisions between any colliders in two layers are ignored."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local layer1 = 8
+      local layer2 = 9
+
+      local isIgnored = Physics.GetIgnoreLayerCollision(layer1, layer2)
+      print("Layer collision ignored: " .. tostring(isIgnored))
+      ```
     parameters:
       - name: layer1
         type: number
@@ -198,7 +290,14 @@ methods:
   - name: GetIgnoreCollision
     summary: "Check if collisions between two specific colliders are ignored."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local collider1 = GameObject.Find("Collider1"):GetComponent(Collider)
+      local collider2 = GameObject.Find("Collider2"):GetComponent(Collider)
+
+      local isIgnored = Physics.GetIgnoreCollision(collider1, collider2)
+      print("Collision ignored: " .. tostring(isIgnored))
+      ```
     parameters:
       - name: collider1
         type: Class.Collider
@@ -212,7 +311,10 @@ methods:
   - name: Simulate
     summary: "Advance physics simulation by a specified time, useful for 'fast-forwarding' physics."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.Simulate(1)
+      ```
     parameters:
       - name: step
         type: number
@@ -223,7 +325,10 @@ methods:
   - name: SyncTransforms
     summary: "Synchronize transform data used in physics simulation with GameObjects' actual transform data."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.SyncTransforms()
+      ```
     parameters:
     returns:
       - type: void
@@ -231,7 +336,16 @@ methods:
   - name: ClosestPoint
     summary: "Calculate the closest point to a given position on a collider's surface."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local point = Vector3.new(0, 0, 0)
+      local collider = GameObject.Find("Collider"):GetComponent(Collider)
+      local position = Vector3.new(0, 0, 0)
+      local rotation = Quaternion.new(0, 0, 0, 1)
+
+      local closestPoint = Physics.ClosestPoint(point, collider, position, rotation)
+      print("Closest point: " .. tostring(closestPoint))
+      ```
     parameters:
       - name: point
         type: DataType.Vector3
@@ -251,7 +365,10 @@ methods:
   - name: RebuildBroadphaseRegions
     summary: "Force a rebuild of the tree for broad-phase collision detection after static collider movements."
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Physics.RebuildBroadphaseRegions()
+      ```
     parameters:
       - name: worldBounds
         type: DataType.Bounds
