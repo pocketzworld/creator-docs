@@ -8,9 +8,15 @@ inherits:
 constructors:
   - name: new
     summary: |
-      Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized.
+      Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized. The origin and direction vectors are stored in the Ray instance.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local origin = Vector3.new(0, 0, 0)
+      local direction = Vector3.new(0, 0, 1)
+
+      local ray = Ray.new(origin, direction)
+      ```
     parameters:
       - name: origin
         type: DataType.Vector3
@@ -28,20 +34,43 @@ properties:
     summary: |
       Represents the starting point of the ray in 3D space.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local origin = Vector3.new(0, 0, 0)
+      local direction = Vector3.new(0, 0, 1)
+
+      local ray = Ray.new(origin, direction)
+      print(ray.origin) -- (0, 0, 0)
+      ```
     type: DataType.Vector3
   - name: direction
     summary: |
-      Depicts the path along which the ray extends in 3D space.
+      Depicts the path along which the ray extends in 3D space. The direction vector is normalized to have a magnitude of 1.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local origin = Vector3.new(0, 0, 0)
+      local direction = Vector3.new(0, 0, 1)
+
+      local ray = Ray.new(origin, direction)
+      print(ray.direction) -- (0, 0, 1)
+      ```
     type: DataType.Vector3
 methods:
   - name: GetPoint
     summary: |
-      Retrieves a point along the ray at a specified distance from the origin.
+      Retrieves a point along the ray at a specified distance from the origin. The distance is measured in the direction of the ray.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local origin = Vector3.new(0, 0, 0)
+      local direction = Vector3.new(0, 0, 1)
+
+      local ray = Ray.new(origin, direction)
+      local point = ray:GetPoint(5)
+
+      print(point) -- (0, 0, 5)
+      ```
     parameters:
       - name: distance
         type: number

@@ -64,7 +64,7 @@ My biggest challenge was learning and understanding Unity as a program. I mostly
 
 ### What do you think users will find most exciting about creating their first world?
 
-I believe the best part for most users will be learning Animations and Particle Systems. Neither of these require any coding knowledge, and can create really visually interesting effects not possible before in Highrise. People have been asking for animated furniture and intractable effects for a very long time, and now it’s easily possible! 
+I believe the best part for most users will be learning Animations and Particle Systems. Neither of these require any coding knowledge, and can create really visually interesting effects not possible before in Highrise. People have been asking for animated furniture and interactable effects for a very long time, and now it’s easily possible! 
 
 ### Lastly, do you have any upcoming projects or plans for the future you would like to share with us?
 
