@@ -57,8 +57,6 @@ They may not be used as bases for any regular Concept.
 
 [vampsity](https://highrise.game/catalog/designer-profile/vampsity)
 
-[variabIe](https://highrise.game/catalog/designer-profile/variabIe)
-
 [_ _yuppi_ _](https://highrise.game/catalog/designer-profile/_yuppi_)
 
 [xWitchi](https://highrise.game/catalog/designer-profile/xWitchi)
