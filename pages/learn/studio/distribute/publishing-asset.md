@@ -1,6 +1,6 @@
 # Publishing Your Asset
 
-The [Highrise Asset Catalog](https://create.highrise.game/learn/studio/create/assets/highrise-catalog) allows creators to upload custom assets, including objects, models, and scripts, to share with the community. This guide elucidates the process of uploading assets to the Highrise Asset Catalog, enabling creators to contribute to the growing collection of resources available to Highrise creators.
+The [Highrise Asset Catalog](/learn/studio/create/assets/highrise-catalog) allows creators to upload custom assets, including objects, models, and scripts, to share with the community. This guide elucidates the process of uploading assets to the Highrise Asset Catalog, enabling creators to contribute to the growing collection of resources available to Highrise creators.
 
 ## Creating Custom Assets
 
