@@ -1,9 +1,9 @@
-# **Player and Character Events**
+# Player and Character Events
 
-## **Introduction**
+## Introduction
 Player and Character Events are crucial for managing player interactions and character states in your Highrise Studio projects. In this guide, you'll learn about various events triggered when players connect, disconnect, join scenes, leave scenes, and when their characters change.
 
-### **Player Connected and Disconnected Events**
+### Player Connected and Disconnected Events
 
 The `game.PlayerConnected` and `game.PlayerDisconnected` events are triggered when a player connects or disconnects from the world, respectively. These events are fired on both the client and server, passing the player as a parameter.
 
