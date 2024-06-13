@@ -5,6 +5,7 @@ summary: |
 description:
 code_samples:
 inherits:
+  - Class.Object
 constructors:
   - name: new
     summary: |
@@ -53,7 +54,7 @@ properties:
     type: string
   - name: price
     summary: |
-      The price of the product in Robux.
+      The price of the product in Gold.
     is_static: false
     tags:
       - ServerOnly

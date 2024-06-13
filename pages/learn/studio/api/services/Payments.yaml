@@ -2,9 +2,8 @@ name: Payments
 type: classes
 summary: |
   The Payments service provides methods for creating and managing payments in your game.
-
   Check out the PaymentsError class for error codes that can be returned by the Payments service.
-description: |
+description:
 code_samples:
 inherits:
 tags:
