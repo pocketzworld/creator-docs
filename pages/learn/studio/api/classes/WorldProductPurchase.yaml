@@ -1,0 +1,59 @@
+name: WorldProductPurchase
+type: classes
+summary: Represents a product purchase made by a player in the game.
+description:
+code_samples:
+inherits:
+  - Class.Object
+constructors:
+  - name: new
+    summary: Creates a new WorldProduct object.
+    is_static: true
+    code_samples: |
+      ```lua
+      local purchase = WorldProductPurchase.new()
+      ```
+    returns:
+      - type: Class.WorldProductPurchase
+        summary: The new WorldProductPurchase object.
+properties:
+  - name: purchase_id
+    summary: The purchase ID of the product purchase.
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples: |
+      ```lua
+      print(WorldProductPurchase.purchase_id)
+      ```
+    type: string
+  - name: product_id
+    summary: The product ID of the product.
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples: |
+      ```lua
+      print(WorldProduct.product_id)
+      ```
+    type: string
+  - name: user_id
+    summary: The user ID of the player who made the purchase.
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples: |
+      ```lua
+      print(WorldProductPurchase.user_id)
+      ```
+    type: string
+  - name: purchase_date
+    summary: The date and time the purchase was made.
+    is_static: false
+    tags:
+      - ServerOnly
+    code_samples: |
+      ```lua
+      print(WorldProductPurchase.purchase_date)
+      ```
+    type: string
