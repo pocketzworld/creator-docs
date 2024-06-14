@@ -204,7 +204,7 @@ methods:
       ```lua
       local HandlePayment = function(purchase: WorldProductPurchase, player: Player)
         -- Handle the purchase logic here and grant the user the product they purchased
-        -- You can use the "AcknowledgePurchase" method to acknowledge the purchase
+        -- You must acknowledge the purchase after handling it by calling the "AcknowledgePurchase" method
       end
 
       Payments.PurchaseHandler = HandlePayment -- Set the purchase handler
