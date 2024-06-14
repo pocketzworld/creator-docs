@@ -1,15 +1,13 @@
 name: WorldProductPurchase
 type: classes
-summary: |
-  Represents a product purchase made by a player in the game.
+summary: Represents a product purchase made by a player in the game.
 description:
 code_samples:
 inherits:
   - Class.Object
 constructors:
   - name: new
-    summary: |
-      Creates a new WorldProduct object.
+    summary: Creates a new WorldProduct object.
     is_static: true
     code_samples: |
       ```lua
@@ -20,8 +18,7 @@ constructors:
         summary: The new WorldProductPurchase object.
 properties:
   - name: purchase_id
-    summary: |
-      The purchase ID of the product purchase.
+    summary: The purchase ID of the product purchase.
     is_static: false
     tags:
       - ServerOnly
@@ -31,8 +28,7 @@ properties:
       ```
     type: string
   - name: product_id
-    summary: |
-      The product ID of the product.
+    summary: The product ID of the product.
     is_static: false
     tags:
       - ServerOnly
@@ -42,8 +38,7 @@ properties:
       ```
     type: string
   - name: user_id
-    summary: |
-      The user ID of the player who made the purchase.
+    summary: The user ID of the player who made the purchase.
     is_static: false
     tags:
       - ServerOnly
@@ -53,8 +48,7 @@ properties:
       ```
     type: string
   - name: purchase_date
-    summary: |
-      The date and time the purchase was made.
+    summary: The date and time the purchase was made.
     is_static: false
     tags:
       - ServerOnly

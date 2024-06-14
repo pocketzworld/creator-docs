@@ -3,17 +3,12 @@ type: classes
 summary: |
   The Payments service provides methods for creating and managing payments in your game.
   Check out the PaymentsError class for error codes that can be returned by the Payments service.
-description:
-code_samples:
-inherits:
 tags:
- - ServerOnly
+  - ServerOnly
 constructors:
-properties:
 methods:
   - name: GetPurchases
-    summary: |
-      Get a list of purchases made by the current user.
+    summary: Get a list of purchases made by the current user.
     description:
     is_static: true
     code_samples: |
@@ -62,8 +57,7 @@ methods:
       type: void
       summary:
   - name: GetProductPurchases
-    summary: |
-      Get a list of purchases made by the current user for a specific product.
+    summary: Get a list of purchases made by the current user for a specific product.
     description:
     is_static: true
     code_samples:
@@ -94,8 +88,7 @@ methods:
       type: void
       summary:
   - name: GetProduct
-    summary: |
-      Get a product by its ID.
+    summary: Get a product by its ID.
     description:
     is_static: true
     code_samples: |
@@ -127,8 +120,7 @@ methods:
       type: void
       summary:
   - name: GetProducts
-    summary: |
-      Get a list of products.
+    summary: Get a list of products.
     description:
     is_static: true
     code_samples: |
@@ -167,8 +159,7 @@ methods:
       type: void
       summary:
   - name: AcknowledgePurchase
-    summary: |
-      Acknowledge a purchase made by the current user.
+    summary: Acknowledge a purchase made by the current user.
     description:
     is_static: true
     code_samples: |
@@ -206,8 +197,7 @@ methods:
       type: void
       summary:
   - name: PurchaseHandler
-    summary: |
-      A function that is called when a purchase is made.
+    summary: A function that is called when a purchase is made.
     description:
     is_static: true
     code_samples: |
@@ -231,8 +221,7 @@ methods:
         default:
         summary:
   - name: PromptPurchase
-    summary: |
-      Prompt the current user to make a purchase.
+    summary: Prompt the current user to make a purchase.
     description:
     is_static: false
     code_samples: |

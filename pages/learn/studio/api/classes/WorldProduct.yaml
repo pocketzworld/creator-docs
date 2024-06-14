@@ -1,15 +1,13 @@
 name: WorldProduct
 type: classes
-summary: |
-  Represents a product that can be purchased by players in the game.
+summary: Represents a product that can be purchased by players in the game.
 description:
 code_samples:
 inherits:
   - Class.Object
 constructors:
   - name: new
-    summary: |
-      Creates a new WorldProduct object.
+    summary: Creates a new WorldProduct object.
     is_static: true
     code_samples: |
       ```lua
@@ -20,8 +18,7 @@ constructors:
         summary: The new WorldProduct object.
 properties:
   - name: product_id
-    summary: |
-      The product ID of the product.
+    summary: The product ID of the product.
     is_static: false
     tags:
       - ServerOnly
@@ -31,8 +28,7 @@ properties:
       ```
     type: string
   - name: name
-    summary: |
-      The name of the product.
+    summary: The name of the product.
     is_static: false
     tags:
       - ServerOnly
@@ -42,8 +38,7 @@ properties:
       ```
     type: string
   - name: description
-    summary: |
-      The description of the product.
+    summary: The description of the product.
     is_static: false
     tags:
       - ServerOnly
@@ -53,8 +48,7 @@ properties:
       ```
     type: string
   - name: price
-    summary: |
-      The price of the product in Gold.
+    summary: The price of the product in Gold.
     is_static: false
     tags:
       - ServerOnly
