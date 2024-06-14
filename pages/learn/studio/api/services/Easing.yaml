@@ -1,6 +1,7 @@
 name: Easing
 type: classes
 summary: |
+  The Easing service provides a set of easing functions that can be used to create smooth animations.
 
 description:
 code_samples:
@@ -9,10 +10,15 @@ constructors:
 properties:
 methods:
   - name: Quadratic
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local result = Easing.Quadratic(t)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -22,10 +28,15 @@ methods:
       - type: number
         summary:
   - name: Cubic
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local result = Easing.Cubic(t)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -35,10 +46,16 @@ methods:
       - type: number
         summary:
   - name: Back
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local p = 2
+      local result = Easing.Back(t, p)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -52,10 +69,15 @@ methods:
       - type: number
         summary:
   - name: Circle
-    summary: |
-
+    summary: 
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local result = Easing.Circle(t)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -65,10 +87,16 @@ methods:
       - type: number
         summary:
   - name: Exponential
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local p = 2
+      local result = Easing.Exponential(t, p)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -82,10 +110,15 @@ methods:
       - type: number
         summary:
   - name: Sine
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local result = Easing.Sine(t)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -95,10 +128,19 @@ methods:
       - type: number
         summary:
   - name: CubicBezier
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local x1 = 0.1
+      local y1 = 0.2
+      local x2 = 0.3
+      local y2 = 0.4
+      local result = Easing.CubicBezier(t, x1, y1, x2, y2)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -124,10 +166,17 @@ methods:
       - type: number
         summary:
   - name: Bounce
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local bounces = 3
+      local bounciness = 2
+      local result = Easing.Bounce(t, bounces, bounciness)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -145,10 +194,17 @@ methods:
       - type: number
         summary:
   - name: Elastic
-    summary: |
-
+    summary:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local t = 0.5
+      local oscillations = 3
+      local springiness = 2
+      local result = Easing.Elastic(t, oscillations, springiness)
+
+      print(result)
+      ```
     parameters:
       - name: t
         type: number
@@ -165,4 +221,3 @@ methods:
     returns:
       - type: number
         summary:
-math_operations:
