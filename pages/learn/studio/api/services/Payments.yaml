@@ -54,8 +54,8 @@ methods:
         default:
         summary:
     returns:
-      type: void
-      summary:
+      - type: void
+        summary:
   - name: GetProductPurchases
     summary: Get a list of purchases made by the current user for a specific product.
     description:
@@ -85,8 +85,8 @@ methods:
         default:
         summary:
     returns:
-      type: void
-      summary:
+      - type: void
+        summary:
   - name: GetProduct
     summary: Get a product by its ID.
     description:
@@ -117,8 +117,8 @@ methods:
         default:
         summary:
     returns:
-      type: void
-      summary:
+      - type: void
+        summary:
   - name: GetProducts
     summary: Get a list of products.
     description:
@@ -156,8 +156,8 @@ methods:
         default:
         summary:
     returns:
-      type: void
-      summary:
+      - type: void
+        summary:
   - name: AcknowledgePurchase
     summary: Acknowledge a purchase made by the current user.
     description:
@@ -194,8 +194,8 @@ methods:
         default:
         summary:
     returns:
-      type: void
-      summary:
+      - type: void
+        summary:
   - name: PurchaseHandler
     summary: A function that is called when a purchase is made.
     description:
@@ -246,5 +246,5 @@ methods:
         default:
         summary:
     returns:
-      type: void
-      summary:
+      - type: void
+        summary:
