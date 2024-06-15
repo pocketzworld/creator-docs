@@ -1,6 +1,8 @@
 name: TapHandler
 type: classes
 summary: |
+  A TapHandler is a class that can be used to detect when a GameObject has been tapped.
+  For a GameObject to be tapped, it must have a Collider component attached to it.
 
 description:
 code_samples:
@@ -9,34 +11,45 @@ inherits:
 constructors:
 properties:
   - name: Tapped
-    summary: |
-
+    summary: Called when the GameObject is tapped.
     is_static: false
     code_samples: |
       ```lua
+      -- Connect to the Tapped event
       self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
           print("Tapped")
       end)
       ```
     type: Class.Event
   - name: moveTo
-    summary: |
-
+    summary: Moves the GameObject to the specified position when it is tapped.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Move the GameObject to the specified position when it is tapped
+      self.gameObject:GetComponent(TapHandler).moveTo = Vector3.New(0, 0, 0)
+      ```
     type: boolean
   - name: distance
-    summary: |
-
+    summary: The distance the GameObject will move when it is tapped.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set the distance the GameObject will move when it is tapped
+      self.gameObject:GetComponent(TapHandler).distance = 1
+      ```
     type: number
 methods:
   - name: Perform
     summary: |
-
+      Performs the tap action on the GameObject.
+      This method is called when the GameObject is tapped.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Perform the tap action on the GameObject
+      self.gameObject:GetComponent(TapHandler):Perform()
+      ```
     parameters:
     returns:
       - type: void
