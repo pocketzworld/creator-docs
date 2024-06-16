@@ -13,44 +13,74 @@ properties:
     summary: Indicates whether the audio is currently muted.
     description: This property allows developers to check or set the muted state of the audio. When set to `true`, the audio will not play.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Check if the audio is muted
+      local isMuted = audioShaderInstance.isMuted
+
+      print(tostring(isMuted) -- true or false
+      ```
     type: boolean
   - name: spatialRange
     summary: Defines the range in which the audio can be heard.
     description: This property sets the maximum distance at which the audio is audible. Beyond this range, the audio volume decreases to silence, simulating spatial audio effects.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set the spatial range of the audio
+      audioShaderInstance.spatialRange = 10
+      ```
     type: number
   - name: volume
     summary: Controls the playback volume of the audio.
     description: This property allows for adjusting the volume level of the audio. The value ranges from 0 (silent) to 1 (maximum volume).
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set the volume of the audio
+      audioShaderInstance.volume = 0.5
+      ```
     type: number
   - name: randomVolume
     summary: Sets a range for random volume variation.
     description: This property enables random variation in volume within the specified range, adding dynamic changes to the audio playback volume.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set the random volume range of the audio
+      audioShaderInstance.randomVolume = 0.1
+      ```
     type: number
   - name: pitch
     summary: Adjusts the pitch of the audio playback.
     description: This property allows for changing the pitch of the audio, with higher values increasing the pitch and lower values decreasing it.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set the pitch of the audio
+      audioShaderInstance.pitch = 1.2
+      ```
     type: number
   - name: randomPitch
     summary: Sets a range for random pitch variation.
     description: This property allows for random variation in pitch within a specified range, making the audio playback more dynamic and varied.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set the random pitch range of the audio
+      audioShaderInstance.randomPitch = 0.2
+      ```
     type: number
 methods:
   - name: Play
     summary: Begins playback of the audio with optional volume and pitch parameters.
     description: This method starts the audio playback. Developers can optionally specify volume and pitch to customize the playback for this instance.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Play the audio with custom volume and pitch
+      audioShaderInstance:Play(0.8, 1.1)
+      ```
     parameters:
       - name: volume
         type: number
@@ -67,7 +97,11 @@ methods:
     summary: Returns a randomly selected AudioClip from the available set.
     description: This method selects and returns a random AudioClip object, allowing for varied audio playback without manually selecting clips.
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Get a random AudioClip
+      local randomClip = audioShaderInstance:GetRandomClip()
+      ```
     parameters:
     returns:
       - type: Class.AudioClip
@@ -76,7 +110,11 @@ methods:
     summary: Creates a new instance of AudioShader with a specified AudioClip.
     description: This static method instantiates a new AudioShader object, initialized with the provided AudioClip, ready for playback and manipulation.
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Create a new AudioShader instance with the specified AudioClip
+      local audioShaderInstance = AudioShader.Create(clip)
+      ```
     parameters:
       - name: clip
         type: Class.AudioClip
@@ -85,4 +123,3 @@ methods:
     returns:
       - type: Class.AudioShader
         summary: A new instance of AudioShader configured with the provided AudioClip.
-math_operations:

@@ -105,5 +105,12 @@ properties:
       end)
       ```
     type: Class.Event
+  - name: inputPanel
+    summary: |
+
+    is_static: false
+    code_samples: |
+      ```lua
+      ```
+    type: Class.IPanel
 methods:
-math_operations:

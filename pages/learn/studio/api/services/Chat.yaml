@@ -32,7 +32,12 @@ properties:
       Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
+        Chat:DisplayTextMessage(channel, player, message)
+      end)
+      ```
     type: Class.Event
   - name: WhisperReceivedHandler
     summary: |
@@ -137,7 +142,22 @@ methods:
       Destroys the given channel, removing all players from it.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local generalChannel = Chat:CreateChannel("General", true, true)
+
+      server.PlayerConnected:Connect(function(player)
+        Chat:AddPlayerToChannel(generalChannel, player)
+      end)
+
+      server.PlayerDisconnected:Connect(function(player)
+        Chat:RemovePlayerFromChannel(generalChannel, player)
+      end)
+      
+      server.PlayerLeft:Connect(function(player)
+        Chat:DestroyChannel(generalChannel)
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -210,7 +230,14 @@ methods:
       Sets the default channel for the player. This will be the default channel text messages are sent to.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local generalChannel = Chat:CreateChannel("General", true, true)
+
+      server.PlayerConnected:Connect(function(player)
+        Chat:SetDefaultChannel(player, generalChannel)
+      end)
+      ```
     parameters:
       - name: channelInfo
         type: Class.ChannelInfo
@@ -224,7 +251,18 @@ methods:
       Displays the given text message to the channel's chat log with a speech bubble over the given player's head.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local generalChannel = Chat:CreateChannel("General", true, true)
+
+      server.PlayerConnected:Connect(function(player)
+        Chat:AddPlayerToChannel(generalChannel, player)
+      end)
+
+      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
+        Chat:DisplayTextMessage(channel, player, message)
+      end)
+      ```
     parameters:
       - name: channel
         type: Class.ChannelInfo

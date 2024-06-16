@@ -10,7 +10,7 @@ In Unity, these functions are called at specific points in the game's execution 
 
 > The image below shows the order in which Unity's Lifecycle Functions are called during the execution of a game.
 
-![LifeCycle](/assets/learn/guides/studio/basics/unity-life-cycle.png)
+![LifeCycle](/assets/learn/guides/studio/Basics/unity-life-cycle.png)
 
 ## Lifecycle Stages
 
