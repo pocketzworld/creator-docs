@@ -10,7 +10,7 @@ For example, to define a Serialized Field in Lua, you can use the `--!SerializeF
 
 ```lua
 --!SerializeField
-local moveSpeed = 10
+local moveSpeed: number = 5
 ```
 
 ## Why Use Serialized Fields?
@@ -34,7 +34,7 @@ Here's an example of defining Serialized Fields in Lua:
 
 ```lua
 --!SerializeField
-local myNumber = 5
+local myNumber: number = 5
 ```
 
 In this example, `myNumber` is a Serialized Field with an initial value of `5`. By adding the `SerializeField` attribute before the variable declaration, you can modify `myNumber` directly in the Inspector panel.
@@ -47,18 +47,20 @@ Here are examples of different types of Serialized Fields in Lua:
 
 ```lua
 --!SerializeField
-local myNumber = 10
+local myNumber: number = 5
 --!SerializeField
-local myString = "Hello, World!"
+local myString: string = "Hello, World!"
 --!SerializeField
-local myBool = true
+local myBool: boolean = true
 --!SerializeField
-local myGameObject = nil
+local myGameObject: GameObject = nil
 --!SerializeField
-local myTransform = nil
+local myTransform: Transform = nil
 --!SerializeField
-local myVector = Vector3.new(1, 2, 3)
+local myVector: Vector3 = Vector3.new(1, 2, 3)
 ```
+
+When defining Serialized Fields, you can use various data types to represent different values and properties in your Lua scripts. This flexibility allows you to customize game objects, behaviors, and interactions effectively during development.
 
 > Note: when declaring typed variables, the fundamental types are `lowercase` where the Unity types are `PascalCase`.
 > To get more supported Unity Types, see `Learn>Studio>API>Classes` on the Create Portal.
@@ -66,13 +68,13 @@ local myVector = Vector3.new(1, 2, 3)
 **Fundamental Types Example (lowercase):**
 ```lua
 --!SerializeField
-local myString = "Hello, World!" -- Lua String Type
+local myString: string = "Hello, World!" -- Lua String Type
 ```
 
 **Unity Types Example (PascalCase):**
 ```lua
 --!SerializeField
-local Vector3Value = Vector3.new(1, 2, 3) -- Unity Vector3 Type
+local Vector3Value: Vector3 = Vector3.new(1, 2, 3) -- Unity Vector3 Type
 ```
 
 ## How to Access Serialized Fields
