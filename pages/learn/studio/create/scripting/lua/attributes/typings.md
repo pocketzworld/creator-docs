@@ -1,6 +1,10 @@
 # Types
 
-The attribute `Type` is used to specify the type of script you are creating. This attribute is optional, but it is recommended to include it for clarity and consistency. The `Type` attribute can be set to `Client`, `Server`, `Module`, `ClientAndServer`, or `UI`.
+The attribute `Type` is used to specify the type of script you are creating. The `Type` attribute can be set to `Client`, `Server`, `Module`, `ClientAndServer`, or `UI`.
+
+<Note type="warning">
+This is important for the Studio to know how to handle the script. And will be set automatically when creating a new script from the Studio.
+</Note>
 
 Here is an example of defining the script type in Lua:
 
@@ -31,4 +35,4 @@ Here is an example of defining the script type in Lua:
 
 ## Conclusion
 
-Whether to include the `Type` attribute in your script depends on the context and purpose of the script. By specifying the script type, you can ensure that your script is correctly categorized and used in the intended context. This attribute helps maintain consistency and clarity in your project, making it easier to manage and organize your scripts effectively.
+By using the `Type` attribute, you can specify the type of script you are creating in Highrise Studio. This attribute helps the Studio identify the script's purpose and handle it accordingly, ensuring seamless integration and functionality within your game project.
