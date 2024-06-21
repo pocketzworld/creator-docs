@@ -12,7 +12,13 @@ Creators earn 70% of the Gold they collect. This is deposited directly into thei
 
 You can accept Gold payments in your world by using the Highrise Payments API. The API provides functions that allow you to prompt players to make a purchase, handle the purchase on the server, and acknowledge the purchase.
 
+<Note type="warning">
+For the Payment API to work, you need to create a product in the Creator Portal.
+</Note>
+
 ## Getting Started with Gold Payments
+
+We have provided a step-by-step guide to help you get started with accepting Gold payments in your world.
 
 - [Learn about Highrise Payments API functions](https://create.highrise.game/learn/studio/api/services/Payments)
 - [View example code for prompting players to make a purchase](https://create.highrise.game/learn/studio/create/scripting/advanced/payments)
