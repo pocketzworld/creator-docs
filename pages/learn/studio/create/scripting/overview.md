@@ -21,6 +21,7 @@ Below are some resources to help you get started with scripting in Highrise Stud
 - [Writing Your First Script](https://create.highrise.game/learn/studio/create/scripting/writing-your-first-script) - Creating your initial Lua script in Highrise Studio.
 - [Understanding Lua](https://create.highrise.game/learn/studio/create/scripting/lua/overview) - Learn about the Lua scripting language and its features.
 - [Script Types](https://create.highrise.game/learn/studio/create/scripting/script-types/overview) - Understand the different types of Lua scripts you can create in Highrise Studio.
+- [Code Academy](https://www.codecademy.com/learn/learn-lua) - Free courses on Lua programming by Codecademy.
 
 # Advanced Scripting
 

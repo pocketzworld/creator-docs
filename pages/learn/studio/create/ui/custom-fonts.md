@@ -1,6 +1,6 @@
-# **Using Custom Fonts in Unity UI**
+# Using Custom Fonts in Unity UI
 
-## **Introduction**
+## Introduction
 Enhance your Unity projects by incorporating custom fonts into your user interface. This guide will walk you through the process of importing a font and using it in your UI designs. For detailed information, you might want to reference Unity's documentation on USS (Unity Style Sheets) and UXML (Unity Extensible Markup Language).
 
 ## Step 1: Import Your Font
@@ -32,6 +32,39 @@ Enhance your Unity projects by incorporating custom fonts into your user interfa
    ```
 
    - In the example above, `.simple-leaderboard` is a class applied to a UI element in the UXML. The `flex-grow: 1` property allows the element to expand to fill its container, and the `background-image` sets a background texture. The crucial line for the font is the `-unity-font-definition`, which points to the `QuickPencil-Regular SDF.asset` file you created.
+
+
+## Step 3: Custom Variables
+
+After defining the font in your USS file, you can use custom variables to reference the font throughout your stylesheet. This approach allows you to reuse the font definition easily and maintain consistency across your UI elements.
+
+1. **Define a Custom Variable**:
+   - Create a custom variable in your USS file to represent the font definition. This variable can be referenced wherever you need to apply the font.
+
+   ```css
+   :root {
+       --font-custom: url("project://database/Assets/UI/Fonts/QuickPencil-Regular SDF.asset");
+   }
+   ```
+
+   - In this example, `--font-custom` is a custom variable that points to the font asset file. You can name your variable according to your font's style or purpose.
+
+2. **Use the Custom Variable**:
+   - To apply the custom font to an element, reference the custom variable in your stylesheet. This method simplifies font management and allows you to update the font across your UI by modifying a single variable.
+
+   ```css
+   .simple-leaderboard {
+       flex-grow: 1;
+       background-image: url("project://database/Assets/TorePaper.png");
+       -unity-font-definition: var(--font-custom);
+   }
+   ```
+
+   - By using `var(--font-custom)`, you are applying the font definition stored in the custom variable to the `.simple-leaderboard` element.
+  
+<Note type="info">
+This works for any other property you want to reuse across your stylesheet. Custom variables provide a convenient way to manage and update your styles efficiently.
+</Note>
 
 ## Conclusion
 

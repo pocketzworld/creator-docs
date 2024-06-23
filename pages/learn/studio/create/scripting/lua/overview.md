@@ -47,6 +47,7 @@ In Highise Studio, Lua is used to script game logic, create interactive experien
 - [Official Lua Website](https://www.lua.org/) - The official Lua programming language website.
 - [Lua Users Wiki](http://lua-users.org/wiki/) - A community-driven resource for Lua programming.
 - [Programming in Lua](https://www.lua.org/pil/contents.html) - An online book on Lua programming by Roberto Ierusalimschy.
+- [Code Academy](https://www.codecademy.com/learn/learn-lua) - Free courses on Lua programming by Codecademy.
 
 ## Summary
 
