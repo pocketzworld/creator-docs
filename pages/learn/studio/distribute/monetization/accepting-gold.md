@@ -23,6 +23,10 @@ We have provided a step-by-step guide to help you get started with accepting Gol
 - [Learn about Highrise Payments API functions](https://create.highrise.game/learn/studio/api/services/Payments)
 - [View example code for prompting players to make a purchase](https://create.highrise.game/learn/studio/create/scripting/advanced/payments)
 
+## Where to Collect Earned Gold
+
+The Earned Gold will be sent to your in-game Gift Inbox. You can collect it daily from there. Once you collect the Earned Gold, it will appear in your Creator Exchange.
+
 ## Conclusion
 
 Implementing Gold payments in your world can provide additional revenue and enhance the player experience. By offering exclusive items, access to special areas, or other benefits in exchange for Gold, you can create a more engaging and rewarding experience for your players. For more information on accepting Gold payments, refer to the Highrise Payments API documentation.
