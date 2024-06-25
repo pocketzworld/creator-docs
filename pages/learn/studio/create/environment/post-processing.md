@@ -2,6 +2,10 @@
 
 Post processing is the final step in the rendering process. It is the process of applying effects to the rendered image to enhance its quality. Post processing can be used to add effects like bloom, depth of field, and color correction to the rendered image.
 
+<Note type="warning">
+For this to work in game, the `Color Space` must be set to `Gamma` in the `Project Settings` window.
+</Note>
+
 ## Effects List
 
 Unity's Post Processing package comes with a variety of effects that you can use to enhance your scene. Here are some of the most commonly used effects:
