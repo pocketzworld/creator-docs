@@ -9,57 +9,58 @@ inherits:
 constructors:
 properties:
   - name: Entered
-    summary: Called when a player enters the anchor.
+    summary: |
+      Called when a player enters the anchor.
     description:
     is_static: false
     code_samples:
     type: Class.Event
-    parameters:
     returns:
       - type: void
         summary:
   - name: Exited
-    summary: Called when a player exits the anchor.
+    summary: |
+      Called when a player exits the anchor.
     description:
     is_static: false
     code_samples:
     type: Class.Event
-    parameters:
     returns:
       - type: void
         summary:
   - name: enterFromPosition
-    summary: Enters the anchor from a specific position.
+    summary: |
+      Enters the anchor from a specific position.
     description:
     is_static: false
     code_samples:
     type: Class.Vector3
-    parameters:
     returns:
       - type: void
         summary:
   - name: exitToPosition
-    summary: Exits the anchor to a specific position.
+    summary: |
+      Exits the anchor to a specific position.
     description:
     is_static: false
     code_samples:
     type: Class.Vector3
-    parameters:
     returns:
       - type: void
         summary:
   - name: enterFrom
-    summary: Enters the anchor from a specific transform.
+    summary: |
+      Enters the anchor from a specific transform.
     description:
     is_static: false
     code_samples:
     type: Transform
-    parameters:
     returns:
       - type: void
         summary:
   - name: exitTo
-    summary: Exits the anchor to a specific transform.
+    summary: |
+      Exits the anchor to a specific transform.
     description:
     is_static: false
     code_samples:
@@ -69,14 +70,13 @@ properties:
       - type: void
         summary:
   - name: isTappable
-    summary: Returns whether the anchor is tappable.
+    summary: |
+      Returns whether the anchor is tappable.
     description:
     is_static: false
     code_samples:
     type: boolean
-    parameters:
     returns:
       - type: boolean
         summary: Whether the anchor is tappable.
 methods:
-
