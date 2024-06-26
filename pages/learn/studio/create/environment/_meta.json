@@ -8,6 +8,12 @@
   "navmesh": {
     "title": "Navmesh"
   },
+  "anchor": {
+    "title": "Anchor"
+  },
+  "jump": {
+    "title": "Jump"
+  },
   "post-processing": {
     "title": "Post Processing"
   },
