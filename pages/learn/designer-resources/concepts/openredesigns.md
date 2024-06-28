@@ -7,6 +7,8 @@ They may not be used as bases for any regular Concept.
 
 ### ✍️ Items attributed to the following designers are eligible for redesigning: 
 
+[Amberryss](https://highrise.game/catalog/designer-profile/Amberryss)
+
 [Anthropophobia_](https://highrise.game/catalog/designer-profile/Anthropophobia_)
 
 [Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
@@ -20,6 +22,8 @@ They may not be used as bases for any regular Concept.
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
 [HxntaiBaby](https://highrise.game/catalog/designer-profile/HxntaiBaby)
+
+[iPix](https://highrise.game/catalog/designer-profile/iPix)
 
 [IrisEstella](https://highrise.game/catalog/designer-profile/IrisEstella)
 
