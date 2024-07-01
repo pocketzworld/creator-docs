@@ -64,6 +64,10 @@ Absolutely! But we suggest our current and future players explore this on their 
 
 Like everyone, we try to talk more about our worlds and show them from different sides. We also want to note that we tried to interact with the audience as often as possible: we found out about any errors, their wishes, preferences, ideas. Any feedback is very important and it becomes an additional point of growth.
 
+## What challenges have you both faced during the creation process, and how did you overcome them?
+
+We think the main difficulty was the need to sleep and eat! Fueled by excitement and inspiration, we wanted to do everything as quickly as possible, sometimes forgetting to take breaks. It's a good thing we reminded each other to rest.
+
 ### What do you think users will find most exciting about creating their first world?
 
 It's impossible to answer this question unequivocally... I'm sure it's the process itself. Some aspect of it or all of it. The most interesting thing is the birth of something complete from once small and uncertain steps.
