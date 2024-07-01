@@ -1,74 +1,76 @@
 # World Creator Spotlight Interview 🌟
 
-## Meet the Creator aprilcat - Creator of *Squid Game World*
+## Meet the Creators your.moth & its.gr - Creator of *Street Rave*
 
 <Note type="info">
-These questions are in reference to the *Squid Game world* created by aprilcat in the Highrise Studio.
+These questions are in reference to the *Street Rave* created by your.moth & its.gr in the Highrise Studio.
 </Note>
 
 ### Can you tell us about yourself and how you got started with virtual world building?
 
-Hi! I first got started with virtual world building through Highrise’s early alpha builds of Studio. I have no experience in this domain outside of this, other than what little time I’ve spent building 2D rooms in regular HR!
+Our names are Grisha and Vasilisa! Grisha is 24 years old, and I am 21! Initially, I was the only one who registered for the game. Later, when Grisha and I were still apart, I suggested he also register for the game. It was one of our ways to spend time together!
 
-I love Highrise and building things that the community can use. I have always loved exploring and leveraging any new systems HR bring out to see what I can innovate in the community. I am a free player in-game which means all my items and gold have to be earned via adding value to the community in some way. I have already done this with bots to a degree, and I see worlds as an even more powerful tool for me to build cool experiences and earn as a creator.
+We didn't get into creating worlds right away. We learned about the first jam when it was already over, but we were already excited about participating! In the next jam, we managed to win with our world "[aLittlePrince](https://highrise.game/world/664adbb78be80584c65d6ca0)".
+
+I'm lucky with Grisha because he's not only a great partner but also a wonderful programmer.
+
+And I absolutely love coming up with ideas. He supported me in my ideas, and we immediately got to work. Grisha is responsible for the code, and I'm responsible for the concept and visuals. First, we victoriously finish one jam, then they announce the next one, and I say to Grisha at night, "Let's participate again!" and he, tired but excited, agrees to this adventure!
 
 ### What inspired you to create your virtual world in Highrise?
 
-I was inspired by the many different approaches to recreating the popular “Red Light Green Light” scene in Squid Games made by many different creators in many different games. Whether that’s Minecraft, Roblox, etc..
+Ideas always came easily to me: for our first jam, I came up with three worlds, but we decided to stick with one since we probably couldn't have invested so much effort into all three and would have just burned out.
+
+This jam was no exception: I immediately imagined a picture with a nighttime street in a residential area with hints of cyberpunk. This idea was inspired by my love for phonk music. For some reason, these associations stuck to this music genre, and Grisha, as always, supported me. I'm sure without his contribution, this idea wouldn't have been realized so pleasantly!
+
+So, we were inspired by ourselves, by the participation itself, and by the idea itself.
 
 ### Can you describe the theme or concept behind your world?
 
-The concept is a simple recreation of the Squid Games scene, which is a deadly and spooky version of the childhood game “Red Light Green Light”. This scene rose to huge popularity and became an internet phenomenon because the game itself resonates with so many.
+As mentioned above, the idea was born out of a love for phonk music: the atmosphere created itself. Phonk is almost always about purple, blue, night, something related to movement. We both love Japanese cars, and I think this unexpectedly for us brought some hints of Japanese streets into the world. And naturally, we both love games, so the idea
 
-I believe this scene also lends itself to game creation in a couple of interesting ways. The coding required is very simple, just a start line and end line, and a check to see if players are moving. From a world design perspective, the walls in the show are literally just flat paintings of scenery in a square empty room, and only requires 1 simple doll model that turns. It’s like it was made for this!
+was supplemented with references to the cyberpunk universe.
+
+The world was supposed to be an obstacle course, so we wanted the idea itself to encourage the player to move and complete the course faster. What, if not phonk, motivates you to set a better record and instills confidence? We don't know!
 
 ### What sets your world apart from others in Highrise?
 
-I believe worlds that play on popular media concepts will always be more eye catching and interesting as users can relate to it.
+I don't want to sound narcissistic, but I'm sure the presentation and visual components really set our world apart from others. It's not just a world; it's a whole location from a movie or a pleasant zone for photos. The eye catches details, seeing a pleasant whole picture. Everything complements each other, just as I wanted!
 
-I also made use of a large camera screen, as well as a camera directly attached to the user perspective which helps visualize what’s happening and is engaging to look at.
+Similarly, I am sure that our world is distinguished by a minimal number of possible errors and pleasant game mechanics, like a camera that follows the player. Grisha has put a lot of soul into this, which definitely didn't go unnoticed!
 
 ### Is there a world made by another creator that you really love? What do you look for in other people's world experiences?
 
-I liked [Lunar Blossoms](https://high.rs/world?id=66216d2cd3b91f38532f1e1f) by [tanuhtanu](https://highrise.game/profile/tanuhtanu) a lot! This is the most beautiful world design I’ve seen so far, and whilst I’m focused mainly on scripting and games, I believe aesthetics of hangout worlds will be an important part of the worlds experience for many current HR users.
+Personally, I was very impressed by the world [Zenagram Gardens](https://highrise.game/world/662c28b502311559e8c258ba). It's simple in its goal for the player, but that's what makes it appealing, along with its pleasant design. I also liked the world [Phobia](https://production-ap.highrisegame.com/worlds/666de726b0995c7e10e732aa) - it stood out with a good idea compared to many other worlds, but it lacked a bit of proper execution. I'm sure if its author continues to develop, they will manage to surprise us.
+
+Grisha was impressed by the world [Cosmic Rush](https://highrise.game/world/662a49b39c08b75c5c248585). In his opinion, the world has well-developed game mechanics, a good choice of player interaction with the world. It stands out among the rest with its interesting and high-quality gameplay.
 
 ### How do you approach designing and building within the virtual environment?
 
-I usually start with a general concept of what I’d like to build, and begin looking at free assets online or simple assets I can create in Unity. After creating a basic build skeleton, I spend most of the time working on what interests me which is scripting and designing the experience with sounds/animations. I’ll then add finishing touches like lighting and more complex assets to the scene.
-
-The most useful resources in my approach have been the video demonstrations of building a world from [Nautis](https://highrise.game/profile/NautisShadrick) and [Hsein](https://highrise.game/profile/ihsein). Seeing and watching the full process has been helpful for someone who is totally unfamiliar with Unity and where to start.
+Grisha finds this somewhat tedious; he is our code and optimization professional, so I handle this. In reality, the initial picture comes to my mind right away, and the rest is done easily, as if each idea nurtures a new one. Designing and presenting the world is like anti-stress for me! It's just as exciting as watching Grisha's programming magic 🤪
 
 ### What do you hope players will experience or take away from exploring your world?
 
-I hoped that players would find it somewhat challenging and also kinda scary. I wanted to make sure it would take a fair few attempts before reaching the end, and to feel a sense of achievement from winning, teleporting them up to a glowing stage.
+We want players to have an individual experience visiting our worlds. Any world, like a full-fledged game, is a whole piece of art where everyone can find something for themselves. Some will remember the absence of errors, some will be impressed by the camera movement, some will fall in love with the world's lighting, and some will be inspired by the idea itself. Our worlds are about unique gameplay experiences and perspectives for each player. Every game is a journey. We want every player to find something of their own there.
 
 ### What advice would you give to players who want to start creating worlds?
 
-If you have little experience with Unity like me, you should first start with the very basics and try to follow along with Highrise’s guides to get your first world uploaded, even if it's just a basic template room. 
-
-If your goal is building aesthetic rooms, I would recommend using Highrise’s pre-made assets to start and simply dragging and dropping a little world in a similar way to building a 2D HR room from the furniture store. 
-
-If you want to create games, I would learn the basics of scripting, with the initial goal of just printing something to the console, and work your way up!
+Definitely practice more, be bolder in expressing your individual views and aesthetics, don't ignore optimization and good gameplay. The motto should be simple: an idea won't be good without good code and visuals, just as good visuals or code won't be good without an idea. They complement each other and never go separately. Pay attention to everything!
 
 ### Are there any unique features or hidden gems within your world that players should look out for?
 
-Players should keep watch of the big target screen on the wall, the Doll is constantly scanning around to watch for your movements. If you see yourself up there, it might mean you’re about to be eliminated, so watch out!
+Absolutely! But we suggest our current and future players explore this on their own! 🤪
 
 ### How do you engage with the Highrise community to promote your world?
 
-I like to drop occasional posts with hints at the progress of my creations. I like to leave some room for discovery and for players to work things out for themselves. I also see people posting about their experience with my world which makes more people interested to try!
-
-### What challenges have you faced during the creation process, and how did you overcome them?
-
-My biggest challenge was learning and understanding Unity as a program. I mostly overcame this by watching [Nautis](https://highrise.game/profile/NautisShadrick) demonstrating building Kaiju King from start to finish. I also looked at all the template projects of premade worlds to see exactly how a working project is structured and built.
+Like everyone, we try to talk more about our worlds and show them from different sides. We also want to note that we tried to interact with the audience as often as possible: we found out about any errors, their wishes, preferences, ideas. Any feedback is very important and it becomes an additional point of growth.
 
 ### What do you think users will find most exciting about creating their first world?
 
-I believe the best part for most users will be learning Animations and Particle Systems. Neither of these require any coding knowledge, and can create really visually interesting effects not possible before in Highrise. People have been asking for animated furniture and interactable effects for a very long time, and now it’s easily possible! 
+It's impossible to answer this question unequivocally... I'm sure it's the process itself. Some aspect of it or all of it. The most interesting thing is the birth of something complete from once small and uncertain steps.
 
 ### Lastly, do you have any upcoming projects or plans for the future you would like to share with us?
 
-Yes! I’ve learned a lot since creating Squid Games and want to build much more rich and developed games/worlds. My biggest goal is to create an immersive pet sim game where anyone can own and take care of their own pet in Highrise! I hope you will look out for that in the future.
+Yes, absolutely, we have many ideas and desires for implementation, but we also want to have time to rest! Who knows: maybe you'll see us again in the upcoming jam, or maybe we'll surprise people a little later. We'll keep this decision a secret!
 
 
-### Thank you for sharing your insights with us, aprilcat! We can't wait to see what you create next. 🌟
+### Thank you for sharing your insights with us, your.moth & its.gr! We can't wait to see what you create next. 🌟
