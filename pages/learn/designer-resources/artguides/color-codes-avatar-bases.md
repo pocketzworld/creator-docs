@@ -10,11 +10,14 @@ While designing, you can use our in-game color palettes to inform your art direc
 
 #### Eye Color 
 
-![eye-color-preview-2022.png](https://cdn-production.joinhighrise.com/create-portal/eye_color_preview_2022_130652b7ec.png)
+![eye-color-preview-2024](https://github.com/pocketzworld/creator-docs/assets/157839924/b9feec4b-05c6-4787-b990-3d87ce76df6e)
+
 
 #### Hair Color 
 
-![hair-color-preview-2022.png](https://cdn-production.joinhighrise.com/create-portal/hair_color_preview_2022_df5f6ab48b.png)
+![haircolorpreviewnewcolors](https://github.com/pocketzworld/creator-docs/assets/157839924/d12d04c4-49af-4837-9cc5-e015b79d0eed)
+
+
 
 #### Lips Color 
 
