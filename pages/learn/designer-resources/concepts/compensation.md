@@ -51,18 +51,20 @@ Should your item be featured in a sale that includes additonal gold, collectible
 ### 💸 Payouts Per Item
 
 Performance Items Compensation is determined on a per-item basis.  
-Typically, you can expect an item to generate less than $4,200 USD.  If your item is part of a release that performs about average, you'll make 3.5% of net revenue.
+Typically, you'll receive 3.5% of net revenue per item. 
 
-If your item outperforms our baseline, you'll get bumped up to 15% of net revenue per item. 
+If your item outperforms our baseline and lands above the 80th percentile , you'll earn 15% of net revenue per item. 
+
+
 
 #### 🔄 To account for the Earned Gold to Cash conversion tax, all Performance Item payouts include an additional stipend to cover the withdrawal fee. 
-This means that whenever you do cash out your Earned Gold, you'll receive the full 3.5% in cash in your bank account. 
+This means that whenever you do cash out your Earned Gold, you'll receive the full 3.5% (or 15%) in cash in your bank account. 
 
 ***Baseline Percentage Payout Per Performance Item***
-3.5% of revenue (8.75% of gold) for items earning <$4,200 (12.6M Gold)
+3.5% of revenue (8.75% of gold) for items below the 80th percentile
 
 ***Bonus Percentage Payout Per Exceptional Performance Item***
-15% of revenue (37.5% of gold) for items earning ≥$4,200 (12.6M Gold)
+15% of revenue (37.5% of gold) for items performing above the 80th percentile
 
 
 
