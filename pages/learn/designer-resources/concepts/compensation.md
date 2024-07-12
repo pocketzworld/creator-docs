@@ -37,7 +37,7 @@ The more items you release during the quarter, the more you'll start earning per
 
 For items released in Grabs, Event Rewards, or item-only Sales, you'll earn a percentage of the total revenue generated in that release. 
 
-#### 🍄FOR GRABS🍄
+#### 🍄FOR GOLD GRABS🍄
 
 All revenue is calculated by total gold spent after the grab ends. Grabs typically run for about a month. 
 
