@@ -1,15 +1,5 @@
 ## General
 
-#### What do I get for winning?
-
-Every winning artist will receive 6x copies of their final items, and 10,000 Earned Gold per design. You can [read more about Earned Gold here](https://highrise.helpshift.com/hc/en/3-highrise---your-avatar-community/faq/193-earned-gold/). 
-**Collaborating duos** will split the prize evenly: each designer in a collab will receive 3x copies of their finished item, and 5,000 Earned Gold apiece. 
-
-Additionally, every item you design will have your name in the "_Inspired By_" field in-app! You'll also have access to your very own [Designer Profile](https://highrise.game/catalog?page=1&type=designer_profile) on our website, where you can customize collections, backgrounds, and favorites.
-
-#### What if my item is featured in a sale? 
-
-If your design is sold via in-app purchase for cash (Wednesday Wonder, Friday Fling, Event-related specials), you will be awarded an additional 25,000 Earned Gold bonus. Combined with your 10,000 Earned Gold compensation, this will enable you to _immediately redeem your Earned Gold for real cash_, as you need at least 35,000 EG to withdraw your funds. 
 
 #### How does compensation work for recolors?
 Occasionally, our team will edit your design with a variety of different color schemes. You may end up with anywhere from 1-10 different versions of your final item design! 
