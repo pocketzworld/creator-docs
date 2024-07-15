@@ -95,7 +95,7 @@ In order to use the Highrise Payments API, you need to create a product. You can
 
 1. Go to the **Creation** tab in the [Creator Portal](https://create.highrise.game/)
 2. Select the world you want to create a product for
-3. Navigate to the **World Products** section under the **Monetization** tab
+3. Navigate to the **In-World Purchases** section under the **Monetization** tab
 4. Click on the **Create** button
 5. Fill in the product details, such as the product ID, name, description.
 6. Click on the **Create** button to create the product
@@ -103,7 +103,7 @@ In order to use the Highrise Payments API, you need to create a product. You can
 Once you have created a product, you can set an image for the product, enable "List For Sale" to make it available for purchase, and set the price of the product.
 
 <Note type="warning">
-Highrise will take 30% of the revenue generated from the sale of products. The remaining 70% will be credited to your account.
+Highrise will take 30% of the revenue generated from the sale of In-World Purchases (IWP). The remaining 70% will be credited to your account.
 </Note>
 
 ## Handling Purchases
@@ -128,4 +128,4 @@ Payments.AcknowledgePurchase(purchase, false)
 
 ## Conclusion
 
-In this guide, you learned how to implement payments in your Highrise Studio projects using the Highrise Payments API. By following the examples provided, you can create products, handle purchases, and acknowledge or reject purchases in your project. Implementing payments in your project can help you monetize your game or experience and provide players with a way to support your work.
+In this guide, you learned how to implement payments in your Highrise Studio projects using the Highrise Payments API. By following the examples provided, you can create In-World Purchases (IWP), handle purchases, and acknowledge or reject purchases in your project. Implementing payments in your project can help you monetize your game or experience and provide players with a way to support your work.

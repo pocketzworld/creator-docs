@@ -120,18 +120,18 @@ methods:
       - type: void
         summary:
   - name: GetProducts
-    summary: Get a list of products.
+    summary: Get a list of In-World Purchases (IWP).
     description:
     is_static: true
     code_samples: |
       ```lua
       Payments.GetProducts(100, nil, function(products, nextCursorId, getProductsErr)
         if getProductsErr ~= PaymentsError.None then
-          error("(Server) Failed to get products: " .. err)
+          error("(Server) Failed to get In-World Purchases: " .. err)
           return
         end
 
-        print("(Server) Products:")
+        print("(Server) In-World Purchases:")
         for _, product in ipairs(products) do
           print("Product ID: " .. product.product_id)
           print("Product Name: " .. product.name)
