@@ -11,6 +11,8 @@ They may not be used as bases for any regular Concept.
 
 [Anthropophobia_](https://highrise.game/catalog/designer-profile/Anthropophobia_)
 
+[bbyasteria](https://highrise.game/catalog/designer-profile/bbyasteria)
+
 [Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
@@ -36,6 +38,8 @@ They may not be used as bases for any regular Concept.
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
 
 [Mockeri](https://highrise.game/catalog/designer-profile/Mockeri)
+
+[myrch](https://highrise.game/catalog/designer-profile/myrch)
 
 [OhaiBambi](https://highrise.game/catalog/designer-profile/OhaiBambi)
 
