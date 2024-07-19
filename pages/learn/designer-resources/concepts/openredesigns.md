@@ -33,9 +33,13 @@ They may not be used as bases for any regular Concept.
 
 [J4CY4NY](https://highrise.game/catalog/designer-profile/J4CY4NY)
 
+[Joohii](https://highrise.game/catalog/designer-profile/Joohii)
+
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
 
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
+
+[Mizune](https://highrise.game/catalog/designer-profile/Mizune)
 
 [Mockeri](https://highrise.game/catalog/designer-profile/Mockeri)
 
