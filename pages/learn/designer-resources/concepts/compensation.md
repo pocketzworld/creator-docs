@@ -121,6 +121,7 @@ In this event, there are 30 total Participation, Crew, and Individual ranked rew
 Let's say the event shop and sale items combine for a total of $45,000 USD. We'll divide this number by the number of event rewards to get our revenue-per-item figure; in this case, 45,000 divided by 30 = $1,500 USD per item. 
 
 Again, we'll multiply this number by 3.5% to determine your cash payout, then convert this number into Earned Gold: 
+
 **1,500 USD X .035 = $55.5 USD revenue-per-item
 55.5 USD X 750 = 39,375 Earned Gold per item**
 
@@ -131,10 +132,12 @@ Again, we'll multiply this number by 3.5% to determine your cash payout, then co
 
 For the most part, sales are pretty simple! For this example, let's pretend that you and a collaboration partner team up to create one incredible Legendary item which resonates exceptionally well within the community. This item nets $30,000 USD. 
 
-There is only 1 item in this sale, so we'll calcuate your payout based on the total net revenue sum. And, as this sale is above the 80th percentile, your payout is cacluated based at 15%: 
+There is only 1 item in this sale, so we'll calcuate your payout based on the total net revenue sum. And, as this sale is above the 80th percentile, your payout is cacluated based at 15%.
+
 **30,000 X .15 = $4,500 USD**
 
-Now, since you're part of a collaboration, we'll split this number in half: each partner will receive the Earned Gold equivalent of $2,250. We'll multiply $2,250 by 750 to get the correct Earned Gold Payout. 
+Now, since you're part of a collaboration, we'll split this number in half: each partner will receive the Earned Gold equivalent of $2,250. We'll multiply $2,250 by 750 to get the correct Earned Gold Payout.
+
 **2250 X 750 = 1,687,500 Earned Gold**
 
 💸💸💸 The final payout for each collaboration partner is **1,687,500 Earned Gold** for their sale item. 
