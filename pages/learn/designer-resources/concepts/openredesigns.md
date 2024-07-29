@@ -11,8 +11,6 @@ They may not be used as bases for any regular Concept.
 
 [Anthropophobia_](https://highrise.game/catalog/designer-profile/Anthropophobia_)
 
-[bbyasteria](https://highrise.game/catalog/designer-profile/bbyasteria)
-
 [Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
