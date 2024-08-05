@@ -4,7 +4,7 @@
 
 ![Echo.png](https://cdn-production.joinhighrise.com/create-portal/Echo_07b9155d3c.png)
 
-The Echo Bot serves as a foundational example for users looking to get started with creating Highrise bots. This basic yet effective bot prints out everything it sees in the chat room, providing a simple way to understand how bots interact with the Highrise environment. 
+The Echo Bot serves as a foundational example for users looking to get started with creating Highrise bots. This basic yet effective bot prints out everything it sees in the chat room, providing a simple way to understand how bots interact with the Highrise environment.
 
 As a beginner-friendly bot, the Echo Bot is capable of monitoring and displaying the following events to help users become familiar with bot functionalities:
 
@@ -25,7 +25,7 @@ Here is the **[code](https://github.com/pocketzworld/example-bots/blob/main/ech
 from highrise import BaseBot, CurrencyItem, Item, Position, Reaction, SessionMetadata, User
 
 class Bot(BaseBot):
-    async def on_user_join(self, user: User) -> None:
+    async def on_user_join(self, user: User, position: Position) -> None:
         """On a user joining the room."""
         print(f"[JOIN   ] {user.username}")
 
