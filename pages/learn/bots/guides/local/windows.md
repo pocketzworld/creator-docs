@@ -20,25 +20,24 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 1. Open the command prompt and navigate to the directory where you plan to develop your Highrise bot. It's recommended to create a dedicated folder for this project.
 2. Open the directory with your preferred code editor (e.g., Visual Studio Code).
 3. Create a virtual environment in your project directory. Virtual environments allow you to isolate your Python setup on a per-project basis. To create a virtual environment, type the following command in your command prompt:
-    
-    ```powershell
-    python -m venv .venv
-    ```
-    
+
+   ```powershell
+   python -m venv .venv
+   ```
+
 4. To activate the virtual environment, enter:
-    
-    ```powershell
-    .venv\Scripts\activate
-    ```
-    
-    The command prompt should now show the name of the virtual environment, indicating that it's active.
-    
-5. Install the Highrise Python SDK. Replace **`23.1.0.b10`** with the latest version, which can be found on the Highrise Create Portal:
-    
-    ```
-    pip install highrise-bot-sdk==23.1.0.b10
-    ```
-    
+
+   ```powershell
+   .venv\Scripts\activate
+   ```
+
+   The command prompt should now show the name of the virtual environment, indicating that it's active.
+
+5. Install the Highrise Python SDK. Replace **`24.1.0`** with the latest version, which can be found on the Highrise Create Portal:
+
+   ```
+   pip install highrise-bot-sdk==24.1.0
+   ```
 
 ## **Step 3: Creating Your Bot**
 
@@ -49,7 +48,7 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 ## **Step 4: Retrieving Your API Token and Room ID**
 
 1. To run the bot, you'll need your Highrise API token and the Room ID.
-2. You can obtain the API token from your account on the Highrise Create Portal, under *Dashboard*, and *Credentials*.
+2. You can obtain the API token from your account on the Highrise Create Portal, under _Dashboard_, and _Credentials_.
 3. The Room ID is accessible within the Highrise app. Navigate to the room and click on the **`Share this room`** button in the info panel
 
 <img src="https://cdn-production.joinhighrise.com/create-portal/room_ID_a5a157d527.jpg" alt="room ID" width="300" />
@@ -57,10 +56,9 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 ## **Step 5: Running Your Bot**
 
 1. With the API token and Room ID in hand, you're ready to run your Echo bot. Use the following command, replacing **`<filename>`**, **`<class_name>`**, **`<room_id>`** and **`<api_token>`** with your file name, the class that implements the Highrise Basebot, and your actual Room ID and API token:
-    
-    ```powershell
-    highrise <filename>:<class_name> <room_id> <api_token>
-    ```
-    
+
+   ```powershell
+   highrise <filename>:<class_name> <room_id> <api_token>
+   ```
 
 That's it! Your Echo bot is now active in your chosen Highrise room, and will echo events it perceives to your command line.
