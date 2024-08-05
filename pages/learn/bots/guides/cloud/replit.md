@@ -6,7 +6,6 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 
 <iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/CuNee1czqA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
 ## **Step 1: Setting Up Replit Account**
 
 1. Create an account on Replit, an online coding platform that allows us to write, run, and host our bot's code directly in a browser.
@@ -19,7 +18,7 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 
 ## **Step 3: Adding the Highrise Python SDK**
 
-1. Add the Highrise Python SDK dependency to your project. To do this, open the **`pyproject.toml`** file and add the latest version of the SDK. As of now, it's **`highrise-bot-sdk = "23.1.0b10"`**.
+1. Add the Highrise Python SDK dependency to your project. To do this, open the **`pyproject.toml`** file and add the latest version of the SDK. As of now, it's **`highrise-bot-sdk = "24.1.0"`**.
 
 ![toml.png](https://cdn-production.joinhighrise.com/create-portal/toml_88cfdf4b1f.png)
 
@@ -33,11 +32,11 @@ We encourage you to follow along with the video tutorial to ensure a successful 
 ## **Step 5: Running Your Bot**
 
 1. In the shell tab, execute the following command, replacing **`<bot_class>`**, **`<room_id>`**, and **`<api_token>`** with your actual bot class name, Room ID, and API token respectively:
-    
-    ```python
-    highrise main:<bot_class> <room_id> <api_token>
-    ```
-    
+
+   ```python
+   highrise main:<bot_class> <room_id> <api_token>
+   ```
+
 2. If "start" is printed to the screen, your bot has successfully connected to the server, and the basic setup is complete.
 
 ## **Step 6: Configuring the "Run" Button**
