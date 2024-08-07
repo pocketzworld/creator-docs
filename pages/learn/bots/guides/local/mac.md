@@ -1,6 +1,6 @@
 # Mac Python SDK Setup
 
-This tutorial will guide you step-by-step, from installing the Python development environment, the SDK and its dependencies, to launching your first Highrise bot on a Mac. 
+This tutorial will guide you step-by-step, from installing the Python development environment, the SDK and its dependencies, to launching your first Highrise bot on a Mac.
 
 We encourage you to follow along with the video tutorial to ensure a successful setup. Your journey into Highrise bot development starts here.
 
@@ -28,7 +28,7 @@ Before installing the SDK, navigate to the directory where you plan to build you
 
 1. In your chosen directory, we need to set up a Python virtual environment. This helps manage Python dependencies for your project. Enter the command **`python3.11 -m venv .venv`** in the terminal.
 2. Now, we activate the virtual environment with the command **`source .venv/bin/activate`**.
-3. We're ready to install the Highrise Python SDK. Enter the command **`pip install highrise-bot-sdk==23.1.0b10`**. Replace **`23.1.0b10`** with the latest version number of the SDK. The latest version can be found on the Highrise Create Portal.
+3. We're ready to install the Highrise Python SDK. Enter the command **`pip install highrise-bot-sdk==24.1.0`**. Replace **`24.1.0`** with the latest version number of the SDK. The latest version can be found on the Highrise Create Portal.
 
 ## **Step 4: Writing Your Bot Code**
 
@@ -42,7 +42,7 @@ Now we can start writing our bot's code.
 
 Finally, we are ready to run our bot.
 
-1. You'll need your Highrise API token and the Room ID where you want to deploy your bot. You can obtain the API token from the Highrise Create Portal, under *Dashboard* and *Credentials*, and the Room ID from the Highrise app. In the app, navigate to the room you're interested in and click on "Share this room". A url will be generated that includes your Room ID.
+1. You'll need your Highrise API token and the Room ID where you want to deploy your bot. You can obtain the API token from the Highrise Create Portal, under _Dashboard_ and _Credentials_, and the Room ID from the Highrise app. In the app, navigate to the room you're interested in and click on "Share this room". A url will be generated that includes your Room ID.
 2. In the terminal, make sure you're in the directory where your bot's Python file is. Enter the command **`highrise <filename>:<class_name> <room_id> <api_token>`**. Replace `<filename>`, `<class_name>` with the bot’s file name and the name of the class that implements the Highrise Basebot (most likely `Bot`), along as **`<room_id>`** and **`<api_token>`** with your actual Room ID and API token respectively.
 3. Press Enter to run the bot.
 
