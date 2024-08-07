@@ -7,5 +7,11 @@
   },
   "accepting-gold":{
     "title": "Accepting Gold Payments"
+  },
+  "world-wallet": {
+    "title": "World Wallet"
+  },
+  "in-world-purchases": {
+    "title": "In-World Purchases"
   }
 }
