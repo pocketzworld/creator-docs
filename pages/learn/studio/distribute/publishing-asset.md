@@ -45,6 +45,14 @@ Assets are typically created using Unity's built-in tools or third-party softwar
 If your asset is approved, you will receive a notification in app. You can also check the status of your asset in the **Creations** tab of the **Dashboard**.
 </Note>
 
+## Pricing Your Asset
+
+You can price your asset by setting the Gold price for the asset. Players can purchase your asset using Gold, Highrise will take 30% of the revenue generated from the sale of the asset, and the remaining 70% will be credited to your account as Earned Gold.
+
+<Note type="warning">
+You cannot edit your asset once it is published. You can contact the support team directly in your asset group with HRCreate in the app if you need to make changes to your asset.
+</Note>
+
 ## Tutorial Video
 
 <iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/6w93wO_YD98" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
