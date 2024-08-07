@@ -50,7 +50,7 @@ If your asset is approved, you will receive a notification in app. You can also 
 You can price your asset by setting the Gold price for the asset. Players can purchase your asset using Gold, Highrise will take 30% of the revenue generated from the sale of the asset, and the remaining 70% will be credited to your account as Earned Gold.
 
 <Note type="warning">
-You cannot edit your asset once it is published. You can contact the support team to make changes to your asset.
+You cannot edit your asset once it is published. You can contact the support team directly in your asset group with HRCreate in the app if you need to make changes to your asset.
 </Note>
 
 ## Tutorial Video
