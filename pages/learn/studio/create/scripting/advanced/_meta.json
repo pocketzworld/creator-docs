@@ -34,5 +34,8 @@
   },
   "payments": {
     "title": "Payments"
+  },
+  "transferring-gold": {
+    "title": "Transferring Gold"
   }
 }
