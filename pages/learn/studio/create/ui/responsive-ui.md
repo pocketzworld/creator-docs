@@ -78,7 +78,6 @@ We will only focus on styling the text element in this example. The "example" cl
 
   -unity-text-align: middle-center; /* Center text */
   flex-wrap: wrap; /* Wrap text */
-  white-space: normal; /* Allow text to wrap */
 
   flex-grow: 1; /* Grow to fill available space */
 }

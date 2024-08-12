@@ -111,7 +111,7 @@ Setting `picking-mode="Ignore"` ensures the UI does not respond to mouse or touc
      _Button:RegisterPressCallback(function()
          counter = counter + 1 -- Increment the counter
          _counterLabel:SetPrelocalizedText(tostring(counter)) -- Update the label text
-     end)
+     end, true, true, true)
      ```
      
 <Note type="warning">

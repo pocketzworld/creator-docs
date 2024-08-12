@@ -20,6 +20,15 @@ This document outlines the specifications for creating user interfaces (UI) in H
 - **Asset Management**: Minimize the size of UI assets to reduce load times.
 - **Script Efficiency**: Optimize Lua scripts to minimize CPU load.
 
+
+## New to UI Design?
+
+If you're new to UI design, here are some key concepts to get you started:
+
+1. [Structure UI with UXML](https://docs.unity3d.com/Manual/UIE-UXML.html) - Learn how to create UI elements using UXML.
+2. [USS properties reference](https://docs.unity3d.com/Manual/UIE-USS-Properties-Reference.html) - Explore the properties you can use to style UI elements in USS.
+3. [Create your first UI](https://create.highrise.game/learn/studio/create/ui/creating-your-first-ui) - Follow a step-by-step guide to create your first UI in Highrise Studio.
+
 ## Conclusion
 
 This specification aims to provide a foundation for Highrise developers to create user-friendly, efficient, and consistent interfaces. By adhering to these guidelines, developers can ensure a high-quality user experience that scales across the diverse range of games and experiences available on Highrise.
