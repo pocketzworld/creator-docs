@@ -37,6 +37,7 @@ In Highise Studio, Lua is used to script game logic, create interactive experien
 
 - [Naming Conventions](https://create.highrise.game/learn/studio/create/scripting/lua/best-practices/naming-conventions) - Guidelines for naming variables and functions.
 - [Code Organization](https://create.highrise.game/learn/studio/create/scripting/lua/best-practices/code-organization) - Structuring Lua scripts for readability and maintainability.
+- [Security](https://create.highrise.game/learn/studio/create/scripting/lua/best-practices/security) - Protecting your Lua scripts from vulnerabilities.
 
 ## Getting Started
 
