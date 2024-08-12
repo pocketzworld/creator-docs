@@ -14,14 +14,42 @@ You can use the following steps to create an NPC character in Highrise Studio:
 
 1. **Right-click** on the **Hierarchy** panel and select `Highrise > NPC`
 2. Select the `NPC` prefab in the **Hierarchy** panel
-3. Select the element in the **Outfits** panel in the **Inspector** panel
-4. Double click on the **HumanoidDefault.asset** file in the **Project** panel
-5. Customize the character's appearance in the **Outfits** panel
-6. Click `CTRL + S` to save the changes
+3. Click **(-)** to remove the default Outfit "HumanoidDefault (Character Outfit)"
+4. Follow the steps below to customize the character's appearance
 
-You can also use the **Outfits** panel to customize the character's appearance. You can change the character's hair, face, body, and clothing.
+## Customizing the Character's Appearance
 
-<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/7rpWEwpRzBk" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+### Step 1: Creating a Character Outfit
+
+1. **Right-click** on the Project View and select `Create > Highrise > Character > Outfit`
+2. Give the outfit a name and select it in the Project View
+3. Assign a new Skeleton to the outfit **(Step 2)**
+
+### Step 2: Assigning a Skeleton to the Outfit
+
+1. Search for "HumanoidSkeleton" in the Project View
+2. Make sure the filter is set to "All" instead of "Assets"
+3. Select the outfit you created in Step 1
+4. Drag and drop the "HumanoidSkeleton" onto the "Skeleton" field in the Inspector
+
+### Step 3: Customizing the Outfit
+
+<Note type="warning">
+You cannot change the outfit without first assigning a skeleton.
+</Note>
+
+1. Select the outfit in the Project View
+2. Click the "Open Outfit Editor" button in the Inspector
+3. Add "flesh" if you don't see the character's body
+4. Customize the outfit by adding or removing clothing items
+5. Hit `CTRL + S` or `CMD + S` to save your changes
+
+### Step 4: Assigning the Outfit to the NPC
+
+1. Select the NPC in the Hierarchy panel
+2. Drag and drop the outfit from the Project View onto the "Outfit" field in the Inspector
+
+You can have multiple outfits for a single character, allowing you to change their appearance in different situations.
 
 ## Conclusion
 
