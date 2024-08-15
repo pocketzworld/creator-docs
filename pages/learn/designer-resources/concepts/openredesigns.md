@@ -45,6 +45,8 @@ They may not be used as bases for any regular Concept.
 
 [OhaiBambi](https://highrise.game/catalog/designer-profile/OhaiBambi)
 
+[Papersweet](https://highrise.game/catalog/designer-profile/Papersweet)
+
 [Poppiana](https://highrise.game/catalog/designer-profile/Poppiana)
 
 [Rozovey](https://highrise.game/catalog/designer-profile/Rozovey)
