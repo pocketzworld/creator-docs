@@ -39,6 +39,8 @@ When creating a World Advertisement, you can set a budget for the campaign. The 
 
 You can deposit budget into your campaign by clicking on the **Deposit** button. The budget will be used to pay for the advertisement based on the Cost per 1000 Impressions (CPM) price.
 
+You can request **Ad Credits** by submitting [This Form](https://docs.google.com/forms/d/e/1FAIpQLSexevtWJ2Ydh6L1EzBrrIpXoxT6zRRVg7gPXWAIJQS02Tm1eQ/viewform?usp=sf_link).
+
 ## Campaign Budget Tips
 
 - Gold added to the budget will be immediately taken from your Wallet.
