@@ -58,6 +58,10 @@ Prior to September 2022, we did not allow consecutive wins. However, frequent wi
 
 We're continuing to expand opportunities for all designers to participate in the art creation process; so if you haven't won yet, don't give up! There's something out there for everybody ^-^
 
+#### Are there any items that are off limits? Why? 
+
+Right now, we are not accepting designs for Profile Backgrounds or contact lens accessories in HR Concepts. We want to be mindful about how and when we release novel item types, and reserve lenses and backgrounds for special drops only. Unless specifically stated, these item types are not eligible in any Concept or in HR Ideas!
+
 ## Creature Club
 
 #### Can I design items that match the HCC aesthetic? 
