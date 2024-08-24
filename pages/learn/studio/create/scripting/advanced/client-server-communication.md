@@ -18,24 +18,25 @@ Here's an example:
 local myEvent = Event.new("MyEvent")
 
 function self:ClientAwake()
+  local localPlayer = client.localPlayer
   -- Fire the event on the server side
-  myEvent:Connect(function(player, message)
+  myEvent:Connect(function(message)
     -- Print the player's name and the message received from the server
-    print(player.name .. " says: " .. message) -- Output: Player1 says: Hello from server!
+    print(localPlayer.name .. ", server says: " .. message) -- Output: Player1 says: Hello from server!
   end)
 end
 
 function self:ServerAwake()
   -- Listen for the event on the server side
-  server.PlayerConnected:Connect(function(player)
+  scene.PlayerJoined:Connect(function(scene, player)
     local message = "Hello from server!"
     -- Fire the event on the client side and pass the message
-    myEvent:FireClient(message) -- No need to pass the player object when firing to client only
+    myEvent:FireClient(player, message) -- When firing to an individual client, you must pass a userdata object
   end)
 end
 ```
 
-In this example, the server listens for the `PlayerConnected` event and fires the `myEvent` event on the client side with the message "Hello from server!". The client receives the message and prints it along with the player's name.
+In this example, the server listens for the `PlayerJoined` event and fires the `myEvent` event on the client side with the message "Hello from server!". The client receives the message and prints it along with the player's name.
 
 ## Connection Methods
 
