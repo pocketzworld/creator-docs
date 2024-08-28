@@ -40,6 +40,19 @@ You can customize the Joystick character controller by adjusting the following p
 When assigning the `External Input Action` or `Footstep Sounds`, make sure you toggle the "eye" icon to show all the available actions or sounds within the package.
 </Note>
 
+## Considerations
+
+When using the Joystick character controller, keep the following considerations in mind:
+
+1. **Performance**: Joystick character controllers can be more performance-intensive than other character controllers due to the continuous input processing.
+2. **Camera Movement**: Make sure your camera follows the character's movement to keep the character in view.
+3. **Customization**: You can customize the Joystick character controller to fit your game's needs by adjusting the properties and styling of the joystick.
+4. **Feedback**: Provide visual and audio feedback to the player when using the joystick to indicate movement and actions.
+
+<Note type="warning">
+Joystick does not currently support multi-touch input and it does not support the "Anchor" property yet. These features may be added in future updates.
+</Note>
+
 ## Conclusion
 
 Joystick character controllers are a great way to add touch-based controls to your game. By following the steps outlined in this guide, you can easily add a Joystick character controller to your character and customize it to fit your game's needs. Happy game developing!
