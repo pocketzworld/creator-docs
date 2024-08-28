@@ -35,7 +35,6 @@ You can customize the Joystick character controller by adjusting the following p
 5. **Is 2D**: Will use XY coordinates of the joytstick movement as the XY coordinates of the movements in the world. This is useful for 2D games.
 
 ### Advanced Properties
-### Advanced Properties
 6. **Max Link Distance**: This is the maximum in-world distance between the character and the link endpoint. If the distance exceeds this threshold, the link won't be considered.
 7. **Max Line Angle**: This is the angle between your movement direction and the link's jump direction. If the angle is too large, the link won't be used.
 8. **Max Link Move Step Change**: This measures the difference (as a proportion) between your desired movement (velocity vector * time delta) and the actual movement allowed by the nav mesh. For example, if you're on the edge of a cliff and can't move right, the step change is 1. A value of 0 means no change—your movement is fully within the nav mesh. This prevents jumping through links when you can simply move. A value of 0.5 means the link will be used only if your movement is at least half restricted, like approaching an edge at an angle.
