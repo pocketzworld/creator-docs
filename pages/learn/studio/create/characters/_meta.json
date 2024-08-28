@@ -1,5 +1,8 @@
 {
   "overview": {
     "title": "Overview"
+  },
+  "controllers": {
+    "title": "Controllers"
   }
 }
