@@ -1,95 +1,125 @@
 # Graphic Design Tips
 
+Just like cuisine in fine dining, presentation is half of the artistic equation when it comes to showing off your item designs. Polish up your graphic design skills to showcase your artwork in the best possible light. 
 
-I'd like you all to take a look at the 'rule of the thirds' and 'grids'
+#### Grids And Margins
 
-🚩 lets do a post layout:
+🚩 Let's start off with the rule of thirds. This is a photography principle in which the subject of your frame is positioned offset from the focal point of the entire composition.
 
-▫️ when creating a post, you should create a basic grid. just some margins to put your info in is enough.
-usually there are 3 main infos that you want to show. the items name, the items picture, and your @/ signature. sometimes a secondary title as well.
+When creating a post, start with a basic grid; some margins will be enough to get going.
+In a Concept or Ideas submission, there are usually 3 main pieces of info that you want to show:
+- Item Artwork
+- Item Name
+- Your @ signature
+  
+![Untitled-2](https://github.com/user-attachments/assets/6842309a-63cb-4c8b-a156-bdf1f08ee707)
 
-▫️ Notice that when I put the info too close to the edges, its like it's shy, and wants to run away! So I created some margins, and put my info inside it. now its more centered,  your eyes see it immediately, and it seem more important.
+
+In this piece of art, you can see that the main avatar on display draws your gaze just a bit to the left, allowing the rest of the item details to breathe on the right. 
+Let's keep this in mind for framing decisions as we move forward!
+
+
+
+In the example below, notice that when we put the info too close to the edges, its like it's shy, and wants to run away!
 
 ![image](https://github.com/user-attachments/assets/7d0966df-f877-4938-a006-07429c5f7cab)
 
 
-theres a focus to the information that wasn’t there before.
+So let's create some margins and put my info inside. Now, its more centered;  your eyes see it immediately; and it seem more important. Theres a focus to the information that wasn’t there before.
 
-2. Many users like to use a frame. in this case:
-    - You should create a margin inside the frame, so the info is not glued to the frame as well.
-    I also find that when the character breakes the frame, it looks super interesting and the contents of the image dont look too confined, like the character is breaking the posts borders and coming out of it. it almost looks 3d.
+#### Frames
+
+Many designers like to use a frame to present their piece. If you're using a frame, create another margin _inside the frame_ so the info is not glued to the interior frame.
+
+Let your avatar break the boundaries of the frame to add an element of dynamism. This helps the contents of the image to not look so confined and gives a 3D impression your character is coming out of the image. 
 
 ![image](https://github.com/user-attachments/assets/bb36e485-caa6-47f4-8df1-72d0dbcbc1f3)
 
 
-3. lets talk hierarchy:
-    - Notice that the bigger and more complex font I use is just for the title. Because the item name is the most important written information here to me.
-    The other info is smaller and in neutral fonts because their importance is secondary. Avoid mixing different and complex fonts. 1 complex font and neutral ones go well together.
-    - I used an elegant font to promote elegant glasses. If I was promoting a cute kawaii item, I'd use a more bubbly cute font.
-    - Nothing is set in stone! I broke the margins with that little cloud I used to highlight 'fits avatar head'. Its touching the frame, its crossing my imaginary margin, and is even touching the avatar and my signature. As long as its not distracting, its fine. You can always break your own rules as long as its still working.
+#### Hierarchy
+
+Notice that the bigger and more complex font is just for the title. The other info is in smaller, neutral fonts because their importance is secondary. 
+_Avoid mixing different and complex fonts._ 1 complex font and 1 neutral font go well together.
+
 
 ![image](https://github.com/user-attachments/assets/41e6979d-1b64-45bc-bbcd-645f492ff9ad)  
 
+- We used an _elegant_ font to promote _elegant_ glasses. If we was promoting a cute kawaii item, we might use a more bubbly cute font.
+- Nothing is set in stone! The little cloud used to highlight '_fits avatar head_' breaks the margins, touches frame, and is even touching the avatar and signature. _As long as its not distracting,_ it's fine. You can always break your own rules.
 
-
-1. I have a lot of negative space here. do I need to fill it with something? NO!
-    - I chose a more elegant approach here, so leaving it empty also conveys that elegance and minimalism.
-    - BUT YOU CAN FILL IT UP theres no design police here! I could use this space to put a highlight of my item, tho I personally prefer it empty.
 
 ![image](https://github.com/user-attachments/assets/7870f50b-d9ca-4edf-96a4-a1b5e1fe5d2d)  ![image](https://github.com/user-attachments/assets/64015d37-203d-4544-84e7-b9b405cdaa78)
 
 
-2. composition and styling:
-    - If this is the promo art for glasses, why do I need to show any of the pants and hand items?
-    why indeed. Here I decided to give all focus to hte avatars face. I removed the bag strap from the image bc its unnecessary info. but I chose to leave the earrings and necklace bc i though they were stylish and are composing the overall look.
-    - I posed the character a little bit to give the image some movement.
-    - Since I had no space for the title anymore, I chose that big dark (empty of information) space the hair formed and put the title there in white for contrast.
-    - Since I have less negative space now, I decided to remove the little cloud.
-    - I recolored the 'fits avatar head' and my signature using colors that were already in the image, for extra cohesion
-    - I made my signature lighter so it looks like its taking less space. now that i have less space.
-    - I also opted for a simple make up, no piercings, and a nude color of lipstick so the glasses stand out
-    - even tho the hair is covering the frame, I'm still respecting the margins I created
-    - notice that the glasses, the main point of the image, are near the center of the image, where the most important info should be
+Also note that we have a lot of negative space here. Do we need to fill it with something? NO!
 
+Leaving this space empty conveys that elegance and minimalism, which suits the elegant item. BUT, there's no design police! You could use this space to add a close-up of my item.
+
+#### Composition And Styling
+
+If this is the promo art for glasses, why do I need to show any of the pants and hand items?
+
+Well, we _don't_ need to! Here, we give all focus to the avatar's face. The bag strap is removed as it's unecessary and distracting, but we left the earrings and necklace, as they're stylish and add to the overall look. 
+Many of these decisions are subjective, but they add to the overall presentation. Remember, this particular item's theme word is **_elegant,_** so our aesthetic choices should all follow that theme. 
 
 ![image](https://github.com/user-attachments/assets/0bd938ea-41c6-44b0-9433-82c148800e10)
 
-this leave a cue for:
+Other changes:
+    - Pose the character to give the image some movement.
+    - Since zooming in leaves no space for the title anymore, we add the title with a white highlight in the "empty space" of the avatar's hair.
+    - Since we have less negative space now, let's remove the little cloud.
+    - Recolor the 'fits avatar head' and  signature using colors that were already in the image for extra cohesion
+    - Make the signature lighter so it looks like its taking less space.
+    - Opt for a simple make up, no piercings, and a nude color of lipstick so the glasses stand out
+    - Even tho the hair is covering the frame, we're still respecting the margins we created
+    - Notice that the glasses – the main point of the image – are near the center of the image, where the most important info should be
 
-1. Rule of the thirds:
-where do the eyes want to look first when you look at an image?
-    - when you divide your image in 3 parts vertical and horizontal, where these lines meet are the  points in the image where your eyes will want to look first.  thats why we dont want important stuff too far away from those. in this case, i put the glasses there
+
+
+
+Now, let's return to the rule of thirds!
+
+#### Rule Of Thirds
+
+Where do the eyes want to go first when you look at an image?
+
+When you divide your image into a 9 part grid, where your 3 horizontal and 3 vertical lines meet are the  points in the image where your eyes will want to look first.  We don't want important stuff too far away from these points. 
   
 
-  ![image](https://github.com/user-attachments/assets/b05c4362-60ca-41d7-bca4-c3fa0b69e8db)
+![image](https://github.com/user-attachments/assets/b05c4362-60ca-41d7-bca4-c3fa0b69e8db)
 
 
-notice I put the glasses in the middle of those points
+In this case, we aligned the glasses with these points. 
 
 ![image](https://github.com/user-attachments/assets/5ffae219-2e0c-40ba-8209-288243591ae9)
 
 
-another approach for earrings
+Here's another approach using earrings:
 
 ![image](https://github.com/user-attachments/assets/7c430f1c-81f5-4a23-8d24-a35604285a4d)
 
-- posed the characters head in a cute pose
-- styled the character in a more sexy tone (wink, parted lips, contour)
-- chose a hair that doesn't cover the left earring, so its in evidence.
-- put the earrings in the thirds encounters
-- chose a more romantic font.
-- the name makes it so that its unmistakable what the item is
-- changed the shirt, since the loops get too close to the shirt, the stripes of the other shirt would be very distracting.
-- since the loops are light, I chose dark hair to frame it
-- left a little bit of white in the back ground for al ittle bit of empty space (feels less crowded, less claustrophobic)
+We... 
+- Posed the character's head in a cute attitude
+- Styled the character with an alluring aesthetic (parted lips, contour)
+- Chose a hair that doesn't cover the left earring
+- Put the earrings in the focal points using the rule of thirds
+- Chose a more romantic font
+- Chose a name that makes the item type unmistakable
+- Used a neutral shirt: since the loops get too close to the shirt, the stripes of the other shirt would be very distracting
+- Since the loops are light, use a dark hair to frame them
+- Left a little bit of white in the back ground to help the image feel less crowded, less claustrophobic
 
 ![image](https://github.com/user-attachments/assets/5b06ed76-5a2c-4801-a78d-40a22b77a6aa)
 
 
-1. take away:
-    - I know all we want is to design cute items and wear and have others wear and love them, but you also want it to SELL.
-    - You want your item to be funded, your concepts to win contests. so you need to be able to show them off ! Thats why we have so many ads everywhere, Because showing it off in the right way makes a huge difference. 
-    So take a little bit of time to work on the promo art.
-    - Make the item look special, expensive, make people want it. Sell not just the item, but the overall look. Make people think that their outfit is not complete without your item. But also make sure people understand what the item is.
-    - Work with contrast, proportion, rule of the thirds and grids/margins. you can break the rules as long as the message still works, but braking the rules is harder than following them. So if you're not sure how to break them in a nice way, its ok to choose the safest path, because it will work.
+#### Take Aways
+
+    - We all want to design cute items that others wear and love, but you also want it to SELL!
+    - You want your item to be funded in Ideas, and your Concepts to win contests. But you need to be able to show them off! Displaying your item in the right way makes a huge difference. 
+    - Take a little bit of extra time to work on the promo art in addition to the item design itself.
+    - Make the item look special, expensive, and unique. **Sell not just the item, but the overall look.** Make people think that their outfit is not complete without your item.... but also make sure people understand what the item is.
+    - Work with contrast, proportion, rule of the thirds and grids/margins. You can break the rules as long as the message still works, but breaking the rules is harder to pull off than following them. If you're not sure how to break them in a nice way, its okay to choose the safest path!
     - Dress the avatar with things that will elevate your item, not distract viewers from them.
+
+
+
