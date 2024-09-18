@@ -40,5 +40,8 @@
   },
   "matchmaking": {
     "title": "Matchmaking"
+  },
+  "inventory": {
+    "title": "Inventory"
   }
 }
