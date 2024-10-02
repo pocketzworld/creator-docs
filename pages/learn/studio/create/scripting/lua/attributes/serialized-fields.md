@@ -1,37 +1,35 @@
 # Serialized Fields
 
 ## Introduction
-In Highrise Studio, Serialized Fields are [Lua variables](https://create.highrise.game/learn/studio/create/coding-fundamentals/variables-and-data-types) that are visible and editable in the Inspector. By marking a variable as a Serialized Field, you can modify its value directly in the Studio Editor without changing the script code. This feature is useful for tweaking values, testing different configurations, and adjusting properties during runtime.
+Serialized Fields in Highrise Studio are [Lua variables](https://create.highrise.game/learn/studio/create/coding-fundamentals/variables-and-data-types) that can be edited in the Inspector panel. By marking a variable as a Serialized Field, you can modify its value within the Studio Editor, without needing to alter the script. This is particularly useful for attaching game objects, assigning textures, and customizing other critical elements of your game.
 
 ## What is The Preceding `--!` in Serialized Fields?
-The `--!` prefix is a special directive in Lua that indicates a comment recognized by the Studio Editor. By adding `--!` before a comment, you can specify directives like `SerializeField` to expose variables in the Inspector. This prefix helps Studio identify specific comments as directives and process them accordingly.
+The `--!` prefix is a special directive in Lua used by the Studio Editor to recognize specific comments. Adding `--!` before a comment (e.g., `--!SerializeField`) allows the Studio Editor to expose the variable in the Inspector. This makes it easy to attach objects, textures, or other assets directly from the Studio Editor without modifying the script.
 
-For example, to define a Serialized Field in Lua, you can use the `--!SerializeField` directive before the variable declaration:
-
+**For example:**
 ```lua
 --!SerializeField
-local moveSpeed: number = 5
+local playerModel: GameObject = nil
 ```
+
+This makes `playerModel` editable in the Inspector, allowing you to assign a specific GameObject from the Editor.
 
 ## Why Use Serialized Fields?
 
-Serialized Fields offer several benefits for game development in Highrise Studio:
+Serialized Fields offer several essential advantages for Highrise Studio development:
 
-1. **Interactive Editing:** Serialized Fields enable interactive modification of variable values in the Inspector panel, allowing real-time adjustments without script code changes.
+1. **Asset Assignment:** Easily attach game objects, textures, materials, and other assets directly in the Inspector.
 
-2. **Customization:** Exposing variables as Serialized Fields enables direct customization of game objects, behaviors, and properties in the Studio Editor, enhancing flexibility and control.
+2. **Customization:** Customize game objects and behaviors visually in the Studio Editor without altering the script.
 
-3. **Testing and Debugging:** Serialized Fields offer a convenient way to test various configurations, tweak values, and debug scripts during development, streamlining the iteration process.
+3. **Streamlined Setup:** Simplifies the process of linking objects, adjusting settings, and configuring properties within the Studio Editor.
 
-4. **Runtime Modifications:** Serialized Fields facilitate changing variable values during runtime, simplifying experimentation with different settings and behaviors without restarting the game.
-
-Overall, Serialized Fields are a powerful feature in Highrise Studio that simplifies the process of tweaking variables, adjusting properties, and customizing game elements directly in the Inspector panel.
+By leveraging Serialized Fields, you can efficiently manage important game elements directly from the Editor, reducing the need for manual coding.
 
 ## How to Define Serialized Fields
-To define a Serialized Field in your Lua script, you need to use the `SerializeField` attribute followed by the variable declaration. This attribute tells the Studio Editor to display the variable in the Inspector panel, enabling you to edit its value interactively.
+To define a Serialized Field, use the `--!SerializeField` directive above the variable declaration in your Lua script. This allows the Studio Editor to display the variable in the Inspector for easy editing.
 
-Here's an example of defining Serialized Fields in Lua:
-
+**Example:**
 ```lua
 --!SerializeField
 local myNumber: number = 5
@@ -39,49 +37,67 @@ local myNumber: number = 5
 
 In this example, `myNumber` is a Serialized Field with an initial value of `5`. By adding the `SerializeField` attribute before the variable declaration, you can modify `myNumber` directly in the Inspector panel.
 
-## What Types of Variables Can Be Serialized?
+## Key Uses for Serialized Fields
 
-In Highrise Studio, you can serialize various types of variables, including fundamental data types (e.g., numbers, strings, booleans) and Unity-specific types (e.g., GameObject, Transform, Vector3). By marking these variables as Serialized Fields, you can customize and adjust their properties interactively in the Inspector panel.
+Serialized Fields are especially useful when working with the following:
 
-Here are examples of different types of Serialized Fields in Lua:
+1. **Attaching Game Objects:** Link models, prefabs, and other GameObjects in the Studio Editor.
 
+2. **Assigning Textures and Materials:** Set textures, images, or materials that can be applied to objects.
+
+3. **Customizing Gameplay Elements:** Expose variables for important gameplay settings, such as health values, movement speed, or attack power.
+
+Here are examples of different Serialized Fields in Lua:
 ```lua
 --!SerializeField
-local myNumber: number = 5
+local playerModel: GameObject = nil
 --!SerializeField
-local myString: string = "Hello, World!"
+local enemyPrefab: GameObject = nil
 --!SerializeField
-local myBool: boolean = true
+local healthBarTexture: Texture = nil
 --!SerializeField
-local myGameObject: GameObject = nil
+local spawnLocation: Transform = nil
 --!SerializeField
-local myTransform: Transform = nil
---!SerializeField
-local myVector: Vector3 = Vector3.new(1, 2, 3)
+local movementSpeed: number = 10
 ```
 
-When defining Serialized Fields, you can use various data types to represent different values and properties in your Lua scripts. This flexibility allows you to customize game objects, behaviors, and interactions effectively during development.
+Serialized Fields can also be used to serialize tables, which are treated as arrays in Highrise Studio. This allows you to pass a collection of values between the `{}` brackets, making it easy to manage lists of data directly from the Inspector.
 
-> Note: when declaring typed variables, the fundamental types are `lowercase` where the Unity types are `PascalCase`.
-> To get more supported Unity Types, see `Learn>Studio>API>Classes` on the Create Portal.
-
-**Fundamental Types Example (lowercase):**
+**For example:**
 ```lua
 --!SerializeField
-local myString: string = "Hello, World!" -- Lua String Type
+local myTable: {string} = {"apple", "banana", "cherry"} -- Tables are serialized as arrays
 ```
 
-**Unity Types Example (PascalCase):**
+You can use tables to pass collections of any type, like numbers, strings, GameObjects, or even custom objects, offering great flexibility for storing and managing grouped data in your scripts.
 ```lua
 --!SerializeField
-local Vector3Value: Vector3 = Vector3.new(1, 2, 3) -- Unity Vector3 Type
+local spawnPoints : { Transform } = {}
 ```
+
+This makes Serialized Fields powerful for handling lists of game objects, settings, or assets within the Inspector, all without needing to modify code.
+
+<Note type="info">
+Note: Lua types are lowercase (e.g., number, string), while Unity-specific types are PascalCase (e.g., GameObject, Transform).
+</Note>
+
+**Example: Lua Type**
+```lua
+--!SerializeField
+local movementSpeed: number = 10
+```
+
+**Example: Unity Type**
+```lua
+--!SerializeField
+local enemyPrefab: GameObject = nil
+```
+
+For more Unity-supported types, refer to the `Learn > Studio > API > Classes` section in the Create Portal.
 
 ## How to Access Serialized Fields
 
-Once you've defined a Serialized Field in your Lua script, you can access and modify its value in the Inspector panel. To view and edit Serialized Fields, select the game object or script containing the variables, and navigate to the Inspector panel in the Studio Editor.
-
-In the Inspector panel, you'll see the Serialized Fields listed with their corresponding values. You can click on the value field to edit the variable directly, enter a new value, and press `Enter` to apply the changes.
+Once defined in your script, Serialized Fields are displayed in the Inspector panel. You can easily edit or assign values such as game objects or textures by selecting the relevant game object and viewing its fields in the Inspector. These fields can be modified at any time to adjust assets, properties, and behaviors in the Editor.
 
 ## Video Preview
 
@@ -90,4 +106,4 @@ In the Inspector panel, you'll see the Serialized Fields listed with their corre
 
 ## Conclusion
 
-Serialized Fields are a valuable feature in Highrise Studio that simplifies the process of tweaking variables, adjusting properties, and customizing game elements interactively. By marking variables as Serialized Fields, you can modify their values directly in the Inspector panel, enabling real-time adjustments without changing the script code. This interactive editing capability enhances flexibility, control, and efficiency in game development, making it easier to test configurations, debug scripts, and customize game objects during development.
+Serialized Fields in Highrise Studio let you easily manage key elements like game objects, textures, and gameplay settings directly in the Inspector. This allows quick customization and asset adjustments without altering scripts, streamlining development and making the process more intuitive.
