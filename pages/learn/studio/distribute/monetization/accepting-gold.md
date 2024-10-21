@@ -20,7 +20,7 @@ For the Payment API to work, you need to create a product in the Creator Portal.
 
 We have provided a step-by-step guide to help you get started with accepting Gold payments in your world.
 
-- [Learn about Highrise Payments API functions](https://create.highrise.game/learn/studio/api/services/Payments)
+- [Learn about Highrise Payments API functions](https://create.highrise.game/learn/studio-api/services/Payments)
 - [View example code for prompting players to make a purchase](https://create.highrise.game/learn/studio/create/scripting/advanced/payments)
 
 ## Where to Collect Earned Gold
