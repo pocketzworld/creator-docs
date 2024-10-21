@@ -85,4 +85,4 @@ You can apply the `speakerFilter` to a text-only channel to control who can text
 
 ## Conclusion
 
-The Highrise Voice API empowers you to create and manage custom voice channels and speaker permissions, fostering a more engaging and immersive environment for players. For additional details on the Chat Service API, refer to the [Highrise Chat Service API documentation](https://create.highrise.game/learn/studio/api/services/Chat)
+The Highrise Voice API empowers you to create and manage custom voice channels and speaker permissions, fostering a more engaging and immersive environment for players. For additional details on the Chat Service API, refer to the [Highrise Chat Service API documentation](https://create.highrise.game/learn/studio-api/api/services/Chat)

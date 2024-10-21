@@ -3,6 +3,10 @@
     "title": "Studio",
     "redirectTo": "/learn/studio/basics/overview"
   },
+  "studio-api": {
+    "title": "Studio API",
+    "redirectTo": "/learn/studio-api/api/globals"
+  },
   "bots": {
     "title": "Bots",
     "redirectTo": "/learn/bots/overview"
