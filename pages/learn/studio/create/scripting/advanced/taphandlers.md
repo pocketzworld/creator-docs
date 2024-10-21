@@ -32,4 +32,4 @@ end
 ```
 
 > Click here to get the TapHandler Class API:
-> [Tap Handler API](https://create.highrise.game/learn/studio-api/api/classes/TapHandler)
+> [Tap Handler API](https://create.highrise.game/learn/studio-api/classes/TapHandler)

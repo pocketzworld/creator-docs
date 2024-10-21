@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Payments](/learn/studio-api/api/services/Payments) are a crucial part of many games and experiences, allowing players to purchase in-game items, unlock content, and support developers. In this guide, you'll learn how to implement payments in your Highrise Studio projects using the Highrise Payments API.
+[Payments](/learn/studio-api/services/Payments) are a crucial part of many games and experiences, allowing players to purchase in-game items, unlock content, and support developers. In this guide, you'll learn how to implement payments in your Highrise Studio projects using the Highrise Payments API.
 
 <Note type="warning">
 World owner cannot purchase their own IWPs. You will need to use a different account to test the purchase flow in the app.

@@ -70,7 +70,7 @@ Inventory only stores the "itemId" and "amount" of the item. To add more informa
 </Note>
 
 ### Error Handling
-You can also enhance your transactions by checking for errors, which are listed [here](https://create.highrise.game/learn/studio-api/api/classes/InventoryError). This is particularly useful if your server has high traffic and you encounter errors like throttling.
+You can also enhance your transactions by checking for errors, which are listed [here](https://create.highrise.game/learn/studio-api/classes/InventoryError). This is particularly useful if your server has high traffic and you encounter errors like throttling.
 
 ### Additional Tips
 Consider creating a separate module script just for handling inventory functions. This way, you can easily call these functions from anywhere in your code.

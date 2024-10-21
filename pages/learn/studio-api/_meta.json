@@ -1,5 +1,14 @@
 {
-  "api": {
-    "title": "API"
+  "globals": {
+    "title": "Globals"
+  },
+  "datatypes": {
+    "title": "Datatypes"
+  },
+  "classes": {
+    "title": "Classes"
+  },
+  "services": {
+    "title": "Services"
   }
 }
