@@ -5,6 +5,21 @@ All Concept-winning designers are paid for their work according to two different
 
 ⚠️ *_This system is in its Trial Phase for 2024's Quarters 3 & 4! Please stay tuned for updates._* ⚠️
 
+## Bonus Items 
+
+Designers receive one Account-Bound copy of their item as a keepsake. As this copy is untradable, you'll always have access to it as long as you're on Highrise! 
+
+Alongside your Account-Bound copy, you'll also receive a variable amount of tradable bonus items based on a tiered scaling system. The tiers are determined by the item's Rarity as follows: 
+
+**Uncommons = 5 tradable copies
+Rare = 4 tradable copies
+Epic = 3 tradable copies
+Legendary = 2 tradable copies
+Mythical = 1 tradable copy**
+
+This change reflects our efforts to be more cognizant of the impact that high item emission rates may have on our in-game economy. The next version of our payout structure will work to account for any extra funds you may have been receiving from selling your spare items. Thank you so much for understanding as we workshop our compensation to best reflect all your hard work!  
+
+
 
 ## Standard Item Compensation
 
