@@ -1,61 +1,62 @@
 # World Creator Spotlight Interview 🌟
 
-## Meet the Creator Drewsifer - Creators of *Open Mic Night*
+## Meet the Creator XhernanX - Creators of *Pac Mania*
 
 <Note type="info">
-These questions are in reference to the *Open Mic Night* created by Drewsifer in the Highrise Studio.
+These questions are in reference to the *Pac Mania* created by XhernanX in the Highrise Studio.
 </Note>
 
 ### Can you tell us about yourself and how you got started with virtual world building?
 
-Hello, my name is drewsifer or Drew, and I work professionally as a software engineer outside of my virtual life. In college, I did an internship for a year working with a team of game devs to build virtual reality flight training simulators for pilots. This is where my journey with Unity and building games started. When Highrise first announced Highrise Studio, I was fortunate enough to be invited as part of the beta testing group, and I instantly fell in love with the idea, and the possibilities that could be created.
+Hi, my name is Hernán. I currently work independently creating small video games for web portals. I use event-based programming, which allows me to design game logic without writing traditional code. When I arrived at Highrise, I was intrigued by the bots and started experimenting with traditional programming, which was really fun. But when worlds were introduced, it was like discovering an even more exciting new toy! That's when my journey into world creation began
 
 ### What inspired you to create your virtual world in Highrise?
 
-My inspiration really came from wanting to create something no one has ever seen before on Highrise. I wanted to try pushing the limits of Worlds and bring something new to the community. I grew up enjoying First Person games and the idea of creating a fully immersive experience, where you feel like you become your avatar was something that really excited me.
+Pac Mania was inspired by classic arcade games. I enjoy creating video games, so I wanted to build a playable experience within Highrise where people can use their avatars as the main character, as if they were inside a video game. On top of that, the multiplayer experience makes it even more fun!
 
 ### Can you describe the theme or concept behind your world?
 
-The theme of “Open Mic Night” is a dive bar with a main stage for users to perform on. Before Highrise introduced the concept of Worlds, I always found myself enjoying going into different “Karaoke Rooms” where users would take turns being given mic and they would sing for everyone else in the room. I wanted to bring this experience into Worlds but open it up for not just singers, but for any type of entertainment, whether it be someone wanting to do a stand-up comedy bit, or reciting a poem they wrote. “Open Mic Night” is a place where users can go and show off their talents, while other users can join their friends to enjoy the entertainment.
+Pac Mania is a small video game where you have to collect orbs while dodging ghosts that are trying to catch you. You must strive to get the highest score and make it onto the leaderboard. If the first level seems too easy, there are still 4 extra difficulty levels that will challenge your skills.
 
 ### What sets your world apart from others in Highrise?
 
-Originally, “Open Mic Night” was the first of its kind. It was the first “First Person Perspective” room on Highrise. This really set it apart at the time and a lot of people really enjoyed having this fun new perspective and expiring within Highrise that they had never had before. I think the atmosphere of the World also feeling very real and relatable attracts a lot of user as well. It’s a very immersive experience feeling like you are in the same bar as your friends, sitting across the table from them. Or standing up and performing on the stage, looking out into the faces of all the avatars watching.
+Although there are other small games within Highrise, Pac Mania is unique in its genre. Its design and gameplay are something you won’t find in any other world. Plus, I plan to improve it even more over time, so don’t miss out on the updates!
 
 ### Is there a world made by another creator that you really love? What do you look for in other people's world experiences?
 
-There are so many talented creators out there right now! It’s been incredible to see everyone’s unique style and ideas come to life. I specifically really like “BACKROOMS” by [aprilcat](https://highrise.game/profile/aprilcat). She put together a really fun and immersive horror world based on a very well known concept of the Backrooms. I also really like the way she integrated her UI design a well as the in-game microtransactions for a more engaging user experience. Another World I am a big fan of, is “DeskScape” by [RavingRiley](https://highrise.game/profile/RavingRiley)! I may be a bit biased on this one though since I actually helped collaborate with her on this world. But her Unique Desk Designs that you are able to switch between in this world are extremely creative and fun to explore. I love the Highrise references throughout some of the desk designs like Tom’s Desk, iHsein’s Desk, the Creature Club desk, or even some of the Crew Specific Desk designs. I love when user’s build worlds that offer something new and never before done on Highrise before that really push the limits and capabilities of what’s possible with Stuido.
+Even though NautisShadrick is part of the staff, I love the worlds he has created. I think they set the standard for the quality and aesthetics we should aspire to, showing creators the true potential that worlds have. I also love Twilight Prancer by SpillyMilly—you can ride your own reindeer while jumping across platforms, and the reindeer is just too cute!
+What I look for in worlds are unique experiences that stand out from the rest. It doesn't need to be something huge; being creative is enough!
 
 ### How do you approach designing and building within the virtual environment?
 
-My process is honestly a bit all over the place as I don’t really follow any specific approach. I am definitely not a very experienced artist or 3D modeler, so I use premade assets that I am able to find online. I will oftentimes just explore various assets online hoping that an Idea for a world sparks just from seeing an asset. 
+The first thing I do is lay out the tools I have, like checkpoint systems, jumping, teleporting, leaderboards, collecting coins, etc. My world is created using tools offered by Highrise in its catalog and code shared by other creators. Then, I look for ideas within those limits and choose the one I like the most. After that, I look for the assets. Nowadays, there are assets for almost anything you can imagine, so that’s usually not a problem. In my previous worlds, I didn’t touch a single line of code, but in this one, I wanted to go further and modified what I had to give it a unique touch, like having multiple leaderboards at the same time and turning the ghosts blue. It was truly a challenge, but the result was worth it.
 
 ### What do you hope players will experience or take away from exploring your world?
 
-I always hope everyone comes out of my worlds having a good experience, and if they don’t, I always highly encourage feedback so that I can work to make it more enjoyable for all users. I also hope that my worlds can bring inspiration to other users who are interested in building worlds and experiences of their own in Studio. I always enjoy sharing how I built something with other creators interested in taking inspiration from something I’ve built.
+I hope people have fun whether they play alone or with their friends, challenging each other to see who gets the highest score. It's so much fun to play with your friend and see how they just got caught by a ghost while you're still fighting to survive haha. Also, from time to time, I’ll be holding contests to reward the best players!
 
 ### What advice would you give to players who want to start creating worlds?
 
-My biggest piece of advice to new users who want to start is to start small and take your time. I’ve watched so many aspiring creators try to jump right in and rush to build the next big viral world and very quickly become overwhelmed and eventually give up. Highrise Studio uses an application called Unity to create these worlds. Unity is a very big and powerful tool that is capable of building AAA games in the gaming industry. Start by learning the basics of Unity and how to use it, and follow along with the many tutorials available on Unity’s website. Once you find yourself comfortable with Unity, then I would suggest exploring the Highrise Create website to familiarize yourself with the documentation and follow along with some of the tutorials available on there. After that, have fun with it! Start building small things to explore and get used to building worlds!
+Learn little by little and participate in Gamejams, even if at the beginning you can only add assets to your world and it doesn’t contain anything extraordinary. Each Gamejam offers something new to learn, like I said before—jumping, checkpoints, obstacles, etc. Every small piece of knowledge will add up, and over time you’ll be able to create something more and more interesting!
 
 ### Are there any unique features or hidden gems within your world that players should look out for?
 
-Not all users may be aware, but you can actually walk through a few of the doors in the world to reach other areas. I also plan to add some new hidden features soon, so make sure to follow the world for future updates!
+I think it's hard to notice, but the ghosts in some maps don't move completely randomly. Some have fixed zones, while others move all over the place. Maybe if you pay attention to this, it could help you get a better score!
 
 ### How do you engage with the Highrise community to promote your world?
 
-Community engagement is definitely not my strong suit. I sort of just rely on word of mouth to let the world grow organically.
+Promoting worlds is usually quite difficult because there are so many things to do within Highrise and more and more worlds being created. However, we creators have a tool to promote our worlds through ads. I use this, and it helps get your world known by users. If your world is really good, you won't need to use it anymore because it will grow through word of mouth!
 
 ## What challenges have you both faced during the creation process, and how did you overcome them?
 
-When I was building this World, a First Person Camera perspective did not exist yet. Which means I had to write a custom script to achieve this look. I ran into many issues when trying to write the code for this camera script. A lot of debugging and print statements in my code to figure out what was going wrong. Thankfully after enough debugging and help from the HR Studio discord channel, I was able to get it working!
+I faced many challenges because this world was quite ambitious, and I wanted to explore things I had never done before. Most of these challenges may seem like minor details, but they weren't easy to solve. If you play Pac Mania, you’ll notice a sound when you collect an orb. These orbs are very close to each other, and if the sound played every time one is collected, the sounds would overlap, creating an unpleasant noise. So, I came up with a system where the sounds queue up in order, making the experience of collecting orbs sound very pleasant! I want to thank Azalearei and iHsein, who are always willing to help creators with their questions!
 
 ### What do you think users will find most exciting about creating their first world?
 
-I think the freedom and flexibility to really build anything you can imagine is a pretty exciting concept. There’s a lot that can be done with Studio and Highrise, that users have yet to really even scratch the surface with yet. 
+Even though in your first world you'll be worried about removing that strange shadow stain on the ground (you need to create your first world to understand this reference), I think it can be really exciting to realize the amazing things you can do with worlds. I see many people asking, 'Is it possible to do this in the world? Can you do that?' The answer is usually YES. You can really create almost anything in the worlds. The current worlds are just a small glimpse of what's coming in the future.
 
 ### Lastly, do you have any upcoming projects or plans for the future you would like to share with us?
 
-I have quite a few different new projects in the works right now along with some fun new features in some of my existing worlds that I don’t want to spoil too much for yet. But, to leave a few hints, the idea of playing a card games with your friends has been a concept I have been exploring.
+I have many ideas, really. Even though I really enjoy mini-games within worlds, I'm also aware that people are on Highrise because it's a fashion game, and they love being able to get items to dress up their avatars. I'd also like to create worlds that help the community and serve as useful tools for players, but I won’t stop making the occasional game!
 
-### Thank you for sharing your insights with us, Drewsifer We can't wait to see what you create next. 🌟
+### Thank you for sharing your insights with us, XhernanX We can't wait to see what you create next. 🌟
