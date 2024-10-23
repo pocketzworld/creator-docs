@@ -1,9 +1,9 @@
 # Designer Compensation
 
 All Concept-winning designers are paid for their work according to two different systems: Standard Item Compensation and and Performance Item Compensation. 
-Designers receive 6 copies of all items produced. Compensation is split evenly between collaborating duos.
+ Compensation is split evenly between collaborating duos.
 
-⚠️ *_This system is in its Trial Phase for 2024's Quarter 3! Please stay tuned for updates._* ⚠️
+⚠️ *_This system is in its Trial Phase for 2024's Quarters 3 & 4! Please stay tuned for updates._* ⚠️
 
 
 ## Standard Item Compensation
