@@ -43,5 +43,8 @@
   },
   "inventory": {
     "title": "Inventory"
+  },
+  "hrpluscheck": {
+    "title": "HR+ Validation"
   }
 }
