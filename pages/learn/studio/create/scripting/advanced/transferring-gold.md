@@ -33,7 +33,7 @@ function TransferGold(player, amount)
 end
 
 -- Example usage
-TransferGold(client.localPlayer, 10) -- Transfer 10 Gold to the player
+TransferGold(player, 10) -- Transfer 10 Gold to the player
 ```
 
 ## Getting World Wallet Balance
