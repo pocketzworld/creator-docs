@@ -46,5 +46,8 @@
   },
   "hrpluscheck": {
     "title": "HR+ Validation"
+  },
+  "localization": {
+    "title": "Localization"
   }
 }
