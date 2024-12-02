@@ -49,5 +49,8 @@
   },
   "localization": {
     "title": "Localization"
+  },
+  "deeplinks": {
+    "title": "Deep Links"
   }
 }
