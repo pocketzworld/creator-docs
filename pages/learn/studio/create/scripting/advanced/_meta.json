@@ -29,7 +29,7 @@
   "client-server-communication": {
     "title": "Client-Server Communication"
   },
-  "leaderboard": {
+  "leaderboard-api": {
     "title": "Leaderboard"
   },
   "payments": {
