@@ -21,9 +21,13 @@ You can use the following steps to create an NPC character in Highrise Studio:
 
 ### Step 1: Creating a Character Outfit
 
-1. **Right-click** on the Project View and select `Create > Highrise > Character > Outfit`
+1. **Right-click** on the Project View and select `Create > Highrise > Character > NPC Outfit`
 2. Give the outfit a name and select it in the Project View
 3. Customize the outfit (step 2 in the Avatar Characters section)
+
+<Note type="warning">
+The NPC Outfit comes with a full outfit set by default, while the Player Outfit starts empty. This design allows for layering items onto a player's existing outfit
+</Note>
 
 ### Step 2: Customizing the Outfit
 
@@ -32,7 +36,7 @@ You can use the following steps to create an NPC character in Highrise Studio:
 3. Customize the outfit by adding or removing clothing items
 4. Hit `CTRL + S` or `CMD + S` to save your changes
 
-### Step 4: Assigning the Outfit to the NPC
+### Step 3: Assigning the Outfit to the NPC
 
 1. Select the NPC in the Hierarchy panel
 2. Drag and drop the outfit from the Project View onto the "Outfit" field in the Inspector
