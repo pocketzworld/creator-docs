@@ -1,9 +1,24 @@
 # Designer Compensation
 
-All Concept-winning designers are paid for their work according to two different systems: Standard Item Compensation and and Performance Item Compensation. 
- Compensation is split evenly between collaborating duos.
+All Concept-winning designers are compensated for their designs by a rarity-based tier system. 
 
-⚠️ *_This system is in its Trial Phase for 2024's Quarters 3 & 4! Please stay tuned for updates._* ⚠️
+
+⚠️ *_Starting with the Highrise Fashion Week Concept, we'll use the following flate rates for designer items! Please stay tuned for updates as we workshop our rates and prizes!_* ⚠️
+
+
+
+🔹 Rare: 50,000 Earned Gold
+
+🔮 Epic: 70,000 Earned Gold
+
+⭐ Legendary: 100,000 Earned Gold
+
+🌈 Mythical: 150,000 Earned Gold
+
+
+**_Earned Gold_** can be redeemed for cash! Find the [Creator Exchange here](https://create.highrise.game/dashboard/finances/creator-exchange) to set up an account with Tipalti and cash out your Earned Gold.  
+
+
 
 ## Bonus Items 
 
@@ -11,13 +26,23 @@ Designers receive one Account-Bound copy of their item as a keepsake. As this co
 
 Alongside your Account-Bound copy, you'll also receive a variable amount of tradable bonus items based on a tiered scaling system. The tiers are determined by the item's Rarity as follows: 
 
-**Uncommons = 5 tradable copies
-Rare = 4 tradable copies
-Epic = 3 tradable copies
-Legendary = 2 tradable copies
-Mythical = 1 tradable copy**
+**Rares: 6 tradable copies
+Epics: 4 tradable copies
+Legendaries: 2 tradable copies
+Mythicals: 2 tradable copies**
 
-This change reflects our efforts to be more cognizant of the impact that high item emission rates may have on our in-game economy. The next version of our payout structure will work to account for any extra funds you may have been receiving from selling your spare items. Thank you so much for understanding as we workshop our compensation to best reflect all your hard work!  
+These variable bonus items reflect our efforts to be cognizant of the impact that high item emission rates may have on our in-game economy.    
+
+
+
+
+____________  
+
+
+
+
+⚠️ *_Below is the compesnation system trialled in 2024's Quarters 3 & 4. Please read for reference only: starting with the Highrise Fashion Week Concept, this system is deprecated and will not be used in future releases._* ⚠️  
+
 
 
 
