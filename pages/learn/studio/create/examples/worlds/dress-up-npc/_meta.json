@@ -1,5 +1,14 @@
 {
   "overview": {
     "title": "Overview"
+  },
+  "folder-structure": {
+    "title": "Folder Structure"
+  },
+  "gameplay-mechanics": {
+    "title": "Gameplay Mechanics"
+  },
+  "script-relations": {
+    "title": "Script Relations"
   }
 }
