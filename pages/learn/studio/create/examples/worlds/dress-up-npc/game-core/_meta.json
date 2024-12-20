@@ -1,0 +1,14 @@
+{
+  "game-manager": {
+    "title": "Game Manager"
+  },
+  "save-manager": {
+    "title": "Save Manager"
+  },
+  "cheat-command-manager": {
+    "title": "Cheat Command Manager"
+  },
+  "game-settings-manager": {
+    "title": "Game Settings Manager"
+  }
+}

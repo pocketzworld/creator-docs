@@ -1,0 +1,23 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "folder-structure": {
+    "title": "Folder Structure"
+  },
+  "script-relations": {
+    "title": "Script Relations"
+  },
+  "data-flow-state-management": {
+    "title": "Data Flow & State Management"
+  },
+  "utility-functions": {
+    "title": "Utility Functions"
+  },
+  "game-core": {
+    "title": "Game Core"
+  },
+  "game-mechanics": {
+    "title": "Game Mechanics"
+  }
+}
