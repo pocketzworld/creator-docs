@@ -22,5 +22,8 @@
   },
   "dialog-mechanics": {
     "title": "Dialog Mechanics"
+  },
+  "contest-mechanics": {
+    "title": "Contest Mechanics"
   }
 }
