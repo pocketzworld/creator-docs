@@ -4,7 +4,6 @@
 
 This document explains the structure of the project and the purpose of each folder.
 
-
 ## Core Project Folders
 
 - **Art**
