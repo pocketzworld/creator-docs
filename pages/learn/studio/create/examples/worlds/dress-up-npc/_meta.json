@@ -16,5 +16,8 @@
   },
   "quest-mechanics": {
     "title": "Quest Mechanics"
+  },
+  "loot-mechanics": {
+    "title": "Loot Mechanics"
   }
 }
