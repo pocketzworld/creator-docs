@@ -5,28 +5,13 @@
   "folder-structure": {
     "title": "Folder Structure"
   },
-  "gameplay-mechanics": {
-    "title": "Gameplay Mechanics"
-  },
   "script-relations": {
     "title": "Script Relations"
   },
   "data-flow-state-management": {
     "title": "Data Flow & State Management"
   },
-  "quest-mechanics": {
-    "title": "Quest Mechanics"
-  },
-  "loot-mechanics": {
-    "title": "Loot Mechanics"
-  },
-  "dialog-mechanics": {
-    "title": "Dialog Mechanics"
-  },
-  "contest-mechanics": {
-    "title": "Contest Mechanics"
-  },
-  "dress-up-mechanics": {
-    "title": "Dress Up Mechanics"
+  "game-mechanics": {
+    "title": "Game Mechanics"
   }
 }

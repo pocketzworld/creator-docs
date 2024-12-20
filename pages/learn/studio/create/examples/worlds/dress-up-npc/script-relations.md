@@ -101,7 +101,3 @@ The `DialogManager.lua` script manages NPC dialogues and interactions.
   1. A player interacts with an NPC, triggering `DialogManager.lua`.
   2. Dialogue options are displayed via `UIDialog.lua`.
   3. If a quest is involved, `QuestManager.lua` updates its state.
-
-## Next Steps
-
-Understanding the relationships between scripts is crucial for maintaining a coherent game structure. As you delve deeper into the project, explore how these connections influence gameplay and player experience. For detailed script functionalities, refer to the individual script documentation. 

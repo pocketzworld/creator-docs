@@ -116,9 +116,3 @@ Triggered when a quest is completed. Used to display rewards and activate the ne
 
 ### `QuestDisplayActionEvent`
 Triggered for actions related to quest progress display.
-
-## Best Practices
-
-1. **Modularity**: Keep quests and quest lines modular for easier updates and management.
-2. **Descriptive Texts**: Use clear and engaging language for quest descriptions to enhance player experience.
-3. **Testing**: Test quests thoroughly to ensure objectives and rewards align with gameplay goals.

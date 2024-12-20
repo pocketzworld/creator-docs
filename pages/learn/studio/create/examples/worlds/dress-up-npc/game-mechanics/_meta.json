@@ -1,0 +1,20 @@
+{
+  "gameplay-mechanics": {
+    "title": "Gameplay Mechanics"
+  },
+  "quest-mechanics": {
+    "title": "Quest Mechanics"
+  },
+  "loot-mechanics": {
+    "title": "Loot Mechanics"
+  },
+  "dialog-mechanics": {
+    "title": "Dialog Mechanics"
+  },
+  "contest-mechanics": {
+    "title": "Contest Mechanics"
+  },
+  "dress-up-mechanics": {
+    "title": "Dress Up Mechanics"
+  }
+}

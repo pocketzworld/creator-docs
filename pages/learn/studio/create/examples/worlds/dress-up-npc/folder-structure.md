@@ -85,4 +85,4 @@ Unity's go-to folder for dynamically loaded assets. Think of it as a hidden stas
 
 ## Next Steps
 
-Now that you understand the project structure, let's dive into the core gameplay mechanics and how to interact with the game world. Continue to the [Gameplay Mechanics](https://create.highrise.game/learn/studio/create/examples/worlds/dress-up-npc/gameplay-mechanics) guide to learn more.
+Now that you understand the project structure, let's dive into the core gameplay mechanics and how to interact with the game world. Continue to the [Gameplay Mechanics](https://create.highrise.game/learn/studio/create/examples/worlds/dress-up-npc/game-mechanics/gameplay-mechanics) guide to learn more.

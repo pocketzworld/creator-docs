@@ -103,9 +103,3 @@ Ensures players always receive core rewards, maintaining predictability for crit
 
 ### Additional Loot
 Adds excitement and variability, using weights and ranges to balance rarity and accessibility.
-
-## Best Practices
-
-1. **Balance**: Adjust weights and ranges to ensure a satisfying player experience.
-2. **Clarity**: Clearly define loot attributes and ensure templates are correctly linked.
-3. **Testing**: Simulate rolls to validate the probability distribution and reward outputs.
