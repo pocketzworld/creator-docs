@@ -19,5 +19,8 @@
   },
   "loot-mechanics": {
     "title": "Loot Mechanics"
+  },
+  "dialog-mechanics": {
+    "title": "Dialog Mechanics"
   }
 }
