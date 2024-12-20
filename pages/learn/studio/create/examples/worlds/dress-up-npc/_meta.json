@@ -11,10 +11,10 @@
   "data-flow-state-management": {
     "title": "Data Flow & State Management"
   },
-  "game-mechanics": {
-    "title": "Game Mechanics"
-  },
   "utility-functions": {
     "title": "Utility Functions"
+  },
+  "game-mechanics": {
+    "title": "Game Mechanics"
   }
 }
