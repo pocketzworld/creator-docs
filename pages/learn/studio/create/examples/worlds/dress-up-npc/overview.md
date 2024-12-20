@@ -2,6 +2,14 @@
 
 NPC Stylist: Dress Up Adventure is an open-source Unity project centered around dressing up NPCs for various themed events—from grand galas to casual gatherings. Alongside styling NPCs, players can design and submit their own outfits to community-driven contests, where voting and feedback foster a creative and interactive environment.
 
+## Repository
+
+Access the Dress Up NPC World repository on GitHub: [Dress Up NPC World](https://github.com/pocketzworld/DressUpNPC-World/tree/main) not sure how to clone this repository? [Learn how to clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+## Public World Link
+
+You can access the Dress UP NPC World on Highrise by following this link: [Dress Up NPC World](https://high.rs/world?id=6734b8d54df294769bc9ba77&instance=676498a5b378a2eff6ac44ea&invite_id=6765bc0eed705dd3a537090e)
+
 ## Key Features
 
 - **NPC Styling**: Outfit NPCs with a diverse range of clothing and accessories tailored to special occasions.
@@ -42,7 +50,3 @@ The game will guide you through the following topics:
 ## Community & Support
 
 - **Discord**: Join our community on [Discord](https://discord.gg/highrise) (studio-chat channel) to ask questions, share feedback, and connect with other developers.
-
-## Repository
-
-Access the Dress Up NPC World repository on GitHub: [Dress Up NPC World](https://github.com/pocketzworld/DressUpNPC-World/tree/main) not sure how to clone this repository? [Learn how to clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
