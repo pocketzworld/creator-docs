@@ -1,5 +1,8 @@
 {
   "save-manager": {
     "title": "Save Manager"
+  },
+  "cheat-command-manager": {
+    "title": "Cheat Command Manager"
   }
 }
