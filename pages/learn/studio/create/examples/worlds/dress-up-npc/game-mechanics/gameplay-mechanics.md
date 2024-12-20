@@ -27,7 +27,8 @@ Players can join themed dress-up contests, vote on entries, and view results. Th
 Players can customize their characters using the dress-up system. Key features include:
 - Selecting clothing, hairstyles, and accessories.
 - Previewing changes in real-time.
-- Saving outfits for later use.
+- Customize a character in a contest theme.
+- Dress Up NPCs for quests.
 
 **Relevant Scripts:**
 - `UIDressUp.lua`: Main script for the customization interface.
