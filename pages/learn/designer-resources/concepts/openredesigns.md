@@ -9,8 +9,6 @@ They may not be used as bases for any regular Concept.
 
 [Amberryss](https://highrise.game/catalog/designer-profile/Amberryss)
 
-[Anthropophobia_](https://highrise.game/catalog/designer-profile/Anthropophobia_)
-
 [Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
@@ -21,7 +19,7 @@ They may not be used as bases for any regular Concept.
 
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
-[HxntaiBaby](https://highrise.game/catalog/designer-profile/HxntaiBaby)
+[Lil_Buns](https://highrise.game/catalog/designer-profile/Lil_Buns)
 
 [iPix](https://highrise.game/catalog/designer-profile/iPix)
 
@@ -30,6 +28,8 @@ They may not be used as bases for any regular Concept.
 [irensa](https://highrise.game/catalog/designer-profile/irensa)
 
 [J4CY4NY](https://highrise.game/catalog/designer-profile/J4CY4NY)
+
+[J.Brionne](https://highrise.game/catalog/designer-profile/J.Brionne)
 
 [Joohii](https://highrise.game/catalog/designer-profile/Joohii)
 
@@ -67,7 +67,7 @@ They may not be used as bases for any regular Concept.
 
 [Valimonroe](https://highrise.game/catalog/designer-profile/Valimonroe)
 
-[vampsity](https://highrise.game/catalog/designer-profile/vampsity)
+[deadly](https://highrise.game/catalog/designer-profile/deadly)
 
 [_ _yuppi_ _](https://highrise.game/catalog/designer-profile/_yuppi_)
 
