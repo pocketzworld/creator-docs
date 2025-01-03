@@ -55,7 +55,21 @@ function GetWorldWalletBalance()
 end
 ```
 
+## Error Codes
+
+When transferring Gold to players, you may encounter various error codes that indicate the status of the transaction. Here are some common error codes you may encounter:
+
+- `WalletError.None`: No error occurred during the transaction.
+- `WalletError.InternalError`: An internal error occurred during the transaction.
+- `WalletError.RequestThrottled`: The request was throttled due to rate limiting.
+- `WalletError.UserNotFound`: The specified user was not found in the system.
+- `WalletError.InsufficientResources`: The World Wallet does not have enough Gold to complete the transaction.
+
 ## Additional Considerations
+
+<Note type="info">
+Regular gold will be deducted from the World Wallet when transferring gold to players. If the balance is zero or insufficient, earned gold will be used instead.
+</Note>
 
 When transferring Gold to players, consider the following best practices:
 
