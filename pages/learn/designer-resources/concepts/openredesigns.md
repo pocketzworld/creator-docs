@@ -9,9 +9,11 @@ They may not be used as bases for any regular Concept.
 
 [Amberryss](https://highrise.game/catalog/designer-profile/Amberryss)
 
-[CancelIed](https://highrise.game/catalog/designer-profile/Di0nysus_)
+[CancelIed](https://highrise.game/catalog/designer-profile/CancelIed)
 
-[Di0nysus_](https://highrise.game/catalog/designer-profile/CancelIed)
+[Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
+
+[declined](https://highrise.game/catalog/designer-profile/declined)
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
 
