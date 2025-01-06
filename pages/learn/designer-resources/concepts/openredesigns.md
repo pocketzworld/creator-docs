@@ -27,6 +27,8 @@ They may not be used as bases for any regular Concept.
 
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
+[LiIithh](https://highrise.game/catalog/designer-profile/LiIithh)
+
 [Lil_Buns](https://highrise.game/catalog/designer-profile/Lil_Buns)
 
 [iPix](https://highrise.game/catalog/designer-profile/iPix)
