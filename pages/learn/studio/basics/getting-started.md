@@ -29,7 +29,8 @@ Do you have an existing project? [Learn how to import it](https://create.highris
 ### Step 3: Use Unity
 
 1. Sign in to your Highrise account via the `Sign In` button.
-2. Test your world using the `Play` button.
+2. Make adjustments to your world using the Unity Editor.
+3. Test your world using the `Play` button.
 
 ### Step 4: Customize Your World (Optional)
 
@@ -49,16 +50,22 @@ Customize your world by adding objects, changing properties, and scripting inter
 Ensure your world works as intended before publishing.
 
 1. Thoroughly test your world.
-2. Create a world in [Creations Tab](https://create.highrise.game/dashboard/creations).
-3. Provide a name, description, and cover image. [Learn more](https://create.highrise.game/learn/studio/distribute/publishing-world)
-4. Click the `Upload` button in Unity to upload your world.
-5. Await review and approval.
+2. Click the `Upload` button in Unity to upload your world.
+3. Give your world a name.
+4. You can customize the world's information on the Creator Portal.
 
-### Step 6: Releasing The World
+### Step 6: Releasing The World (Creator Portal)
 
-1. After approval, find your world in the [Creations Tab](https://create.highrise.game/dashboard/creations).
-2. Go to **Builds** and click `Release`.
-3. Share your creation!
+1. After the build is uploaded, go to the World's dashboard on the Creator Portal.
+2. Locate the world you just uploaded and click on it.
+3. Go to **Builds** and click `Release`.
+4. Give your world a version number (e.g., 1.0.0).
+5. Add release notes if necessary.
+6. Click `Publish` and release your creation to the world!
+
+<Note type="warning">
+You cannot publish a world with no build uploaded. Make sure to upload a build before releasing your world.
+</Note>
 
 ## Video Tutorial
 
