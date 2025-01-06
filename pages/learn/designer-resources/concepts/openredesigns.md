@@ -9,13 +9,17 @@ They may not be used as bases for any regular Concept.
 
 [Amberryss](https://highrise.game/catalog/designer-profile/Amberryss)
 
-[Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
+[CancelIed](https://highrise.game/catalog/designer-profile/Di0nysus_)
+
+[Di0nysus_](https://highrise.game/catalog/designer-profile/CancelIed)
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
 
 [emooni](https://highrise.game/catalog/designer-profile/emooni)
 
 [feIine](https://highrise.game/catalog/designer-profile/feIine)
+
+[grass4life](https://highrise.game/catalog/designer-profile/grass4life)
 
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
@@ -33,6 +37,8 @@ They may not be used as bases for any regular Concept.
 
 [Joohii](https://highrise.game/catalog/designer-profile/Joohii)
 
+[killibill](https://highrise.game/catalog/designer-profile/Joohii)
+
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
 
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
@@ -42,6 +48,8 @@ They may not be used as bases for any regular Concept.
 [Mockeri](https://highrise.game/catalog/designer-profile/Mockeri)
 
 [myrch](https://highrise.game/catalog/designer-profile/myrch)
+
+[Nymphey](https://highrise.game/catalog/designer-profile/Nymphey)
 
 [OhaiBambi](https://highrise.game/catalog/designer-profile/OhaiBambi)
 
@@ -70,6 +78,8 @@ They may not be used as bases for any regular Concept.
 [deadly](https://highrise.game/catalog/designer-profile/deadly)
 
 [_ _yuppi_ _](https://highrise.game/catalog/designer-profile/_yuppi_)
+
+[xBLSSD](https://highrise.game/catalog/designer-profile/xBLSSD)
 
 [xWitchi](https://highrise.game/catalog/designer-profile/xWitchi)
 
