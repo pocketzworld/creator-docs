@@ -41,7 +41,7 @@ They may not be used as bases for any regular Concept.
 
 [Joohii](https://highrise.game/catalog/designer-profile/Joohii)
 
-[killibill](https://highrise.game/catalog/designer-profile/Joohii)
+[killibill](https://highrise.game/catalog/designer-profile/killibill)
 
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
 
