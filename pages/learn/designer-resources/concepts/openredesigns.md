@@ -7,6 +7,8 @@ They may not be used as bases for any regular Concept.
 
 ### ✍️ Items attributed to the following designers are eligible for redesigning: 
 
+[Altics](https://highrise.game/catalog/designer-profile/Altics)
+
 [Amberryss](https://highrise.game/catalog/designer-profile/Amberryss)
 
 [CancelIed](https://highrise.game/catalog/designer-profile/CancelIed)
