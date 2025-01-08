@@ -1,0 +1,11 @@
+{
+  "lecture-one": {
+    "title": "Lecture One: Introduction"
+  },
+  "lecture-two": {
+    "title": "Lecture Two: Installing Tools"
+  },
+  "lecture-three": {
+    "title": "Lecture Three: Creating a Project"
+  }
+}
