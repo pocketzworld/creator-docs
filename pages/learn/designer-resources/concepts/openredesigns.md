@@ -65,6 +65,8 @@ They may not be used as bases for any regular Concept.
 
 [Poppiana](https://highrise.game/catalog/designer-profile/Poppiana)
 
+[Pvee](https://highrise.game/catalog/designer-profile/Pvee)
+
 [Rozovey](https://highrise.game/catalog/designer-profile/Rozovey)
 
 [Serahnity](https://highrise.game/catalog/designer-profile/Serahnity)
