@@ -1,0 +1,20 @@
+{
+  "lecture-overview": {
+    "title": "Lecture Four: Basic Concepts"
+  },
+  "lecture-four-part-one": {
+    "title": "Part One: GameObjects"
+  },
+  "lecture-four-part-two": {
+    "title": "Part Two: Components"
+  },
+  "lecture-four-part-three": {
+    "title": "Part Three: Prefabs"
+  },
+  "lecture-four-part-four": {
+    "title": "Part Five: Scripts"
+  },
+  "lecture-four-part-five": {
+    "title": "Part Four: Scenes"
+  }
+}
