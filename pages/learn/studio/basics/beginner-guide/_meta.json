@@ -1,17 +1,20 @@
 {
   "lecture-one": {
-    "title": "Lecture One: Introduction"
+    "title": "Lecture 1: Introduction"
   },
   "lecture-two": {
-    "title": "Lecture Two: Installing Tools"
+    "title": "Lecture 2: Installing Tools"
   },
   "lecture-three": {
-    "title": "Lecture Three: Creating a Project"
+    "title": "Lecture 3: Creating a Project"
   },
   "lecture-four": {
-    "title": "Lecture Four: Basic Concepts"
+    "title": "Lecture 4: Basic Concepts"
   },
   "lecture-five": {
-    "title": "Lecture Five: Importing Assets"
+    "title": "Lecture 5: Importing Assets"
+  },
+  "lecture-six": {
+    "title": "Lecture 6: Navigation Mesh"
   }
 }
