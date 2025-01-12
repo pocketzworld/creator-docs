@@ -13,6 +13,8 @@ They may not be used as bases for any regular Concept.
 
 [CancelIed](https://highrise.game/catalog/designer-profile/CancelIed)
 
+[catstronaut](https://highrise.game/catalog/designer-profile/catstronaut)
+
 [cottex_](https://highrise.game/catalog/designer-profile/cottex_)
 
 [Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
