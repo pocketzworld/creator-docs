@@ -23,8 +23,9 @@ Hard shadows are clear and sharp but might slow down your game. Soft shadows loo
 ### Enable Shadows for Game Objects
 
 1. Select the object that should cast shadows.
-2. In the Inspector window, tick the **Cast Shadows** box in the Mesh Renderer section.
-3. Turn on **Contribute Global Illumination** and set **Receive Global Illumination** to **Lightmaps**.
+2. In the Inspector window, make sure to set the object to "Static" top right corner.
+3. Check the **Cast Shadows** box in the Mesh Renderer section.
+4. Turn on **Contribute Global Illumination** and set **Receive Global Illumination** to **Lightmaps**.
 
 ![Cast Shadows](/assets/learn/guides/studio/Lectures/cast-shadows.png)
 
