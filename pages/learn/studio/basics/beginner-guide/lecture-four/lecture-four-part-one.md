@@ -63,4 +63,4 @@ In this lecture, we covered the basics of GameObjects in Highrise Studio. We lea
 
 Now that you know how GameObjects work, it's time to bring them to life with components. In the next lecture, we will explore how to add components to GameObjects to give them functionality and behavior.
 
-- [Lecture Four (Part Two): Components](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four-part-two)
+- [Lecture Four (Part Two): Components](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-two)

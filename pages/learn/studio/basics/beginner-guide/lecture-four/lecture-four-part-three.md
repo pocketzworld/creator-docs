@@ -56,4 +56,4 @@ Prefabs are powerful tools in Unity that help you manage multiple copies of the 
 
 Now that you can create and manage Prefabs, try using them to populate your game world more quickly and efficiently. See how they can streamline your workflow in Unity.
 
-- [Lecture Four (Part Four): Scripts](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four-part-four)
+- [Lecture Four (Part Four): Scripts](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-four)
