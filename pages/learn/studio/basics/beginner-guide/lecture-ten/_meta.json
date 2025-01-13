@@ -1,0 +1,23 @@
+{
+  "lecture-overview": {
+    "title": "Lighting Basics: Overview"
+  },
+  "lecture-ten-part-one": {
+    "title": "Part 1: Environment Lighting"
+  },
+  "lecture-ten-part-two": {
+    "title": "Part 2: Light Sources"
+  },
+  "lecture-ten-part-three": {
+    "title": "Part 3: Shadows"
+  },
+  "lecture-ten-part-four": {
+    "title": "Part 4: Light Probes"
+  },
+  "lecture-ten-part-five": {
+    "title": "Part 5: Light Mapping"
+  },
+  "lecture-ten-part-six": {
+    "title": "Part 6: Post-Processing Effects"
+  }
+}
