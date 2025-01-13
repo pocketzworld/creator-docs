@@ -79,4 +79,4 @@ Today, we’ve learned how components are like the heart of your game objects, m
 
 Now that you understand components, you can start experimenting with different combinations to see what cool effects you can create. Keep exploring and testing to make your game truly your own.
 
-- [Lecture Four (Part Three): Prefabs](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four-part-three)
+- [Lecture Four (Part Three): Prefabs](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-three)
