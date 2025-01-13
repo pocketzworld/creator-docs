@@ -16,5 +16,17 @@
   },
   "lecture-six": {
     "title": "Lecture 6: Navigation Mesh"
+  },
+  "lecture-seven": {
+    "title": "Lecture 7: Jump Points"
+  },
+  "lecture-eight": {
+    "title": "Lecture 8: Anchor Points"
+  },
+  "lecture-nine": {
+    "title": "Lecture 9: Camera Controls"
+  },
+  "lecture-ten": {
+    "title": "Lecture 10: Lighting Basics"
   }
 }

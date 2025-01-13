@@ -99,3 +99,9 @@ Changes in the scene layout require a re-bake of the NavMesh to ensure accurate 
 ## Conclusion
 
 We've covered how to create and manage a Navigation Mesh in Highrise Studio, which is essential for enabling characters to move intelligently in your game environments. Each component plays a crucial role in defining and refining the navigation capabilities of your game characters.
+
+## Next Steps
+
+Experiment with different NavMesh components and settings to create diverse navigation paths for characters in your game. In the next lecture, we'll explore Jump Points to enhance character movement and pathfinding.
+
+- [Lecture Seven: Jump Points](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-seven)
