@@ -11,9 +11,8 @@ Here are the main lighting concepts we'll cover, each linked to a specific part 
 1. **[Environment Lighting](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-one)** - Controls the general lighting of your scene.
 2. **[Light Sources](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-two)** - Adds lights to your game world.
 3. **[Shadows](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-three)** - Gives depth to your scene with realistic shadows.
-4. **[Light Probes](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-four)** - Helps adjust lighting for moving objects.
-5. **[Light Mapping](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-five)** - Saves computer resources by optimizing lights.
-6. **[Post-Processing Effects](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-six)** - Enhances your scene with special visual effects.
+4. **[Bake Lighting](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-four)** - Saves computer resources by optimizing lights.
+5. **[Post-Processing Effects](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-five)** - Enhances your scene with special visual effects.
 
 ## Getting Started
 
