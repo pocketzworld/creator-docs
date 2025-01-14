@@ -1,4 +1,4 @@
-# Lecture Four (Part One): GameObjects
+# Part 1: GameObjects
 
 ## Introduction
 

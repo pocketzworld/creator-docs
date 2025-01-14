@@ -1,4 +1,4 @@
-# Lecture Four: Basic Concepts
+# Lecture 4: Basic Concepts
 
 ## Introduction
 

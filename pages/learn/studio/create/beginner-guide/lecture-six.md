@@ -1,4 +1,4 @@
-# Lecture Six: Navigation Mesh (NavMesh)
+# Lecture 6: Navigation Mesh (NavMesh)
 
 ## Introduction
 

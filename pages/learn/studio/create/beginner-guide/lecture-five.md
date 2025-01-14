@@ -1,4 +1,4 @@
-# Lecture Five: Importing Assets
+# Lecture 5: Importing Assets
 
 ## Introduction
 

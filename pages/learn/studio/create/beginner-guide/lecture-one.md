@@ -1,4 +1,4 @@
-# Lecture One: Introduction
+# Lecture 1: Introduction
 
 ## What is Highrise Studio?
 
