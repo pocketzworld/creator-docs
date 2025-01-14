@@ -1,60 +1,98 @@
 # NavMesh
 
-NavMesh is a tool for creating a navigation mesh, vital for player movement in the game world.
+## Overview
 
-## Importance
+A NavMesh is a component that outlines areas accessible to characters and identifies obstacles in Highrise Studio environments.
 
-Without a NavMesh, player movement and navigation in the game world wouldn't be possible, impacting the game's realism and immersion.
+## Setup Guide
 
-## NavMesh Benefits
+### Enabling and Visualizing NavMesh
 
-- **Player Navigation**: Enables movement in the game world.
-- **Pathfinding**: Finds the shortest route to destinations.
-- **Obstacle Avoidance**: Automatically steers clear of obstacles.
-- **Dynamic Navigation**: Adapts to real-time changes in the game world.
+- **Access and Enable**:
+  - Open the Scene View Toolbar.
+  - Use the `~` key to toggle the visibility of NavMesh AI Navigation if it's not visible.
+  - Ensure "Show NavMesh" is active and Gizmos are turned on for visualization.
 
-## Creating a NavMesh
+  ![Visualization of AI Navigation](/assets/learn/guides/studio/Lectures/AI-navigation.png)
 
-In Highrise Studio, a NavMesh is automatically generated for new scenes. Alternatively, follow these steps to create one manually:
+## Key Components of NavMesh
 
-1. Right-click in the Hierarchy window.
-2. Select `Create Empty`.
-3. Rename the new GameObject to `NavMesh`.
-4. In the Inspector window, click `Add Component`.
-5. Search for `NavMesh Surface` and add it to the GameObject.
-6. Click `Bake` to generate the NavMesh.
+### Nav Mesh Surface
 
-<Note type="warning">
-Ensure your player character has a NavMesh Agent attached for the NavMesh to function. (This is enabled by default in Highrise Studio)
-</Note>
+This is the core component for generating the NavMesh:
 
-## Editing the NavMesh
-
-Adjust settings in the NavMesh Surface component to customize the NavMesh for your game world.
+- **Installation**:
+  - Attach the Nav Mesh Surface component to a GameObject.
+- **Configuration and Generation**:
+  - Adjust the settings to suit your game's environment and click **Bake** to create the NavMesh.
 
 <Note type="warning">
-When editing the NavMesh make sure you select the **Show NavMesh** option in the `AI Navigation` window in the Scene view to see the changes in real-time.
+A basic template may already include this component. If absent, it needs to be added manually.
 </Note>
 
-## Type of NavMesh
+  ![Configuring Nav Mesh Surface](/assets/learn/guides/studio/Lectures/navmesh-surface.png)
 
-There are different types of NavMesh that you can create based on the requirements of your game. Some common types of NavMesh include:
+### Nav Mesh Agent
 
-- **NavMesh Agent**: Used for player characters and NPCs.
-- **NavMesh Obstacle**: Used for dynamic obstacles in the game world.
-- **NavMesh Link**: Used for connecting different NavMesh areas.
-- **NavMesh Modifier**: Used for modifying the NavMesh based on specific rules.
-- **NavMesh Modifier Volume**: Used for modifying the NavMesh in a specific area.
-- **NavMesh Surface**: Used for generating the NavMesh in the game world.
+Enables path following based on the NavMesh:
 
-## Excluding Areas or Objects
+- **Application**:
+  - Add the Nav Mesh Agent to any game object requiring navigational abilities.
+- **Customization**:
+  - Modify properties such as speed and pathfinding to optimize character movement.
 
-If you ever need to exclude certain areas or objects from the NavMesh, you can use the `NavMesh Modifier` component and set the `Mode` to `Remove Object`. You can also change the other properties to customize the exclusion area.
+<Note type="warning">
+Characters typically come with a pre-attached Nav Mesh Agent.
+</Note>
 
-## Baking the NavMesh
+  ![Nav Mesh Agent Setup](/assets/learn/guides/studio/Lectures/navmesh-agent.png)
 
-When editing the NavMesh, you must bake it to apply the changes to the game world. Select the Object with the `NavMesh Surface` component and click `Clear` to remove the existing NavMesh and then click `Bake` to generate the new NavMesh.
+### Nav Mesh Obstacle
+
+Identifies non-walkable areas within the game:
+
+- **Usage**:
+  - Apply this component to objects that should obstruct character movement.
+- **Configuration**:
+  - Set the dimensions and form to dictate navigation paths.
+
+  ![Nav Mesh Obstacle Example](/assets/learn/guides/studio/Lectures/navmesh-obstacle.png)
+
+### Nav Mesh Link
+
+Facilitates advanced pathfinding across separate NavMesh areas:
+
+- **Function**:
+  - Ideal for creating direct routes or alternative paths.
+- **Settings**:
+  - Adjust the properties to enable diverse navigational behaviors.
+
+  ![Nav Mesh Link Illustration](/assets/learn/guides/studio/Lectures/navmesh-link.png)
+
+### Nav Mesh Modifier & Nav Mesh Modifier Volume
+
+Adjusts the NavMesh application in specific areas or volumes:
+
+- **Adjustments**:
+  - Use these components to refine NavMesh details in particular sections of the environment.
+- **Options**:
+  - Designate areas to be ignored or specifically included in the NavMesh.
+
+  ![Nav Mesh Modifier Setup](/assets/learn/guides/studio/Lectures/navmesh-modifier.png)
+
+## Baking and Managing the NavMesh
+
+- **Finalization**:
+  - Set the correct parameters on the Nav Mesh Surface and click **Bake** to establish the walkable zones.
+- **Ongoing Management**:
+  - Re-bake the NavMesh following any changes in the scene that impact navigation.
+
+![Baking the NavMesh](/assets/learn/guides/studio/Lectures/bake-navmesh.png)
+
+<Note type="info">
+Blue-highlighted areas depict the walkable paths for characters.
+</Note>
 
 ## Conclusion
 
-NavMesh is essential for creating immersive game worlds. Utilize its features to enable player navigation, pathfinding, obstacle avoidance, and dynamic navigation for a polished gaming experience.
+Implementing a NavMesh in Highrise Studio is vital for crafting responsive and intelligent environments where characters can navigate effectively. Each component contributes significantly to enhancing the navigational capabilities.
