@@ -69,3 +69,5 @@ Make sure your camera is ready for post-processing:
 ## Conclusion
 
 Experiment with different post-processing effects to find what best enhances your game. These effects can dramatically improve how your game feels and looks, making your scenes more immersive and visually appealing.
+
+- [Lecture 11: Spawn Points](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-eleven/lecture-eleven-part-one) will show you how to set up spawn points for characters.

@@ -104,4 +104,4 @@ We've covered how to create and manage a Navigation Mesh in Highrise Studio, whi
 
 Experiment with different NavMesh components and settings to create diverse navigation paths for characters in your game. In the next lecture, we'll explore Jump Points to enhance character movement and pathfinding.
 
-- [Lecture Seven: Jump Points](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-seven)
+- [Lecture Seven: Jump Points](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-seven)

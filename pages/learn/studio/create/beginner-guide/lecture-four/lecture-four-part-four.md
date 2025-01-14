@@ -93,4 +93,4 @@ Scripts are a powerful tool in your game development arsenal, especially when us
 
 Experiment with different scripts to see how they affect your game. Try new things and see what you can create. Remember, every great game starts with a simple line of code.
 
-- [Lecture Four (Part Five): Scenes](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-five)
+- [Lecture Four (Part Five): Scenes](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-five)

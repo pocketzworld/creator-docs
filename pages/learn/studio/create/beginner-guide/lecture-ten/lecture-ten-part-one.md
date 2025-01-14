@@ -104,4 +104,4 @@ Experiment with various lighting settings to find what best suits the atmosphere
 
 ## Conclusion
 
-Achieving perfect lighting requires experimentation. Play with the various options in Highrise Studio to craft the ideal lighting for your game. Continue to [Part 2: Light Sources](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-two) for more insights on incorporating different light sources into your game world.
+Achieving perfect lighting requires experimentation. Play with the various options in Highrise Studio to craft the ideal lighting for your game. Continue to [Part 2: Light Sources](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-two) for more insights on incorporating different light sources into your game world.

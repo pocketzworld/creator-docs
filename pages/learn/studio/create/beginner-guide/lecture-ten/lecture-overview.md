@@ -8,11 +8,11 @@ Lighting is key to making your game look great and feel real. It helps set the m
 
 Here are the main lighting concepts we'll cover, each linked to a specific part of the lecture for more detailed learning:
 
-1. **[Environment Lighting](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-one)** - Controls the general lighting of your scene.
-2. **[Light Sources](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-two)** - Adds lights to your game world.
-3. **[Shadows](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-three)** - Gives depth to your scene with realistic shadows.
-4. **[Bake Lighting](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-four)** - Saves computer resources by optimizing lights.
-5. **[Post-Processing Effects](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-five)** - Enhances your scene with special visual effects.
+1. **[Environment Lighting](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-one)** - Controls the general lighting of your scene.
+2. **[Light Sources](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-two)** - Adds lights to your game world.
+3. **[Shadows](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-three)** - Gives depth to your scene with realistic shadows.
+4. **[Bake Lighting](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-four)** - Saves computer resources by optimizing lights.
+5. **[Post-Processing Effects](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-five)** - Enhances your scene with special visual effects.
 
 ## Getting Started
 

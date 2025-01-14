@@ -33,4 +33,4 @@ Highrise Studio is a powerful tool for creating games and experiences in Highris
 
 Enough talk, let's get to work! In the next lecture, we will cover how to install the necessary tools for Highrise Studio.
 
-- [Lecture Two: Installing Tools](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-two)
+- [Lecture Two: Installing Tools](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-two)

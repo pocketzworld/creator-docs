@@ -123,4 +123,4 @@ Play around with the spotlight’s settings to control how narrow or broad the l
 
 ## Conclusion
 
-Getting to know the different types of light sources and how to manipulate them is key to enhancing the visual quality of your game. Experiment with the various types, properties, and settings to find the perfect lighting for your game environment. Continue to [Part 3: Shadows](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-three) to learn more about integrating shadows into your game world.
+Getting to know the different types of light sources and how to manipulate them is key to enhancing the visual quality of your game. Experiment with the various types, properties, and settings to find the perfect lighting for your game environment. Continue to [Part 3: Shadows](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-three) to learn more about integrating shadows into your game world.

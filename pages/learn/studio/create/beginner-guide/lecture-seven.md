@@ -55,4 +55,4 @@ Jump Points are fantastic for making your game's movement dynamic and fun. They 
 
 Play around with various Jump Point setups. Try designing challenging paths that require jumps to test and enhance player skills.
 
-- [Lecture Eight: Anchor Points](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-eight)
+- [Lecture Eight: Anchor Points](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-eight)

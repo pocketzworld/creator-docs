@@ -85,4 +85,4 @@ In this lecture, we covered the installation of the necessary tools for Highrise
 
 Now that you have installed the necessary tools, it's time to create your first project in Highrise Studio. In the next lecture, we will guide you through the process of creating a new project and exploring the Studio Hub interface.
 
-- [Lecture Three: Creating Your First Project](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-three)
+- [Lecture Three: Creating Your First Project](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-three)

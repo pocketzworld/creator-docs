@@ -62,4 +62,4 @@ We've learned how to import and use assets from the Unity Asset Store and Highri
 
 Experiment with importing different assets from the Unity Asset Store and Highrise Assets Catalog to enhance your game's visuals and audio.
 
-- [Lecture Six: Navigation Mesh (navmesh)](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-six)
+- [Lecture Six: Navigation Mesh (navmesh)](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-six)

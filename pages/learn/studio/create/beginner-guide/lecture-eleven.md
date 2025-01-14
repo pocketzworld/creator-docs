@@ -35,4 +35,4 @@ Using multiple spawn points lets players start from various locations, which can
 
 ## Conclusion
 
-Try using different spawn points to enhance how players experience your game. By smartly placing these points, you can make sure that the action starts off well and keeps everyone engaged. Next, explore [Lecture 12: NPCs](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-twelve) to see how to add non-player characters to your game world.
+Try using different spawn points to enhance how players experience your game. By smartly placing these points, you can make sure that the action starts off well and keeps everyone engaged. Next, explore [Lecture 12: NPCs](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-twelve) to see how to add non-player characters to your game world.

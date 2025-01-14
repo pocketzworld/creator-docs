@@ -33,7 +33,7 @@ You can set up multiple objects at once instead of doing them one by one.
 2. Change its mode to **Baked** in the Inspector window.
 3. Adjust the settings to get the lighting effect you want.
 
-[Learn more about Light Sources](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-two)
+[Learn more about Light Sources](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-two)
 
 ![Light Modes](/assets/learn/guides/studio/Lectures/light-modes.png)
 
@@ -59,4 +59,4 @@ Always bake your lighting after changes to make sure your game looks its best an
 
 ## Conclusion
 
-Baking lighting is key for creating beautiful games that run well. By setting up your lighting in advance, you can enjoy realistic effects without slowing down the game. Try different settings and methods to find what works best for your game. Next, check out [Part 5: Post-Processing Effects](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-five) to learn how to enhance your game's visuals even more.
+Baking lighting is key for creating beautiful games that run well. By setting up your lighting in advance, you can enjoy realistic effects without slowing down the game. Try different settings and methods to find what works best for your game. Next, check out [Part 5: Post-Processing Effects](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-five) to learn how to enhance your game's visuals even more.
