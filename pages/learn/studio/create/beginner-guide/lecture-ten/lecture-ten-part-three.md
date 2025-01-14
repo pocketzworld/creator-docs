@@ -39,4 +39,4 @@ Change the position and direction of the directional light to see how shadows mo
 
 ## Conclusion
 
-Shadows are great for making your game look better and making the environment feel more alive. By learning how to manage shadow settings, you can create a world that feels deep and engaging. Test out various settings to find the best shadows for your game. Move on to [Part 4: Bake Lighting](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-ten-part-four) to learn more about setting up lighting in your scenes.
+Shadows are great for making your game look better and making the environment feel more alive. By learning how to manage shadow settings, you can create a world that feels deep and engaging. Test out various settings to find the best shadows for your game. Move on to [Part 4: Bake Lighting](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-ten-part-four) to learn more about setting up lighting in your scenes.

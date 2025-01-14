@@ -13,14 +13,14 @@ Think of components as magic tricks you can teach your GameObjects. Want a GameO
 Here’s how you can add components to a GameObject:
 
 ### Step 1: Select Your GameObject
-- **Click on a GameObject** in the [Hierarchy](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four-part-two#hierarchy) window to select it.
+- **Click on a GameObject** in the [Hierarchy](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four-part-two#hierarchy) window to select it.
 
 ### Step 2: Add a Component
 - **Open the Components Menu**: Click on `Add Component` at the bottom of the Inspector panel.
 - **Choose a Component**: Pick a component you want, like `Rigidbody` for physics or `Collider` for making objects hit each other.
 
 ### Step 3: Configure the Component
-- **Set Properties**: In the [Inspector]((https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four-part-two#inspector)), set up your component's properties to do exactly what you want, like making your GameObject bounce or shine.
+- **Set Properties**: In the [Inspector]((https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four-part-two#inspector)), set up your component's properties to do exactly what you want, like making your GameObject bounce or shine.
 
 ![Add Component](/assets/learn/guides/studio/Lectures/gameobject-components.png)
 
@@ -79,4 +79,4 @@ Today, we’ve learned how components are like the heart of your game objects, m
 
 Now that you understand components, you can start experimenting with different combinations to see what cool effects you can create. Keep exploring and testing to make your game truly your own.
 
-- [Lecture Four (Part Three): Prefabs](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-three)
+- [Lecture Four (Part Three): Prefabs](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-three)

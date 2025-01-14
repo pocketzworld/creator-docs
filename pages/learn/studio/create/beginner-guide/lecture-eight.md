@@ -59,4 +59,4 @@ Anchor Points are a key feature for adding realism and interactivity to your gam
 
 Experiment with placing Anchor Points on different objects to see how they can change interactions in your game. Adjust their positions and test different setups to find what works best for your game's design.
 
-- [Lecture Nine: Camera Controls](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-nine)
+- [Lecture Nine: Camera Controls](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-nine)

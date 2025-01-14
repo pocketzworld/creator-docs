@@ -50,4 +50,4 @@ Creating and managing scenes in Highrise Studio is essential for organizing diff
 
 Experiment with adding and arranging scenes to see how you can best organize your game's different environments.
 
-- [Lecture Five: Importing Assets](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-five)
+- [Lecture Five: Importing Assets](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-five)

@@ -64,4 +64,4 @@ Mastering Camera Controls can greatly improve your game by ensuring players alwa
 
 Experiment with different camera settings to find the perfect setup for your game. Try various camera types and adjust their settings to discover what best suits your game’s style and narrative.
 
-- [Lecture Ten: Lighting and Shadows](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-ten/lecture-overview)
+- [Lecture Ten: Lighting and Shadows](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-ten/lecture-overview)

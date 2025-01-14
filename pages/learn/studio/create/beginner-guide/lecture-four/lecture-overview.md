@@ -6,11 +6,11 @@ Welcome to the foundational stage of game development with Highrise Studio! In t
 
 ## Key Concepts
 
-1. [GameObjects](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-one) - These are the core elements in your game.
-2. [Components](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-two) - They give GameObjects different abilities.
-3. [Prefabs](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-three) - Ready-to-use GameObjects that you can reuse anytime.
-4. [Scripts](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-four) - Custom code that adds unique behaviors to your game objects.
-5. [Scenes](https://create.highrise.game/learn/studio/basics/beginner-guide/lecture-four/lecture-four-part-five) - The worlds where your game takes place.
+1. [GameObjects](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-one) - These are the core elements in your game.
+2. [Components](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-two) - They give GameObjects different abilities.
+3. [Prefabs](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-three) - Ready-to-use GameObjects that you can reuse anytime.
+4. [Scripts](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-four) - Custom code that adds unique behaviors to your game objects.
+5. [Scenes](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-four/lecture-four-part-five) - The worlds where your game takes place.
 
 ## Getting Started
 
