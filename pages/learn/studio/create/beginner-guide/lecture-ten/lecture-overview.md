@@ -1,4 +1,4 @@
-# Lecture Ten: Lighting Basics
+# Lecture 10: Lighting Basics
 
 ## Introduction
 

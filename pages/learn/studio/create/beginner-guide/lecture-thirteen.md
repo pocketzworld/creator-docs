@@ -88,3 +88,7 @@ If you want the NPC to keep doing the same emote over and over, just put one emo
 ## Conclusion
 
 Emotes are a great way to give your NPCs personality and make them interactive. By using the steps in this guide, you can create characters that are not just fun to watch but also add to the storytelling in your game. Try different emotes and settings to see how they can make your game world more lively and memorable for players.
+
+## Next Steps
+
+- [Lecture 14: Publishing Your Game](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-fourteen)

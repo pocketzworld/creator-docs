@@ -1,4 +1,4 @@
-# Lecture Two: Installing Tools
+# Lecture 2: Installing Tools
 
 ## Overview
 

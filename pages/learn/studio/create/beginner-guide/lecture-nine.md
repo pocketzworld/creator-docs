@@ -1,4 +1,4 @@
-# Lecture Nine: Camera Controls
+# Lecture 9: Camera Controls
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Lecture Eight: Anchor Points
+# Lecture 8: Anchor Points
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Lecture Four (Part Four): Scripts
+# Part 4: Scripts
 
 ## Introduction
 

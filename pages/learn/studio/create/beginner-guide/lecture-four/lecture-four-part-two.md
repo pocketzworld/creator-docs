@@ -1,4 +1,4 @@
-# Lecture Four (Part Two): Components
+# Part 2: Components
 
 ## Introduction
 

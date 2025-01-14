@@ -1,4 +1,4 @@
-# Lecture Four (Part Three): Prefabs
+# Part Three: Prefabs
 
 ## Introduction
 

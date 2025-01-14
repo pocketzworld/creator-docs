@@ -1,4 +1,4 @@
-# Lecture Three: Creating Your First Project
+# Lecture 3: Creating Your First Project
 
 ## Introduction
 
