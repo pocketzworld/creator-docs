@@ -1,52 +1,50 @@
 # Anchors
 
-Anchors enable specific actions for players upon reaching designated points in the environment, such as sitting down, standing up, or other actions.
+## Overview
 
-## Creating an Anchor
+Anchor Points are designated spots on objects within game environments where characters can interact, such as sitting or standing. Properly configured Anchor Points enhance the realism and interactivity of scenes.
 
-To create an anchor, follow these steps:
+### Example Object
+In this guide, the object used for demonstration is a "Wooden Bench," which is available in the Highrise Assets Catalog under the "Furniture" category.
 
-1. Right-click in the `Hierarchy` window and select `Create Empty`.
-2. Rename the new object to `Anchor`.
-3. Add an `Anchor` component to the object by clicking `Add Component` in the `Inspector`.
-4. Specify the desired `Action` for the anchor.
-5. Attach a `Tap Handler` component to make the anchor interactive.
-6. Include a `Collider` component to trigger the anchor.
+## Procedure
 
-<Note type="warning">
-An object must have both a `Collider` component and a `Tap Handler` component for the Anchor to function properly.
-</Note>
+### Step 1: Select and View the Object
+- **Navigate to the Object**: Locate your chosen object, such as the "Wooden Bench," in the Hierarchy.
+- **Inspect the Object**: Double-click on the object to view it within the Scene for better placement and interaction planning.
 
-## Anchor Actions
+### Step 2: Create and Configure an Anchor Point
+- **Initial Creation**:
+  - Right-click the chosen object in the Hierarchy and select **Create Empty** to add a new anchor point.
+  - Name this new point "Anchor Point A" for easy identification.
+  - Position and rotate it precisely where the character interaction should occur.
+- **Add Components**:
+  - Attach a `Box Collider` to define the interactive area.
+  - Include an `Anchor (Script)` to manage how characters attach to the point.
+  - For enhanced interaction, consider adding a `Tap Handler (Script)`.
 
-Anchors support the following actions:
+  ![Illustration of Anchor Components](/assets/learn/guides/studio/Lectures/anchor-components.png)
 
-1. **Sit**: Player sits down upon reaching the anchor.
-2. **Stand**: Player stands up upon reaching the anchor.
-3. **Run**: Player runs in place upon reaching the anchor.
-4. **Walk**: Player walks in place upon reaching the anchor.
+### Step 3: Duplicate and Position Additional Anchor Points
+- **Duplication**:
+  - Duplicate "Anchor Point A" by right-clicking it and selecting **Duplicate** or pressing `Ctrl + D`.
+  - Rename the duplicate to "Anchor Point B" and adjust its placement for additional interaction spots on the bench.
 
-## Anchor Properties
+  ![Example of Multiple Anchor Points](/assets/learn/guides/studio/Lectures/anchor-example.png)
 
-Anchors have the following properties:
+### Step 4: Organize and Finalize Anchor Points
+- **Hierarchy Management**:
+  - Organize the anchor points by making them children of the bench in the hierarchy, ensuring a clean and manageable structure.
+- **Scene Placement**:
+  - Fine-tune the bench’s placement within the scene to optimize character interactions and aesthetics.
 
-1. **Animation**: The animation to play when the player reaches the anchor.
-2. **Tappable**: Whether the anchor is tappable by the player.
-3. **Enter From**: The direction from which the player enters the anchor.
-4. **Exit To**: The direction to which the player exits the anchor.
+## Important Notes
 
-<Note type="info">
-Anchors can be set to any game object in the environment, whether it is an empty object or a 3D model.
-</Note>
+- **Multiple Views**: It is beneficial to view your setup in different scene perspectives (2D, 3D, Isometric) to accurately position the Anchor Points.
+  
+- **Height and Distance Considerations**:
+  - Verify that Anchor Points are set at appropriate heights and distances to ensure realistic character attachments.
 
-## Anchor Examples
+## Conclusion
 
-Here are some examples of how anchors can be used in a scene:
-
-- **Sitting Area**: Create an anchor that allows the player to sit down on a bench.
-- **Running Track**: Create an anchor that allows the player to run in place on a treadmill.
-- **Walking Path**: Create an anchor that allows the player to walk in place along a path.
-
-# Conclusion
-
-Anchors are a powerful tool for creating interactive experiences in the environment. By using anchors, you can add a new level of engagement and immersion to your scene.
+Setting up Anchor Points is crucial for creating engaging and realistic interactions within game scenes. By following the outlined steps, developers can effectively implement interactive objects that enhance player immersion and game dynamics.
