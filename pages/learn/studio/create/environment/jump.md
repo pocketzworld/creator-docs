@@ -1,29 +1,43 @@
-# Jump
+# Jumps
 
-The Jump node is a special node that allows you to jump to another node in the environment. This is useful for creating non-linear experiences where the user can jump to different parts of the environment based on their choices.
+## Overview
 
+Jump Points enable characters in Highrise Studio to traverse across challenging terrains such as gaps and obstacles, enhancing the dynamics of game play.
 
-## Creating a Jump Node
+### Definition
+Jump Points are designated areas where characters can execute jumps over otherwise inaccessible paths, connecting non-adjacent walking areas.
 
-To create a Jump node, follow these steps:
+**Important**: A component called `Off Mesh Link` is necessary for utilizing Jump Points in your game objects.
 
-1. Right-click in the `Hierarchy` window and select `Create Empty`.
-2. Rename the new object to `Jump`.
-3. Add a `Off Mesh Link` component to the object by clicking `Add Component` in the `Inspector`.
-4. Add a `Off Mesh Link Handler` component to the object by clicking `Add Component` in the `Inspector`.
-5. Specify the Start and End points for the jump (see methods below).
-6. Change the `Navigation Area` to `Jump` in the `Off Mesh Link` component.
-7. Modify the speed and height of the jump in the `Off Mesh Link Handler` component.
-8. Set the `Move Type` to `Jump` in the `Off Mesh Link Handler` component.
+## Configuration Guide
 
-<Note type="warning">
-You need a start and end point for the jump to work properly. The start and end points should be close to the ground and not too far apart.
-</Note>
+### Step 1: Create a Jump Point
+- **GameObject Initialization**:
+  - Initiate by right-clicking in the `Hierarchy` window and choosing **Create Empty**.
+  - Label it "Jump Point" for identification.
 
-## Start and End Points
+### Step 2: Add Necessary Components
+- **Component Attachment**:
+  - Equip the GameObject with an `Off Mesh Link` to facilitate the jump mechanism.
+  - Add an `Off Mesh Link Handler` to manage jump behaviors.
+- **Jump Settings**:
+  - Specify the **Navigation Area** as `Jump` in the `Off Mesh Link`.
+  - Set **Speed** and **Height** to control the dynamics of the jump.
 
-To set the start and end points for the jump, you can create two empty objects in the scene and position them where you want the jump to start and end. You can then assign these objects to the `Start Point` and `End Point` fields in the `Off Mesh Link` component.
+  ![Configuring Jump Point Components](/assets/learn/guides/studio/Lectures/jump-point-components.png)
 
-<Note type="warning">
-Make sure the start and end points are close to the ground slightly above the ground level.
-</Note>
+### Step 3: Establish Start and End Points for the Jump
+- **Point Creation**:
+  - Generate two additional Empty GameObjects named "Start Point" and "End Point."
+- **Placement**:
+  - Position these points at the intended start and finish locations of the jump.
+- **Point Linkage**:
+  - Connect these points to the `Off Mesh Link` on the Jump Point GameObject.
+
+**Note**: Proper alignment of the Start and End Points is crucial to ensure a seamless jump execution.
+
+  ![Illustration of a Configured Jump Point](/assets/learn/guides/studio/Lectures/jump-point-example.png)
+
+## Conclusion
+
+Jump Points significantly contribute to the interactive and engaging nature of gameplay in Highrise Studio, allowing characters to navigate obstacles creatively. Experimenting with various configurations can optimize game challenge and player engagement.
