@@ -17,6 +17,8 @@ They may not be used as bases for any regular Concept.
 
 [cottex_](https://highrise.game/catalog/designer-profile/cottex_)
 
+[_CS_](https://highrise.game/catalog/designer-profile/_CS_)
+
 [Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
 
 [declined](https://highrise.game/catalog/designer-profile/declined)
