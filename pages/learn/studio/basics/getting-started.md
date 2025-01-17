@@ -67,12 +67,6 @@ Ensure your world works as intended before publishing.
 You cannot publish a world with no build uploaded. Make sure to upload a build before releasing your world.
 </Note>
 
-## Video Tutorial
-
-For a visual guide, watch our YouTube tutorial series covering the basics of creating your first world.
-
-<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/odl6rVEMXk4" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Conclusion
 
 With Highrise Studio, you can create and share immersive experiences effortlessly. Whether you're a novice or an expert, Highrise Studio equips you with the tools to bring your game ideas to life.

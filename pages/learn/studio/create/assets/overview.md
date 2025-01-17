@@ -42,10 +42,6 @@ Custom assets created by yourself or your team can also be imported into Highris
 - **Script Interactions:** Add scripts to enable interactive behaviors and gameplay mechanics.
 - **Test and Refine:** Test custom assets in your world and refine based on feedback.
 
-
-# Video Tutorial
-<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/uE_BYKzIBy0" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 # Conclusion
 
 Importing assets is a pivotal stage in game development. Whether leveraging the Highrise Asset Catalog, external sources, or custom assets, diverse elements can enhance your projects. Experiment, combine, and manifest your creative vision in Highrise Studio. 🎨🚀

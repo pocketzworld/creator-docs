@@ -55,6 +55,10 @@ Now the child GameObjects are nested inside the parent GameObject, and you can m
 This is useful for organizing your project and keeping related GameObjects together.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/aL9eC3-Rf3U" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 In this lecture, we covered the basics of GameObjects in Highrise Studio. We learned how to create and manipulate GameObjects, as well as how to nest them inside each other to create complex structures. With this knowledge, you can start building your game world and gameplay in Highrise Studio.

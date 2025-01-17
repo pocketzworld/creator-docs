@@ -71,6 +71,10 @@ Just like GameObjects, you can organize components in smart ways to make complex
 Stacking components lets you mix and match powers to create unique interactions.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/PrTpqXN9LU4" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Today, we’ve learned how components are like the heart of your game objects, making them alive and interactive. By adding and configuring components, you create a game that’s fun and engaging.

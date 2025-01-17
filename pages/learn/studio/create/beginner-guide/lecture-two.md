@@ -77,6 +77,10 @@ Visual Studio Code is a lightweight code editor that supports many programming l
 
 ![VS Code Extension](/assets/learn/guides/studio/Lectures/vscode-extension.png)
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/vc0yQ3YHA9k" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 In this lecture, we covered the installation of the necessary tools for Highrise Studio, including Highrise Studio Hub, Unity, and Visual Studio Code. We also provided links to download these tools and instructions on how to set them up. With these tools installed, you are now ready to start creating your first project in Highrise Studio.

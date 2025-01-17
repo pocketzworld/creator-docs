@@ -58,10 +58,6 @@ To test:
 1. Hit **Play** in Unity to enter Play Mode.
 2. Watch the console for the greeting message when a player joins.
 
-## Video Preview
-<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/g7jr_TyrVRA" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
 ## Conclusion
 
 Kudos on writing your first Lua script in Highrise! Scripts empower you to craft dynamic and interactive experiences in your worlds. With continued practice and exploration of scripting concepts, you'll unlock endless possibilities for your game development journey. 🚀

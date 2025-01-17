@@ -48,6 +48,10 @@ When you update a Prefab, all copies of it in your game will update too. This ke
 Is your Scene view only showing the cube? Don't panic! This happens because you're in the Prefab view. To exit the Prefab view, click on the arrow next to the cube's name in the top left corner of the Hierarchy window.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/F6cqkKZ6WXY" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Prefabs are powerful tools in Unity that help you manage multiple copies of the same GameObject efficiently. By using Prefabs, you ensure consistency and save time, allowing you to focus more on other creative aspects of your game.

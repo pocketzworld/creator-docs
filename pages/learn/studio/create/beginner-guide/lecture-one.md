@@ -25,6 +25,10 @@ Highrise Studio is a development environment for creating games and experiences 
 - **Documentation:** Access our [documentation](https://create.highrise.game/learn/studio/basics/overview) for detailed guides and tutorials.
 - **Forum:** Visit our [forum](https://createforum.highrise.game/) for discussions and support.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/7U-3B8BrAe4" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Highrise Studio is a powerful tool for creating games and experiences in Highrise. With its Unity integration, multiplayer support, and Lua scripting, you can bring your ideas to life and share them with the world. Join our community and start building today!
