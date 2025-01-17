@@ -143,6 +143,10 @@ When it comes to layout, it's all about personal preference. Follow what works b
 
 Play around with the layout and find what works best for you. You can always reset the layout by going to Window > Layouts > Default.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/AEsK0asYsVY" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 In this lecture, we covered the basics of Unity and how to create a new project in Highrise Studio. We also discussed the different panels and windows in Unity and their functions. In the next lecture, we will cover the basics of Highrise Studio and how to use it to create your first game.
