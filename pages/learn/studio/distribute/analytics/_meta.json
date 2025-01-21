@@ -1,0 +1,17 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "engagement": {
+    "title": "Engagement"
+  },
+  "retention": {
+    "title": "Retention"
+  },
+  "in-world-purchases": {
+    "title": "In-World Purchases"
+  },
+  "owned-rooms": {
+    "title": "Owned Rooms"
+  }
+}
