@@ -42,6 +42,10 @@ To manage your scenes:
 If you made changes in a scene and they don't appear after entering Play Mode or publishing your world, it might be because it was saved in the wrong scene. To fix this, adjust the scene's position in the World Settings.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/h2zPog_UWb0" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Creating and managing scenes in Highrise Studio is essential for organizing different parts of your game. Remember, each scene is like a separate stage for your gameplay elements.
