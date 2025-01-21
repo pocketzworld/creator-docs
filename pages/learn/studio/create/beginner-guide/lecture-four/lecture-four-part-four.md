@@ -85,6 +85,10 @@ This is a quick look at the types of scripts. We'll learn more about them as we 
 
 Scripts bring your game to life. Without them, your game objects would just sit there. With scripts, they can interact, react, and engage players in countless ways.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/k5oBngEnUvE" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Scripts are a powerful tool in your game development arsenal, especially when using Lua in Highrise Studio. They make your game interactive and fun, allowing you to implement complex game logic with ease.

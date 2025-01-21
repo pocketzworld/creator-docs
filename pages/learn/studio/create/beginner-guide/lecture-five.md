@@ -54,6 +54,10 @@ Some assets in the Highrise Assets Catalog may require purchase with Gold.
 Visit https://learn.unity.com for further tutorials and guides.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/233oDM_GMBc" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 We've learned how to import and use assets from the Unity Asset Store and Highrise Assets Catalog. Next, we'll apply these assets to create a simple game.
