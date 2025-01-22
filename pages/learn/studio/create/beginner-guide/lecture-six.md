@@ -96,6 +96,10 @@ The highlighted blue areas represent the walkable paths for characters to naviga
 
 Changes in the scene layout require a re-bake of the NavMesh to ensure accurate navigation. Always rebake the NavMesh when adding or moving objects that affect navigation paths.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/N86plAKGBGg" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 We've covered how to create and manage a Navigation Mesh in Highrise Studio, which is essential for enabling characters to move intelligently in your game environments. Each component plays a crucial role in defining and refining the navigation capabilities of your game characters.
