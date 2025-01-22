@@ -16,5 +16,8 @@
   },
   "owned-rooms": {
     "title": "Owned Rooms"
+  },
+  "analytics": {
+    "title": "Analytics"
   }
 }
