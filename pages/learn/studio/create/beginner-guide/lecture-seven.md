@@ -47,6 +47,10 @@ Align the Start and End Points properly to ensure a smooth jump for your charact
 
 ![Jump Point Example](/assets/learn/guides/studio/Lectures/jump-point-example.png)
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/qQqlFMtk5ns" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Jump Points are fantastic for making your game's movement dynamic and fun. They allow characters to overcome obstacles creatively. Try different settings to see how they change the game's feel and challenge.

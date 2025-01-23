@@ -51,6 +51,10 @@ Try viewing your setup in different scene views (2D, 3D, Isometric) to best posi
 Ensure the Anchor Points are at the correct height and distance from the bench for characters to attach properly.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/T3pGayKC_M0" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Anchor Points are a key feature for adding realism and interactivity to your game environments. They allow characters to realistically use objects in your scenes.
