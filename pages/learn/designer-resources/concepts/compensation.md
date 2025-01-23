@@ -26,10 +26,13 @@ Designers receive one Account-Bound copy of their item as a keepsake. As this co
 
 Alongside your Account-Bound copy, you'll also receive a variable amount of tradable bonus items based on a tiered scaling system. The tiers are determined by the item's Rarity as follows: 
 
-**Rares: 6 tradable copies
-Epics: 4 tradable copies
-Legendaries: 2 tradable copies
-Mythicals: 2 tradable copies**
+**Rares: 6 tradable copies**
+
+**Epics: 4 tradable copies**
+
+**Legendaries: 2 tradable copies**
+
+**Mythicals: 2 tradable copies**
 
 These variable bonus items reflect our efforts to be cognizant of the impact that high item emission rates may have on our in-game economy.    
 
