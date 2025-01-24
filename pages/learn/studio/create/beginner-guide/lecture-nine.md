@@ -56,6 +56,10 @@ To see changes, you'll need to run your game as adjustments in the Scene window 
 
 ![Camera Settings](/assets/learn/guides/studio/Lectures/camera-settings.png)
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/LM_Vg6qeZDQ" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Mastering Camera Controls can greatly improve your game by ensuring players always have the best perspective. These settings are crucial for guiding players and showcasing your game world.
