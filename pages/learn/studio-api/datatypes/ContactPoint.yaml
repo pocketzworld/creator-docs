@@ -1,0 +1,52 @@
+name: ContactPoint
+type: datatypes
+summary: |
+  [Unity's ContactPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: impulse
+    summary: |
+      [Unity's ContactPoint.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-impulse.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: normal
+    summary: |
+      [Unity's ContactPoint.normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-normal.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: otherCollider
+    summary: |
+      [Unity's ContactPoint.otherCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-otherCollider.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Collider
+  - name: point
+    summary: |
+      [Unity's ContactPoint.point Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-point.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: separation
+    summary: |
+      [Unity's ContactPoint.separation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-separation.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: thisCollider
+    summary: |
+      [Unity's ContactPoint.thisCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-thisCollider.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Collider
+methods: 

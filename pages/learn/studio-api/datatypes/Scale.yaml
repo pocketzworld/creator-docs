@@ -1,0 +1,69 @@
+name: Scale
+type: datatypes
+summary: |
+  [Unity's Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Scale.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: scale
+        type: DataType.Vector2
+        default:
+        summary: 
+    returns:
+      - type: DataType.Scale
+        summary:
+  - name: new
+    summary: |
+      [Unity's Scale.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: scale
+        type: DataType.Vector3
+        default:
+        summary: 
+    returns:
+      - type: DataType.Scale
+        summary:
+properties: 
+  - name: value
+    summary: |
+      [Unity's Scale.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's Scale.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.Scale
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: None
+    summary: |
+      [Unity's Scale.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale.None.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Scale
+        summary:

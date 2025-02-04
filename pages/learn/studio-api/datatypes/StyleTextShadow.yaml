@@ -1,0 +1,66 @@
+name: StyleTextShadow
+type: datatypes
+summary: |
+  [Unity's StyleTextShadow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleTextShadow.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleTextShadow
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleTextShadow.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.TextShadow
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleTextShadow
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleTextShadow.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleTextShadow.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.TextShadow
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleTextShadow.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleTextShadow
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

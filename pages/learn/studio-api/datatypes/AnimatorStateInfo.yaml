@@ -1,0 +1,94 @@
+name: AnimatorStateInfo
+type: datatypes
+summary: |
+  [Unity's AnimatorStateInfo Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: fullPathHash
+    summary: |
+      [Unity's AnimatorStateInfo.fullPathHash Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-fullPathHash.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: length
+    summary: |
+      [Unity's AnimatorStateInfo.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-length.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: loop
+    summary: |
+      [Unity's AnimatorStateInfo.loop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-loop.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: normalizedTime
+    summary: |
+      [Unity's AnimatorStateInfo.normalizedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-normalizedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: shortNameHash
+    summary: |
+      [Unity's AnimatorStateInfo.shortNameHash Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-shortNameHash.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: speed
+    summary: |
+      [Unity's AnimatorStateInfo.speed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-speed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: speedMultiplier
+    summary: |
+      [Unity's AnimatorStateInfo.speedMultiplier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-speedMultiplier.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: tagHash
+    summary: |
+      [Unity's AnimatorStateInfo.tagHash Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-tagHash.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: IsName
+    summary: |
+      [Unity's AnimatorStateInfo.IsName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo.IsName.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: IsTag
+    summary: |
+      [Unity's AnimatorStateInfo.IsTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo.IsTag.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: tag
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

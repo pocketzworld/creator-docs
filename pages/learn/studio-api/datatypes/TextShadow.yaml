@@ -1,0 +1,45 @@
+name: TextShadow
+type: datatypes
+summary: |
+  [Unity's TextShadow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextShadow.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: blurRadius
+    summary: |
+      [Unity's TextShadow.blurRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextShadow-blurRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: color
+    summary: |
+      [Unity's TextShadow.color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextShadow-color.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: offset
+    summary: |
+      [Unity's TextShadow.offset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextShadow-offset.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's TextShadow.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextShadow.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.TextShadow
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

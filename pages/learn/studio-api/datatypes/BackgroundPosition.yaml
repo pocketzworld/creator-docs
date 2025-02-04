@@ -1,0 +1,70 @@
+name: BackgroundPosition
+type: datatypes
+summary: |
+  [Unity's BackgroundPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's BackgroundPosition.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: BackgroundPositionKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.BackgroundPosition
+        summary:
+  - name: new
+    summary: |
+      [Unity's BackgroundPosition.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: BackgroundPositionKeyword
+        default:
+        summary: 
+      - name: offset
+        type: DataType.Length
+        default:
+        summary: 
+    returns:
+      - type: DataType.BackgroundPosition
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's BackgroundPosition.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: BackgroundPositionKeyword
+  - name: offset
+    summary: |
+      [Unity's BackgroundPosition.offset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-offset.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's BackgroundPosition.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.BackgroundPosition
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

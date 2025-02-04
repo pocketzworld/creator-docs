@@ -1,0 +1,77 @@
+name: BackgroundSize
+type: datatypes
+summary: |
+  [Unity's BackgroundSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's BackgroundSize.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: sizeType
+        type: BackgroundSizeType
+        default:
+        summary: 
+    returns:
+      - type: DataType.BackgroundSize
+        summary:
+  - name: new
+    summary: |
+      [Unity's BackgroundSize.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: sizeX
+        type: DataType.Length
+        default:
+        summary: 
+      - name: sizeY
+        type: DataType.Length
+        default:
+        summary: 
+    returns:
+      - type: DataType.BackgroundSize
+        summary:
+properties: 
+  - name: sizeType
+    summary: |
+      [Unity's BackgroundSize.sizeType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize-sizeType.html)
+    description:
+    is_static: false
+    code_samples:
+    type: BackgroundSizeType
+  - name: x
+    summary: |
+      [Unity's BackgroundSize.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize-x.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+  - name: y
+    summary: |
+      [Unity's BackgroundSize.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize-y.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's BackgroundSize.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.BackgroundSize
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

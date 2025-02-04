@@ -1,0 +1,66 @@
+name: StyleBackgroundPosition
+type: datatypes
+summary: |
+  [Unity's StyleBackgroundPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleBackgroundPosition.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.BackgroundPosition
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleBackgroundPosition
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleBackgroundPosition.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleBackgroundPosition
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleBackgroundPosition.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleBackgroundPosition.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.BackgroundPosition
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleBackgroundPosition.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleBackgroundPosition
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

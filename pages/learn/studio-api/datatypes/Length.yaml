@@ -1,0 +1,99 @@
+name: Length
+type: datatypes
+summary: |
+  [Unity's Length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Length.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Length
+        summary:
+properties: 
+  - name: value
+    summary: |
+      [Unity's Length.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Auto
+    summary: |
+      [Unity's Length.Auto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.Auto.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Length
+        summary:
+  - name: Equals
+    summary: |
+      [Unity's Length.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.Length
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: IsAuto
+    summary: |
+      [Unity's Length.IsAuto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.IsAuto.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: IsNone
+    summary: |
+      [Unity's Length.IsNone Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.IsNone.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: None
+    summary: |
+      [Unity's Length.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.None.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Length
+        summary:
+  - name: Percent
+    summary: |
+      [Unity's Length.Percent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.Percent.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Length
+        summary:

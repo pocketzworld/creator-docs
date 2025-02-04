@@ -1,0 +1,166 @@
+name: Angle
+type: datatypes
+summary: |
+  [Unity's Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Angle.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Angle
+        summary:
+  - name: new
+    summary: |
+      [Unity's Angle.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+      - name: unit
+        type: AngleUnit
+        default:
+        summary: 
+    returns:
+      - type: DataType.Angle
+        summary:
+properties: 
+  - name: unit
+    summary: |
+      [Unity's Angle.unit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-unit.html)
+    description:
+    is_static: false
+    code_samples:
+    type: AngleUnit
+  - name: value
+    summary: |
+      [Unity's Angle.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Degrees
+    summary: |
+      [Unity's Angle.Degrees Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.Degrees.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Angle
+        summary:
+  - name: Equals
+    summary: |
+      [Unity's Angle.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.Angle
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: Gradians
+    summary: |
+      [Unity's Angle.Gradians Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.Gradians.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Angle
+        summary:
+  - name: Radians
+    summary: |
+      [Unity's Angle.Radians Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.Radians.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Angle
+        summary:
+  - name: ToDegrees
+    summary: |
+      [Unity's Angle.ToDegrees Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.ToDegrees.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: ToGradians
+    summary: |
+      [Unity's Angle.ToGradians Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.ToGradians.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: ToRadians
+    summary: |
+      [Unity's Angle.ToRadians Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.ToRadians.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: ToTurns
+    summary: |
+      [Unity's Angle.ToTurns Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.ToTurns.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: Turns
+    summary: |
+      [Unity's Angle.Turns Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.Turns.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Angle
+        summary:

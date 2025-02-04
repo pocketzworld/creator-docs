@@ -1,0 +1,95 @@
+name: Translate
+type: datatypes
+summary: |
+  [Unity's Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Translate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: x
+        type: DataType.Length
+        default:
+        summary: 
+      - name: y
+        type: DataType.Length
+        default:
+        summary: 
+    returns:
+      - type: DataType.Translate
+        summary:
+  - name: new
+    summary: |
+      [Unity's Translate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: x
+        type: DataType.Length
+        default:
+        summary: 
+      - name: y
+        type: DataType.Length
+        default:
+        summary: 
+      - name: z
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Translate
+        summary:
+properties: 
+  - name: x
+    summary: |
+      [Unity's Translate.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate-x.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+  - name: y
+    summary: |
+      [Unity's Translate.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate-y.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+  - name: z
+    summary: |
+      [Unity's Translate.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate-z.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's Translate.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.Translate
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: None
+    summary: |
+      [Unity's Translate.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate.None.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Translate
+        summary:
