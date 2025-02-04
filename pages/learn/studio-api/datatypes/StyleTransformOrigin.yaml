@@ -1,0 +1,66 @@
+name: StyleTransformOrigin
+type: datatypes
+summary: |
+  [Unity's StyleTransformOrigin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleTransformOrigin.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleTransformOrigin
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleTransformOrigin.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.TransformOrigin
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleTransformOrigin
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleTransformOrigin.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleTransformOrigin.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.TransformOrigin
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleTransformOrigin.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleTransformOrigin
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

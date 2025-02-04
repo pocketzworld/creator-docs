@@ -1,0 +1,55 @@
+name: Rotate
+type: datatypes
+summary: |
+  [Unity's Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Rotate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: angle
+        type: DataType.Angle
+        default:
+        summary: 
+    returns:
+      - type: DataType.Rotate
+        summary:
+properties: 
+  - name: angle
+    summary: |
+      [Unity's Rotate.angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate-angle.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Angle
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's Rotate.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.Rotate
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: None
+    summary: |
+      [Unity's Rotate.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate.None.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Rotate
+        summary:

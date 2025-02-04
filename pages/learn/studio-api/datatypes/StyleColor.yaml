@@ -1,0 +1,66 @@
+name: StyleColor
+type: datatypes
+summary: |
+  [Unity's StyleColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleColor.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.Color
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleColor
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleColor.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleColor
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleColor.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleColor.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleColor.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleColor
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

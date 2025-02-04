@@ -1,0 +1,66 @@
+name: StyleFloat
+type: datatypes
+summary: |
+  [Unity's StyleFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleFloat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleFloat
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleFloat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleFloat
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleFloat.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleFloat.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleFloat.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleFloat
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

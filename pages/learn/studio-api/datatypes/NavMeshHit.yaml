@@ -1,0 +1,45 @@
+name: NavMeshHit
+type: datatypes
+summary: |
+  [Unity's NavMeshHit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: distance
+    summary: |
+      [Unity's NavMeshHit.distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit-distance.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: hit
+    summary: |
+      [Unity's NavMeshHit.hit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit-hit.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: mask
+    summary: |
+      [Unity's NavMeshHit.mask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit-mask.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: normal
+    summary: |
+      [Unity's NavMeshHit.normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit-normal.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: position
+    summary: |
+      [Unity's NavMeshHit.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit-position.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+methods:

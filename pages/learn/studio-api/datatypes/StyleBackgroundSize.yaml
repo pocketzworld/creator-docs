@@ -1,0 +1,66 @@
+name: StyleBackgroundSize
+type: datatypes
+summary: |
+  [Unity's StyleBackgroundSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleBackgroundSize.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.BackgroundSize
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleBackgroundSize
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleBackgroundSize.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleBackgroundSize
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleBackgroundSize.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleBackgroundSize.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.BackgroundSize
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleBackgroundSize.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleBackgroundSize
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

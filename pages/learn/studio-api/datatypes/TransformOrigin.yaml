@@ -1,0 +1,95 @@
+name: TransformOrigin
+type: datatypes
+summary: |
+  [Unity's TransformOrigin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's TransformOrigin.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: x
+        type: DataType.Length
+        default:
+        summary: 
+      - name: y
+        type: DataType.Length
+        default:
+        summary: 
+    returns:
+      - type: DataType.TransformOrigin
+        summary:
+  - name: new
+    summary: |
+      [Unity's TransformOrigin.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: x
+        type: DataType.Length
+        default:
+        summary: 
+      - name: y
+        type: DataType.Length
+        default:
+        summary: 
+      - name: z
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.TransformOrigin
+        summary:
+properties: 
+  - name: x
+    summary: |
+      [Unity's TransformOrigin.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-x.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+  - name: y
+    summary: |
+      [Unity's TransformOrigin.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-y.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+  - name: z
+    summary: |
+      [Unity's TransformOrigin.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-z.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's TransformOrigin.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.TransformOrigin
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: Initial
+    summary: |
+      [Unity's TransformOrigin.Initial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin.Initial.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.TransformOrigin
+        summary:

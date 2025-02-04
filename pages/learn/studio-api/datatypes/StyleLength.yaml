@@ -1,0 +1,80 @@
+name: StyleLength
+type: datatypes
+summary: |
+  [Unity's StyleLength Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleLength.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.Length
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleLength
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleLength.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleLength
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleLength.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleLength
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleLength.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleLength.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Length
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleLength.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleLength
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

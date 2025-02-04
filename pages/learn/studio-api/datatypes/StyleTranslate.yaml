@@ -1,0 +1,66 @@
+name: StyleTranslate
+type: datatypes
+summary: |
+  [Unity's StyleTranslate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleTranslate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleTranslate
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleTranslate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.Translate
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleTranslate
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleTranslate.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleTranslate.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Translate
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleTranslate.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleTranslate
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

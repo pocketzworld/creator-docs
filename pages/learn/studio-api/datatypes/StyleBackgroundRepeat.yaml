@@ -1,0 +1,66 @@
+name: StyleBackgroundRepeat
+type: datatypes
+summary: |
+  [Unity's StyleBackgroundRepeat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's StyleBackgroundRepeat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: v
+        type: DataType.BackgroundRepeat
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleBackgroundRepeat
+        summary:
+  - name: new
+    summary: |
+      [Unity's StyleBackgroundRepeat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: keyword
+        type: StyleKeyword
+        default:
+        summary: 
+    returns:
+      - type: DataType.StyleBackgroundRepeat
+        summary:
+properties: 
+  - name: keyword
+    summary: |
+      [Unity's StyleBackgroundRepeat.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-keyword.html)
+    description:
+    is_static: false
+    code_samples:
+    type: StyleKeyword
+  - name: value
+    summary: |
+      [Unity's StyleBackgroundRepeat.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.BackgroundRepeat
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's StyleBackgroundRepeat.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.StyleBackgroundRepeat
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

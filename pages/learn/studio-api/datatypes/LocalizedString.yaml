@@ -1,0 +1,84 @@
+name: LocalizedString
+type: datatypes
+summary: |
+  Represents a localized string within a LocalizedDatabase.
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: none
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.LocalizedString
+  - name: index
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Format
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: param1
+        type: string
+        default:
+        summary: 
+      - name: param2
+        type: string
+        default:
+        summary: 
+      - name: param3
+        type: string
+        default:
+        summary: 
+      - name: param4
+        type: string
+        default:
+        summary: 
+      - name: param5
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: FormatPlural
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: count
+        type: number
+        default:
+        summary: 
+      - name: param2
+        type: string
+        default:
+        summary: 
+      - name: param3
+        type: string
+        default:
+        summary: 
+      - name: param4
+        type: string
+        default:
+        summary: 
+      - name: param5
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:

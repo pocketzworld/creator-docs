@@ -1,0 +1,56 @@
+name: BackgroundRepeat
+type: datatypes
+summary: |
+  [Unity's BackgroundRepeat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundRepeat.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's BackgroundRepeat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundRepeat-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: repeatX
+        type: Repeat
+        default:
+        summary: 
+      - name: repeatY
+        type: Repeat
+        default:
+        summary: 
+    returns:
+      - type: DataType.BackgroundRepeat
+        summary:
+properties: 
+  - name: x
+    summary: |
+      [Unity's BackgroundRepeat.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundRepeat-x.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Repeat
+  - name: y
+    summary: |
+      [Unity's BackgroundRepeat.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundRepeat-y.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Repeat
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's BackgroundRepeat.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundRepeat.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: DataType.BackgroundRepeat
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
