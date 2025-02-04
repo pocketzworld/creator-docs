@@ -1,0 +1,95 @@
+name: AbstractProgressBar
+type: classes
+summary: |
+  [Unity's AbstractProgressBar Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar.html)
+description:
+code_samples:
+inherits: 
+  - BindableElement
+constructors: 
+properties: 
+  - name: backgroundUssClassName
+    summary: |
+      [Unity's AbstractProgressBar.backgroundUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-backgroundUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: containerUssClassName
+    summary: |
+      [Unity's AbstractProgressBar.containerUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-containerUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: progressUssClassName
+    summary: |
+      [Unity's AbstractProgressBar.progressUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-progressUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: titleContainerUssClassName
+    summary: |
+      [Unity's AbstractProgressBar.titleContainerUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-titleContainerUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: titleUssClassName
+    summary: |
+      [Unity's AbstractProgressBar.titleUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-titleUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussClassName
+    summary: |
+      [Unity's AbstractProgressBar.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-ussClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: highValue
+    summary: |
+      [Unity's AbstractProgressBar.highValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-highValue.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: lowValue
+    summary: |
+      [Unity's AbstractProgressBar.lowValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-lowValue.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: title
+    summary: |
+      [Unity's AbstractProgressBar.title Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-title.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: value
+    summary: |
+      [Unity's AbstractProgressBar.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar-value.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: SetValueWithoutNotify
+    summary: |
+      [Unity's AbstractProgressBar.SetValueWithoutNotify Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AbstractProgressBar.SetValueWithoutNotify.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: newValue
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

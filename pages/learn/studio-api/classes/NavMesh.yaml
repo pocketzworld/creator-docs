@@ -1,0 +1,200 @@
+name: NavMesh
+type: classes
+summary: |
+  [Unity's NavMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: allAreas
+    summary: |
+      [Unity's NavMesh.allAreas Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh-allAreas.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: onPreUpdate
+    summary: |
+      [Unity's NavMesh.onPreUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh-onPreUpdate.html)
+    description:
+    is_static: true
+    code_samples:
+    type: () -> ()
+  - name: avoidancePredictionTime
+    summary: |
+      [Unity's NavMesh.avoidancePredictionTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh-avoidancePredictionTime.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: pathfindingIterationsPerFrame
+    summary: |
+      [Unity's NavMesh.pathfindingIterationsPerFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh-pathfindingIterationsPerFrame.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
+  - name: FindClosestEdge
+    summary: |
+      [Unity's NavMesh.FindClosestEdge Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.FindClosestEdge.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: sourcePosition
+        type: DataType.Vector3
+        default:
+        summary: 
+      - name: areaMask
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.NavMeshHit
+        summary:
+  - name: GetAreaCost
+    summary: |
+      [Unity's NavMesh.GetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetAreaCost.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: areaIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetAreaFromName
+    summary: |
+      [Unity's NavMesh.GetAreaFromName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetAreaFromName.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: areaName
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetSettingsCount
+    summary: |
+      [Unity's NavMesh.GetSettingsCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetSettingsCount.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: GetSettingsNameFromID
+    summary: |
+      [Unity's NavMesh.GetSettingsNameFromID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetSettingsNameFromID.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: agentTypeID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: Raycast
+    summary: |
+      [Unity's NavMesh.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.Raycast.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: sourcePosition
+        type: DataType.Vector3
+        default:
+        summary: 
+      - name: targetPosition
+        type: DataType.Vector3
+        default:
+        summary: 
+      - name: areaMask
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.NavMeshHit
+        summary:
+  - name: RemoveAllNavMeshData
+    summary: |
+      [Unity's NavMesh.RemoveAllNavMeshData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.RemoveAllNavMeshData.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveSettings
+    summary: |
+      [Unity's NavMesh.RemoveSettings Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.RemoveSettings.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: agentTypeID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SamplePosition
+    summary: |
+      [Unity's NavMesh.SamplePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.SamplePosition.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: sourcePosition
+        type: DataType.Vector3
+        default:
+        summary: 
+      - name: maxDistance
+        type: number
+        default:
+        summary: 
+      - name: areaMask
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.NavMeshHit
+        summary:
+  - name: SetAreaCost
+    summary: |
+      [Unity's NavMesh.SetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.SetAreaCost.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: areaIndex
+        type: number
+        default:
+        summary: 
+      - name: cost
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

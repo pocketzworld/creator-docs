@@ -1,0 +1,39 @@
+name: ScriptableObject
+type: classes
+summary: |
+  [Unity's ScriptableObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ScriptableObject.html)
+description:
+code_samples:
+inherits: 
+  - Class.Object
+constructors: 
+properties: 
+methods: 
+  - name: CreateInstance
+    summary: |
+      [Unity's ScriptableObject.CreateInstance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ScriptableObject.CreateInstance.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: type
+        type: Class.Type
+        default:
+        summary: 
+    returns:
+      - type: ScriptableObject
+        summary:
+  - name: CreateInstance
+    summary: |
+      [Unity's ScriptableObject.CreateInstance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ScriptableObject.CreateInstance.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: className
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: ScriptableObject
+        summary:

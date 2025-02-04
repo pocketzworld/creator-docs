@@ -1,0 +1,52 @@
+name: Enum
+type: classes
+summary: |
+  [Unity's Enum Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: GetNames
+    summary: |
+      [Unity's Enum.GetNames Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.GetNames.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: enumType
+        type: Class.Type
+        default:
+        summary: 
+    returns:
+      - type: {string}
+        summary:
+  - name: GetUnderlyingType
+    summary: |
+      [Unity's Enum.GetUnderlyingType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.GetUnderlyingType.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: enumType
+        type: Class.Type
+        default:
+        summary: 
+    returns:
+      - type: Class.Type
+        summary:
+  - name: HasFlag
+    summary: |
+      [Unity's Enum.HasFlag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.HasFlag.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: flag
+        type: Enum
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:

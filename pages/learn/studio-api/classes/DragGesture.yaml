@@ -1,0 +1,85 @@
+name: DragGesture
+type: classes
+summary: |
+  Listens for pan gestures and sends events when they are detected
+description:
+code_samples:
+inherits: 
+  - Class.Gesture
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: helper
+        type: IDragGestureHelper
+        default:
+        summary: 
+      - name: minDistance
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.DragGesture
+        summary:
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: minDistance
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.DragGesture
+        summary:
+properties: 
+methods: 
+  - name: Custom
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: directionLimit
+        type: DataType.Vector2
+        default:
+        summary: 
+      - name: isBidirectional
+        type: boolean
+        default:
+        summary: 
+      - name: directionRecognitionDegs
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.DragGesture
+        summary:
+  - name: Horizontal
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.DragGesture
+        summary:
+  - name: Vertical
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.DragGesture
+        summary:

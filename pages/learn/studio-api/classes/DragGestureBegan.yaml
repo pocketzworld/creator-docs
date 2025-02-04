@@ -1,0 +1,60 @@
+name: DragGestureBegan
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: deltaPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: position
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: startPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: velocity
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: screenPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: screenStartPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods:

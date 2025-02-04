@@ -1,0 +1,25 @@
+name: BlurEvent
+type: classes
+summary: |
+  [Unity's BlurEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BlurEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: eventTypeId
+    summary: |
+      [Unity's BlurEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BlurEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: relatedTarget
+    summary: |
+      [Unity's BlurEvent.relatedTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BlurEvent-relatedTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Focusable
+methods: 

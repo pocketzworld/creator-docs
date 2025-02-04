@@ -1,0 +1,25 @@
+name: FocusEvent
+type: classes
+summary: |
+  [Unity's FocusEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FocusEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: eventTypeId
+    summary: |
+      [Unity's FocusEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FocusEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: relatedTarget
+    summary: |
+      [Unity's FocusEvent.relatedTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FocusEvent-relatedTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Focusable
+methods:

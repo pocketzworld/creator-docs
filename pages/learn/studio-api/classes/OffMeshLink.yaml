@@ -1,0 +1,77 @@
+name: OffMeshLink
+type: classes
+summary: |
+  [Unity's OffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink.html)
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: activated
+    summary: |
+      [Unity's OffMeshLink.activated Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-activated.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: area
+    summary: |
+      [Unity's OffMeshLink.area Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-area.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: autoUpdatePositions
+    summary: |
+      [Unity's OffMeshLink.autoUpdatePositions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-autoUpdatePositions.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: biDirectional
+    summary: |
+      [Unity's OffMeshLink.biDirectional Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-biDirectional.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: costOverride
+    summary: |
+      [Unity's OffMeshLink.costOverride Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-costOverride.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: endTransform
+    summary: |
+      [Unity's OffMeshLink.endTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-endTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+  - name: occupied
+    summary: |
+      [Unity's OffMeshLink.occupied Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-occupied.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: startTransform
+    summary: |
+      [Unity's OffMeshLink.startTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-startTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+methods: 
+  - name: UpdatePositions
+    summary: |
+      [Unity's OffMeshLink.UpdatePositions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink.UpdatePositions.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:

@@ -1,0 +1,59 @@
+name: Focusable
+type: classes
+summary: |
+  [Unity's Focusable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable.html)
+description:
+code_samples:
+inherits: 
+  - CallbackEventHandler
+constructors: 
+properties: 
+  - name: canGrabFocus
+    summary: |
+      [Unity's Focusable.canGrabFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable-canGrabFocus.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: delegatesFocus
+    summary: |
+      [Unity's Focusable.delegatesFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable-delegatesFocus.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: focusable
+    summary: |
+      [Unity's Focusable.focusable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable-focusable.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: tabIndex
+    summary: |
+      [Unity's Focusable.tabIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable-tabIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Blur
+    summary: |
+      [Unity's Focusable.Blur Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable.Blur.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Focus
+    summary: |
+      [Unity's Focusable.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable.Focus.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:

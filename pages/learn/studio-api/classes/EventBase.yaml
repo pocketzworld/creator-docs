@@ -1,0 +1,117 @@
+name: EventBase
+type: classes
+summary: |
+  [Unity's EventBase Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: bubbles
+    summary: |
+      [Unity's EventBase.bubbles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-bubbles.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: currentTarget
+    summary: |
+      [Unity's EventBase.currentTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-currentTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IEventHandler
+  - name: dispatch
+    summary: |
+      [Unity's EventBase.dispatch Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-dispatch.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: eventTypeId
+    summary: |
+      [Unity's EventBase.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isDefaultPrevented
+    summary: |
+      [Unity's EventBase.isDefaultPrevented Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-isDefaultPrevented.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isImmediatePropagationStopped
+    summary: |
+      [Unity's EventBase.isImmediatePropagationStopped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-isImmediatePropagationStopped.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isPropagationStopped
+    summary: |
+      [Unity's EventBase.isPropagationStopped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-isPropagationStopped.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: originalMousePosition
+    summary: |
+      [Unity's EventBase.originalMousePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-originalMousePosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: target
+    summary: |
+      [Unity's EventBase.target Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-target.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IEventHandler
+  - name: timestamp
+    summary: |
+      [Unity's EventBase.timestamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-timestamp.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: tricklesDown
+    summary: |
+      [Unity's EventBase.tricklesDown Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-tricklesDown.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: PreventDefault
+    summary: |
+      [Unity's EventBase.PreventDefault Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase.PreventDefault.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: StopImmediatePropagation
+    summary: |
+      [Unity's EventBase.StopImmediatePropagation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase.StopImmediatePropagation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: StopPropagation
+    summary: |
+      [Unity's EventBase.StopPropagation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase.StopPropagation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:

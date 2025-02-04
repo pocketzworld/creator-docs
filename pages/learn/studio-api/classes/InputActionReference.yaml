@@ -1,0 +1,66 @@
+name: InputActionReference
+type: classes
+summary: |
+  [Unity's InputActionReference Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.html)
+description:
+code_samples:
+inherits: 
+  - ScriptableObject
+constructors: 
+  - name: new
+    summary: |
+      [Unity's InputActionReference.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.InputActionReference
+        summary:
+properties: 
+  - name: action
+    summary: |
+      [Unity's InputActionReference.action Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference-action.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.InputAction
+methods: 
+  - name: Create
+    summary: |
+      [Unity's InputActionReference.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.Create.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: action
+        type: Class.InputAction
+        default:
+        summary: 
+    returns:
+      - type: Class.InputActionReference
+        summary:
+  - name: Set
+    summary: |
+      [Unity's InputActionReference.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.Set.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: action
+        type: Class.InputAction
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: ToInputAction
+    summary: |
+      [Unity's InputActionReference.ToInputAction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.ToInputAction.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.InputAction
+        summary:

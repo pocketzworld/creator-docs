@@ -1,0 +1,161 @@
+name: UICollection
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.UIView
+constructors: 
+  - name: new
+    summary: |
+      Construct a collection view
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UICollection
+        summary:
+  - name: new
+    summary: |
+      Construct a collection view
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: scrollView
+        type: IScrollView
+        default:
+        summary: 
+    returns:
+      - type: Class.UICollection
+        summary:
+properties: 
+  - name: contentContainer
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: isPerformingUpdates
+    summary: |
+      True if called in the same stack as a call to PerformUpdates
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isReversed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: recycleOnHide
+    summary: |
+      Whether the cells should be scraped when the collection is not displayed.
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: scrollView
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: IScrollView
+methods: 
+  - name: InitializeSections
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: PerformUpdates
+    summary: |
+      Animates multiple update operations. All calls to InsertItem, RemoveUpdate, or UpdateItem
+      must be made from within a call to PerformUpdates
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: updates
+        type: () -> ()
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Rebuild
+    summary: |
+      Signals the collection build to rebuild its layout.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: ScrollTo
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cells
+        type: Class.UICollectionCells
+        default:
+        summary: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+      - name: padding
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToBeginning
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToBeginning
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: animationDuration
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToEnd
+    summary: |
+      Scroll the collection to the end
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:

@@ -1,0 +1,415 @@
+name: UITextFieldBase
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - BindableElement
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: UITextFieldBase
+        summary:
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: maxLength
+        type: number
+        default:
+        summary: 
+      - name: multiline
+        type: boolean
+        default:
+        summary: 
+      - name: isPasswordField
+        type: boolean
+        default:
+        summary: 
+      - name: maskChar
+        type: Char
+        default:
+        summary: 
+    returns:
+      - type: UITextFieldBase
+        summary:
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: label
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: UITextFieldBase
+        summary:
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: label
+        type: string
+        default:
+        summary: 
+      - name: maxLength
+        type: number
+        default:
+        summary: 
+      - name: multiline
+        type: boolean
+        default:
+        summary: 
+      - name: isPasswordField
+        type: boolean
+        default:
+        summary: 
+      - name: maskChar
+        type: Char
+        default:
+        summary: 
+    returns:
+      - type: UITextFieldBase
+        summary:
+properties: 
+  - name: emojiParser
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: IEmojiParser
+  - name: fixRightToLeft
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: (string, TextElement) -> (string)
+  - name: inputUssClassName
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: labelUssClassName
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussClassName
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: autoCorrection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: cursorColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: cursorIndex
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: cursorPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: doubleClickSelectsWord
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: fontStyle
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: FontStyle
+  - name: hideMobileInput
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: inputPattern
+    summary: |
+      A regular expression to match valid values that can be inserted into the textfield by the user.
+      Invalid values will be rejected.
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: isDelayed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isPasswordField
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isReadOnly
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isShiftReturnModeEnabled
+    summary: |
+      Enables a mode in which Return key sends a ReturnEvent
+      and Shift+Return sends ShiftReturnEvent.
+    Warning: Works only on non-mobile platforms!
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: label
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: labelElement
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Label
+  - name: maskChar
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Char
+  - name: maxLength
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: multiline
+    summary: |
+      True if multiline editing is enabled
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: originalValue
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: selectAllOnFocus
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: selectAllOnMouseUp
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: selectIndex
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: selectionColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: showMixedValue
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: text
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: textAlign
+    summary: |
+      Anchor of UITextField.TextInput
+    description:
+    is_static: false
+    code_samples:
+    type: TextAnchor
+  - name: textEdition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: ITextEdition
+  - name: textElement
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: TextElement
+  - name: textSelection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: ITextSelection
+  - name: tripleClickSelectsLine
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: value
+    summary: |
+      Current text value of the field
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods: 
+  - name: ReplaceSelection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: value
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectAll
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectNone
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectRange
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cursorIndex
+        type: number
+        default:
+        summary: 
+      - name: selectionIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectTextEnd
+    summary: |
+      Move the cursor to the end of the text with no selection
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SetValueWithoutNotify
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: newValue
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

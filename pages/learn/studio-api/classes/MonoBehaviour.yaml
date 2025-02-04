@@ -1,0 +1,11 @@
+name: MonoBehaviour
+type: classes
+summary: |
+  [Unity's MonoBehaviour Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.html)
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+methods:

@@ -1,0 +1,81 @@
+name: SpriteRenderer
+type: classes
+summary: |
+  [Unity's SpriteRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer.html)
+description:
+code_samples:
+inherits: 
+  - Class.Renderer
+constructors: 
+properties: 
+  - name: adaptiveModeThreshold
+    summary: |
+      [Unity's SpriteRenderer.adaptiveModeThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-adaptiveModeThreshold.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: color
+    summary: |
+      [Unity's SpriteRenderer.color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-color.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: flipX
+    summary: |
+      [Unity's SpriteRenderer.flipX Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-flipX.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: flipY
+    summary: |
+      [Unity's SpriteRenderer.flipY Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-flipY.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: size
+    summary: |
+      [Unity's SpriteRenderer.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-size.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: sprite
+    summary: |
+      [Unity's SpriteRenderer.sprite Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-sprite.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Sprite
+methods: 
+  - name: RegisterSpriteChangeCallback
+    summary: |
+      [Unity's SpriteRenderer.RegisterSpriteChangeCallback Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer.RegisterSpriteChangeCallback.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: callback
+        type: (SpriteRenderer) -> ()
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterSpriteChangeCallback
+    summary: |
+      [Unity's SpriteRenderer.UnregisterSpriteChangeCallback Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer.UnregisterSpriteChangeCallback.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: callback
+        type: (SpriteRenderer) -> ()
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

@@ -1,0 +1,38 @@
+name: UICollectionDelegateAsyncRequest
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: isCancelled
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: resultOffset
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: CompleteRequest
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: results
+        type: {LuaObject}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

@@ -1,0 +1,547 @@
+name: UICollectionCells
+type: classes
+summary: |
+  Element that manages a collection of cells within a UICollection. This element
+    should only be used from within a UICollectionSection otherwise the behaviour is unknown.
+description:
+code_samples:
+inherits: 
+  - Class.VisualElement
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UICollectionCells
+        summary:
+properties: 
+  - name: cellCount
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: collection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.UICollection
+  - name: hasLayout
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: loading
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: provider
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: UICollectionProvider
+  - name: section
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.UICollectionSection
+  - name: selection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: {number}
+  - name: selectionCount
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: visibleCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: {UIView}
+methods: 
+  - name: AddCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: AddCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Deselect
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Deselect
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: DeselectAll
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: EnumerateVisibleCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: enumerate
+        type: (UIView, number, boolean) -> (boolean)
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: GetVisibleCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.UIView
+        summary:
+  - name: IndexOf
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: InsertCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: InsertCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: InstantiateCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.UIView
+        summary:
+  - name: IsSelected
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: IsSelected
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: ItemSizeChanged
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: itemIndex
+        type: number
+        default:
+        summary: 
+      - name: itemPosition
+        type: number
+        default:
+        summary: 
+      - name: delta
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: RecycleAllCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RecycleCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveAllCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: ScrollTo
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+      - name: additionalOffset
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Select
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+      - name: add
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Select
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+      - name: add
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectionIndexOf
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: SetLayout
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: layout
+        type: Class.UICollectionGridLayout
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetLayout
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: layout
+        type: Class.UICollectionStackLayout
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Toggle
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+      - name: add
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Toggle
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cellIndex
+        type: number
+        default:
+        summary: 
+      - name: add
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: UpdateCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: UpdateCells
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: UpdateLayout
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: min
+        type: number
+        default:
+        summary: 
+      - name: max
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:

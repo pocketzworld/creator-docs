@@ -1,0 +1,18 @@
+name: PageDidChange
+type: classes
+summary: |
+  Event sent when page view stopped animating page change
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 

@@ -1,0 +1,11 @@
+name: Asset
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - ScriptableObject
+constructors: 
+properties: 
+methods:

@@ -1,0 +1,38 @@
+name: Gradient
+type: classes
+summary: |
+  [Unity's Gradient Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Gradient.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: Equals
+    summary: |
+      [Unity's Gradient.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Gradient.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: Class.Gradient
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: Evaluate
+    summary: |
+      [Unity's Gradient.Evaluate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Gradient.Evaluate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:

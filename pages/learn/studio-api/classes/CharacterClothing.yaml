@@ -1,0 +1,42 @@
+name: CharacterClothing
+type: classes
+summary: |
+  A single item of clothing in a character's outfit.
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: descriptorId
+        type: string
+        default:
+        summary: 
+      - name: paletteId
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.CharacterClothing
+        summary:
+properties: 
+  - name: color
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: id
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods:

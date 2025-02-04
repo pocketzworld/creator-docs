@@ -1,0 +1,117 @@
+name: SkinnedMeshRenderer
+type: classes
+summary: |
+  [Unity's SkinnedMeshRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.html)
+description:
+code_samples:
+inherits: 
+  - Class.Renderer
+constructors: 
+properties: 
+  - name: bones
+    summary: |
+      [Unity's SkinnedMeshRenderer.bones Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-bones.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {Transform}
+  - name: forceMatrixRecalculationPerRender
+    summary: |
+      [Unity's SkinnedMeshRenderer.forceMatrixRecalculationPerRender Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-forceMatrixRecalculationPerRender.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: rootBone
+    summary: |
+      [Unity's SkinnedMeshRenderer.rootBone Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-rootBone.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+  - name: sharedMesh
+    summary: |
+      [Unity's SkinnedMeshRenderer.sharedMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-sharedMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Mesh
+  - name: skinnedMotionVectors
+    summary: |
+      [Unity's SkinnedMeshRenderer.skinnedMotionVectors Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-skinnedMotionVectors.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: updateWhenOffscreen
+    summary: |
+      [Unity's SkinnedMeshRenderer.updateWhenOffscreen Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-updateWhenOffscreen.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: BakeMesh
+    summary: |
+      [Unity's SkinnedMeshRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.BakeMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: mesh
+        type: Class.Mesh
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: BakeMesh
+    summary: |
+      [Unity's SkinnedMeshRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.BakeMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: mesh
+        type: Class.Mesh
+        default:
+        summary: 
+      - name: useScale
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: GetBlendShapeWeight
+    summary: |
+      [Unity's SkinnedMeshRenderer.GetBlendShapeWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.GetBlendShapeWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: SetBlendShapeWeight
+    summary: |
+      [Unity's SkinnedMeshRenderer.SetBlendShapeWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.SetBlendShapeWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

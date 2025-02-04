@@ -1,0 +1,77 @@
+name: TextElement
+type: classes
+summary: |
+  [Unity's TextElement Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement.html)
+description:
+code_samples:
+inherits: 
+  - BindableElement
+constructors: 
+  - name: new
+    summary: |
+      [Unity's TextElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: TextElement
+        summary:
+properties: 
+  - name: ussClassName
+    summary: |
+      [Unity's TextElement.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-ussClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: displayTooltipWhenElided
+    summary: |
+      [Unity's TextElement.displayTooltipWhenElided Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-displayTooltipWhenElided.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: enableRichText
+    summary: |
+      [Unity's TextElement.enableRichText Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-enableRichText.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: experimental
+    summary: |
+      [Unity's TextElement.experimental Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-experimental.html)
+    description:
+    is_static: false
+    code_samples:
+    type: ITextElementExperimentalFeatures
+  - name: isElided
+    summary: |
+      [Unity's TextElement.isElided Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-isElided.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: parseEscapeSequences
+    summary: |
+      [Unity's TextElement.parseEscapeSequences Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-parseEscapeSequences.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: selection
+    summary: |
+      [Unity's TextElement.selection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-selection.html)
+    description:
+    is_static: false
+    code_samples:
+    type: ITextSelection
+  - name: text
+    summary: |
+      [Unity's TextElement.text Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-text.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods:

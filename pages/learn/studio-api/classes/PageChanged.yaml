@@ -1,0 +1,32 @@
+name: PageChanged
+type: classes
+summary: |
+  Event sent when the page changes within a UIPageView
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: newPage
+    summary: |
+      New page index
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: oldPage
+    summary: |
+      Old page index
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:

@@ -1,0 +1,25 @@
+name: MeshFilter
+type: classes
+summary: |
+  [Unity's MeshFilter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshFilter.html)
+description:
+code_samples:
+inherits: 
+  - Class.Component
+constructors: 
+properties: 
+  - name: mesh
+    summary: |
+      [Unity's MeshFilter.mesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshFilter-mesh.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Mesh
+  - name: sharedMesh
+    summary: |
+      [Unity's MeshFilter.sharedMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshFilter-sharedMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Mesh
+methods: 

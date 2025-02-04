@@ -1,0 +1,11 @@
+name: PressGesture
+type: classes
+summary: |
+  Gesture detect when a single finger is pressed on an element and then removed.
+description:
+code_samples:
+inherits: 
+  - Class.Gesture
+constructors: 
+properties: 
+methods:

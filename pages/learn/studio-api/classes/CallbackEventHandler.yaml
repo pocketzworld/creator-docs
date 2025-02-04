@@ -1,0 +1,44 @@
+name: CallbackEventHandler
+type: classes
+summary: |
+  [Unity's CallbackEventHandler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: HasBubbleUpHandlers
+    summary: |
+      [Unity's CallbackEventHandler.HasBubbleUpHandlers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.HasBubbleUpHandlers.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasTrickleDownHandlers
+    summary: |
+      [Unity's CallbackEventHandler.HasTrickleDownHandlers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.HasTrickleDownHandlers.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: SendEvent
+    summary: |
+      [Unity's CallbackEventHandler.SendEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.SendEvent.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: e
+        type: Class.EventBase
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

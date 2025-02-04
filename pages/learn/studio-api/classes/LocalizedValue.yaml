@@ -1,0 +1,184 @@
+name: LocalizedValue
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: DayAndMonth
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: DayAndMonthAndFullYear
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: DayAndMonthAndYear
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: HoursMinutes
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: duration
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: HoursMinutesSeconds
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: duration
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: MonthAndYear
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+      - name: abbreviated
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: Numeric
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: value
+        type: number
+        default:
+        summary: 
+      - name: decimalPoints
+        type: number
+        default:
+        summary: 
+      - name: abbreviated
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: TimeAgo
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+      - name: shortForm
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: TimeIn
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        default:
+        summary: 
+      - name: shortForm
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: TimeLeft
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: secondsLeft
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: TimeSpan
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: seconds
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:

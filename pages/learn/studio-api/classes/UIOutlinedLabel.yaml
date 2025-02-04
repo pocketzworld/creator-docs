@@ -1,0 +1,80 @@
+name: UIOutlinedLabel
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - TextElement
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UIOutlinedLabel
+        summary:
+properties: 
+  - name: ussOutlinedLabel
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: hasShadow
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: uppercase
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: AdjustFontSize
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SetPrelocalizedText
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: value
+        type: string
+        default:
+        summary: 
+      - name: skipRtlValidation
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

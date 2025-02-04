@@ -1,0 +1,157 @@
+name: Storage
+type: classes
+summary: |
+  The Storage API provides functionality for saving and loading persistent data. This can be used
+    for player-specific data such as storing player progress or a high score. This can also be used
+    for global data for tracking the progress of all players or a global leaderboard. The Storage
+    API is only available on the server. For saving a player's obtained items or currency, use the
+    Inventory API. See StorageError for a list of errors that can be returned from Storage
+    functions. There is a limit of how often Storage functions can be called before functions will
+    start returning StorageError.RequestThrottled. See the documentation for
+    StorageError.RequestThrottled for details. In Unity, the Storage file is located at
+    Library/localStorage. You can open this file with a text editor to see the data stored in it.
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: DeletePlayerValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: DeleteValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetPlayerValue
+    summary: |
+      This is the equivalent of calling GetValue(player.user.id .. "/" .. key, callback). This
+      retrieves a value that is specific to the player. If you want to get a global value or use a
+      different format for the key, use GetValue instead.
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetValue
+    summary: |
+      Retrieves a value from storage with the given key. The callback parameters are the value
+      and error code. Value will be nil and the error code will be StorageError.None if the value
+      does not exist. Value will be nil and the error code will be a value other than
+      StorageError.None if an error occurred.
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: callback
+        type: () -> ()
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: IncrementPlayerValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: IncrementValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SearchPlayerValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SearchValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SetPlayerValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SetValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePlayerValue
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: UpdateValue
+    summary: |
+      UpdateValue will use GetValue to retrieve the current value, then call the modifier function
+      with the value as a parameter. If the value does not exist, nil will be passed to the modifier
+      function. UpdateValue will then use SetValue to set the value to what is returned from the
+      modifier function. If the modifier function returns nil, the value will not be set and the
+      callback will be immediately called. The modifier function may be called multiple times if
+      other world instances have made changes to the value. Currently supported types are string,
+      number, boolean, table and Vector3. The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:

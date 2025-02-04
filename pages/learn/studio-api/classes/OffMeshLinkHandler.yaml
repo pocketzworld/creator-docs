@@ -1,0 +1,25 @@
+name: OffMeshLinkHandler
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.MonoBehaviour
+constructors: 
+properties: 
+  - name: heightMultiplier
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: speedMultiplier
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods:

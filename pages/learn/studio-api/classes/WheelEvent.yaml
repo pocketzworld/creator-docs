@@ -1,0 +1,109 @@
+name: WheelEvent
+type: classes
+summary: |
+  [Unity's WheelEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: actionKey
+    summary: |
+      [Unity's WheelEvent.actionKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-actionKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: altKey
+    summary: |
+      [Unity's WheelEvent.altKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-altKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: button
+    summary: |
+      [Unity's WheelEvent.button Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-button.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: clickCount
+    summary: |
+      [Unity's WheelEvent.clickCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-clickCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: commandKey
+    summary: |
+      [Unity's WheelEvent.commandKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-commandKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: ctrlKey
+    summary: |
+      [Unity's WheelEvent.ctrlKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-ctrlKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: currentTarget
+    summary: |
+      [Unity's WheelEvent.currentTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-currentTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IEventHandler
+  - name: delta
+    summary: |
+      [Unity's WheelEvent.delta Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-delta.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: eventTypeId
+    summary: |
+      [Unity's WheelEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: localMousePosition
+    summary: |
+      [Unity's WheelEvent.localMousePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-localMousePosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: mouseDelta
+    summary: |
+      [Unity's WheelEvent.mouseDelta Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-mouseDelta.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: mousePosition
+    summary: |
+      [Unity's WheelEvent.mousePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-mousePosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: pressedButtons
+    summary: |
+      [Unity's WheelEvent.pressedButtons Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-pressedButtons.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: shiftKey
+    summary: |
+      [Unity's WheelEvent.shiftKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WheelEvent-shiftKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods:

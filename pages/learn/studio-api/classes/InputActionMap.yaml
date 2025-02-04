@@ -1,0 +1,154 @@
+name: InputActionMap
+type: classes
+summary: |
+  [Unity's InputActionMap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's InputActionMap.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.InputActionMap
+        summary:
+  - name: new
+    summary: |
+      [Unity's InputActionMap.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: Class.InputActionMap
+        summary:
+properties: 
+  - name: enabled
+    summary: |
+      [Unity's InputActionMap.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap-enabled.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: name
+    summary: |
+      [Unity's InputActionMap.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap-name.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods: 
+  - name: Clone
+    summary: |
+      [Unity's InputActionMap.Clone Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Clone.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.InputActionMap
+        summary:
+  - name: Contains
+    summary: |
+      [Unity's InputActionMap.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Contains.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: action
+        type: Class.InputAction
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: Disable
+    summary: |
+      [Unity's InputActionMap.Disable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Disable.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Enable
+    summary: |
+      [Unity's InputActionMap.Enable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Enable.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: FindAction
+    summary: |
+      [Unity's InputActionMap.FindAction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.FindAction.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: actionNameOrId
+        type: string
+        default:
+        summary: 
+      - name: throwIfNotFound
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: Class.InputAction
+        summary:
+  - name: FromJson
+    summary: |
+      [Unity's InputActionMap.FromJson Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.FromJson.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: json
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: {InputActionMap}
+        summary:
+  - name: OnAfterDeserialize
+    summary: |
+      [Unity's InputActionMap.OnAfterDeserialize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.OnAfterDeserialize.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: OnBeforeSerialize
+    summary: |
+      [Unity's InputActionMap.OnBeforeSerialize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.OnBeforeSerialize.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: ToJson
+    summary: |
+      [Unity's InputActionMap.ToJson Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.ToJson.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: string
+        summary:

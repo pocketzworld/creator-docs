@@ -1,0 +1,32 @@
+name: AttachToPanelEvent
+type: classes
+summary: |
+  [Unity's AttachToPanelEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AttachToPanelEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: destinationPanel
+    summary: |
+      [Unity's AttachToPanelEvent.destinationPanel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AttachToPanelEvent-destinationPanel.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IPanel
+  - name: eventTypeId
+    summary: |
+      [Unity's AttachToPanelEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AttachToPanelEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: originPanel
+    summary: |
+      [Unity's AttachToPanelEvent.originPanel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AttachToPanelEvent-originPanel.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IPanel
+methods:

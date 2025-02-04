@@ -1,0 +1,957 @@
+name: MaterialPropertyBlock
+type: classes
+summary: |
+  [Unity's MaterialPropertyBlock Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's MaterialPropertyBlock.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.MaterialPropertyBlock
+        summary:
+properties: 
+  - name: isEmpty
+    summary: |
+      [Unity's MaterialPropertyBlock.isEmpty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock-isEmpty.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: Clear
+    summary: |
+      [Unity's MaterialPropertyBlock.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.Clear.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetColor
+    summary: |
+      [Unity's MaterialPropertyBlock.GetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetColor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: GetColor
+    summary: |
+      [Unity's MaterialPropertyBlock.GetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetColor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: GetFloat
+    summary: |
+      [Unity's MaterialPropertyBlock.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetFloat
+    summary: |
+      [Unity's MaterialPropertyBlock.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetFloatArray
+    summary: |
+      [Unity's MaterialPropertyBlock.GetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloatArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: {number}
+        summary:
+  - name: GetFloatArray
+    summary: |
+      [Unity's MaterialPropertyBlock.GetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloatArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: {number}
+        summary:
+  - name: GetInt
+    summary: |
+      [Unity's MaterialPropertyBlock.GetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetInt
+    summary: |
+      [Unity's MaterialPropertyBlock.GetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetInteger
+    summary: |
+      [Unity's MaterialPropertyBlock.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetInteger
+    summary: |
+      [Unity's MaterialPropertyBlock.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetMatrix
+    summary: |
+      [Unity's MaterialPropertyBlock.GetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Matrix4x4
+        summary:
+  - name: GetMatrix
+    summary: |
+      [Unity's MaterialPropertyBlock.GetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: DataType.Matrix4x4
+        summary:
+  - name: GetMatrixArray
+    summary: |
+      [Unity's MaterialPropertyBlock.GetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrixArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: {Matrix4x4}
+        summary:
+  - name: GetMatrixArray
+    summary: |
+      [Unity's MaterialPropertyBlock.GetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrixArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: {Matrix4x4}
+        summary:
+  - name: GetTexture
+    summary: |
+      [Unity's MaterialPropertyBlock.GetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.Texture
+        summary:
+  - name: GetTexture
+    summary: |
+      [Unity's MaterialPropertyBlock.GetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: Class.Texture
+        summary:
+  - name: GetVector
+    summary: |
+      [Unity's MaterialPropertyBlock.GetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector4
+        summary:
+  - name: GetVector
+    summary: |
+      [Unity's MaterialPropertyBlock.GetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector4
+        summary:
+  - name: GetVectorArray
+    summary: |
+      [Unity's MaterialPropertyBlock.GetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVectorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: {Vector4}
+        summary:
+  - name: GetVectorArray
+    summary: |
+      [Unity's MaterialPropertyBlock.GetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVectorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: {Vector4}
+        summary:
+  - name: HasBuffer
+    summary: |
+      [Unity's MaterialPropertyBlock.HasBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasBuffer
+    summary: |
+      [Unity's MaterialPropertyBlock.HasBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasColor
+    summary: |
+      [Unity's MaterialPropertyBlock.HasColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasColor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasColor
+    summary: |
+      [Unity's MaterialPropertyBlock.HasColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasColor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasConstantBuffer
+    summary: |
+      [Unity's MaterialPropertyBlock.HasConstantBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasConstantBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasConstantBuffer
+    summary: |
+      [Unity's MaterialPropertyBlock.HasConstantBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasConstantBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasFloat
+    summary: |
+      [Unity's MaterialPropertyBlock.HasFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasFloat
+    summary: |
+      [Unity's MaterialPropertyBlock.HasFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasInt
+    summary: |
+      [Unity's MaterialPropertyBlock.HasInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasInt
+    summary: |
+      [Unity's MaterialPropertyBlock.HasInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasInteger
+    summary: |
+      [Unity's MaterialPropertyBlock.HasInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasInteger
+    summary: |
+      [Unity's MaterialPropertyBlock.HasInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasMatrix
+    summary: |
+      [Unity's MaterialPropertyBlock.HasMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasMatrix
+    summary: |
+      [Unity's MaterialPropertyBlock.HasMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasProperty
+    summary: |
+      [Unity's MaterialPropertyBlock.HasProperty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasProperty.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasProperty
+    summary: |
+      [Unity's MaterialPropertyBlock.HasProperty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasProperty.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasTexture
+    summary: |
+      [Unity's MaterialPropertyBlock.HasTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasTexture
+    summary: |
+      [Unity's MaterialPropertyBlock.HasTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasVector
+    summary: |
+      [Unity's MaterialPropertyBlock.HasVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: HasVector
+    summary: |
+      [Unity's MaterialPropertyBlock.HasVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: SetColor
+    summary: |
+      [Unity's MaterialPropertyBlock.SetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetColor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: DataType.Color
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetColor
+    summary: |
+      [Unity's MaterialPropertyBlock.SetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetColor.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: DataType.Color
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetFloat
+    summary: |
+      [Unity's MaterialPropertyBlock.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetFloat
+    summary: |
+      [Unity's MaterialPropertyBlock.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetFloatArray
+    summary: |
+      [Unity's MaterialPropertyBlock.SetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloatArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: values
+        type: {number}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetFloatArray
+    summary: |
+      [Unity's MaterialPropertyBlock.SetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloatArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: values
+        type: {number}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetInt
+    summary: |
+      [Unity's MaterialPropertyBlock.SetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetInt
+    summary: |
+      [Unity's MaterialPropertyBlock.SetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetInteger
+    summary: |
+      [Unity's MaterialPropertyBlock.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetInteger
+    summary: |
+      [Unity's MaterialPropertyBlock.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetMatrix
+    summary: |
+      [Unity's MaterialPropertyBlock.SetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: DataType.Matrix4x4
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetMatrix
+    summary: |
+      [Unity's MaterialPropertyBlock.SetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: DataType.Matrix4x4
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetMatrixArray
+    summary: |
+      [Unity's MaterialPropertyBlock.SetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrixArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: values
+        type: {Matrix4x4}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetMatrixArray
+    summary: |
+      [Unity's MaterialPropertyBlock.SetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrixArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: values
+        type: {Matrix4x4}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetTexture
+    summary: |
+      [Unity's MaterialPropertyBlock.SetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: Class.Texture
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetTexture
+    summary: |
+      [Unity's MaterialPropertyBlock.SetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: Class.Texture
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetVector
+    summary: |
+      [Unity's MaterialPropertyBlock.SetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: value
+        type: DataType.Vector4
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetVector
+    summary: |
+      [Unity's MaterialPropertyBlock.SetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: DataType.Vector4
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetVectorArray
+    summary: |
+      [Unity's MaterialPropertyBlock.SetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVectorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: nameID
+        type: number
+        default:
+        summary: 
+      - name: values
+        type: {Vector4}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetVectorArray
+    summary: |
+      [Unity's MaterialPropertyBlock.SetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVectorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+      - name: values
+        type: {Vector4}
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

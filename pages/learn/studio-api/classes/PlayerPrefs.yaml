@@ -1,0 +1,146 @@
+name: PlayerPrefs
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: DeleteKey
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: GetFloat
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: defaultValue
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetInt
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: defaultValue
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetString
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: defaultValue
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: HasKey
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: SetFloat
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetInt
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetString
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+      - name: value
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:

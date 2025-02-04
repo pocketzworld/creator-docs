@@ -1,0 +1,25 @@
+name: CharacterAnimation
+type: classes
+summary: |
+  Represents a character animation that includes animations for each side of the character.
+description:
+code_samples:
+inherits: 
+  - Asset
+constructors: 
+properties: 
+  - name: back
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.AnimationClip
+  - name: front
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.AnimationClip
+methods: 
