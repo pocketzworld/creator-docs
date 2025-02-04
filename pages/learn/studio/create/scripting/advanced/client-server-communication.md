@@ -1,6 +1,6 @@
 # Client Server Communication
 
-In Highrise Studio, you can establish communication between the client and server sides using events. Events enable firing and connecting to events on both the client and server sides. You can trigger an event on the client side and have it handled on the server side, or vice versa.
+In Highrise Studio, you can establish communication between the client and server sides using events and/or [network values](https://create.highrise.game/learn/studio/create/scripting/advanced/network-values). Events enable firing and connecting to events on both the client and server sides. You can trigger an event on the client side and have it handled on the server side, or vice versa.
 
 ## Acceptable Data Types
 

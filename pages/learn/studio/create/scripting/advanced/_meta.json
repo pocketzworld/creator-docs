@@ -17,6 +17,9 @@
   "taphandlers":{
     "title": "Tap Handlers"
   },
+  "client-server-communication": {
+    "title": "Client-Server Communication"
+  },
   "player-character-events":{
     "title": "Player and Character Events"
   },
@@ -25,9 +28,6 @@
   },
   "tracking-players": {
     "title": "Tracking Players"
-  },
-  "client-server-communication": {
-    "title": "Client-Server Communication"
   },
   "leaderboard-api": {
     "title": "Leaderboard"
