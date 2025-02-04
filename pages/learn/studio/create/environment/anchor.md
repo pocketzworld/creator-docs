@@ -2,7 +2,7 @@
 
 ## Overview
 
-Anchor Points are designated spots on objects within game environments where characters can interact, such as sitting or standing. Properly configured Anchor Points enhance the realism and interactivity of scenes.
+Anchor Points are designated spots on objects within game environments where characters can interact, such as sitting on a bench or standing. Properly configured Anchor Points allow characters to sit realistically, enhancing the realism and interactivity of scenes.
 
 ### Example Object
 In this guide, the object used for demonstration is a "Wooden Bench," which is available in the Highrise Assets Catalog under the "Furniture" category.
