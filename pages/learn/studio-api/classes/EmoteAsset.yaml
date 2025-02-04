@@ -8,5 +8,4 @@ inherits:
   - Class.CharacterAnimation
 constructors: 
 properties: 
-methods: 
-math_operations: 
+methods:

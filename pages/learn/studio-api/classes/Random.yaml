@@ -211,5 +211,4 @@ methods:
         summary: 
     returns:
       - type: number
-        summary:
-math_operations: 
+        summary: 

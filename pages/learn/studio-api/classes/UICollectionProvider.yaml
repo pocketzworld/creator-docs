@@ -85,4 +85,3 @@ methods:
     returns:
       - type: number
         summary:
-math_operations: 

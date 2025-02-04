@@ -81,7 +81,7 @@ methods:
   - name: PerformUpdates
     summary: |
       Animates multiple update operations. All calls to InsertItem, RemoveUpdate, or UpdateItem
-    must be made from within a call to PerformUpdates
+      must be made from within a call to PerformUpdates
     description:
     is_static: false
     code_samples:
@@ -159,4 +159,3 @@ methods:
     returns:
       - type: void
         summary:
-math_operations: 

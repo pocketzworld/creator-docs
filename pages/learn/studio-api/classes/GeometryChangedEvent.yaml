@@ -48,4 +48,3 @@ methods:
     returns:
       - type: Class.GeometryChangedEvent
         summary:
-math_operations: 

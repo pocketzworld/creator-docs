@@ -81,5 +81,4 @@ methods:
         summary: 
     returns:
       - type: DataType.Vector2
-        summary:
-math_operations: 
+        summary: 

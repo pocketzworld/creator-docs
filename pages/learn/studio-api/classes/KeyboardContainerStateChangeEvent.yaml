@@ -95,5 +95,4 @@ methods:
         summary: 
     returns:
       - type: void
-        summary:
-math_operations: 
+        summary: 

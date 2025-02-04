@@ -32,5 +32,4 @@ constructors:
       - type: Class.UILocalizedButton
         summary:
 properties: 
-methods: 
-math_operations: 
+methods:

@@ -64,4 +64,3 @@ methods:
     returns:
       - type: Class.InputAction
         summary:
-math_operations: 

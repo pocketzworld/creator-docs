@@ -15,5 +15,4 @@ properties:
     is_static: false
     code_samples:
     type: number
-methods: 
-math_operations: 
+methods:

@@ -47,5 +47,4 @@ methods:
         summary: 
     returns:
       - type: Class.InputEvent
-        summary:
-math_operations: 
+        summary: 

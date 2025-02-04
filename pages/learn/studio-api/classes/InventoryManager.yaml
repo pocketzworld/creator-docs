@@ -14,5 +14,4 @@ properties:
     is_static: false
     code_samples:
     type: LuaEvent
-methods: 
-math_operations: 
+methods:

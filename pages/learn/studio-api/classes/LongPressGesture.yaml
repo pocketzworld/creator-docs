@@ -22,5 +22,4 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods: 
-math_operations: 
+methods:

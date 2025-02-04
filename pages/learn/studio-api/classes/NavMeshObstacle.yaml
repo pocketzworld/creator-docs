@@ -71,5 +71,4 @@ properties:
     is_static: false
     code_samples:
     type: DataType.Vector3
-methods: 
-math_operations: 
+methods:

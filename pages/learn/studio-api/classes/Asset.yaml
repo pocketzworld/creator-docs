@@ -8,5 +8,4 @@ inherits:
   - ScriptableObject
 constructors: 
 properties: 
-methods: 
-math_operations: 
+methods:

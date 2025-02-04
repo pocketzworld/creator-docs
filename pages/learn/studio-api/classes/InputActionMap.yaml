@@ -152,4 +152,3 @@ methods:
     returns:
       - type: string
         summary:
-math_operations: 

@@ -175,7 +175,7 @@ properties:
   - name: inputPattern
     summary: |
       A regular expression to match valid values that can be inserted into the textfield by the user.
-    Invalid values will be rejected.
+      Invalid values will be rejected.
     description:
     is_static: false
     code_samples:
@@ -204,7 +204,7 @@ properties:
   - name: isShiftReturnModeEnabled
     summary: |
       Enables a mode in which Return key sends a ReturnEvent
-    and Shift+Return sends ShiftReturnEvent.
+      and Shift+Return sends ShiftReturnEvent.
     Warning: Works only on non-mobile platforms!
     description:
     is_static: false
@@ -413,4 +413,3 @@ methods:
     returns:
       - type: void
         summary:
-math_operations: 

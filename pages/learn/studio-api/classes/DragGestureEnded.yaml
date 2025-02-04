@@ -64,5 +64,4 @@ properties:
     is_static: false
     code_samples:
     type: DataType.Vector2
-methods: 
-math_operations: 
+methods:

@@ -74,5 +74,4 @@ properties:
     is_static: false
     code_samples:
     type: string
-methods: 
-math_operations: 
+methods:

@@ -83,4 +83,3 @@ methods:
     returns:
       - type: Class.DragGesture
         summary:
-math_operations: 

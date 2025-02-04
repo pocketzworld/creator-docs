@@ -22,4 +22,3 @@ properties:
     code_samples:
     type: string
 methods: 
-math_operations: 

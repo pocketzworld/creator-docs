@@ -50,4 +50,3 @@ methods:
     returns:
       - type: boolean
         summary:
-math_operations: 
