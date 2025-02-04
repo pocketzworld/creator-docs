@@ -1,0 +1,140 @@
+name: NavMeshSurface
+type: classes
+summary: |
+  [Unity's NavMeshSurface Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.html)
+description:
+code_samples:
+inherits: 
+  - Class.MonoBehaviour
+constructors: 
+properties: 
+  - name: activeSurfaces
+    summary: |
+      [Unity's NavMeshSurface.activeSurfaces Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-activeSurfaces.html)
+    description:
+    is_static: true
+    code_samples:
+    type: {NavMeshSurface}
+  - name: agentTypeID
+    summary: |
+      [Unity's NavMeshSurface.agentTypeID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-agentTypeID.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: buildHeightMesh
+    summary: |
+      [Unity's NavMeshSurface.buildHeightMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-buildHeightMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: center
+    summary: |
+      [Unity's NavMeshSurface.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-center.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: defaultArea
+    summary: |
+      [Unity's NavMeshSurface.defaultArea Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-defaultArea.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: ignoreNavMeshAgent
+    summary: |
+      [Unity's NavMeshSurface.ignoreNavMeshAgent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-ignoreNavMeshAgent.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: ignoreNavMeshObstacle
+    summary: |
+      [Unity's NavMeshSurface.ignoreNavMeshObstacle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-ignoreNavMeshObstacle.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: layerMask
+    summary: |
+      [Unity's NavMeshSurface.layerMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-layerMask.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.LayerMask
+  - name: minRegionArea
+    summary: |
+      [Unity's NavMeshSurface.minRegionArea Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-minRegionArea.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: overrideTileSize
+    summary: |
+      [Unity's NavMeshSurface.overrideTileSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-overrideTileSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: overrideVoxelSize
+    summary: |
+      [Unity's NavMeshSurface.overrideVoxelSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-overrideVoxelSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: size
+    summary: |
+      [Unity's NavMeshSurface.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-size.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: tileSize
+    summary: |
+      [Unity's NavMeshSurface.tileSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-tileSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: voxelSize
+    summary: |
+      [Unity's NavMeshSurface.voxelSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-voxelSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: AddData
+    summary: |
+      [Unity's NavMeshSurface.AddData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.AddData.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: BuildNavMesh
+    summary: |
+      [Unity's NavMeshSurface.BuildNavMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.BuildNavMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveData
+    summary: |
+      [Unity's NavMeshSurface.RemoveData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.RemoveData.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

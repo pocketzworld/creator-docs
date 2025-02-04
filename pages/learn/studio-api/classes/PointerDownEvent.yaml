@@ -1,0 +1,187 @@
+name: PointerDownEvent
+type: classes
+summary: |
+  [Unity's PointerDownEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: actionKey
+    summary: |
+      [Unity's PointerDownEvent.actionKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-actionKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: altKey
+    summary: |
+      [Unity's PointerDownEvent.altKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-altKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: altitudeAngle
+    summary: |
+      [Unity's PointerDownEvent.altitudeAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-altitudeAngle.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: azimuthAngle
+    summary: |
+      [Unity's PointerDownEvent.azimuthAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-azimuthAngle.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: button
+    summary: |
+      [Unity's PointerDownEvent.button Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-button.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: clickCount
+    summary: |
+      [Unity's PointerDownEvent.clickCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-clickCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: commandKey
+    summary: |
+      [Unity's PointerDownEvent.commandKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-commandKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: ctrlKey
+    summary: |
+      [Unity's PointerDownEvent.ctrlKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-ctrlKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: currentTarget
+    summary: |
+      [Unity's PointerDownEvent.currentTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-currentTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IEventHandler
+  - name: deltaPosition
+    summary: |
+      [Unity's PointerDownEvent.deltaPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-deltaPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: deltaTime
+    summary: |
+      [Unity's PointerDownEvent.deltaTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-deltaTime.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      [Unity's PointerDownEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isPrimary
+    summary: |
+      [Unity's PointerDownEvent.isPrimary Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-isPrimary.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: localPosition
+    summary: |
+      [Unity's PointerDownEvent.localPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-localPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: pointerId
+    summary: |
+      [Unity's PointerDownEvent.pointerId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-pointerId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: pointerType
+    summary: |
+      [Unity's PointerDownEvent.pointerType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-pointerType.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: position
+    summary: |
+      [Unity's PointerDownEvent.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-position.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: pressedButtons
+    summary: |
+      [Unity's PointerDownEvent.pressedButtons Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-pressedButtons.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: pressure
+    summary: |
+      [Unity's PointerDownEvent.pressure Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-pressure.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: radius
+    summary: |
+      [Unity's PointerDownEvent.radius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-radius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: radiusVariance
+    summary: |
+      [Unity's PointerDownEvent.radiusVariance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-radiusVariance.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: shiftKey
+    summary: |
+      [Unity's PointerDownEvent.shiftKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-shiftKey.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: tangentialPressure
+    summary: |
+      [Unity's PointerDownEvent.tangentialPressure Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-tangentialPressure.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: tilt
+    summary: |
+      [Unity's PointerDownEvent.tilt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-tilt.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: twist
+    summary: |
+      [Unity's PointerDownEvent.twist Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerDownEvent-twist.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

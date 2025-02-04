@@ -1,0 +1,167 @@
+name: AnimationClip
+type: classes
+summary: |
+  [Unity's AnimationClip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.html)
+description:
+code_samples:
+inherits: 
+  - Motion
+constructors: 
+properties: 
+  - name: empty
+    summary: |
+      [Unity's AnimationClip.empty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-empty.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: events
+    summary: |
+      [Unity's AnimationClip.events Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-events.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {AnimationEvent}
+  - name: frameRate
+    summary: |
+      [Unity's AnimationClip.frameRate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-frameRate.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: hasGenericRootTransform
+    summary: |
+      [Unity's AnimationClip.hasGenericRootTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-hasGenericRootTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: hasMotionCurves
+    summary: |
+      [Unity's AnimationClip.hasMotionCurves Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-hasMotionCurves.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: hasMotionFloatCurves
+    summary: |
+      [Unity's AnimationClip.hasMotionFloatCurves Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-hasMotionFloatCurves.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: hasRootCurves
+    summary: |
+      [Unity's AnimationClip.hasRootCurves Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-hasRootCurves.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: humanMotion
+    summary: |
+      [Unity's AnimationClip.humanMotion Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-humanMotion.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: legacy
+    summary: |
+      [Unity's AnimationClip.legacy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-legacy.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: length
+    summary: |
+      [Unity's AnimationClip.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-length.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: localBounds
+    summary: |
+      [Unity's AnimationClip.localBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-localBounds.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Bounds
+methods: 
+  - name: AddEvent
+    summary: |
+      [Unity's AnimationClip.AddEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.AddEvent.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: evt
+        type: Class.AnimationEvent
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: ClearCurves
+    summary: |
+      [Unity's AnimationClip.ClearCurves Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.ClearCurves.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: EnsureQuaternionContinuity
+    summary: |
+      [Unity's AnimationClip.EnsureQuaternionContinuity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.EnsureQuaternionContinuity.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SampleAnimation
+    summary: |
+      [Unity's AnimationClip.SampleAnimation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.SampleAnimation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: go
+        type: Class.GameObject
+        default:
+        summary: 
+      - name: time
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetCurve
+    summary: |
+      [Unity's AnimationClip.SetCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.SetCurve.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: relativePath
+        type: string
+        default:
+        summary: 
+      - name: type
+        type: Class.Type
+        default:
+        summary: 
+      - name: propertyName
+        type: string
+        default:
+        summary: 
+      - name: curve
+        type: Class.AnimationCurve
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

@@ -1,0 +1,18 @@
+name: InventoryManager
+type: classes
+summary: |
+  Singleton service that provides access to user Inventory events.
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: inventoryChanged
+    summary: |
+      This event is invoked when an item is added or removed from the local user inventory.
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+methods: 
+math_operations: 

@@ -1,0 +1,215 @@
+name: Random
+type: classes
+summary: |
+  [Unity's Random Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: insideUnitCircle
+    summary: |
+      [Unity's Random.insideUnitCircle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-insideUnitCircle.html)
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector2
+  - name: insideUnitSphere
+    summary: |
+      [Unity's Random.insideUnitSphere Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-insideUnitSphere.html)
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: onUnitSphere
+    summary: |
+      [Unity's Random.onUnitSphere Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-onUnitSphere.html)
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Vector3
+  - name: rotation
+    summary: |
+      [Unity's Random.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-rotation.html)
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Quaternion
+  - name: rotationUniform
+    summary: |
+      [Unity's Random.rotationUniform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-rotationUniform.html)
+    description:
+    is_static: true
+    code_samples:
+    type: DataType.Quaternion
+  - name: value
+    summary: |
+      [Unity's Random.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-value.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
+  - name: ColorHSV
+    summary: |
+      [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: ColorHSV
+    summary: |
+      [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: hueMin
+        type: number
+        default:
+        summary: 
+      - name: hueMax
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: ColorHSV
+    summary: |
+      [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: hueMin
+        type: number
+        default:
+        summary: 
+      - name: hueMax
+        type: number
+        default:
+        summary: 
+      - name: saturationMin
+        type: number
+        default:
+        summary: 
+      - name: saturationMax
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: ColorHSV
+    summary: |
+      [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: hueMin
+        type: number
+        default:
+        summary: 
+      - name: hueMax
+        type: number
+        default:
+        summary: 
+      - name: saturationMin
+        type: number
+        default:
+        summary: 
+      - name: saturationMax
+        type: number
+        default:
+        summary: 
+      - name: valueMin
+        type: number
+        default:
+        summary: 
+      - name: valueMax
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: ColorHSV
+    summary: |
+      [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: hueMin
+        type: number
+        default:
+        summary: 
+      - name: hueMax
+        type: number
+        default:
+        summary: 
+      - name: saturationMin
+        type: number
+        default:
+        summary: 
+      - name: saturationMax
+        type: number
+        default:
+        summary: 
+      - name: valueMin
+        type: number
+        default:
+        summary: 
+      - name: valueMax
+        type: number
+        default:
+        summary: 
+      - name: alphaMin
+        type: number
+        default:
+        summary: 
+      - name: alphaMax
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: InitState
+    summary: |
+      [Unity's Random.InitState Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.InitState.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: seed
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Range
+    summary: |
+      [Unity's Random.Range Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.Range.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: minInclusive
+        type: number
+        default:
+        summary: 
+      - name: maxInclusive
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+math_operations: 

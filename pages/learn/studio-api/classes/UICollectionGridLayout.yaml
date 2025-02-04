@@ -1,0 +1,202 @@
+name: UICollectionGridLayout
+type: classes
+summary: |
+  Implements a grid layout within the collection view using fixed item sizes
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      Create a grid layout from uxml
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: spacing
+        type: number
+        default:
+        summary: 
+      - name: columnCount
+        type: number
+        default:
+        summary: 
+      - name: fixedHeight
+        type: boolean
+        default:
+        summary: 
+      - name: centerContent
+        type: boolean
+        default:
+        summary: 
+      - name: cellAspectRatio
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.UICollectionGridLayout
+        summary:
+properties: 
+  - name: count
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Dispose
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: EnforceColumnCount
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: GetCellOffset
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetVisibleCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.UIView
+        summary:
+  - name: Insert
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Rebuild
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RecycleAllItems
+    summary: |
+      Recycle all known item elements
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Remove
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveAll
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Update
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: min
+        type: number
+        default:
+        summary: 
+      - name: max
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: UpdateSize
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

@@ -1,0 +1,99 @@
+name: KeyboardContainerStateChangeEvent
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: duration
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: from
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isKeyboardVisible
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: to
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: GetPooled
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: isKeyboardVisible
+        type: boolean
+        default:
+        summary: 
+      - name: from
+        type: number
+        default:
+        summary: 
+      - name: to
+        type: number
+        default:
+        summary: 
+      - name: duration
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.KeyboardContainerStateChangeEvent
+        summary:
+  - name: Init
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: isKeyboardVisible
+        type: boolean
+        default:
+        summary: 
+      - name: from
+        type: number
+        default:
+        summary: 
+      - name: to
+        type: number
+        default:
+        summary: 
+      - name: duration
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

@@ -1,0 +1,51 @@
+name: GeometryChangedEvent
+type: classes
+summary: |
+  [Unity's GeometryChangedEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: eventTypeId
+    summary: |
+      [Unity's GeometryChangedEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: newRect
+    summary: |
+      [Unity's GeometryChangedEvent.newRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent-newRect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: oldRect
+    summary: |
+      [Unity's GeometryChangedEvent.oldRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent-oldRect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+methods: 
+  - name: GetPooled
+    summary: |
+      [Unity's GeometryChangedEvent.GetPooled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent.GetPooled.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: oldRect
+        type: DataType.Rect
+        default:
+        summary: 
+      - name: newRect
+        type: DataType.Rect
+        default:
+        summary: 
+    returns:
+      - type: Class.GeometryChangedEvent
+        summary:
+math_operations: 

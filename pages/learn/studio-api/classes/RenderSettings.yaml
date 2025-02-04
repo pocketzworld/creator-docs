@@ -1,0 +1,137 @@
+name: RenderSettings
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: ambientEquatorColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: ambientGroundColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: ambientIntensity
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: ambientLight
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: ambientSkyColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: defaultReflectionResolution
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: flareFadeSpeed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: flareStrength
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: fog
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: fogColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: fogDensity
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: fogEndDistance
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: fogStartDistance
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: haloStrength
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: reflectionBounces
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: reflectionIntensity
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: skybox
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Material
+  - name: subtractiveShadowColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+methods: 
+math_operations: 

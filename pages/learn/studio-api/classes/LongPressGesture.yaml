@@ -1,0 +1,26 @@
+name: LongPressGesture
+type: classes
+summary: |
+  Listens for a long press gestures on a VisualElement and sends a LongPressEvent when recognized.
+description:
+code_samples:
+inherits: 
+  - Class.Gesture
+constructors: 
+properties: 
+  - name: defaultCancelThreshold
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: defaultDurationThreshold
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
+math_operations: 

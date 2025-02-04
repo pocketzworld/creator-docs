@@ -1,0 +1,88 @@
+name: UICollectionProvider
+type: classes
+summary: |
+  Provides data to a collection
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: cells
+    summary: |
+      Back reference to the collection cells that is bounds to the provider
+    description:
+    is_static: false
+    code_samples:
+    type: Class.UICollectionCells
+methods: 
+  - name: BindCell
+    summary: |
+      Called when cell is added to the collection view hierarchy
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cell
+        type: Class.UIView
+        default:
+        summary: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: CellForIndex
+    summary: |
+      Override to return a view for the given index within the cells array
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: Index of the view to return
+    returns:
+      - type: Class.UIView
+        summary:
+  - name: Dispose
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: EstimatedSizeForIndex
+    summary: |
+      Override to return estimated size of cell for the given index within the cells array
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: TypeForIndex
+    summary: |
+      Override to return type of cell for the given index within the cells array
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+math_operations: 

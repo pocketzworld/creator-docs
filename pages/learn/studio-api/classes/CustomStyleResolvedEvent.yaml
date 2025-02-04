@@ -1,0 +1,26 @@
+name: CustomStyleResolvedEvent
+type: classes
+summary: |
+  [Unity's CustomStyleResolvedEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CustomStyleResolvedEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: customStyle
+    summary: |
+      [Unity's CustomStyleResolvedEvent.customStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CustomStyleResolvedEvent-customStyle.html)
+    description:
+    is_static: false
+    code_samples:
+    type: ICustomStyle
+  - name: eventTypeId
+    summary: |
+      [Unity's CustomStyleResolvedEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CustomStyleResolvedEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

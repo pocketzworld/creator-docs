@@ -1,0 +1,52 @@
+name: AnimationEventHandler
+type: classes
+summary: |
+  Attach this script to a GameObject with an Animator to receive events when the animation graph
+    state changes.
+    
+    self:GetComponent(AnimationEventHandler).StateExit:Connect(function(clip)
+        print("AnimationClip " .. clip.name .. " finished playing")
+    end)
+description:
+code_samples:
+inherits: 
+  - Class.WorldBehaviour
+constructors: 
+properties: 
+  - name: StateEnter
+    summary: |
+      OnStateEnter is called when a transition starts and the state machine starts to evaluate this state.
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: StateExit
+    summary: |
+      OnStateExit is called when a transition ends and the state machine finishes evaluating this state.
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: StateIK
+    summary: |
+      OnStateIK is called right after Animator.OnAnimatorIK().
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: StateMove
+    summary: |
+      OnStateMove is called right after Animator.OnAnimatorMove().
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: StateUpdate
+    summary: |
+      OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks.
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+methods: 
+math_operations: 

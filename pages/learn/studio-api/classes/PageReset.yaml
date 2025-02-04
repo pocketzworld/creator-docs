@@ -1,0 +1,26 @@
+name: PageReset
+type: classes
+summary: |
+  Event sent when the page is reset
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: page
+    summary: |
+      page index
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

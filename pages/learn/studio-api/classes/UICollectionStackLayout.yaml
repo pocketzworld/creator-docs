@@ -1,0 +1,195 @@
+name: UICollectionStackLayout
+type: classes
+summary: |
+  Layout that stacks items one after another in the parent collection's
+    primary axis.
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      Construct a new layout
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: estimatedItemSize
+        type: number
+        default:
+        summary: 
+      - name: spacing
+        type: number
+        default:
+        summary: 
+      - name: windowInset
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.UICollectionStackLayout
+        summary:
+properties: 
+  - name: count
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: estimatedItemSize
+    summary: |
+      Returns the size being used to estimate a item
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: spacing
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: Dispose
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetCellOffset
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetVisibleCell
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.UIView
+        summary:
+  - name: Insert
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Rebuild
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: RecycleAllItems
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Remove
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: RemoveAll
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Update
+    summary: |
+      Layout items
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: min
+        type: number
+        default:
+        summary: 
+      - name: max
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: UpdateSize
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        default:
+        summary: 
+      - name: count
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

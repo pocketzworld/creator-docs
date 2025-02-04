@@ -1,0 +1,222 @@
+name: Sprite
+type: classes
+summary: |
+  [Unity's Sprite Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.html)
+description:
+code_samples:
+inherits: 
+  - Class.Object
+constructors: 
+properties: 
+  - name: associatedAlphaSplitTexture
+    summary: |
+      [Unity's Sprite.associatedAlphaSplitTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-associatedAlphaSplitTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Texture2D
+  - name: border
+    summary: |
+      [Unity's Sprite.border Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-border.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector4
+  - name: bounds
+    summary: |
+      [Unity's Sprite.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-bounds.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Bounds
+  - name: packed
+    summary: |
+      [Unity's Sprite.packed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-packed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: pivot
+    summary: |
+      [Unity's Sprite.pivot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-pivot.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: pixelsPerUnit
+    summary: |
+      [Unity's Sprite.pixelsPerUnit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-pixelsPerUnit.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: rect
+    summary: |
+      [Unity's Sprite.rect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-rect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: spriteAtlasTextureScale
+    summary: |
+      [Unity's Sprite.spriteAtlasTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-spriteAtlasTextureScale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: texture
+    summary: |
+      [Unity's Sprite.texture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-texture.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Texture2D
+  - name: textureRect
+    summary: |
+      [Unity's Sprite.textureRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-textureRect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: textureRectOffset
+    summary: |
+      [Unity's Sprite.textureRectOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-textureRectOffset.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: triangles
+    summary: |
+      [Unity's Sprite.triangles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-triangles.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {number}
+  - name: uv
+    summary: |
+      [Unity's Sprite.uv Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-uv.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {Vector2}
+  - name: vertices
+    summary: |
+      [Unity's Sprite.vertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-vertices.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {Vector2}
+methods: 
+  - name: Create
+    summary: |
+      [Unity's Sprite.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.Create.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: texture
+        type: Class.Texture2D
+        default:
+        summary: 
+      - name: rect
+        type: DataType.Rect
+        default:
+        summary: 
+      - name: pivot
+        type: DataType.Vector2
+        default:
+        summary: 
+    returns:
+      - type: Class.Sprite
+        summary:
+  - name: Create
+    summary: |
+      [Unity's Sprite.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.Create.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: texture
+        type: Class.Texture2D
+        default:
+        summary: 
+      - name: rect
+        type: DataType.Rect
+        default:
+        summary: 
+      - name: pivot
+        type: DataType.Vector2
+        default:
+        summary: 
+      - name: pixelsPerUnit
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.Sprite
+        summary:
+  - name: Create
+    summary: |
+      [Unity's Sprite.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.Create.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: texture
+        type: Class.Texture2D
+        default:
+        summary: 
+      - name: rect
+        type: DataType.Rect
+        default:
+        summary: 
+      - name: pivot
+        type: DataType.Vector2
+        default:
+        summary: 
+      - name: pixelsPerUnit
+        type: number
+        default:
+        summary: 
+      - name: extrude
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: Class.Sprite
+        summary:
+  - name: GetPhysicsShapeCount
+    summary: |
+      [Unity's Sprite.GetPhysicsShapeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.GetPhysicsShapeCount.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: GetPhysicsShapePointCount
+    summary: |
+      [Unity's Sprite.GetPhysicsShapePointCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.GetPhysicsShapePointCount.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: shapeIdx
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetSecondaryTextureCount
+    summary: |
+      [Unity's Sprite.GetSecondaryTextureCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.GetSecondaryTextureCount.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+math_operations: 

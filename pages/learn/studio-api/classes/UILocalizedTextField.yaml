@@ -1,0 +1,228 @@
+name: UILocalizedTextField
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.UITextField
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UILocalizedTextField
+        summary:
+properties: 
+  - name: autoCorrection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: cursorColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: cursorIndex
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: cursorPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: doubleClickSelectsWord
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: hideMobileInput
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isDelayed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isPasswordField
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isReadOnly
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: label
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: labelElement
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Label
+  - name: maskChar
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Char
+  - name: maxLength
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: selectAllOnFocus
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: selectAllOnMouseUp
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: selectIndex
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: selectionColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Color
+  - name: showMixedValue
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: text
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: textEdition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: ITextEdition
+  - name: textSelection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: ITextSelection
+  - name: tripleClickSelectsLine
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: SelectAll
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectNone
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SelectRange
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: cursorIndex
+        type: number
+        default:
+        summary: 
+      - name: selectionIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetPlaceholderText
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: localizedString
+        type: DataType.LocalizedString
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

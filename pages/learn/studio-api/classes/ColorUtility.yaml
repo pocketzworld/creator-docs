@@ -1,0 +1,55 @@
+name: ColorUtility
+type: classes
+summary: |
+  [Unity's ColorUtility Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: ToHtmlStringRGB
+    summary: |
+      [Unity's ColorUtility.ToHtmlStringRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.ToHtmlStringRGB.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: color
+        type: DataType.Color
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: ToHtmlStringRGBA
+    summary: |
+      [Unity's ColorUtility.ToHtmlStringRGBA Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.ToHtmlStringRGBA.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: color
+        type: DataType.Color
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: TryParseHtmlString
+    summary: |
+      [Unity's ColorUtility.TryParseHtmlString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.TryParseHtmlString.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: htmlString
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.Color
+        summary:
+math_operations: 

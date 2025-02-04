@@ -1,0 +1,12 @@
+name: NetworkBehaviour
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.WorldBehaviour
+constructors: 
+properties: 
+methods: 
+math_operations: 

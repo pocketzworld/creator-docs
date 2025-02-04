@@ -1,0 +1,26 @@
+name: FingerCountEnd
+type: classes
+summary: |
+  Event sent when the required finger count was previously met but is no longer
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: count
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

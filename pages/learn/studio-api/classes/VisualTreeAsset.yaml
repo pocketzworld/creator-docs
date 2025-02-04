@@ -1,0 +1,54 @@
+name: VisualTreeAsset
+type: classes
+summary: |
+  [Unity's VisualTreeAsset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset.html)
+description:
+code_samples:
+inherits: 
+  - ScriptableObject
+constructors: 
+properties: 
+  - name: contentHash
+    summary: |
+      [Unity's VisualTreeAsset.contentHash Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-contentHash.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: importedWithErrors
+    summary: |
+      [Unity's VisualTreeAsset.importedWithErrors Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-importedWithErrors.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: importedWithWarnings
+    summary: |
+      [Unity's VisualTreeAsset.importedWithWarnings Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-importedWithWarnings.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: templateDependencies
+    summary: |
+      [Unity's VisualTreeAsset.templateDependencies Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-templateDependencies.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {VisualTreeAsset}
+methods: 
+  - name: CloneTree
+    summary: |
+      [Unity's VisualTreeAsset.CloneTree Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset.CloneTree.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: target
+        type: Class.VisualElement
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+math_operations: 

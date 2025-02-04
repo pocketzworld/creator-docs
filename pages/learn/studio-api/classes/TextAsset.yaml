@@ -1,0 +1,33 @@
+name: TextAsset
+type: classes
+summary: |
+  [Unity's TextAsset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAsset.html)
+description:
+code_samples:
+inherits: 
+  - Class.Object
+constructors: 
+properties: 
+  - name: bytes
+    summary: |
+      [Unity's TextAsset.bytes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAsset-bytes.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {Byte}
+  - name: dataSize
+    summary: |
+      [Unity's TextAsset.dataSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAsset-dataSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: text
+    summary: |
+      [Unity's TextAsset.text Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAsset-text.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods: 
+math_operations: 

@@ -1,0 +1,27 @@
+name: Localization
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+methods: 
+  - name: TryGetString
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: key
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.LocalizedString
+        summary:
+math_operations: 

@@ -1,0 +1,51 @@
+name: InputEvent
+type: classes
+summary: |
+  [Unity's InputEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: eventTypeId
+    summary: |
+      [Unity's InputEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: newData
+    summary: |
+      [Unity's InputEvent.newData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent-newData.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: previousData
+    summary: |
+      [Unity's InputEvent.previousData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent-previousData.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+methods: 
+  - name: GetPooled
+    summary: |
+      [Unity's InputEvent.GetPooled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent.GetPooled.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: previousData
+        type: string
+        default:
+        summary: 
+      - name: newData
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: Class.InputEvent
+        summary:
+math_operations: 

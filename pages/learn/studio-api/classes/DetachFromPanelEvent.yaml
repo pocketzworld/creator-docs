@@ -1,0 +1,33 @@
+name: DetachFromPanelEvent
+type: classes
+summary: |
+  [Unity's DetachFromPanelEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DetachFromPanelEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: destinationPanel
+    summary: |
+      [Unity's DetachFromPanelEvent.destinationPanel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DetachFromPanelEvent-destinationPanel.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IPanel
+  - name: eventTypeId
+    summary: |
+      [Unity's DetachFromPanelEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DetachFromPanelEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: originPanel
+    summary: |
+      [Unity's DetachFromPanelEvent.originPanel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DetachFromPanelEvent-originPanel.html)
+    description:
+    is_static: false
+    code_samples:
+    type: IPanel
+methods: 
+math_operations: 

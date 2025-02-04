@@ -1,0 +1,194 @@
+name: InputAction
+type: classes
+summary: |
+  [Unity's InputAction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+  - name: new
+    summary: |
+      [Unity's InputAction.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.InputAction
+        summary:
+properties: 
+  - name: actionMap
+    summary: |
+      [Unity's InputAction.actionMap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-actionMap.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.InputActionMap
+  - name: enabled
+    summary: |
+      [Unity's InputAction.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-enabled.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: expectedControlType
+    summary: |
+      [Unity's InputAction.expectedControlType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-expectedControlType.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: inProgress
+    summary: |
+      [Unity's InputAction.inProgress Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-inProgress.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: interactions
+    summary: |
+      [Unity's InputAction.interactions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-interactions.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: name
+    summary: |
+      [Unity's InputAction.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-name.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: processors
+    summary: |
+      [Unity's InputAction.processors Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-processors.html)
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: triggered
+    summary: |
+      [Unity's InputAction.triggered Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-triggered.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: wantsInitialStateCheck
+    summary: |
+      [Unity's InputAction.wantsInitialStateCheck Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-wantsInitialStateCheck.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: Clone
+    summary: |
+      [Unity's InputAction.Clone Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Clone.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.InputAction
+        summary:
+  - name: Disable
+    summary: |
+      [Unity's InputAction.Disable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Disable.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: Enable
+    summary: |
+      [Unity's InputAction.Enable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Enable.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: GetTimeoutCompletionPercentage
+    summary: |
+      [Unity's InputAction.GetTimeoutCompletionPercentage Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.GetTimeoutCompletionPercentage.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: IsInProgress
+    summary: |
+      [Unity's InputAction.IsInProgress Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.IsInProgress.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: IsPressed
+    summary: |
+      [Unity's InputAction.IsPressed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.IsPressed.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: ReadVector2
+    summary: |
+      [Unity's InputAction.ReadVector2 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.ReadVector2.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: Reset
+    summary: |
+      [Unity's InputAction.Reset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Reset.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: WasPerformedThisFrame
+    summary: |
+      [Unity's InputAction.WasPerformedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPerformedThisFrame.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: WasPressedThisFrame
+    summary: |
+      [Unity's InputAction.WasPressedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPressedThisFrame.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+  - name: WasReleasedThisFrame
+    summary: |
+      [Unity's InputAction.WasReleasedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasReleasedThisFrame.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+math_operations: 

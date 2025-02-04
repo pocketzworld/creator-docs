@@ -1,0 +1,57 @@
+name: UIThumbstick
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.UIView
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UIThumbstick
+        summary:
+properties: 
+  - name: isAnchored
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: preventDragging
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: container
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: knob
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+  - name: movementDirection
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods: 
+math_operations: 

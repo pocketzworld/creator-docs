@@ -1,0 +1,33 @@
+name: SwipeFromEdgeCanceled
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: dragDistance
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: velocity
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

@@ -1,0 +1,65 @@
+name: UICollectionSection
+type: classes
+summary: |
+  Represents a section within a collection.  A section can optionally contain
+    Items.
+description:
+code_samples:
+inherits: 
+  - Class.VisualElement
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UICollectionSection
+        summary:
+properties: 
+  - name: cells
+    summary: |
+      Optional items contained within the section
+    description:
+    is_static: false
+    code_samples:
+    type: Class.UICollectionCells
+  - name: collection
+    summary: |
+      Collection the section is bound to
+    description:
+    is_static: false
+    code_samples:
+    type: Class.UICollection
+methods: 
+  - name: Rebuild
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: UpdateLayout
+    summary: |
+      Update the layout using a visible range within the parent collection.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: min
+        type: number
+        default:
+        summary: Minimum
+      - name: max
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+math_operations: 

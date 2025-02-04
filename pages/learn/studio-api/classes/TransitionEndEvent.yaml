@@ -1,0 +1,26 @@
+name: TransitionEndEvent
+type: classes
+summary: |
+  [Unity's TransitionEndEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransitionEndEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: elapsedTime
+    summary: |
+      [Unity's TransitionEndEvent.elapsedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransitionEndEvent-elapsedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventTypeId
+    summary: |
+      [Unity's TransitionEndEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransitionEndEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

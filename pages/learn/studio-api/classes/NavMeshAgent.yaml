@@ -1,0 +1,378 @@
+name: NavMeshAgent
+type: classes
+summary: |
+  [Unity's NavMeshAgent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.html)
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: acceleration
+    summary: |
+      [Unity's NavMeshAgent.acceleration Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-acceleration.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: agentTypeID
+    summary: |
+      [Unity's NavMeshAgent.agentTypeID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-agentTypeID.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: angularSpeed
+    summary: |
+      [Unity's NavMeshAgent.angularSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-angularSpeed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: areaMask
+    summary: |
+      [Unity's NavMeshAgent.areaMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-areaMask.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: autoBraking
+    summary: |
+      [Unity's NavMeshAgent.autoBraking Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-autoBraking.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: autoRepath
+    summary: |
+      [Unity's NavMeshAgent.autoRepath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-autoRepath.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: autoTraverseOffMeshLink
+    summary: |
+      [Unity's NavMeshAgent.autoTraverseOffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-autoTraverseOffMeshLink.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: avoidancePriority
+    summary: |
+      [Unity's NavMeshAgent.avoidancePriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-avoidancePriority.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: baseOffset
+    summary: |
+      [Unity's NavMeshAgent.baseOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-baseOffset.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: desiredVelocity
+    summary: |
+      [Unity's NavMeshAgent.desiredVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-desiredVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: destination
+    summary: |
+      [Unity's NavMeshAgent.destination Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-destination.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: hasPath
+    summary: |
+      [Unity's NavMeshAgent.hasPath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-hasPath.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: height
+    summary: |
+      [Unity's NavMeshAgent.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-height.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isOnNavMesh
+    summary: |
+      [Unity's NavMeshAgent.isOnNavMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-isOnNavMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isOnOffMeshLink
+    summary: |
+      [Unity's NavMeshAgent.isOnOffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-isOnOffMeshLink.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isPathStale
+    summary: |
+      [Unity's NavMeshAgent.isPathStale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-isPathStale.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isStopped
+    summary: |
+      [Unity's NavMeshAgent.isStopped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-isStopped.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: navMeshOwner
+    summary: |
+      [Unity's NavMeshAgent.navMeshOwner Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-navMeshOwner.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Object
+  - name: nextPosition
+    summary: |
+      [Unity's NavMeshAgent.nextPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-nextPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: pathEndPosition
+    summary: |
+      [Unity's NavMeshAgent.pathEndPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-pathEndPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: pathPending
+    summary: |
+      [Unity's NavMeshAgent.pathPending Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-pathPending.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: radius
+    summary: |
+      [Unity's NavMeshAgent.radius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-radius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: remainingDistance
+    summary: |
+      [Unity's NavMeshAgent.remainingDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-remainingDistance.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: speed
+    summary: |
+      [Unity's NavMeshAgent.speed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-speed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: steeringTarget
+    summary: |
+      [Unity's NavMeshAgent.steeringTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-steeringTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: stoppingDistance
+    summary: |
+      [Unity's NavMeshAgent.stoppingDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-stoppingDistance.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: updatePosition
+    summary: |
+      [Unity's NavMeshAgent.updatePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-updatePosition.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: updateRotation
+    summary: |
+      [Unity's NavMeshAgent.updateRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-updateRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: updateUpAxis
+    summary: |
+      [Unity's NavMeshAgent.updateUpAxis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-updateUpAxis.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: velocity
+    summary: |
+      [Unity's NavMeshAgent.velocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-velocity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+methods: 
+  - name: ActivateCurrentOffMeshLink
+    summary: |
+      [Unity's NavMeshAgent.ActivateCurrentOffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.ActivateCurrentOffMeshLink.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: activated
+        type: boolean
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: CompleteOffMeshLink
+    summary: |
+      [Unity's NavMeshAgent.CompleteOffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.CompleteOffMeshLink.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: FindClosestEdge
+    summary: |
+      [Unity's NavMeshAgent.FindClosestEdge Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.FindClosestEdge.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.NavMeshHit
+        summary:
+  - name: GetAreaCost
+    summary: |
+      [Unity's NavMeshAgent.GetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.GetAreaCost.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: areaIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: Move
+    summary: |
+      [Unity's NavMeshAgent.Move Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.Move.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: offset
+        type: DataType.Vector3
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: Raycast
+    summary: |
+      [Unity's NavMeshAgent.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.Raycast.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: targetPosition
+        type: DataType.Vector3
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.NavMeshHit
+        summary:
+  - name: ResetPath
+    summary: |
+      [Unity's NavMeshAgent.ResetPath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.ResetPath.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary:
+  - name: SamplePathPosition
+    summary: |
+      [Unity's NavMeshAgent.SamplePathPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SamplePathPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: areaMask
+        type: number
+        default:
+        summary: 
+      - name: maxDistance
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.NavMeshHit
+        summary:
+  - name: SetAreaCost
+    summary: |
+      [Unity's NavMeshAgent.SetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SetAreaCost.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: areaIndex
+        type: number
+        default:
+        summary: 
+      - name: areaCost
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary:
+  - name: SetDestination
+    summary: |
+      [Unity's NavMeshAgent.SetDestination Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SetDestination.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: target
+        type: DataType.Vector3
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+  - name: Warp
+    summary: |
+      [Unity's NavMeshAgent.Warp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.Warp.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: newPosition
+        type: DataType.Vector3
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+math_operations: 

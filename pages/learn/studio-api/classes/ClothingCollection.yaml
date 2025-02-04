@@ -1,0 +1,19 @@
+name: ClothingCollection
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+  - ScriptableObject
+constructors: 
+properties: 
+  - name: clothing
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: {CharacterClothing}
+methods: 
+math_operations: 

@@ -1,0 +1,61 @@
+name: Motion
+type: classes
+summary: |
+  [Unity's Motion Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion.html)
+description:
+code_samples:
+inherits: 
+  - Class.Object
+constructors: 
+properties: 
+  - name: apparentSpeed
+    summary: |
+      [Unity's Motion.apparentSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-apparentSpeed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: averageAngularSpeed
+    summary: |
+      [Unity's Motion.averageAngularSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-averageAngularSpeed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: averageDuration
+    summary: |
+      [Unity's Motion.averageDuration Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-averageDuration.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: averageSpeed
+    summary: |
+      [Unity's Motion.averageSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-averageSpeed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: isHumanMotion
+    summary: |
+      [Unity's Motion.isHumanMotion Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-isHumanMotion.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: isLooping
+    summary: |
+      [Unity's Motion.isLooping Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-isLooping.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: legacy
+    summary: |
+      [Unity's Motion.legacy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-legacy.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+math_operations: 

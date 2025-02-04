@@ -1,0 +1,27 @@
+name: TapGesture
+type: classes
+summary: |
+  Listens for tap gestures on a VisualElement and sends a TapEvent when recognized.  A tap
+    gesture is defined by a pointer up and down on the screen with no movement between.
+description:
+code_samples:
+inherits: 
+  - Class.Gesture
+constructors: 
+properties: 
+  - name: cancelThreshold
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: durationThreshold
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: number
+methods: 
+math_operations: 

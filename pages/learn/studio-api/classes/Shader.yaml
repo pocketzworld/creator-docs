@@ -1,0 +1,257 @@
+name: Shader
+type: classes
+summary: |
+  [Unity's Shader Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.html)
+description:
+code_samples:
+inherits: 
+  - Class.Object
+constructors: 
+properties: 
+  - name: isSupported
+    summary: |
+      [Unity's Shader.isSupported Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader-isSupported.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: maximumLOD
+    summary: |
+      [Unity's Shader.maximumLOD Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader-maximumLOD.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: passCount
+    summary: |
+      [Unity's Shader.passCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader-passCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: renderQueue
+    summary: |
+      [Unity's Shader.renderQueue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader-renderQueue.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: subshaderCount
+    summary: |
+      [Unity's Shader.subshaderCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader-subshaderCount.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+  - name: FindPropertyIndex
+    summary: |
+      [Unity's Shader.FindPropertyIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.FindPropertyIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyName
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: FindTextureStack
+    summary: |
+      [Unity's Shader.FindTextureStack Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.FindTextureStack.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary:
+      - type: string
+        summary:
+      - type: number
+        summary:
+  - name: GetDependency
+    summary: |
+      [Unity's Shader.GetDependency Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetDependency.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: Class.Shader
+        summary:
+  - name: GetPassCountInSubshader
+    summary: |
+      [Unity's Shader.GetPassCountInSubshader Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPassCountInSubshader.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: subshaderIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetPropertyAttributes
+    summary: |
+      [Unity's Shader.GetPropertyAttributes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyAttributes.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: {string}
+        summary:
+  - name: GetPropertyCount
+    summary: |
+      [Unity's Shader.GetPropertyCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyCount.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary:
+  - name: GetPropertyDefaultFloatValue
+    summary: |
+      [Unity's Shader.GetPropertyDefaultFloatValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDefaultFloatValue.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetPropertyDefaultIntValue
+    summary: |
+      [Unity's Shader.GetPropertyDefaultIntValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDefaultIntValue.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetPropertyDefaultVectorValue
+    summary: |
+      [Unity's Shader.GetPropertyDefaultVectorValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDefaultVectorValue.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector4
+        summary:
+  - name: GetPropertyDescription
+    summary: |
+      [Unity's Shader.GetPropertyDescription Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDescription.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: GetPropertyName
+    summary: |
+      [Unity's Shader.GetPropertyName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyName.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: GetPropertyNameId
+    summary: |
+      [Unity's Shader.GetPropertyNameId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyNameId.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+  - name: GetPropertyRangeLimits
+    summary: |
+      [Unity's Shader.GetPropertyRangeLimits Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyRangeLimits.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: GetPropertyTextureDefaultName
+    summary: |
+      [Unity's Shader.GetPropertyTextureDefaultName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyTextureDefaultName.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: propertyIndex
+        type: number
+        default:
+        summary: 
+    returns:
+      - type: string
+        summary:
+  - name: PropertyToID
+    summary: |
+      [Unity's Shader.PropertyToID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.PropertyToID.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: name
+        type: string
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary:
+math_operations: 

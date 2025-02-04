@@ -1,0 +1,85 @@
+name: IPanel
+type: classes
+summary: |
+  [Unity's IPanel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.html)
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: isDirty
+    summary: |
+      [Unity's IPanel.isDirty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel-isDirty.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: visualTree
+    summary: |
+      [Unity's IPanel.visualTree Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel-visualTree.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+methods: 
+  - name: LocalToWorld
+    summary: |
+      [Unity's IPanel.LocalToWorld Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.LocalToWorld.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector2
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: Pick
+    summary: |
+      [Unity's IPanel.Pick Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.Pick.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector2
+        default:
+        summary: 
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: PickAll
+    summary: |
+      [Unity's IPanel.PickAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.PickAll.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector2
+        default:
+        summary: 
+      - name: picked
+        type: {VisualElement}
+        default:
+        summary: 
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: WorldToLocal
+    summary: |
+      [Unity's IPanel.WorldToLocal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.WorldToLocal.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector2
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector2
+        summary:
+math_operations: 

@@ -1,0 +1,26 @@
+name: FocusOutEvent
+type: classes
+summary: |
+  [Unity's FocusOutEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FocusOutEvent.html)
+description:
+code_samples:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
+  - name: eventTypeId
+    summary: |
+      [Unity's FocusOutEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FocusOutEvent-eventTypeId.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: relatedTarget
+    summary: |
+      [Unity's FocusOutEvent.relatedTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FocusOutEvent-relatedTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Focusable
+methods: 
+math_operations: 

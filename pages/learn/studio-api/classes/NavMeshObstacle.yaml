@@ -1,0 +1,75 @@
+name: NavMeshObstacle
+type: classes
+summary: |
+  [Unity's NavMeshObstacle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle.html)
+description:
+code_samples:
+inherits: 
+  - Class.Behaviour
+constructors: 
+properties: 
+  - name: carveOnlyStationary
+    summary: |
+      [Unity's NavMeshObstacle.carveOnlyStationary Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-carveOnlyStationary.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: carving
+    summary: |
+      [Unity's NavMeshObstacle.carving Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-carving.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: carvingMoveThreshold
+    summary: |
+      [Unity's NavMeshObstacle.carvingMoveThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-carvingMoveThreshold.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: carvingTimeToStationary
+    summary: |
+      [Unity's NavMeshObstacle.carvingTimeToStationary Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-carvingTimeToStationary.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: center
+    summary: |
+      [Unity's NavMeshObstacle.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-center.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: height
+    summary: |
+      [Unity's NavMeshObstacle.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-height.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: radius
+    summary: |
+      [Unity's NavMeshObstacle.radius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-radius.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: size
+    summary: |
+      [Unity's NavMeshObstacle.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-size.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: velocity
+    summary: |
+      [Unity's NavMeshObstacle.velocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-velocity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+methods: 
+math_operations: 
