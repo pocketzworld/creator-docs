@@ -85,6 +85,10 @@ They may not be used as bases for any regular Concept.
 
 [tkattkat](https://highrise.game/catalog/designer-profile/tkattkat)
 
+[Torotoxism](https://highrise.game/catalog/designer-profile/Torotoxism)
+
+[Tounni](https://highrise.game/catalog/designer-profile/Tounni)
+
 [TunaX](https://highrise.game/catalog/designer-profile/TunaX)
 
 [tutuwu](https://highrise.game/catalog/designer-profile/tutuwu)
