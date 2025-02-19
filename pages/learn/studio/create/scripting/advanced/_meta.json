@@ -17,6 +17,9 @@
   "taphandlers":{
     "title": "Tap Handlers"
   },
+  "moderation":{
+    "title": "Moderation"
+  },
   "client-server-communication": {
     "title": "Client-Server Communication"
   },
