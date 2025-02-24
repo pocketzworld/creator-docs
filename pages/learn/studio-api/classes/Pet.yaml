@@ -1,0 +1,39 @@
+name: Pet
+type: classes
+summary: |
+  
+description:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: character
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Character
+  - name: id
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: name
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: owner
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Player
+methods: 
+math_operations: 
