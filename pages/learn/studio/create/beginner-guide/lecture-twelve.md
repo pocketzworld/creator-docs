@@ -62,6 +62,10 @@ The Outfit Editor in Highrise Studio lets you customize the appearance of your c
 
 ![Outfit Editor Window](/assets/learn/guides/studio/Lectures/outfit-editor-window.png)
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/MNc1Q4As5bA" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 NPCs add a rich layer of interaction and detail to your game, enhancing the overall experience. By creating and customizing NPCs in Highrise Studio, you can shape a more immersive world for players to explore. After setting up your NPCs, continue to [Lecture 13: Emotes](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-thirteen) to learn how to make your NPCs perform animation in game.
