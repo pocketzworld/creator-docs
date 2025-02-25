@@ -33,6 +33,10 @@ You can have several spawn points in one scene with Highrise Studio, allowing pl
 Using multiple spawn points lets players start from various locations, which can make your game more unpredictable and fun.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/zhCvxYKBpdI" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Try using different spawn points to enhance how players experience your game. By smartly placing these points, you can make sure that the action starts off well and keeps everyone engaged. Next, explore [Lecture 12: NPCs](https://create.highrise.game/learn/studio/create/beginner-guide/lecture-twelve) to see how to add non-player characters to your game world.
