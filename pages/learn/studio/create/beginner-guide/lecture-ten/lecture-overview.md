@@ -34,6 +34,10 @@ Highrise Studio currently supports only **Baked** lighting, meaning all lights n
 
 Don’t worry if this sounds complex! We'll explain more about how to effectively use baked lighting in the following sections.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/8ii6UXPALVs" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## What You’ll Achieve
 
 By the end of this lecture, you’ll understand the basics of lighting in Highrise Studio. You'll learn how to use different lighting tools to create the perfect atmosphere and look for your game.
