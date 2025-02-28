@@ -81,6 +81,10 @@ When you're ready to make your world publicly available:
 You can access all uploaded builds in the app before making them public. If you don't release any builds, your world remains private.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/sbs3kwBaJ4Y" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Publishing your game is a thrilling milestone in game development. It's your chance to share your work with others and collect valuable feedback to make your game even better.
