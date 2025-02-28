@@ -85,6 +85,10 @@ To set which emotes your NPC will use and if they should keep repeating:
 If you want the NPC to keep doing the same emote over and over, just put one emote ID in the `emote_ids` array.
 </Note>
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/2tKOxUUQLv4" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Emotes are a great way to give your NPCs personality and make them interactive. By using the steps in this guide, you can create characters that are not just fun to watch but also add to the storytelling in your game. Try different emotes and settings to see how they can make your game world more lively and memorable for players.

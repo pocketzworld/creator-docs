@@ -57,4 +57,8 @@ GitHub simplifies collaboration on projects through several key features:
 
 - Regularly pull the latest changes from GitHub to the local project to keep it up-to-date, especially if multiple people are contributing.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/s9uN7qntcXA" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 GitHub streamlines collaboration by making it easier to track changes, work together from anywhere, and maintain a clean, organized workflow. Whether coding, creating documents, or managing non-technical projects, GitHub provides the tools needed for efficient teamwork.
