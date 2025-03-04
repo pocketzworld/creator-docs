@@ -168,7 +168,7 @@ properties:
       ```
     type: number
   - name: speed
-    summary: The movement speed of the character.
+    summary: The movement speed of the character. You must wait for the player to connect before setting this property.
     description:
     is_static: false
     code_samples: |
