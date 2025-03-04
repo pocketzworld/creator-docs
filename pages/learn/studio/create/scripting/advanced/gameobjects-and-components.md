@@ -40,7 +40,7 @@ self.gameObject:AddComponent(TapHandler)
 local myTapHandler = self.gameObject:GetComponent(TapHandler)
 
 -- Get your custom lua script
-local myHelloWorldScript = self.gameObject:GetComponent("HelloWorldScript")
+local myHelloWorldScript = self.gameObject:GetComponent(HelloWorldScript)
 ```
 
 In this script:
