@@ -66,13 +66,13 @@ Serialized Fields can also be used to serialize tables, which are treated as arr
 **For example:**
 ```lua
 --!SerializeField
-local myTable: {string} = {"apple", "banana", "cherry"} -- Tables are serialized as arrays
+local myTable: { string } = nil -- Tables are serialized as arrays
 ```
 
 You can use tables to pass collections of any type, like numbers, strings, GameObjects, or even custom objects, offering great flexibility for storing and managing grouped data in your scripts.
 ```lua
 --!SerializeField
-local spawnPoints : { Transform } = {}
+local spawnPoints : { Transform } = nil
 ```
 
 This makes Serialized Fields powerful for handling lists of game objects, settings, or assets within the Inspector, all without needing to modify code.
