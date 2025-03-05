@@ -132,9 +132,7 @@ end, true, true, true)
 
 ### Step 5: Testing the Payment Handler
 
-1. In the Unity Editor select `Highrise > World Settings`
-2. Under the **World** tab, set the **World** to the world you created the product for
-3. This will allow you to test the payment handler in the Unity Editor
+To be able to test the payment handler, you need to build your project and test it in the Highrise app. You can no longer select the world in the project settings.
 
 <Note type="info">
 The gold will not be deducted from your account when testing in the Unity Editor.
