@@ -106,4 +106,5 @@ properties:
     is_static: false
     code_samples:
     type: boolean
-methods:
+methods: 
+math_operations: 

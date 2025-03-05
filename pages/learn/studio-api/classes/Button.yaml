@@ -1,19 +1,43 @@
 name: Button
 type: classes
 summary: |
-  [Unity's Button Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Button.html)
+  [Unity's Button Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button.html)
 description:
 code_samples:
-inherits:
-  - Class.VisualElement
-constructors:
-properties:
+inherits: 
+  - TextElement
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Button.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.Button
+        summary:
+  - name: new
+    summary: |
+      [Unity's Button.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: clickEvent
+        type: () -> ()
+        default:
+        summary: 
+    returns:
+      - type: Class.Button
+        summary:
+properties: 
   - name: ussClassName
     summary: |
-      [Unity's Button.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Button-ussClassName.html)
+      [Unity's Button.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ussClassName.html)
     description:
     is_static: true
     code_samples:
     type: string
-methods:
-math_operations:
+methods: 
+math_operations: 
