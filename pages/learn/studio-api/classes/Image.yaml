@@ -1,57 +1,64 @@
 name: Image
 type: classes
 summary: |
-  [Unity's Image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image.html)
+  [Unity's Image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.VisualElement
-constructors:
-properties:
+constructors: 
+  - name: new
+    summary: |
+      [Unity's Image.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.Image
+        summary:
+properties: 
+  - name: ussClassName
+    summary: |
+      [Unity's Image.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-ussClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    type: string
   - name: image
     summary: |
-      [Unity's Image.image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-image.html)
+      [Unity's Image.image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-image.html)
     description:
     is_static: false
     code_samples:
     type: Class.Texture
   - name: sourceRect
     summary: |
-      [Unity's Image.sourceRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-sourceRect.html)
+      [Unity's Image.sourceRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-sourceRect.html)
     description:
     is_static: false
     code_samples:
     type: DataType.Rect
-  - name: uv
+  - name: sprite
     summary: |
-      [Unity's Image.uv Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-uv.html)
+      [Unity's Image.sprite Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-sprite.html)
     description:
     is_static: false
     code_samples:
-    type: DataType.Rect
+    type: Class.Sprite
   - name: tintColor
     summary: |
-      [Unity's Image.tintColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-tintColor.html)
+      [Unity's Image.tintColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-tintColor.html)
     description:
     is_static: false
     code_samples:
     type: DataType.Color
-  - name: ussClassName
+  - name: uv
     summary: |
-      [Unity's Image.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image-ussClassName.html)
-    description:
-    is_static: true
-    code_samples:
-    type: string
-methods:
-  - name: new
-    summary: |
-      [Unity's Image.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Image.ctor.html)
+      [Unity's Image.uv Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-uv.html)
     description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: Class.Image
-        summary:
-math_operations:
+    type: DataType.Rect
+methods: 
+math_operations: 

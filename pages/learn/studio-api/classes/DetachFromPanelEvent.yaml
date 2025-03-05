@@ -30,3 +30,4 @@ properties:
     code_samples:
     type: IPanel
 methods: 
+math_operations: 

@@ -36,3 +36,4 @@ methods:
     returns:
       - type: DataType.Color
         summary:
+math_operations: 
