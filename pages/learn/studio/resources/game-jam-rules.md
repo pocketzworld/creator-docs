@@ -109,9 +109,9 @@ Yes, you can update your world after the submission deadline until the winner an
 
 Rewards are sent to winners within 48 hours after the winner announcement. If you have not received your rewards after this time, please contact support for assistance.
 
-### Can I giveaway in-world gold/items during the judging period?
+### Can I giveaway in-world gold/items during the game jam?
 
-Yes, giveaways and tipping in worlds are allowed during the judging period. Since game jams are no longer judged based on engagement, you are free to interact with players in your world.
+Yes, giveaways and tipping in worlds are allowed during the game jam. Since game jams are no longer judged based on engagement, you are free to interact with players in your world.
 
 ### Can I participate in the game jam as a solo developer?
 
@@ -123,7 +123,7 @@ Yes, all entries must adhere to the Highrise Community Guidelines. This includes
 
 ### How often are game jams held in Highrise?
 
-Game Jam Challenges are typically held on a monthly basis in Highrise and will begin on the first Monday of each month.
+Game Jam Challenges are typically held on a monthly basis in Highrise. Be sure to check the Highrise Forum and Discord server for announcements about upcoming game jams.
 
 ### Where can I find more information about the current game jam?
 
