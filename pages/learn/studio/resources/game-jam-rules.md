@@ -18,7 +18,7 @@ Game jams are meant to be fun, push your limits, enhance your experience, and pr
     - **Under Review:** Your world is still being reviewed.
     - **Approved:** Your entry has been approved, and rewards will be sent to you shortly.
     - **Rejected:** Your entry has been rejected, and the reason will be mentioned in the notes. (You can appeal on Discord.)
-- If your world was approved and the **"rewarded"** status is set to **true** but you have not received your rewards, please revisit support and be patient.
+- If your world was approved and the **"rewarded"** status is set to **true** but you have not received your rewards, please head to Discord and open a support ticket under #server-support.
 - Rewards are sent within **48 hours** after approval. Please be patient as we verify users and distribute rewards.
 - If your entry was rejected for submitting a purchased world, you are **ineligible** to submit a new entry.
 
@@ -78,7 +78,7 @@ Rules are subject to change based on the game jam. Be sure to review the officia
 
 ## Benefits of Participating in a Game Jam
 
-Participating in a game jam offers several benefits for game developers, including:s
+Participating in a game jam offers several benefits for game developers, including:
 
 1. **Skill Development:** Game jams provide an opportunity to practice and improve your game development skills, such as programming, game design, and project management.
 2. **Creativity:** The constraints of a game jam theme can inspire creative solutions and innovative game designs.
