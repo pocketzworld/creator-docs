@@ -26,9 +26,9 @@ To operate these methods, you need to work with the player object directly, not 
 ```lua
 function self:ServerAwake()
   -- Kick a player from the server
-  Moderation.Kick(player, function(err: ModerationError)
-    if err ~= ModerationError.None then
-      print("Failed to kick player: " .. err)
+  Moderation.Kick(player, function(error)
+    if error ~= ModerationError.None then
+      print("Failed to kick player: " .. ModerationError[error] or "Unknown error")
     else
       print("Player kicked successfully")
     end
@@ -46,9 +46,9 @@ Specify the ban duration in seconds.
 function self:ServerAwake()
   -- Ban a player from the server for a specific duration
   local duration = 3600 -- 1 hour
-  Moderation.Ban(player, duration, "Reason for ban", function(err: ModerationError)
-    if err ~= ModerationError.None then
-      print("Failed to ban player: " .. err)
+  Moderation.Ban(player, duration, "Reason for ban", function(error)
+    if error ~= ModerationError.None then
+      print("Failed to ban player: " .. ModerationError[error] or "Unknown error")
     else
       print("Player banned successfully")
     end
@@ -65,9 +65,9 @@ Unbanning a player requires their unique player ID.
 ```lua
 function self:ServerAwake()
   -- Unban a player using their player ID
-  Moderation.Unban(player_id, function(err: ModerationError)
-    if err ~= ModerationError.None then
-      print("Failed to unban player: " .. err)
+  Moderation.Unban(player_id, function(error)
+    if error ~= ModerationError.None then
+      print("Failed to unban player: " .. ModerationError[error] or "Unknown error")
     else
       print("Player unbanned successfully")
     end
@@ -85,9 +85,9 @@ The mute duration should also be specified in seconds.
 function self:ServerAwake()
   -- Mute a player for a specified duration
   local duration = 3600 -- 1 hour
-  Moderation.Mute(player, duration, function(err: ModerationError)
-    if err ~= ModerationError.None then
-      print("Failed to mute player: " .. err)
+  Moderation.Mute(player, duration, function(error)
+    if error ~= ModerationError.None then
+      print("Failed to mute player: " .. ModerationError[error] or "Unknown error")
     else
       print("Player muted successfully")
     end
@@ -100,9 +100,9 @@ end
 ```lua
 function self:ServerAwake()
   -- Unmute a player
-  Moderation.Unmute(player, function(err: ModerationError)
-    if err ~= ModerationError.None then
-      print("Failed to unmute player: " .. err)
+  Moderation.Unmute(player, function(error)
+    if error ~= ModerationError.None then
+      print("Failed to unmute player: " .. ModerationError[error] or "Unknown error")
     else
       print("Player unmuted successfully")
     end
@@ -118,9 +118,14 @@ function self:ServerAwake()
   local limit = 10 -- Maximum number of entries
   local cursorId = "" -- Cursor ID for pagination
 
-  Moderation.GetBannedPlayers(limit, cursorId, function(players: table<Player>, cursorId: string, err: ModerationError)
-    for _, player in ipairs(players) do
-      print("Banned player: " .. player.name)
+  Moderation.GetBannedUsers(limit, cursorId, function(userBans: { UserBan }, cursorId: string, error)
+    if error ~= ModerationError.None then
+      print("Failed to retrieve banned players: " .. ModerationError[error] or "Unknown error")
+    else
+      local players = userBans
+      for _, player in ipairs(players) do
+        print("Banned player: " .. player.name)
+      end
     end
   end)
 end
