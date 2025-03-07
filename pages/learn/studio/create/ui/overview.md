@@ -1,34 +1,41 @@
-# Highrise UI Specification Overview
+# Highrise Studio UI Documentation
 
-## Introduction
+## User Interface (UI) Overview
+Highrise Studio uses **Unity Extensible Markup Language (UXML)** files to define the user interface (UI) for your projects.
 
-This document outlines the specifications for creating user interfaces (UI) in Highrise worlds. It serves as a guideline for creators to ensure consistency, usability, and performance across different game interfaces built on the Highrise platform.
+### What is UXML?
+**UXML** is a declarative markup language similar to HTML, but designed specifically for Unity. You use it to define the structure of your UI. Then, you style your UI using **Unity Style Sheets (USS)** and add functionality with **Lua**.
 
-## Design Principles
+## Creating a UI
+1. Go to the **Project** panel.
+2. Right-click and create a new folder for organization.
+3. Name the folder appropriately.
+4. Inside the folder, right-click and select **Create**.
+5. Choose **Lua** > **UI**.
+6. Give your UI a name using all lowercase letters to avoid issues with class names when styling.
 
-### Consistency
-- **Visual Harmony**: All UI elements should follow a unified theme with consistent color schemes, fonts, and iconography.
-- **Functional Consistency**: Similar functions should be represented in similar ways across different parts of the game.
+![Create UI Steps](/assets/learn/guides/studio/UI/create-ui-steps.png)
 
-### Usability
-- **Intuitiveness**: UI should be straightforward and easy to navigate.
-- **Feedback**: Immediate feedback must be provided for user actions to confirm interactions.
-- **Color Contrast**: Ensure high contrast between text and background colors.
+## Attaching UI to a GameObject
+- UIs in Unity function like any **GameObject**, requiring a GameObject to be present in the scene.
+- To add a UI to your scene:
+  1. Go to the **Hierarchy**, right-click, and select **Create Empty**.
+  2. Name this empty GameObject.
+  3. Select the created GameObject, locate your UI file in the **Project** panel, and drag it onto the GameObject in the **Inspector** to attach it as a component.
 
-## Performance Optimization
+### UI Output Options
+- **None**: The UI will not be displayed.
+- **World**: The UI acts as a 3D world object, useful for elements like billboards, player names, or leaderboards.
+- **Above Chat**: The UI moves with the chat window, ensuring it’s not hidden behind chat messages, useful for buttons and other interactive elements.
+- **HUD**: The UI is overlaid on the screen and can appear anywhere, typically used for heads-up displays.
 
-- **Asset Management**: Minimize the size of UI assets to reduce load times.
-- **Script Efficiency**: Optimize Lua scripts to minimize CPU load.
+![UI Output Options](/assets/learn/guides/studio/UI/ui-output-options.png)
 
-
-## New to UI Design?
-
-If you're new to UI design, here are some key concepts to get you started:
-
-1. [Structure UI with UXML](https://docs.unity3d.com/Manual/UIE-UXML.html) - Learn how to create UI elements using UXML.
-2. [USS properties reference](https://docs.unity3d.com/Manual/UIE-USS-Properties-Reference.html) - Explore the properties you can use to style UI elements in USS.
-3. [Create your first UI](https://create.highrise.game/learn/studio/create/ui/creating-your-first-ui) - Follow a step-by-step guide to create your first UI in Highrise Studio.
+## Overview of UXML, USS, and Lua
+- **UXML**: Used to construct the UI, defining what elements are included, like player lists or other interface components.
+- **USS**: Used for styling the UI, allowing you to customize fonts, images, and overall appearance.
+- **Lua**: Handles functionality, like making buttons work or dynamically creating UXML elements based on game data.
 
 ## Conclusion
 
-This specification aims to provide a foundation for Highrise developers to create user-friendly, efficient, and consistent interfaces. By adhering to these guidelines, developers can ensure a high-quality user experience that scales across the diverse range of games and experiences available on Highrise.
+Highrise Studio uses UXML to define the structure of your UI, USS to style it, and Lua to add functionality. By creating a UI, attaching it to a GameObject, and choosing the appropriate output option, you can create a visually appealing and interactive interface for your project.

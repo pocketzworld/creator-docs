@@ -2,6 +2,18 @@
   "overview": {
     "title": "Overview"
   },
+  "uxml": {
+    "title": "UXML"
+  },
+  "uss": {
+    "title": "USS"
+  },
+  "lua": {
+    "title": "Lua"
+  },
+  "ui-examples": {
+    "title": "UI Examples"
+  },
   "creating-your-first-ui": {
     "title": "Creating your first UI"
   },
@@ -16,8 +28,5 @@
   },
   "responsive-ui": {
     "title": "Creating Responsive UI"
-  },
-  "ui-toolkit-debugger": {
-    "title": "UI Toolkit Debugger"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "elements": {
+    "title": "Elements"
+  },
+  "attributes": {
+    "title": "Attributes"
+  },
+  "nesting": {
+    "title": "Nesting"
+  },
+  "structure": {
+    "title": "Structure"
+  },
+  "ui-toolkit-debugger": {
+    "title": "UI Toolkit Debugger"
+  }
+}
