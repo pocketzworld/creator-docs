@@ -4,12 +4,6 @@
 
 Unity Style Sheets (USS) are used to define the **visual styling** of UI elements within Unity’s **UI Toolkit**. Inspired by CSS, USS allows developers to **separate structure from appearance**, making UI easier to maintain and modify.
 
-This guide covers:
-- The **basics of USS syntax**
-- How to **use multiple classes**
-- **Hover effects** for interactivity
-- **Changing USS styles dynamically with Lua**
-
 ## Syntax and Structure
 
 USS files use a syntax similar to CSS, allowing developers to **define styles for UI elements** using class selectors.

@@ -2,126 +2,128 @@
 
 ## Introduction
 
-In this guide, you will learn how to create user interfaces (UI) in Highrise Studio. We are going to create a simple UI component that consists of a button and a label. The button will increment a counter when clicked, and the label will display the current count. By following these steps, you will gain a basic understanding of creating UI elements in Highrise Studio and how to interact with them using Lua scripts.
+This guide will walk you through creating a simple UI in **Highrise Studio** using **UXML for structure**, **USS for styling**, and **Lua for interactivity**. The example will feature a button that increments a counter when clicked.
 
-## Step 1: Create Your UI Components
+## Step 1: Generate UI Components
 
-1. **Generate the UI Components**:
-   - In Unity’s Project window, go to `Create > Lua > UI`.
-   - This action generates three interconnected files:
-     - A Lua script (logic)
-     - A UXML script (layout)
-     - A USS script (styling)
-   - Additionally, a UI Visual Tree Factory is created at the root of your assets.
+1. **Create a new UI component**  
+   - In Unity’s **Project window**, go to `Create > Lua > UI`.
+   - This generates three files:
+     - **Lua script** (logic)
+     - **UXML file** (layout)
+     - **USS file** (styling)
+   - A **UI Visual Tree Factory** is also created in the root of your assets.
 
 <Note type="warning">
-Your project must have a UI Tree in order to display UI. Can be found in the root of your assets folder. (Included when you create a UI component)
+Your project must have a **UI Tree** to display UI. This is included when you create a UI component.
 </Note>
 
-## Step 2: Set Up the UI in Your Scene
+## Step 2: Set Up the UI in the Scene
 
-1. Right-click in the Hierarchy window and select `Create Empty` to create an empty GameObject.
-2. Change the name of the GameObject to something meaningful (e.g., `MyUI`).
-3. Drag the UI Lua script onto the GameObject to initialize the UI.
-4. Configure the UI Output:
-   - The script’s `Output` property offers three settings:
-     - **World**: The UI displays in world space, such as on a render texture applied to a 3D object (e.g., a quad).
-     - **Above Chat**: The UI remains visible above the chat box and moves up when the chat is opened.
-     - **HUD**: The UI displays behind the chat history and occupies a fixed, screen space position.
-5. Set the `Output` property to your desired display mode.
-6. Open the UXML file to design your UI layout.
+1. **Create an empty GameObject**  
+   - Right-click the **Hierarchy window** → `Create Empty`.
+   - Rename it (e.g., `MyUI`).
+2. **Attach the UI Lua script**  
+   - Drag the Lua script onto the GameObject.
+3. **Choose a UI Output Mode**  
+   - The script’s **Output** property defines where the UI appears:
+     - **World** – UI attaches to a 3D object (not interactive).
+     - **Above Chat** – UI floats above the chat box.
+     - **HUD** – UI is fixed on the screen.
+4. **Set the output mode** to the desired display setting.
 
 <Note type="info">
-When using the "World" output mode, you cannot use Button or InputField elements in your UI. For interactive UI elements, use the "Above Chat" or "HUD" output modes.
+**Important:** The **World mode** does not support buttons or input fields. Use **Above Chat** or **HUD** for interactive elements.
 </Note>
 
-## Step 3: Design and Style Your UI
+## Step 3: Define UI Layout (UXML)
 
-In the example below we are going to create a simple UIButton that increases a counter when clicked.
+Now, let's create a UI with a **label** and a **button**.
 
-<Note type="warning">
-In the following example, my UI files are named `miniGame`, make sure you change the `UILuaView` element to match the name of your UI.
+### Example (UXML)
+```xml
+<hr:UILuaView class="mini-game">
+    <hr:UILabel class="mini-game__counter" name="_counterLabel" picking-mode="Ignore" />
+    <VisualElement class="mini-game__buttons">
+        <hr:UIButton class="secondary-button" name="_Button">
+            <Label text="Click me!" />
+        </hr:UIButton>
+    </VisualElement>
+</hr:UILuaView>
+```
+- `UILuaView` is the root container for the UI.
+- `_counterLabel` displays the count.
+- `_Button` is the interactive button.
+- `picking-mode="Ignore"` ensures the label does not intercept input.
+
+## Step 4: Style UI Components (USS)
+
+### Example (USS)
+```css
+.mini-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -unity-font-definition: var(--font-regular);
+}
+
+.mini-game__counter {
+    font-size: 70px;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.mini-game__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-button:hover {
+    background-color: rgba(0, 255, 0, 0.4);
+}
+```
+- The `.mini-game` class centers the UI elements.
+- `.mini-game__counter` styles the label with large, readable text.
+- `.mini-game__buttons` ensures the button is properly aligned.
+- The `:hover` effect changes the button color when hovered.
+
+## Step 5: Add Interactivity with Lua
+
+Now, let's make the button functional by binding it in the Lua script.
+
+### Example (Lua)
+```lua
+--!Type(UI)
+
+--!Bind
+local _counterLabel : UILabel = nil
+--!Bind
+local _Button : UIButton = nil
+
+local counter = 0 -- Initialize the counter
+
+_Button:RegisterPressCallback(function()
+    counter = counter + 1
+    _counterLabel:SetPrelocalizedText(tostring(counter)) -- Update label text
+end)
+```
+- `_counterLabel` binds to the label in UXML.
+- `_Button` binds to the button.
+- Clicking the button **increments the counter** and updates the label.
+
+<Note type="info">
+Ensure variable names in Lua **match** the UXML element names.
 </Note>
 
-1. **Add UI Elements Using UXML**:
-   - Modify the UXML file to define the structure of your UI. For an Above Chat UI, add a UILabel inside your UILuaView:
-     ```xml
-     <hr:UILuaView class="mini-game">
-         <hr:UILabel class="mini-game__counter" name="_counterLabel" picking-mode="Ignore" />
-         <VisualElement class="mini-game__buttons">
-            <hr:UIButton class="secondary-button" name="_Button">
-               <Label text="Click me!"/>
-            </hr:UIButton>
-         </VisualElement>
-      </hr:UILuaView>
-     ```
-<Note type="warning">
-Setting `picking-mode="Ignore"` ensures the UI does not respond to mouse or touch input, making it purely informational.
-</Note>
+## Step 6: Test Your UI
 
-1. **Style the UI with USS**:
-   - Open the USS file to style your UI elements:
-     ```css
-     .mini-game {
-         position: relative;
-         display: flex;
-         flex-direction: column;
-         align-self: center;
-         flex-grow: 1;
-         -unity-font-definition: var(--font-regular);
-      }
+1. Click the **Play** button in Unity.
+2. Check that the UI appears correctly.
+3. Click the button to confirm the counter updates.
 
-      .mini-game__counter {
-         position: absolute;
-         align-self: center;
-         top: 40;
-         font-size: 70px;
-         color: #fff;
-         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-      }
+## Conclusion
 
-      .mini-game__game {
-         position: absolute;
-         display: flex;
-         flex-direction: column;
-         align-self: center;
-         bottom: 0;
-      }
-
-      .secondary-button:hover {
-         background-color: rgba(0, 255, 0, 0.4);
-      }
-     ```
-
-## Step 4: Script UI Interactivity
-
-1. **Bind and Set Properties in Lua**:
-   - Edit the Lua script to interact with your UI elements. Bind the UILabel and set its text:
-     ```lua
-     --!Type(UI)
-
-     --!Bind
-     local _counterLabel : UILabel = nil
-     --!Bind
-     local _Button : UIButton = nil
-
-     local counter = 0 -- Initialize the counter
-
-     -- Register a callback for when the button is pressed
-     _Button:RegisterPressCallback(function()
-         counter = counter + 1 -- Increment the counter
-         _counterLabel:SetPrelocalizedText(tostring(counter)) -- Update the label text
-     end)
-     ```
-     
-<Note type="warning">
-In the Lua script, the label variable `_counterLabel` is bound to the UILabel element in the UXML file. The button variable `_Button` is bound to the UIButton element. This is important for interacting with the UI elements in your script. Make sure the names match the names in your UXML file.
-</Note>
-
-## Step 5: Test Your UI
-
-Click the Play button in Unity to test your UI. You should see the UI elements displayed in the scene. Click the button to interact with the UI and verify that the counter increases as expected.
-
-### Conclusion
-
-This guide has provided you with a basic understanding of creating UI elements in Highrise Studio. By following these steps, you can design and customize UI components to enhance the user experience in your games. Experiment with different layouts, styles, and interactions to create engaging and visually appealing interfaces for your players. Happy creating!
+Congratulations! You’ve successfully created a simple UI in **Highrise Studio** using UXML, USS, and Lua. This example demonstrates the basic workflow for creating UI components, styling them, and adding interactivity.
