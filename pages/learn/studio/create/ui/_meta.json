@@ -11,22 +11,7 @@
   "lua": {
     "title": "Lua"
   },
-  "ui-examples": {
-    "title": "UI Examples"
-  },
   "creating-your-first-ui": {
     "title": "Creating your first UI"
-  },
-  "custom-fonts": {
-    "title": "Using Custom Fonts"
-  },
-  "custom-icons": {
-    "title": "Using Custom Icons"
-  },
-  "variables": {
-    "title": "Using Variables"
-  },
-  "responsive-ui": {
-    "title": "Creating Responsive UI"
   }
 }
