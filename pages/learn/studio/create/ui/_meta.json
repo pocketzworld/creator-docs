@@ -2,22 +2,16 @@
   "overview": {
     "title": "Overview"
   },
+  "uxml": {
+    "title": "UXML"
+  },
+  "uss": {
+    "title": "USS"
+  },
+  "lua": {
+    "title": "Lua"
+  },
   "creating-your-first-ui": {
     "title": "Creating your first UI"
-  },
-  "custom-fonts": {
-    "title": "Using Custom Fonts"
-  },
-  "custom-icons": {
-    "title": "Using Custom Icons"
-  },
-  "variables": {
-    "title": "Using Variables"
-  },
-  "responsive-ui": {
-    "title": "Creating Responsive UI"
-  },
-  "ui-toolkit-debugger": {
-    "title": "UI Toolkit Debugger"
   }
 }

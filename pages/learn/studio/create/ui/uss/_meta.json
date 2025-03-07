@@ -1,0 +1,23 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "classes": {
+    "title": "Classes"
+  },
+  "variables": {
+    "title": "Variables"
+  },
+  "margin-padding": {
+    "title": "Margin & Padding"
+  },
+  "custom-fonts": {
+    "title": "Custom Fonts"
+  },
+  "custom-icons": {
+    "title": "Custom Icons"
+  },
+  "responsive-ui": {
+    "title": "Responsive UI"
+  }
+}
