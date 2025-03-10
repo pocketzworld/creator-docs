@@ -14,6 +14,12 @@ Lua serves as the primary scripting language for Highrise world development. It'
 
 Highrise Studio is the integrated development environment (IDE) where users design, build, and script their games. It provides a user-friendly interface for creating 3D environments, importing assets, and writing code. Within Highrise Studio, users can access a variety of tools and resources to bring their game ideas to life.
 
+## VS Code Extension
+
+The Highrise Studio Tools extension for Visual Studio Code (VS Code) enhances the scripting experience by providing features such as syntax highlighting, code completion, and error checking. Users can write, edit, and debug Lua scripts directly within VS Code, streamlining the development process and improving code quality.
+
+[Download the Highrise Studio Tools extension for VS Code](https://marketplace.visualstudio.com/items?itemName=pocketworlds.highrise-studio-tools)
+
 ## Objects and Instances
 
 In Highrise, everything within a game world is represented as objects and instances. Objects are entities such as parts, models, and scripts, while instances are specific occurrences of those objects within the game. Users manipulate objects and instances through scripting to create interactive elements and gameplay mechanics.
