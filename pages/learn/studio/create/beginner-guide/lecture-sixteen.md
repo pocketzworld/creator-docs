@@ -30,6 +30,10 @@ Ensure you're signed in to your Highrise account to access the Assets Catalog.
 
 Audio shaders offer powerful capabilities for real-time audio manipulation, allowing for dynamic audio effects and smooth transitions. They also let you adjust the overall app volume, which impacts all audio sources in the scene.
 
+## YouTube Tutorial
+
+<iframe width="100%" height="100%" style={{"aspect-ratio":"16/9"}} src="https://www.youtube.com/embed/APpU6extBQg" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion
 
 Background music is a key element in game development that enriches player experience and immersion. By mastering Unity's audio system and utilizing audio shaders, you can create effective and captivating musical soundscapes that elevate the quality of your game.
