@@ -38,6 +38,10 @@ TransferGold(player, 10) -- Transfer 10 Gold to the player
 
 ## Getting World Wallet Balance
 
+<Note type="info">
+Each time you enter play mode in Unity, you start with 1,000 Gold in the world wallet to test the Gold transfer functionality.
+</Note>
+
 You can also retrieve the current balance of the World Wallet using the `Wallet` API. This allows you to monitor the Gold available in the World Wallet and manage transfers accordingly.
 
 Here is an example Lua script that retrieves the World Wallet balance:
