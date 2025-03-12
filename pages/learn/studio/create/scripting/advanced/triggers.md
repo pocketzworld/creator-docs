@@ -19,6 +19,10 @@ Triggers fire three main events when interactions occur:
 2. **OnTriggerStay:** Triggered while a collider stays within the trigger.
 3. **OnTriggerExit:** Triggered when a collider exits the trigger.
 
+<Note type="warning">
+If the player isn't detecting the trigger, make sure the GameObject layer is set to "CharacterTrigger" for the player to interact with it.
+</Note>
+
 <Note type="info">
 The trigger or the collider interacting with it must have a Rigidbody component attached. However, the Rigidbody can be set to kinematic to disable physics simulation.
 </Note>
@@ -40,10 +44,6 @@ end
 ```
 
 **Local Player Entering and Exiting a Trigger:**
-
-<Note type="warning">
-If the player isn't detecting the trigger, make sure the GameObject layer is set to "CharacterTrigger" for the player to interact with it.
-</Note>
 
 ```lua
     -- Connect to the OnTriggerEnter event
