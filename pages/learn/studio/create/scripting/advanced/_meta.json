@@ -55,5 +55,8 @@
   },
   "deeplinks": {
     "title": "Deep Links"
+  },
+  "world-persistence-api": {
+    "title": "World Persistence API"
   }
 }
