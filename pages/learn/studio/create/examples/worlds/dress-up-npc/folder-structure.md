@@ -60,6 +60,7 @@ Unity's go-to folder for dynamically loaded assets. Think of it as a hidden stas
 
 ## Visualizing the Structure
 
+```plaintext
 ├── Art/
 ├── Audio/
 ├── Downloads/
@@ -82,6 +83,7 @@ Unity's go-to folder for dynamically loaded assets. Think of it as a hidden stas
 │   ├── UI/
 │   │   ├── UIDressUp.lua - Handles the main dress-up interface.
 └── StylizedFountains/
+```
 
 ## Next Steps
 

@@ -1,5 +1,8 @@
 {
   "buttons": {
-    "title": "Example Buttons"
+    "title": "Buttons"
+  },
+  "slider": {
+    "title": "Slider"
   }
 }
