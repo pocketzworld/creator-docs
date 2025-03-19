@@ -4,5 +4,8 @@
   },
   "slider": {
     "title": "Slider"
+  },
+  "player-thumbnail": {
+    "title": "Player Thumbnail"
   }
 }
