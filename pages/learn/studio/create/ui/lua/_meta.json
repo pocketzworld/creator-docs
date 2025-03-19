@@ -7,5 +7,8 @@
   },
   "converting-uxml-to-lua": {
     "title": "Converting UXML to Lua"
+  },
+  "ui-communication": {
+    "title": "UI Communication"
   }
 }

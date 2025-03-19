@@ -153,8 +153,8 @@ end
 
 This guide covered:
 
-- Creating a slider using `UISlider` in UXML.
-- Styling the slider using USS.
-- Handling slider interactions in Lua.
+- **Creating a slider** using `UISlider` in UXML.
+- **Styling the slider** using USS.
+- **Handling slider interactions in Lua**.
 
-Now you can create and customize sliders for your Unity projects!
+Now you can **create and customize sliders** for your Unity projects!
