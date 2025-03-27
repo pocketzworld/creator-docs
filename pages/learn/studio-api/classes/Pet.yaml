@@ -9,31 +9,38 @@ constructors:
 properties: 
   - name: character
     summary: |
-      
+      The character that represents this pet in the world.
     description:
     is_static: false
     code_samples:
     type: Class.Character
   - name: id
     summary: |
-      
+      Pet's ID.  Each pet has a unique ID.
     description:
     is_static: false
     code_samples:
     type: string
   - name: name
     summary: |
-      
+      Name of the pet as displayed in the UI.
     description:
     is_static: false
     code_samples:
     type: string
   - name: owner
     summary: |
-      
+      The player that owns this pet.
     description:
     is_static: false
     code_samples:
     type: Class.Player
+  - name: skeletonId
+    summary: |
+      The ID of the pet skeleton. This value can be used to determine what kind of pet it is.
+    description:
+    is_static: false
+    code_samples:
+    type: string
 methods: 
 math_operations: 

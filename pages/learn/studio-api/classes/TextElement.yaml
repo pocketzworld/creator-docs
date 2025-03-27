@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: TextElement
-        summary:
+        summary: 
 properties: 
   - name: ussClassName
     summary: |
@@ -74,4 +74,5 @@ properties:
     is_static: false
     code_samples:
     type: string
-methods:
+methods: 
+math_operations: 

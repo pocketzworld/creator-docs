@@ -46,7 +46,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Focus
     summary: |
       [Unity's Focusable.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Focusable.Focus.html)
@@ -56,4 +56,5 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

@@ -60,11 +60,12 @@ methods:
     parameters: 
       - name: callback
         type: (SpriteRenderer) -> ()
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: UnregisterSpriteChangeCallback
     summary: |
       [Unity's SpriteRenderer.UnregisterSpriteChangeCallback Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer.UnregisterSpriteChangeCallback.html)
@@ -74,8 +75,10 @@ methods:
     parameters: 
       - name: callback
         type: (SpriteRenderer) -> ()
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

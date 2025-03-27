@@ -15,7 +15,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.InputAction
-        summary:
+        summary: 
 properties: 
   - name: actionMap
     summary: |
@@ -90,7 +90,7 @@ methods:
     parameters: 
     returns:
       - type: Class.InputAction
-        summary:
+        summary: 
   - name: Disable
     summary: |
       [Unity's InputAction.Disable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Disable.html)
@@ -100,7 +100,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Enable
     summary: |
       [Unity's InputAction.Enable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Enable.html)
@@ -110,7 +110,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: GetTimeoutCompletionPercentage
     summary: |
       [Unity's InputAction.GetTimeoutCompletionPercentage Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.GetTimeoutCompletionPercentage.html)
@@ -120,7 +120,7 @@ methods:
     parameters: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: IsInProgress
     summary: |
       [Unity's InputAction.IsInProgress Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.IsInProgress.html)
@@ -130,7 +130,7 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: IsPressed
     summary: |
       [Unity's InputAction.IsPressed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.IsPressed.html)
@@ -140,17 +140,17 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: ReadVector2
     summary: |
-      [Unity's InputAction.ReadVector2 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.ReadVector2.html)
+      Reads a Vector2 value from this InputAction.
     description:
     is_static: false
     code_samples:
     parameters: 
     returns:
       - type: DataType.Vector2
-        summary:
+        summary: 
   - name: Reset
     summary: |
       [Unity's InputAction.Reset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Reset.html)
@@ -160,7 +160,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: WasPerformedThisFrame
     summary: |
       [Unity's InputAction.WasPerformedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPerformedThisFrame.html)
@@ -170,7 +170,7 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: WasPressedThisFrame
     summary: |
       [Unity's InputAction.WasPressedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPressedThisFrame.html)
@@ -180,7 +180,7 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: WasReleasedThisFrame
     summary: |
       [Unity's InputAction.WasReleasedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasReleasedThisFrame.html)
@@ -190,5 +190,5 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
 math_operations: 

@@ -17,7 +17,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.UICollectionCells
-        summary:
+        summary: 
 properties: 
   - name: cellCount
     summary: |
@@ -92,7 +92,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: AddCells
     summary: |
       
@@ -102,11 +102,12 @@ methods:
     parameters: 
       - name: count
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Deselect
     summary: |
       
@@ -116,11 +117,12 @@ methods:
     parameters: 
       - name: cell
         type: Class.UIView
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Deselect
     summary: |
       
@@ -130,11 +132,12 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: DeselectAll
     summary: |
       
@@ -144,7 +147,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Dispose
     summary: |
       
@@ -154,7 +157,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: EnumerateVisibleCells
     summary: |
       
@@ -164,11 +167,12 @@ methods:
     parameters: 
       - name: enumerate
         type: (UIView, number, boolean) -> (boolean)
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: GetVisibleCell
     summary: |
       
@@ -178,11 +182,12 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.UIView
-        summary:
+        summary: 
   - name: IndexOf
     summary: |
       
@@ -192,11 +197,12 @@ methods:
     parameters: 
       - name: cell
         type: Class.UIView
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: InsertCell
     summary: |
       
@@ -206,11 +212,12 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: InsertCells
     summary: |
       
@@ -220,15 +227,17 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
       - name: count
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: InstantiateCell
     summary: |
       
@@ -238,11 +247,12 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.UIView
-        summary:
+        summary: 
   - name: IsSelected
     summary: |
       
@@ -252,11 +262,12 @@ methods:
     parameters: 
       - name: cell
         type: Class.UIView
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: IsSelected
     summary: |
       
@@ -266,11 +277,12 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: ItemSizeChanged
     summary: |
       
@@ -280,19 +292,22 @@ methods:
     parameters: 
       - name: itemIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: itemPosition
         type: number
+        tags: 
         default:
         summary: 
       - name: delta
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RecycleAllCells
     summary: |
       
@@ -302,7 +317,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RecycleCell
     summary: |
       
@@ -312,15 +327,17 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
       - name: cell
         type: Class.UIView
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RemoveAllCells
     summary: |
       
@@ -330,7 +347,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RemoveCell
     summary: |
       
@@ -340,11 +357,12 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RemoveCells
     summary: |
       
@@ -354,15 +372,17 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
       - name: count
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ScrollTo
     summary: |
       
@@ -372,15 +392,18 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: additionalOffset
         type: number
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Select
     summary: |
       
@@ -390,15 +413,18 @@ methods:
     parameters: 
       - name: cell
         type: Class.UIView
+        tags: 
         default:
         summary: 
       - name: add
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Select
     summary: |
       
@@ -408,15 +434,18 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: add
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectionIndexOf
     summary: |
       
@@ -426,11 +455,12 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: SetLayout
     summary: |
       
@@ -440,11 +470,12 @@ methods:
     parameters: 
       - name: layout
         type: Class.UICollectionGridLayout
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetLayout
     summary: |
       
@@ -454,11 +485,12 @@ methods:
     parameters: 
       - name: layout
         type: Class.UICollectionStackLayout
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Toggle
     summary: |
       
@@ -468,15 +500,18 @@ methods:
     parameters: 
       - name: cell
         type: Class.UIView
+        tags: 
         default:
         summary: 
       - name: add
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Toggle
     summary: |
       
@@ -486,15 +521,18 @@ methods:
     parameters: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: add
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: UpdateCell
     summary: |
       
@@ -504,11 +542,12 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: UpdateCells
     summary: |
       
@@ -518,15 +557,17 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
       - name: count
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: UpdateLayout
     summary: |
       
@@ -536,12 +577,15 @@ methods:
     parameters: 
       - name: min
         type: number
+        tags: 
         default:
         summary: 
       - name: max
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
+math_operations: 

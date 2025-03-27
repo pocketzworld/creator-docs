@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: UITextFieldBase
-        summary:
+        summary: 
   - name: new
     summary: |
       
@@ -26,23 +26,27 @@ constructors:
     parameters: 
       - name: maxLength
         type: number
+        tags: 
         default:
         summary: 
       - name: multiline
         type: boolean
+        tags: 
         default:
         summary: 
       - name: isPasswordField
         type: boolean
+        tags: 
         default:
         summary: 
       - name: maskChar
         type: Char
+        tags: 
         default:
         summary: 
     returns:
       - type: UITextFieldBase
-        summary:
+        summary: 
   - name: new
     summary: |
       
@@ -52,11 +56,12 @@ constructors:
     parameters: 
       - name: label
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: UITextFieldBase
-        summary:
+        summary: 
   - name: new
     summary: |
       
@@ -66,27 +71,32 @@ constructors:
     parameters: 
       - name: label
         type: string
+        tags: 
         default:
         summary: 
       - name: maxLength
         type: number
+        tags: 
         default:
         summary: 
       - name: multiline
         type: boolean
+        tags: 
         default:
         summary: 
       - name: isPasswordField
         type: boolean
+        tags: 
         default:
         summary: 
       - name: maskChar
         type: Char
+        tags: 
         default:
         summary: 
     returns:
       - type: UITextFieldBase
-        summary:
+        summary: 
 properties: 
   - name: emojiParser
     summary: |
@@ -175,7 +185,7 @@ properties:
   - name: inputPattern
     summary: |
       A regular expression to match valid values that can be inserted into the textfield by the user.
-      Invalid values will be rejected.
+    Invalid values will be rejected.
     description:
     is_static: false
     code_samples:
@@ -204,7 +214,7 @@ properties:
   - name: isShiftReturnModeEnabled
     summary: |
       Enables a mode in which Return key sends a ReturnEvent
-      and Shift+Return sends ShiftReturnEvent.
+    and Shift+Return sends ShiftReturnEvent.
     Warning: Works only on non-mobile platforms!
     description:
     is_static: false
@@ -346,11 +356,12 @@ methods:
     parameters: 
       - name: value
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectAll
     summary: |
       
@@ -360,7 +371,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectNone
     summary: |
       
@@ -370,7 +381,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectRange
     summary: |
       
@@ -380,15 +391,17 @@ methods:
     parameters: 
       - name: cursorIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: selectionIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectTextEnd
     summary: |
       Move the cursor to the end of the text with no selection
@@ -398,7 +411,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetValueWithoutNotify
     summary: |
       
@@ -408,8 +421,10 @@ methods:
     parameters: 
       - name: newValue
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

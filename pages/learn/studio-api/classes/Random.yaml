@@ -59,7 +59,7 @@ methods:
     parameters: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: ColorHSV
     summary: |
       [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
@@ -69,15 +69,17 @@ methods:
     parameters: 
       - name: hueMin
         type: number
+        tags: 
         default:
         summary: 
       - name: hueMax
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: ColorHSV
     summary: |
       [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
@@ -87,23 +89,27 @@ methods:
     parameters: 
       - name: hueMin
         type: number
+        tags: 
         default:
         summary: 
       - name: hueMax
         type: number
+        tags: 
         default:
         summary: 
       - name: saturationMin
         type: number
+        tags: 
         default:
         summary: 
       - name: saturationMax
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: ColorHSV
     summary: |
       [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
@@ -113,31 +119,37 @@ methods:
     parameters: 
       - name: hueMin
         type: number
+        tags: 
         default:
         summary: 
       - name: hueMax
         type: number
+        tags: 
         default:
         summary: 
       - name: saturationMin
         type: number
+        tags: 
         default:
         summary: 
       - name: saturationMax
         type: number
+        tags: 
         default:
         summary: 
       - name: valueMin
         type: number
+        tags: 
         default:
         summary: 
       - name: valueMax
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: ColorHSV
     summary: |
       [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
@@ -147,39 +159,47 @@ methods:
     parameters: 
       - name: hueMin
         type: number
+        tags: 
         default:
         summary: 
       - name: hueMax
         type: number
+        tags: 
         default:
         summary: 
       - name: saturationMin
         type: number
+        tags: 
         default:
         summary: 
       - name: saturationMax
         type: number
+        tags: 
         default:
         summary: 
       - name: valueMin
         type: number
+        tags: 
         default:
         summary: 
       - name: valueMax
         type: number
+        tags: 
         default:
         summary: 
       - name: alphaMin
         type: number
+        tags: 
         default:
         summary: 
       - name: alphaMax
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: InitState
     summary: |
       [Unity's Random.InitState Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.InitState.html)
@@ -189,11 +209,12 @@ methods:
     parameters: 
       - name: seed
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Range
     summary: |
       [Unity's Random.Range Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.Range.html)
@@ -203,12 +224,35 @@ methods:
     parameters: 
       - name: minInclusive
         type: number
+        tags: 
         default:
         summary: 
       - name: maxInclusive
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
         summary: 
+  - name: RangeInt
+    summary: |
+      Returns a random int within [minInclusive..maxExclusive)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: minInclusive
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: maxExclusive
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary: 
+math_operations: 

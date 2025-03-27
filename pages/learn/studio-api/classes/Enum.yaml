@@ -17,11 +17,12 @@ methods:
     parameters: 
       - name: enumType
         type: Class.Type
+        tags: 
         default:
         summary: 
     returns:
       - type: {string}
-        summary:
+        summary: 
   - name: GetUnderlyingType
     summary: |
       [Unity's Enum.GetUnderlyingType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.GetUnderlyingType.html)
@@ -31,11 +32,12 @@ methods:
     parameters: 
       - name: enumType
         type: Class.Type
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.Type
-        summary:
+        summary: 
   - name: HasFlag
     summary: |
       [Unity's Enum.HasFlag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.HasFlag.html)
@@ -45,9 +47,10 @@ methods:
     parameters: 
       - name: flag
         type: Enum
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
 math_operations: 

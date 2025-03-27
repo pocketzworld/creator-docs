@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.Image
-        summary:
+        summary: 
 properties: 
   - name: ussClassName
     summary: |

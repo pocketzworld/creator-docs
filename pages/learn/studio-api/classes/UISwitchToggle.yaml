@@ -1,43 +1,44 @@
 name: UISwitchToggle
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.VisualElement
-constructors:
-properties:
+constructors: 
+  - name: new
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UISwitchToggle
+        summary: 
+properties: 
   - name: value
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: boolean
-methods:
+methods: 
   - name: SetValueWithoutNotify
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: newValue
         type: boolean
+        tags: 
         default:
-        summary:
+        summary: 
     returns:
       - type: void
-        summary:
-  - name: new
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: Class.UISwitchToggle
-        summary:
-math_operations:
+        summary: 
+math_operations: 

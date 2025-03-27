@@ -17,7 +17,7 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasTrickleDownHandlers
     summary: |
       [Unity's CallbackEventHandler.HasTrickleDownHandlers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.HasTrickleDownHandlers.html)
@@ -27,7 +27,7 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: SendEvent
     summary: |
       [Unity's CallbackEventHandler.SendEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.SendEvent.html)
@@ -37,8 +37,10 @@ methods:
     parameters: 
       - name: e
         type: Class.EventBase
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

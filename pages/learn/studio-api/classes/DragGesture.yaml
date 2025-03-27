@@ -16,15 +16,18 @@ constructors:
     parameters: 
       - name: helper
         type: IDragGestureHelper
+        tags: 
         default:
         summary: 
       - name: minDistance
         type: number
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: Class.DragGesture
-        summary:
+        summary: 
   - name: new
     summary: |
       
@@ -34,11 +37,13 @@ constructors:
     parameters: 
       - name: minDistance
         type: number
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: Class.DragGesture
-        summary:
+        summary: 
 properties: 
 methods: 
   - name: Custom
@@ -50,19 +55,22 @@ methods:
     parameters: 
       - name: directionLimit
         type: DataType.Vector2
+        tags: 
         default:
         summary: 
       - name: isBidirectional
         type: boolean
+        tags: 
         default:
         summary: 
       - name: directionRecognitionDegs
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.DragGesture
-        summary:
+        summary: 
   - name: Horizontal
     summary: |
       
@@ -72,7 +80,7 @@ methods:
     parameters: 
     returns:
       - type: Class.DragGesture
-        summary:
+        summary: 
   - name: Vertical
     summary: |
       
@@ -82,4 +90,5 @@ methods:
     parameters: 
     returns:
       - type: Class.DragGesture
-        summary:
+        summary: 
+math_operations: 

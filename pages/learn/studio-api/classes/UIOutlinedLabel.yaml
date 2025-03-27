@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.UIOutlinedLabel
-        summary:
+        summary: 
 properties: 
   - name: ussOutlinedLabel
     summary: |
@@ -49,7 +49,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Dispose
     summary: |
       
@@ -59,7 +59,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetPrelocalizedText
     summary: |
       
@@ -69,12 +69,16 @@ methods:
     parameters: 
       - name: value
         type: string
+        tags: 
         default:
         summary: 
       - name: skipRtlValidation
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

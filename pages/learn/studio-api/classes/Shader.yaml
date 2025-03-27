@@ -53,11 +53,12 @@ methods:
     parameters: 
       - name: propertyName
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: FindTextureStack
     summary: |
       [Unity's Shader.FindTextureStack Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.FindTextureStack.html)
@@ -67,15 +68,16 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: string
-        summary:
+        summary: 
       - type: number
-        summary:
+        summary: 
   - name: GetDependency
     summary: |
       [Unity's Shader.GetDependency Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetDependency.html)
@@ -85,11 +87,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.Shader
-        summary:
+        summary: 
   - name: GetPassCountInSubshader
     summary: |
       [Unity's Shader.GetPassCountInSubshader Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPassCountInSubshader.html)
@@ -99,11 +102,12 @@ methods:
     parameters: 
       - name: subshaderIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetPropertyAttributes
     summary: |
       [Unity's Shader.GetPropertyAttributes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyAttributes.html)
@@ -113,11 +117,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: {string}
-        summary:
+        summary: 
   - name: GetPropertyCount
     summary: |
       [Unity's Shader.GetPropertyCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyCount.html)
@@ -127,7 +132,7 @@ methods:
     parameters: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetPropertyDefaultFloatValue
     summary: |
       [Unity's Shader.GetPropertyDefaultFloatValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDefaultFloatValue.html)
@@ -137,11 +142,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetPropertyDefaultIntValue
     summary: |
       [Unity's Shader.GetPropertyDefaultIntValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDefaultIntValue.html)
@@ -151,11 +157,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetPropertyDefaultVectorValue
     summary: |
       [Unity's Shader.GetPropertyDefaultVectorValue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDefaultVectorValue.html)
@@ -165,11 +172,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: 
   - name: GetPropertyDescription
     summary: |
       [Unity's Shader.GetPropertyDescription Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyDescription.html)
@@ -179,11 +187,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: GetPropertyName
     summary: |
       [Unity's Shader.GetPropertyName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyName.html)
@@ -193,11 +202,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: GetPropertyNameId
     summary: |
       [Unity's Shader.GetPropertyNameId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyNameId.html)
@@ -207,11 +217,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetPropertyRangeLimits
     summary: |
       [Unity's Shader.GetPropertyRangeLimits Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyRangeLimits.html)
@@ -221,11 +232,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Vector2
-        summary:
+        summary: 
   - name: GetPropertyTextureDefaultName
     summary: |
       [Unity's Shader.GetPropertyTextureDefaultName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.GetPropertyTextureDefaultName.html)
@@ -235,11 +247,12 @@ methods:
     parameters: 
       - name: propertyIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: PropertyToID
     summary: |
       [Unity's Shader.PropertyToID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Shader.PropertyToID.html)
@@ -249,8 +262,10 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
+math_operations: 

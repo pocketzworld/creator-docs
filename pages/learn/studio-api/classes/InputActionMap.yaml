@@ -15,7 +15,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.InputActionMap
-        summary:
+        summary: 
   - name: new
     summary: |
       [Unity's InputActionMap.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap-ctor.html)
@@ -25,11 +25,12 @@ constructors:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.InputActionMap
-        summary:
+        summary: 
 properties: 
   - name: enabled
     summary: |
@@ -55,7 +56,7 @@ methods:
     parameters: 
     returns:
       - type: Class.InputActionMap
-        summary:
+        summary: 
   - name: Contains
     summary: |
       [Unity's InputActionMap.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Contains.html)
@@ -65,11 +66,12 @@ methods:
     parameters: 
       - name: action
         type: Class.InputAction
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: Disable
     summary: |
       [Unity's InputActionMap.Disable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Disable.html)
@@ -79,7 +81,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Enable
     summary: |
       [Unity's InputActionMap.Enable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.Enable.html)
@@ -89,7 +91,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: FindAction
     summary: |
       [Unity's InputActionMap.FindAction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.FindAction.html)
@@ -99,15 +101,18 @@ methods:
     parameters: 
       - name: actionNameOrId
         type: string
+        tags: 
         default:
         summary: 
       - name: throwIfNotFound
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: Class.InputAction
-        summary:
+        summary: 
   - name: FromJson
     summary: |
       [Unity's InputActionMap.FromJson Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.FromJson.html)
@@ -117,11 +122,12 @@ methods:
     parameters: 
       - name: json
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: {InputActionMap}
-        summary:
+        summary: 
   - name: OnAfterDeserialize
     summary: |
       [Unity's InputActionMap.OnAfterDeserialize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.OnAfterDeserialize.html)
@@ -131,7 +137,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: OnBeforeSerialize
     summary: |
       [Unity's InputActionMap.OnBeforeSerialize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.OnBeforeSerialize.html)
@@ -141,7 +147,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ToJson
     summary: |
       [Unity's InputActionMap.ToJson Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionMap.ToJson.html)
@@ -151,5 +157,5 @@ methods:
     parameters: 
     returns:
       - type: string
-        summary:
+        summary: 
 math_operations: 

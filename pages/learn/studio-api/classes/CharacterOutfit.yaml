@@ -25,11 +25,12 @@ methods:
     parameters: 
       - name: clothing
         type: {CharacterClothing}
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.CharacterOutfit
-        summary:
+        summary: 
   - name: CreateInstance
     summary: |
       Create a new outfit from a collection of clothing items.
@@ -39,12 +40,15 @@ methods:
     parameters: 
       - name: ids
         type: {string}
+        tags: 
         default:
         summary: 
       - name: skeletonId
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.CharacterOutfit
-        summary:
+        summary: 
+math_operations: 

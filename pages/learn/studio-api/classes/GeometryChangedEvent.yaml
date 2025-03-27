@@ -39,12 +39,15 @@ methods:
     parameters: 
       - name: oldRect
         type: DataType.Rect
+        tags: 
         default:
         summary: 
       - name: newRect
         type: DataType.Rect
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.GeometryChangedEvent
-        summary:
+        summary: 
+math_operations: 

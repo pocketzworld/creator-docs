@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.UILocalizedButton
-        summary:
+        summary: 
   - name: new
     summary: |
       
@@ -26,10 +26,12 @@ constructors:
     parameters: 
       - name: text
         type: DataType.LocalizedString
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.UILocalizedButton
-        summary:
+        summary: 
 properties: 
-methods:
+methods: 
+math_operations: 

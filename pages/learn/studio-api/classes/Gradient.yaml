@@ -17,11 +17,12 @@ methods:
     parameters: 
       - name: other
         type: Class.Gradient
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: Evaluate
     summary: |
       [Unity's Gradient.Evaluate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Gradient.Evaluate.html)
@@ -31,9 +32,10 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
 math_operations: 

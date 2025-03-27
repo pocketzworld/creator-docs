@@ -18,11 +18,12 @@ methods:
     parameters: 
       - name: type
         type: Class.Type
+        tags: 
         default:
         summary: 
     returns:
       - type: ScriptableObject
-        summary:
+        summary: 
   - name: CreateInstance
     summary: |
       [Unity's ScriptableObject.CreateInstance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ScriptableObject.CreateInstance.html)
@@ -32,8 +33,10 @@ methods:
     parameters: 
       - name: className
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: ScriptableObject
-        summary:
+        summary: 
+math_operations: 

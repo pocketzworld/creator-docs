@@ -17,11 +17,12 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: DayAndMonthAndFullYear
     summary: |
       
@@ -31,11 +32,12 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: DayAndMonthAndYear
     summary: |
       
@@ -45,11 +47,12 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: HoursMinutes
     summary: |
       
@@ -59,11 +62,12 @@ methods:
     parameters: 
       - name: duration
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: HoursMinutesSeconds
     summary: |
       
@@ -73,11 +77,12 @@ methods:
     parameters: 
       - name: duration
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: MonthAndYear
     summary: |
       
@@ -87,15 +92,18 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
       - name: abbreviated
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: Numeric
     summary: |
       
@@ -105,19 +113,24 @@ methods:
     parameters: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
       - name: decimalPoints
         type: number
+        tags: 
+          - optional
         default:
         summary: 
       - name: abbreviated
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: TimeAgo
     summary: |
       
@@ -127,15 +140,18 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
       - name: shortForm
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: TimeIn
     summary: |
       
@@ -145,15 +161,18 @@ methods:
     parameters: 
       - name: time
         type: number
+        tags: 
         default:
         summary: 
       - name: shortForm
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: TimeLeft
     summary: |
       
@@ -163,11 +182,12 @@ methods:
     parameters: 
       - name: secondsLeft
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: TimeSpan
     summary: |
       
@@ -177,8 +197,10 @@ methods:
     parameters: 
       - name: seconds
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
+math_operations: 

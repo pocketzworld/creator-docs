@@ -16,15 +16,17 @@ constructors:
     parameters: 
       - name: cellInstantiate
         type: (number, any) -> (UIView)
+        tags: 
         default:
         summary: 
       - name: asyncFetch
         type: (UICollectionDelegateAsyncRequest) -> ()
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.LuaUICollectionDelegateAsyncProvider
-        summary:
+        summary: 
 properties: 
 methods: 
   - name: Fetch
@@ -36,11 +38,13 @@ methods:
     parameters: 
       - name: forceReload
         type: boolean
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Refresh
     summary: |
       
@@ -50,4 +54,5 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

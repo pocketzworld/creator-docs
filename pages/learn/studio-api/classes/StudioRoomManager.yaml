@@ -17,12 +17,16 @@ methods:
     parameters: 
       - name: room
         type: Class.RoomAsset
+        tags: 
         default:
         summary: 
       - name: roomWasLoaded
         type: () -> ()
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

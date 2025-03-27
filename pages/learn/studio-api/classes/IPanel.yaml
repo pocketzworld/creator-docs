@@ -24,18 +24,19 @@ properties:
 methods: 
   - name: LocalToWorld
     summary: |
-      [Unity's IPanel.LocalToWorld Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.LocalToWorld.html)
+      Convert a local panel coordinate to a world (screen) coordinate
     description:
     is_static: false
     code_samples:
     parameters: 
       - name: point
         type: DataType.Vector2
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Vector2
-        summary:
+        summary: 
   - name: Pick
     summary: |
       [Unity's IPanel.Pick Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.Pick.html)
@@ -45,11 +46,12 @@ methods:
     parameters: 
       - name: point
         type: DataType.Vector2
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.VisualElement
-        summary:
+        summary: 
   - name: PickAll
     summary: |
       [Unity's IPanel.PickAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.PickAll.html)
@@ -59,26 +61,30 @@ methods:
     parameters: 
       - name: point
         type: DataType.Vector2
+        tags: 
         default:
         summary: 
       - name: picked
         type: {VisualElement}
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.VisualElement
-        summary:
+        summary: 
   - name: WorldToLocal
     summary: |
-      [Unity's IPanel.WorldToLocal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.WorldToLocal.html)
+      Convert a world (screen) coordinate to a local panel coordinate
     description:
     is_static: false
     code_samples:
     parameters: 
       - name: point
         type: DataType.Vector2
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Vector2
         summary: 
+math_operations: 

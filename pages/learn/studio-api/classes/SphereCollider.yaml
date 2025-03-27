@@ -4,21 +4,23 @@ summary: |
   [Unity's SphereCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SphereCollider.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Collider
-constructors:
-properties:
+constructors: 
+properties: 
   - name: center
     summary: |
       [Unity's SphereCollider.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SphereCollider-center.html)
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: radius
     summary: |
       [Unity's SphereCollider.radius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SphereCollider-radius.html)
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-math_operations:
+methods: 
+math_operations: 

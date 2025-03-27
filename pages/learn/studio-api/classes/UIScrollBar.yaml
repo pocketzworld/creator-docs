@@ -1,57 +1,65 @@
 name: UIScrollBar
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.VisualElement
-constructors:
-properties:
-  - name: min
+constructors: 
+  - name: new
     summary: |
-
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UIScrollBar
+        summary: 
+properties: 
+  - name: isReversed
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: max
+    summary: |
+      
     description:
     is_static: false
     code_samples:
     type: number
-  - name: max
+  - name: min
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: number
   - name: value
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: number
-methods:
+methods: 
   - name: SetValueWithoutNotify
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: newValue
         type: number
+        tags: 
         default:
-        summary:
+        summary: 
     returns:
       - type: void
-        summary:
-  - name: new
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: Class.UIScrollBar
-        summary:
-math_operations:
+        summary: 
+math_operations: 

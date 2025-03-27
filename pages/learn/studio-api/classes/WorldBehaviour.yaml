@@ -15,4 +15,5 @@ properties:
     is_static: false
     code_samples:
     type: Class.WorldScene
-methods:
+methods: 
+math_operations: 

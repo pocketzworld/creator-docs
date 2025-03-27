@@ -8,4 +8,5 @@ inherits:
   - Class.Behaviour
 constructors: 
 properties: 
-methods:
+methods: 
+math_operations: 

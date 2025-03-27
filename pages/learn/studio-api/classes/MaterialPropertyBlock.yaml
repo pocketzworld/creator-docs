@@ -15,7 +15,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.MaterialPropertyBlock
-        summary:
+        summary: 
 properties: 
   - name: isEmpty
     summary: |
@@ -34,7 +34,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: GetColor
     summary: |
       [Unity's MaterialPropertyBlock.GetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetColor.html)
@@ -44,11 +44,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: GetColor
     summary: |
       [Unity's MaterialPropertyBlock.GetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetColor.html)
@@ -58,11 +59,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Color
-        summary:
+        summary: 
   - name: GetFloat
     summary: |
       [Unity's MaterialPropertyBlock.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloat.html)
@@ -72,11 +74,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetFloat
     summary: |
       [Unity's MaterialPropertyBlock.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloat.html)
@@ -86,11 +89,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetFloatArray
     summary: |
       [Unity's MaterialPropertyBlock.GetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloatArray.html)
@@ -100,11 +104,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: {number}
-        summary:
+        summary: 
   - name: GetFloatArray
     summary: |
       [Unity's MaterialPropertyBlock.GetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetFloatArray.html)
@@ -114,11 +119,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: {number}
-        summary:
+        summary: 
   - name: GetInt
     summary: |
       [Unity's MaterialPropertyBlock.GetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInt.html)
@@ -128,11 +134,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetInt
     summary: |
       [Unity's MaterialPropertyBlock.GetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInt.html)
@@ -142,11 +149,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetInteger
     summary: |
       [Unity's MaterialPropertyBlock.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInteger.html)
@@ -156,11 +164,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetInteger
     summary: |
       [Unity's MaterialPropertyBlock.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetInteger.html)
@@ -170,11 +179,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetMatrix
     summary: |
       [Unity's MaterialPropertyBlock.GetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrix.html)
@@ -184,11 +194,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: 
   - name: GetMatrix
     summary: |
       [Unity's MaterialPropertyBlock.GetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrix.html)
@@ -198,11 +209,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Matrix4x4
-        summary:
+        summary: 
   - name: GetMatrixArray
     summary: |
       [Unity's MaterialPropertyBlock.GetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrixArray.html)
@@ -212,11 +224,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: {Matrix4x4}
-        summary:
+        summary: 
   - name: GetMatrixArray
     summary: |
       [Unity's MaterialPropertyBlock.GetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetMatrixArray.html)
@@ -226,11 +239,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: {Matrix4x4}
-        summary:
+        summary: 
   - name: GetTexture
     summary: |
       [Unity's MaterialPropertyBlock.GetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetTexture.html)
@@ -240,11 +254,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.Texture
-        summary:
+        summary: 
   - name: GetTexture
     summary: |
       [Unity's MaterialPropertyBlock.GetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetTexture.html)
@@ -254,11 +269,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.Texture
-        summary:
+        summary: 
   - name: GetVector
     summary: |
       [Unity's MaterialPropertyBlock.GetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVector.html)
@@ -268,11 +284,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: 
   - name: GetVector
     summary: |
       [Unity's MaterialPropertyBlock.GetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVector.html)
@@ -282,11 +299,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: DataType.Vector4
-        summary:
+        summary: 
   - name: GetVectorArray
     summary: |
       [Unity's MaterialPropertyBlock.GetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVectorArray.html)
@@ -296,11 +314,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: {Vector4}
-        summary:
+        summary: 
   - name: GetVectorArray
     summary: |
       [Unity's MaterialPropertyBlock.GetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.GetVectorArray.html)
@@ -310,11 +329,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: {Vector4}
-        summary:
+        summary: 
   - name: HasBuffer
     summary: |
       [Unity's MaterialPropertyBlock.HasBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasBuffer.html)
@@ -324,11 +344,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasBuffer
     summary: |
       [Unity's MaterialPropertyBlock.HasBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasBuffer.html)
@@ -338,11 +359,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasColor
     summary: |
       [Unity's MaterialPropertyBlock.HasColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasColor.html)
@@ -352,11 +374,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasColor
     summary: |
       [Unity's MaterialPropertyBlock.HasColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasColor.html)
@@ -366,11 +389,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasConstantBuffer
     summary: |
       [Unity's MaterialPropertyBlock.HasConstantBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasConstantBuffer.html)
@@ -380,11 +404,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasConstantBuffer
     summary: |
       [Unity's MaterialPropertyBlock.HasConstantBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasConstantBuffer.html)
@@ -394,11 +419,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasFloat
     summary: |
       [Unity's MaterialPropertyBlock.HasFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasFloat.html)
@@ -408,11 +434,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasFloat
     summary: |
       [Unity's MaterialPropertyBlock.HasFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasFloat.html)
@@ -422,11 +449,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasInt
     summary: |
       [Unity's MaterialPropertyBlock.HasInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInt.html)
@@ -436,11 +464,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasInt
     summary: |
       [Unity's MaterialPropertyBlock.HasInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInt.html)
@@ -450,11 +479,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasInteger
     summary: |
       [Unity's MaterialPropertyBlock.HasInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInteger.html)
@@ -464,11 +494,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasInteger
     summary: |
       [Unity's MaterialPropertyBlock.HasInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasInteger.html)
@@ -478,11 +509,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasMatrix
     summary: |
       [Unity's MaterialPropertyBlock.HasMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasMatrix.html)
@@ -492,11 +524,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasMatrix
     summary: |
       [Unity's MaterialPropertyBlock.HasMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasMatrix.html)
@@ -506,11 +539,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasProperty
     summary: |
       [Unity's MaterialPropertyBlock.HasProperty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasProperty.html)
@@ -520,11 +554,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasProperty
     summary: |
       [Unity's MaterialPropertyBlock.HasProperty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasProperty.html)
@@ -534,11 +569,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasTexture
     summary: |
       [Unity's MaterialPropertyBlock.HasTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasTexture.html)
@@ -548,11 +584,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasTexture
     summary: |
       [Unity's MaterialPropertyBlock.HasTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasTexture.html)
@@ -562,11 +599,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasVector
     summary: |
       [Unity's MaterialPropertyBlock.HasVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasVector.html)
@@ -576,11 +614,12 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: HasVector
     summary: |
       [Unity's MaterialPropertyBlock.HasVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.HasVector.html)
@@ -590,11 +629,12 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: SetColor
     summary: |
       [Unity's MaterialPropertyBlock.SetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetColor.html)
@@ -604,15 +644,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: DataType.Color
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetColor
     summary: |
       [Unity's MaterialPropertyBlock.SetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetColor.html)
@@ -622,15 +664,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: DataType.Color
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetFloat
     summary: |
       [Unity's MaterialPropertyBlock.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloat.html)
@@ -640,15 +684,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetFloat
     summary: |
       [Unity's MaterialPropertyBlock.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloat.html)
@@ -658,15 +704,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetFloatArray
     summary: |
       [Unity's MaterialPropertyBlock.SetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloatArray.html)
@@ -676,15 +724,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: values
         type: {number}
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetFloatArray
     summary: |
       [Unity's MaterialPropertyBlock.SetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetFloatArray.html)
@@ -694,15 +744,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: values
         type: {number}
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetInt
     summary: |
       [Unity's MaterialPropertyBlock.SetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInt.html)
@@ -712,15 +764,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetInt
     summary: |
       [Unity's MaterialPropertyBlock.SetInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInt.html)
@@ -730,15 +784,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetInteger
     summary: |
       [Unity's MaterialPropertyBlock.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInteger.html)
@@ -748,15 +804,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetInteger
     summary: |
       [Unity's MaterialPropertyBlock.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetInteger.html)
@@ -766,15 +824,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetMatrix
     summary: |
       [Unity's MaterialPropertyBlock.SetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrix.html)
@@ -784,15 +844,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: DataType.Matrix4x4
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetMatrix
     summary: |
       [Unity's MaterialPropertyBlock.SetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrix.html)
@@ -802,15 +864,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: DataType.Matrix4x4
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetMatrixArray
     summary: |
       [Unity's MaterialPropertyBlock.SetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrixArray.html)
@@ -820,15 +884,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: values
         type: {Matrix4x4}
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetMatrixArray
     summary: |
       [Unity's MaterialPropertyBlock.SetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetMatrixArray.html)
@@ -838,15 +904,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: values
         type: {Matrix4x4}
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetTexture
     summary: |
       [Unity's MaterialPropertyBlock.SetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetTexture.html)
@@ -856,15 +924,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: Class.Texture
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetTexture
     summary: |
       [Unity's MaterialPropertyBlock.SetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetTexture.html)
@@ -874,15 +944,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: Class.Texture
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetVector
     summary: |
       [Unity's MaterialPropertyBlock.SetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVector.html)
@@ -892,15 +964,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: DataType.Vector4
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetVector
     summary: |
       [Unity's MaterialPropertyBlock.SetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVector.html)
@@ -910,15 +984,17 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: value
         type: DataType.Vector4
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetVectorArray
     summary: |
       [Unity's MaterialPropertyBlock.SetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVectorArray.html)
@@ -928,15 +1004,17 @@ methods:
     parameters: 
       - name: nameID
         type: number
+        tags: 
         default:
         summary: 
       - name: values
         type: {Vector4}
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetVectorArray
     summary: |
       [Unity's MaterialPropertyBlock.SetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.SetVectorArray.html)
@@ -946,12 +1024,15 @@ methods:
     parameters: 
       - name: name
         type: string
+        tags: 
         default:
         summary: 
       - name: values
         type: {Vector4}
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

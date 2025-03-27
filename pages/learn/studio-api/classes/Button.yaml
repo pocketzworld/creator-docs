@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.Button
-        summary:
+        summary: 
   - name: new
     summary: |
       [Unity's Button.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ctor.html)
@@ -26,11 +26,12 @@ constructors:
     parameters: 
       - name: clickEvent
         type: () -> ()
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.Button
-        summary:
+        summary: 
 properties: 
   - name: ussClassName
     summary: |

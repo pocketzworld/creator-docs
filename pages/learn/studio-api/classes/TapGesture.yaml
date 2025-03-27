@@ -23,4 +23,5 @@ properties:
     is_static: true
     code_samples:
     type: number
-methods:
+methods: 
+math_operations: 

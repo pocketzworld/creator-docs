@@ -39,4 +39,5 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

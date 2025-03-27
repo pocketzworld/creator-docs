@@ -2,7 +2,7 @@ name: SingleClickEvent
 type: classes
 summary: |
   Event sent when a single click occurs on an element that tracks double clicks
-  That is when the double click timeout is reached without the second click
+    That is when the double click timeout is reached without the second click
 description:
 code_samples:
 inherits: 
@@ -17,3 +17,4 @@ properties:
     code_samples:
     type: number
 methods: 
+math_operations: 

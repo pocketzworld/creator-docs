@@ -17,12 +17,15 @@ methods:
     parameters: 
       - name: productId
         type: string
+        tags: 
         default:
         summary: 
       - name: callback
         type: (boolean) -> ()
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

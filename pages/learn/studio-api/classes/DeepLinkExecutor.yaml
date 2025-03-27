@@ -8,4 +8,5 @@ inherits:
   - Class.WorldBehaviour
 constructors: 
 properties: 
-methods:
+methods: 
+math_operations: 

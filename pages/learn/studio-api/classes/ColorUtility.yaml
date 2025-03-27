@@ -17,11 +17,12 @@ methods:
     parameters: 
       - name: color
         type: DataType.Color
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: ToHtmlStringRGBA
     summary: |
       [Unity's ColorUtility.ToHtmlStringRGBA Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.ToHtmlStringRGBA.html)
@@ -31,11 +32,12 @@ methods:
     parameters: 
       - name: color
         type: DataType.Color
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: TryParseHtmlString
     summary: |
       [Unity's ColorUtility.TryParseHtmlString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.TryParseHtmlString.html)
@@ -45,10 +47,12 @@ methods:
     parameters: 
       - name: htmlString
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.Color
-        summary:
+        summary: 
+math_operations: 

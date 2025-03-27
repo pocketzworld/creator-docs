@@ -8,4 +8,5 @@ inherits:
   - Class.Gesture
 constructors: 
 properties: 
-methods:
+methods: 
+math_operations: 

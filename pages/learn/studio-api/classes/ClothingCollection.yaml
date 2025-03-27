@@ -16,3 +16,4 @@ properties:
     code_samples:
     type: {CharacterClothing}
 methods: 
+math_operations: 

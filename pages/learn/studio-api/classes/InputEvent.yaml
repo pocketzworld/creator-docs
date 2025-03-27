@@ -39,13 +39,15 @@ methods:
     parameters: 
       - name: previousData
         type: string
+        tags: 
         default:
         summary: 
       - name: newData
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.InputEvent
-        summary:
+        summary: 
 math_operations: 

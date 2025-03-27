@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.UICollection
-        summary:
+        summary: 
   - name: new
     summary: |
       Construct a collection view
@@ -26,11 +26,12 @@ constructors:
     parameters: 
       - name: scrollView
         type: IScrollView
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.UICollection
-        summary:
+        summary: 
 properties: 
   - name: contentContainer
     summary: |
@@ -77,22 +78,23 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: PerformUpdates
     summary: |
       Animates multiple update operations. All calls to InsertItem, RemoveUpdate, or UpdateItem
-      must be made from within a call to PerformUpdates
+    must be made from within a call to PerformUpdates
     description:
     is_static: false
     code_samples:
     parameters: 
       - name: updates
         type: () -> ()
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Rebuild
     summary: |
       Signals the collection build to rebuild its layout.
@@ -102,7 +104,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ScrollTo
     summary: |
       
@@ -112,19 +114,23 @@ methods:
     parameters: 
       - name: cells
         type: Class.UICollectionCells
+        tags: 
         default:
         summary: 
       - name: cellIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: padding
         type: number
+        tags: 
+          - optional
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ScrollToBeginning
     summary: |
       
@@ -134,7 +140,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ScrollToBeginning
     summary: |
       
@@ -144,11 +150,12 @@ methods:
     parameters: 
       - name: animationDuration
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ScrollToEnd
     summary: |
       Scroll the collection to the end
@@ -158,4 +165,5 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.UILocalizedTextField
-        summary:
+        summary: 
 properties: 
   - name: autoCorrection
     summary: |
@@ -182,7 +182,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectNone
     summary: |
       
@@ -192,7 +192,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SelectRange
     summary: |
       
@@ -202,15 +202,17 @@ methods:
     parameters: 
       - name: cursorIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: selectionIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetPlaceholderText
     summary: |
       
@@ -220,8 +222,10 @@ methods:
     parameters: 
       - name: localizedString
         type: DataType.LocalizedString
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 

@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.InputActionReference
-        summary:
+        summary: 
 properties: 
   - name: action
     summary: |
@@ -35,11 +35,12 @@ methods:
     parameters: 
       - name: action
         type: Class.InputAction
+        tags: 
         default:
         summary: 
     returns:
       - type: Class.InputActionReference
-        summary:
+        summary: 
   - name: Set
     summary: |
       [Unity's InputActionReference.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.Set.html)
@@ -49,11 +50,12 @@ methods:
     parameters: 
       - name: action
         type: Class.InputAction
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: ToInputAction
     summary: |
       [Unity's InputActionReference.ToInputAction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.ToInputAction.html)
@@ -63,5 +65,5 @@ methods:
     parameters: 
     returns:
       - type: Class.InputAction
-        summary:
+        summary: 
 math_operations: 

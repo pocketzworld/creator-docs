@@ -16,6 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: Class.ProgressBar
-        summary:
+        summary: 
 properties: 
 methods: 
+math_operations: 

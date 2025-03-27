@@ -16,7 +16,7 @@ constructors:
     parameters: 
     returns:
       - type: BindableElement
-        summary:
+        summary: 
 properties: 
   - name: binding
     summary: |

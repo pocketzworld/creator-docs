@@ -60,11 +60,12 @@ methods:
     parameters: 
       - name: mesh
         type: Class.Mesh
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: BakeMesh
     summary: |
       [Unity's SkinnedMeshRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.BakeMesh.html)
@@ -74,15 +75,17 @@ methods:
     parameters: 
       - name: mesh
         type: Class.Mesh
+        tags: 
         default:
         summary: 
       - name: useScale
         type: boolean
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: GetBlendShapeWeight
     summary: |
       [Unity's SkinnedMeshRenderer.GetBlendShapeWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.GetBlendShapeWeight.html)
@@ -92,11 +95,12 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: SetBlendShapeWeight
     summary: |
       [Unity's SkinnedMeshRenderer.SetBlendShapeWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.SetBlendShapeWeight.html)
@@ -106,12 +110,15 @@ methods:
     parameters: 
       - name: index
         type: number
+        tags: 
         default:
         summary: 
       - name: value
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
+math_operations: 
