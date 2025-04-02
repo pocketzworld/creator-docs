@@ -11,6 +11,9 @@
   "lua": {
     "title": "Lua"
   },
+  "ui-examples": {
+    "title": "UI Examples"
+  },
   "creating-your-first-ui": {
     "title": "Creating your first UI"
   }
