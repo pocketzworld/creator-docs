@@ -1,65 +1,68 @@
 name: Player
 type: classes
 summary: |
-  The 'Player' class in Highrise represents each individual participant in the game. It is a crucial element, acting as the bridge between the player's real-world actions and their in-game avatar's behaviors. The class comprises the 'name' attribute of the players for easy identification, and an 'avatar' object that maps to the player's in-game character. It also includes event-based methods that respond to specific activities such as the instantiation and destruction of a player's avatar.
+  Player holds a reference to the status of the player and the Character.
 description:
-code_samples: |
-  ```lua
-    scene.PlayerJoined:Connect(function(scene, player)
-      player.CharacterChanged:Connect(function(player, newCharacter, oldCharacter)
-        if not oldCharacter then
-          -- Player just got a new character! Do any setup here
-        end
-      end)
-    end)
-  ```
-inherits:
-constructors:
-properties:
+code_samples:
+inherits: 
+constructors: 
+properties: 
+  - name: PetOutfitChanged
+    summary: |
+      Event fired when the player's pet changes
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: activeChannel
+    summary: |
+      The chat channel the player is currently active in
+    description:
+    is_static: false
+    code_samples:
+    type: Class.ChannelInfo
   - name: chatBubbleTransform
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: Class.Transform
-  - name: name
+  - name: hasPet
     summary: |
-      The 'name' property holds the name of the player. This can be used to identify the player in the game, for example, in the chat or in the leaderboard.
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
     code_samples:
-    type: string
-  - name: id
+    type: boolean
+  - name: pet
     summary: |
-      The 'id' property holds the unique identifier of the player. This is an alternative way to track players via number.
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
     code_samples:
-    type: number
-  - name: character
+    type: Class.Pet
+  - name: voicePosition
     summary: |
-      This property gives you access to the player's. It allows you to manipulate the character's properties and behavior, such as changing its appearance or controlling its movement.
-
-      Only server scripts can set the character
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
     code_samples:
-    type: Class.Character
-  - name: CharacterChanged
+    type: DataType.Vector3
+methods: 
+  - name: IsUsingPetType
     summary: |
-      An event that is triggered when the player's character is changed. This is useful for performing actions that need to be executed when the player's character is updated, including from nil to anything.
-
-      Parameters are Player player, Character newCharacter, Character oldCharacter
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
-    parameters:
     code_samples:
+    parameters: 
+      - name: petId
+        type: string
+        tags: 
+        default:
+        summary: 
     returns:
-    type: Class.Event
-methods:
-math_operations:
+      - type: boolean
+        summary: 
+math_operations: 

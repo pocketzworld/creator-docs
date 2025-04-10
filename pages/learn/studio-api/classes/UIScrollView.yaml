@@ -1,306 +1,358 @@
 name: UIScrollView
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.VisualElement
-constructors:
-properties:
-  - name: scrollableSize
+constructors: 
+  - name: new
     summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: viewportSize
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: hasInertia
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: isAtEnd
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: isScrolling
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: value
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: number
-  - name: contentViewport
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.VisualElement
-  - name: contentContainer
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.VisualElement
-  - name: scrollWheelRate
-    summary: |
-
+      
     description:
     is_static: true
     code_samples:
-    type: number
-  - name: isClamped
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: isElastic
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: boolean
-  - name: scrollDecelerationRate
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: ussScrollView
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewGradients
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewGradientsTop
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewGradientsBottom
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewViewport
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewContent
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewHorizontal
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewVertical
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewFadeEdges
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
+    parameters: 
+    returns:
+      - type: Class.UIScrollView
+        summary: 
+properties: 
   - name: defaultScrollDecelerationRate
     summary: |
-
+      
     description:
     is_static: true
     code_samples:
     type: number
   - name: fastScrollDecelerationRate
     summary: |
-
+      
     description:
     is_static: true
     code_samples:
     type: number
   - name: minInertiaVelocity
     summary: |
-
+      
     description:
     is_static: true
     code_samples:
     type: number
-methods:
-  - name: ScrollTo
+  - name: ussScrollView
     summary: |
-
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewContent
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewFadeEdges
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewGradients
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewGradientsBottom
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewGradientsTop
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewHorizontal
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewVertical
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: ussScrollViewViewport
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    type: string
+  - name: contentContainer
+    summary: |
+      Contains full content, potentially partially visible
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: child
-        type: Class.VisualElement
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToElement
+    type: Class.VisualElement
+  - name: contentViewport
     summary: |
-
+      Represents the visible part of contentContainer.
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: element
-        type: Class.VisualElement
-        default:
-        summary:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToOffset
+    type: Class.VisualElement
+  - name: hasInertia
     summary: |
-
+      Returns true if the scroll view has inertia
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: offset
-        type: number
-        default:
-        summary:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToEnd
+    type: boolean
+  - name: isAtEnd
     summary: |
-
+      Check to see if the scrollbar is at the end or not
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToBeginning
+    type: boolean
+  - name: isClamped
     summary: |
-
+      Returns true if the scroll view is clamped to the scroll extents
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: isElastic
+    summary: |
+      Returns true if the scroll view will use an elastic behaviour when scrolling past the
+    end of the extents.
+    description:
+    is_static: true
+    code_samples:
+    type: boolean
+  - name: isInertiaEnabled
+    summary: |
+      
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: SetValueWithoutNotify
+    type: boolean
+  - name: isScrolling
     summary: |
-
+      True if the scroll view is currently moving (scrolling or animating).
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: newValue
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: AdjustScrollOffsetForNewContent
+    type: boolean
+  - name: onScrollEnd
     summary: |
-
+      Called when scrolling ends, either by lifting a finger or by the scroll animation ending.
     description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
+    type: () -> ()
+  - name: scrollDecelerationRate
+    summary: |
+      Controls the rate at which the scrolling movement slows after a user scrolls
+    using a touch interaction.
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: scrollWheelRate
+    summary: |
+      Global value for the rate at which the scroll wheel scrolls
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: scrollableSize
+    summary: |
+      Returns the amount of scroll
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: value
+    summary: |
+      Get/Set the current scroll offset
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: viewportSize
+    summary: |
+      Size of the viewport and padding
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: worldBound
+    summary: |
+      Rect representing the world bounds of the scroll view
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+methods: 
   - name: AdjustScrollOffset
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: delta
         type: number
+        tags: 
         default:
-        summary:
+        summary: 
     returns:
       - type: void
-        summary:
-  - name: CancelAnimation
+        summary: 
+  - name: AdjustScrollOffsetForNewContent
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
     returns:
       - type: void
-        summary:
-math_operations:
+        summary: 
+  - name: CancelAnimation
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ScrollTo
+    summary: |
+      Scroll to a specific child element.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: child
+        type: Class.VisualElement
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: ScrollToBeginning
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: animationDuration
+        type: number
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: ScrollToElement
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: element
+        type: Class.VisualElement
+        tags: 
+        default:
+        summary: 
+      - name: animationDuration
+        type: number
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: ScrollToEnd
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: animationDuration
+        type: number
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: ScrollToOffset
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: offset
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: animationDuration
+        type: number
+        tags: 
+          - optional
+        default:
+        summary: 
+      - name: propagateAnimation
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetValueWithoutNotify
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: newValue
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+math_operations: 

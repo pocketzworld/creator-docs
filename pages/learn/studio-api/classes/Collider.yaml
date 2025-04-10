@@ -1,83 +1,134 @@
 name: Collider
 type: classes
-summary: Collider acts as an invisible force field around GameObjects, essential for interactions like collisions and input responses. Integrating with Rigidbody, Colliders allow objects to engage physically with the game world, simulating real-world physics. Various Collider types match different object shapes, enabling precise interaction management. Colliders can be set as triggers for event detection without physical response, offering versatility in gameplay mechanics. Refer to the official Unity Collider documentation for in-depth guidance.
+summary: |
+  [Unity's Collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Component
-constructors:
-properties:
-  - name: enabled
-    summary: Toggles the Collider's interaction capabilities; disabling prevents collision detection.
-    is_static: false
-    code_samples:
-    type: boolean
+constructors: 
+properties: 
   - name: attachedRigidbody
-    summary: Points to the Rigidbody component associated with the Collider, crucial for physics interactions.
+    summary: |
+      [Unity's Collider.attachedRigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-attachedRigidbody.html)
+    description:
     is_static: false
     code_samples:
     type: Class.Rigidbody
-  - name: isTrigger
-    summary: Converts the Collider into a Trigger, which notifies of entering or exiting objects without physical collisions.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: contactOffset
-    summary: Adjusts collision detection sensitivity, controlling the threshold for collision recognition.
-    is_static: false
-    code_samples:
-    type: number
   - name: bounds
-    summary: Retrieves the Collider's world space bounds, outlining its physical extent.
+    summary: |
+      [Unity's Collider.bounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-bounds.html)
+    description:
     is_static: false
     code_samples:
     type: DataType.Bounds
-  - name: hasModifiableContacts
-    summary: Indicates the capability to modify collision contacts, useful for custom collision handling.
+  - name: contactOffset
+    summary: |
+      [Unity's Collider.contactOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-contactOffset.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: enabled
+    summary: |
+      [Unity's Collider.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-enabled.html)
+    description:
     is_static: false
     code_samples:
     type: boolean
-  - name: providesContacts
-    summary: Identifies if the Collider supplies collision contact data, facilitating detailed interaction analysis.
+  - name: excludeLayers
+    summary: |
+      [Unity's Collider.excludeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-excludeLayers.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.LayerMask
+  - name: hasModifiableContacts
+    summary: |
+      [Unity's Collider.hasModifiableContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-hasModifiableContacts.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: includeLayers
+    summary: |
+      [Unity's Collider.includeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-includeLayers.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.LayerMask
+  - name: isTrigger
+    summary: |
+      [Unity's Collider.isTrigger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-isTrigger.html)
+    description:
     is_static: false
     code_samples:
     type: boolean
   - name: layerOverridePriority
-    summary: Determines override precedence in Layer Collision Matrix conflicts, guiding collision layer resolution.
+    summary: |
+      [Unity's Collider.layerOverridePriority Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-layerOverridePriority.html)
+    description:
     is_static: false
     code_samples:
     type: number
-  - name: excludeLayers
-    summary: Specifies layers to exclude from collision detection, enhancing control over interaction scope.
+  - name: providesContacts
+    summary: |
+      [Unity's Collider.providesContacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider-providesContacts.html)
+    description:
     is_static: false
     code_samples:
-    type: DataType.LayerMask
-  - name: includeLayers
-    summary: Defines layers to include in collision detection, allowing targeted interaction setups.
-    is_static: false
-    code_samples:
-    type: DataType.LayerMask
-methods:
+    type: boolean
+methods: 
   - name: ClosestPoint
-    summary: Determines the nearest point on the Collider to a specified location, useful for proximity-based interactions.
+    summary: |
+      [Unity's Collider.ClosestPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPoint.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: position
         type: DataType.Vector3
-        summary: Target position for closest point calculation.
+        tags: 
+        default:
+        summary: 
     returns:
       - type: DataType.Vector3
-        summary: The nearest point on the Collider.
+        summary: 
   - name: ClosestPointOnBounds
-    summary: Identifies the nearest point on the Collider's bounds to a given location, focusing solely on outer limits.
+    summary: |
+      [Unity's Collider.ClosestPointOnBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.ClosestPointOnBounds.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: position
         type: DataType.Vector3
-        summary: Target position relative to the Collider's bounds.
+        tags: 
+        default:
+        summary: 
     returns:
       - type: DataType.Vector3
-        summary: The closest boundary point.
-math_operations:
+        summary: 
+  - name: Raycast
+    summary: |
+      [Unity's Collider.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collider.Raycast.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: ray
+        type: DataType.Ray
+        tags: 
+        default:
+        summary: 
+      - name: maxDistance
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary: 
+      - type: DataType.RaycastHit
+        summary: 
+math_operations: 

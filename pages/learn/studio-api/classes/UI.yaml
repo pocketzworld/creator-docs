@@ -1,74 +1,194 @@
 name: UI
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
-constructors:
-properties:
-  - name: EmotesOpened
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Event
-  - name: EmotesClosed
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Event
+inherits: 
+constructors: 
+properties: 
   - name: EmoteSelected
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    type: Class.Event
-  - name: hud
+    type: LuaEvent
+  - name: EmotesClosed
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    type: Class.VisualElement
+    type: LuaEvent
+  - name: EmotesOpened
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
   - name: aboveChat
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: Class.VisualElement
-methods:
-  - name: OpenMiniProfile
+  - name: hud
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
+    type: Class.VisualElement
+  - name: popupRoot
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.VisualElement
+methods: 
+  - name: CloseCloset
+    summary: |
+      Closes the closet UI if it is open.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
     returns:
       - type: void
-        summary:
-  - name: OpenPopup
+        summary: 
+  - name: ExecuteDeepLink
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
+      - name: url
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: OpenCloset
+    summary: |
+      Open a closet view with the player inventory and a collection of clothing items.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: player
+        type: Class.Player
+        tags: 
+        default:
+        summary: 
+      - name: title
+        type: string
+        tags: 
+        default:
+        summary: 
+      - name: outfitSaved
+        type: (CharacterOutfit) -> ()
+        tags: 
+        default:
+        summary: 
+      - name: contents
+        type: {CharacterClothing}
+        tags: 
+          - optional
+        default:
+        summary: 
+      - name: showPlayerInventory
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+      - name: defaultOutfit
+        type: Class.CharacterOutfit
+        tags: 
+          - optional
+        default:
+        summary: 
+      - name: saveButtonText
+        type: string
+        tags: 
+          - optional
+        default:
+        summary: 
+      - name: defaultToFirstTab
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: OpenMiniProfile
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: player
+        type: Class.Player
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: OpenMiniProfile
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: userId
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: OpenPopup
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
       - name: ve
         type: Class.UIView
+        tags: 
         default:
-        summary:
+        summary: 
     returns:
       - type: number
-        summary:
-math_operations:
+        summary: 
+  - name: TakeRoomSnapshot
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: snapshotClosed
+        type: () -> ()
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+math_operations: 

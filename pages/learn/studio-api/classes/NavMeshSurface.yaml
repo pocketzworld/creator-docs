@@ -116,7 +116,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: BuildNavMesh
     summary: |
       [Unity's NavMeshSurface.BuildNavMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.BuildNavMesh.html)
@@ -126,7 +126,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RemoveData
     summary: |
       [Unity's NavMeshSurface.RemoveData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.RemoveData.html)
@@ -136,5 +136,5 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
 math_operations: 

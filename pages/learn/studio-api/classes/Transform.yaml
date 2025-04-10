@@ -1,468 +1,867 @@
 name: Transform
 type: classes
 summary: |
-  The 'Transform' class in Unity is the invisible puppet master that dictates where and how GameObjects exist within the game's spatial dimension. It's a control hub for manipulating the position, rotation, and scale of GameObjects, and where they fit into the game scene's hierarchy.
-
-  Think of GameObjects as characters on a theatre stage - While components like Mesh and Material determine what the characters look like, 'Transform' is the stage director, instructing them where to be, which way to face, and how large their presence is. The position of a GameObject sets its location in 3D space, the rotation controls the direction the object is facing, and the scale dictates the size of the GameObject. Including local and global space settings, 'Transform' caters for both simple and complex movements, rotations, and scaling.
-
-  Not just limited to single GameObjects, 'Transform' also enables hierarchy settings for GameObject relationships, like setting one GameObject as the child of another. These relationships form a tree-like hierarchy, useful for establishing parent-child associations, managing grouped objects, or creating complex GameObject structures.
-
-  The positioning and movement of game elements are core to creating an interactive and engaging gaming experience. The 'Transform' class is therefore the lynchpin to most scripting operations in Unity. To explore more about 'Transform' and its effective use in Unity, the [official Unity Transform documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.html) is a great learning material.
+  [Unity's Transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Component
-constructors:
-properties:
-  - name: position
+constructors: 
+properties: 
+  - name: childCount
     summary: |
-      This property represents the position of the GameObject in world space coordinates. It can be used to get or set the current position of your GameObject. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html).
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples:
-    type: DataType.Vector3
-  - name: localPosition
-    summary: |
-      'localPosition' refers to the position of the GameObject relative to its parent GameObject. This property is useful when you want to arrange GameObjects in a hierarchical nested structure. Additional details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localPosition.html).
+      [Unity's Transform.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html)
+    description:
     is_static: false
     code_samples:
-    type: DataType.Vector3
+    type: number
   - name: eulerAngles
     summary: |
-      The 'eulerAngles' property represents the rotation of the GameObject in degrees around the x, y, and z axes. The angles are measured in a specific order: z, x, and then y. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html) to learn more.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples:
-    type: DataType.Vector3
-  - name: localEulerAngles
-    summary: |
-      The 'localEulerAngles' property provides a way to get or set the local rotation (relative to the parent GameObject) of the GameObject in terms of Euler angles. More details can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localEulerAngles.html).
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: right
-    summary: |
-      The 'right' property represents the red axis of the GameObject and points in the direction of increasing x. This gives directions along the x-axis. Additional details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-right.html) can provide more contextual understanding.
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: up
-    summary: |
-      The 'up' property represents the green axis of the GameObject and it points in the direction of increasing y. In other words, this property provides directions along the y-axis. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-up.html).
+      [Unity's Transform.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-eulerAngles.html)
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: forward
     summary: |
-      The 'forward' property corresponds to the blue axis of the GameObject and points in the direction of increasing z. This gives directions along the z-axis. Additional details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-forward.html).
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: rotation
-    summary: |
-      A Quaternion representing the orientation in space of the GameObject. Please note that for setting, it is better to use 'eulerAngles' as this property does not offer a degree of freedom. Further information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-rotation.html).
-    is_static: false
-    code_samples:
-    type: DataType.Quaternion
-  - name: localRotation
-    summary: |
-      The 'localRotation' represents the rotation of the GameObject relative to the parent GameObject's rotation, as Quaternion. Further details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localRotation.html).
-    is_static: false
-    code_samples:
-    type: DataType.Quaternion
-  - name: localScale
-    summary: |
-      The 'localScale' property enables you to get or set the scale of a GameObject relative to its parent GameObject. You can manipulate this property to resize GameObjects dynamically. For more information, see the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localScale.html).
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: parent
-    summary: |
-      The 'parent' property provides a way to get or set the parent of this GameObject. It's particularly useful for managing GameObject hierarchies. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html) for more information.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples:
-    type: Class.Transform
-  - name: worldToLocalMatrix
-    summary: |
-      The 'worldToLocalMatrix' is a matrix that transforms a point from world space into local space (i.e., relative to the GameObject). To understand more about this property, refer to the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-worldToLocalMatrix.html).
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: localToWorldMatrix
-    summary: |
-      The 'localToWorldMatrix' is the matrix that transforms a point from local space (i.e., relative to the object) into world space. More context can be found in the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localToWorldMatrix.html).
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: root
-    summary: |
-      The 'root' property gives you the topmost transform in the hierarchy of the GameObject. Essentially, it retrieves the root GameObject that this GameObject is attached to. It's especially useful in large hierarchies. Refer to the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-root.html) for more details.
-    is_static: false
-    code_samples:
-    type: Class.Transform
-  - name: childCount
-    summary: |
-      The 'childCount' provides you with the number of children the Transform has. It can be handy when you are dealing with GameObject hierarchies and need to manage multiple child GameObjects. More details in the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-childCount.html).
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples:
-    type: number
-  - name: lossyScale
-    summary: |
-      The 'lossyScale' provides the global scale of the GameObject, which is the product of all parent scales combined with this GameObject’s local scale. It's a read-only value and gives the actual rendered scale of the GameObject. To understand its use, check the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-lossyScale.html).
+      [Unity's Transform.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-forward.html)
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector3
   - name: hasChanged
     summary: |
-      The 'hasChanged' property is a flag that indicates whether the transform's position or rotation has changed since the last frame. It’s handy for optimizing code as you can skip processing for static GameObjects. Remember to reset the flag manually after reading it. Check out the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hasChanged.html) for more details.
+      [Unity's Transform.hasChanged Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hasChanged.html)
+    description:
     is_static: false
     code_samples:
     type: boolean
   - name: hierarchyCapacity
     summary: |
-      The 'hierarchyCapacity' property denotes the number of allocated transforms in the hierarchy data structure. Developers can adjust this capacity to optimize memory usage and performance. Visit the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCapacity.html) for more details.
+      [Unity's Transform.hierarchyCapacity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCapacity.html)
+    description:
     is_static: false
     code_samples:
     type: number
   - name: hierarchyCount
     summary: |
-      The 'hierarchyCount' property provides the current number of Transforms in the Transform's hierarchy data structure. This data may be used alongside 'hierarchyCapacity' to optimize game performance. To understand more, visit the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCount.html).
+      [Unity's Transform.hierarchyCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-hierarchyCount.html)
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-  - name: LookAt
+  - name: localEulerAngles
     summary: |
-      The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: targetPos
-        type: DataType.Vector3
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: TweenPositionTo
-    summary: |
-
-    is_static: false
-    code_samples:
-    parameters:
-      - name: to
-        type: DataType.Vector3
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: TweenLocalPositionTo
-    summary: |
-
-    is_static: false
-    code_samples:
-    parameters:
-      - name: to
-        type: DataType.Vector3
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: TweenPosition
-    summary: |
-
-    is_static: false
-    code_samples:
-    parameters:
-      - name: from
-        type: DataType.Vector3
-        default:
-        summary:
-      - name: to
-        type: DataType.Vector3
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: TweenLocalPosition
-    summary: |
-
+      [Unity's Transform.localEulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localEulerAngles.html)
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: from
-        type: DataType.Vector3
-        default:
-        summary:
-      - name: to
-        type: DataType.Vector3
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: TweenLocalScale
+    type: DataType.Vector3
+  - name: localPosition
     summary: |
-
+      [Unity's Transform.localPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localPosition.html)
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: from
-        type: DataType.Vector3
-        default:
-        summary:
-      - name: to
-        type: DataType.Vector3
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: SetParent
+    type: DataType.Vector3
+  - name: localRotation
     summary: |
-      The 'SetParent' method is used to set the parent of the GameObject's transform. It's handy when you need to dynamically create parent-child relationships between GameObjects. For further understanding, refer to the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html).
+      [Unity's Transform.localRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localRotation.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: p
-        type: Class.Transform
-        default:
-        summary: The target parent Transform.
-    returns:
-      - type: void
-        summary:
-  - name: SetPositionAndRotation
+    type: DataType.Quaternion
+  - name: localScale
     summary: |
-      The 'SetPositionAndRotation' method simultaneously changes the position and rotation of the GameObject. This method is more efficient than changing position and rotation separately. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetPositionAndRotation.html).
+      [Unity's Transform.localScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localScale.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        default:
-        summary: The new position for the GameObject.
-      - name: rotation
-        type: DataType.Quaternion
-        default:
-        summary: The new rotation for the GameObject.
-    returns:
-      - type: void
-        summary:
-  - name: SetLocalPositionAndRotation
+    type: DataType.Vector3
+  - name: localToWorldMatrix
     summary: |
-      The 'SetLocalPositionAndRotation' method updates the local position and local rotation of the GameObject simultaneously. It's useful when you have colocated GameObjects and need to change their positions and rotations relative to their parent. Visit [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetLocalPositionAndRotation.html) for more details.
+      [Unity's Transform.localToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-localToWorldMatrix.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: localPosition
-        type: DataType.Vector3
-        default:
-        summary: The new local position for the GameObject.
-      - name: localRotation
-        type: DataType.Quaternion
-        default:
-        summary: The new local rotation for the GameObject.
-    returns:
-      - type: void
-        summary:
-  - name: RotateAround
+    type: DataType.Matrix4x4
+  - name: lossyScale
     summary: |
-      The 'RotateAround' method rotates the GameObject around a specific point by a given angle and along a specified axis. This method is quite useful when you want to make a GameObject revolve around a certain point. For better understanding, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.RotateAround.html).
+      [Unity's Transform.lossyScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-lossyScale.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: point
-        type: DataType.Vector3
-        default:
-        summary: The point around which the GameObject will rotate.
-      - name: axis
-        type: DataType.Vector3
-        default:
-        summary: The axis along which the GameObject will rotate.
-      - name: angle
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: TransformDirection
+    type: DataType.Vector3
+  - name: parent
     summary: |
-      The 'TransformDirection' method transforms a direction from local space to world space. This method can be useful when you want a locally defined direction to be meaningful in the world space. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformDirection.html).
+      [Unity's Transform.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-parent.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: direction
-        type: DataType.Vector3
-        default:
-        summary: The local direction to transform to world direction.
-    returns:
-      - type: DataType.Vector3
-        summary: The direction in world space.
-  - name: InverseTransformDirection
+    type: Class.Transform
+  - name: position
     summary: |
-      The 'InverseTransformDirection' transforms a direction from world space to local space. This often becomes valuable when you want a world direction to be expressed relative to the local space of a GameObject. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformDirection.html) for more insights.
+      [Unity's Transform.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-position.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: direction
-        type: DataType.Vector3
-        default:
-        summary: The world direction to transform to local direction.
-    returns:
-      - type: DataType.Vector3
-        summary: The direction in local space.
-  - name: TransformVector
+    type: DataType.Vector3
+  - name: right
     summary: |
-      The 'TransformVector' method transforms a local Vector to world Vector. It considers the GameObject's rotation and scale in transforming the vector. For additional context, see the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformVector.html).
+      [Unity's Transform.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-right.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: vector
-        type: DataType.Vector3
-        default:
-        summary: The local Vector3 to transform.
-    returns:
-      - type: DataType.Vector3
-        summary: The transformed Vector3 in world space.
-  - name: InverseTransformVector
+    type: DataType.Vector3
+  - name: root
     summary: |
-      The 'InverseTransformVector' does the opposite of 'TransformVector'. It transforms a Vector from world space to local space. This method is primarily useful when you need a globally defined vector to be meaningful in the local space of a GameObject. For more context, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformVector.html).
+      [Unity's Transform.root Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-root.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: vector
-        type: DataType.Vector3
-        default:
-        summary: The world Vector3 to transform.
-    returns:
-      - type: DataType.Vector3
-        summary: The transformed Vector3 in local space.
-  - name: TransformPoint
+    type: Class.Transform
+  - name: rotation
     summary: |
-      The 'TransformPoint' transforms Position from local to world space. It takes into account the GameObject's position, rotation, and scale. More information about how to use this method can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformPoint.html).
+      [Unity's Transform.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-rotation.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        default:
-        summary: The local position to transform.
-    returns:
-      - type: DataType.Vector3
-        summary: The transformed Position in world space.
-  - name: InverseTransformPoint
+    type: DataType.Quaternion
+  - name: up
     summary: |
-      The 'InverseTransformPoint' transforms a position from world to local space. This method is handy when you want a globally defined position to be expressed relative to the local space of a GameObject. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformPoint.html) to understand more about its functionality.
+      [Unity's Transform.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-up.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        default:
-        summary: The world position to transform.
-    returns:
-      - type: DataType.Vector3
-        summary: The transformed Position in local space.
+    type: DataType.Vector3
+  - name: worldToLocalMatrix
+    summary: |
+      [Unity's Transform.worldToLocalMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform-worldToLocalMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+methods: 
   - name: DetachChildren
     summary: |
-      The 'DetachChildren' method unparents all the child GameObjects of the GameObject. This means those GameObjects will no longer receive any transformations from their parent. Check out the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.DetachChildren.html) for more context.
+      [Unity's Transform.DetachChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.DetachChildren.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
     returns:
       - type: void
-        summary:
-  - name: SetAsFirstSibling
-    summary: |
-      The 'SetAsFirstSibling' method moves the Transform to the beginning of the local transform list. This causes the GameObject to be rendered behind its siblings. Further details can be found in the [Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsFirstSibling.html).
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: SetAsLastSibling
-    summary: |
-      The 'SetAsLastSibling' method moves the Transform to the end of the local transform list. It results in the GameObject being rendered in front of its siblings. More information can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsLastSibling.html).
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: SetSiblingIndex
-    summary: |
-      The 'SetSiblingIndex' method allows you to alter the sibling index. It changes the sibling order of the GameObject in the hierarchy and impacts the rendering order of GameObjects. You can find more details on the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetSiblingIndex.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: index
-        type: number
-        default:
-        summary: The new index for the GameObject.
-    returns:
-      - type: void
-        summary:
-  - name: GetSiblingIndex
-    summary: |
-      The 'GetSiblingIndex' method retrieves the sibling index of the GameObject, helping to understand the order in which GameObjects are displayed. More contextual insights can be found in the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetSiblingIndex.html).
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: number
-        summary: The current index of the GameObject.
+        summary: 
   - name: Find
     summary: |
-      The 'Find' method allows you to search for a child GameObject by its name. It is particularly useful when you need to access a specific child but do not have a reference to it. Be aware that this method is not optimal for regular use. If the child GameObject needs to be accessed frequently, it's less expensive to get a reference to that GameObject during initialization. Check out the [official Unity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Find.html) to learn more.
+      [Unity's Transform.Find Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Find.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: n
         type: string
+        tags: 
         default:
-        summary: The name of the child GameObject to find.
+        summary: 
     returns:
       - type: Class.Transform
-        summary: The transform of the found child GameObject.
-  - name: IsChildOf
-    summary: |
-      The 'IsChildOf' method checks if a transform is a child of a particular parent. It's a straightforward and useful way to identify relationships between GameObjects, like whether a specific GameObject is a part of a hierarchy. More details can be found in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.IsChildOf.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: parent
-        type: Class.Transform
-        default:
-        summary: The parent Transform to check against.
-    returns:
-      - type: boolean
-        summary: Returns true if the Transform is a child of parent, false otherwise.
+        summary: 
   - name: GetChild
     summary: |
-      The 'GetChild' method retrieves a child Transform by index. It can be tremendously useful when iterating over children in a parent-child hierarchy. Be aware that the Transform's sibling order also represents their order in the hierarchy. For more context, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetChild.html).
+      [Unity's Transform.GetChild Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetChild.html)
+    description:
     is_static: false
-    tags:
-      - ServerAndClient
     code_samples:
-    parameters:
+    parameters: 
       - name: index
         type: number
+        tags: 
         default:
-        summary: The index of the child Transform to retrieve.
+        summary: 
     returns:
       - type: Class.Transform
-        summary: The child Transform retrieved from the index.
-math_operations:
+        summary: 
+  - name: GetLocalPositionAndRotation
+    summary: |
+      [Unity's Transform.GetLocalPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetLocalPositionAndRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+      - type: DataType.Quaternion
+        summary: 
+  - name: GetPositionAndRotation
+    summary: |
+      [Unity's Transform.GetPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetPositionAndRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+      - type: DataType.Quaternion
+        summary: 
+  - name: GetSiblingIndex
+    summary: |
+      [Unity's Transform.GetSiblingIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.GetSiblingIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary: 
+  - name: InverseTransformDirection
+    summary: |
+      [Unity's Transform.InverseTransformDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformDirection.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: direction
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: InverseTransformPoint
+    summary: |
+      [Unity's Transform.InverseTransformPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: InverseTransformVector
+    summary: |
+      [Unity's Transform.InverseTransformVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.InverseTransformVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: vector
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: IsChildOf
+    summary: |
+      [Unity's Transform.IsChildOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.IsChildOf.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: parent
+        type: Class.Transform
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary: 
+  - name: LookAt
+    summary: |
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: target
+        type: Class.Transform
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: LookAt
+    summary: |
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: target
+        type: Class.Transform
+        tags: 
+        default:
+        summary: 
+      - name: worldUp
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: LookAt
+    summary: |
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: target
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: LookAt
+    summary: |
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: worldPosition
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: worldUp
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: eulers
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Space
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: axis
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: angle
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: axis
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: angle
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Space
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: xAngle
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: yAngle
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: zAngle
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: xAngle
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: yAngle
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: zAngle
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Space
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: RotateAround
+    summary: |
+      [Unity's Transform.RotateAround Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.RotateAround.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: axis
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: angle
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetAsFirstSibling
+    summary: |
+      [Unity's Transform.SetAsFirstSibling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsFirstSibling.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetAsLastSibling
+    summary: |
+      [Unity's Transform.SetAsLastSibling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetAsLastSibling.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetLocalPositionAndRotation
+    summary: |
+      [Unity's Transform.SetLocalPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetLocalPositionAndRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: localPosition
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: localRotation
+        type: DataType.Quaternion
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetParent
+    summary: |
+      [Unity's Transform.SetParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: parent
+        type: Class.Transform
+        tags: 
+        default:
+        summary: 
+      - name: worldPositionStays
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetPositionAndRotation
+    summary: |
+      [Unity's Transform.SetPositionAndRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetPositionAndRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: rotation
+        type: DataType.Quaternion
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SetSiblingIndex
+    summary: |
+      [Unity's Transform.SetSiblingIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetSiblingIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: TransformDirection
+    summary: |
+      [Unity's Transform.TransformDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformDirection.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: direction
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: TransformPoint
+    summary: |
+      [Unity's Transform.TransformPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: TransformVector
+    summary: |
+      [Unity's Transform.TransformVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.TransformVector.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: vector
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: translation
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Space
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: translation
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Class.Transform
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: x
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: y
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: z
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: x
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: y
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: z
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Space
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: x
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: y
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: z
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: relativeTo
+        type: Class.Transform
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: TweenLocalPosition
+    summary: |
+      Creates a tween that moves the transform's local position from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: from
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: to
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Tween
+        summary: 
+  - name: TweenLocalPositionTo
+    summary: |
+      Creates a tween that moves the transform's local position from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: to
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Tween
+        summary: 
+  - name: TweenLocalScale
+    summary: |
+      Creates a tween that moves the transform's local scale from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: from
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: to
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Tween
+        summary: 
+  - name: TweenLocalScaleTo
+    summary: |
+      Creates a tween that changes the transform's local scale from its current scale to the specified scale.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: to
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Tween
+        summary: 
+  - name: TweenPosition
+    summary: |
+      Creates a tween that moves the transform from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: from
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+      - name: to
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Tween
+        summary: 
+  - name: TweenPositionTo
+    summary: |
+      Creates a tween that moves the transform from its current position to the specified position.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: to
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Tween
+        summary: 
+math_operations: 

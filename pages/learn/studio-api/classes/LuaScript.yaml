@@ -1,52 +1,61 @@
 name: LuaScript
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
-  - Class.Object
-constructors:
-properties:
-  - name: typeCode
+inherits: 
+  - ScriptableObject
+constructors: 
+properties: 
+  - name: fullName
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    type: number
+    type: string
+  - name: namespace
+    summary: |
+      Return the optional namespace assigned to the lua script.
+    description:
+    is_static: false
+    code_samples:
+    type: string
   - name: propertyCount
     summary: |
-
-    is_static: false
-    code_samples:
-    type: number
-  - name: runsOnServer
-    summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    type: boolean
+    type: number
   - name: runsOnClient
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: boolean
   - name: runsOnClientAndServer
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: boolean
-  - name: fullName
+  - name: runsOnServer
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
-    type: string
-methods:
-math_operations:
+    type: boolean
+  - name: typeCode
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
+math_operations: 

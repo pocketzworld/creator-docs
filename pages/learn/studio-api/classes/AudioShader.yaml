@@ -1,125 +1,144 @@
 name: AudioShader
 type: classes
-summary: Provides functionality for audio manipulation and playback, including volume and pitch adjustments, spatial considerations, and muting capabilities.
-
-description: The AudioShader class is a comprehensive solution for managing audio within game scenes. It allows developers to control various aspects of audio playback, such as muting, volume level, pitch adjustments, and spatial audio effects. This class supports dynamic audio experiences by offering properties for random volume and pitch variations, thus enabling more immersive and varied audio effects in games. Inherits from `Class.Object`, providing a base for audio-related functionalities in a game engine similar to Unity or Roblox.
-
+summary: |
+  AudioShader is a collection of AudioClip that can be played with customized volume and pitch.
+description:
 code_samples:
-inherits:
-  - Class.Object
-constructors:
-properties:
-  - name: isMuted
-    summary: Indicates whether the audio is currently muted.
-    description: This property allows developers to check or set the muted state of the audio. When set to `true`, the audio will not play.
+inherits: 
+  - ScriptableObject
+constructors: 
+properties: 
+  - name: clips
+    summary: |
+      Collection of AudioClip to select from when playing.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Check if the audio is muted
-      local isMuted = audioShaderInstance.isMuted
-
-      print(tostring(isMuted) -- true or false
-      ```
-    type: boolean
-  - name: spatialRange
-    summary: Defines the range in which the audio can be heard.
-    description: This property sets the maximum distance at which the audio is audible. Beyond this range, the audio volume decreases to silence, simulating spatial audio effects.
-    is_static: false
-    code_samples: |
-      ```lua
-      -- Set the spatial range of the audio
-      audioShaderInstance.spatialRange = 10
-      ```
-    type: number
-  - name: volume
-    summary: Controls the playback volume of the audio.
-    description: This property allows for adjusting the volume level of the audio. The value ranges from 0 (silent) to 1 (maximum volume).
-    is_static: false
-    code_samples: |
-      ```lua
-      -- Set the volume of the audio
-      audioShaderInstance.volume = 0.5
-      ```
-    type: number
-  - name: randomVolume
-    summary: Sets a range for random volume variation.
-    description: This property enables random variation in volume within the specified range, adding dynamic changes to the audio playback volume.
-    is_static: false
-    code_samples: |
-      ```lua
-      -- Set the random volume range of the audio
-      audioShaderInstance.randomVolume = 0.1
-      ```
-    type: number
+    code_samples:
+    type: {AudioClip}
   - name: pitch
-    summary: Adjusts the pitch of the audio playback.
-    description: This property allows for changing the pitch of the audio, with higher values increasing the pitch and lower values decreasing it.
+    summary: |
+      Pitch will make audio sound higher or lower. The default value is 1, representing no
+    change to the pitch. Lower values result in lower sounds, while higher values produce
+    higher sounds. Valid values are from .01 to 2.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Set the pitch of the audio
-      audioShaderInstance.pitch = 1.2
-      ```
+    code_samples:
     type: number
   - name: randomPitch
-    summary: Sets a range for random pitch variation.
-    description: This property allows for random variation in pitch within a specified range, making the audio playback more dynamic and varied.
+    summary: |
+      A range from which a random value will be selected and applied to the pitch when playing.
+    A value between [-randomPitch, randomPitch] will be added to the pitch when playing.
+    The default value is 0, meaning no change to the pitch. Valid values are between 0 and 1.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Set the random pitch range of the audio
-      audioShaderInstance.randomPitch = 0.2
-      ```
+    code_samples:
     type: number
-methods:
-  - name: Play
-    summary: Begins playback of the audio with optional volume and pitch parameters.
-    description: This method starts the audio playback. Developers can optionally specify volume and pitch to customize the playback for this instance.
+  - name: randomVolume
+    summary: |
+      A range of random values to apply to the volume when playing. Will add [-randomVolume,
+    randomVolume] to the volume.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Play the audio with custom volume and pitch
-      audioShaderInstance:Play(0.8, 1.1)
-      ```
-    parameters:
-      - name: volume
-        type: number
-        default:
-        summary: The volume at which to play the audio. Overrides the instance's volume property for this playback.
-      - name: pitch
-        type: number
-        default:
-        summary: The pitch at which to play the audio. Overrides the instance's pitch property for this playback.
-    returns:
-      - type: void
-        summary: This method does not return a value.
+    code_samples:
+    type: number
+  - name: volume
+    summary: |
+      The volume that the audio source will play. This is a normalized value (valid range is
+    from 0 to 1).
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: isMuted
+    summary: |
+      Audio shaders can be muted at runtime to stop them from playing.
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: spatialRange
+    summary: |
+      Maximum range at which the clip can be heard
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
   - name: GetRandomClip
-    summary: Returns a randomly selected AudioClip from the available set.
-    description: This method selects and returns a random AudioClip object, allowing for varied audio playback without manually selecting clips.
+    summary: |
+      Get a random clip from the array of AudioClip. If there is only one AudioClip assigned,
+    that clip will always be returned.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Get a random AudioClip
-      local randomClip = audioShaderInstance:GetRandomClip()
-      ```
-    parameters:
+    code_samples:
+    parameters: 
     returns:
       - type: Class.AudioClip
-        summary: The randomly selected AudioClip object.
-  - name: Create
-    summary: Creates a new instance of AudioShader with a specified AudioClip.
-    description: This static method instantiates a new AudioShader object, initialized with the provided AudioClip, ready for playback and manipulation.
+        summary: 
+  - name: Play
+    summary: |
+      Play a random AudioClip from the clips array. Use PlayWithVolume or PlayWithVolumeAndPitch
+    to specify volume and pitch.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: PlayWithVolume
+    summary: |
+      Play a random AudioClip from the clips array with a volume.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: v
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: PlayWithVolumeAndPitch
+    summary: |
+      Play a random AudioClip from the clips array, optionally specifying a volume and pitch.
+    If volume and pitch are not provided, a default value of 1 is used for each.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: volume
+        type: number
+        tags: 
+        default:
+        summary: The volume the clip will play. Note that this value may be affected by the AudioMixer in use.
+      - name: pitch
+        type: number
+        tags: 
+        default:
+        summary: The pitch the clip will play.
+    returns:
+      - type: void
+        summary: 
+  - name: new
+    summary: |
+      Create a new default audio shader from a UnityEngine.AudioClip.
+    
+     AudioShaders are used to play sound effects or music. They can contain any number of
+     AudioClip in the 'clips' array. If there is more than one AudioClip, a random entry is
+     selected each time the AudioShader is played.
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      -- Create a new AudioShader instance with the specified AudioClip
-      local audioShaderInstance = AudioShader.Create(clip)
-      ```
-    parameters:
+    code_samples:
+    parameters: 
       - name: clip
         type: Class.AudioClip
+        tags: 
         default:
-        summary: The AudioClip to associate with the new AudioShader instance.
+        summary: 
     returns:
       - type: Class.AudioShader
-        summary: A new instance of AudioShader configured with the provided AudioClip.
+        summary: 
+math_operations: 

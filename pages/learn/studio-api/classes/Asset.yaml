@@ -5,7 +5,8 @@ summary: |
 description:
 code_samples:
 inherits: 
-  - ScriptableObject
+  - AsyncScriptableObject
 constructors: 
 properties: 
-methods:
+methods: 
+math_operations: 

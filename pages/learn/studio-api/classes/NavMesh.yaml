@@ -45,17 +45,19 @@ methods:
     parameters: 
       - name: sourcePosition
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
       - name: areaMask
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.NavMeshHit
-        summary:
+        summary: 
   - name: GetAreaCost
     summary: |
       [Unity's NavMesh.GetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetAreaCost.html)
@@ -65,11 +67,12 @@ methods:
     parameters: 
       - name: areaIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetAreaFromName
     summary: |
       [Unity's NavMesh.GetAreaFromName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetAreaFromName.html)
@@ -79,11 +82,12 @@ methods:
     parameters: 
       - name: areaName
         type: string
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetSettingsCount
     summary: |
       [Unity's NavMesh.GetSettingsCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetSettingsCount.html)
@@ -93,7 +97,7 @@ methods:
     parameters: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: GetSettingsNameFromID
     summary: |
       [Unity's NavMesh.GetSettingsNameFromID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetSettingsNameFromID.html)
@@ -103,11 +107,12 @@ methods:
     parameters: 
       - name: agentTypeID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: string
-        summary:
+        summary: 
   - name: Raycast
     summary: |
       [Unity's NavMesh.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.Raycast.html)
@@ -117,21 +122,24 @@ methods:
     parameters: 
       - name: sourcePosition
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
       - name: targetPosition
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
       - name: areaMask
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.NavMeshHit
-        summary:
+        summary: 
   - name: RemoveAllNavMeshData
     summary: |
       [Unity's NavMesh.RemoveAllNavMeshData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.RemoveAllNavMeshData.html)
@@ -141,7 +149,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: RemoveSettings
     summary: |
       [Unity's NavMesh.RemoveSettings Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.RemoveSettings.html)
@@ -151,11 +159,12 @@ methods:
     parameters: 
       - name: agentTypeID
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SamplePosition
     summary: |
       [Unity's NavMesh.SamplePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.SamplePosition.html)
@@ -165,21 +174,24 @@ methods:
     parameters: 
       - name: sourcePosition
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
       - name: maxDistance
         type: number
+        tags: 
         default:
         summary: 
       - name: areaMask
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.NavMeshHit
-        summary:
+        summary: 
   - name: SetAreaCost
     summary: |
       [Unity's NavMesh.SetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.SetAreaCost.html)
@@ -189,13 +201,15 @@ methods:
     parameters: 
       - name: areaIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: cost
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
 math_operations: 

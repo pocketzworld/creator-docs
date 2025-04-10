@@ -1,89 +1,144 @@
 name: Chat
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
-constructors:
-properties:
-  - name: allJoinedChannels
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: ChannelInfo[]
-  - name: TextMessageReceivedHandler
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Event
-  - name: WhisperReceivedHandler
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Event
-  - name: PlayerJoinedChannel
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Event
-  - name: PlayerLeftChannel
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Event
+inherits: 
+constructors: 
+properties: 
   - name: ChannelDestroyed
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    type: Class.Event
-methods:
-  - name: SetDefaultChannel
+    type: LuaEvent
+  - name: PlayerJoinedChannel
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: channelInfo
-        type: Class.ChannelInfo
-        default:
-        summary:
-    returns:
-      - type: boolean
-        summary:
-  - name: DisplayTextMessage
+    type: LuaEvent
+  - name: PlayerLeftChannel
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: channel
-        type: Class.ChannelInfo
+    type: LuaEvent
+  - name: TextMessageReceivedHandler
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: WhisperReceivedHandler
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: LuaEvent
+  - name: activeChannel
+    summary: |
+      The chat channel the local player is currently active in
+    description:
+    is_static: false
+    code_samples:
+    type: Class.ChannelInfo
+  - name: allChannels
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: {ChannelInfo}
+  - name: joinedChannels
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: {ChannelInfo}
+methods: 
+  - name: DisplayChatBubble
+    summary: |
+      Spawns a chat bubble at the given position with the given message and an optional nametag.
+    The chat bubble will have the same appearance and lifespan as a normal player chat message.
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: Class.Transform
+        tags: 
         default:
-        summary:
-      - name: from
-        type: Class.Player
-        default:
-        summary:
+        summary: 
       - name: message
         type: string
+        tags: 
         default:
-        summary:
+        summary: 
+      - name: name
+        type: string
+        tags: 
+          - optional
+        default:
+        summary: 
     returns:
       - type: void
-        summary:
-math_operations:
+        summary: 
+  - name: DisplayTextMessage
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: channel
+        type: Class.ChannelInfo
+        tags: 
+        default:
+        summary: 
+      - name: from
+        type: Class.Player
+        tags: 
+        default:
+        summary: 
+      - name: message
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: GetChannel
+    summary: |
+      Gets the chat channel with the given name
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: channelName
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: Class.ChannelInfo
+        summary: 
+  - name: allJoinedChannels
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: {ChannelInfo}
+        summary: 
+math_operations: 

@@ -1,29 +1,62 @@
 name: LongPressBeganEvent
 type: classes
 summary: |
-
+  Event sent when a long press gesture is started
 description:
 code_samples:
-inherits:
-constructors:
-properties:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
   - name: position
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: startTime
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
     type: number
   - name: successDuration
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-math_operations:
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: screenPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods: 
+  - name: CloneInto
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: clone
+        type: Class.LongPressBeganEvent
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: Class.LongPressBeganEvent
+        summary: 
+math_operations: 

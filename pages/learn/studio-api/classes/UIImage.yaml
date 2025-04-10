@@ -1,50 +1,47 @@
 name: UIImage
 type: classes
 summary: |
-
+  Thin wrapper around Image that provides automatic disposal of loaded images
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Image
-constructors:
-properties:
-methods:
-  - name: Dispose
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ShowLoadingIndicator
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: show
-        type: boolean
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
+constructors: 
   - name: new
     summary: |
-
+      
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UIImage
+        summary: 
+properties: 
+methods: 
+  - name: Dispose
+    summary: |
+      
     description:
     is_static: false
     code_samples:
-    parameters:
-      - name: loadingIndicator
-        type: boolean
-        default:
-        summary:
+    parameters: 
     returns:
-      - type: Class.UIImage
-        summary:
-math_operations:
+      - type: void
+        summary: 
+  - name: ShowLoadingIndicator
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: show
+        type: boolean
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+math_operations: 

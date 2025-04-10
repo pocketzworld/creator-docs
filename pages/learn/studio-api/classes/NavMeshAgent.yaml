@@ -228,11 +228,12 @@ methods:
     parameters: 
       - name: activated
         type: boolean
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: CompleteOffMeshLink
     summary: |
       [Unity's NavMeshAgent.CompleteOffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.CompleteOffMeshLink.html)
@@ -242,7 +243,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: FindClosestEdge
     summary: |
       [Unity's NavMeshAgent.FindClosestEdge Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.FindClosestEdge.html)
@@ -252,9 +253,9 @@ methods:
     parameters: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.NavMeshHit
-        summary:
+        summary: 
   - name: GetAreaCost
     summary: |
       [Unity's NavMeshAgent.GetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.GetAreaCost.html)
@@ -264,11 +265,12 @@ methods:
     parameters: 
       - name: areaIndex
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: number
-        summary:
+        summary: 
   - name: Move
     summary: |
       [Unity's NavMeshAgent.Move Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.Move.html)
@@ -278,11 +280,12 @@ methods:
     parameters: 
       - name: offset
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: Raycast
     summary: |
       [Unity's NavMeshAgent.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.Raycast.html)
@@ -292,13 +295,14 @@ methods:
     parameters: 
       - name: targetPosition
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.NavMeshHit
-        summary:
+        summary: 
   - name: ResetPath
     summary: |
       [Unity's NavMeshAgent.ResetPath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.ResetPath.html)
@@ -308,7 +312,7 @@ methods:
     parameters: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SamplePathPosition
     summary: |
       [Unity's NavMeshAgent.SamplePathPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SamplePathPosition.html)
@@ -318,17 +322,19 @@ methods:
     parameters: 
       - name: areaMask
         type: number
+        tags: 
         default:
         summary: 
       - name: maxDistance
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
       - type: DataType.NavMeshHit
-        summary:
+        summary: 
   - name: SetAreaCost
     summary: |
       [Unity's NavMeshAgent.SetAreaCost Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SetAreaCost.html)
@@ -338,15 +344,17 @@ methods:
     parameters: 
       - name: areaIndex
         type: number
+        tags: 
         default:
         summary: 
       - name: areaCost
         type: number
+        tags: 
         default:
         summary: 
     returns:
       - type: void
-        summary:
+        summary: 
   - name: SetDestination
     summary: |
       [Unity's NavMeshAgent.SetDestination Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SetDestination.html)
@@ -356,11 +364,12 @@ methods:
     parameters: 
       - name: target
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
   - name: Warp
     summary: |
       [Unity's NavMeshAgent.Warp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.Warp.html)
@@ -370,9 +379,10 @@ methods:
     parameters: 
       - name: newPosition
         type: DataType.Vector3
+        tags: 
         default:
         summary: 
     returns:
       - type: boolean
-        summary:
+        summary: 
 math_operations: 

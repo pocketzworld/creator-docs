@@ -1,31 +1,26 @@
 name: MeshCollider
 type: classes
 summary: |
-  The MeshCollider in Unity is your go-to when you need to assign complex and detailed collision boundaries which match your detailed game objects. Unlike other simpler colliders, such as Class.BoxCollider or Class.SphereCollider that approximate an object's shape, MeshCollider fits the actual form of the GameObject, taking into account each curve and corner for a precise collision detection.
-
-  At its core, a MeshCollider leverages a Mesh - an assemblage of vertices, edges, and faces that define the shape of a 3D object - to create complex collision spaces. Similar to how a sculpture is formed by molding clay, a Mesh is shaped by positioning vertices in 3D space and connecting them with edges to form a network of faces.
-
-  Note that due to their complexity, MeshColliders are more computationally intensive. Hence, they should be avoided or used only when absolutely necessary.
-
-  Visit [Unity's MeshCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider.html) for a better understanding.
-
+  [Unity's MeshCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Collider
-constructors:
-properties:
-  - name: sharedMesh
-    summary: |
-      The 'sharedMesh' property refers to the Mesh object that the MeshCollider uses to determine its shape. By setting a different Mesh, you can instantly change the shape of the collider. More details in [Unity's MeshCollider.sharedMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-sharedMesh.html).
-    is_static: false
-    code_samples:
-    type: Class.Mesh
+constructors: 
+properties: 
   - name: convex
     summary: |
-      The 'convex' property, when set to true, forces the MeshCollider to fit a convex hull to the mesh, which means it cannot have any overhanging ledges. Concave meshes, although more accurate, are also more resource-intensive, and Unity restricts some interactions between Rigidbody items to only happen with convex colliders. Consult [Unity's MeshCollider.convex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-convex.html).
+      [Unity's MeshCollider.convex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-convex.html)
+    description:
     is_static: false
     code_samples:
     type: boolean
-methods:
-math_operations:
+  - name: sharedMesh
+    summary: |
+      [Unity's MeshCollider.sharedMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshCollider-sharedMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Mesh
+methods: 
+math_operations: 

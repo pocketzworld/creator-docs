@@ -1,21 +1,12 @@
 name: AudioListener
 type: classes
-summary: AudioListener functions as the game's auditory receiver, essential for creating immersive audio experiences. It works in tandem with AudioSource objects, replicating the real-world effect of sound proximity and volume. Typically attached to the camera or player, it facilitates global audio control, including volume adjustment and scene-wide pausing. For in-depth insights, consult Unity's official AudioListener documentation.
+summary: |
+  [Unity's AudioListener Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioListener.html)
 description:
 code_samples:
-inherits:
-  - Class.Behaviour
-constructors:
-properties:
-  - name: volume
-    summary: Acts as a master volume control, affecting all AudioSource objects heard by the AudioListener.
-    is_static: true
-    code_samples:
-    type: number
-  - name: pause
-    summary: Allows pausing or resuming all audio in the scene, useful for game events requiring silence.
-    is_static: true
-    code_samples:
-    type: boolean
-methods:
-math_operations:
+inherits: 
+  - AudioBehaviour
+constructors: 
+properties: 
+methods: 
+math_operations: 

@@ -1,558 +1,803 @@
 name: Camera
 type: classes
-summary: Camera in Unity acts as the player's viewpoint into the game world, capturing scenes much like a real camera. It defines the field of view, perspective, and what is visible on the screen. Cameras can transform between world and screen space, control projection settings for depth and perspective, specify rendering settings, and manage culling properties. For comprehensive functionalities, explore Unity's Camera documentation.
+summary: |
+  [Unity's Camera Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Behaviour
-constructors:
-properties:
-  - name: nearClipPlane
-    summary: Defines the closest distance at which the Camera starts rendering objects.
-    is_static: false
-    code_samples:
-    type: number
-  - name: farClipPlane
-    summary: Sets the maximum distance up to which the Camera renders objects in the scene.
-    is_static: false
-    code_samples:
-    type: number
-  - name: fieldOfView
-    summary: Manages the vertical extent of the scene visible at any moment, measured in degrees.
-    is_static: false
-    code_samples:
-    type: number
-  - name: allowHDR
-    summary: Controls if the Camera uses High Dynamic Range rendering for enhanced visual details.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: allowMSAA
-    summary: Enables or disables Multi-Sample Anti-Aliasing for smoother image edges.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: allowDynamicResolution
-    summary: Allows dynamic resolution adjustment for performance optimization.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: forceIntoRenderTexture
-    summary: Forces Camera's view to always render to a texture for advanced image processing.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: orthographicSize
-    summary: Defines the size of the view in world units for Orthographic Cameras.
-    is_static: false
-    code_samples:
-    type: number
-  - name: orthographic
-    summary: Toggles between Perspective and Orthographic modes for the Camera.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: transparencySortAxis
-    summary: Custom axis for sorting transparent objects when using Custom Axis mode.
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: depth
-    summary: Specifies the Camera's depth in the rendering order.
-    is_static: false
-    code_samples:
-    type: number
-  - name: aspect
-    summary: Sets the aspect ratio (width/height) for the Camera.
-    is_static: false
-    code_samples:
-    type: number
-  - name: velocity
-    summary: Provides the Camera's velocity, useful for motion blur effects.
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: cullingMask
-    summary: Bit mask for rendering GameObjects on specific Layers.
-    is_static: false
-    code_samples:
-    type: number
-  - name: eventMask
-    summary: Bit mask to selectively ignore GameObjects when sending events.
-    is_static: false
-    code_samples:
-    type: number
-  - name: layerCullSpherical
-    summary: Uses spherical bounds for layer culling computation when enabled.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: overrideSceneCullingMask
-    summary: Bit mask override for Scene culling on this Camera.
-    is_static: false
-    code_samples:
-    type: number
-  - name: useOcclusionCulling
-    summary: Determines if Unity performs occlusion culling for this Camera.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: cullingMatrix
-    summary: Custom projection matrix for the Camera to adjust rendering.
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: backgroundColor
-    summary: Sets the background color for the Camera's view.
-    is_static: false
-    code_samples:
-    type: DataType.Color
-  - name: clearStencilAfterLightingPass
-    summary: Clears the stencil buffer after lighting pass as an optimization.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: usePhysicalProperties
-    summary: Enables physical camera settings to simulate real camera properties.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: iso
-    summary: Simulates the ISO setting of a physical camera, affecting image brightness and noise.
-    is_static: false
-    code_samples:
-    type: number
-  - name: shutterSpeed
-    summary: Mimics a camera's shutter speed, influencing exposure and motion blur.
-    is_static: false
-    code_samples:
-    type: number
-  - name: aperture
-    summary: Emulates the aperture of a physical camera, impacting light intake and depth of field.
-    is_static: false
-    code_samples:
-    type: number
-  - name: focusDistance
-    summary: Adjusts the distance to the focus plane, useful for depth of field effects.
-    is_static: false
-    code_samples:
-    type: number
-  - name: focalLength
-    summary: Represents the focal length of the camera lens, affecting the field of view.
-    is_static: false
-    code_samples:
-    type: number
-  - name: bladeCount
-    summary: Sets the number of diaphragm blades, affecting the shape of out-of-focus areas.
-    is_static: false
-    code_samples:
-    type: number
-  - name: curvature
-    summary: Simulates lens curvature, affecting perspective distortion in the rendered image.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: barrelClipping
-    summary: Determines the clipping level for light entering the camera, affecting edge brightness.
-    is_static: false
-    code_samples:
-    type: number
-  - name: anamorphism
-    summary: Creates anamorphic lens effects by compressing the image in one dimension.
-    is_static: false
-    code_samples:
-    type: number
-  - name: sensorSize
-    summary: Imitates the physical dimensions of the camera sensor, affecting the angle of view.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: lensShift
-    summary: Allows shifting the lens in relation to the sensor, correcting for keystone distortion.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: rect
-    summary: Specifies the Camera's viewport rectangle, controlling which part of the screen it occupies.
-    is_static: false
-    code_samples:
-    type: DataType.Rect
-  - name: pixelRect
-    summary: Defines the rectangle, in pixels, that the Camera renders to on the screen.
-    is_static: false
-    code_samples:
-    type: DataType.Rect
-  - name: pixelWidth
-    summary: Gives the width in pixels of the Camera's rendering area.
-    is_static: false
-    code_samples:
-    type: number
-  - name: pixelHeight
-    summary: Provides the height in pixels of the Camera's rendering area.
-    is_static: false
-    code_samples:
-    type: number
-  - name: scaledPixelWidth
-    summary: Gets the width of the Camera's image after applying the scaling factor.
-    is_static: false
-    code_samples:
-    type: number
-  - name: scaledPixelHeight
-    summary: Retrieves the height of the Camera's image with the scaling factor applied.
-    is_static: false
-    code_samples:
-    type: number
-  - name: targetDisplay
-    summary: Sets the display for the Camera's output, useful for multi-display setups.
-    is_static: false
-    code_samples:
-    type: number
-  - name: cameraToWorldMatrix
-    summary: Provides a matrix transforming from camera space to world space.
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: worldToCameraMatrix
-    summary: Allows setting a custom transformation from world space to camera space.
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: projectionMatrix
-    summary: Offers a custom projection matrix for perspective transformations.
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: nonJitteredProjectionMatrix
-    summary: Gives a projection matrix without jittering for anti-aliasing.
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: useJitteredProjectionMatrixForTransparentRendering
-    summary: Decides whether to use a jittered projection matrix for rendering transparent objects.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: previousViewProjectionMatrix
-    summary: Holds the matrix from multiplying the previous frame's projection matrix by its world-to-camera matrix, useful for effects needing historical comparison.
-    is_static: false
-    code_samples:
-    type: DataType.Matrix4x4
-  - name: stereoEnabled
-    summary: Indicates if stereoscopic rendering is enabled for creating 3D effects.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: stereoSeparation
-    summary: Adjusts the distance between the stereo camera's views to alter the 3D effect's intensity.
-    is_static: false
-    code_samples:
-    type: number
-  - name: stereoConvergence
-    summary: Sets the point where the left and right views converge, affecting the depth of the 3D scene.
-    is_static: false
-    code_samples:
-    type: number
-  - name: areVRStereoViewMatricesWithinSingleCullTolerance
-    summary: Checks if the view matrices for VR rendering fall within a tolerance for efficient culling.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: commandBufferCount
-    summary: Returns the total number of command buffers attached to the Camera, for extending rendering.
-    is_static: false
-    code_samples:
-    type: number
-  - name: main
-    summary: Accesses the main Camera in the scene, designated by the 'MainCamera' tag.
-    is_static: true
-    code_samples:
-    type: Class.Camera
-  - name: current
-    summary: Retrieves the currently rendering Camera, useful for effects and scripts during rendering.
-    is_static: true
-    code_samples:
-    type: Class.Camera
-  - name: allCamerasCount
-    summary: Gives the count of all enabled Cameras within the Scene.
-    is_static: true
-    code_samples:
-    type: number
-  - name: kMinAperture
-    summary: Specifies the minimum logical aperture size for cameras, constraining physical camera simulations.
-    is_static: true
-    code_samples:
-    type: number
+constructors: 
+properties: 
   - name: kMaxAperture
-    summary: Defines the maximum logical aperture size for camera simulations, affecting depth of field and light intake.
-    is_static: true
-    code_samples:
-    type: number
-  - name: kMinBladeCount
-    summary: Indicates the minimum number of aperture blades for simulating camera bokeh effects.
+    summary: |
+      [Unity's Camera.kMaxAperture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMaxAperture.html)
+    description:
     is_static: true
     code_samples:
     type: number
   - name: kMaxBladeCount
-    summary: Sets the maximum number of aperture blades for detailed bokeh simulation in camera effects.
+    summary: |
+      [Unity's Camera.kMaxBladeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMaxBladeCount.html)
+    description:
     is_static: true
     code_samples:
     type: number
-methods:
-  - name: ScreenToWorldPoint
-    summary: Converts a point from screen space into world space for this Camera, useful for interaction with game objects.
+  - name: kMinAperture
+    summary: |
+      [Unity's Camera.kMinAperture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMinAperture.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: kMinBladeCount
+    summary: |
+      [Unity's Camera.kMinBladeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMinBladeCount.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: allCameras
+    summary: |
+      [Unity's Camera.allCameras Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allCameras.html)
+    description:
+    is_static: true
+    code_samples:
+    type: {Camera}
+  - name: allCamerasCount
+    summary: |
+      [Unity's Camera.allCamerasCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allCamerasCount.html)
+    description:
+    is_static: true
+    code_samples:
+    type: number
+  - name: allowDynamicResolution
+    summary: |
+      [Unity's Camera.allowDynamicResolution Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allowDynamicResolution.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        summary: The screen space position to convert.
-    returns:
-      - type: DataType.Vector3
-        summary: The converted world space position.
-  - name: WorldToScreenPoint
-    summary: Transforms a world space point to screen space, allowing UI alignment or visibility checks.
+    type: boolean
+  - name: allowHDR
+    summary: |
+      [Unity's Camera.allowHDR Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allowHDR.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        summary: The world space position to convert.
-    returns:
-      - type: DataType.Vector3
-        summary: The screen space representation of the point.
-  - name: ScreenPointToRay
-    summary: Creates a ray from the Camera through a screen point, primarily for object selection via raycasting.
+    type: boolean
+  - name: allowMSAA
+    summary: |
+      [Unity's Camera.allowMSAA Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-allowMSAA.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        summary: The screen point through which the ray passes.
-    returns:
-      - type: DataType.Ray
-        summary: The ray from the camera through the screen point.
-  - name: Reset
-    summary: Resets all Camera settings to their defaults, useful for reinitializing camera properties.
+    type: boolean
+  - name: anamorphism
+    summary: |
+      [Unity's Camera.anamorphism Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-anamorphism.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ResetTransparencySortSettings
-    summary: Reverts the Camera's transparency sort settings to the default state.
+    type: number
+  - name: aperture
+    summary: |
+      [Unity's Camera.aperture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-aperture.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ResetAspect
-    summary: Resets the Camera's aspect ratio to the screen's aspect ratio, undoing
-        any custom aspect ratio settings.
+    type: number
+  - name: aspect
+    summary: |
+      [Unity's Camera.aspect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-aspect.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ResetCullingMatrix
-    summary: Resets the Camera's culling matrix to the default, useful for undoing custom culling adjustments.
+    type: number
+  - name: backgroundColor
+    summary: |
+      [Unity's Camera.backgroundColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-backgroundColor.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ResetReplacementShader
-    summary: Removes any replacement shader from the Camera, returning to standard rendering.
+    type: DataType.Color
+  - name: barrelClipping
+    summary: |
+      [Unity's Camera.barrelClipping Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-barrelClipping.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: GetGateFittedFieldOfView
-    summary: Calculates the field of view based on gate fitting, useful for matching physical camera settings.
+    type: number
+  - name: bladeCount
+    summary: |
+      [Unity's Camera.bladeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-bladeCount.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: number
-        summary: The calculated field of view.
-  - name: GetGateFittedLensShift
-    summary: Determines the lens shift required based on gate fitting, aiding in accurate camera simulation.
+    type: number
+  - name: cameraToWorldMatrix
+    summary: |
+      [Unity's Camera.cameraToWorldMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-cameraToWorldMatrix.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: DataType.Vector2
-        summary: The required lens shift.
-  - name: ResetWorldToCameraMatrix
-    summary: Resets the Camera's world-to-camera matrix to the identity matrix, clearing any transformations.
+    type: DataType.Matrix4x4
+  - name: clearStencilAfterLightingPass
+    summary: |
+      [Unity's Camera.clearStencilAfterLightingPass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-clearStencilAfterLightingPass.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ResetProjectionMatrix
-    summary: Reverts the Camera's projection matrix to default, useful for standard perspective restoration.
+    type: boolean
+  - name: cullingMask
+    summary: |
+      [Unity's Camera.cullingMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-cullingMask.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
+    type: number
+  - name: cullingMatrix
+    summary: |
+      [Unity's Camera.cullingMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-cullingMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: current
+    summary: |
+      [Unity's Camera.current Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-current.html)
+    description:
+    is_static: true
+    code_samples:
+    type: Class.Camera
+  - name: curvature
+    summary: |
+      [Unity's Camera.curvature Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-curvature.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: depth
+    summary: |
+      [Unity's Camera.depth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-depth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: eventMask
+    summary: |
+      [Unity's Camera.eventMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-eventMask.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: farClipPlane
+    summary: |
+      [Unity's Camera.farClipPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-farClipPlane.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: fieldOfView
+    summary: |
+      [Unity's Camera.fieldOfView Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-fieldOfView.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: focalLength
+    summary: |
+      [Unity's Camera.focalLength Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-focalLength.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: focusDistance
+    summary: |
+      [Unity's Camera.focusDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-focusDistance.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: forceIntoRenderTexture
+    summary: |
+      [Unity's Camera.forceIntoRenderTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-forceIntoRenderTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: iso
+    summary: |
+      [Unity's Camera.iso Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-iso.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: layerCullSpherical
+    summary: |
+      [Unity's Camera.layerCullSpherical Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-layerCullSpherical.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: lensShift
+    summary: |
+      [Unity's Camera.lensShift Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-lensShift.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: main
+    summary: |
+      [Unity's Camera.main Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-main.html)
+    description:
+    is_static: true
+    code_samples:
+    type: Class.Camera
+  - name: nearClipPlane
+    summary: |
+      [Unity's Camera.nearClipPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-nearClipPlane.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: nonJitteredProjectionMatrix
+    summary: |
+      [Unity's Camera.nonJitteredProjectionMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-nonJitteredProjectionMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: orthographic
+    summary: |
+      [Unity's Camera.orthographic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-orthographic.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: orthographicSize
+    summary: |
+      [Unity's Camera.orthographicSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-orthographicSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: overrideSceneCullingMask
+    summary: |
+      [Unity's Camera.overrideSceneCullingMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-overrideSceneCullingMask.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: pixelHeight
+    summary: |
+      [Unity's Camera.pixelHeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-pixelHeight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: pixelRect
+    summary: |
+      [Unity's Camera.pixelRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-pixelRect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: pixelWidth
+    summary: |
+      [Unity's Camera.pixelWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-pixelWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: previousViewProjectionMatrix
+    summary: |
+      [Unity's Camera.previousViewProjectionMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-previousViewProjectionMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: projectionMatrix
+    summary: |
+      [Unity's Camera.projectionMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-projectionMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+  - name: rect
+    summary: |
+      [Unity's Camera.rect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-rect.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Rect
+  - name: scaledPixelHeight
+    summary: |
+      [Unity's Camera.scaledPixelHeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-scaledPixelHeight.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: scaledPixelWidth
+    summary: |
+      [Unity's Camera.scaledPixelWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-scaledPixelWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: sensorSize
+    summary: |
+      [Unity's Camera.sensorSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-sensorSize.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: shutterSpeed
+    summary: |
+      [Unity's Camera.shutterSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-shutterSpeed.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: transparencySortAxis
+    summary: |
+      [Unity's Camera.transparencySortAxis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-transparencySortAxis.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: useJitteredProjectionMatrixForTransparentRendering
+    summary: |
+      [Unity's Camera.useJitteredProjectionMatrixForTransparentRendering Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-useJitteredProjectionMatrixForTransparentRendering.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: useOcclusionCulling
+    summary: |
+      [Unity's Camera.useOcclusionCulling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-useOcclusionCulling.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: usePhysicalProperties
+    summary: |
+      [Unity's Camera.usePhysicalProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-usePhysicalProperties.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: velocity
+    summary: |
+      [Unity's Camera.velocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-velocity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: worldToCameraMatrix
+    summary: |
+      [Unity's Camera.worldToCameraMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-worldToCameraMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Matrix4x4
+methods: 
   - name: CalculateObliqueMatrix
-    summary: Creates a custom projection matrix for oblique near-plane clipping, useful for mirror reflections or water surfaces.
+    summary: |
+      [Unity's Camera.CalculateObliqueMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CalculateObliqueMatrix.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: clipPlane
         type: DataType.Vector4
-        summary: The clipping plane to align with.
+        tags: 
+        default:
+        summary: 
     returns:
       - type: DataType.Matrix4x4
-        summary: The custom projection matrix.
-  - name: ScreenToViewportPoint
-    summary: Transforms a point from screen space to normalized viewport space.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        summary: The screen space point to convert.
-    returns:
-      - type: DataType.Vector3
-        summary: The viewport space position.
-  - name: ViewportToScreenPoint
-    summary: Converts a point from normalized viewport space to screen space.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        summary: The viewport space point to convert.
-    returns:
-      - type: DataType.Vector3
-        summary: The screen space position.
-  - name: ResetStereoProjectionMatrices
-    summary: Resets the stereo projection matrices for left and right eyes to the default values.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ResetStereoViewMatrices
-    summary: Reverts the stereo view matrices for the left and right eyes to Unity's defaults.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Render
-    summary: Forces immediate rendering of the scene from this Camera's perspective.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: RenderDontRestore
-    summary: Renders the scene immediately without restoring the Camera's state afterwards.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: CopyFrom
-    summary: Copies settings from another Camera, including all properties and transformation matrices.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: other
-        type: Class.Camera
-        summary: The source Camera to copy from.
-    returns:
-      - type: void
-        summary:
-  - name: RemoveAllCommandBuffers
-    summary: Deletes all command buffers attached to this Camera.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: FocalLengthToFieldOfView
-    summary: Converts focal length to vertical field of view for the Camera's sensor size.
+        summary: 
+  - name: CalculateProjectionMatrixFromPhysicalProperties
+    summary: |
+      [Unity's Camera.CalculateProjectionMatrixFromPhysicalProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CalculateProjectionMatrixFromPhysicalProperties.html)
+    description:
     is_static: true
     code_samples:
-    parameters:
+    parameters: 
       - name: focalLength
         type: number
-        summary: The focal length to convert.
+        tags: 
+        default:
+        summary: 
       - name: sensorSize
+        type: DataType.Vector2
+        tags: 
+        default:
+        summary: 
+      - name: lensShift
+        type: DataType.Vector2
+        tags: 
+        default:
+        summary: 
+      - name: nearClip
         type: number
-        summary: The vertical size of the sensor.
+        tags: 
+        default:
+        summary: 
+      - name: farClip
+        type: number
+        tags: 
+        default:
+        summary: 
     returns:
-      - type: number
-        summary: The calculated vertical field of view.
-  - name: FieldOfViewToFocalLength
-    summary: Calculates the focal length from a given vertical field of view and sensor size.
-    is_static: true
+      - type: DataType.Matrix4x4
+        summary: 
+  - name: CopyFrom
+    summary: |
+      [Unity's Camera.CopyFrom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CopyFrom.html)
+    description:
+    is_static: false
     code_samples:
-    parameters:
-      - name: fieldOfView
-        type: number
-        summary: The vertical field of view to convert.
-      - name: sensorSize
-        type: number
-        summary: The vertical size of the sensor.
-    returns:
-      - type: number
-        summary: The focal length corresponding to the given field of view.
-  - name: HorizontalToVerticalFieldOfView
-    summary: Converts a horizontal field of view to a vertical field of view based on the aspect ratio.
-    is_static: true
-    code_samples:
-    parameters:
-      - name: horizontalFieldOfView
-        type: number
-        summary: The horizontal field of view to convert.
-      - name: aspectRatio
-        type: number
-        summary: The aspect ratio of the camera.
-    returns:
-      - type: number
-        summary: The vertical field of view.
-  - name: VerticalToHorizontalFieldOfView
-    summary: Converts a vertical field of view to a horizontal field of view based on the aspect ratio.
-    is_static: true
-    code_samples:
-    parameters:
-      - name: verticalFieldOfView
-        type: number
-        summary: The vertical field of view to convert.
-      - name: aspectRatio
-        type: number
-        summary: The aspect ratio of the camera.
-    returns:
-      - type: number
-        summary: The horizontal field of view.
-  - name: SetupCurrent
-    summary: Sets a specified Camera as the current active Camera, useful for dynamic camera switching.
-    is_static: true
-    code_samples:
-    parameters:
-      - name: cur
+    parameters: 
+      - name: other
         type: Class.Camera
-        summary: The Camera to set as current.
+        tags: 
+        default:
+        summary: 
     returns:
       - type: void
-        summary:
-math_operations:
+        summary: 
+  - name: FieldOfViewToFocalLength
+    summary: |
+      [Unity's Camera.FieldOfViewToFocalLength Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.FieldOfViewToFocalLength.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: fieldOfView
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: sensorSize
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary: 
+  - name: FocalLengthToFieldOfView
+    summary: |
+      [Unity's Camera.FocalLengthToFieldOfView Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.FocalLengthToFieldOfView.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: focalLength
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: sensorSize
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary: 
+  - name: GetGateFittedFieldOfView
+    summary: |
+      [Unity's Camera.GetGateFittedFieldOfView Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.GetGateFittedFieldOfView.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary: 
+  - name: GetGateFittedLensShift
+    summary: |
+      [Unity's Camera.GetGateFittedLensShift Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.GetGateFittedLensShift.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: DataType.Vector2
+        summary: 
+  - name: HorizontalToVerticalFieldOfView
+    summary: |
+      [Unity's Camera.HorizontalToVerticalFieldOfView Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.HorizontalToVerticalFieldOfView.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: horizontalFieldOfView
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: aspectRatio
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary: 
+  - name: Render
+    summary: |
+      [Unity's Camera.Render Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.Render.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: RenderWithShader
+    summary: |
+      [Unity's Camera.RenderWithShader Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.RenderWithShader.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: shader
+        type: Class.Shader
+        tags: 
+        default:
+        summary: 
+      - name: replacementTag
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: Reset
+    summary: |
+      [Unity's Camera.Reset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.Reset.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ResetAspect
+    summary: |
+      [Unity's Camera.ResetAspect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetAspect.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ResetCullingMatrix
+    summary: |
+      [Unity's Camera.ResetCullingMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetCullingMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ResetProjectionMatrix
+    summary: |
+      [Unity's Camera.ResetProjectionMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetProjectionMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ResetReplacementShader
+    summary: |
+      [Unity's Camera.ResetReplacementShader Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetReplacementShader.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ResetTransparencySortSettings
+    summary: |
+      [Unity's Camera.ResetTransparencySortSettings Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetTransparencySortSettings.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ResetWorldToCameraMatrix
+    summary: |
+      [Unity's Camera.ResetWorldToCameraMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ResetWorldToCameraMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: void
+        summary: 
+  - name: ScreenPointToRay
+    summary: |
+      [Unity's Camera.ScreenPointToRay Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenPointToRay.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector2
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Ray
+        summary: 
+  - name: ScreenPointToRay
+    summary: |
+      [Unity's Camera.ScreenPointToRay Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenPointToRay.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Ray
+        summary: 
+  - name: ScreenToViewportPoint
+    summary: |
+      [Unity's Camera.ScreenToViewportPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenToViewportPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: ScreenToWorldPoint
+    summary: |
+      [Unity's Camera.ScreenToWorldPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ScreenToWorldPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: SetReplacementShader
+    summary: |
+      [Unity's Camera.SetReplacementShader Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.SetReplacementShader.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: shader
+        type: Class.Shader
+        tags: 
+        default:
+        summary: 
+      - name: replacementTag
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: VerticalToHorizontalFieldOfView
+    summary: |
+      [Unity's Camera.VerticalToHorizontalFieldOfView Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.VerticalToHorizontalFieldOfView.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: verticalFieldOfView
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: aspectRatio
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary: 
+  - name: ViewportPointToRay
+    summary: |
+      [Unity's Camera.ViewportPointToRay Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ViewportPointToRay.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: pos
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Ray
+        summary: 
+  - name: ViewportToScreenPoint
+    summary: |
+      [Unity's Camera.ViewportToScreenPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ViewportToScreenPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: ViewportToWorldPoint
+    summary: |
+      [Unity's Camera.ViewportToWorldPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.ViewportToWorldPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: WorldToScreenPoint
+    summary: |
+      [Unity's Camera.WorldToScreenPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.WorldToScreenPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: point
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+  - name: WorldToViewportPoint
+    summary: |
+      [Unity's Camera.WorldToViewportPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.WorldToViewportPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.Vector3
+        summary: 
+math_operations: 

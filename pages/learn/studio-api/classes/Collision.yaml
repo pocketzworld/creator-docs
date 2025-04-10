@@ -1,50 +1,89 @@
 name: Collision
 type: classes
-summary: Collision encapsulates details about interactions between moving objects, including the collision's impact, the objects involved, and the exact collision points. It offers a suite of properties that provide insights into the physical dynamics of a collision, aiding in the application of game logic and physics manipulations during collision events. The Collision class is pivotal for handling "OnCollision" events, offering a detailed framework for understanding and reacting to in-game physical interactions. Refer to Unity's official Collision documentation for a deeper exploration.
+summary: |
+  [Unity's Collision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.html)
 description:
 code_samples:
-inherits:
-constructors:
-properties:
-  - name: impulse
-    summary: Indicates the total impulse applied to simulate the collision, useful for measuring collision impact.
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: relativeVelocity
-    summary: Provides the speed difference at the moment of collision, aiding in speed-based logic.
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: rigidbody
-    summary: References the Rigidbody of the collided object, enabling direct manipulation post-collision.
-    is_static: false
-    code_samples:
-    type: Class.Rigidbody
+inherits: 
+constructors: 
+properties: 
   - name: body
-    summary: Similar to 'rigidbody', it references the body involved in the collision for adjustments or analysis.
+    summary: |
+      [Unity's Collision.body Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-body.html)
+    description:
     is_static: false
     code_samples:
     type: Class.Component
   - name: collider
-    summary: Points to the Collider component of the object hit, crucial for accessing collision properties.
+    summary: |
+      [Unity's Collision.collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-collider.html)
+    description:
     is_static: false
     code_samples:
     type: Class.Collider
-  - name: transform
-    summary: Accesses the Transform of the collided object, offering positional and rotational control.
-    is_static: false
-    code_samples:
-    type: Class.Transform
-  - name: gameObject
-    summary: Grants access to the GameObject that was part of the collision, enabling game logic application.
-    is_static: false
-    code_samples:
-    type: Class.GameObject
   - name: contactCount
-    summary: Reveals the number of contact points in the collision, informative for collision scope assessment.
+    summary: |
+      [Unity's Collision.contactCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-contactCount.html)
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-math_operations:
+  - name: contacts
+    summary: |
+      [Unity's Collision.contacts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-contacts.html)
+    description:
+    is_static: false
+    code_samples:
+    type: {ContactPoint}
+  - name: gameObject
+    summary: |
+      [Unity's Collision.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-gameObject.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.GameObject
+  - name: impulse
+    summary: |
+      [Unity's Collision.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-impulse.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: relativeVelocity
+    summary: |
+      [Unity's Collision.relativeVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-relativeVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: rigidbody
+    summary: |
+      [Unity's Collision.rigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-rigidbody.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Rigidbody
+  - name: transform
+    summary: |
+      [Unity's Collision.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision-transform.html)
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Transform
+methods: 
+  - name: GetContact
+    summary: |
+      [Unity's Collision.GetContact Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Collision.GetContact.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: DataType.ContactPoint
+        summary: 
+math_operations: 

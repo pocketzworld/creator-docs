@@ -1,57 +1,82 @@
 name: PinchGestureBegan
 type: classes
 summary: |
-  For those times when you need to interact with touch-enabled screens in your application, this class is a data container for the start of a pinch or drag gesture, usually used for operations like zooming, panning, or scaling.
-
-  It keeps track of various details of a pinch or drag gesture such as the change in position, start position, current position, direction, distance covered in the pinch, the scaling factor, and whether a pinch is currently happening. All these properties provide critical information to accurately detect and process pinch gestures for accomplishing sophisticated touch interactions.
-
-  It is primarily used in the Service.Input class an the PinchOrDragBegan event's parameter.
+  
 description:
 code_samples:
-inherits:
-constructors:
-properties:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
   - name: deltaPosition
     summary: |
-      The 'DeltaPosition' property holds the change in position from the last frame to the current one. It gives the motion vector of the pinch in the context of the screen space.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: startPosition
-    summary: |
-      The 'StartPosition' property marks the initial position where the pinch gesture began. This serves as the reference point for further motion of the pinch.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: position
-    summary: |
-      The 'Position' refers to the current position of the pinch gesture. This property updates in real-time as the pinch gesture moves.
+      
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: direction
     summary: |
-      The 'Direction' property provides a directional vector signifying the direction of the pinch gesture. It senses the shifting orientation as the fingers move while pinching.
+      
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: distance
     summary: |
-      The 'Distance' property computes the distance between the two touch points in a pinch. This information often plays a crucial role while performing actions like zooming where the level of zoom is determined by how much distance is covered in the pinch.
-    is_static: false
-    code_samples:
-    type: number
-  - name: scale
-    summary: |
-      The 'Scale' property calculates the scaling factor based on the 'Distance' property. This scaling factor is typically used to resize objects according to the pinch gesture.
+      
+    description:
     is_static: false
     code_samples:
     type: number
   - name: isPinching
     summary: |
-      The 'IsPinching' property is a boolean that indicates whether a pinch gesture is currently in progress. This can be used to trigger or halt certain actions in response to the pinch gesture's state.
+      
+    description:
     is_static: false
     code_samples:
     type: boolean
-methods:
-math_operations:
+  - name: position
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: scale
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: startPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: screenPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+  - name: screenStartPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods: 
+math_operations: 

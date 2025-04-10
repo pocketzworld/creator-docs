@@ -1,17 +1,25 @@
 name: WorldWheelEvent
 type: classes
 summary: |
-
+  
 description:
 code_samples:
-inherits:
-constructors:
-properties:
+inherits: 
+constructors: 
+properties: 
   - name: delta
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
-methods:
-math_operations:
+  - name: position
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods: 
+math_operations: 

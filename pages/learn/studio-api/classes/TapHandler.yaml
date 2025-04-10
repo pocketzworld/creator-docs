@@ -1,57 +1,77 @@
 name: TapHandler
 type: classes
 summary: |
-  A TapHandler is a class that can be used to detect when a GameObject has been tapped.
-  For a GameObject to be tapped, it must have a Collider component attached to it.
-
+  
 description:
 code_samples:
-inherits:
-  - Class.Behaviour
-constructors:
-properties:
+inherits: 
+  - Class.WorldBehaviour
+constructors: 
+properties: 
   - name: Tapped
-    summary: Called when the GameObject is tapped.
+    summary: |
+      
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Connect to the Tapped event
-      self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
-          print("Tapped")
-      end)
-      ```
-    type: Class.Event
-  - name: moveTo
-    summary: Moves the GameObject to the specified position when it is tapped.
-    is_static: false
-    code_samples: |
-      ```lua
-      -- Move the GameObject to the specified position when it is tapped
-      self.gameObject:GetComponent(TapHandler).moveTo = Vector3.New(0, 0, 0)
-      ```
-    type: boolean
+    code_samples:
+    type: LuaEvent
   - name: distance
-    summary: The distance the GameObject will move when it is tapped.
+    summary: |
+      
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Set the distance the GameObject will move when it is tapped
-      self.gameObject:GetComponent(TapHandler).distance = 1
-      ```
+    code_samples:
     type: number
-methods:
+  - name: hasAnchors
+    summary: |
+      Returns true if the tap handler has anchors
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: moveTarget
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: moveTo
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+methods: 
+  - name: GetClosestAnchor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: Class.Anchor
+        summary: 
   - name: Perform
     summary: |
-      Performs the tap action on the GameObject.
-      This method is called when the GameObject is tapped.
+      
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Perform the tap action on the GameObject
-      self.gameObject:GetComponent(TapHandler):Perform()
-      ```
-    parameters:
+    code_samples:
+    parameters: 
+      - name: position
+        type: DataType.Vector3
+        tags: 
+        default:
+        summary: 
     returns:
       - type: void
-        summary:
-math_operations:
+        summary: 
+math_operations: 

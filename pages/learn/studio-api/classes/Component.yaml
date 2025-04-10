@@ -1,88 +1,202 @@
 name: Component
 type: classes
-summary: Component acts as the core of GameObject customization, enabling GameObjects to exhibit specific characteristics and behaviors. It's the foundation for a wide range of functionalities, from physics interactions with Collider to visual presentations via MeshRenderer and Camera components. Components transform GameObjects from static entities to dynamic actors within the game world. Scripting through LuaBehaviour further expands potential behaviors, allowing for unique game mechanics and interactions. Components are pivotal for developing immersive, interactive game environments. Explore Unity's Component documentation for detailed insights.
+summary: |
+  [Unity's Component Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Object
-constructors:
-properties:
-  - name: transform
-    summary: Provides access to the GameObject's Transform, facilitating position, rotation, and scale adjustments.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples:
-    type: Class.Transform
+constructors: 
+properties: 
   - name: gameObject
-    summary: Allows access to the GameObject this component is attached to, central to numerous Unity operations.
+    summary: |
+      [Unity's Component.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-gameObject.html)
+    description:
     is_static: false
-    tags:
-      - ServerAndClient
     code_samples:
     type: Class.GameObject
   - name: tag
-    summary: Accesses the GameObject's tag for identification and selection purposes within Unity's environment.
+    summary: |
+      [Unity's Component.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-tag.html)
+    description:
     is_static: false
     code_samples:
     type: string
-methods:
-  - name: GetComponent
-    summary: Retrieves a component of a specified type from the GameObject, crucial for accessing and manipulating attached components.
+  - name: transform
+    summary: |
+      [Unity's Component.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component-transform.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
-      - name: type
-        type: Class.Type
-        summary: Component type to retrieve.
-    returns:
-      - type: Class.Component
-        summary: The component, if present.
-  - name: GetComponentInChildren
-    summary: Searches the GameObject's children for a component of a specific type, extending component access to child GameObjects.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: t
-        type: Class.Type
-        summary: Component type to search for in children.
-      - name: includeInactive
-        type: boolean
-        summary: Includes inactive GameObjects in the search.
-    returns:
-      - type: Class.Component
-        summary: The component, if found among children.
-  - name: GetComponentInParent
-    summary: Looks for a specified component type in the GameObject's parent hierarchy, useful for accessing shared components in parent objects.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: t
-        type: Class.Type
-        summary: Component type to search for in parents.
-      - name: includeInactive
-        type: boolean
-        summary: Includes inactive GameObjects in the search.
-    returns:
-      - type: Class.Component
-        summary: The component, if located in a parent.
-  - name: GetComponentIndex
-    summary: Retrieves the index of a component, enabling more advanced management of multiple components of the same type.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: number
-        summary: The index of the component.
+    type: Class.Transform
+methods: 
   - name: CompareTag
-    summary: Compares the GameObject's tag with a specified string, streamlining GameObject categorization and behavior customization based on tags.
+    summary: |
+      [Unity's Component.CompareTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.CompareTag.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: tag
         type: string
-        summary: Tag for comparison.
+        tags: 
+        default:
+        summary: 
     returns:
       - type: boolean
-        summary: True if tags match, otherwise false.
-math_operations:
+        summary: 
+  - name: GetComponent
+    summary: |
+      [Unity's Component.GetComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponent.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: Class.Component
+        summary: 
+  - name: GetComponentInChildren
+    summary: |
+      [Unity's Component.GetComponentInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInChildren.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: t
+        type: Class.Type
+        tags: 
+        default:
+        summary: 
+      - name: includeInactive
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: Class.Component
+        summary: 
+  - name: GetComponentInParent
+    summary: |
+      [Unity's Component.GetComponentInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInParent.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: t
+        type: Class.Type
+        tags: 
+        default:
+        summary: 
+      - name: includeInactive
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: Class.Component
+        summary: 
+  - name: GetComponentIndex
+    summary: |
+      [Unity's Component.GetComponentIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+    returns:
+      - type: number
+        summary: 
+  - name: GetComponents
+    summary: |
+      [Unity's Component.GetComponents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponents.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: {Component}
+        summary: 
+  - name: GetComponentsInChildren
+    summary: |
+      [Unity's Component.GetComponentsInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentsInChildren.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: t
+        type: Class.Type
+        tags: 
+        default:
+        summary: 
+      - name: includeInactive
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: {Component}
+        summary: 
+  - name: GetComponentsInParent
+    summary: |
+      [Unity's Component.GetComponentsInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentsInParent.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: t
+        type: Class.Type
+        tags: 
+        default:
+        summary: 
+      - name: includeInactive
+        type: boolean
+        tags: 
+          - optional
+        default:
+        summary: 
+    returns:
+      - type: {Component}
+        summary: 
+  - name: SendMessage
+    summary: |
+      [Unity's Component.SendMessage Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.SendMessage.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: methodName
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SendMessageUpwards
+    summary: |
+      [Unity's Component.SendMessageUpwards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.SendMessageUpwards.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: methodName
+        type: string
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+math_operations: 

@@ -1,40 +1,68 @@
 name: Scene
 type: classes
 summary: |
-  The 'Scene' class in the scene or 'game area'. It manages events related to player interactions with the scene and allows you to section and differentiate portions of your world into smaller chunks.
+  
 description:
 code_samples:
-constructors:
-properties:
+inherits: 
+  - Class.MonoBehaviour
+constructors: 
+properties: 
   - name: PlayerJoined
     summary: |
-      An event triggered when a player joins the scene.
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
     code_samples:
-    type: Class.Event
+    type: LuaEvent
   - name: PlayerLeft
     summary: |
-      An event triggered when a player leaves the scene.
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
     code_samples:
-    type: Class.Event
+    type: LuaEvent
   - name: id
     summary: |
-      The unique identifier of the scene.
+      
+    description:
     is_static: false
-    tags:
-      - ClientAndServer
     code_samples:
     type: number
   - name: mainCamera
     summary: |
-      The main camera associated with the scene.
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Camera
+  - name: name
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: string
+  - name: playerCount
+    summary: |
+      
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-math_operations:
+  - name: players
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: {Player}
+  - name: renderSettings
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.WorldRenderSettings
+methods: 
+math_operations: 

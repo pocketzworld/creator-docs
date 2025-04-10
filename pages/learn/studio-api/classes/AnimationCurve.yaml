@@ -1,176 +1,213 @@
 name: AnimationCurve
 type: classes
 summary: |
-  The AnimationCurve class represents a curve that defines the interpolation between keyframes over time. It's commonly used in animation systems to define smooth transitions between different values over time.
-
+  [Unity's AnimationCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.html)
 description:
-code_samples: |
-  #### Putting an animation curve in the inspector
-  ```lua
-  --!SerializeField
-  local myAnimationCurve : AnimationCurve = nil
-  ```
-inherits:
-constructors:
-properties:
+code_samples:
+inherits: 
+constructors: 
+properties: 
   - name: length
     summary: |
-      The number of keys in the curve. (Read Only)
+      [Unity's AnimationCurve.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve-length.html)
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-  - name: Evaluate
-    summary: |
-      Interpolates the value from the curve at a given time point. The curve is evaluated, giving the value of the curve at that exact time. This becomes very handy when lerping between two values in a non-linear way for smoother transitions.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: time
-        type: number
-        default:
-        summary: The time at which to evaluate the curve.
-    returns:
-      - type: number
-        summary: Returns the value of the curve at the specified time.
+methods: 
   - name: AddKey
     summary: |
-      Tool designed to insert a new key into your AnimationCurve. A way to dynamically shape your animation by adding keyframes at certain times with specific values.
+      [Unity's AnimationCurve.AddKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.AddKey.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
       - name: time
         type: number
+        tags: 
         default:
-        summary: The time at which the new key should be inserted.
+        summary: 
       - name: value
         type: number
+        tags: 
         default:
-        summary: The value of the new key at the specified time.
+        summary: 
     returns:
       - type: number
-        summary: Returns the index of the added key, or of the existing key if one already exists at the given time.
+        summary: 
   - name: ClearKeys
     summary: |
-      Erase all keys from the AnimationCurve. It can be beneficial when you need to reset the curve or want to dynamically generate a new one.
+      [Unity's AnimationCurve.ClearKeys Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.ClearKeys.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
     returns:
       - type: void
-        summary: This method does not return a value.
-  - name: RemoveKey
-    summary: |
-      Removes the key at a specified index from your AnimationCurve. Varying curves dynamically can lead to interesting gameplay possibilities and variation in animations.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: index
-        type: number
-        default:
-        summary: The index of the key you want to remove.
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: SmoothTangents
-    summary: |
-      Updates the tangent of a key in the AnimationCurve to create a smooth transition in the curve. This becomes essential while crafting natural and organic animations.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: index
-        type: number
-        default:
-        summary: The index of the key to update.
-      - name: weight
-        type: number
-        default:
-        summary: How much influence the tangent has. A weight of 0 will make the tangent flat.
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: CopyFrom
-    summary: |
-      Copies all settings, including all keys from the given curve. This can prove useful when you want to duplicate the behavior of an existing curve.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: other
-        type: Class.AnimationCurve
-        default:
-        summary: The source AnimationCurve to copy from.
-    returns:
-      - type: void
-        summary: This method does not return a value.
+        summary: 
   - name: Constant
     summary: |
-      Creates a new AnimationCurve where all values are the same (constant). This can come in handy when creating a stable, unchanging behavior.
+      [Unity's AnimationCurve.Constant Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Constant.html)
+    description:
     is_static: true
     code_samples:
-    parameters:
+    parameters: 
       - name: timeStart
         type: number
+        tags: 
         default:
-        summary: The starting time of the curve.
+        summary: 
       - name: timeEnd
         type: number
+        tags: 
         default:
-        summary: The ending time of the curve.
+        summary: 
       - name: value
         type: number
+        tags: 
         default:
-        summary: The constant value for the curve.
+        summary: 
     returns:
       - type: Class.AnimationCurve
-        summary: Returns a new AnimationCurve with a constant value.
-  - name: Linear
+        summary: 
+  - name: CopyFrom
     summary: |
-      Creates a new AnimationCurve representing a linear interpolation between a start and end value (valueStart and valueEnd) over a specified time period (timeStart to timeEnd). This is particularly useful when a linear transition between two states is required over a given duration.
-    is_static: true
+      [Unity's AnimationCurve.CopyFrom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.CopyFrom.html)
+    description:
+    is_static: false
     code_samples:
-    parameters:
-      - name: timeStart
-        type: number
+    parameters: 
+      - name: other
+        type: Class.AnimationCurve
+        tags: 
         default:
-        summary: The starting time of the curve.
-      - name: valueStart
-        type: number
-        default:
-        summary: The value of the curve at the start time.
-      - name: timeEnd
-        type: number
-        default:
-        summary: The ending time of the curve.
-      - name: valueEnd
-        type: number
-        default:
-        summary: The value of the curve at the end time.
+        summary: 
     returns:
-      - type: Class.AnimationCurve
-        summary: Returns a new AnimationCurve representing a linear interpolation.
+      - type: void
+        summary: 
   - name: EaseInOut
     summary: |
-      Creates a new AnimationCurve that smoothly transitions between the start and end values over a specified time period. This method is especially useful to create animations with smooth starts and ends, providing a more natural look.
+      [Unity's AnimationCurve.EaseInOut Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.EaseInOut.html)
+    description:
     is_static: true
     code_samples:
-    parameters:
+    parameters: 
       - name: timeStart
         type: number
+        tags: 
         default:
-        summary: The starting time of the curve.
+        summary: 
       - name: valueStart
         type: number
+        tags: 
         default:
-        summary: The value of the curve at the start time.
+        summary: 
       - name: timeEnd
         type: number
+        tags: 
         default:
-        summary: The ending time of the curve.
+        summary: 
       - name: valueEnd
         type: number
+        tags: 
         default:
-        summary: The value of the curve at the end time.
+        summary: 
     returns:
       - type: Class.AnimationCurve
-        summary: Returns a new AnimationCurve with smooth transitions at start and end.
-math_operations:
+        summary: 
+  - name: Equals
+    summary: |
+      [Unity's AnimationCurve.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: other
+        type: Class.AnimationCurve
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: boolean
+        summary: 
+  - name: Evaluate
+    summary: |
+      [Unity's AnimationCurve.Evaluate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Evaluate.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: time
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: number
+        summary: 
+  - name: Linear
+    summary: |
+      [Unity's AnimationCurve.Linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.Linear.html)
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+      - name: timeStart
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: valueStart
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: timeEnd
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: valueEnd
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: Class.AnimationCurve
+        summary: 
+  - name: RemoveKey
+    summary: |
+      [Unity's AnimationCurve.RemoveKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.RemoveKey.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+  - name: SmoothTangents
+    summary: |
+      [Unity's AnimationCurve.SmoothTangents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationCurve.SmoothTangents.html)
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: index
+        type: number
+        tags: 
+        default:
+        summary: 
+      - name: weight
+        type: number
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: void
+        summary: 
+math_operations: 

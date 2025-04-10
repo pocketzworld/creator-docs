@@ -1,82 +1,75 @@
 name: Anchor
 type: classes
 summary: |
-    Anchors enable specific actions for players upon reaching designated points in the environment, such as sitting down, standing up, or other actions.
+  Defines an anchor that one or more characters can be attached to.
 description:
 code_samples:
-inherits:
-  - Class.Behaviour
-constructors:
-properties:
+inherits: 
+  - NetworkBehaviour
+constructors: 
+properties: 
   - name: Entered
     summary: |
-      Called when a player enters the anchor.
+      
     description:
     is_static: false
     code_samples:
-    type: Class.Event
-    returns:
-      - type: void
-        summary:
+    type: LuaEvent
   - name: Exited
     summary: |
-      Called when a player exits the anchor.
+      
     description:
     is_static: false
     code_samples:
-    type: Class.Event
-    returns:
-      - type: void
-        summary:
-  - name: enterFromPosition
-    summary: |
-      Enters the anchor from a specific position.
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Vector3
-    returns:
-      - type: void
-        summary:
-  - name: exitToPosition
-    summary: |
-      Exits the anchor to a specific position.
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Vector3
-    returns:
-      - type: void
-        summary:
+    type: LuaEvent
   - name: enterFrom
     summary: |
-      Enters the anchor from a specific transform.
+      
     description:
     is_static: false
     code_samples:
-    type: Transform
-    returns:
-      - type: void
-        summary:
+    type: Class.Transform
+  - name: enterFromPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
   - name: exitTo
     summary: |
-      Exits the anchor to a specific transform.
+      
     description:
     is_static: false
     code_samples:
-    type: Transform
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: isTappable
+    type: Class.Transform
+  - name: exitToPosition
     summary: |
-      Returns whether the anchor is tappable.
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector3
+  - name: isOccupied
+    summary: |
+      
     description:
     is_static: false
     code_samples:
     type: boolean
-    returns:
-      - type: boolean
-        summary: Whether the anchor is tappable.
-methods:
+  - name: isTappable
+    summary: |
+      Get/Set the tappable state of an anchor
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: occupant
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: Class.Character
+methods: 
+math_operations: 

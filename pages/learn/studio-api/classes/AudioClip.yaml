@@ -1,85 +1,74 @@
 name: AudioClip
 type: classes
-summary: AudioClip serves as a container for audio data, including music, voiceovers, and sound effects. It offers properties and methods to access playback details like length, samples, channels, and frequency. AudioClip supports preloading, 3D audio, and background loading. Custom AudioClip instances can be created programmatically. Fundamental for auditory experiences in Unity projects, AudioClip documentation provides further details.
+summary: |
+  [Unity's AudioClip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip.html)
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.Object
-constructors:
-properties:
-  - name: length
-    summary: Returns the clip's duration in seconds, akin to a song's length.
-    is_static: false
-    code_samples:
-    type: number
-  - name: samples
-    summary: Refers to the total number of audio samples within the clip.
-    is_static: false
-    code_samples:
-    type: number
+constructors: 
+properties: 
   - name: channels
-    summary: Represents the number of audio channels, such as 1 for mono or 2 for stereo.
+    summary: |
+      [Unity's AudioClip.channels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-channels.html)
+    description:
     is_static: false
     code_samples:
     type: number
   - name: frequency
-    summary: Denotes the sample rate of the clip in kHz, indicating the samples per second.
+    summary: |
+      [Unity's AudioClip.frequency Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-frequency.html)
+    description:
     is_static: false
     code_samples:
     type: number
-  - name: preloadAudioData
-    summary: Controls whether the audio data should be preloaded upon clip asset loading.
+  - name: length
+    summary: |
+      [Unity's AudioClip.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-length.html)
+    description:
     is_static: false
     code_samples:
-    type: boolean
-  - name: ambisonic
-    summary: Indicates if the clip is ambisonic, providing 3D audio capabilities.
-    is_static: false
-    code_samples:
-    type: boolean
+    type: number
   - name: loadInBackground
-    summary: Specifies if the clip should load in the background, allowing gameplay to continue.
+    summary: |
+      [Unity's AudioClip.loadInBackground Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-loadInBackground.html)
+    description:
     is_static: false
     code_samples:
     type: boolean
-methods:
+  - name: preloadAudioData
+    summary: |
+      [Unity's AudioClip.preloadAudioData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-preloadAudioData.html)
+    description:
+    is_static: false
+    code_samples:
+    type: boolean
+  - name: samples
+    summary: |
+      [Unity's AudioClip.samples Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip-samples.html)
+    description:
+    is_static: false
+    code_samples:
+    type: number
+methods: 
   - name: LoadAudioData
-    summary: Initiates loading of the clip's audio data, particularly when 'preloadAudioData' is false.
+    summary: |
+      [Unity's AudioClip.LoadAudioData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip.LoadAudioData.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
     returns:
       - type: boolean
-        summary: True if data loading starts successfully.
+        summary: 
   - name: UnloadAudioData
-    summary: Unloads the clip's audio data from memory, aiding in efficient memory usage.
+    summary: |
+      [Unity's AudioClip.UnloadAudioData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioClip.UnloadAudioData.html)
+    description:
     is_static: false
     code_samples:
-    parameters:
+    parameters: 
     returns:
       - type: boolean
-        summary: True if data unloading begins successfully.
-  - name: Create
-    summary: Generates a new AudioClip with specified parameters, optionally streaming from disk.
-    is_static: true
-    code_samples:
-    parameters:
-      - name: name
-        type: string
-        summary: The name for the new AudioClip.
-      - name: lengthSamples
-        type: number
-        summary: The total length of the clip in samples.
-      - name: channels
-        type: number
-        summary: The number of audio channels.
-      - name: frequency
-        type: number
-        summary: The sample rate of the clip.
-      - name: stream
-        type: boolean
-        summary: Whether the audio data is streamed from disk.
-    returns:
-      - type: Class.AudioClip
-        summary: A new AudioClip instance.
-math_operations:
+        summary: 
+math_operations: 

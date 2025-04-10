@@ -1,11 +1,11 @@
-name: LuaBehaviour
+name: AsyncScriptableObject
 type: classes
 summary: |
   
 description:
 code_samples:
 inherits: 
-  - NetworkBehaviour
+  - ScriptableObject
 constructors: 
 properties: 
 methods: 

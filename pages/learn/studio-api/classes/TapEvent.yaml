@@ -1,23 +1,55 @@
 name: TapEvent
 type: classes
 summary: |
-
+  Event sent when a tap gesture has been recognized by a GestureRecognizer
 description:
 code_samples:
-inherits:
-constructors:
-properties:
+inherits: 
+  - Class.EventBase
+constructors: 
+properties: 
   - name: position
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
     type: DataType.Vector2
   - name: startFrame
     summary: |
-
+      
+    description:
     is_static: false
     code_samples:
     type: number
-methods:
-math_operations:
+  - name: eventTypeId
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: number
+  - name: screenPosition
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    type: DataType.Vector2
+methods: 
+  - name: CloneInto
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    parameters: 
+      - name: clone
+        type: Class.TapEvent
+        tags: 
+        default:
+        summary: 
+    returns:
+      - type: Class.TapEvent
+        summary: 
+math_operations: 

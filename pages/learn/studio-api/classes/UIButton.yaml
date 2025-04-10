@@ -1,19 +1,29 @@
 name: UIButton
 type: classes
 summary: |
-
+  A clickable button in UI Toolkit.
 description:
 code_samples:
-inherits:
+inherits: 
   - Class.VisualElement
-constructors:
-properties:
+constructors: 
+  - name: new
+    summary: |
+      Create a new UI Button instance.
+    description:
+    is_static: true
+    code_samples:
+    parameters: 
+    returns:
+      - type: Class.UIButton
+        summary: 
+properties: 
   - name: contentContainer
     summary: |
-
+      
     description:
     is_static: false
     code_samples:
     type: Class.VisualElement
-methods:
-math_operations:
+methods: 
+math_operations: 
