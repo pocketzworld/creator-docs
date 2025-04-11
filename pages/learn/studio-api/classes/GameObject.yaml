@@ -2,48 +2,470 @@ name: GameObject
 type: classes
 summary: |
   In Unity, a GameObject refers to an object existing in your game's world -- everything from
-    characters, buildings, landscapes, to lights, cameras, and more can be GameObjects. It acts as
-    encompassing container or entity that could carry multiple types of components that dictate how
-    this GameObject behaves and interacts in your game.
-    A GameObject can be as simple as a single point of light in a dark room or as complex as a
-    character with AI-driven behaviors, interactive elements, physical properties, etc. It just
-    depends on what kind of components you attach to it. Examples of components include scripts
-    (pieces of code that dictate GameObject behavior), physics components like Rigidbodies or
-    Colliders, audio sources, and much more.
-    Understanding GameObjects is vital to building anything in Unity, as they comprise the
-    functional elements of all scenes, mechanics, and interactions within the game engine. For more
-    extensive understanding, consider perusing the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.html).
+  characters, buildings, landscapes, to lights, cameras, and more can be GameObjects. It acts as
+  encompassing container or entity that could carry multiple types of components that dictate how
+  this GameObject behaves and interacts in your game.
+  A GameObject can be as simple as a single point of light in a dark room or as complex as a
+  character with AI-driven behaviors, interactive elements, physical properties, etc. It just
+  depends on what kind of components you attach to it. Examples of components include scripts
+  (pieces of code that dictate GameObject behavior), physics components like Rigidbodies or
+  Colliders, audio sources, and much more.
+  Understanding GameObjects is vital to building anything in Unity, as they comprise the
+  functional elements of all scenes, mechanics, and interactions within the game engine. For more
+  extensive understanding, consider perusing the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.html).
 description:
 code_samples:
 inherits: 
   - Class.Object
+tags: 
+  - ClientAndServer
 constructors: 
+  - name: new
+    summary: |
+      Create a new GameObject.
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+    returns:
+      - type: Class.GameObject
+        summary: |
+          
+  - name: new
+    summary: |
+      Create a new GameObject.
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+      - name: name
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.GameObject
+        summary: |
+          
+  - name: new
+    summary: |
+      Create a new GameObject.
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+      - name: name
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+      - name: components
+        type: {Type}
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.GameObject
+        summary: |
+          
 properties: 
+  - name: activeInHierarchy
+    summary: |
+      [Unity's GameObject.activeInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeInHierarchy.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: boolean
   - name: activeSelf
     summary: |
       The `activeSelf` property indicates whether the GameObject is active in the scene or not.
-    If a GameObject is inactive, it will not be rendered and will not trigger any of its script
-    events. For more information, visit the [official Unity documentation.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeSelf.html)
+      If a GameObject is inactive, it will not be rendered and will not trigger any of its script
+      events. For more information, visit the [official Unity documentation.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-activeSelf.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     type: boolean
-methods: 
-  - name: GetComponent
+  - name: gameObject
     summary: |
-      The `GetComponent` method allows you to access a component attached to the GameObject, if
-    it exists. This includes built-in components like a Transform or Collider, or custom
-    scripts that you've written. For more information, refer to [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponent.html).
+      [Unity's GameObject.gameObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-gameObject.html)
     description:
     is_static: false
     code_samples:
+    tags: 
+    type: Class.GameObject
+  - name: isStatic
+    summary: |
+      [Unity's GameObject.isStatic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-isStatic.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: boolean
+  - name: layer
+    summary: |
+      [Unity's GameObject.layer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-layer.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: number
+  - name: sceneCullingMask
+    summary: |
+      [Unity's GameObject.sceneCullingMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-sceneCullingMask.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: number
+  - name: tag
+    summary: |
+      [Unity's GameObject.tag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-tag.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: string
+  - name: transform
+    summary: |
+      [Unity's GameObject.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject-transform.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: Class.Transform
+methods: 
+  - name: AddComponent
+    summary: |
+      [Unity's GameObject.AddComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.AddComponent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
     parameters: 
       - name: type
         type: Class.Type
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: Class.Component
-        summary: 
+        summary: |
+          
+  - name: AddScript
+    summary: |
+      [Unity's GameObject.AddScript Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.AddScript.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: script
+        type: Class.LuaScript
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.LuaBehaviour
+        summary: |
+          
+  - name: CompareTag
+    summary: |
+      [Unity's GameObject.CompareTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.CompareTag.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: tag
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: boolean
+        summary: |
+          
+  - name: Find
+    summary: |
+      [Unity's GameObject.Find Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.Find.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+      - name: name
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.GameObject
+        summary: |
+          
+  - name: FindGameObjectWithTag
+    summary: |
+      [Unity's GameObject.FindGameObjectWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectWithTag.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+      - name: tag
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.GameObject
+        summary: |
+          
+  - name: FindGameObjectsWithTag
+    summary: |
+      [Unity's GameObject.FindGameObjectsWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindGameObjectsWithTag.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+      - name: tag
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: {GameObject}
+        summary: |
+          
+  - name: FindWithTag
+    summary: |
+      [Unity's GameObject.FindWithTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.FindWithTag.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    parameters: 
+      - name: tag
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.GameObject
+        summary: |
+          
+  - name: GetComponent
+    summary: |
+      The `GetComponent` method allows you to access a component attached to the GameObject, if
+      it exists. This includes built-in components like a Transform or Collider, or custom
+      scripts that you've written. For more information, refer to [Unity's official documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponent.html).
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.Component
+        summary: |
+          
+  - name: GetComponentAtIndex
+    summary: |
+      [Unity's GameObject.GetComponentAtIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentAtIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: index
+        type: number
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.Component
+        summary: |
+          
+  - name: GetComponentCount
+    summary: |
+      [Unity's GameObject.GetComponentCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentCount.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+    returns:
+      - type: number
+        summary: |
+          
+  - name: GetComponentInChildren
+    summary: |
+      [Unity's GameObject.GetComponentInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInChildren.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: |
+          
+      - name: includeInactive
+        type: boolean
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.Component
+        summary: |
+          
+  - name: GetComponentInParent
+    summary: |
+      [Unity's GameObject.GetComponentInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentInParent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: |
+          
+      - name: includeInactive
+        type: boolean
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: Class.Component
+        summary: |
+          
+  - name: GetComponentIndex
+    summary: |
+      [Unity's GameObject.GetComponentIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: component
+        type: Class.Component
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: number
+        summary: |
+          
+  - name: GetComponents
+    summary: |
+      [Unity's GameObject.GetComponents Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponents.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: {Component}
+        summary: |
+          
+  - name: GetComponentsInChildren
+    summary: |
+      [Unity's GameObject.GetComponentsInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentsInChildren.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: |
+          
+      - name: includeInactive
+        type: boolean
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: {Component}
+        summary: |
+          
+  - name: GetComponentsInParent
+    summary: |
+      [Unity's GameObject.GetComponentsInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.GetComponentsInParent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: type
+        type: Class.Type
+        tags: 
+        default:
+        summary: |
+          
+      - name: includeInactive
+        type: boolean
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: {Component}
+        summary: |
+          
+  - name: SetActive
+    summary: |
+      [Unity's GameObject.SetActive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.SetActive.html)
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: value
+        type: boolean
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: void
+        summary: |
+          
 math_operations: 

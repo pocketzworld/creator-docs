@@ -6,6 +6,8 @@ description:
 code_samples:
 inherits: 
   - Focusable
+tags: 
+  - ClientOnly
 constructors: 
   - name: new
     summary: |
@@ -13,10 +15,12 @@ constructors:
     description:
     is_static: true
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: Class.VisualElement
-        summary: 
+        summary: |
+          
 properties: 
   - name: disabledUssClassName
     summary: |
@@ -24,6 +28,7 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags: 
     type: string
   - name: canGrabFocus
     summary: |
@@ -31,6 +36,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: boolean
   - name: childCount
     summary: |
@@ -38,6 +44,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: number
   - name: contentContainer
     summary: |
@@ -45,6 +52,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: Class.VisualElement
   - name: contentRect
     summary: |
@@ -52,6 +60,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: DataType.Rect
   - name: customStyle
     summary: |
@@ -59,6 +68,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: ICustomStyle
   - name: enabledInHierarchy
     summary: |
@@ -66,6 +76,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: boolean
   - name: enabledSelf
     summary: |
@@ -73,6 +84,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: boolean
   - name: experimental
     summary: |
@@ -80,6 +92,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: IExperimentalFeatures
   - name: layout
     summary: |
@@ -87,6 +100,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: DataType.Rect
   - name: localBound
     summary: |
@@ -94,6 +108,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: DataType.Rect
   - name: name
     summary: |
@@ -101,6 +116,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: string
   - name: panel
     summary: |
@@ -108,6 +124,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: IPanel
   - name: parent
     summary: |
@@ -115,6 +132,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: Class.VisualElement
   - name: pickingMode
     summary: |
@@ -122,6 +140,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: PickingMode
   - name: resolvedStyle
     summary: |
@@ -129,6 +148,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: IResolvedStyle
   - name: schedule
     summary: |
@@ -136,6 +156,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: IVisualElementScheduler
   - name: style
     summary: |
@@ -143,6 +164,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: IStyle
   - name: tooltip
     summary: |
@@ -150,6 +172,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: string
   - name: transform
     summary: |
@@ -157,6 +180,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: ITransform
   - name: viewDataKey
     summary: |
@@ -164,6 +188,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: string
   - name: visible
     summary: |
@@ -171,6 +196,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: boolean
   - name: visualTreeAssetSource
     summary: |
@@ -178,6 +204,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: Class.VisualTreeAsset
   - name: worldBound
     summary: |
@@ -185,6 +212,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: DataType.Rect
   - name: worldTransform
     summary: |
@@ -192,6 +220,7 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags: 
     type: DataType.Matrix4x4
 methods: 
   - name: Add
@@ -200,639 +229,765 @@ methods:
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: child
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: AddToClassList
     summary: |
       [Unity's VisualElement.AddToClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.AddToClassList.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: className
         type: string
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: BringToFront
     summary: |
       [Unity's VisualElement.BringToFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.BringToFront.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: Children
     summary: |
       [Unity's VisualElement.Children Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Children.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: {VisualElement}
-        summary: 
+        summary: |
+          
   - name: ClassListContains
     summary: |
       [Unity's VisualElement.ClassListContains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ClassListContains.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: cls
         type: string
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: boolean
-        summary: 
+        summary: |
+          
   - name: Clear
     summary: |
       [Unity's VisualElement.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Clear.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: ClearClassList
     summary: |
       [Unity's VisualElement.ClearClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ClearClassList.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: Contains
     summary: |
       [Unity's VisualElement.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Contains.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: child
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: boolean
-        summary: 
+        summary: |
+          
   - name: ContainsPoint
     summary: |
       [Unity's VisualElement.ContainsPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ContainsPoint.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: localPoint
         type: DataType.Vector2
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: boolean
-        summary: 
+        summary: |
+          
   - name: ElementAt
     summary: |
       [Unity's VisualElement.ElementAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ElementAt.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: index
         type: number
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: Class.VisualElement
-        summary: 
+        summary: |
+          
   - name: EnableInClassList
     summary: |
       [Unity's VisualElement.EnableInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.EnableInClassList.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: className
         type: string
         tags: 
         default:
-        summary: 
+        summary: |
+          
       - name: enable
         type: boolean
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: FindCommonAncestor
     summary: |
       [Unity's VisualElement.FindCommonAncestor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.FindCommonAncestor.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: other
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: Class.VisualElement
-        summary: 
+        summary: |
+          
   - name: Focus
     summary: |
       [Unity's VisualElement.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Focus.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: GetClasses
     summary: |
       [Unity's VisualElement.GetClasses Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.GetClasses.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: {string}
-        summary: 
+        summary: |
+          
   - name: GetResolvedStyleSize
     summary: |
       Gets the resolved style width and height as a Vector2.
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: DataType.Vector2
-        summary: A Vector2 where the x value is the resolved style width and the y value is the resolved style height
+        summary: |
+          A Vector2 where the x value is the resolved style width and the y value is the resolved style height
   - name: IndexOf
     summary: |
       [Unity's VisualElement.IndexOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.IndexOf.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: element
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: number
-        summary: 
+        summary: |
+          
   - name: Insert
     summary: |
       [Unity's VisualElement.Insert Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Insert.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: index
         type: number
         tags: 
         default:
-        summary: 
+        summary: |
+          
       - name: element
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: IsDisplayed
     summary: |
       Returns true if the element is visible.  This is the equivalent of checking if the display style is none or flex.
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: boolean
-        summary: Whether the element is currently visible.
+        summary: |
+          Whether the element is currently visible.
   - name: LocalToWorld
     summary: |
       [Unity's VisualElementExtensions.LocalToWorld Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.LocalToWorld.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: rect
         type: DataType.Rect
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: DataType.Rect
-        summary: 
+        summary: |
+          
   - name: LocalToWorld
     summary: |
       [Unity's VisualElementExtensions.LocalToWorld Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.LocalToWorld.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: point
         type: DataType.Vector2
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: DataType.Vector2
-        summary: 
+        summary: |
+          
   - name: MarkDirtyRepaint
     summary: |
       [Unity's VisualElement.MarkDirtyRepaint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.MarkDirtyRepaint.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: Overlaps
     summary: |
       [Unity's VisualElement.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Overlaps.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: rectangle
         type: DataType.Rect
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: boolean
-        summary: 
+        summary: |
+          
   - name: PlaceBehind
     summary: |
       [Unity's VisualElement.PlaceBehind Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.PlaceBehind.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: sibling
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: PlaceInFront
     summary: |
       [Unity's VisualElement.PlaceInFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.PlaceInFront.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: sibling
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: Q
     summary: |
       [Unity's UQueryExtensions.Q Documentation](https://docs.unity3d.com/ScriptReference/UIElements.UQueryExtensions.Q.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: name
         type: string
         tags: 
           - optional
         default:
-        summary: 
+        summary: |
+          
       - name: className
         type: string
         tags: 
           - optional
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: Class.VisualElement
-        summary: 
+        summary: |
+          
   - name: RegisterCallback
     summary: |
       Registers a callback for a Highrise gesture event or Unity UI event.
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: type
         type: Class.Type
         tags: 
         default:
-        summary: The event type to register for. Includes Unity UI events and Highrise gesture events.
-    The currently supported gestures and their corresponding events are:
-    DragGesture: DragGestureBegan, DragGestureChanged, DragGestureEnded
+        summary: |
+          The event type to register for. Includes Unity UI events and Highrise gesture events.
+          The currently supported gestures and their corresponding events are:
+          DragGesture: DragGestureBegan, DragGestureChanged, DragGestureEnded
       - name: action
         type: Class.LuaFunction
         tags: 
         default:
-        summary: The callback to call when the event happens.
+        summary: |
+          The callback to call when the event happens.
       - name: phase
         type: TrickleDown
         tags: 
           - optional
         default:
-        summary: Which phase the callback will be called during (Default NoTrickleDown).
+        summary: |
+          Which phase the callback will be called during (Default NoTrickleDown).
     returns:
       - type: Class.LuaCallback
-        summary: A Callback object that can be passed to UnregisterCallback
+        summary: |
+          A Callback object that can be passed to UnregisterCallback
   - name: RegisterGesture
     summary: |
       Registers a gesture with a VisualElement.  The VisualElement will now receive events from this gesture.
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: gesture
         type: Class.Gesture
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: RegisterLongPressCallback
     summary: |
       Register an action to be called when the element is long pressed
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: action
         type: Class.LuaFunction
         tags: 
         default:
-        summary: The callback to call when the long press is completed
+        summary: |
+          The callback to call when the long press is completed
       - name: pressEffect
         type: PressEffect
         tags: 
           - optional
         default:
-        summary: The effect to apply to this element while it is pressed. Options are animating scale (Press), animating color (Highlight) or nothing (NONE) (Default Press)
+        summary: |
+          The effect to apply to this element while it is pressed. Options are animating scale (Press), animating color (Highlight) or nothing (NONE) (Default Press)
       - name: sound
         type: boolean
         tags: 
           - optional
         default:
-        summary: Whether pressing this element should play the standard Highrise long press sound effect (Default true)
+        summary: |
+          Whether pressing this element should play the standard Highrise long press sound effect (Default true)
       - name: haptic
         type: boolean
         tags: 
           - optional
         default:
-        summary: Whether a light haptic pulse should be triggered when the long press is completed (Default false)
+        summary: |
+          Whether a light haptic pulse should be triggered when the long press is completed (Default false)
     returns:
       - type: Class.LuaCallback
-        summary: A Callback object that can be passed to UnregisterCallback
+        summary: |
+          A Callback object that can be passed to UnregisterCallback
   - name: RegisterPressCallback
     summary: |
       Register an action to be called when the element is pressed
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: action
         type: Class.LuaFunction
         tags: 
         default:
-        summary: The callback to call when this element is pressed
+        summary: |
+          The callback to call when this element is pressed
       - name: pressEffect
         type: PressEffect
         tags: 
           - optional
         default:
-        summary: The effect to apply to this element when it is pressed. Options are animating scale (Press), animating color (Highlight) or nothing (NONE) (Default Press)
+        summary: |
+          The effect to apply to this element when it is pressed. Options are animating scale (Press), animating color (Highlight) or nothing (NONE) (Default Press)
       - name: sound
         type: boolean
         tags: 
           - optional
         default:
-        summary: Whether pressing this element should play the standard Highrise button click sound effect (Default true)
+        summary: |
+          Whether pressing this element should play the standard Highrise button click sound effect (Default true)
       - name: haptic
         type: boolean
         tags: 
           - optional
         default:
-        summary: Whether pressing this element should trigger a light haptic pulse (Default false)
+        summary: |
+          Whether pressing this element should trigger a light haptic pulse (Default false)
     returns:
       - type: Class.LuaCallback
-        summary: A Callback object that can be passed to UnregisterCallback
+        summary: |
+          A Callback object that can be passed to UnregisterCallback
   - name: Remove
     summary: |
       [Unity's VisualElement.Remove Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Remove.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: element
         type: Class.VisualElement
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: RemoveAt
     summary: |
       [Unity's VisualElement.RemoveAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.RemoveAt.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: index
         type: number
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: RemoveFromClassList
     summary: |
       [Unity's VisualElement.RemoveFromClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.RemoveFromClassList.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: className
         type: string
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: RemoveFromHierarchy
     summary: |
       [Unity's VisualElement.RemoveFromHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.RemoveFromHierarchy.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: SendEvent
     summary: |
       [Unity's VisualElement.SendEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.SendEvent.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: e
         type: Class.EventBase
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: SendToBack
     summary: |
       [Unity's VisualElement.SendToBack Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.SendToBack.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: SetDisplay
     summary: |
       Hide / Show an element.  This is the equivalent of setting the display style to none or flex.
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: display
         type: boolean
         tags: 
         default:
-        summary: Whether the element should be displayed
+        summary: |
+          Whether the element should be displayed
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: SetEnabled
     summary: |
       [Unity's VisualElement.SetEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.SetEnabled.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: value
         type: boolean
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: Sort
     summary: |
       [Unity's VisualElement.Sort Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Sort.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: comp
         type: (VisualElement, VisualElement) -> (number)
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: ToggleInClassList
     summary: |
       [Unity's VisualElement.ToggleInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ToggleInClassList.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: className
         type: string
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: UnregisterCallback
     summary: |
       Unregisters a callback using a Callback object.
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: callback
         type: Class.LuaCallback
         tags: 
         default:
-        summary: The callback object that was returned by RegisterPressCallback, RegisterLongPressCallback or RegisterCallback.
+        summary: |
+          The callback object that was returned by RegisterPressCallback, RegisterLongPressCallback or RegisterCallback.
     returns:
       - type: void
-        summary: 
+        summary: |
+          
   - name: WorldToLocal
     summary: |
       [Unity's VisualElementExtensions.WorldToLocal Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.WorldToLocal.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: rect
         type: DataType.Rect
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: DataType.Rect
-        summary: 
+        summary: |
+          
   - name: WorldToLocal
     summary: |
       [Unity's VisualElementExtensions.WorldToLocal Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.WorldToLocal.html)
     description:
     is_static: false
     code_samples:
+    tags: 
     parameters: 
       - name: point
         type: DataType.Vector2
         tags: 
         default:
-        summary: 
+        summary: |
+          
     returns:
       - type: DataType.Vector2
-        summary: 
+        summary: |
+          
 math_operations: 
