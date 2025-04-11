@@ -1,0 +1,29 @@
+name: TextOverflow
+type: enums
+summary: |
+  [Unity's TextOverflow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflow.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Clip
+    summary: |
+      [Unity's TextOverflow.Clip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflow-Clip.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.TextOverflow
+  - name: Ellipsis
+    summary: |
+      [Unity's TextOverflow.Ellipsis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflow-Ellipsis.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.TextOverflow
+methods: 
+math_operations: 

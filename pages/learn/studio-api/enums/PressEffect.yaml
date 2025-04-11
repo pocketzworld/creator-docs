@@ -1,0 +1,37 @@
+name: PressEffect
+type: enums
+summary: |
+  
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Highlight
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.PressEffect
+  - name: NONE
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.PressEffect
+  - name: Press
+    summary: |
+      
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.PressEffect
+methods: 
+math_operations: 

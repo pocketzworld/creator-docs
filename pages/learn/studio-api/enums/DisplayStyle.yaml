@@ -1,0 +1,29 @@
+name: DisplayStyle
+type: enums
+summary: |
+  [Unity's DisplayStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DisplayStyle.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Flex
+    summary: |
+      [Unity's DisplayStyle.Flex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DisplayStyle-Flex.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.DisplayStyle
+  - name: None
+    summary: |
+      [Unity's DisplayStyle.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.DisplayStyle-None.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.DisplayStyle
+methods: 
+math_operations: 

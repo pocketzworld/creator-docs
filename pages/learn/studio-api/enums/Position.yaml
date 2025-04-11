@@ -1,0 +1,29 @@
+name: Position
+type: enums
+summary: |
+  [Unity's Position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Absolute
+    summary: |
+      [Unity's Position.Absolute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position-Absolute.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Position
+  - name: Relative
+    summary: |
+      [Unity's Position.Relative Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position-Relative.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Position
+methods: 
+math_operations: 
