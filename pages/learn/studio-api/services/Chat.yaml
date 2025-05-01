@@ -6,7 +6,6 @@ description:
 code_samples:
 inherits: 
 tags: 
-  - ClientAndServer
 constructors: 
 properties: 
   - name: ChannelDestroyed
@@ -16,8 +15,7 @@ properties:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
-    type: LuaEvent
+    type: Class.Event
   - name: PlayerJoinedChannel
     summary: |
       
@@ -25,8 +23,7 @@ properties:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
-    type: LuaEvent
+    type: Class.Event
   - name: PlayerLeftChannel
     summary: |
       
@@ -34,8 +31,7 @@ properties:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
-    type: LuaEvent
+    type: Class.Event
   - name: TextMessageReceivedHandler
     summary: |
       
@@ -43,8 +39,7 @@ properties:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
-    type: LuaEvent
+    type: Class.Event
   - name: activeChannel
     summary: |
       The chat channel the local player is currently active in
@@ -52,7 +47,6 @@ properties:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
     type: Class.ChannelInfo
   - name: allChannels
     summary: |
@@ -61,7 +55,23 @@ properties:
     is_static: false
     code_samples:
     tags: 
-    type: {ChannelInfo}
+    type: {Class.ChannelInfo}
+  - name: defaultChatBubbleBackgroundColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: DataType.Color
+  - name: defaultChatBubbleFontColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: DataType.Color
   - name: joinedChannels
     summary: |
       
@@ -69,83 +79,59 @@ properties:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
-    type: {ChannelInfo}
+    type: {Class.ChannelInfo}
+  - name: selfChatBubbleBackgroundColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: DataType.Color
+  - name: selfChatBubbleFontColor
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    type: DataType.Color
 methods: 
-  - name: AddPlayerToChannel
+  - name: DisplayChatBubble
     summary: |
-      
+      Spawns a chat bubble at the given position with the given message and an optional nametag.
+      The chat bubble will have the same appearance and lifespan as a normal player chat message.
     description:
     is_static: false
     code_samples:
     tags: 
-      - ServerOnly
     parameters: 
-      - name: channelInfo
-        type: Class.ChannelInfo
+      - name: position
+        type: Class.Transform
         tags: 
         default:
         summary: |
           
-      - name: player
-        type: Class.Player
-        tags: 
-        default:
-        summary: |
-          
-    returns:
-      - type: void
-        summary: |
-          
-  - name: CreateChannel
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    tags: 
-      - ServerOnly
-    parameters: 
-      - name: channelName
+      - name: message
         type: string
         tags: 
         default:
         summary: |
           
-      - name: allowsText
-        type: boolean
+      - name: name
+        type: string
         tags: 
         default:
         summary: |
           
-      - name: allowsVoice
-        type: boolean
+      - name: backgroundColor
+        type: DataType.Color
         tags: 
         default:
         summary: |
           
-      - name: priority
-        type: number
-        tags: 
-          - optional
-        default:
-        summary: |
-          
-    returns:
-      - type: Class.ChannelInfo
-        summary: |
-          
-  - name: DestroyChannel
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    tags: 
-      - ServerOnly
-    parameters: 
-      - name: channelInfo
-        type: Class.ChannelInfo
+      - name: fontColor
+        type: DataType.Color
         tags: 
         default:
         summary: |
@@ -162,7 +148,6 @@ methods:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
     parameters: 
       - name: position
         type: Class.Transform
@@ -194,7 +179,6 @@ methods:
     is_static: false
     code_samples:
     tags: 
-      - ClientOnly
     parameters: 
       - name: channel
         type: Class.ChannelInfo
@@ -224,6 +208,54 @@ methods:
       - type: void
         summary: |
           
+  - name: DisplayTextMessage
+    summary: |
+      
+    description:
+    is_static: false
+    code_samples:
+    tags: 
+    parameters: 
+      - name: channel
+        type: Class.ChannelInfo
+        tags: 
+        default:
+        summary: |
+          
+      - name: from
+        type: Class.Player
+        tags: 
+        default:
+        summary: |
+          
+      - name: message
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+      - name: language
+        type: string
+        tags: 
+        default:
+        summary: |
+          
+      - name: backgroundColor
+        type: DataType.Color
+        tags: 
+        default:
+        summary: |
+          
+      - name: fontColor
+        type: DataType.Color
+        tags: 
+        default:
+        summary: |
+          
+    returns:
+      - type: void
+        summary: |
+          
   - name: GetChannel
     summary: |
       Gets the chat channel with the given name
@@ -240,75 +272,6 @@ methods:
           
     returns:
       - type: Class.ChannelInfo
-        summary: |
-          
-  - name: ReapplyFilters
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    tags: 
-      - ServerOnly
-    parameters: 
-      - name: player
-        type: Class.Player
-        tags: 
-        default:
-        summary: |
-          
-    returns:
-      - type: void
-        summary: |
-          
-  - name: RemovePlayerFromChannel
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    tags: 
-      - ServerOnly
-    parameters: 
-      - name: channelInfo
-        type: Class.ChannelInfo
-        tags: 
-        default:
-        summary: |
-          
-      - name: player
-        type: Class.Player
-        tags: 
-        default:
-        summary: |
-          
-    returns:
-      - type: void
-        summary: |
-          
-  - name: SetActiveChannel
-    summary: |
-      
-    description:
-    is_static: false
-    code_samples:
-    tags: 
-      - ServerOnly
-    parameters: 
-      - name: channelInfo
-        type: Class.ChannelInfo
-        tags: 
-        default:
-        summary: |
-          
-      - name: player
-        type: Class.Player
-        tags: 
-        default:
-        summary: |
-          
-    returns:
-      - type: void
         summary: |
           
 math_operations: 
