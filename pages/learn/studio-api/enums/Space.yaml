@@ -1,0 +1,29 @@
+name: Space
+type: enums
+summary: |
+  [Unity's Space Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Space.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Self
+    summary: |
+      [Unity's Space.Self Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Space-Self.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Space
+  - name: World
+    summary: |
+      [Unity's Space.World Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Space-World.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Space
+methods: 
+math_operations: 

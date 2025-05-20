@@ -1,0 +1,37 @@
+name: Wrap
+type: enums
+summary: |
+  [Unity's Wrap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Wrap.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: NoWrap
+    summary: |
+      [Unity's Wrap.NoWrap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Wrap-NoWrap.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Wrap
+  - name: Wrap
+    summary: |
+      [Unity's Wrap.Wrap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Wrap-Wrap.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Wrap
+  - name: WrapReverse
+    summary: |
+      [Unity's Wrap.WrapReverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Wrap-WrapReverse.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Wrap
+methods: 
+math_operations: 

@@ -1,0 +1,29 @@
+name: WhiteSpace
+type: enums
+summary: |
+  [Unity's WhiteSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WhiteSpace.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: NoWrap
+    summary: |
+      [Unity's WhiteSpace.NoWrap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WhiteSpace-NoWrap.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.WhiteSpace
+  - name: Normal
+    summary: |
+      [Unity's WhiteSpace.Normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WhiteSpace-Normal.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.WhiteSpace
+methods: 
+math_operations: 

@@ -1,0 +1,45 @@
+name: FlexDirection
+type: enums
+summary: |
+  [Unity's FlexDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FlexDirection.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Column
+    summary: |
+      [Unity's FlexDirection.Column Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FlexDirection-Column.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.FlexDirection
+  - name: ColumnReverse
+    summary: |
+      [Unity's FlexDirection.ColumnReverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FlexDirection-ColumnReverse.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.FlexDirection
+  - name: Row
+    summary: |
+      [Unity's FlexDirection.Row Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FlexDirection-Row.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.FlexDirection
+  - name: RowReverse
+    summary: |
+      [Unity's FlexDirection.RowReverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.FlexDirection-RowReverse.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.FlexDirection
+methods: 
+math_operations: 

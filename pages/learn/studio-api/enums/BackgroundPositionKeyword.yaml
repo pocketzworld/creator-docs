@@ -1,0 +1,53 @@
+name: BackgroundPositionKeyword
+type: enums
+summary: |
+  [Unity's BackgroundPositionKeyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPositionKeyword.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Bottom
+    summary: |
+      [Unity's BackgroundPositionKeyword.Bottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPositionKeyword-Bottom.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.BackgroundPositionKeyword
+  - name: Center
+    summary: |
+      [Unity's BackgroundPositionKeyword.Center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPositionKeyword-Center.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.BackgroundPositionKeyword
+  - name: Left
+    summary: |
+      [Unity's BackgroundPositionKeyword.Left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPositionKeyword-Left.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.BackgroundPositionKeyword
+  - name: Right
+    summary: |
+      [Unity's BackgroundPositionKeyword.Right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPositionKeyword-Right.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.BackgroundPositionKeyword
+  - name: Top
+    summary: |
+      [Unity's BackgroundPositionKeyword.Top Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPositionKeyword-Top.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.BackgroundPositionKeyword
+methods: 
+math_operations: 

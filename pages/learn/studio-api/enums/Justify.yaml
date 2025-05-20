@@ -1,0 +1,53 @@
+name: Justify
+type: enums
+summary: |
+  [Unity's Justify Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: Center
+    summary: |
+      [Unity's Justify.Center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify-Center.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Justify
+  - name: FlexEnd
+    summary: |
+      [Unity's Justify.FlexEnd Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify-FlexEnd.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Justify
+  - name: FlexStart
+    summary: |
+      [Unity's Justify.FlexStart Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify-FlexStart.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Justify
+  - name: SpaceAround
+    summary: |
+      [Unity's Justify.SpaceAround Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify-SpaceAround.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Justify
+  - name: SpaceBetween
+    summary: |
+      [Unity's Justify.SpaceBetween Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify-SpaceBetween.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.Justify
+methods: 
+math_operations: 

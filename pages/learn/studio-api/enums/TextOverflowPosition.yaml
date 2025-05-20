@@ -1,0 +1,37 @@
+name: TextOverflowPosition
+type: enums
+summary: |
+  [Unity's TextOverflowPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflowPosition.html)
+description:
+code_samples:
+inherits: 
+tags: 
+  - ClientOnly
+constructors: 
+properties: 
+  - name: End
+    summary: |
+      [Unity's TextOverflowPosition.End Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflowPosition-End.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.TextOverflowPosition
+  - name: Middle
+    summary: |
+      [Unity's TextOverflowPosition.Middle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflowPosition-Middle.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.TextOverflowPosition
+  - name: Start
+    summary: |
+      [Unity's TextOverflowPosition.Start Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextOverflowPosition-Start.html)
+    description:
+    is_static: true
+    code_samples:
+    tags: 
+    type: Enum.TextOverflowPosition
+methods: 
+math_operations: 
