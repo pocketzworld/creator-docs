@@ -10,5 +10,8 @@
   },
   "services": {
     "title": "Services"
+  },
+  "enums": {
+    "title": "Enums"
   }
 }
