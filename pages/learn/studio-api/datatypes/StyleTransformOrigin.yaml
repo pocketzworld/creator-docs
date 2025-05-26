@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleTransformOrigin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleTransformOrigin.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleTransformOrigin
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.TransformOrigin
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleTransformOrigin
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleTransformOrigin.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleTransformOrigin.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.TransformOrigin
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleTransformOrigin.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleTransformOrigin
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleTransformOrigin.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTransformOrigin-operator_eq.html)
+    description:
+    type_a: StyleTransformOrigin
+    type_b: StyleTransformOrigin
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

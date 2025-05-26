@@ -4,15 +4,19 @@ summary: |
   [Unity's AnimatorStateInfo Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: fullPathHash
     summary: |
       [Unity's AnimatorStateInfo.fullPathHash Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo-fullPathHash.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: length
     summary: |
@@ -20,6 +24,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: loop
     summary: |
@@ -27,6 +34,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: normalizedTime
     summary: |
@@ -34,6 +44,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: shortNameHash
     summary: |
@@ -41,6 +54,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: speed
     summary: |
@@ -48,6 +64,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: speedMultiplier
     summary: |
@@ -55,6 +74,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: tagHash
     summary: |
@@ -62,19 +84,25 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
   - name: IsName
     summary: |
       [Unity's AnimatorStateInfo.IsName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimatorStateInfo.IsName.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -84,11 +112,15 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: tag
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:

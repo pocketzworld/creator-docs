@@ -1,67 +1,79 @@
 name: DragGestureEnded
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: deltaPosition
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector2
   - name: position
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector2
   - name: startPosition
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector2
   - name: velocity
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector2
   - name: cancelled
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: eventTypeId
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: screenPosition
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: screenStartPosition
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
 methods:
+math_operations:

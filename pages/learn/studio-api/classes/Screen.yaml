@@ -5,28 +5,37 @@ summary: |
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: width
+  - name: brightness
     summary: |
-      [Unity's Screen.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-width.html)
+      [Unity's Screen.brightness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-brightness.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-  - name: height
+  - name: cutouts
     summary: |
-      [Unity's Screen.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-height.html)
+      [Unity's Screen.cutouts Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-cutouts.html)
     description:
     is_static: true
     code_samples:
-    type: number
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {DataType.Rect}
   - name: dpi
     summary: |
       [Unity's Screen.dpi Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-dpi.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: fullScreen
     summary: |
@@ -34,13 +43,28 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
+  - name: height
+    summary: |
+      [Unity's Screen.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-height.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
   - name: safeArea
     summary: |
       [Unity's Screen.safeArea Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-safeArea.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Rect
   - name: sleepTimeout
     summary: |
@@ -48,13 +72,18 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-  - name: brightness
+  - name: width
     summary: |
-      [Unity's Screen.brightness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-brightness.html)
+      [Unity's Screen.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Screen-width.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
 methods:
 math_operations:

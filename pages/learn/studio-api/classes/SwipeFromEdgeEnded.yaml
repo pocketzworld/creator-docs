@@ -1,32 +1,37 @@
 name: SwipeFromEdgeEnded
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: dragDistance
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: velocity
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: eventTypeId
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
+math_operations:

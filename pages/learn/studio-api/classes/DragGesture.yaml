@@ -4,82 +4,129 @@ summary: |
   Listens for pan gestures and sends events when they are detected
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Gesture
-constructors: 
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: helper
         type: IDragGestureHelper
+        tags:
         default:
-        summary: 
+        summary:
       - name: minDistance
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.DragGesture
         summary:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: minDistance
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.DragGesture
         summary:
-properties: 
-methods: 
+properties:
+methods:
   - name: Custom
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: directionLimit
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
       - name: isBidirectional
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: directionRecognitionDegs
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.DragGesture
         summary:
-  - name: Horizontal
-    summary: |
-      
+  - name: HasReachedDuration
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
+      - name: duration
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: HasReachedMinDistance
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Horizontal
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.DragGesture
         summary:
   - name: Vertical
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.DragGesture
         summary:
+math_operations:

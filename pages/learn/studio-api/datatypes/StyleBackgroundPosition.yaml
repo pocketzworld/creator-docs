@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleBackgroundPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleBackgroundPosition.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.BackgroundPosition
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleBackgroundPosition
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleBackgroundPosition
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleBackgroundPosition.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleBackgroundPosition.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.BackgroundPosition
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleBackgroundPosition.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleBackgroundPosition
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleBackgroundPosition.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundPosition-operator_eq.html)
+    description:
+    type_a: StyleBackgroundPosition
+    type_b: StyleBackgroundPosition
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

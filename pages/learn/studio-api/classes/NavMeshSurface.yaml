@@ -4,23 +4,29 @@ summary: |
   [Unity's NavMeshSurface Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.MonoBehaviour
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: activeSurfaces
     summary: |
       [Unity's NavMeshSurface.activeSurfaces Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-activeSurfaces.html)
     description:
     is_static: true
     code_samples:
-    type: {NavMeshSurface}
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.NavMeshSurface}
   - name: agentTypeID
     summary: |
       [Unity's NavMeshSurface.agentTypeID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface-agentTypeID.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: buildHeightMesh
     summary: |
@@ -28,6 +34,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: center
     summary: |
@@ -35,6 +43,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
   - name: defaultArea
     summary: |
@@ -42,6 +52,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: ignoreNavMeshAgent
     summary: |
@@ -49,6 +61,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: ignoreNavMeshObstacle
     summary: |
@@ -56,6 +70,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: layerMask
     summary: |
@@ -63,6 +79,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.LayerMask
   - name: minRegionArea
     summary: |
@@ -70,6 +88,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: overrideTileSize
     summary: |
@@ -77,6 +97,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: overrideVoxelSize
     summary: |
@@ -84,6 +106,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: size
     summary: |
@@ -91,6 +115,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
   - name: tileSize
     summary: |
@@ -98,6 +124,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: voxelSize
     summary: |
@@ -105,15 +133,19 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-methods: 
+methods:
   - name: AddData
     summary: |
       [Unity's NavMeshSurface.AddData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshSurface.AddData.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -123,7 +155,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -133,8 +167,10 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
-math_operations: 
+math_operations:

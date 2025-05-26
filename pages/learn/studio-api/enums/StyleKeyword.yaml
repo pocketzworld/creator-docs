@@ -4,50 +4,59 @@ summary: |
   [Unity's StyleKeyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Auto
     summary: |
-      [Unity's StyleKeyword.Auto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword-Auto.html)
+      [Unity's StyleKeyword.Auto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword.Auto.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.StyleKeyword
   - name: Initial
     summary: |
-      [Unity's StyleKeyword.Initial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword-Initial.html)
+      [Unity's StyleKeyword.Initial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword.Initial.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.StyleKeyword
   - name: None
     summary: |
-      [Unity's StyleKeyword.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword-None.html)
+      [Unity's StyleKeyword.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword.None.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.StyleKeyword
   - name: Null
     summary: |
-      [Unity's StyleKeyword.Null Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword-Null.html)
+      [Unity's StyleKeyword.Null Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword.Null.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.StyleKeyword
   - name: Undefined
     summary: |
-      [Unity's StyleKeyword.Undefined Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword-Undefined.html)
+      [Unity's StyleKeyword.Undefined Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleKeyword.Undefined.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.StyleKeyword
-methods: 
-math_operations: 
+methods:
+math_operations:

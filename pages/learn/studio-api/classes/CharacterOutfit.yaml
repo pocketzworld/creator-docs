@@ -4,29 +4,35 @@ summary: |
   Serialized asset containing a collection of clothing items
 description:
 code_samples:
-inherits: 
-  - ScriptableObject
-constructors: 
-properties: 
+inherits:
+  - Class.ScriptableObject
+tags:
+constructors:
+properties:
   - name: clothing
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    type: {CharacterClothing}
-methods: 
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.CharacterClothing}
+methods:
   - name: CreateInstance
     summary: |
       Create a new outfit from a collection of clothing items.
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: clothing
-        type: {CharacterClothing}
+        type: {Class.CharacterClothing}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.CharacterOutfit
         summary:
@@ -36,15 +42,26 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: ids
         type: {string}
+        tags:
         default:
-        summary: 
+        summary:
       - name: skeletonId
         type: string
+        tags:
         default:
-        summary: 
+        summary:
+      - name: includeFallbacks
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
     returns:
       - type: Class.CharacterOutfit
         summary:
+math_operations:

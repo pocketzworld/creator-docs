@@ -1,116 +1,64 @@
 name: UIView
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
   - Class.VisualElement
+tags:
 constructors:
   - name: new
-    summary: |
-
+    summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: Class.UIView
         summary:
 properties:
-  - name: isDisposed
+  - name: displayBegin
     summary: |
-
+      Callback function that is called when a view's display begins
     description:
-    is_static: false
+    is_static: true
     code_samples:
-    type: boolean
-  - name: sortOrder
+    tags:
+      - ClientOnly
+    type: (UIView) -> ()
+  - name: displayEnd
     summary: |
-
+      Callback function that is called when a view's display ends
     description:
-    is_static: false
+    is_static: true
     code_samples:
-    type: number
-  - name: isBound
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
+    tags:
+      - ClientOnly
+    type: (UIView) -> ()
   - name: isDisplayed
     summary: |
-
+      True if the view is currently being displayed
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
-  - name: isRunningAsync
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: isStale
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: modalBlockerContainer
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: Class.VisualElement
 methods:
-  - name: Reset
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Dispose
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
   - name: BindHierarchy
-    summary: |
-
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: element
         type: Class.VisualElement
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: DisposeChildren
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: element
-        type: Class.VisualElement
+        tags:
         default:
         summary:
     returns:
@@ -118,15 +66,85 @@ methods:
         summary:
   - name: ClearAndDisposeChildren
     summary: |
-
+      Clear all children from the given element and call dispose as needed
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: element
         type: Class.VisualElement
+        tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: DisposeChildren
+    summary: |
+      Dispose of all children of the given element
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterBackCallback
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: handler
+        type: () -> (boolean)
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Reset
+    summary: |
+      Reset the view back to default state
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterBackCallback
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:

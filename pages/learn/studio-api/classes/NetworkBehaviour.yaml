@@ -1,12 +1,12 @@
 name: NetworkBehaviour
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.WorldBehaviour
-constructors: 
-properties: 
-methods: 
-math_operations: 
+tags:
+constructors:
+properties:
+methods:
+math_operations:

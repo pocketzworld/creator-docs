@@ -2,50 +2,67 @@ name: AnimationEventHandler
 type: classes
 summary: |
   Attach this script to a GameObject with an Animator to receive events when the animation graph
-    state changes.
-    
-    self:GetComponent(AnimationEventHandler).StateExit:Connect(function(clip)
-        print("AnimationClip " .. clip.name .. " finished playing")
-    end)
+  state changes.
+  
+  self:GetComponent(AnimationEventHandler).StateExit:Connect(function(clip)
+      print("AnimationClip " .. clip.name .. " finished playing")
+  end)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.WorldBehaviour
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: StateEnter
     summary: |
       OnStateEnter is called when a transition starts and the state machine starts to evaluate this state.
     description:
     is_static: false
     code_samples:
-    type: LuaEvent
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: StateExit
     summary: |
       OnStateExit is called when a transition ends and the state machine finishes evaluating this state.
     description:
     is_static: false
     code_samples:
-    type: LuaEvent
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: StateIK
     summary: |
       OnStateIK is called right after Animator.OnAnimatorIK().
     description:
     is_static: false
     code_samples:
-    type: LuaEvent
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: StateMove
     summary: |
       OnStateMove is called right after Animator.OnAnimatorMove().
     description:
     is_static: false
     code_samples:
-    type: LuaEvent
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: StateUpdate
     summary: |
       OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks.
     description:
     is_static: false
     code_samples:
-    type: LuaEvent
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
 methods:
+math_operations:

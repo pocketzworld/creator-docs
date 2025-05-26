@@ -1,305 +1,461 @@
 name: UIScrollView
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
   - Class.VisualElement
+tags:
 constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: Class.UIScrollView
+        summary:
 properties:
-  - name: scrollableSize
-    summary: |
-
+  - name: defaultScrollDecelerationRate
+    summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: viewportSize
-    summary: |
-
+  - name: fastScrollDecelerationRate
+    summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: hasInertia
+  - name: minInertiaVelocity
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: ussScrollView
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewContent
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewFadeEdges
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewGradients
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewGradientsBottom
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewGradientsTop
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewHorizontal
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewVertical
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: ussScrollViewViewport
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: contentContainer
     summary: |
-
+      Contains full content, potentially partially visible
     description:
     is_static: false
     code_samples:
-    type: boolean
-  - name: isAtEnd
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+  - name: contentSize
     summary: |
-
+      Returns the size of the content container
     description:
     is_static: false
     code_samples:
-    type: boolean
-  - name: isScrolling
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: value
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: contentViewport
     summary: |
-
+      Represents the visible part of contentContainer.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.VisualElement
-  - name: contentContainer
+  - name: hasInertia
     summary: |
-
+      Returns true if the scroll view has inertia
     description:
     is_static: false
     code_samples:
-    type: Class.VisualElement
-  - name: scrollWheelRate
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isAtEnd
     summary: |
-
+      Check to see if the scrollbar is at the end or not
     description:
-    is_static: true
+    is_static: false
     code_samples:
-    type: number
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
   - name: isClamped
     summary: |
-
+      Returns true if the scroll view is clamped to the scroll extents
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isDraggable
+    summary: |
+      If the scroll view is scrollable using drag gesture
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: isElastic
     summary: |
-
+      Returns true if the scroll view will use an elastic behaviour when scrolling past the
+      end of the extents.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
+  - name: isInertiaEnabled
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isScrolling
+    summary: |
+      True if the scroll view is currently moving (scrolling or animating).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: onScrollEnd
+    summary: |
+      Called when scrolling ends, either by lifting a finger or by the scroll animation ending.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: () -> ()
   - name: scrollDecelerationRate
     summary: |
-
+      Controls the rate at which the scrolling movement slows after a user scrolls
+      using a touch interaction.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-  - name: ussScrollView
+  - name: scrollWheelRate
     summary: |
-
+      Global value for the rate at which the scroll wheel scrolls
     description:
     is_static: true
     code_samples:
-    type: string
-  - name: ussScrollViewGradients
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewGradientsTop
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewGradientsBottom
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewViewport
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewContent
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewHorizontal
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewVertical
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: ussScrollViewFadeEdges
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    type: string
-  - name: defaultScrollDecelerationRate
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
+    tags:
+      - ClientOnly
     type: number
-  - name: fastScrollDecelerationRate
+  - name: scrollableSize
     summary: |
-
+      Returns the amount of scroll
     description:
-    is_static: true
+    is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: minInertiaVelocity
+  - name: value
     summary: |
-
+      Get/Set the current scroll offset
     description:
-    is_static: true
+    is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
+  - name: viewportSize
+    summary: |
+      Size of the viewport and padding
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: worldBound
+    summary: |
+      Rect representing the world bounds of the scroll view
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rect
 methods:
-  - name: ScrollTo
-    summary: |
-
+  - name: AdjustScrollOffset
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: child
-        type: Class.VisualElement
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToElement
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: element
-        type: Class.VisualElement
-        default:
-        summary:
-      - name: animationDuration
+      - name: delta
         type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToOffset
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: offset
-        type: number
-        default:
-        summary:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToEnd
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: ScrollToBeginning
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: animationDuration
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: SetValueWithoutNotify
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: newValue
-        type: number
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
   - name: AdjustScrollOffsetForNewContent
-    summary: |
-
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: void
         summary:
-  - name: AdjustScrollOffset
-    summary: |
-
+  - name: CancelAnimation
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: delta
-        type: number
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ScrollTo
+    summary: |
+      Scroll to a specific child element.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: child
+        type: Class.VisualElement
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: CancelAnimation
-    summary: |
-
+  - name: ScrollToBeginning
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToElement
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToEnd
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToOffset
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: offset
+        type: number
+        tags:
+        default:
+        summary:
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: propagateAnimation
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetValueWithoutNotify
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: newValue
+        type: number
+        tags:
+        default:
+        summary:
     returns:
       - type: void
         summary:

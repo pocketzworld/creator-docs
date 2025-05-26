@@ -4,15 +4,19 @@ summary: |
   [Unity's ContactPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: impulse
     summary: |
       [Unity's ContactPoint.impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ContactPoint-impulse.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: normal
     summary: |
@@ -20,6 +24,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: otherCollider
     summary: |
@@ -27,6 +34,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Collider
   - name: point
     summary: |
@@ -34,6 +44,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: separation
     summary: |
@@ -41,6 +54,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: thisCollider
     summary: |
@@ -48,5 +64,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Collider
-methods: 
+methods:
+math_operations:

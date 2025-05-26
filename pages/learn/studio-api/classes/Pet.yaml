@@ -1,39 +1,60 @@
 name: Pet
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: character
     summary: |
-      
+      The character that represents this pet in the world.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Character
   - name: id
     summary: |
-      
+      Pet's ID.  Each pet has a unique ID.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: name
     summary: |
-      
+      Name of the pet as displayed in the UI.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: owner
     summary: |
-      
+      The player that owns this pet.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Player
-methods: 
-math_operations: 
+  - name: skeletonId
+    summary: |
+      The ID of the pet skeleton. This value can be used to determine what kind of pet it is.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+methods:
+math_operations:

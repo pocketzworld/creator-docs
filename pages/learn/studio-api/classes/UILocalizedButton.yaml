@@ -1,35 +1,39 @@
 name: UILocalizedButton
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.UIButton
-constructors: 
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.UILocalizedButton
         summary:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: text
         type: DataType.LocalizedString
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UILocalizedButton
         summary:
-properties: 
+properties:
 methods:
+math_operations:

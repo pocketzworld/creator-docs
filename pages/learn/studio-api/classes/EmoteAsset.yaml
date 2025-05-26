@@ -1,11 +1,12 @@
 name: EmoteAsset
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.CharacterAnimation
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
 methods:
+math_operations:

@@ -4,16 +4,19 @@ summary: |
   [Unity's VisualTreeAsset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset.html)
 description:
 code_samples:
-inherits: 
-  - ScriptableObject
-constructors: 
-properties: 
+inherits:
+  - Class.ScriptableObject
+tags:
+constructors:
+properties:
   - name: contentHash
     summary: |
       [Unity's VisualTreeAsset.contentHash Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-contentHash.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: importedWithErrors
     summary: |
@@ -21,6 +24,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: importedWithWarnings
     summary: |
@@ -28,6 +34,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: templateDependencies
     summary: |
@@ -35,19 +44,26 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: {VisualTreeAsset}
-methods: 
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.VisualTreeAsset}
+methods:
   - name: CloneTree
     summary: |
       [Unity's VisualTreeAsset.CloneTree Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset.CloneTree.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: target
         type: Class.VisualElement
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

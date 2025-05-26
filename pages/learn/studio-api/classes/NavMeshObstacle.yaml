@@ -4,16 +4,19 @@ summary: |
   [Unity's NavMeshObstacle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: carveOnlyStationary
     summary: |
       [Unity's NavMeshObstacle.carveOnlyStationary Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshObstacle-carveOnlyStationary.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: carving
     summary: |
@@ -21,6 +24,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: carvingMoveThreshold
     summary: |
@@ -28,6 +33,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: carvingTimeToStationary
     summary: |
@@ -35,6 +42,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: center
     summary: |
@@ -42,6 +51,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
   - name: height
     summary: |
@@ -49,6 +60,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: radius
     summary: |
@@ -56,6 +69,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: size
     summary: |
@@ -63,6 +78,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
   - name: velocity
     summary: |
@@ -70,6 +87,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
-methods: 
-math_operations: 
+methods:
+math_operations:

@@ -4,38 +4,46 @@ summary: |
   [Unity's Length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's Length.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Length
         summary:
-properties: 
+properties:
   - name: value
     summary: |
       [Unity's Length.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-methods: 
+methods:
   - name: Auto
     summary: |
       [Unity's Length.Auto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length.Auto.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.Length
         summary:
@@ -45,11 +53,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -59,7 +70,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -69,7 +82,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -79,7 +94,9 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.Length
         summary:
@@ -89,11 +106,25 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Length
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's Length.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length-operator_eq.html)
+    description:
+    type_a: Length
+    type_b: Length
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

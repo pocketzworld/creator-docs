@@ -4,16 +4,20 @@ summary: |
   [Unity's Sprite Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Object
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: associatedAlphaSplitTexture
     summary: |
       [Unity's Sprite.associatedAlphaSplitTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-associatedAlphaSplitTexture.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Texture2D
   - name: border
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector4
   - name: bounds
     summary: |
@@ -28,6 +35,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Bounds
   - name: packed
     summary: |
@@ -35,6 +45,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: pivot
     summary: |
@@ -42,6 +55,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: pixelsPerUnit
     summary: |
@@ -49,6 +65,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: rect
     summary: |
@@ -56,6 +75,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Rect
   - name: spriteAtlasTextureScale
     summary: |
@@ -63,6 +85,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: texture
     summary: |
@@ -70,6 +95,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Texture2D
   - name: textureRect
     summary: |
@@ -77,6 +105,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Rect
   - name: textureRectOffset
     summary: |
@@ -84,6 +115,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: triangles
     summary: |
@@ -91,6 +125,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: {number}
   - name: uv
     summary: |
@@ -98,34 +135,45 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: {Vector2}
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {DataType.Vector2}
   - name: vertices
     summary: |
       [Unity's Sprite.vertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite-vertices.html)
     description:
     is_static: false
     code_samples:
-    type: {Vector2}
-methods: 
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {DataType.Vector2}
+methods:
   - name: Create
     summary: |
       [Unity's Sprite.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.Create.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: texture
         type: Class.Texture2D
+        tags:
         default:
-        summary: 
+        summary:
       - name: rect
         type: DataType.Rect
+        tags:
         default:
-        summary: 
+        summary:
       - name: pivot
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Sprite
         summary:
@@ -135,23 +183,29 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: texture
         type: Class.Texture2D
+        tags:
         default:
-        summary: 
+        summary:
       - name: rect
         type: DataType.Rect
+        tags:
         default:
-        summary: 
+        summary:
       - name: pivot
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
       - name: pixelsPerUnit
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Sprite
         summary:
@@ -161,27 +215,34 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: texture
         type: Class.Texture2D
+        tags:
         default:
-        summary: 
+        summary:
       - name: rect
         type: DataType.Rect
+        tags:
         default:
-        summary: 
+        summary:
       - name: pivot
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
       - name: pixelsPerUnit
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: extrude
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Sprite
         summary:
@@ -191,7 +252,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
@@ -201,11 +264,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: shapeIdx
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -215,7 +281,10 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
+math_operations:

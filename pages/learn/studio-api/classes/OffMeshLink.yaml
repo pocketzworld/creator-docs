@@ -4,16 +4,19 @@ summary: |
   [Unity's OffMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: activated
     summary: |
       [Unity's OffMeshLink.activated Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink-activated.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: area
     summary: |
@@ -21,6 +24,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: autoUpdatePositions
     summary: |
@@ -28,6 +33,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: biDirectional
     summary: |
@@ -35,6 +42,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: costOverride
     summary: |
@@ -42,6 +51,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: endTransform
     summary: |
@@ -49,6 +60,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Transform
   - name: occupied
     summary: |
@@ -56,6 +69,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: startTransform
     summary: |
@@ -63,15 +79,20 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Transform
-methods: 
+methods:
   - name: UpdatePositions
     summary: |
       [Unity's OffMeshLink.UpdatePositions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.OffMeshLink.UpdatePositions.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
+math_operations:

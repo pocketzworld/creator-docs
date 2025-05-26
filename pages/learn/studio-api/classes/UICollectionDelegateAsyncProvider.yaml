@@ -1,53 +1,61 @@
 name: UICollectionDelegateAsyncProvider
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-  - UICollectionProvider
-constructors: 
+inherits:
+  - Class.UICollectionProvider
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellInstantiate
         type: (number, any) -> (UIView)
+        tags:
         default:
-        summary: 
+        summary:
       - name: asyncFetch
         type: (UICollectionDelegateAsyncRequest) -> ()
+        tags:
         default:
-        summary: 
-    returns:
-      - type: Class.LuaUICollectionDelegateAsyncProvider
         summary:
-properties: 
-methods: 
+    returns:
+      - type: Class.UICollectionDelegateAsyncProvider
+        summary:
+properties:
+methods:
   - name: Fetch
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: forceReload
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Refresh
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
+math_operations:

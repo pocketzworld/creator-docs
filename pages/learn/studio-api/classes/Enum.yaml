@@ -4,21 +4,25 @@ summary: |
   [Unity's Enum Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: GetNames
     summary: |
       [Unity's Enum.GetNames Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Enum.GetNames.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: enumType
         type: Class.Type
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: {string}
         summary:
@@ -28,11 +32,14 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: enumType
         type: Class.Type
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Type
         summary:
@@ -42,12 +49,15 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: flag
-        type: Enum
+        type: Class.Enum
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
-math_operations: 
+math_operations:

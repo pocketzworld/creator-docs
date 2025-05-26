@@ -4,16 +4,20 @@ summary: |
   [Unity's AnimationClip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.html)
 description:
 code_samples:
-inherits: 
-  - Motion
-constructors: 
-properties: 
+inherits:
+  - Class.Motion
+tags:
+constructors:
+properties:
   - name: empty
     summary: |
       [Unity's AnimationClip.empty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-empty.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: events
     summary: |
@@ -21,13 +25,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: {AnimationEvent}
+    tags:
+      - ClientOnly
+    type: {Class.AnimationEvent}
   - name: frameRate
     summary: |
       [Unity's AnimationClip.frameRate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip-frameRate.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: hasGenericRootTransform
     summary: |
@@ -35,6 +43,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: hasMotionCurves
     summary: |
@@ -42,6 +53,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: hasMotionFloatCurves
     summary: |
@@ -49,6 +63,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: hasRootCurves
     summary: |
@@ -56,6 +73,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: humanMotion
     summary: |
@@ -63,6 +83,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: legacy
     summary: |
@@ -70,6 +93,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: length
     summary: |
@@ -77,6 +102,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: localBounds
     summary: |
@@ -84,19 +112,24 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Bounds
-methods: 
+methods:
   - name: AddEvent
     summary: |
       [Unity's AnimationClip.AddEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AnimationClip.AddEvent.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: evt
         type: Class.AnimationEvent
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -106,7 +139,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -116,7 +151,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -126,15 +163,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: go
         type: Class.GameObject
+        tags:
         default:
-        summary: 
+        summary:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -144,23 +185,30 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: relativePath
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: type
         type: Class.Type
+        tags:
         default:
-        summary: 
+        summary:
       - name: propertyName
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: curve
         type: Class.AnimationCurve
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

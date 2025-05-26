@@ -4,26 +4,32 @@ summary: |
   [Unity's TextElement Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement.html)
 description:
 code_samples:
-inherits: 
-  - BindableElement
-constructors: 
+inherits:
+  - Class.BindableElement
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's TextElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
-      - type: TextElement
+      - type: Class.TextElement
         summary:
-properties: 
+properties:
   - name: ussClassName
     summary: |
       [Unity's TextElement.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-ussClassName.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: displayTooltipWhenElided
     summary: |
@@ -31,6 +37,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: enableRichText
     summary: |
@@ -38,6 +46,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: experimental
     summary: |
@@ -45,6 +55,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: ITextElementExperimentalFeatures
   - name: isElided
     summary: |
@@ -52,6 +65,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: parseEscapeSequences
     summary: |
@@ -59,6 +75,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: selection
     summary: |
@@ -66,6 +84,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: ITextSelection
   - name: text
     summary: |
@@ -73,5 +94,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
 methods:
+math_operations:

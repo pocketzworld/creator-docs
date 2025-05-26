@@ -4,8 +4,10 @@ summary: |
   [Unity's AudioBehaviour Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioBehaviour.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Behaviour
-constructors: 
-properties: 
-methods: 
+tags:
+constructors:
+properties:
+methods:
+math_operations:
