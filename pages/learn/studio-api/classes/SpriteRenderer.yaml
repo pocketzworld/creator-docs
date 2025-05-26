@@ -4,16 +4,19 @@ summary: |
   [Unity's SpriteRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Renderer
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: adaptiveModeThreshold
     summary: |
       [Unity's SpriteRenderer.adaptiveModeThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-adaptiveModeThreshold.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: color
     summary: |
@@ -21,6 +24,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: flipX
     summary: |
@@ -28,6 +33,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: flipY
     summary: |
@@ -35,6 +42,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: size
     summary: |
@@ -42,6 +51,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector2
   - name: sprite
     summary: |
@@ -49,19 +60,24 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Sprite
-methods: 
+methods:
   - name: RegisterSpriteChangeCallback
     summary: |
       [Unity's SpriteRenderer.RegisterSpriteChangeCallback Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer.RegisterSpriteChangeCallback.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: callback
         type: (SpriteRenderer) -> ()
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -71,11 +87,15 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: callback
         type: (SpriteRenderer) -> ()
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

@@ -4,16 +4,20 @@ summary: |
   [Unity's TextAsset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAsset.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Object
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: bytes
     summary: |
       [Unity's TextAsset.bytes Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAsset-bytes.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: {Byte}
   - name: dataSize
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: text
     summary: |
@@ -28,5 +35,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
 methods:
+math_operations:

@@ -4,82 +4,99 @@ summary: |
   [Unity's TextAnchor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: LowerCenter
     summary: |
-      [Unity's TextAnchor.LowerCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-LowerCenter.html)
+      [Unity's TextAnchor.LowerCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.LowerCenter.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: LowerLeft
     summary: |
-      [Unity's TextAnchor.LowerLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-LowerLeft.html)
+      [Unity's TextAnchor.LowerLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.LowerLeft.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: LowerRight
     summary: |
-      [Unity's TextAnchor.LowerRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-LowerRight.html)
+      [Unity's TextAnchor.LowerRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.LowerRight.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: MiddleCenter
     summary: |
-      [Unity's TextAnchor.MiddleCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-MiddleCenter.html)
+      [Unity's TextAnchor.MiddleCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.MiddleCenter.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: MiddleLeft
     summary: |
-      [Unity's TextAnchor.MiddleLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-MiddleLeft.html)
+      [Unity's TextAnchor.MiddleLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.MiddleLeft.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: MiddleRight
     summary: |
-      [Unity's TextAnchor.MiddleRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-MiddleRight.html)
+      [Unity's TextAnchor.MiddleRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.MiddleRight.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: UpperCenter
     summary: |
-      [Unity's TextAnchor.UpperCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-UpperCenter.html)
+      [Unity's TextAnchor.UpperCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.UpperCenter.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: UpperLeft
     summary: |
-      [Unity's TextAnchor.UpperLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-UpperLeft.html)
+      [Unity's TextAnchor.UpperLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.UpperLeft.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
   - name: UpperRight
     summary: |
-      [Unity's TextAnchor.UpperRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor-UpperRight.html)
+      [Unity's TextAnchor.UpperRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextAnchor.UpperRight.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.TextAnchor
-methods: 
-math_operations: 
+methods:
+math_operations:

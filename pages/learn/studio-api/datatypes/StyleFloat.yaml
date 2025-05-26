@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleFloat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleFloat
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleFloat
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleFloat.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleFloat.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleFloat.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleFloat
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleFloat.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleFloat-operator_eq.html)
+    description:
+    type_a: StyleFloat
+    type_b: StyleFloat
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

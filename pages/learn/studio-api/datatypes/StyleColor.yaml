@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleColor.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.Color
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleColor
         summary:
@@ -26,41 +30,72 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleColor
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleColor.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleColor.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleColor.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleColor
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleColor.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-operator_eq.html)
+    description:
+    type_a: StyleColor
+    type_b: Color
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '=='
+    summary: |
+      [Unity's StyleColor.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleColor-operator_eq.html)
+    description:
+    type_a: StyleColor
+    type_b: StyleColor
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

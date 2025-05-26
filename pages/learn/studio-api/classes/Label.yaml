@@ -4,16 +4,19 @@ summary: |
   [Unity's Label Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Label.html)
 description:
 code_samples:
-inherits: 
-  - TextElement
-constructors: 
+inherits:
+  - Class.TextElement
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's Label.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Label-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.Label
         summary:
@@ -23,21 +26,27 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: text
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Label
         summary:
-properties: 
+properties:
   - name: ussClassName
     summary: |
       [Unity's Label.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Label-ussClassName.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
-methods: 
-math_operations: 
+methods:
+math_operations:

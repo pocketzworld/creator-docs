@@ -4,15 +4,20 @@ summary: |
   Defines a behaviour that is bound to a game client.
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.MonoBehaviour
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: scene
     summary: |
       Returns the client the behaviour is bound to
     description:
     is_static: false
     code_samples:
-    type: Class.WorldScene
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Scene
 methods:
+math_operations:

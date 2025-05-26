@@ -4,25 +4,31 @@ summary: |
   [Unity's InputAction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's InputAction.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.InputAction
         summary:
-properties: 
+properties:
   - name: actionMap
     summary: |
       [Unity's InputAction.actionMap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-actionMap.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.InputActionMap
   - name: enabled
     summary: |
@@ -30,6 +36,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: expectedControlType
     summary: |
@@ -37,6 +46,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
   - name: inProgress
     summary: |
@@ -44,6 +55,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: interactions
     summary: |
@@ -51,6 +65,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: name
     summary: |
@@ -58,6 +75,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: processors
     summary: |
@@ -65,6 +85,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: triggered
     summary: |
@@ -72,6 +95,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: wantsInitialStateCheck
     summary: |
@@ -79,15 +105,19 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-methods: 
+methods:
   - name: Clone
     summary: |
       [Unity's InputAction.Clone Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.Clone.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.InputAction
         summary:
@@ -97,7 +127,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -107,7 +139,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -117,7 +151,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
@@ -127,7 +163,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -137,17 +175,21 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
   - name: ReadVector2
     summary: |
-      [Unity's InputAction.ReadVector2 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.ReadVector2.html)
+      Reads a Vector2 value from this InputAction.
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.Vector2
         summary:
@@ -157,7 +199,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -167,7 +211,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -177,7 +223,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -187,8 +235,10 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
-math_operations: 
+math_operations:

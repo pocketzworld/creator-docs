@@ -1,69 +1,74 @@
 name: CharacterState
 type: enums
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Custom
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
   - name: Emote
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
   - name: Idle
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
   - name: Jumping
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
   - name: None
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
   - name: Running
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
   - name: Walking
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.CharacterState
-methods: 
-math_operations: 
+methods:
+math_operations:

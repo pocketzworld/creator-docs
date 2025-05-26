@@ -4,26 +4,29 @@ summary: |
   [Unity's Overflow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Overflow.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Hidden
     summary: |
-      [Unity's Overflow.Hidden Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Overflow-Hidden.html)
+      [Unity's Overflow.Hidden Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Overflow.Hidden.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Overflow
   - name: Visible
     summary: |
-      [Unity's Overflow.Visible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Overflow-Visible.html)
+      [Unity's Overflow.Visible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Overflow.Visible.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Overflow
-methods: 
-math_operations: 
+methods:
+math_operations:

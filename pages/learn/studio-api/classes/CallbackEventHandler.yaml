@@ -4,17 +4,20 @@ summary: |
   [Unity's CallbackEventHandler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: HasBubbleUpHandlers
     summary: |
       [Unity's CallbackEventHandler.HasBubbleUpHandlers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.CallbackEventHandler.HasBubbleUpHandlers.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -24,7 +27,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: boolean
         summary:
@@ -34,11 +39,15 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: e
         type: Class.EventBase
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

@@ -2,546 +2,639 @@ name: UICollectionCells
 type: classes
 summary: |
   Element that manages a collection of cells within a UICollection. This element
-    should only be used from within a UICollectionSection otherwise the behaviour is unknown.
+  should only be used from within a UICollectionSection otherwise the behaviour is unknown.
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.UICollectionCells
         summary:
-properties: 
+properties:
   - name: cellCount
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: collection
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.UICollection
   - name: hasLayout
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: loading
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: provider
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    type: UICollectionProvider
+    tags:
+      - ClientOnly
+    type: Class.UICollectionProvider
   - name: section
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.UICollectionSection
   - name: selection
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: {number}
   - name: selectionCount
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: visibleCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    type: {UIView}
-methods: 
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.UIView}
+methods:
   - name: AddCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: AddCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Deselect
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Deselect
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: DeselectAll
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: Dispose
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: EnumerateVisibleCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: enumerate
         type: (UIView, number, boolean) -> (boolean)
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: GetVisibleCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UIView
         summary:
   - name: IndexOf
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
   - name: InsertCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: InsertCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: InstantiateCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UIView
         summary:
   - name: IsSelected
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
   - name: IsSelected
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
   - name: ItemSizeChanged
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: itemIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: itemPosition
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: delta
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: RecycleAllCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: RecycleCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: RemoveAllCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: RemoveCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: RemoveCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: ScrollTo
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: additionalOffset
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Select
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
       - name: add
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Select
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: add
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: SelectionIndexOf
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
   - name: SetLayout
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: layout
         type: Class.UICollectionGridLayout
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: SetLayout
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: layout
         type: Class.UICollectionStackLayout
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Toggle
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
       - name: add
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: Toggle
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: add
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: UpdateCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: UpdateCells
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: UpdateLayout
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: min
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: max
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
+math_operations:

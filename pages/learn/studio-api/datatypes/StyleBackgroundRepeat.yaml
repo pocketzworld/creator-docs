@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleBackgroundRepeat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleBackgroundRepeat.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.BackgroundRepeat
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleBackgroundRepeat
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleBackgroundRepeat
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleBackgroundRepeat.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleBackgroundRepeat.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.BackgroundRepeat
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleBackgroundRepeat.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleBackgroundRepeat
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleBackgroundRepeat.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundRepeat-operator_eq.html)
+    description:
+    type_a: StyleBackgroundRepeat
+    type_b: StyleBackgroundRepeat
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

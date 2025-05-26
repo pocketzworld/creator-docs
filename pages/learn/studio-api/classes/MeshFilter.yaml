@@ -4,16 +4,19 @@ summary: |
   [Unity's MeshFilter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshFilter.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Component
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: mesh
     summary: |
       [Unity's MeshFilter.mesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MeshFilter-mesh.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Mesh
   - name: sharedMesh
     summary: |
@@ -21,5 +24,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Mesh
-methods: 
+methods:
+math_operations:

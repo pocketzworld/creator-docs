@@ -4,26 +4,29 @@ summary: |
   [Unity's PickingMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PickingMode.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Ignore
     summary: |
-      [Unity's PickingMode.Ignore Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PickingMode-Ignore.html)
+      [Unity's PickingMode.Ignore Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PickingMode.Ignore.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.PickingMode
   - name: Position
     summary: |
-      [Unity's PickingMode.Position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PickingMode-Position.html)
+      [Unity's PickingMode.Position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PickingMode.Position.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.PickingMode
-methods: 
-math_operations: 
+methods:
+math_operations:

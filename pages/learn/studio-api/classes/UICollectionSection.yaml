@@ -2,29 +2,50 @@ name: UICollectionSection
 type: classes
 summary: |
   Represents a section within a collection.  A section can optionally contain
-    Items.
+  Items.
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.UICollectionSection
         summary:
-properties: 
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: cells
+        type: Class.UICollectionCells
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.UICollectionSection
+        summary:
+properties:
   - name: cells
     summary: |
       Optional items contained within the section
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.UICollectionCells
   - name: collection
     summary: |
@@ -32,15 +53,30 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.UICollection
-methods: 
-  - name: Rebuild
-    summary: |
-      
+methods:
+  - name: InvalidateLayout
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Rebuild
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -50,15 +86,21 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: min
         type: number
+        tags:
         default:
-        summary: Minimum
+        summary: |
+          Minimum
       - name: max
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
+math_operations:

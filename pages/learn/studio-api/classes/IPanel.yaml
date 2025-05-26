@@ -4,15 +4,19 @@ summary: |
   [Unity's IPanel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: isDirty
     summary: |
       [Unity's IPanel.isDirty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel-isDirty.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: visualTree
     summary: |
@@ -20,19 +24,49 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.VisualElement
-methods: 
-  - name: LocalToWorld
+methods:
+  - name: GetScaledDisplayHeight
     summary: |
-      [Unity's IPanel.LocalToWorld Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.LocalToWorld.html)
+      Return the display height of the panel in scaled units
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: GetScaledDisplayWidth
+    summary: |
+      Return the display width of the panel in scaled units
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: LocalToWorld
+    summary: |
+      Convert a local panel coordinate to a world (screen) coordinate
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: point
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Vector2
         summary:
@@ -42,11 +76,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: point
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.VisualElement
         summary:
@@ -56,29 +93,37 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: point
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
       - name: picked
-        type: {VisualElement}
+        type: {Class.VisualElement}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.VisualElement
         summary:
   - name: WorldToLocal
     summary: |
-      [Unity's IPanel.WorldToLocal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel.WorldToLocal.html)
+      Convert a world (screen) coordinate to a local panel coordinate
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: point
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Vector2
-        summary: 
+        summary:
+math_operations:

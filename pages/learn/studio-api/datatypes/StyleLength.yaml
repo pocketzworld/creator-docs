@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleLength Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleLength.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleLength
         summary:
@@ -26,11 +30,14 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleLength
         summary:
@@ -40,41 +47,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleLength
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleLength.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleLength.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Length
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleLength.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleLength
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleLength.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleLength-operator_eq.html)
+    description:
+    type_a: StyleLength
+    type_b: StyleLength
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

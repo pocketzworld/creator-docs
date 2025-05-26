@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleRotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleRotate.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleRotate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleRotate-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.Rotate
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleRotate
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleRotate
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleRotate.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleRotate-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleRotate.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleRotate-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Rotate
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleRotate.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleRotate.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleRotate
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleRotate.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleRotate-operator_eq.html)
+    description:
+    type_a: StyleRotate
+    type_b: StyleRotate
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

@@ -4,16 +4,20 @@ summary: |
   [Unity's Motion Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Object
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: apparentSpeed
     summary: |
       [Unity's Motion.apparentSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Motion-apparentSpeed.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: averageAngularSpeed
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: averageDuration
     summary: |
@@ -28,6 +35,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: averageSpeed
     summary: |
@@ -35,6 +45,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: isHumanMotion
     summary: |
@@ -42,6 +55,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: isLooping
     summary: |
@@ -49,6 +65,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: legacy
     summary: |
@@ -56,6 +75,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
-methods: 
-math_operations: 
+methods:
+math_operations:

@@ -4,16 +4,20 @@ summary: |
   [Unity's PointerMoveEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerMoveEvent.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: actionKey
     summary: |
       [Unity's PointerMoveEvent.actionKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.PointerMoveEvent-actionKey.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: altKey
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: altitudeAngle
     summary: |
@@ -28,6 +35,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: azimuthAngle
     summary: |
@@ -35,6 +45,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: button
     summary: |
@@ -42,6 +55,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: clickCount
     summary: |
@@ -49,6 +65,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: commandKey
     summary: |
@@ -56,6 +75,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: ctrlKey
     summary: |
@@ -63,6 +85,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: currentTarget
     summary: |
@@ -70,6 +95,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: IEventHandler
   - name: deltaPosition
     summary: |
@@ -77,6 +105,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: deltaTime
     summary: |
@@ -84,6 +115,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: eventTypeId
     summary: |
@@ -91,6 +125,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: isPrimary
     summary: |
@@ -98,6 +135,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: localPosition
     summary: |
@@ -105,6 +145,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: pointerId
     summary: |
@@ -112,6 +155,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: pointerType
     summary: |
@@ -119,6 +165,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: position
     summary: |
@@ -126,6 +175,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: pressedButtons
     summary: |
@@ -133,6 +185,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: pressure
     summary: |
@@ -140,6 +195,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: radius
     summary: |
@@ -147,6 +205,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: radiusVariance
     summary: |
@@ -154,6 +215,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: shiftKey
     summary: |
@@ -161,6 +225,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: tangentialPressure
     summary: |
@@ -168,6 +235,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: tilt
     summary: |
@@ -175,6 +245,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: twist
     summary: |
@@ -182,5 +255,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
 methods:
+math_operations:

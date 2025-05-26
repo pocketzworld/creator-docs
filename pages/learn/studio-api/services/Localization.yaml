@@ -1,26 +1,29 @@
 name: Localization
-type: classes
-summary: |
-  
+type: services
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: TryGetString
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
       - type: DataType.LocalizedString
         summary:
+math_operations:

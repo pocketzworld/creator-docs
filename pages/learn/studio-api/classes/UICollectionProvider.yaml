@@ -4,32 +4,40 @@ summary: |
   Provides data to a collection
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: cells
     summary: |
       Back reference to the collection cells that is bounds to the provider
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.UICollectionCells
-methods: 
+methods:
   - name: BindCell
     summary: |
       Called when cell is added to the collection view hierarchy
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -39,21 +47,27 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: Index of the view to return
+        summary: |
+          Index of the view to return
     returns:
       - type: Class.UIView
-        summary:
+        summary: |
+          View for the given index
   - name: Dispose
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -63,11 +77,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -77,11 +94,15 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
+math_operations:

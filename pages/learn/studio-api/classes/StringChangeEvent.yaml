@@ -1,32 +1,39 @@
 name: StringChangeEvent
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: eventTypeId
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: newValue
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: previousValue
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
 methods:
+math_operations:

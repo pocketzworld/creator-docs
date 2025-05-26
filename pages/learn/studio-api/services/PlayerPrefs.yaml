@@ -1,146 +1,180 @@
 name: PlayerPrefs
-type: classes
-summary: |
-  
+type: services
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: DeleteKey
     summary: |
-      
+      [Unity's PlayerPrefs.DeleteKey Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.DeleteKey.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: GetFloat
     summary: |
-      
+      [Unity's PlayerPrefs.GetFloat Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.GetFloat.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: defaultValue
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
   - name: GetInt
     summary: |
-      
+      [Unity's PlayerPrefs.GetInt Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.GetInt.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: defaultValue
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
   - name: GetString
     summary: |
-      
+      [Unity's PlayerPrefs.GetString Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.GetString.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: defaultValue
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: HasKey
     summary: |
-      
+      [Unity's PlayerPrefs.HasKey Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.HasKey.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
   - name: SetFloat
     summary: |
-      
+      [Unity's PlayerPrefs.SetFloat Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.SetFloat.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: SetInt
     summary: |
-      
+      [Unity's PlayerPrefs.SetInt Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.SetInt.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: SetString
     summary: |
-      
+      [Unity's PlayerPrefs.SetString Documentation](https://docs.unity3d.com/ScriptReference/PlayerPrefs.SetString.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: key
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

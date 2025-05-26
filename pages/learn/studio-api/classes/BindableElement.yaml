@@ -4,26 +4,31 @@ summary: |
   [Unity's BindableElement Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BindableElement.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's BindableElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BindableElement-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
-      - type: BindableElement
+      - type: Class.BindableElement
         summary:
-properties: 
+properties:
   - name: binding
     summary: |
       [Unity's BindableElement.binding Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BindableElement-binding.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: IBinding
   - name: bindingPath
     summary: |
@@ -31,6 +36,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
-methods: 
-math_operations: 
+methods:
+math_operations:

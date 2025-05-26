@@ -1,136 +1,155 @@
 name: RenderSettings
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: ambientEquatorColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: ambientGroundColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: ambientIntensity
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: ambientLight
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: ambientSkyColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: defaultReflectionResolution
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: flareFadeSpeed
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: flareStrength
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: fog
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: fogColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: fogDensity
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: fogEndDistance
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: fogStartDistance
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: haloStrength
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: reflectionBounces
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: reflectionIntensity
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: skybox
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Material
   - name: subtractiveShadowColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
 methods:
+math_operations:

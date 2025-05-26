@@ -1,11 +1,12 @@
 name: Asset
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-  - ScriptableObject
-constructors: 
-properties: 
+inherits:
+  - Class.AsyncScriptableObject
+tags:
+constructors:
+properties:
 methods:
+math_operations:

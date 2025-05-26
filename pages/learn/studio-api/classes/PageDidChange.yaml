@@ -4,15 +4,19 @@ summary: |
   Event sent when page view stopped animating page change
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: eventTypeId
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
+math_operations:

@@ -4,15 +4,19 @@ summary: |
   [Unity's Random Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: insideUnitCircle
     summary: |
       [Unity's Random.insideUnitCircle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random-insideUnitCircle.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: insideUnitSphere
     summary: |
@@ -20,6 +24,9 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: onUnitSphere
     summary: |
@@ -27,6 +34,9 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector3
   - name: rotation
     summary: |
@@ -34,6 +44,9 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Quaternion
   - name: rotationUniform
     summary: |
@@ -41,6 +54,9 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Quaternion
   - name: value
     summary: |
@@ -48,15 +64,20 @@ properties:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
   - name: ColorHSV
     summary: |
       [Unity's Random.ColorHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Random.ColorHSV.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.Color
         summary:
@@ -66,15 +87,19 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: hueMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: hueMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
@@ -84,23 +109,29 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: hueMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: hueMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: saturationMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: saturationMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
@@ -110,31 +141,39 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: hueMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: hueMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: saturationMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: saturationMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: valueMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: valueMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
@@ -144,39 +183,49 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: hueMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: hueMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: saturationMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: saturationMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: valueMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: valueMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: alphaMin
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: alphaMax
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
@@ -186,11 +235,14 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: seed
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -200,15 +252,42 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: minInclusive
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: maxInclusive
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
-        summary: 
+        summary:
+  - name: RangeInt
+    summary: |
+      Returns a random int within [minInclusive..maxExclusive)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: minInclusive
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxExclusive
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+math_operations:
