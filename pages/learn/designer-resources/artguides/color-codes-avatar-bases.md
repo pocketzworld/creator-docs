@@ -1,31 +1,37 @@
 # Color Codes 
 
-While designing, you can use our in-game color palettes to inform your art direction!
+While designing or editing, use our in-game color palettes to inform your art direction.
 
 
 
 
 #### Skin Color 
 ![skin-color-preview-2022.png](https://cdn-production.joinhighrise.com/create-portal/skin_color_preview_2022_3772caacbc.png)
+![Skin colors_new2025](https://github.com/user-attachments/assets/0c15724e-ec98-4115-94d5-c34d64fb3ba5)
 
 #### Eye Color 
 
 ![eye-color-preview-2024](https://github.com/pocketzworld/creator-docs/assets/157839924/b9feec4b-05c6-4787-b990-3d87ce76df6e)
+![Eye colors_new2025](https://github.com/user-attachments/assets/18d778f7-20ca-427c-b717-09e76848f998)
 
 
 #### Hair Color 
 
 ![haircolorpreviewnewcolors](https://github.com/pocketzworld/creator-docs/assets/157839924/d12d04c4-49af-4837-9cc5-e015b79d0eed)
+![Hair colors_new2025](https://github.com/user-attachments/assets/da56e3ae-564a-4d4c-b64a-3551ae85bceb)
 
 
 
 #### Lips Color 
 
 ![lip-color-preview-2022.png](https://cdn-production.joinhighrise.com/create-portal/lip_color_preview_2022_cc821bd819.png)
+![Mouth colors_new2025@8x](https://github.com/user-attachments/assets/6cd0bda4-9188-4f4c-93f5-89cf4cfdfe12)
+
+
 
 ## Avatar Templates
 
-Also, use our default avatar templates as blank canvases for your creations.
+Use our default avatar templates as blank canvases for your creations.
 
 
 #### Single Avatars Slim
