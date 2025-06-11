@@ -1,17 +1,29 @@
 name: WorldWheelEvent
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
   - name: delta
-    summary: |
-
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
+  - name: position
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
 methods:
 math_operations:

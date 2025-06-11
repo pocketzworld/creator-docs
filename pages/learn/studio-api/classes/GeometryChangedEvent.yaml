@@ -4,16 +4,20 @@ summary: |
   [Unity's GeometryChangedEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: eventTypeId
     summary: |
       [Unity's GeometryChangedEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent-eventTypeId.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: newRect
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Rect
   - name: oldRect
     summary: |
@@ -28,23 +35,31 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Rect
-methods: 
+methods:
   - name: GetPooled
     summary: |
       [Unity's GeometryChangedEvent.GetPooled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.GeometryChangedEvent.GetPooled.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: oldRect
         type: DataType.Rect
+        tags:
         default:
-        summary: 
+        summary:
       - name: newRect
         type: DataType.Rect
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.GeometryChangedEvent
         summary:
+math_operations:

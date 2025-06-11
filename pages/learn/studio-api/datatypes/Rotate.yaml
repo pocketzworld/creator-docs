@@ -4,42 +4,51 @@ summary: |
   [Unity's Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's Rotate.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: angle
         type: DataType.Angle
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Rotate
         summary:
-properties: 
+properties:
   - name: angle
     summary: |
       [Unity's Rotate.angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate-angle.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Angle
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's Rotate.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.Rotate
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -49,7 +58,20 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.Rotate
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's Rotate.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Rotate-operator_eq.html)
+    description:
+    type_a: Rotate
+    type_b: Rotate
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

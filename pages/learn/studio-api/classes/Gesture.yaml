@@ -1,17 +1,21 @@
 name: Gesture
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: target
     summary: |
       Returns the VisualElemnet that is the target of all gesture events
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.VisualElement
-methods: 
+methods:
+math_operations:

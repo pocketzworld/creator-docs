@@ -1,174 +1,202 @@
 name: Easing
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
 methods:
-  - name: Quadratic
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Cubic
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
   - name: Back
-    summary: |
-
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: t
         type: number
+        tags:
         default:
         summary:
       - name: p
         type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Circle
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Exponential
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: t
-        type: number
-        default:
-        summary:
-      - name: p
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Sine
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: CubicBezier
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: t
-        type: number
-        default:
-        summary:
-      - name: x1
-        type: number
-        default:
-        summary:
-      - name: y1
-        type: number
-        default:
-        summary:
-      - name: x2
-        type: number
-        default:
-        summary:
-      - name: y2
-        type: number
+        tags:
         default:
         summary:
     returns:
       - type: number
         summary:
   - name: Bounce
-    summary: |
-
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: t
         type: number
+        tags:
         default:
         summary:
       - name: bounces
         type: number
+        tags:
         default:
         summary:
       - name: bounciness
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Circle
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Cubic
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: CubicBezier
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+      - name: x1
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y1
+        type: number
+        tags:
+        default:
+        summary:
+      - name: x2
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y2
+        type: number
+        tags:
         default:
         summary:
     returns:
       - type: number
         summary:
   - name: Elastic
-    summary: |
-
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: t
         type: number
+        tags:
         default:
         summary:
       - name: oscillations
         type: number
+        tags:
         default:
         summary:
       - name: springiness
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Exponential
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Quadratic
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Sine
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
         default:
         summary:
     returns:

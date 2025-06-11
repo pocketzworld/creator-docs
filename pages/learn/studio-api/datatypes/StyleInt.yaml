@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleInt.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleInt
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleInt
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleInt.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleInt.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleInt.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleInt
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleInt.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt-operator_eq.html)
+    description:
+    type_a: StyleInt
+    type_b: StyleInt
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

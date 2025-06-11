@@ -4,39 +4,48 @@ summary: |
   [Unity's InputActionReference Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.html)
 description:
 code_samples:
-inherits: 
-  - ScriptableObject
-constructors: 
+inherits:
+  - Class.ScriptableObject
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's InputActionReference.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.InputActionReference
         summary:
-properties: 
+properties:
   - name: action
     summary: |
       [Unity's InputActionReference.action Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference-action.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.InputAction
-methods: 
+methods:
   - name: Create
     summary: |
       [Unity's InputActionReference.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputActionReference.Create.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: action
         type: Class.InputAction
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.InputActionReference
         summary:
@@ -46,11 +55,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: action
         type: Class.InputAction
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -60,8 +72,10 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.InputAction
         summary:
-math_operations: 
+math_operations:

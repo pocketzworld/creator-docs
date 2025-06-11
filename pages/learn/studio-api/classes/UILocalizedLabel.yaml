@@ -1,123 +1,160 @@
 name: UILocalizedLabel
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.UILabel
-constructors: 
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.UILocalizedLabel
         summary:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: localizedString
         type: DataType.LocalizedString
+        tags:
         default:
-        summary: 
+        summary:
       - name: param1
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param2
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param3
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param4
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param5
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UILocalizedLabel
         summary:
-properties: 
-methods: 
+properties:
+methods:
   - name: SetPluralText
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: localizedString
         type: DataType.LocalizedString
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: param2
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param3
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param4
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param5
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: SetText
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: localizedString
         type: DataType.LocalizedString
+        tags:
         default:
-        summary: 
+        summary:
       - name: param1
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param2
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param3
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param4
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param5
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

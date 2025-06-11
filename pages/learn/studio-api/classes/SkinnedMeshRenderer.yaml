@@ -4,23 +4,28 @@ summary: |
   [Unity's SkinnedMeshRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.Renderer
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: bones
     summary: |
       [Unity's SkinnedMeshRenderer.bones Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-bones.html)
     description:
     is_static: false
     code_samples:
-    type: {Transform}
+    tags:
+      - ClientOnly
+    type: {Class.Transform}
   - name: forceMatrixRecalculationPerRender
     summary: |
       [Unity's SkinnedMeshRenderer.forceMatrixRecalculationPerRender Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer-forceMatrixRecalculationPerRender.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: rootBone
     summary: |
@@ -28,6 +33,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Transform
   - name: sharedMesh
     summary: |
@@ -35,6 +42,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Mesh
   - name: skinnedMotionVectors
     summary: |
@@ -42,6 +51,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: updateWhenOffscreen
     summary: |
@@ -49,19 +60,24 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-methods: 
+methods:
   - name: BakeMesh
     summary: |
       [Unity's SkinnedMeshRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SkinnedMeshRenderer.BakeMesh.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: mesh
         type: Class.Mesh
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -71,15 +87,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: mesh
         type: Class.Mesh
+        tags:
         default:
-        summary: 
+        summary:
       - name: useScale
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -89,11 +109,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -103,15 +126,20 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

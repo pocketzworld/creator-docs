@@ -4,50 +4,59 @@ summary: |
   [Unity's Align Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Auto
     summary: |
-      [Unity's Align.Auto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align-Auto.html)
+      [Unity's Align.Auto Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align.Auto.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Align
   - name: Center
     summary: |
-      [Unity's Align.Center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align-Center.html)
+      [Unity's Align.Center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align.Center.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Align
   - name: FlexEnd
     summary: |
-      [Unity's Align.FlexEnd Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align-FlexEnd.html)
+      [Unity's Align.FlexEnd Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align.FlexEnd.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Align
   - name: FlexStart
     summary: |
-      [Unity's Align.FlexStart Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align-FlexStart.html)
+      [Unity's Align.FlexStart Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align.FlexStart.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Align
   - name: Stretch
     summary: |
-      [Unity's Align.Stretch Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align-Stretch.html)
+      [Unity's Align.Stretch Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Align.Stretch.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Align
-methods: 
-math_operations: 
+methods:
+math_operations:

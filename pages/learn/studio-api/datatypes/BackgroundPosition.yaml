@@ -4,19 +4,23 @@ summary: |
   [Unity's BackgroundPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's BackgroundPosition.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: BackgroundPositionKeyword
+        type: Enum.BackgroundPositionKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.BackgroundPosition
         summary:
@@ -26,45 +30,67 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: BackgroundPositionKeyword
+        type: Enum.BackgroundPositionKeyword
+        tags:
         default:
-        summary: 
+        summary:
       - name: offset
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.BackgroundPosition
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's BackgroundPosition.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: BackgroundPositionKeyword
+    tags:
+      - ClientOnly
+    type: Enum.BackgroundPositionKeyword
   - name: offset
     summary: |
       [Unity's BackgroundPosition.offset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-offset.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Length
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's BackgroundPosition.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.BackgroundPosition
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's BackgroundPosition.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-operator_eq.html)
+    description:
+    type_a: BackgroundPosition
+    type_b: BackgroundPosition
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

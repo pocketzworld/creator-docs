@@ -1,214 +1,192 @@
-name: UILabel
-type: classes
+name: UI
+type: services
 summary:
 description:
 code_samples:
 inherits:
-  - Class.TextElement
 tags:
 constructors:
-  - name: new
-    summary: |
-      Construct an empty label
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: Class.UILabel
-        summary:
 properties:
-  - name: autoSizingFontSize
+  - name: EmoteSelected
     summary:
     description:
     is_static: false
     code_samples:
     tags:
       - ClientOnly
-    type: number
-  - name: minFontSize
+      - ReadOnly
+    type: Class.Event
+  - name: EmotesClosed
     summary:
     description:
     is_static: false
     code_samples:
     tags:
       - ClientOnly
-    type: number
-  - name: onLinkPress
+      - ReadOnly
+    type: Class.Event
+  - name: EmotesOpened
     summary:
     description:
     is_static: false
     code_samples:
     tags:
       - ClientOnly
-    type: (string) -> ()
-  - name: titlecase
-    summary: |
-      Set the text field to titlecase mode.  Node that this will not change the current value of
-      the text, you must use SetText again to cause it to be titlecased. Converts the first letter
-      of each word to uppercase except for all caps words, which are considered to be acronyms.
-      If used in conjunction with Uppercase, the text will be uppercased.
+      - ReadOnly
+    type: Class.Event
+  - name: aboveChat
+    summary:
     description:
     is_static: false
     code_samples:
     tags:
       - ClientOnly
-    type: boolean
-  - name: uppercase
-    summary: |
-      Set the text field to uppercase mode.  Node that this will not change the current value of
-      the text, you must use SetText again to cause it to be uppercased.
+      - ReadOnly
+    type: Class.VisualElement
+  - name: hud
+    summary:
     description:
     is_static: false
     code_samples:
     tags:
       - ClientOnly
-    type: boolean
+      - ReadOnly
+    type: Class.VisualElement
+  - name: popupRoot
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.VisualElement
 methods:
-  - name: AdjustFontSize
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: CancelPendingDecoratedLinksFetch
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Dispose
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: EmojiPrelocalized
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: text
-        type: string
-        tags:
-        default:
-        summary:
-      - name: skipValidation
-        type: boolean
-        tags:
-          - optional
-        default:
-        summary:
-      - name: skipRtlValidation
-        type: boolean
-        tags:
-          - optional
-        default:
-        summary:
-    returns:
-      - type: Class.UILabel
-        summary:
-  - name: PreLocalized
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: text
-        type: string
-        tags:
-        default:
-        summary:
-      - name: skipValidation
-        type: boolean
-        tags:
-          - optional
-        default:
-        summary:
-      - name: skipRtlValidation
-        type: boolean
-        tags:
-          - optional
-        default:
-        summary:
-    returns:
-      - type: Class.UILabel
-        summary:
-  - name: SetEmojiPrelocalizedText
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: value
-        type: string
-        tags:
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: SetEmojiPrelocalizedText
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: value
-        type: string
-        tags:
-        default:
-        summary:
-      - name: skipValidation
-        type: boolean
-        tags:
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: SetPrelocalizedText
+  - name: CloseCloset
     summary: |
-      Set label text using a pre-localized string.
+      Closes the closet UI if it is open.
     description:
     is_static: false
     code_samples:
     tags:
       - ClientOnly
     parameters:
-      - name: value
+    returns:
+      - type: void
+        summary:
+  - name: ExecuteDeepLink
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: url
         type: string
         tags:
         default:
         summary:
-      - name: skipRtlValidation
+    returns:
+      - type: void
+        summary:
+  - name: GetNameFromId
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (string) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetNamesFromIds
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: userIds
+        type: {string}
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (...any) -> (...any)
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OpenCloset
+    summary: |
+      Open a closet view with the player inventory and a collection of clothing items.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: title
+        type: string
+        tags:
+        default:
+        summary:
+      - name: outfitSaved
+        type: (CharacterOutfit) -> ()
+        tags:
+        default:
+        summary:
+      - name: contents
+        type: {Class.CharacterClothing}
+        tags:
+          - optional
+        default:
+        summary:
+      - name: showPlayerInventory
         type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+      - name: defaultOutfit
+        type: Class.CharacterOutfit
+        tags:
+          - optional
+        default:
+        summary:
+      - name: saveButtonText
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: defaultToFirstTab
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+      - name: closedWithoutSaving
+        type: () -> ()
         tags:
           - optional
         default:
@@ -216,7 +194,7 @@ methods:
     returns:
       - type: void
         summary:
-  - name: SetSocialEmojiText
+  - name: OpenMiniProfile
     summary:
     description:
     is_static: false
@@ -224,7 +202,23 @@ methods:
     tags:
       - ClientOnly
     parameters:
-      - name: value
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OpenMiniProfile
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: userId
         type: string
         tags:
         default:
@@ -232,7 +226,7 @@ methods:
     returns:
       - type: void
         summary:
-  - name: SetSocialText
+  - name: OpenPopup
     summary:
     description:
     is_static: false
@@ -240,9 +234,26 @@ methods:
     tags:
       - ClientOnly
     parameters:
-      - name: value
-        type: string
+      - name: ve
+        type: Class.UIView
         tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: TakeRoomSnapshot
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: snapshotClosed
+        type: () -> ()
+        tags:
+          - optional
         default:
         summary:
     returns:

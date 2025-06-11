@@ -4,21 +4,25 @@ summary: |
   [Unity's ColorUtility Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: ToHtmlStringRGB
     summary: |
       [Unity's ColorUtility.ToHtmlStringRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ColorUtility.ToHtmlStringRGB.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: color
         type: DataType.Color
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
@@ -28,11 +32,14 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: color
         type: DataType.Color
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
@@ -42,13 +49,17 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: htmlString
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
       - type: DataType.Color
         summary:
+math_operations:

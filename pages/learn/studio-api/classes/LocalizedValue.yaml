@@ -1,184 +1,217 @@
 name: LocalizedValue
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: DayAndMonth
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: DayAndMonthAndFullYear
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: DayAndMonthAndYear
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: HoursMinutes
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: duration
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: HoursMinutesSeconds
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: duration
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: MonthAndYear
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: abbreviated
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: Numeric
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: decimalPoints
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: abbreviated
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: TimeAgo
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: shortForm
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: TimeIn
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: shortForm
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: TimeLeft
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: secondsLeft
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: TimeSpan
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: seconds
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
+math_operations:

@@ -1,18 +1,21 @@
 name: CharacterAnimationEvent
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: functionName
     summary: |
       We used to call it FunctionName so we are keeping this around until we can get rid of it
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: name
     summary: |
@@ -20,5 +23,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
-methods: 
+methods:
+math_operations:

@@ -4,36 +4,45 @@ summary: |
   [Unity's IStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: alignContent
     summary: |
       [Unity's IStyle.alignContent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-alignContent.html)
     description:
     is_static: false
     code_samples:
-    type: Align
+    tags:
+      - ClientOnly
+    type: Enum.Align
   - name: alignItems
     summary: |
       [Unity's IStyle.alignItems Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-alignItems.html)
     description:
     is_static: false
     code_samples:
-    type: Align
+    tags:
+      - ClientOnly
+    type: Enum.Align
   - name: alignSelf
     summary: |
       [Unity's IStyle.alignSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-alignSelf.html)
     description:
     is_static: false
     code_samples:
-    type: Align
+    tags:
+      - ClientOnly
+    type: Enum.Align
   - name: backgroundColor
     summary: |
       [Unity's IStyle.backgroundColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-backgroundColor.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: backgroundImage
     summary: |
@@ -41,6 +50,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Texture2D
   - name: backgroundPositionX
     summary: |
@@ -48,6 +59,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleBackgroundPosition
   - name: backgroundPositionY
     summary: |
@@ -55,6 +68,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleBackgroundPosition
   - name: backgroundRepeat
     summary: |
@@ -62,6 +77,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleBackgroundRepeat
   - name: backgroundSize
     summary: |
@@ -69,6 +86,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleBackgroundSize
   - name: borderBottomColor
     summary: |
@@ -76,6 +95,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: borderBottomLeftRadius
     summary: |
@@ -83,6 +104,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: borderBottomRightRadius
     summary: |
@@ -90,6 +113,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: borderBottomWidth
     summary: |
@@ -97,6 +122,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: borderLeftColor
     summary: |
@@ -104,6 +131,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: borderLeftWidth
     summary: |
@@ -111,6 +140,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: borderRightColor
     summary: |
@@ -118,6 +149,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: borderRightWidth
     summary: |
@@ -125,6 +158,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: borderTopColor
     summary: |
@@ -132,6 +167,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: borderTopLeftRadius
     summary: |
@@ -139,6 +176,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: borderTopRightRadius
     summary: |
@@ -146,6 +185,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: borderTopWidth
     summary: |
@@ -153,6 +194,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: bottom
     summary: |
@@ -160,6 +203,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: color
     summary: |
@@ -167,6 +212,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: display
     summary: |
@@ -174,13 +221,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: DisplayStyle
+    tags:
+      - ClientOnly
+    type: Enum.DisplayStyle
   - name: flexBasis
     summary: |
       [Unity's IStyle.flexBasis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-flexBasis.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: flexDirection
     summary: |
@@ -188,13 +239,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: FlexDirection
+    tags:
+      - ClientOnly
+    type: Enum.FlexDirection
   - name: flexGrow
     summary: |
       [Unity's IStyle.flexGrow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-flexGrow.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: flexShrink
     summary: |
@@ -202,6 +257,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: flexWrap
     summary: |
@@ -209,13 +266,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Wrap
+    tags:
+      - ClientOnly
+    type: Enum.Wrap
   - name: fontSize
     summary: |
       [Unity's IStyle.fontSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-fontSize.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: height
     summary: |
@@ -223,6 +284,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: justifyContent
     summary: |
@@ -230,13 +293,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Justify
+    tags:
+      - ClientOnly
+    type: Enum.Justify
   - name: left
     summary: |
       [Unity's IStyle.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-left.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: letterSpacing
     summary: |
@@ -244,6 +311,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: marginBottom
     summary: |
@@ -251,6 +320,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: marginLeft
     summary: |
@@ -258,6 +329,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: marginRight
     summary: |
@@ -265,6 +338,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: marginTop
     summary: |
@@ -272,6 +347,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: maxHeight
     summary: |
@@ -279,6 +356,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: maxWidth
     summary: |
@@ -286,6 +365,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: minHeight
     summary: |
@@ -293,6 +374,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: minWidth
     summary: |
@@ -300,6 +383,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: opacity
     summary: |
@@ -307,6 +392,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: overflow
     summary: |
@@ -314,13 +401,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Overflow
+    tags:
+      - ClientOnly
+    type: Enum.Overflow
   - name: paddingBottom
     summary: |
       [Unity's IStyle.paddingBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-paddingBottom.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: paddingLeft
     summary: |
@@ -328,6 +419,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: paddingRight
     summary: |
@@ -335,6 +428,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: paddingTop
     summary: |
@@ -342,6 +437,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: position
     summary: |
@@ -349,13 +446,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: Position
+    tags:
+      - ClientOnly
+    type: Enum.Position
   - name: right
     summary: |
       [Unity's IStyle.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-right.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: rotate
     summary: |
@@ -363,6 +464,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleRotate
   - name: scale
     summary: |
@@ -370,6 +473,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleScale
   - name: textOverflow
     summary: |
@@ -377,13 +482,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: TextOverflow
+    tags:
+      - ClientOnly
+    type: Enum.TextOverflow
   - name: textShadow
     summary: |
       [Unity's IStyle.textShadow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-textShadow.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleTextShadow
   - name: top
     summary: |
@@ -391,6 +500,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: transformOrigin
     summary: |
@@ -398,6 +509,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleTransformOrigin
   - name: translate
     summary: |
@@ -405,6 +518,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleTranslate
   - name: unityBackgroundImageTintColor
     summary: |
@@ -412,6 +527,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: unityFontStyleAndWeight
     summary: |
@@ -419,20 +536,26 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: FontStyle
+    tags:
+      - ClientOnly
+    type: Enum.FontStyle
   - name: unityOverflowClipBox
     summary: |
       [Unity's IStyle.unityOverflowClipBox Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-unityOverflowClipBox.html)
     description:
     is_static: false
     code_samples:
-    type: OverflowClipBox
+    tags:
+      - ClientOnly
+    type: Enum.OverflowClipBox
   - name: unityParagraphSpacing
     summary: |
       [Unity's IStyle.unityParagraphSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-unityParagraphSpacing.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: unitySliceBottom
     summary: |
@@ -440,6 +563,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleInt
   - name: unitySliceLeft
     summary: |
@@ -447,6 +572,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleInt
   - name: unitySliceRight
     summary: |
@@ -454,6 +581,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleInt
   - name: unitySliceScale
     summary: |
@@ -461,6 +590,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: unitySliceTop
     summary: |
@@ -468,6 +599,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleInt
   - name: unityTextAlign
     summary: |
@@ -475,13 +608,17 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: TextAnchor
+    tags:
+      - ClientOnly
+    type: Enum.TextAnchor
   - name: unityTextOutlineColor
     summary: |
       [Unity's IStyle.unityTextOutlineColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-unityTextOutlineColor.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleColor
   - name: unityTextOutlineWidth
     summary: |
@@ -489,6 +626,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleFloat
   - name: unityTextOverflowPosition
     summary: |
@@ -496,27 +635,35 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: TextOverflowPosition
+    tags:
+      - ClientOnly
+    type: Enum.TextOverflowPosition
   - name: visibility
     summary: |
       [Unity's IStyle.visibility Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-visibility.html)
     description:
     is_static: false
     code_samples:
-    type: Visibility
+    tags:
+      - ClientOnly
+    type: Enum.Visibility
   - name: whiteSpace
     summary: |
       [Unity's IStyle.whiteSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-whiteSpace.html)
     description:
     is_static: false
     code_samples:
-    type: WhiteSpace
+    tags:
+      - ClientOnly
+    type: Enum.WhiteSpace
   - name: width
     summary: |
       [Unity's IStyle.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IStyle-width.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
   - name: wordSpacing
     summary: |
@@ -524,6 +671,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.StyleLength
-methods: 
-math_operations: 
+methods:
+math_operations:

@@ -1,28 +1,22 @@
 name: VisualElementFactory
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: name
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: string
 methods:
   - name: new
-    summary: |
-
+    summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
-      - type: Class.VisualElement
+      - type: Class.VisualElementFactory
         summary:
 math_operations:

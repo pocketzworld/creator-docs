@@ -4,81 +4,108 @@ summary: |
   Represents a localized string within a LocalizedDatabase.
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: none
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.LocalizedString
   - name: index
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
   - name: Format
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: param1
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param2
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param3
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param4
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param5
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
   - name: FormatPlural
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: param2
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param3
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param4
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: param5
         type: string
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: string
         summary:
+math_operations:

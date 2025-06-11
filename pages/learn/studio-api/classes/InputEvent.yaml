@@ -4,16 +4,20 @@ summary: |
   [Unity's InputEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: eventTypeId
     summary: |
       [Unity's InputEvent.eventTypeId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent-eventTypeId.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: newData
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: previousData
     summary: |
@@ -28,24 +35,31 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
-methods: 
+methods:
   - name: GetPooled
     summary: |
       [Unity's InputEvent.GetPooled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.InputEvent.GetPooled.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: previousData
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: newData
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.InputEvent
         summary:
-math_operations: 
+math_operations:

@@ -4,68 +4,80 @@ summary: |
   Provides data to a collection using a delegate
 description:
 code_samples:
-inherits: 
-  - UICollectionProvider
-constructors: 
+inherits:
+  - Class.UICollectionProvider
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cellFromIndex
         type: (number) -> (UIView)
+        tags:
         default:
-        summary: 
+        summary:
       - name: bindCell
         type: (UIView, number) -> ()
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UICollectionDelegateProvider
         summary:
-properties: 
-methods: 
+properties:
+methods:
   - name: BindCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cell
         type: Class.UIView
+        tags:
         default:
-        summary: 
+        summary:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: CellForIndex
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UIView
         summary:
   - name: Dispose
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
+math_operations:
