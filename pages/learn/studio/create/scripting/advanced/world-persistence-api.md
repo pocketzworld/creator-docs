@@ -8,7 +8,7 @@ By integrating this API, you can create **dynamic, data-driven experiences** tha
 
 ## API Documentation
 
-The full API reference is available [here](https://api.worlds.highrise.game/).
+The full API reference is available [here](https://api.worlds.highrise.game/doc).
 
 ## Key Features
 
@@ -22,7 +22,7 @@ The full API reference is available [here](https://api.worlds.highrise.game/).
 To use the API, you need an **API token** with the appropriate permissions.
 
 ### **How to Issue an API Token:**
-1. Visit the [Creator Portal](https://create.highrise.game/).
+1. Visit the [Creator Portal](https://api.worlds.highrise.game/doc).
 2. Log in with your **Highrise account**.
 3. Navigate to the **Creations** tab and select your **World**.
 4. Under **Management**, locate **API Key** and click **Issue Token**.
@@ -36,4 +36,4 @@ To use the API, you need an **API token** with the appropriate permissions.
 
 The **Highrise World Persistence API** provides a powerful way to manage **game data, leaderboards, inventories, and more**. By using this API, you can create **engaging, persistent experiences** for your players.
 
-For more details, refer to the [official API documentation](https://api.worlds.highrise.game/).
+For more details, refer to the [official API documentation](https://api.worlds.highrise.game/doc).
