@@ -144,6 +144,10 @@ The gold will not be deducted from your account when testing in the Unity Editor
 When you want to prompt the player to purchase an item, you can call the `PromptPurchase` function and pass the product
 ID and a callback function.
 
+<Note type="warning">
+Do not rely on the `PromptPurchase` **paid** callback to determine if a purchase was successful. Always validate purchases on the server side using PurchaseHandler to ensure security and prevent potential exploits or issues in the purchase flow.
+</Note>
+
 ```lua
 -- Prompt the player to purchase a token
 Payments.PromptPurchase("token_100", function(paid: boolean)
