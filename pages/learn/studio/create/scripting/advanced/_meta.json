@@ -17,17 +17,17 @@
   "taphandlers":{
     "title": "Tap Handlers"
   },
-  "moderation":{
-    "title": "Moderation"
-  },
   "client-server-communication": {
     "title": "Client-Server Communication"
   },
-  "player-character-events":{
-    "title": "Player and Character Events"
-  },
   "network-values":{
     "title": "Network Values"
+  },
+  "moderation":{
+    "title": "Moderation"
+  },
+  "player-character-events":{
+    "title": "Player and Character Events"
   },
   "tracking-players": {
     "title": "Tracking Players"
