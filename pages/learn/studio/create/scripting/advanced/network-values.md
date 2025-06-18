@@ -1,69 +1,140 @@
+
 # Network Values
 
 ## Introduction
-Network values are variables that send an event when their value changes, allowing data synchronization between the client, server, and players. They can be used in either `Client/Server` or `Module` scripts.
 
-### Value Types
-- `IntValue`
-- `StringValue`
-- `BoolValue`
-- `Vector3Value`
-- `NumberValue`
-- `TableValue`
+Network Values are synchronized variables used to share data between the client and server. They trigger an event whenever their value changes. These are essential for keeping player data, game states, or positions in sync across the network.
 
-All network values can now accept an optional player object as a parameter during creation. When a player is specified, only that player will receive updates for the respective value.
+They can be created in either `Client/Server` or `Module` scripts.
 
-#### Example:
+### Available Network Value Types:
+
+- **IntValue** – Stores integers (e.g., score, level)
+- **StringValue** – Stores strings (e.g., job, nickname)
+- **BoolValue** – Stores true/false (e.g., isReady, inGame)
+- **Vector3Value** – Stores position (e.g., Vector3 coordinates)
+- **NumberValue** – Stores decimal numbers (e.g., speed, time)
+- **TableValue** – Stores tables/dictionaries (e.g., player stats)
+
+All network values optionally accept a **player** parameter. If provided, only that player will receive updates for that value. Otherwise, it syncs globally.
+
+## Creating a Network Value
+
+Each value type is created using `.new()`. The syntax is consistent across types:
+
 ```lua
-local score = IntValue.new("Score", 0, player) 
-local job = StringValue.new("Job", "Unemployed", player)
-local inGame = BoolValue.new("InGame", false, player)
-local position = Vector3Value.new("Position", Vector3.new(0, 0, 0), player)
+local value = TypeValue.new("Name", initialValue, player)
 ```
 
-### Changing Values
-On the server, you can modify a value using its `.value` property. Any changes to the value on the server will automatically be sent to all clients, or only to the specified player if one was provided.
+### Parameters:
+- **Name**: A unique identifier string.
+- **InitialValue**: The starting value.
+- **Player** *(optional)*: A player instance for player-specific synchronization.
 
-#### Example:
+## Example of Creating Each Type:
+
 ```lua
-function self:ServerAwake()
-    updateScoreEvent:Connect(function(player)
-        score.value = score.value + 1 -- Broadcast to all clients
-    end)
-end
+local score = IntValue.new("Score", 0, player)                     -- Integer
+local job = StringValue.new("Job", "Unemployed", player)           -- String
+local isReady = BoolValue.new("IsReady", false, player)            -- Boolean
+local position = Vector3Value.new("Position", Vector3(0,0,0), player) -- Vector3
+local speed = NumberValue.new("Speed", 1.5, player)                -- Decimal
+local stats = TableValue.new("Stats", {kills=0, deaths=0}, player) -- Table
 ```
 
-### Player-Specific Network Values
-When a network value is created with a specific player, it ensures that only that player will receive updates for that value. The value can still be accessed by the server and updated for the player as needed.
+## Changing Values
 
-#### Example: Server-Side
+To change the value on the server, use the `.value` property. Updates automatically propagate to the corresponding clients or the specific player if assigned.
+
+<Note type="warning">
+When changing values, ensure you are doing so on the server side to maintain synchronization.
+</Note>
+
 ```lua
-function self:ServerStart()
-    scene.PlayerJoined:Connect(function(scene, player)
-        local playerTable = TableValue.new("PlayerData", {}, player)
-        playerTable.value = { player.name }
-    end)
-end
+score.value = score.value + 1
+job.value = "Builder"
+position.value = Vector3.new(10, 5, 0)
 ```
 
-### Client-Server Synchronization
-Network values are linked between the client and server using their names. As long as the name matches, the value can be created in different places, such as the client and server, and still synchronize correctly.
+## Listening for Changes
 
-### Connecting to Value Changes on the Client
-On the client, you can listen to the value's `Changed` event to react when the value is updated. This event passes both the new and old values.
+On the **client**, you can listen for changes using the `Changed` event. This event returns both the **new value** and the **old value**.
 
-#### Example:
 ```lua
 function self:ClientAwake()
     score.Changed:Connect(function(newVal, oldVal)
-        print("Score changed from " .. tostring(oldVal) .. " to " .. tostring(newVal))
+        print("Score changed from " .. oldVal .. " to " .. newVal)
     end)
 end
 ```
 
-### Important Note
-It's important to remember that the name of the value (and the player, if specified) links the value between the client and server. This allows you to create the value in different places as long as the name matches. Player-specific values help avoid sending unnecessary data to other clients, reducing network load.
+## Player-Specific Network Values
+
+When a value is created with a player as the third argument, **only that player** will receive updates for it.
+
+```lua
+function self:ServerStart()
+    scene.PlayerJoined:Connect(function(scene, player)
+        local personalData = TableValue.new("PlayerData", {}, player)
+        personalData.value = {name = player.name, level = 1}
+    end)
+end
+```
+
+## Synchronization Rules
+
+- **Name-based linking:** Values are matched between server and client by their name and optional player object.
+- If a value is created on both server and client with the same name, they will sync automatically.
+- If the player parameter is set, only that player sees the updates.
+
+## Complete Example:
+
+```lua
+--!Type(Module)
+
+local IncrementScoreRequest = Event.new("IncrementScoreRequest")
+local players = {}
+
+function TrackPlayers(game)
+    game.PlayerConnected:Connect(function(player)
+        players[player] = {
+            player = player,
+            score = IntValue.new("Score", 0, player),
+            job = StringValue.new("Job", "Unemployed", player),
+            isReady = BoolValue.new("IsReady", false, player),
+            position = Vector3Value.new("Position", Vector3(0,0,0), player),
+            stats = TableValue.new("Stats", {kills=0, deaths=0}, player),
+        }
+    end)
+
+    game.PlayerDisconnected:Connect(function(player)
+        players[player] = nil
+    end)
+end
+
+function self:ClientAwake()
+    local player = client.localPlayer
+    local playerInfo = players[player]
+
+    if playerInfo then
+        playerInfo.score.Changed:Connect(function(newVal, oldVal)
+            print("Score changed from " .. oldVal .. " to " .. newVal)
+        end)
+    end
+end
+
+function self:ServerStart()
+    TrackPlayers(server)
+
+    IncrementScoreRequest:Connect(function(player, amount)
+        local playerInfo = players[player]
+        if playerInfo then
+            playerInfo.score.value = playerInfo.score.value + amount
+        end
+    end)
+end
+```
 
 ## Conclusion
 
-Using network values, you can efficiently synchronize data between clients and servers. The functionality for all network values to accept a player object allows you to optimize network usage, sending updates only to relevant players when necessary.
+Network Values are a powerful and simple way to sync data between the client and server. Whether it's player-specific data like scores, positions, or global data like game states, Network Values handle synchronization automatically and efficiently.
