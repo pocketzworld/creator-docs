@@ -4,42 +4,49 @@ summary: |
   [Unity's FontStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Bold
     summary: |
-      [Unity's FontStyle.Bold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle-Bold.html)
+      [Unity's FontStyle.Bold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle.Bold.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.FontStyle
   - name: BoldAndItalic
     summary: |
-      [Unity's FontStyle.BoldAndItalic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle-BoldAndItalic.html)
+      [Unity's FontStyle.BoldAndItalic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle.BoldAndItalic.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.FontStyle
   - name: Italic
     summary: |
-      [Unity's FontStyle.Italic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle-Italic.html)
+      [Unity's FontStyle.Italic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle.Italic.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.FontStyle
   - name: Normal
     summary: |
-      [Unity's FontStyle.Normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle-Normal.html)
+      [Unity's FontStyle.Normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/FontStyle.Normal.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.FontStyle
-methods: 
-math_operations: 
+methods:
+math_operations:

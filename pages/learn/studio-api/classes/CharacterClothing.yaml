@@ -4,39 +4,48 @@ summary: |
   A single item of clothing in a character's outfit.
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: descriptorId
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: paletteId
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.CharacterClothing
         summary:
-properties: 
+properties:
   - name: color
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: id
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
 methods:
+math_operations:

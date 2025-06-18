@@ -1,11 +1,11 @@
 name: UILuaView
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
   - Class.UIView
+tags:
 constructors:
 properties:
 methods:

@@ -1,50 +1,47 @@
-name: FloatChangeEvent
+name: User
 type: classes
 summary:
 description:
 code_samples:
 inherits:
-  - Class.EventBase
 tags:
 constructors:
 properties:
-  - name: eventTypeId
+  - name: id
     summary:
     description:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
-    type: number
-  - name: newValue
+    type: string
+  - name: isAgeVerifiedAbove18
     summary:
     description:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
-    type: number
-  - name: previousValue
+    type: boolean
+  - name: isSubscriber
     summary:
     description:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
-    type: number
+    type: boolean
+  - name: name
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
 methods:
-  - name: Dispose
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
 math_operations:

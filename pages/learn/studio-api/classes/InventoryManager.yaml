@@ -4,14 +4,18 @@ summary: |
   Singleton service that provides access to user Inventory events.
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: inventoryChanged
     summary: |
       This event is invoked when an item is added or removed from the local user inventory.
     description:
     is_static: false
     code_samples:
-    type: LuaEvent
+    tags:
+      - ClientOnly
+    type: Class.Event
 methods:
+math_operations:

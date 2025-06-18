@@ -1,142 +1,417 @@
 name: UITextField
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
-  - Class.VisualElement
+  - Class.UITextFieldBase
+tags:
 constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: Class.UITextField
+        summary:
 properties:
-  - name: inputLengthLimit
+  - name: showPlaceholderOnEmptyFocus
     summary: |
-
+      Indicates if the placeholder should be visible when the field is focused in, but empty.
+      Works only for mobile platforms, on desktop, the behaviour is equivalent to this flag being set to true
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: autoCorrection
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: cursorColor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: cursorIndex
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: number
+  - name: cursorPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
   - name: disableAutocorrection
-    summary: |
-
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-  - name: showSearchIcon
-    summary: |
-
+  - name: doubleClickSelectsWord
+    summary:
     description:
     is_static: false
     code_samples:
-    type: boolean
-  - name: showClearButton
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: enableMarkup
     summary: |
-
+      Allows the text field to accept rich text.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-  - name: showPlaceholderOnEmptyFocus
-    summary: |
-
+  - name: hideMobileInput
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: inputLengthLimit
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: isDelayed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isPasswordField
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isReadOnly
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: label
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: string
+  - name: labelElement
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Label
+  - name: maskChar
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Char
+  - name: maxLength
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: selectAllOnFocus
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: selectAllOnMouseUp
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: selectIndex
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: selectionColor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: showClearButton
+    summary: |
+      Set to true to show a clear button on the right side of the text input when text is available.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: showMixedValue
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: showSearchIcon
+    summary: |
+      Set to true to show a search icon on the left side of the text field
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: text
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: textEdition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: ITextEdition
+  - name: textSelection
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: ITextSelection
+  - name: tripleClickSelectsLine
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: boolean
 methods:
-  - name: SetDecoratedValueWithoutNotify
-    summary: |
-
+  - name: BlurOnReturn
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Dispose
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: FocusedTextField
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: Class.UITextField
+        summary:
+  - name: IsTextFieldFocused
+    summary: |
+      Returns true if a text field currently has focus
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: LeftTextMargin
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: MeasureTextHeight
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: SelectAll
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SelectNone
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SelectRange
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: cursorIndex
+        type: number
+        tags:
+        default:
+        summary:
+      - name: selectionIndex
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetDecoratedValueWithoutNotify
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: value
         type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetPlaceholderText
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: str
+        type: string
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
   - name: SetValueWithoutNotify
-    summary: |
-
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: newValue
         type: string
+        tags:
         default:
         summary:
     returns:
       - type: void
-        summary:
-  - name: Dispose
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: MeasureTextHeight
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: number
-        summary:
-  - name: LeftTextMargin
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: number
-        summary:
-  - name: IsTextFieldFocused
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-    returns:
-      - type: boolean
-        summary:
-  - name: FocusedTextField
-    summary: |
-
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-    returns:
-      - type: Class.UITextField
-        summary:
-  - name: new
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: Class.UITextField
         summary:
 math_operations:

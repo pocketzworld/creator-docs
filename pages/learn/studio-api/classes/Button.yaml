@@ -4,16 +4,19 @@ summary: |
   [Unity's Button Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button.html)
 description:
 code_samples:
-inherits: 
-  - TextElement
-constructors: 
+inherits:
+  - Class.TextElement
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's Button.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.Button
         summary:
@@ -23,21 +26,27 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: clickEvent
         type: () -> ()
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Button
         summary:
-properties: 
+properties:
   - name: ussClassName
     summary: |
       [Unity's Button.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ussClassName.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
-methods: 
-math_operations: 
+methods:
+math_operations:

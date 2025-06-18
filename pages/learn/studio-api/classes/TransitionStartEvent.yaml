@@ -4,16 +4,20 @@ summary: |
   [Unity's TransitionStartEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransitionStartEvent.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: elapsedTime
     summary: |
       [Unity's TransitionStartEvent.elapsedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransitionStartEvent-elapsedTime.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: eventTypeId
     summary: |
@@ -21,6 +25,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
-math_operations: 
+methods:
+math_operations:

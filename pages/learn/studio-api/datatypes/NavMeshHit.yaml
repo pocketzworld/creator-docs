@@ -4,15 +4,18 @@ summary: |
   [Unity's NavMeshHit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: distance
     summary: |
       [Unity's NavMeshHit.distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshHit-distance.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: hit
     summary: |
@@ -20,6 +23,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: mask
     summary: |
@@ -27,6 +32,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: normal
     summary: |
@@ -34,6 +41,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
   - name: position
     summary: |
@@ -41,5 +50,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
 methods:
+math_operations:

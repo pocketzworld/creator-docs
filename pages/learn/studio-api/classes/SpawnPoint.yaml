@@ -1,9 +1,10 @@
-name: Callback
+name: SpawnPoint
 type: classes
 summary:
 description:
 code_samples:
 inherits:
+  - Class.MonoBehaviour
 tags:
 constructors:
 properties:

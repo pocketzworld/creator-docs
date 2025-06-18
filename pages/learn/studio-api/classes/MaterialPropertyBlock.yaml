@@ -4,34 +4,42 @@ summary: |
   [Unity's MaterialPropertyBlock Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's MaterialPropertyBlock.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.MaterialPropertyBlock
         summary:
-properties: 
+properties:
   - name: isEmpty
     summary: |
       [Unity's MaterialPropertyBlock.isEmpty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock-isEmpty.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
-methods: 
+methods:
   - name: Clear
     summary: |
       [Unity's MaterialPropertyBlock.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyBlock.Clear.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -41,11 +49,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
@@ -55,11 +66,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
@@ -69,11 +83,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -83,11 +100,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -97,11 +117,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: {number}
         summary:
@@ -111,11 +134,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: {number}
         summary:
@@ -125,11 +151,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -139,11 +168,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -153,11 +185,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -167,11 +202,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
@@ -181,11 +219,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Matrix4x4
         summary:
@@ -195,11 +236,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Matrix4x4
         summary:
@@ -209,13 +253,16 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
-      - type: {Matrix4x4}
+      - type: {DataType.Matrix4x4}
         summary:
   - name: GetMatrixArray
     summary: |
@@ -223,13 +270,16 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
-      - type: {Matrix4x4}
+      - type: {DataType.Matrix4x4}
         summary:
   - name: GetTexture
     summary: |
@@ -237,11 +287,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Texture
         summary:
@@ -251,11 +304,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.Texture
         summary:
@@ -265,11 +321,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Vector4
         summary:
@@ -279,11 +338,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Vector4
         summary:
@@ -293,13 +355,16 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
-      - type: {Vector4}
+      - type: {DataType.Vector4}
         summary:
   - name: GetVectorArray
     summary: |
@@ -307,13 +372,16 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
-      - type: {Vector4}
+      - type: {DataType.Vector4}
         summary:
   - name: HasBuffer
     summary: |
@@ -321,11 +389,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -335,11 +406,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -349,11 +423,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -363,11 +440,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -377,11 +457,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -391,11 +474,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -405,11 +491,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -419,11 +508,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -433,11 +525,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -447,11 +542,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -461,11 +559,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -475,11 +576,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -489,11 +593,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -503,11 +610,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -517,11 +627,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -531,11 +644,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -545,11 +661,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -559,11 +678,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -573,11 +695,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -587,11 +712,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -601,15 +729,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: DataType.Color
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -619,15 +751,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: DataType.Color
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -637,15 +773,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -655,15 +795,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -673,15 +817,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: values
         type: {number}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -691,15 +839,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: values
         type: {number}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -709,15 +861,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -727,15 +883,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -745,15 +905,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -763,15 +927,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -781,15 +949,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: DataType.Matrix4x4
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -799,15 +971,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: DataType.Matrix4x4
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -817,15 +993,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: values
-        type: {Matrix4x4}
+        type: {DataType.Matrix4x4}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -835,15 +1015,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: values
-        type: {Matrix4x4}
+        type: {DataType.Matrix4x4}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -853,15 +1037,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: Class.Texture
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -871,15 +1059,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: Class.Texture
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -889,15 +1081,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: DataType.Vector4
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -907,15 +1103,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: value
         type: DataType.Vector4
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -925,15 +1125,19 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: nameID
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: values
-        type: {Vector4}
+        type: {DataType.Vector4}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -943,15 +1147,20 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: name
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: values
-        type: {Vector4}
+        type: {DataType.Vector4}
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

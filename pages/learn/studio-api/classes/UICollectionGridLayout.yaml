@@ -4,124 +4,161 @@ summary: |
   Implements a grid layout within the collection view using fixed item sizes
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       Create a grid layout from uxml
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: spacing
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: columnCount
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: fixedHeight
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: centerContent
         type: boolean
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
       - name: cellAspectRatio
         type: number
+        tags:
+          - optional
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UICollectionGridLayout
         summary:
-properties: 
+properties:
   - name: count
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
   - name: Dispose
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: EnforceColumnCount
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: GetCellOffset
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
   - name: GetVisibleCell
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.UIView
         summary:
   - name: Insert
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: InvalidateAllItemSizes
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: Rebuild
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -131,71 +168,84 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: Remove
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: RemoveAll
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: Update
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: min
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: max
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: number
         summary:
   - name: UpdateSize
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: count
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

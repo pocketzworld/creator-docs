@@ -4,42 +4,49 @@ summary: |
   [Unity's AngleUnit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Degree
     summary: |
-      [Unity's AngleUnit.Degree Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit-Degree.html)
+      [Unity's AngleUnit.Degree Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit.Degree.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.AngleUnit
   - name: Gradian
     summary: |
-      [Unity's AngleUnit.Gradian Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit-Gradian.html)
+      [Unity's AngleUnit.Gradian Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit.Gradian.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.AngleUnit
   - name: Radian
     summary: |
-      [Unity's AngleUnit.Radian Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit-Radian.html)
+      [Unity's AngleUnit.Radian Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit.Radian.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.AngleUnit
   - name: Turn
     summary: |
-      [Unity's AngleUnit.Turn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit-Turn.html)
+      [Unity's AngleUnit.Turn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.AngleUnit.Turn.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.AngleUnit
-methods: 
-math_operations: 
+methods:
+math_operations:

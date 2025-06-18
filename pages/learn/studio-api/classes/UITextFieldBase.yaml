@@ -1,176 +1,216 @@
 name: UITextFieldBase
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-  - BindableElement
-constructors: 
+inherits:
+  - Class.BindableElement
+tags:
+constructors:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
-      - type: UITextFieldBase
+      - type: Class.UITextFieldBase
         summary:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: maxLength
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: multiline
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: isPasswordField
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: maskChar
         type: Char
+        tags:
         default:
-        summary: 
+        summary:
     returns:
-      - type: UITextFieldBase
+      - type: Class.UITextFieldBase
         summary:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: label
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
-      - type: UITextFieldBase
+      - type: Class.UITextFieldBase
         summary:
   - name: new
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: label
         type: string
+        tags:
         default:
-        summary: 
+        summary:
       - name: maxLength
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: multiline
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: isPasswordField
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: maskChar
         type: Char
+        tags:
         default:
-        summary: 
-    returns:
-      - type: UITextFieldBase
         summary:
-properties: 
+    returns:
+      - type: Class.UITextFieldBase
+        summary:
+properties:
   - name: emojiParser
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     type: IEmojiParser
   - name: fixRightToLeft
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     type: (string, TextElement) -> (string)
   - name: inputUssClassName
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: labelUssClassName
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: ussClassName
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: autoCorrection
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: cursorColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Color
   - name: cursorIndex
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: cursorPosition
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: doubleClickSelectsWord
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
+  - name: fontSize
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.StyleLength
   - name: fontStyle
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    type: FontStyle
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.FontStyle
   - name: hideMobileInput
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: inputPattern
     summary: |
@@ -179,64 +219,76 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
   - name: isDelayed
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: isPasswordField
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: isReadOnly
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: isShiftReturnModeEnabled
     summary: |
       Enables a mode in which Return key sends a ReturnEvent
       and Shift+Return sends ShiftReturnEvent.
-    Warning: Works only on non-mobile platforms!
+      Warning: Works only on non-mobile platforms!
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: label
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
   - name: labelElement
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Label
   - name: maskChar
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Char
   - name: maxLength
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: multiline
     summary: |
@@ -244,55 +296,67 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: originalValue
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: selectAllOnFocus
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: selectAllOnMouseUp
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: selectIndex
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: selectionColor
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Color
   - name: showMixedValue
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: text
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: textAlign
     summary: |
@@ -300,34 +364,43 @@ properties:
     description:
     is_static: false
     code_samples:
-    type: TextAnchor
+    tags:
+      - ClientOnly
+    type: Enum.TextAnchor
   - name: textEdition
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: ITextEdition
   - name: textElement
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    type: TextElement
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.TextElement
   - name: textSelection
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: ITextSelection
   - name: tripleClickSelectsLine
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: value
     summary: |
@@ -335,57 +408,66 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
-methods: 
+methods:
   - name: ReplaceSelection
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
   - name: SelectAll
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: SelectNone
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: SelectRange
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: cursorIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: selectionIndex
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
@@ -395,21 +477,26 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
   - name: SetValueWithoutNotify
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: newValue
         type: string
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
         summary:
+math_operations:

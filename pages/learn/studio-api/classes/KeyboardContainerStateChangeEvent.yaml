@@ -1,98 +1,119 @@
 name: KeyboardContainerStateChangeEvent
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.EventBase
-constructors: 
-properties: 
+tags:
+constructors:
+properties:
   - name: duration
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: eventTypeId
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: from
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
   - name: isKeyboardVisible
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: to
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-methods: 
+methods:
   - name: GetPooled
-    summary: |
-      
+    summary:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: isKeyboardVisible
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: from
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: to
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: duration
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: Class.KeyboardContainerStateChangeEvent
         summary:
   - name: Init
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: isKeyboardVisible
         type: boolean
+        tags:
         default:
-        summary: 
+        summary:
       - name: from
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: to
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: duration
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: void
-        summary: 
+        summary:
+math_operations:

@@ -4,26 +4,29 @@ summary: |
   [Unity's Position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Absolute
     summary: |
-      [Unity's Position.Absolute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position-Absolute.html)
+      [Unity's Position.Absolute Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position.Absolute.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Position
   - name: Relative
     summary: |
-      [Unity's Position.Relative Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position-Relative.html)
+      [Unity's Position.Relative Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Position.Relative.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.Position
-methods: 
-math_operations: 
+methods:
+math_operations:

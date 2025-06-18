@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleTextShadow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleTextShadow.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleTextShadow
         summary:
@@ -26,41 +30,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.TextShadow
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleTextShadow
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleTextShadow.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleTextShadow.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.TextShadow
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleTextShadow.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleTextShadow
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleTextShadow.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTextShadow-operator_eq.html)
+    description:
+    type_a: StyleTextShadow
+    type_b: StyleTextShadow
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

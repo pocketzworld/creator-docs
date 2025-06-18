@@ -4,19 +4,23 @@ summary: |
   [Unity's Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's Angle.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Angle
         summary:
@@ -26,45 +30,56 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
       - name: unit
-        type: AngleUnit
+        type: Enum.AngleUnit
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Angle
         summary:
-properties: 
+properties:
   - name: unit
     summary: |
       [Unity's Angle.unit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-unit.html)
     description:
     is_static: false
     code_samples:
-    type: AngleUnit
+    tags:
+      - ClientOnly
+    type: Enum.AngleUnit
   - name: value
     summary: |
       [Unity's Angle.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-methods: 
+methods:
   - name: Degrees
     summary: |
       [Unity's Angle.Degrees Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle.Degrees.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Angle
         summary:
@@ -74,11 +89,14 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.Angle
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -88,11 +106,14 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Angle
         summary:
@@ -102,11 +123,14 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Angle
         summary:
@@ -116,7 +140,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
@@ -126,7 +152,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
@@ -136,7 +164,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
@@ -146,7 +176,9 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary:
@@ -156,11 +188,25 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: value
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Angle
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's Angle.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Angle-operator_eq.html)
+    description:
+    type_a: Angle
+    type_b: Angle
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

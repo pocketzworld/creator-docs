@@ -1,18 +1,21 @@
 name: ClothingCollection
 type: classes
-summary: |
-  
+summary:
 description:
 code_samples:
-inherits: 
-  - ScriptableObject
-constructors: 
-properties: 
+inherits:
+  - Class.ScriptableObject
+tags:
+constructors:
+properties:
   - name: clothing
-    summary: |
-      
+    summary:
     description:
     is_static: false
     code_samples:
-    type: {CharacterClothing}
-methods: 
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.CharacterClothing}
+methods:
+math_operations:

@@ -4,42 +4,49 @@ summary: |
   [Unity's ForceMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode.html)
 description:
 code_samples:
-inherits: 
-tags: 
-  - ClientOnly
-constructors: 
-properties: 
+inherits:
+tags:
+constructors:
+properties:
   - name: Acceleration
     summary: |
-      [Unity's ForceMode.Acceleration Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode-Acceleration.html)
+      [Unity's ForceMode.Acceleration Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode.Acceleration.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.ForceMode
   - name: Force
     summary: |
-      [Unity's ForceMode.Force Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode-Force.html)
+      [Unity's ForceMode.Force Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode.Force.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.ForceMode
   - name: Impulse
     summary: |
-      [Unity's ForceMode.Impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode-Impulse.html)
+      [Unity's ForceMode.Impulse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode.Impulse.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.ForceMode
   - name: VelocityChange
     summary: |
-      [Unity's ForceMode.VelocityChange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode-VelocityChange.html)
+      [Unity's ForceMode.VelocityChange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ForceMode.VelocityChange.html)
     description:
     is_static: true
     code_samples:
-    tags: 
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Enum.ForceMode
-methods: 
-math_operations: 
+methods:
+math_operations:

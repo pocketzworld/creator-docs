@@ -1,30 +1,76 @@
 name: UIUserThumbnail
 type: classes
 summary: |
-
+  Display a user, user group, or crew emblem as a thumbnail
 description:
 code_samples:
 inherits:
   - Class.UIView
+tags:
 constructors:
 properties:
-methods:
-  - name: Unload
+  - name: showOnlineIndicator
     summary: |
-
+      Sets whether the online indicator dot should be displayed on the thumbnail.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+methods:
+  - name: Load
+    summary: |
+      Load an image of a user
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Load
+    summary: |
+      Load an image of a user
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Unload
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: void
         summary:
   - name: new
-    summary: |
-
+    summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: Class.UIUserThumbnail

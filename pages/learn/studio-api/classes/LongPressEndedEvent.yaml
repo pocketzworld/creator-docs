@@ -1,29 +1,71 @@
 name: LongPressEndedEvent
 type: classes
 summary: |
-
+  Event sent when a long press gesture has been recognized
 description:
 code_samples:
 inherits:
+  - Class.EventBase
+tags:
 constructors:
 properties:
-  - name: position
-    summary: |
-
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
   - name: cancelled
-    summary: |
-
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-  - name: progress
-    summary: |
-
+  - name: position
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: progress
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: number
+  - name: eventTypeId
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: screenPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
 methods:
+  - name: CloneInto
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: clone
+        type: Class.LongPressEndedEvent
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.LongPressEndedEvent
+        summary:
 math_operations:

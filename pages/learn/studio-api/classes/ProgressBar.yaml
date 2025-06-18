@@ -4,18 +4,22 @@ summary: |
   [Unity's ProgressBar Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ProgressBar.html)
 description:
 code_samples:
-inherits: 
-  - AbstractProgressBar
-constructors: 
+inherits:
+  - Class.AbstractProgressBar
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's ProgressBar.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ProgressBar-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.ProgressBar
         summary:
-properties: 
-methods: 
+properties:
+methods:
+math_operations:

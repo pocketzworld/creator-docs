@@ -4,19 +4,23 @@ summary: |
   [Unity's StyleScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleScale.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's StyleScale.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleScale-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: v
         type: DataType.Scale
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleScale
         summary:
@@ -26,11 +30,14 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: keyword
-        type: StyleKeyword
+        type: Enum.StyleKeyword
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleScale
         summary:
@@ -40,41 +47,62 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: scale
         type: DataType.Vector2
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.StyleScale
         summary:
-properties: 
+properties:
   - name: keyword
     summary: |
       [Unity's StyleScale.keyword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleScale-keyword.html)
     description:
     is_static: false
     code_samples:
-    type: StyleKeyword
+    tags:
+      - ClientOnly
+    type: Enum.StyleKeyword
   - name: value
     summary: |
       [Unity's StyleScale.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleScale-value.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Scale
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's StyleScale.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleScale.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.StyleScale
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's StyleScale.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleScale-operator_eq.html)
+    description:
+    type_a: StyleScale
+    type_b: StyleScale
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

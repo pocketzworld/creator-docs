@@ -4,21 +4,25 @@ summary: |
   [Unity's Gradient Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Gradient.html)
 description:
 code_samples:
-inherits: 
-constructors: 
-properties: 
-methods: 
+inherits:
+tags:
+constructors:
+properties:
+methods:
   - name: Equals
     summary: |
       [Unity's Gradient.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Gradient.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: Class.Gradient
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -28,12 +32,15 @@ methods:
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: time
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.Color
         summary:
-math_operations: 
+math_operations:

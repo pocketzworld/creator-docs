@@ -4,26 +4,32 @@ summary: |
   [Unity's Image Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image.html)
 description:
 code_samples:
-inherits: 
+inherits:
   - Class.VisualElement
-constructors: 
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's Image.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: Class.Image
         summary:
-properties: 
+properties:
   - name: ussClassName
     summary: |
       [Unity's Image.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Image-ussClassName.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
   - name: image
     summary: |
@@ -31,6 +37,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Texture
   - name: sourceRect
     summary: |
@@ -38,6 +46,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Rect
   - name: sprite
     summary: |
@@ -45,6 +55,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Sprite
   - name: tintColor
     summary: |
@@ -52,6 +64,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
   - name: uv
     summary: |
@@ -59,6 +73,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Rect
-methods: 
-math_operations: 
+methods:
+math_operations:

@@ -4,23 +4,28 @@ summary: |
   [Unity's TransformOrigin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin.html)
 description:
 code_samples:
-inherits: 
-constructors: 
+inherits:
+tags:
+constructors:
   - name: new
     summary: |
       [Unity's TransformOrigin.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-ctor.html)
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: x
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
       - name: y
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.TransformOrigin
         summary:
@@ -30,29 +35,36 @@ constructors:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: x
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
       - name: y
         type: DataType.Length
+        tags:
         default:
-        summary: 
+        summary:
       - name: z
         type: number
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: DataType.TransformOrigin
         summary:
-properties: 
+properties:
   - name: x
     summary: |
       [Unity's TransformOrigin.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-x.html)
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Length
   - name: y
     summary: |
@@ -60,6 +72,8 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Length
   - name: z
     summary: |
@@ -67,19 +81,24 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-methods: 
+methods:
   - name: Equals
     summary: |
       [Unity's TransformOrigin.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin.Equals.html)
     description:
     is_static: false
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
       - name: other
         type: DataType.TransformOrigin
+        tags:
         default:
-        summary: 
+        summary:
     returns:
       - type: boolean
         summary:
@@ -89,7 +108,20 @@ methods:
     description:
     is_static: true
     code_samples:
-    parameters: 
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.TransformOrigin
         summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's TransformOrigin.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-operator_eq.html)
+    description:
+    type_a: TransformOrigin
+    type_b: TransformOrigin
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

@@ -1,52 +1,76 @@
 name: LuaScript
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
-  - Class.Object
+  - Class.ScriptableObject
+tags:
 constructors:
 properties:
-  - name: typeCode
-    summary: |
-
+  - name: fullName
+    summary:
     description:
     is_static: false
     code_samples:
-    type: number
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: namespace
+    summary: |
+      Return the optional namespace assigned to the lua script.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
   - name: propertyCount
-    summary: |
-
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: runsOnServer
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
   - name: runsOnClient
-    summary: |
-
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: runsOnClientAndServer
-    summary: |
-
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
-  - name: fullName
-    summary: |
-
+  - name: runsOnServer
+    summary:
+    description:
     is_static: false
     code_samples:
-    type: string
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: typeCode
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
 methods:
 math_operations:
