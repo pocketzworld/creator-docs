@@ -23,7 +23,7 @@ In-World Purchases (IWP) product ID is a unique string that identifies the produ
 </Note>
 
 <Note type="warning">
-Highrise will take 30% of the revenue generated from the sale of In-World Purchases (IWP). The remaining 70% will be credited to your account.
+Highrise will take 10% of the revenue generated from the sale of In-World Purchases (IWP). The remaining 90% will be credited to your account.
 </Note>
 
 ### Step 2: Creating a Payment Handler (Optional)
@@ -37,6 +37,10 @@ Highrise will take 30% of the revenue generated from the sale of In-World Purcha
 ### Step 3: Implementing the Payment Handler
 <Note type="warning">
 All payment-related scripts are done on the server side. Do not use payment-related functions on the client side.
+</Note>
+
+<Note type="info">
+For testing purposes, you can use `goldfish` or `eel` as product IDs to test purchases directly in Unity if your world hasn't been uploaded yet. If your world is uploaded and includes IWP in the Creator Portal, use the associated product IDs instead.
 </Note>
 
 ```lua
@@ -127,7 +131,7 @@ local PurchaseButton : UIButton = nil
 PurchaseButton:RegisterPressCallback(function()
   -- Call the PromptTokenPurchase function when the button is clicked
   PaymentHandler.PromptTokenPurchase("token_100")
-end, true, true, true)
+end)
 ```
 
 ### Step 5: Testing the Payment Handler
@@ -145,7 +149,7 @@ When you want to prompt the player to purchase an item, you can call the `Prompt
 ID and a callback function.
 
 <Note type="warning">
-Do not rely on the `PromptPurchase` **paid** callback to determine if a purchase was successful. Always validate purchases on the server side using PurchaseHandler to ensure security and prevent potential exploits or issues in the purchase flow.
+Do not rely on the `PromptPurchase` **paid** callback to determine if a purchase was successful. The `paid` result can be a false positive. Always validate purchases on the server side using PurchaseHandler to ensure security and prevent potential exploits or issues in the purchase flow. Any successful purchase should be logged on the server, which should then trigger an event to the client to confirm the transaction (e.g., to show a notification).
 </Note>
 
 ```lua
@@ -170,6 +174,10 @@ PaymentHandler.ServerHandlePurchase(purchase, player)
 ### Acknowledging Purchases
 When a player makes a purchase, you need to acknowledge the purchase to complete the transaction. You can acknowledge a purchase by calling the `AcknowledgePurchase` function and passing the purchase object, a boolean value indicating whether the purchase was successful, and an optional callback function.
 
+<Note type="info">
+Any successful purchase should be logged on the server, which should then trigger an event to the client to confirm the transaction (e.g., to show a notification). Do not rely on the client to determine whether a purchase succeeded—PurchaseResult.Paid can be a false positive.
+</Note>
+
 ```lua
 -- Acknowledge the purchase
 Payments.AcknowledgePurchase(purchase, true, function(ackErr: PaymentsError)
@@ -181,6 +189,12 @@ Payments.AcknowledgePurchase(purchase, true, function(ackErr: PaymentsError)
 
   -- Add the tokens to the player's account (calling the IncrementTokens function)
   IncrementTokens(player, tokensToGive)
+
+  -- Log the successful purchase on the server
+  print("Purchase acknowledged successfully for player: " .. player.name .. ", Product: " .. productId .. ", Tokens: " .. tokensToGive)
+  
+  -- TODO: Trigger an event to the client to confirm the transaction
+  -- (e.g., show a notification or update UI)
 end)
 ```
 
