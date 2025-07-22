@@ -33,6 +33,8 @@ They may not be used as bases for any regular Concept.
 
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
+[Hirasuni](https://highrise.game/catalog/designer-profile/Hirasuni)
+
 [LiIithh](https://highrise.game/catalog/designer-profile/LiIithh)
 
 [Lil_Buns](https://highrise.game/catalog/designer-profile/Lil_Buns)
@@ -72,6 +74,8 @@ They may not be used as bases for any regular Concept.
 [profaniti](https://highrise.game/catalog/designer-profile/profaniti)
 
 [Pvee](https://highrise.game/catalog/designer-profile/Pvee)
+
+[rosefromtheashes](https://highrise.game/catalog/designer-profile/rosefromtheashes)
 
 [Rozovey](https://highrise.game/catalog/designer-profile/Rozovey)
 
