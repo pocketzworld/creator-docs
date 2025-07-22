@@ -1,5 +1,8 @@
 {
   "hrlive": {
     "title": "HR Live"
+  },
+  "hrstream": {
+    "title": "HR Stream"
   }
 }
