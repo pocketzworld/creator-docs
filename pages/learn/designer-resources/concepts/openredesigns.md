@@ -95,6 +95,8 @@ They may not be used as bases for any regular Concept.
 
 [Torotoxism](https://highrise.game/catalog/designer-profile/Torotoxism)
 
+[Totty_](https://highrise.game/catalog/designer-profile/Totty_)
+
 [Tounni](https://highrise.game/catalog/designer-profile/Tounni)
 
 [TunaX](https://highrise.game/catalog/designer-profile/TunaX)
