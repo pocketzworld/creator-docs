@@ -53,6 +53,8 @@ They may not be used as bases for any regular Concept.
 
 [killibill](https://highrise.game/catalog/designer-profile/killibill)
 
+[KJeyz](https://highrise.game/catalog/designer-profile/KJeyz)
+
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
 
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
@@ -83,6 +85,8 @@ They may not be used as bases for any regular Concept.
 
 [Shaikuma](https://highrise.game/catalog/designer-profile/Shaikuma)
 
+[StephanieSky](https://highrise.game/catalog/designer-profile/StephanieSky)
+
 [sunfnvp](https://highrise.game/catalog/designer-profile/sunfnvp)
 
 [theCelia](https://highrise.game/catalog/designer-profile/theCelia)
@@ -108,6 +112,8 @@ They may not be used as bases for any regular Concept.
 [iDestinee](https://highrise.game/catalog/designer-profile/iDestinee)
 
 [z.im](https://highrise.game/catalog/designer-profile/z.im)
+
+[6tx](https://highrise.game/catalog/designer-profile/6tx)
 
 
 
