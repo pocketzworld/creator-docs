@@ -11,6 +11,8 @@ They may not be used as bases for any regular Concept.
 
 [Amberryss](https://highrise.game/catalog/designer-profile/Amberryss)
 
+[blackcats666](https://highrise.game/catalog/designer-profile/blackcats666)
+
 [CancelIed](https://highrise.game/catalog/designer-profile/CancelIed)
 
 [catstronaut](https://highrise.game/catalog/designer-profile/catstronaut)
@@ -70,6 +72,8 @@ They may not be used as bases for any regular Concept.
 [OhaiBambi](https://highrise.game/catalog/designer-profile/OhaiBambi)
 
 [Papersweet](https://highrise.game/catalog/designer-profile/Papersweet)
+
+[PigeonMilk](https://highrise.game/catalog/designer-profile/PigeonMilk)
 
 [Poppiana](https://highrise.game/catalog/designer-profile/Poppiana)
 
