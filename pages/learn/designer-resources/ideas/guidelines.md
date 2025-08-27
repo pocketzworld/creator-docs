@@ -41,7 +41,7 @@ As you create your Idea submission, you’ll define the _item’s type and and r
 
 Have a great Idea, but don't feel confident in your artistic ability? You may commission a fellow Highrise artist to help bring your vision to life. However, please note that commissions are considered "_Trust Trades"_ – **all payment or compensation must be handled prior to your Idea submission.** Highrise is not responsible for ensuring commission payments are delivered. We are not able to add multiple designers to a single Idea at this time.
 
-_**In your commissioned Idea submission, please use a tag stating that is commissioned work. Use “Commission from __” with your artist’s name so our team doesn’t accidentally remote your entry!**_    
+_**In your commissioned Idea submission, please use a tag on the item image and description stating that is commissioned work. Use “Commission from __” with your artist’s name so our team doesn’t accidentally remote your entry!**_    
 
 
 
