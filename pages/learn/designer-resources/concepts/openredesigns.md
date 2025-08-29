@@ -55,6 +55,8 @@ They may not be used as bases for any regular Concept.
 
 [killibill](https://highrise.game/catalog/designer-profile/killibill)
 
+[Kittimu](https://highrise.game/catalog/designer-profile/Kittimu)
+
 [KJeyz](https://highrise.game/catalog/designer-profile/KJeyz)
 
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
