@@ -61,6 +61,8 @@ They may not be used as bases for any regular Concept.
 
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
 
+[LfDeathPlease](https://highrise.game/catalog/designer-profile/LfDeathPlease)
+
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
 
 [Mizune](https://highrise.game/catalog/designer-profile/Mizune)
