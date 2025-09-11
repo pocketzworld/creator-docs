@@ -63,6 +63,8 @@ They may not be used as bases for any regular Concept.
 
 [LfDeathPlease](https://highrise.game/catalog/designer-profile/LfDeathPlease)
 
+[MazIsTired](https://highrise.game/catalog/designer-profile/MazIsTired)
+
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
 
 [Mizune](https://highrise.game/catalog/designer-profile/Mizune)
