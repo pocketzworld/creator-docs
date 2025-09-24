@@ -199,6 +199,42 @@ end
 The `{{$1}}` placeholder must match the order of values passed in the Lua function. Ensure that the number of placeholders matches the number of values provided.
 </Note>
 
+## Fetching Localized Strings in Lua (Without UI)
+
+In some cases, you may need to access localized strings directly in code (e.g., for logs, chat messages, or gameplay logic) without binding them to UI elements. The localization system provides ways to retrieve and format these strings.
+
+### Using `Localization.TryGetString`
+
+```lua
+local found, str = Localization.TryGetString("welcome")
+if found then
+    print(str:Format())
+end
+```
+
+* **`Localization.TryGetString(key)`** returns two values:
+
+  * `found`: `true` if the string exists, `false` otherwise
+  * `str`: the localized string object (if found)
+
+* Always check `found` before using `str`.
+
+### Using `Strings` with Formatting
+
+You can also fetch strings through the `Strings` global:
+
+```lua
+print(Strings.test_string:Format())
+print(Strings.hello_player:Format(client.localPlayer.name))
+```
+
+* Use `:Format()` to replace placeholders (`{{$1}}`, `{{$2}}`, etc.) with runtime values.
+* This is especially useful for dynamic content such as player names, scores, or variable counts.
+
+<Note type="info">
+Use this approach whenever you need localized text outside of UI components, such as server messages, debug logs, or chat output.
+</Note>
+
 ## Testing and Maintenance
 
 1. Always test with different languages to ensure:
