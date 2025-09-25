@@ -57,6 +57,8 @@ They may not be used as bases for any regular Concept.
 
 [Kittimu](https://highrise.game/catalog/designer-profile/Kittimu)
 
+[Kumquatt_](https://highrise.game/catalog/designer-profile/Kumquatt_)
+
 [KJeyz](https://highrise.game/catalog/designer-profile/KJeyz)
 
 [Lapereaux](https://highrise.game/catalog/designer-profile/Lapereaux)
@@ -108,6 +110,8 @@ They may not be used as bases for any regular Concept.
 [Totty_](https://highrise.game/catalog/designer-profile/Totty_)
 
 [Tounni](https://highrise.game/catalog/designer-profile/Tounni)
+
+[tteabagg](https://highrise.game/catalog/designer-profile/tteabagg)
 
 [TunaX](https://highrise.game/catalog/designer-profile/TunaX)
 
