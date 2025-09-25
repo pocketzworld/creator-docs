@@ -221,13 +221,19 @@ methods:
       ```lua
       local player = client.localPlayer
 
-      player.character:PlayEmote("idle-dance-casual")
+      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
+        print("Emote playback complete.")
+      end)
       ```
     parameters:
       - name: emoteName
         type: string
         default:
         summary: The name of the emote to play.
+      - name: speed
+        type: number
+        default:
+        summary: The speed of the emote.
       - name: loop
         type: boolean
         default:
