@@ -25,21 +25,21 @@ To help illustrate, here is an example:
 
 1. **Initial request:**
     
-    Example: **`GET https://webapi.highrise.game/users?limit=50`**
+    Example: **`GET https://webapi.highrise.game/rooms?limit=50`**
     
-    This fetches the first 50 users. The **`user_id`** of the last user in the response will be used as a cursor for the next request.
+    This fetches the first 50 rooms. The **`room_id`** of the last room in the response will be used as a cursor for the next request.
     
 2. **Fetching subsequent pages:**
     
-    Example: **`GET https://webapi.highrise.game/users?starts_after=641ca75c543d7461b472ef62&limit=50`**
+    Example: **`GET https://webapi.highrise.game/rooms?starts_after=641ca75c543d7461b472ef63&limit=50`**
     
-    In this example, **`starts_after=641ca75c543d7461b472ef62`** uses the last **`user_id`** from the previous request to fetch the next 50 users.
+    In this example, **`starts_after=641ca75c543d7461b472ef63`** uses the last **`room_id`** from the previous request to fetch the next 50 rooms.
     
 3. **Fetching previous pages:**
     
-    Example: **`GET https://webapi.highrise.game/users?ends_before=641ca75c543d7461b472ef62&limit=50`**
+    Example: **`GET https://webapi.highrise.game/rooms?ends_before=641ca75c543d7461b472ef63&limit=50`**
     
-    Here, **`ends_before=641ca75c543d7461b472ef62`** uses the first **`user_id`** from the current page to fetch the previous 50 users.
+    Here, **`ends_before=641ca75c543d7461b472ef63`** uses the first **`room_id`** from the current page to fetch the previous 50 rooms.
     
 
 ## **API Resources**
