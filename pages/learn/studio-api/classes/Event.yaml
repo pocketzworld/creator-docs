@@ -1,67 +1,218 @@
 name: Event
 type: classes
-summary: Event in Highrise signifies key moments or changes in the game environment, facilitating dynamic and responsive gameplay. It provides a structured way to define, trigger, and respond to in-game occurrences, such as a player joining or leaving. Events can be triggered on specific clients, all clients, or on the server, with corresponding actions attached through connections to functions. This mechanism is pivotal for creating interactive and adaptive game experiences.
+summary: |
+  Event in Highrise signifies key moments or changes in the game environment, facilitating dynamic and responsive gameplay. It provides a structured way to define, trigger, and respond to in-game occurrences, such as a player joining or leaving. Events can be triggered on specific clients, all clients, or on the server, with corresponding actions attached through connections to functions. This mechanism is pivotal for creating interactive and adaptive game experiences.
 description:
 code_samples:
 inherits:
 tags:
-  - ServerAndClient
 constructors:
   - name: new
-    summary: Initializes a new event, marking a specific occurrence within the game that warrants reaction or handling.
+    summary: |
+      Initializes a new event, marking a specific occurrence within the game that warrants reaction or handling.
+    description:
     is_static: true
-    tags:
-      - ServerAndClient
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
     returns:
-      - type: Event
-        summary: An instance of the Event class, representing the defined event.
+      - type: Class.Event
+        summary:
 properties:
   - name: name
-    summary: Identifies the event, aiding in differentiation and specific event handling.
+    summary: |
+      Identifies the event, aiding in differentiation and specific event handling.
+    description:
     is_static: false
-    tags:
-      - ServerAndClient
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: string
 methods:
-  - name: FireClient
-    summary: Activates the event for a particular client, enabling targeted notifications or actions.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary: No return value, action is triggered client-side.
-  - name: FireAllClients
-    summary: Broadcasts the event to all connected clients, useful for global notifications or updates.
-    is_static: false
-    code_samples:
-    tags:
-      - ServerOnly
-    parameters:
-    returns:
-      - type: void
-        summary: No return value, action impacts all clients.
-  - name: FireServer
-    summary: Triggers the event on the server side, often leading to updates in game state or other server-managed data.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary: No return value, action takes place on the server.
   - name: Connect
-    summary: Establishes a linkage between the event and a specific response function, ensuring automatic execution upon event triggering.
+    summary: |
+      Establishes a linkage between the event and a specific response function, ensuring automatic execution upon event triggering.
+    description:
     is_static: false
     code_samples:
     tags:
-      - ServerAndClient
+      - ClientAndServer
     parameters:
+      - name: callback
+        type: (...any) -> ()
+        tags:
+        default:
+        summary:
     returns:
       - type: Class.EventConnection
-        summary: An EventConnection instance denoting the connection between the event and its response function.
+        summary: |
+          An EventConnection instance denoting the connection between the event and its response function.
+  - name: Fire
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireAllClients
+    summary: |
+      Broadcasts the event to all connected clients, useful for global notifications or updates.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireAllOtherClients
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireAllOtherSceneClients
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: scene
+        type: Class.Scene
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireClient
+    summary: |
+      Activates the event for a particular client, enabling targeted notifications or actions.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireClients
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: players
+        type: {Class.Player}
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireSceneClients
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: scene
+        type: Class.Scene
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireServer
+    summary: |
+      Triggers the event on the server side, often leading to updates in game state or other server-managed data.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:

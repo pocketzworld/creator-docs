@@ -191,7 +191,7 @@ methods:
       - ClientOnly
     parameters:
       - name: enumerate
-        type: (UIView, number, boolean) -> (boolean)
+        type: (cell: UIView, cellIndex: number, selected: boolean) -> (boolean)
         tags:
         default:
         summary:

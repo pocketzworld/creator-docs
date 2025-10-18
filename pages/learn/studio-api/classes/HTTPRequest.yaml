@@ -1,0 +1,96 @@
+name: HTTPRequest
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+    returns:
+      - type: Class.HTTPRequest
+        summary:
+properties:
+methods:
+  - name: SetBody
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: body
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetHeader
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetJSONBody
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: json
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetQueryParameter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

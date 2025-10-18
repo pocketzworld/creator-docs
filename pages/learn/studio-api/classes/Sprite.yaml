@@ -150,6 +150,23 @@ properties:
       - ReadOnly
     type: {DataType.Vector2}
 methods:
+  - name: AddScriptableObject
+    summary: |
+      [Unity's Sprite.AddScriptableObject Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.AddScriptableObject.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: obj
+        type: Class.ScriptableObject
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: Create
     summary: |
       [Unity's Sprite.Create Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.Create.html)
@@ -275,6 +292,35 @@ methods:
     returns:
       - type: number
         summary:
+  - name: GetScriptableObjects
+    summary: |
+      [Unity's Sprite.GetScriptableObjects Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.GetScriptableObjects.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: scriptableObjects
+        type: {Class.ScriptableObject}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetScriptableObjectsCount
+    summary: |
+      [Unity's Sprite.GetScriptableObjectsCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.GetScriptableObjectsCount.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
   - name: GetSecondaryTextureCount
     summary: |
       [Unity's Sprite.GetSecondaryTextureCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.GetSecondaryTextureCount.html)
@@ -286,5 +332,44 @@ methods:
     parameters:
     returns:
       - type: number
+        summary:
+  - name: RemoveScriptableObjectAt
+    summary: |
+      [Unity's Sprite.RemoveScriptableObjectAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.RemoveScriptableObjectAt.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: i
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: SetScriptableObjectAt
+    summary: |
+      [Unity's Sprite.SetScriptableObjectAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Sprite.SetScriptableObjectAt.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: obj
+        type: Class.ScriptableObject
+        tags:
+        default:
+        summary:
+      - name: i
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
         summary:
 math_operations:

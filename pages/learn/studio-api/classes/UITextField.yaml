@@ -37,15 +37,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: cursorColor
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: DataType.Color
   - name: cursorIndex
     summary:
     description:
@@ -72,6 +63,14 @@ properties:
       - ClientOnly
     type: boolean
   - name: doubleClickSelectsWord
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: emojiFallbackSupport
     summary:
     description:
     is_static: false
@@ -185,15 +184,6 @@ properties:
     tags:
       - ClientOnly
     type: number
-  - name: selectionColor
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: DataType.Color
   - name: showClearButton
     summary: |
       Set to true to show a clear button on the right side of the text input when text is available.

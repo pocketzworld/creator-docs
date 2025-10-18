@@ -28,5 +28,25 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Enum.WhiteSpace
+  - name: Pre
+    summary: |
+      [Unity's WhiteSpace.Pre Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WhiteSpace.Pre.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.WhiteSpace
+  - name: PreWrap
+    summary: |
+      [Unity's WhiteSpace.PreWrap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.WhiteSpace.PreWrap.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.WhiteSpace
 methods:
 math_operations:

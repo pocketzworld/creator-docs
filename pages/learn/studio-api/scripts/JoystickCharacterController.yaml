@@ -1,0 +1,36 @@
+name: JoystickCharacterController
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+  - Class.Component
+tags:
+constructors:
+properties:
+  - name: movementEnabled
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: boolean
+methods:
+  - name: SetLocalPlayerPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

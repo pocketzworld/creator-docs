@@ -1,0 +1,55 @@
+name: HTTPResponse
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: GetBody
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+    returns:
+      - type: string
+        summary:
+  - name: GetHeaders
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+    returns:
+      - type: {string}
+        summary:
+  - name: GetJSONBody
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+    returns:
+      - type: string
+        summary:
+  - name: GetStatusCode
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+math_operations:

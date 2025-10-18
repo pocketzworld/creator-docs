@@ -1,0 +1,52 @@
+name: CellLayout
+type: enums
+summary: |
+  [Unity's CellLayout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellLayout.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Hexagon
+    summary: |
+      [Unity's CellLayout.Hexagon Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellLayout.Hexagon.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellLayout
+  - name: Isometric
+    summary: |
+      [Unity's CellLayout.Isometric Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellLayout.Isometric.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellLayout
+  - name: IsometricZAsY
+    summary: |
+      [Unity's CellLayout.IsometricZAsY Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellLayout.IsometricZAsY.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellLayout
+  - name: Rectangle
+    summary: |
+      [Unity's CellLayout.Rectangle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellLayout.Rectangle.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellLayout
+methods:
+math_operations:

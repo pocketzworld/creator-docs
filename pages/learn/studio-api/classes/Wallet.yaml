@@ -1,0 +1,79 @@
+name: Wallet
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: GetWallet
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: callback
+        type: (wallet: WalletState, error: WalletError) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: TransferGold
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: amount
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (wallet: WalletState, error: WalletError) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: TransferGoldToPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: amount
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (wallet: WalletState, error: WalletError) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

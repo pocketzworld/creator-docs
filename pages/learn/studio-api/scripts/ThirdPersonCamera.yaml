@@ -1,0 +1,49 @@
+name: ThirdPersonCamera
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: IsActive
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: ResetCamera
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: rotate
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

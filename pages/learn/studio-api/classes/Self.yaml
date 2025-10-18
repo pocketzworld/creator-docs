@@ -1,0 +1,372 @@
+name: Self
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.LuaBehaviour
+tags:
+constructors:
+properties:
+methods:
+  - name: Awake
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientAwake
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientFixedUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientLateUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientOnDestroy
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientOnDisable
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientOnEnable
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientStart
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClientUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: FixedUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: LateUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: OnCollisionEnter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: hit
+        type: Class.Collision
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OnCollisionExit
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: hit
+        type: Class.Collision
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OnCollisionStay
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: hit
+        type: Class.Collision
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OnDestroy
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: OnDisable
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: OnEnable
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: OnTriggerEnter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: collider
+        type: Class.Collider
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OnTriggerExit
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: collider
+        type: Class.Collider
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OnTriggerStay
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: collider
+        type: Class.Collider
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ServerAwake
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerFixedUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerLateUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerOnDestroy
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerOnDisable
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerOnEnable
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerStart
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ServerUpdate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Start
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Update
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

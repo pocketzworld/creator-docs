@@ -1,250 +1,162 @@
 name: Payments
-type: classes
+type: services
 summary: |
   The Payments service provides methods for creating and managing payments in your game.
   Check out the PaymentsError class for error codes that can be returned by the Payments service.
+description:
+code_samples:
+inherits:
 tags:
-  - ServerOnly
 constructors:
-methods:
-  - name: GetPurchases
-    summary: Get a list of purchases made by the current user.
+properties:
+  - name: PurchaseHandler
+    summary:
     description:
-    is_static: true
-    code_samples: |
-      ```lua
-      Payments.GetPurchases(player, nil, 100, nil, function(purchases, nextCursorId, getPurchasesErr)
-        
-        -- Handle error
-        if getPurchasesErr ~= PaymentsError.None then
-          error("(Server) Failed to get player purchases: " .. getPurchasesErr)
-          return
-        end
-
-        print("(Server) Player purchases:")
-        for _, purchase in ipairs(purchases) do
-            print("Purchase ID: " .. tostring(purchase.id))
-            print("Product ID: " .. tostring(purchase.product_id))
-            print("User ID: " .. tostring(purchase.user_id))
-            print("Purchase Date: " .. tostring(purchase.purchase_date))
-        end
-      end)
-      ```
+    is_static: false
+    code_samples:
     tags:
       - ServerOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: productId
-        type: string | null
-        default:
-        summary:
-      - name: limit
-        type: integer
-        default:
-        summary:
-      - name: cursorId
-        type: string | null
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: GetProductPurchases
-    summary: Get a list of purchases made by the current user for a specific product.
+    type: (purchase: WorldProductPurchase, player: Player) -> ()
+methods:
+  - name: AcknowledgePurchase
+    summary: |
+      Acknowledge a purchase made by the current user.
     description:
-    is_static: true
+    is_static: false
     code_samples:
     tags:
       - ServerOnly
     parameters:
-      - name: player
-        type: Class.Player
+      - name: purchase
+        type: Class.WorldProductPurchase
+        tags:
         default:
         summary:
-      - name: productId
-        type: string
-        default:
-        summary:
-      - name: limit
-        type: integer
-        default:
-        summary:
-      - name: cursorId
-        type: string | null
+      - name: wasConsumed
+        type: boolean
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: (error: PaymentsError) -> ()
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: GetProduct
-    summary: Get a product by its ID.
+  - name: ClosePurchasePrompt
+    summary:
     description:
-    is_static: true
-    code_samples: |
-      ```lua
-      Payments.GetProduct("eel", function(product, getProductErr)
-        if getProductErr ~= PaymentsError.None then
-          error("(Server) Failed to get product: " .. getProductErr)
-          return
-        end
-
-        print("Product ID: " .. product.product_id)
-        print("Product Name: " .. product.name)
-        print("Product Price: " .. product.price)
-        print("Product Description: " .. product.description)
-      end)
-      ```
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: GetProduct
+    summary: |
+      Get a product by its ID.
+    description:
+    is_static: false
+    code_samples:
     tags:
       - ServerOnly
     parameters:
       - name: productId
         type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: (product: WorldProduct, error: PaymentsError) -> ()
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
   - name: GetProducts
-    summary: Get a list of In-World Purchases (IWP).
+    summary: |
+      Get a list of In-World Purchases (IWP).
     description:
-    is_static: true
-    code_samples: |
-      ```lua
-      Payments.GetProducts(100, nil, function(products, nextCursorId, getProductsErr)
-        if getProductsErr ~= PaymentsError.None then
-          error("(Server) Failed to get In-World Purchases: " .. err)
-          return
-        end
-
-        print("(Server) In-World Purchases:")
-        for _, product in ipairs(products) do
-          print("Product ID: " .. product.product_id)
-          print("Product Name: " .. product.name)
-          print("Product Price: " .. product.price)
-          print("Product Description: " .. product.description)
-        end
-      end)
-      ```
+    is_static: false
+    code_samples:
     tags:
       - ServerOnly
     parameters:
+      - name: cursorId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (products: {WorldProduct}, nextCursorId: string, error: PaymentsError) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPurchases
+    summary: |
+      Get a list of purchases made by the specified user.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: productId
+        type: string
+        tags:
+        default:
+        summary:
       - name: limit
-        type: integer
+        type: number
+        tags:
         default:
         summary:
       - name: cursorId
-        type: string | null
+        type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: (purchases: {WorldProductPurchase}, nextCursorId: string, error: PaymentsError) -> ()
+        tags:
         default:
         summary:
     returns:
       - type: void
-        summary:
-  - name: AcknowledgePurchase
-    summary: Acknowledge a purchase made by the current user.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-      Payments.AcknowledgePurchase(purchase, true, function(ackErr: PaymentsError)
-        if ackErr ~= PaymentsError.None then
-          error("(Server) Something went wrong while acknowledging purchase: " .. ackErr)
-          return
-        end
-
-        print("(Server) Purchase acknowledged")
-
-        -- Implement your logic here to grant the user the product they purchased
-      end)
-
-      -- Or reject the purchase
-      Payments.AcknowledgePurchase(purchase, false) -- Acknowledge purchase without a callback
-      ```
-    tags:
-      - ServerOnly
-    parameters: 
-      - name: purchase
-        type: Class.WorldProductPurchase
-        default:
-        summary:
-      - name: acknowledged
-        type: boolean
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: PurchaseHandler
-    summary: A function that is called when a purchase is made.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-      local HandlePayment = function(purchase: WorldProductPurchase, player: Player)
-        -- Handle the purchase logic here and grant the user the product they purchased
-        -- You must acknowledge the purchase after handling it by calling the "AcknowledgePurchase" method
-      end
-
-      Payments.PurchaseHandler = HandlePayment -- Set the purchase handler
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: purchase
-        type: Class.WorldProduct
-        default:
-        summary:
-      - name: player
-        type: Class.Player
-        default:
         summary:
   - name: PromptPurchase
-    summary: Prompt the current user to make a purchase.
+    summary: |
+      Prompt the current user to make a purchase.
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      Payments:PromptPurchase("eel", function(paid)
-        if paid then
-          print("Purchase successful")
-        else
-          print("Purchase failed!" .. tostring(paid))
-        end
-      end)
-      ```
+    code_samples:
     tags:
       - ClientOnly
     parameters:
       - name: productId
         type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: (obj: boolean) -> ()
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
+math_operations:

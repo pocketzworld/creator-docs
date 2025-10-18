@@ -57,7 +57,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's TextShadow.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextShadow-operator_eq.html)
-    description:
     type_a: TextShadow
     type_b: TextShadow
     return_type: boolean

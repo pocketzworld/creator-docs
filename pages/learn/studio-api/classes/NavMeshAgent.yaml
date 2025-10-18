@@ -186,6 +186,15 @@ properties:
     tags:
       - ClientOnly
     type: DataType.Vector3
+  - name: path
+    summary: |
+      [Unity's NavMeshAgent.path Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-path.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.NavMeshPath
   - name: pathEndPosition
     summary: |
       [Unity's NavMeshAgent.pathEndPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-pathEndPosition.html)
@@ -206,6 +215,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
+  - name: pathStatus
+    summary: |
+      [Unity's NavMeshAgent.pathStatus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-pathStatus.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NavMeshPathStatus
   - name: radius
     summary: |
       [Unity's NavMeshAgent.radius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent-radius.html)
@@ -306,6 +325,28 @@ methods:
         summary:
     returns:
       - type: void
+        summary:
+  - name: CalculatePath
+    summary: |
+      [Unity's NavMeshAgent.CalculatePath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.CalculatePath.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: targetPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: path
+        type: Class.NavMeshPath
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
         summary:
   - name: CompleteOffMeshLink
     summary: |
@@ -455,6 +496,23 @@ methods:
     parameters:
       - name: target
         type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: SetPath
+    summary: |
+      [Unity's NavMeshAgent.SetPath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshAgent.SetPath.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: path
+        type: Class.NavMeshPath
         tags:
         default:
         summary:

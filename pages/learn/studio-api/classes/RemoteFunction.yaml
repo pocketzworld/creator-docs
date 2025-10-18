@@ -2,14 +2,13 @@ name: RemoteFunction
 type: classes
 summary: |
   The `RemoteFunction` class in represents a remote function that can be invoked and heard on the client and server side. It enables communication between server and client scripts by allowing remote calls to be made and handled with params that you define yourself.
-
+description:
+code_samples: |
   ```lua
     -- Client and Server script:
-
     local remoteFunction = RemoteFunction.new("TestRemoteFunction");
     local lastSendTime = 0;
     local lastPlayer = nil;
-
     function self:ClientStart()
         -- Get the tap handler on ourselves and invoke server on the remote function when tapped with a custom callback message
         self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
@@ -18,25 +17,21 @@ summary: |
                 print(response)
             end)
         end)
-
         -- when the client is invoked, print the server's message
         remoteFunction.OnInvokeClient = function(message)
             print (message)
             return true;
         end
     end
-
     function self:ServerStart()
         server.PlayerConnected:Connect(function(player)
             lastPlayer = player
         end)
-
         remoteFunction.OnInvokeServer = function(message)
             print (message)
             return "Hello from Server!";
         end
     end
-
     function self:ServerUpdate()
         lastSendTime = lastSendTime + Time.deltaTime;
         if lastSendTime > 2 then
@@ -47,52 +42,94 @@ summary: |
         end
     end
   ```
-description:
-tags:
-  - ClientAndServer
-code_samples:
 inherits:
+tags:
 constructors:
-properties:
-  - name: name
-    summary: The name of the remote function.
-    is_static: false
+  - name: new
+    summary:
+    description:
+    is_static: true
     code_samples:
-    type: string
-  - name: OnInvokeClient
-    summary: Callback function for the client that is triggered by the server. Parameters are determined by what was passed into `InvokeClient`.
-    is_static: false
-    code_samples:
-    type: function
-  - name: OnInvokeServer
-    summary: Callback function for the server that is triggered by the client. Parameters are determined by what was passed into `InvokeServer`.
-    is_static: false
     tags:
-      - ServerOnly
+      - ClientAndServer
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.RemoteFunction
+        summary:
+properties:
+  - name: OnInvokeClient
+    summary: |
+      Callback function for the client that is triggered by the server. Parameters are determined by what was passed into `InvokeClient`.
+    description:
+    is_static: false
     code_samples:
-    type: function
+    tags:
+      - ClientAndServer
+    type: (...any) -> (any)
+  - name: OnInvokeServer
+    summary: |
+      Callback function for the server that is triggered by the client. Parameters are determined by what was passed into `InvokeServer`.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: (player: Player, ...any) -> (any)
+  - name: name
+    summary: |
+      The name of the remote function.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
 methods:
   - name: InvokeClient
-    summary: Invokes the remote function on the client side.
+    summary: |
+      Invokes the remote function on the client side.
+      The player to invoke the function for.
+    description:
     is_static: false
+    code_samples:
     tags:
-      - ServerOnly
+      - ClientAndServer
     parameters:
       - name: player
         type: Class.Player
-        summary: The player to invoke the function for.
-      - name: ...
-        type: ...
-        summary: Add any number of other additional parameters to your invoked function, just remember to handle them in `OnInvokeClient`.
-    code_samples:
+        tags:
+        default:
+        summary: |
+          The player to invoke the function for.
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
     returns:
+      - type: void
+        summary:
   - name: InvokeServer
-    summary: Invokes the remote function on the server side.
+    summary: |
+      Invokes the remote function on the server side.
+    description:
     is_static: false
-    parameters:
-      - name: ...
-        type: ...
-        summary: Add any number of other additional parameters to your invoked function, just remember to handle them in `OnInvokeServer`.
     code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
     returns:
+      - type: void
+        summary:
 math_operations:

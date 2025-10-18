@@ -1,0 +1,65 @@
+name: FurnitureHitMask2D
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: IsHit
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: tolerance
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: IsHitUV
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: tolerance
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+math_operations:

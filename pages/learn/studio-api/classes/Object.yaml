@@ -2,127 +2,240 @@ name: Object
 type: classes
 summary: |
   The 'Object' class serves as the foundational layer for all elements in Unity scenes. Whether building intricate environments with GameObjects, infusing functionality through Components, or enhancing realism with Unity's pre-built assets such as textures and meshes, everything stems from the root 'Object' class.
-
   Moreover, the 'Object' class provides an interactive gateway to Unity's lifecycle events. This includes initialization of objects upon creation, updates occurring in tandem with the game's frame rate, and the clean-up processes when objects are destroyed. This understanding of the object lifecycle is pivotal in managing memory usage, performance optimisation, and orchestrating smooth gameplay sequences.
-
   To grasp the full extent of how the 'Object' class shapes the world of Unity, head over to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.html) for detailed insights.
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
   - name: name
     summary: |
-      The name property represents the name of the Object. This could be the name you gave an asset in Unity, or the default name of a created GameObject, like 'GameObject1'. [Find out more](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-name.html).
+      The name property represents the name of the Object. This could be the name you gave an asset in Unity, or the default name of a created GameObject, like 'GameObject1'.
+      [Find out more](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-name.html).
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: string
-methods:
-  - name: DestroyImmediate
+  - name: networkId
     summary: |
-      Immediately destroys the specified Object. You are strongly recommended to use Destroy instead. This function should only be used when writing editor code because it completely bypasses Unity's normal life-cycle events. More [details here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.DestroyImmediate.html).
-    is_static: true
+      [Unity's Object.networkId Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-networkId.html)
+    description:
+    is_static: false
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: owner
+    summary: |
+      The owner is the player associated with this Object. `nil` if there is no owner.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Player
+methods:
+  - name: ClearOwnership
+    summary: |
+      [Unity's Object.ClearOwnership Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.ClearOwnership.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: obj
-        type: Class.Object
-        default:
-        summary: The Object to destroy.
     returns:
       - type: void
-        summary: Does not return anything.
+        summary:
   - name: Destroy
     summary: |
-      Destroys the specified Object after all frame updates have finished processing. [Learn more](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Destroy.html).
+      Destroys the specified Object after all frame updates have finished processing.
+      [Learn more](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Destroy.html).
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: obj
         type: Class.Object
+        tags:
         default:
-        summary: The Object to destroy.
+        summary: |
+          The Object to destroy.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
     returns:
       - type: void
-        summary: Does not return anything.
-  - name: Instantiate
+        summary:
+  - name: DestroyImmediate
     summary: |
-      The 'Instantiate' method clones the object original and returns the clone. This can be immensely useful in various gameplay mechanics like respawning, shooting projectiles, etc. Learn more about Instantiate [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Instantiate.html).
+      Immediately destroys the specified Object. You are strongly recommended to use Destroy instead. This function should only be used when writing editor code because it completely bypasses Unity's normal life-cycle events.
+      More [details here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.DestroyImmediate.html).
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: obj
         type: Class.Object
+        tags:
         default:
-        summary: A reference to the object to be cloned.
-    returns:
-      - type: Class.Object
-        summary: The newly cloned object.
-  - name: GetInstanceID
-    summary: |
-      The 'GetInstanceID' method provides a unique identifer for the object instance. More details about Instance IDs can be found [here.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.GetInstanceID.html)
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: number
-        summary: The unique identifier for the object instance.
-  - name: DontDestroyOnLoad
-    summary: |
-      Makes the object target not be destroyed automatically when loading a new scene, which is the default behavior. [Learn more here.](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.DontDestroyOnLoad.html)
-    is_static: true
-    code_samples:
-    parameters:
-      - name: target
-        type: Class.Object
+        summary: |
+          The Object to destroy.
+      - name: allowDestroyAssets
+        type: boolean
+        tags:
         default:
-        summary: The Object that should not be destroyed.
+        summary:
     returns:
       - type: void
-        summary: This method does not return a value.
-  - name: FindObjectOfType
-    summary: |
-      This method returns the first active loaded object of the given type. It is a generic method with return type of the generic parameter. It returns null if no GameObject is active in the hierarchy. More details can be obtained [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindObjectOfType.html).
-    is_static: true
-    code_samples:
-    parameters:
-      - name: type
-        type: Class.Type
-        default:
-        summary: The type of the Object to find.
-    returns:
-      - type: Class.Object
-        summary: The object found or null.
-  - name: FindFirstObjectByType
-    summary: |
-      This method returns the first object to match the specified type, including inactive objects. It is slower than FindObjectByType, as it searches all objects in the scene, not just the active ones. [Learn more here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindFirstObjectByType.html).
-    is_static: true
-    code_samples:
-    parameters:
-      - name: type
-        type: Class.Type
-        default:
-        summary: The type of Object to find.
-    returns:
-      - type: Class.Object
-        summary: The discovered object.
+        summary:
   - name: FindAnyObjectByType
     summary: |
       The 'FindAnyObjectByType' method finds all objects in the scene of the specified type, including active and inactive ones. As the method must search every single object in the scene, this operation can be performance-intensive. [Details here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindAnyObjectByType.html).
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: type
         type: Class.Type
+        tags:
         default:
-        summary: Type of Object to find.
+        summary: |
+          Type of Object to find.
     returns:
       - type: Class.Object
-        summary: All objects found.
-math_operations:
-  - operation: "=="
+        summary: |
+          All objects found.
+  - name: FindFirstObjectByType
     summary: |
-      A description of the Object equality operator can be found at [Unity's Object.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-operator_eq.html)
+      This method returns the first object to match the specified type, including inactive objects. It is slower than FindObjectByType, as it searches all objects in the scene, not just the active ones.
+      [Learn more here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindFirstObjectByType.html).
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: type
+        type: Class.Type
+        tags:
+        default:
+        summary: |
+          The type of Object to find.
+    returns:
+      - type: Class.Object
+        summary: |
+          The discovered object.
+  - name: FindObjectOfType
+    summary: |
+      This method returns the first active loaded object of the given type. It is a generic method with return type of the generic parameter. It returns null if no GameObject is active in the hierarchy.
+      More details can be obtained [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindObjectOfType.html).
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: type
+        type: Class.Type
+        tags:
+        default:
+        summary: |
+          The type of the Object to find.
+      - name: includeInactive
+        type: boolean
+        tags:
+        default:
+        summary: |
+          The object found or null.
+    returns:
+      - type: Class.Object
+        summary: |
+          The object found or null.
+  - name: FindObjectsOfType
+    summary: |
+      [Unity's Object.FindObjectsOfType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.FindObjectsOfType.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: type
+        type: Class.Type
+        tags:
+        default:
+        summary:
+      - name: includeInactive
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {Class.Object}
+        summary:
+  - name: Instantiate
+    summary: |
+      The 'Instantiate' method clones the object original and returns the clone. This can be immensely useful in various gameplay mechanics like respawning, shooting projectiles, etc.
+      Learn more about Instantiate [here](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.Instantiate.html).
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: original
+        type: Class.Object
+        tags:
+        default:
+        summary: |
+          A reference to the object to be cloned.
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: rotation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Object
+        summary: |
+          The newly cloned object.
+  - name: RequestOwnership
+    summary: |
+      [Unity's Object.RequestOwnership Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.RequestOwnership.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's Object.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object-operator_eq.html)
     type_a: Object
     type_b: Object
     return_type: boolean
     code_samples:
+    tags:
+      - ClientAndServer

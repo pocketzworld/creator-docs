@@ -1,0 +1,88 @@
+name: LongPressMiniProfileController
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: HandleLongPressBegan
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: evt
+        type: Class.LongPressBeganEvent
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: HandleLongPressContinue
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: evt
+        type: Class.LongPressContinueEvent
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: HandleLongPressEnded
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: evt
+        type: Class.LongPressEndedEvent
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RayCast
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: SetupTapMask
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

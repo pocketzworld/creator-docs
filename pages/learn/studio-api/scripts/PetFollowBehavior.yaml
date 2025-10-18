@@ -1,0 +1,186 @@
+name: PetFollowBehavior
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: DoIdleWander
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: FollowStartDistanceSqr
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: FollowTargetDirection
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: FollowTargetOnNavmesh
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: IsOutOfRangeOfTarget
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: IsPetValid
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: PlayRandomIdleAnimation
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetFollowTarget
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: target
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetFollowing
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: following
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetTimerForIdleWander
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: TargetFollowDistanceSqr
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: TeleportDistanceSqr
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: TeleportToTarget
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePet
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Wander
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

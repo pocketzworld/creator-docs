@@ -5,7 +5,7 @@ summary: |
 description:
 code_samples:
 inherits:
-  - Class.Object
+tags:
 constructors:
 properties:
   - name: amount
@@ -14,6 +14,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: number
   - name: reservedFor
     summary: |
@@ -21,6 +24,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: string
 methods:
 math_operations:

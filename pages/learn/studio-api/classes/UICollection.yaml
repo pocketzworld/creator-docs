@@ -46,6 +46,17 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.VisualElement
+  - name: gesturePriority
+    summary: |
+      The gesture recognition priority of the underlying scroll view, defaults to true
+      Setting this to false allows inner scroll views to handle gestures first
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
   - name: isPerformingUpdates
     summary: |
       True if called in the same stack as a call to PerformUpdates

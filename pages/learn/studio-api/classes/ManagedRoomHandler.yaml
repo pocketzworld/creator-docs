@@ -1,0 +1,343 @@
+name: ManagedRoomHandler
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.MonoBehaviour
+tags:
+constructors:
+properties:
+  - name: atlastUpdated
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: () -> ()
+  - name: getDiagnostics
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: (root: EntityDiagnostics, forObject: GameObject) -> ()
+  - name: loaded
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: (obj: {Furniture2D}) -> ()
+methods:
+  - name: CombineMeshes
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: main
+        type: Class.Mesh
+        tags:
+        default:
+        summary:
+      - name: filters
+        type: {Class.MeshFilter}
+        tags:
+        default:
+        summary:
+      - name: matrix4
+        type: DataType.Matrix4x4
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Mesh
+        summary:
+  - name: CreateIso2DMesh
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: cameraTransform
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: atlasRect
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
+      - name: atlasPivot
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: scale
+        type: number
+        tags:
+        default:
+        summary:
+      - name: textureSize
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: isMirrored
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+      - name: isTop
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+      - name: extrusionPixels
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.Mesh
+        summary:
+  - name: CreateMeshForPart
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: part
+        type: Class.FurniturePart2D
+        tags:
+        default:
+        summary:
+      - name: cameraTransform
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: mirrored
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: textureSize
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: extrusionPixels
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Mesh
+        summary:
+  - name: Dispose
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: GetFurniture
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: descriptorID
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Furniture2D
+        summary:
+  - name: GetHitMask
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: part
+        type: Class.FurniturePart2D
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.FurnitureHitMask2D
+        summary:
+  - name: GetTextureForPart
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: part
+        type: Class.FurniturePart2D
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Texture2D
+        summary:
+  - name: LoadFurniture
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: descriptorID
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: LoadFurnitures
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: descriptorIDs
+        type: {string}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: LoadTexture
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: url
+        type: string
+        tags:
+        default:
+        summary:
+      - name: onLoaded
+        type: (obj: Texture) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RebuildAtlases
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: parts
+        type: {Class.FurniturePart2D}
+        tags:
+        default:
+        summary:
+      - name: incremental
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterDiagnosticsCallback
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: callback
+        type: (root: EntityDiagnostics, forObject: GameObject) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: TeleportToRoom
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: roomType
+        type: number
+        tags:
+        default:
+        summary:
+      - name: id
+        type: string
+        tags:
+        default:
+        summary:
+      - name: codeName
+        type: string
+        tags:
+        default:
+        summary:
+      - name: displayName
+        type: string
+        tags:
+        default:
+        summary:
+      - name: instanceId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: destinationId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

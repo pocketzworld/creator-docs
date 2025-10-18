@@ -1,0 +1,30 @@
+name: OpenClosetObject
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: ClosetOutfitChangedEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.Event
+methods:
+  - name: Open
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

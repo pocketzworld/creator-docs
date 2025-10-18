@@ -1,0 +1,32 @@
+name: SpriteTileMode
+type: enums
+summary: |
+  [Unity's SpriteTileMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteTileMode.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Adaptive
+    summary: |
+      [Unity's SpriteTileMode.Adaptive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteTileMode.Adaptive.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteTileMode
+  - name: Continuous
+    summary: |
+      [Unity's SpriteTileMode.Continuous Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteTileMode.Continuous.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteTileMode
+methods:
+math_operations:

@@ -1,0 +1,46 @@
+name: UINavigator
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.UIView
+tags:
+constructors:
+properties:
+  - name: ussNavigator
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: contentContainer
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+methods:
+  - name: Push
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: page
+        type: Class.UIView
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

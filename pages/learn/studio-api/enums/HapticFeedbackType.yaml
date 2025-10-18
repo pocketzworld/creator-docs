@@ -1,0 +1,101 @@
+name: HapticFeedbackType
+type: enums
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Default
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: ImpactHeavy
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: ImpactLight
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: ImpactMedium
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: None
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: NotificationError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: NotificationSuccess
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: NotificationWarning
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: Selection
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+  - name: Vibrate
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.HapticFeedbackType
+methods:
+math_operations:

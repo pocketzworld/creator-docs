@@ -96,7 +96,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's BackgroundSize.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundSize-operator_eq.html)
-    description:
     type_a: BackgroundSize
     type_b: BackgroundSize
     return_type: boolean

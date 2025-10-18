@@ -9,5 +9,25 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: didAwake
+    summary: |
+      [Unity's MonoBehaviour.didAwake Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour-didAwake.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: didStart
+    summary: |
+      [Unity's MonoBehaviour.didStart Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour-didStart.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
 methods:
 math_operations:

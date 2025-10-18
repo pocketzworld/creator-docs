@@ -1,0 +1,56 @@
+name: WalletError
+type: enums
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: InsufficientResources
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.WalletError
+  - name: InternalError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.WalletError
+  - name: None
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.WalletError
+  - name: RequestThrottled
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.WalletError
+  - name: UserNotFound
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.WalletError
+methods:
+math_operations:

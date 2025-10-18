@@ -34,6 +34,15 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Enum.CharacterState
+  - name: Jogging
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CharacterState
   - name: Jumping
     summary:
     description:

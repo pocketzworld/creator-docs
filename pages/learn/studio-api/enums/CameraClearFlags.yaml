@@ -1,0 +1,62 @@
+name: CameraClearFlags
+type: enums
+summary: |
+  [Unity's CameraClearFlags Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CameraClearFlags.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Color
+    summary: |
+      [Unity's CameraClearFlags.Color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CameraClearFlags.Color.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CameraClearFlags
+  - name: Depth
+    summary: |
+      [Unity's CameraClearFlags.Depth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CameraClearFlags.Depth.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CameraClearFlags
+  - name: Nothing
+    summary: |
+      [Unity's CameraClearFlags.Nothing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CameraClearFlags.Nothing.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CameraClearFlags
+  - name: Skybox
+    summary: |
+      [Unity's CameraClearFlags.Skybox Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CameraClearFlags.Skybox.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CameraClearFlags
+  - name: SolidColor
+    summary: |
+      [Unity's CameraClearFlags.SolidColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CameraClearFlags.SolidColor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CameraClearFlags
+methods:
+math_operations:

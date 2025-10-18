@@ -38,6 +38,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
+  - name: stylesheets
+    summary: |
+      [Unity's VisualTreeAsset.stylesheets Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-stylesheets.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.StyleSheet}
   - name: templateDependencies
     summary: |
       [Unity's VisualTreeAsset.templateDependencies Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualTreeAsset-templateDependencies.html)

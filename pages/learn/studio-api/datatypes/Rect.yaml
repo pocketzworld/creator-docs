@@ -2,203 +2,299 @@ name: Rect
 type: datatypes
 summary: |
   The Rect datatype in Unity represents a rectangle defined by its position x, y, and size width, height. It's commonly used in 2D game development to manage areas, positions, and sizes within a game scene.
+  [Unity's Rect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.html)
 description:
 code_samples:
 inherits:
+tags:
 constructors:
   - name: new
     summary: |
       Represents a new instance of Rect with specified x, y position, and width, height size.
+      [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-
-      print(rect.x) -- 0
-      print(rect.y) -- 0
-
-      print(rect.width) -- 100
-      print(rect.height) -- 100
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: source
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Rect
+        summary:
+  - name: new
+    summary: |
+      Represents a new instance of Rect with specified x, y position, and width, height size.
+      [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: size
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Rect
+        summary:
+  - name: new
+    summary: |
+      Represents a new instance of Rect with specified x, y position, and width, height size.
+      [Unity's Rect.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: x
         type: number
+        tags:
         default:
         summary:
       - name: y
         type: number
+        tags:
         default:
         summary:
       - name: width
         type: number
+        tags:
         default:
         summary:
       - name: height
         type: number
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Rect
         summary:
 properties:
-  - name: x
-    summary: |
-      Retrieve or assign the x-coordinate of the Rect. The x-coordinate represents the horizontal position of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-      rect.x = 10
-
-      print(rect.x) -- 10
-      ```
-    type: number
-  - name: y
-    summary: |
-      Access or modify the y-coordinate of the Rect. The y-coordinate represents the vertical position of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-      rect.y = 10
-
-      print(rect.y) -- 10
-      ```
-    type: number
-  - name: position
-    summary: |
-      Get or set the position of the Rect as a Vector2. The position represents the x, y coordinates of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-      rect.position = Vector2.new(10, 10)
-
-      print(rect.position.x) -- 10
-      print(rect.position.y) -- 10
-      ```
-    type: DataType.Vector2
   - name: center
     summary: |
       Obtain or modify the center position of the Rect. The center represents the midpoint of the Rect.
+      [Unity's Rect.center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-center.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
       rect.center = Vector2.new(50, 50)
-
+      
       print(rect.center.x) -- 50
       print(rect.center.y) -- 50
       ```
+    tags:
+      - ClientOnly
     type: DataType.Vector2
-  - name: min
-    summary: |
-      Access the min point of the Rect. The min point represents the bottom-left corner of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-
-      print(rect.min.x) -- 0
-      print(rect.min.y) -- 0
-      ```
-    type: DataType.Vector2
-  - name: max
-    summary: |
-      Get the max point of the Rect. The max point represents the top-right corner of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-
-      print(rect.max.x) -- 100
-      print(rect.max.y) -- 100
-      ```
-    type: DataType.Vector2
-  - name: width
-    summary: |
-      Access or modify the width of the Rect. The width represents the horizontal size of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-      rect.width = 50
-
-      print(rect.width) -- 50
-      ```
-    type: number
   - name: height
     summary: |
       Retrieve or set the height of the Rect. The height represents the vertical size of the Rect.
+      [Unity's Rect.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-height.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
       rect.height = 50
-
+      
       print(rect.height) -- 50
       ```
+    tags:
+      - ClientOnly
     type: number
+  - name: max
+    summary: |
+      Get the max point of the Rect. The max point represents the top-right corner of the Rect.
+      [Unity's Rect.max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-max.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      
+      print(rect.max.x) -- 100
+      print(rect.max.y) -- 100
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: min
+    summary: |
+      Access the min point of the Rect. The min point represents the bottom-left corner of the Rect.
+      [Unity's Rect.min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-min.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      
+      print(rect.min.x) -- 0
+      print(rect.min.y) -- 0
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: position
+    summary: |
+      Get or set the position of the Rect as a Vector2. The position represents the x, y coordinates of the Rect.
+      [Unity's Rect.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-position.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      rect.position = Vector2.new(10, 10)
+      
+      print(rect.position.x) -- 10
+      print(rect.position.y) -- 10
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
   - name: size
     summary: |
       Get or set the size of the Rect as a Vector2. The size represents the width, height dimensions of the Rect.
+      [Unity's Rect.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-size.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
       rect.size = Vector2.new(50, 50)
-
+      
       print(rect.size.x) -- 50
       print(rect.size.y) -- 50
       ```
+    tags:
+      - ClientOnly
     type: DataType.Vector2
-  - name: xMin
+  - name: width
     summary: |
-      Access the minimum x-coordinate of the Rect. The xMin represents the left edge of the Rect.
+      Access or modify the width of the Rect. The width represents the horizontal size of the Rect.
+      [Unity's Rect.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-width.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
-
-      print(rect.xMin) -- 0
+      rect.width = 50
+      
+      print(rect.width) -- 50
       ```
+    tags:
+      - ClientOnly
     type: number
-  - name: yMin
+  - name: x
     summary: |
-      Access the minimum y-coordinate of the Rect. The yMin represents the bottom edge of the Rect.
+      Retrieve or assign the x-coordinate of the Rect. The x-coordinate represents the horizontal position of the Rect.
+      [Unity's Rect.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-x.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
-
-      print(rect.yMin) -- 0
+      rect.x = 10
+      
+      print(rect.x) -- 10
       ```
+    tags:
+      - ClientOnly
     type: number
   - name: xMax
     summary: |
       Get the maximum x-coordinate of the Rect. The xMax represents the right edge of the Rect.
+      [Unity's Rect.xMax Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMax.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
-
+      
       print(rect.xMax) -- 100
       ```
+    tags:
+      - ClientOnly
+    type: number
+  - name: xMin
+    summary: |
+      Access the minimum x-coordinate of the Rect. The xMin represents the left edge of the Rect.
+      [Unity's Rect.xMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-xMin.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      
+      print(rect.xMin) -- 0
+      ```
+    tags:
+      - ClientOnly
+    type: number
+  - name: y
+    summary: |
+      Access or modify the y-coordinate of the Rect. The y-coordinate represents the vertical position of the Rect.
+      [Unity's Rect.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-y.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      rect.y = 10
+      
+      print(rect.y) -- 10
+      ```
+    tags:
+      - ClientOnly
     type: number
   - name: yMax
     summary: |
       Access the maximum y-coordinate of the Rect. The yMax represents the top edge of the Rect.
+      [Unity's Rect.yMax Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-yMax.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
-
+      
       print(rect.yMax) -- 100
       ```
+    tags:
+      - ClientOnly
+    type: number
+  - name: yMin
+    summary: |
+      Access the minimum y-coordinate of the Rect. The yMin represents the bottom edge of the Rect.
+      [Unity's Rect.yMin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-yMin.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      
+      print(rect.yMin) -- 0
+      ```
+    tags:
+      - ClientOnly
     type: number
   - name: zero
     summary: |
       Obtain a Rect instance positioned at the origin (0, 0) with zero width and height. This represents a point at the origin.
+      [Unity's Rect.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-zero.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
@@ -208,76 +304,52 @@ properties:
       print(Rect.zero.width) -- 0
       print(Rect.zero.height) -- 0
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Rect
 methods:
-  - name: Set
-    summary: |
-      Set the position and size of the Rect. This method assigns the x, y position, width, and height of the Rect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local rect = Rect.new(0, 0, 100, 100)
-      rect:Set(10, 10, 50, 50)
-
-      print(rect.x) -- 10
-      print(rect.y) -- 10
-
-      print(rect.width) -- 50
-      print(rect.height) -- 50
-      ```
-    parameters:
-      - name: x
-        type: number
-        default:
-        summary:
-      - name: y
-        type: number
-        default:
-        summary:
-      - name: width
-        type: number
-        default:
-        summary:
-      - name: height
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
   - name: Contains
     summary: |
       Check if a point is within the Rect. This method determines if a point is inside the Rect.
+      [Unity's Rect.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Contains.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
       local point = Vector2.new(50, 50)
-
+      
       print(rect:Contains(point)) -- true
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: point
-        type: DataType.Vector2
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: allowInverse
+        type: boolean
+        tags:
         default:
         summary:
     returns:
       - type: boolean
         summary:
-  - name: Overlaps
+  - name: Equals
     summary: |
-      Determine if the Rect overlaps with another Rect. This method checks if the Rect overlaps with another Rect.
-    is_static: false 
-    code_samples: |
-      ```lua
-      local rect1 = Rect.new(0, 0, 100, 100)
-      local rect2 = Rect.new(50, 50, 100, 100)
-
-      print(rect1:Overlaps(rect2)) -- true
-      ```
+      [Unity's Rect.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: other
         type: DataType.Rect
+        tags:
         default:
         summary:
     returns:
@@ -286,32 +358,40 @@ methods:
   - name: MinMaxRect
     summary: |
       Create a new Rect from minimum and maximum coordinates. This method creates a Rect from the minimum and maximum coordinates.
+      [Unity's Rect.MinMaxRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.MinMaxRect.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
       local rect = Rect.MinMaxRect(0, 0, 100, 100)
-
+      
       print(rect.x) -- 0
       print(rect.y) -- 0
-
+      
       print(rect.width) -- 100
       print(rect.height) -- 100
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: xmin
         type: number
+        tags:
         default:
         summary:
       - name: ymin
         type: number
+        tags:
         default:
         summary:
       - name: xmax
         type: number
+        tags:
         default:
         summary:
       - name: ymax
         type: number
+        tags:
         default:
         summary:
     returns:
@@ -320,50 +400,144 @@ methods:
   - name: NormalizedToPoint
     summary: |
       Convert normalized coordinates to a point within the Rect. This method converts normalized coordinates to a point within the Rect.
+      [Unity's Rect.NormalizedToPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.NormalizedToPoint.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
       local normalized = Vector2.new(0.5, 0.5)
-
+      
       local point = rect:NormalizedToPoint(normalized)
       print(point.x) -- 50
       print(point.y) -- 50
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: rectangle
         type: DataType.Rect
+        tags:
         default:
         summary:
       - name: normalizedRectCoordinates
         type: DataType.Vector2
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Vector2
         summary:
+  - name: Overlaps
+    summary: |
+      Determine if the Rect overlaps with another Rect. This method checks if the Rect overlaps with another Rect.
+      [Unity's Rect.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Overlaps.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect1 = Rect.new(0, 0, 100, 100)
+      local rect2 = Rect.new(50, 50, 100, 100)
+      
+      print(rect1:Overlaps(rect2)) -- true
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: other
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
+      - name: allowInverse
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: PointToNormalized
     summary: |
       Convert a point within the Rect to normalized coordinates. This method converts a point within the Rect to normalized coordinates.
+      [Unity's Rect.PointToNormalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.PointToNormalized.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
       local rect = Rect.new(0, 0, 100, 100)
       local point = Vector2.new(50, 50)
-
+      
       local normalized = rect:PointToNormalized(point)
       print(normalized.x) -- 0.5
       print(normalized.y) -- 0.5
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: rectangle
         type: DataType.Rect
+        tags:
         default:
         summary:
       - name: point
         type: DataType.Vector2
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Vector2
         summary:
+  - name: Set
+    summary: |
+      Set the position and size of the Rect. This method assigns the x, y position, width, and height of the Rect.
+      [Unity's Rect.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Set.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      rect:Set(10, 10, 50, 50)
+      
+      print(rect.x) -- 10
+      print(rect.y) -- 10
+      
+      print(rect.width) -- 50
+      print(rect.height) -- 50
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: width
+        type: number
+        tags:
+        default:
+        summary:
+      - name: height
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's Rect.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect-operator_eq.html)
+    type_a: Rect
+    type_b: Rect
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly

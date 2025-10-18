@@ -6,8 +6,6 @@ code_samples:
 inherits:
 tags:
 constructors:
-properties:
-methods:
   - name: new
     summary:
     description:
@@ -19,4 +17,6 @@ methods:
     returns:
       - type: Class.VisualElementFactory
         summary:
+properties:
+methods:
 math_operations:

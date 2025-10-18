@@ -1,0 +1,155 @@
+name: InventoryError
+type: enums
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Count
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: CursorInvalid
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: CursorInvalidLimit
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: CursorNoMoreValues
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: InternalError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: InvalidHolderId
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: InvalidItemId
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: InvalidReservationId
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: NoActions
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: None
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: RequestThrottled
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: Timeout
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: TooManyActions
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: TransactionError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: UnknownError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+  - name: UnknownTransaction
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.InventoryError
+methods:
+math_operations:

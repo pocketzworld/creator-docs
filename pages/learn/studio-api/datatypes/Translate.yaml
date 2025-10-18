@@ -118,7 +118,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's Translate.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Translate-operator_eq.html)
-    description:
     type_a: Translate
     type_b: Translate
     return_type: boolean

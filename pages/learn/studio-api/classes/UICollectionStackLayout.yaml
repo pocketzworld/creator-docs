@@ -65,7 +65,6 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-      - ReadOnly
     type: number
 methods:
   - name: Dispose

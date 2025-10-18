@@ -5,12 +5,16 @@ summary: |
 description:
 code_samples:
 inherits:
-  - Class.Object
+tags:
 constructors:
   - name: new
-    summary: Instantiates a new InventoryTransaction object.
+    summary: |
+      Instantiates a new InventoryTransaction object.
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ServerOnly
     parameters:
     returns:
       - type: Class.InventoryTransaction
@@ -23,17 +27,22 @@ methods:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
     parameters:
       - name: holderId
         type: string
+        tags:
         default:
         summary:
       - name: itemId
         type: string
+        tags:
         default:
         summary:
       - name: quantity
         type: number
+        tags:
         default:
         summary:
     returns:
@@ -44,94 +53,23 @@ methods:
       This is the equivalent of calling Give(player.user.id, itemId, quantity).
     description:
     is_static: false
-    code_samples: |
-      ```lua
-        --!SerializeField
-        local itemId: string = "Money"
-
-        --!SerializeField
-        local amountPerPickup: number = 1
-
-        local collectPickupRequest = Event.new("CollectPickupRequest")
-
-        function self:ClientStart()
-          function self:OnTriggerEnter(other : Collider)
-            self.gameObject:SetActive(false)
-            collectPickupRequest:FireServer()
-          end
-        end
-
-        function self:ServerStart()
-          collectPickupRequest:Connect(function(player: Player)
-            local transaction = InventoryTransaction.new()
-              :GivePlayer(player, itemId, amountPerPickup)
-            Inventory.CommitTransaction(transaction)
-          end)
-        end
-      ```
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: itemId
-        type: string
-        default:
-        summary:
-      - name: quantity
-        type: number
-        default:
-        summary:
-    returns:
-      - type: Class.InventoryTransaction
-        summary:
-  - name: Take
-    summary: |
-      Removes the given quantity of the given item from the holder's inventory.
-    description:
-    is_static: false
     code_samples:
-    parameters:
-      - name: holderId
-        type: string
-        default:
-        summary:
-      - name: itemId
-        type: string
-        default:
-        summary:
-      - name: quantity
-        type: number
-        default:
-        summary:
-    returns:
-      - type: Class.InventoryTransaction
-        summary:
-  - name: TakePlayer
-    summary: |
-      This is the equivalent of calling Take(player.user.id, itemId, quantity).
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-        function Purchase(player: Player, itemId: string, currencyId: string, cost: number)
-          local transaction = InventoryTransaction.new()
-            :GivePlayer(player, itemId, 1)
-            :TakePlayer(player, currencyId, cost)
-          Inventory.CommitTransaction(transaction)
-        end
-      ```
+    tags:
+      - ServerOnly
     parameters:
       - name: player
         type: Class.Player
+        tags:
         default:
         summary:
       - name: itemId
         type: string
+        tags:
         default:
         summary:
       - name: quantity
         type: number
+        tags:
         default:
         summary:
     returns:
@@ -143,21 +81,27 @@ methods:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
     parameters:
       - name: fromHolderId
         type: string
+        tags:
         default:
         summary:
       - name: toHolderId
         type: string
+        tags:
         default:
         summary:
       - name: itemId
         type: string
+        tags:
         default:
         summary:
       - name: quantity
         type: number
+        tags:
         default:
         summary:
     returns:
@@ -168,87 +112,28 @@ methods:
       This is the equivalent of calling Move(fromPlayer.user.id, toPlayer.user.id, itemId, quantity).
     description:
     is_static: false
-    code_samples: |
-      ```lua
-        function FinalizeTrade(playerA: Player, playerAItems: {string}, playerB: Player, playerBItems: {string})
-          local transaction = InventoryTransaction.new()
-          for index, itemId in playerAItems do
-            transaction:MovePlayers(playerA, playerB, itemId, 1)
-          end
-          for index, itemId in playerBItems do
-            transaction:MovePlayers(playerB, playerA, itemId, 1)
-          end
-
-          Inventory.CommitTransaction(transaction)
-        end
-      ```
+    code_samples:
+    tags:
+      - ServerOnly
     parameters:
       - name: fromPlayer
         type: Class.Player
+        tags:
         default:
         summary:
       - name: toPlayer
         type: Class.Player
+        tags:
         default:
         summary:
       - name: itemId
         type: string
+        tags:
         default:
         summary:
       - name: quantity
         type: number
-        default:
-        summary:
-    returns:
-      - type: Class.InventoryTransaction
-        summary:
-  - name: Reserve
-    summary: |
-      Adds the given quantity of the given item to the holder's reserved items.  Items that are reserved cannot be added or removed with Give, Take or Move.  Use Release to remove the items from the reserved items.
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: holderId
-        type: string
-        default:
-        summary:
-      - name: itemId
-        type: string
-        default:
-        summary:
-      - name: reservedFor
-        type: string
-        default:
-        summary:
-      - name: quantity
-        type: number
-        default:
-        summary:
-    returns:
-      - type: Class.InventoryTransaction
-        summary:
-  - name: ReservePlayer
-    summary: |
-      This is the equivalent of calling Reserve(player.user.id, itemId, reservedFor, quantity).
-    description:
-    is_static: false
-    code_samples:
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: itemId
-        type: string
-        default:
-        summary:
-      - name: reservedFor
-        type: string
-        default:
-        summary:
-      - name: quantity
-        type: number
+        tags:
         default:
         summary:
     returns:
@@ -260,21 +145,27 @@ methods:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
     parameters:
-      - name: player
-        type: Class.Player
+      - name: holderId
+        type: string
+        tags:
         default:
         summary:
       - name: itemId
         type: string
+        tags:
         default:
         summary:
       - name: reservedFor
         type: string
+        tags:
         default:
         summary:
       - name: quantity
         type: number
+        tags:
         default:
         summary:
     returns:
@@ -286,21 +177,145 @@ methods:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
     parameters:
-      - name: holderId
-        type: string
+      - name: player
+        type: Class.Player
+        tags:
         default:
         summary:
       - name: itemId
         type: string
+        tags:
         default:
         summary:
       - name: reservedFor
         type: string
+        tags:
         default:
         summary:
       - name: quantity
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: Reserve
+    summary: |
+      Adds the given quantity of the given item to the holder's reserved items.  Items that are reserved cannot be added or removed with Give, Take or Move.  Use Release to remove the items from the reserved items.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: holderId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: itemId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: reservedFor
+        type: string
+        tags:
+        default:
+        summary:
+      - name: quantity
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: ReservePlayer
+    summary: |
+      This is the equivalent of calling Reserve(player.user.id, itemId, reservedFor, quantity).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: itemId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: reservedFor
+        type: string
+        tags:
+        default:
+        summary:
+      - name: quantity
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: Take
+    summary: |
+      Removes the given quantity of the given item from the holder's inventory.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: holderId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: itemId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: quantity
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.InventoryTransaction
+        summary:
+  - name: TakePlayer
+    summary: |
+      This is the equivalent of calling Take(player.user.id, itemId, quantity).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: itemId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: quantity
+        type: number
+        tags:
         default:
         summary:
     returns:

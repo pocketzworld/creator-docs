@@ -2,537 +2,657 @@ name: Quaternion
 type: datatypes
 summary: |
   A Quaternion represents rotation and direction in 3D space, consisting of x, y, z, and w components. They are crucial for 3D movement and rotation, offering advantages such as avoiding gimbal lock.
+  [Unity's Quaternion Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html)
 description:
 code_samples:
 inherits:
+tags:
 constructors:
   - name: new
-    summary: Creates a new Quaternion with specified x, y, z, and w components. The default values are 0 for x, y, z, and 1 for w.
-    is_static: false
-    code_samples: |
-      ```lua
-      local x = 0
-      local y = 0
-      local z = 0
-      local w = 1
-
-      local quaternion = Quaternion.new(x, y, z, w)
-      ```
+    summary: |
+      Creates a new Quaternion with specified x, y, z, and w components.
+      [Unity's Quaternion.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: x
         type: number
+        tags:
         default:
-        summary: The x component.
+        summary: |
+          The x component.
       - name: y
         type: number
+        tags:
         default:
-        summary: The y component.
+        summary: |
+          The y component.
       - name: z
         type: number
+        tags:
         default:
-        summary: The z component.
+        summary: |
+          The z component.
       - name: w
         type: number
+        tags:
         default:
-        summary: The w component.
+        summary: |
+          The w component.
     returns:
       - type: DataType.Quaternion
-        summary: A new Quaternion with given components.
+        summary: |
+          A new Quaternion with given components.
 properties:
   - name: eulerAngles
-    summary: Returns the rotation of a Quaternion in Euler angles representation. Usually used for debugging and visualizing rotations.
+    summary: |
+      Returns the rotation of a Quaternion in Euler angles representation.
+      [Unity's Quaternion.eulerAngles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-eulerAngles.html)
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      local euler = quaternion.eulerAngles
-
-      print(euler) -- (0, 0, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     type: DataType.Vector3
-  - name: normalized
-    summary: Returns a normalized copy of the Quaternion. Useful for ensuring the Quaternion has a magnitude of 1.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      local normalized = quaternion.normalized
-
-      print(normalized) -- (0, 0, 0, 1)
-      ```
-    type: DataType.Quaternion
-  - name: x
-    summary: Represents the x component of the Quaternion. It is the imaginary part of the Quaternion.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      print(quaternion.x) -- 0
-      ```
-    type: number
-  - name: y
-    summary: Represents the y component of the Quaternion. It is the imaginary part of the Quaternion.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      print(quaternion.y) -- 0
-      ```
-    type: number
-  - name: z
-    summary: Represents the z component of the Quaternion.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      print(quaternion.z) -- 0
-      ```
-    type: number
-  - name: w
-    summary: Represents the w (scalar) component of the Quaternion.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      print(quaternion.w) -- 1
-      ```
-    type: number
   - name: identity
-    summary: Represents a Quaternion for no rotation.
+    summary: |
+      Represents a Quaternion for no rotation.
+      [Unity's Quaternion.identity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-identity.html)
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Quaternion
-  - name: kEpsilon
-    summary: Represents a small number greater than zero for comparison.
-    is_static: true
-    code_samples: |
-      ```lua
-      local epsilon = Quaternion.kEpsilon
-      print(epsilon) -- 1e-6
-      ```
+  - name: normalized
+    summary: |
+      Returns a normalized copy of the Quaternion. Useful for ensuring the Quaternion has a magnitude of 1.
+      [Unity's Quaternion.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-normalized.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Quaternion
+  - name: w
+    summary: |
+      Represents the w (scalar) component of the Quaternion.
+      [Unity's Quaternion.w Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-w.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: x
+    summary: |
+      Represents the x component of the Quaternion.
+      [Unity's Quaternion.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-x.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: y
+    summary: |
+      Represents the y component of the Quaternion.
+      [Unity's Quaternion.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-y.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: z
+    summary: |
+      Represents the z component of the Quaternion.
+      [Unity's Quaternion.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-z.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     type: number
 methods:
-  - name: Equals
-    summary: Checks if two Quaternions or objects are equal.
-    is_static: false
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 0, 1)
-
-      local equal = a:Equals(b)
-      print(equal) -- true
-      ```
-    parameters:
-      - name: other
-        type: DataType.Quaternion
-        default:
-        summary: The Quaternion to compare with.
-    returns:
-      - type: boolean
-        summary: Returns true if the Quaternions are equal.
-  - name: Set
-    summary: Assigns new values to the Quaternion's components.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      quaternion:Set(1, 1, 1, 1)
-      ```
-    parameters:
-      - name: newX
-        type: number
-        default:
-        summary: The new x component.
-      - name: newY
-        type: number
-        default:
-        summary: The new y component.
-      - name: newZ
-        type: number
-        default:
-        summary: The new z component.
-      - name: newW
-        type: number
-        default:
-        summary: The new w component.
-    returns:
-      - type: void
-  - name: SetLookRotation
-    summary: Aligns the Quaternion's z-axis towards a target direction.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      local target = Vector3.new(0, 0, 1)
-
-      quaternion:SetLookRotation(target)
-      ```
-    parameters:
-      - name: view
-        type: DataType.Vector3
-        default:
-        summary: The target direction vector.
-    returns:
-      - type: void
-  - name: SetFromToRotation
-    summary: Sets the Quaternion to rotate from one direction to another.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      local from = Vector3.new(0, 0, 0)
-      local to = Vector3.new(0, 0, 1)
-
-      quaternion:SetFromToRotation(from, to)
-      ```
-    parameters:
-      - name: fromDirection
-        type: DataType.Vector3
-        default:
-        summary: The vector to rotate from.
-      - name: toDirection
-        type: DataType.Vector3
-        default:
-        summary: The vector to rotate to.
-    returns:
-      - type: void
-  - name: Normalize
-    summary: Modifies the quaternion to a unit length version of itself.
-    is_static: false
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      quaternion:Normalize()
-      ```
-    parameters:
-    returns:
-      - type: void
-  - name: FromToRotation
-    summary: Creates a Quaternion that rotates from one direction to another.
-    is_static: true
-    code_samples: |
-      ```lua
-      local from = Vector3.new(0, 0, 0)
-      local to = Vector3.new(0, 0, 1)
-
-      local quaternion = Quaternion.FromToRotation(from, to)
-      ```
-    parameters:
-      - name: fromDirection
-        type: DataType.Vector3
-        default:
-        summary: The vector to rotate from.
-      - name: toDirection
-        type: DataType.Vector3
-        default:
-        summary: The vector to rotate to.
-    returns:
-      - type: DataType.Quaternion
-        summary: A rotation from fromDirection to toDirection.
-  - name: Inverse
-    summary: Returns the inverse of the Quaternion.
-    is_static: true
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      local inverse = Quaternion.Inverse(quaternion)
-      ```
-    parameters:
-      - name: rotation
-        type: DataType.Quaternion
-        default:
-        summary: The rotation to inverse.
-    returns:
-      - type: DataType.Quaternion
-        summary: The inverse rotation.
-  - name: Slerp
-    summary: Gradually changes a Quaternion from one rotation to another.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-      local t = 0.5
-
-      local slerp = Quaternion.Slerp(a, b, t)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Quaternion
-        default:
-        summary: The starting rotation.
-      - name: b
-        type: DataType.Quaternion
-        default:
-        summary: The end rotation.
-      - name: t
-        type: number
-        default:
-        summary: The amount to interpolate.
-    returns:
-      - type: DataType.Quaternion
-        summary: An interpolated quaternion rotation.
-  - name: SlerpUnclamped
-    summary: Interpolates a Quaternion over an arbitrary range.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-      local t = 0.5
-
-      local slerp = Quaternion.SlerpUnclamped(a, b, t)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Quaternion
-        default:
-        summary: The starting rotation.
-      - name: b
-        type: DataType.Quaternion
-        default:
-        summary: The end rotation.
-      - name: t
-        type: number
-        default:
-        summary: The unclamped interpolation amount.
-    returns:
-      - type: DataType.Quaternion
-        summary: An interpolated quaternion rotation.
-  - name: Lerp
-    summary: Linearly interpolates between two quaternions.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-      local t = 0.5
-
-      local lerp = Quaternion.Lerp(a, b, t)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Quaternion
-        default:
-        summary: The starting rotation.
-      - name: b
-        type: DataType.Quaternion
-        default:
-        summary: The end rotation.
-      - name: t
-        type: number
-        default:
-        summary: The amount to interpolate.
-    returns:
-      - type: DataType.Quaternion
-        summary: An interpolated quaternion rotation.
-  - name: LerpUnclamped
+  - name: Angle
     summary: |
-      The 'LerpUnclamped' method is similar to Lerp, but here the interpolation factor isn't clamped to the range [0, 1].
+      Returns the angle in degrees between two rotations.
+      [Unity's Quaternion.Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Angle.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-      local t = 0.5
-
-      local lerp = Quaternion.LerpUnclamped(a, b, t)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: DataType.Quaternion
+        tags:
         default:
-        summary: The starting rotation.
+        summary: |
+          The first rotation.
       - name: b
         type: DataType.Quaternion
+        tags:
         default:
-        summary: The end rotation.
-      - name: t
-        type: number
-        default:
-        summary: The unclamped interpolation amount.
+        summary: |
+          The second rotation.
     returns:
-      - type: DataType.Quaternion
-        summary: Returns a Quaternion that is interpolated over an arbitrary range.
+      - type: number
+        summary: |
+          The angle in degrees between the two rotations.
   - name: AngleAxis
-    summary: Creates a Quaternion rotation around an axis by a specified angle.
+    summary: |
+      Creates a Quaternion rotation around an axis by a specified angle.
+      [Unity's Quaternion.AngleAxis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.AngleAxis.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local angle = 90
-      local axis = Vector3.new(0, 1, 0)
-
-      local quaternion = Quaternion.AngleAxis(angle, axis)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: angle
         type: number
+        tags:
         default:
-        summary: The angle of rotation.
+        summary: |
+          The angle of rotation.
       - name: axis
         type: DataType.Vector3
+        tags:
         default:
-        summary: The rotation axis.
+        summary: |
+          The rotation axis.
     returns:
       - type: DataType.Quaternion
-        summary: A Quaternion around the specified axis with the given angle.
-  - name: LookRotation
-    summary: Provides a quaternion that makes an object face towards a specified direction.
-    is_static: true
-    code_samples: |
-      ```lua
-      local forward = Vector3.new(0, 0, 1)
-      local upwards = Vector3.new(0, 1, 0)
-
-      local quaternion = Quaternion.LookRotation(forward, upwards)
-      ```
-    parameters:
-      - name: forward
-        type: DataType.Vector3
-        default:
-        summary: The direction to be faced.
-      - name: upwards
-        type: DataType.Vector3
-        default:
-        summary: The direction to be used as 'upwards'.
-    returns:
-      - type: DataType.Quaternion
-        summary: A Quaternion that aligns an object's forward direction towards the specified direction.
-  - name: Multiply
-    summary: Multiplies two Quaternions together.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-
-      local multiplied = Quaternion.Multiply(a, b)
-      print(multiplied) -- (0, 0, 0, -1)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Quaternion
-        default:
-        summary: The first Quaternion.
-      - name: b
-        type: DataType.Quaternion
-        default:
-        summary: The second Quaternion.
-    returns:
-      - type: DataType.Quaternion
-        summary: The product of the two Quaternions.
+        summary: |
+          A Quaternion around the specified axis with the given angle.
   - name: Dot
-    summary: Calculates the dot product of two quaternions.
+    summary: |
+      Calculates the dot product of two quaternions.
+      [Unity's Quaternion.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Dot.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-
-      local dot = Quaternion.Dot(a, b)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: DataType.Quaternion
+        tags:
         default:
-        summary: The first quaternion.
+        summary: |
+          The first quaternion.
       - name: b
         type: DataType.Quaternion
+        tags:
         default:
-        summary: The second quaternion.
+        summary: |
+          The second quaternion.
     returns:
       - type: number
-        summary: The dot product of the two quaternions.
-  - name: Angle
-    summary: Returns the angle in degrees between two rotations.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Quaternion.new(0, 0, 0, 1)
-      local b = Quaternion.new(0, 0, 1, 0)
-
-      local angle = Quaternion.Angle(a, b)
-      ```
+        summary: |
+          The dot product of the two quaternions.
+  - name: Equals
+    summary: |
+      Checks if two Quaternions are equal.
+      [Unity's Quaternion.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: a
+      - name: other
         type: DataType.Quaternion
+        tags:
         default:
-        summary: The first rotation.
-      - name: b
-        type: DataType.Quaternion
-        default:
-        summary: The second rotation.
+        summary: |
+          The Quaternion to compare with.
     returns:
-      - type: number
-        summary: The angle in degrees between the two rotations.
+      - type: boolean
+        summary: |
+          Returns true if the Quaternions are equal.
   - name: Euler
-    summary: Creates a Quaternion rotation from Euler angles.
+    summary: |
+      Creates a Quaternion rotation from Euler angles.
+      [Unity's Quaternion.Euler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Euler.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local x = 0
-      local y = 0
-      local z = 0
-
-      local quaternion = Quaternion.Euler(x, y, z)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: x
         type: number
+        tags:
         default:
-        summary: The angle around the x-axis in degrees.
+        summary: |
+          The angle around the x-axis in degrees.
       - name: y
         type: number
+        tags:
         default:
-        summary: The angle around the y-axis in degrees.
+        summary: |
+          The angle around the y-axis in degrees.
       - name: z
         type: number
+        tags:
         default:
-        summary: The angle around the z-axis in degrees.
+        summary: |
+          The angle around the z-axis in degrees.
     returns:
       - type: DataType.Quaternion
-        summary: A Quaternion from the Euler angles.
-  - name: RotateTowards
-    summary: Gradually changes a Quaternion towards a target rotation.
+        summary: |
+          A Quaternion from the Euler angles.
+  - name: FromToRotation
+    summary: |
+      Creates a Quaternion that rotates from one direction to another.
+      [Unity's Quaternion.FromToRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.FromToRotation.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local from = Quaternion.new(0, 0, 0, 1)
-      local to = Quaternion.new(0, 0, 1, 0)
-      local maxDegreesDelta = 0.5
-
-      local rotated = Quaternion.RotateTowards(from, to, maxDegreesDelta)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: from
-        type: DataType.Quaternion
+      - name: fromDirection
+        type: DataType.Vector3
+        tags:
         default:
-        summary: The current rotation.
-      - name: to
-        type: DataType.Quaternion
+        summary: |
+          The vector to rotate from.
+      - name: toDirection
+        type: DataType.Vector3
+        tags:
         default:
-        summary: The target rotation.
-      - name: maxDegreesDelta
-        type: number
-        default:
-        summary: The maximum number of degrees to rotate by in each call.
+        summary: |
+          The vector to rotate to.
     returns:
       - type: DataType.Quaternion
-        summary: A Quaternion rotated towards the target.
-  - name: Normalize
-    summary: Modifies the quaternion to a unit length version of itself.
+        summary: |
+          A rotation from fromDirection to toDirection.
+  - name: Inverse
+    summary: |
+      Returns the inverse of the Quaternion.
+      [Unity's Quaternion.Inverse Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Inverse.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local quaternion = Quaternion.new(0, 0, 0, 1)
-      local normalized = Quaternion.Normalize(quaternion)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: rotation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The rotation to inverse.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          The inverse rotation.
+  - name: Lerp
+    summary: |
+      Linearly interpolates between two quaternions.
+      [Unity's Quaternion.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Lerp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The starting rotation.
+      - name: b
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The end rotation.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The amount to interpolate.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          An interpolated quaternion rotation.
+  - name: LerpUnclamped
+    summary: |
+      The 'LerpUnclamped' method is similar to Lerp, but here the interpolation factor isn't clamped to the range [0, 1].
+      [Unity's Quaternion.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LerpUnclamped.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The starting rotation.
+      - name: b
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The end rotation.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The unclamped interpolation amount.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          Returns a Quaternion that is interpolated over an arbitrary range.
+  - name: LookRotation
+    summary: |
+      Provides a quaternion that makes an object face towards a specified direction.
+      [Unity's Quaternion.LookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LookRotation.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: forward
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction to be faced.
+      - name: upwards
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction to be used as 'upwards'.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          A Quaternion that aligns an object's forward direction towards the specified direction.
+  - name: Multiply
+    summary: |
+      Multiplies two Quaternions together.
+      [Unity's Quaternion.Multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Multiply.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The first Quaternion.
+      - name: rhs
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The second Quaternion.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          The product of the two Quaternions.
+  - name: Normalize
+    summary: |
+      Modifies the quaternion to a unit length version of itself.
+      [Unity's Quaternion.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: q
         type: DataType.Quaternion
+        tags:
         default:
-        summary: The Quaternion to be normalized.
+        summary: |
+          The Quaternion to be normalized.
     returns:
       - type: DataType.Quaternion
-        summary: The normalized version of the quaternion.
+        summary: |
+          The normalized version of the quaternion.
+  - name: RotateTowards
+    summary: |
+      Gradually changes a Quaternion towards a target rotation.
+      [Unity's Quaternion.RotateTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.RotateTowards.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: from
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The current rotation.
+      - name: to
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The target rotation.
+      - name: maxDegreesDelta
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum number of degrees to rotate by in each call.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          A Quaternion rotated towards the target.
+  - name: Set
+    summary: |
+      Assigns new values to the Quaternion's components.
+      [Unity's Quaternion.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Set.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: newX
+        type: number
+        tags:
+        default:
+        summary: |
+          The new x component.
+      - name: newY
+        type: number
+        tags:
+        default:
+        summary: |
+          The new y component.
+      - name: newZ
+        type: number
+        tags:
+        default:
+        summary: |
+          The new z component.
+      - name: newW
+        type: number
+        tags:
+        default:
+        summary: |
+          The new w component.
+    returns:
+      - type: void
+        summary:
+  - name: SetFromToRotation
+    summary: |
+      Sets the Quaternion to rotate from one direction to another.
+      [Unity's Quaternion.SetFromToRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetFromToRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: fromDirection
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The vector to rotate from.
+      - name: toDirection
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The vector to rotate to.
+    returns:
+      - type: void
+        summary:
+  - name: SetLookRotation
+    summary: |
+      Aligns the Quaternion's z-axis towards a target direction.
+      [Unity's Quaternion.SetLookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetLookRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: view
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The target direction vector.
+      - name: up
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Slerp
+    summary: |
+      Gradually changes a Quaternion from one rotation to another.
+      [Unity's Quaternion.Slerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Slerp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The starting rotation.
+      - name: b
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The end rotation.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The amount to interpolate.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          An interpolated quaternion rotation.
+  - name: SlerpUnclamped
+    summary: |
+      Interpolates a Quaternion over an arbitrary range.
+      [Unity's Quaternion.SlerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SlerpUnclamped.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The starting rotation.
+      - name: b
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The end rotation.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The unclamped interpolation amount.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          An interpolated quaternion rotation.
+  - name: ToAngleAxis
+    summary: |
+      [Unity's Quaternion.ToAngleAxis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.ToAngleAxis.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: number
+        summary:
+      - type: DataType.Vector3
+        summary:
+math_operations:
+  - operation: '=='
+    summary: |
+      [Unity's Quaternion.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_eq.html)
+    type_a: Quaternion
+    type_b: Quaternion
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Quaternion.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_multiply.html)
+    type_a: Quaternion
+    type_b: Quaternion
+    return_type: Quaternion
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Quaternion.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion-operator_multiply.html)
+    type_a: Quaternion
+    type_b: Vector3
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer

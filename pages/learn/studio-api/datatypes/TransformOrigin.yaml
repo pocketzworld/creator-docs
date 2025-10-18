@@ -118,7 +118,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's TransformOrigin.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TransformOrigin-operator_eq.html)
-    description:
     type_a: TransformOrigin
     type_b: TransformOrigin
     return_type: boolean

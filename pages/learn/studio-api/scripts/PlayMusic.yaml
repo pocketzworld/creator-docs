@@ -1,0 +1,59 @@
+name: PlayMusic
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: Play
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: music
+        type: Class.AudioShader
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayFromURL
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: url
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: StopMusic
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: fadeOut
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

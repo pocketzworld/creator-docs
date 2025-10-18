@@ -1,0 +1,12 @@
+name: TextInputBaseField
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.BaseField
+tags:
+constructors:
+properties:
+methods:
+math_operations:

@@ -2,70 +2,103 @@ name: GameClient
 type: classes
 summary: |
   In Highrise's scripting environment, the GameClient class acts as the high-level game context the script is running in. Any client-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Client' or 'Client and Server' can access client - with 'Client and Server' requiring you to check if `client` is not nil (or `server` is nil).
-
   The GameClient is essential for managing critical client-specific activities, such as identifying the local player or the main camera. It also enables responding to events like the connection and disconnection of players during gameplay.
-
   It stands as the bridge between local operations and the expansive game environment, providing a hassle-free way to tap into and manage client-side functionalities.
 description:
-code_samples: |
-  ```lua
-    local localAvatarConnection = nil
-    localAvatarConnection = client.localPlayer.CharacterChanged:Connect(function(player, newCharacter, oldCharacter)
-      OnLocalCharacter(player, newCharacter, oldCharacter)
-    end)
-
-    function OnLocalCharacter(player, newCharacter, oldCharacter)
-      localAvatarConnection:Disconnect()
-      localAvatarConnection = nil
-
-      print("The local user's avatar has finished loading and has now spawned!")
-    end
-
-    client.PlayerConnected:Connect(function(player)
-      print("Another player has connected named " .. player.name)
-    end)
-  ```
+code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: localPlayer
+  - name: FocusGained
     summary: |
-      This property provides a direct handle to the game's local player from the client's perspective, facilitating easy interaction and local player management.
+      Event fired when the world becomes visible, for example if the user closes a full screen UI while still connected to the world.
+    description:
     is_static: false
     code_samples:
-    type: Class.Player
-  - name: mainCamera
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: FocusLost
     summary: |
-      This property helps you obtain the main camera for the game client. It fetches the first active, enabled camera tagged as "MainCamera" in the scene. If no such camera is found, it returns nil.
+      Event fired when the world is no longer visible, for example if the user opens a full screen UI while still connected to the world.
+    description:
     is_static: false
     code_samples:
-    type: Class.Camera
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: PlayerConnected
     summary: |
-      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player .
+      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player when in a Class.GameClient side script.
+    description:
     is_static: false
     code_samples:
-    returns:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
   - name: PlayerDisconnected
     summary: |
       An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
-    is_static: false
-    code_samples:
-    type: Class.Event
-  - name: worldBounds
-    summary: |
-
     description:
     is_static: false
     code_samples:
-    type: DataType.Bounds
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: Reset
     summary: |
-
+      Event that can be fired to reset the state of the client.  If you are using the RTSCamera, firing this event will recenter the camera on the character.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
+  - name: isMobilePlatform
+    summary: |
+      Returns true if the client is running on a mobile platform (iOS, Android, etc.)  Unlike checking the width and height for portrait mode, this includes tablets that are using the landscape layout.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: localPlayer
+    summary: |
+      This property provides a direct handle to the game's local player from the client's perspective, facilitating easy interaction and local player management.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Player
+  - name: mainCamera
+    summary: |
+      This property helps you obtain the main camera for the game client. It fetches the first active, enabled camera tagged as "MainCamera" in the scene. If no such camera is found, it returns nil.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Camera
+  - name: worldBounds
+    summary: |
+      Bounds of the world.  It is calculated from the bounds of all of the active renderers.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Bounds
 methods:
 math_operations:

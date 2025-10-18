@@ -1,0 +1,84 @@
+name: QuaternionValue
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.NetworkValue
+tags:
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.QuaternionValue
+        summary:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: initialValue
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.QuaternionValue
+        summary:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: initialValue
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.QuaternionValue
+        summary:
+properties:
+  - name: value
+    summary: |
+      The currently synchronized Quaternion value of the QuaternionValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: DataType.Quaternion
+methods:
+math_operations:

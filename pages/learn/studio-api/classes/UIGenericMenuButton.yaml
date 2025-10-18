@@ -1,0 +1,47 @@
+name: UIGenericMenuButton
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: buttonType
+        type: string
+        tags:
+        default:
+        summary:
+      - name: text
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: () -> ()
+        tags:
+        default:
+        summary:
+      - name: classname
+        type: string
+        tags:
+        default:
+        summary:
+      - name: touchAndHold
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.UIGenericMenuButton
+        summary:
+properties:
+methods:
+math_operations:

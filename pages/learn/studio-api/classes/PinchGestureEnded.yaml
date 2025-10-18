@@ -2,50 +2,95 @@ name: PinchGestureEnded
 type: classes
 summary: |
   When the fingers finally let go after a pinch gesture, PinchGestureEnded is what is sent through the PinchOrDragEnded event from Service.Input class. This data container class is dedicated to tracking the details of a pinch gesture at the moment it concludes.
-
   PinchGestureEnded keeps the historical details such as the position where the pinch began, the final position, the total distance the pinch covered, and how fast the pinch was. It also computes the scale factor, depending on the distance covered by the pinch. These properties can be very useful in determining the final adjustments based on the pinch gesture in your touch-based interactions.
-
   While important for doing post-input reactions and FX, this is less commonly used for input interactions as its counterparts Class.PinchGestureBegan and Class.PinchGestureChanged .
 description:
 code_samples:
 inherits:
+  - Class.EventBase
+tags:
 constructors:
 properties:
   - name: deltaPosition
     summary: |
       The 'DeltaPosition' property captures the change in position of the pinch gesture from the previous frame to the end frame. This gives the final motion vector of the pinch gesture.
+    description:
     is_static: false
     code_samples:
-    type: DataType.Vector2
-  - name: startPosition
-    summary: |
-      The 'StartPosition' property stores the initial position where the pinch gesture started, providing a reference point to calculate the total movement when the pinch ends.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: position
-    summary: |
-      The 'Position' property holds the final position of the pinch gesture right before it concluded. It's the last recorded position of the pinch.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: velocity
-    summary: |
-      The 'Velocity' property calculates the speed of the pinch gesture based on its distance and time. This is beneficial when the effect of the pinch gesture is influenced by its speed.
-    is_static: false
-    code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector2
   - name: distance
     summary: |
       The 'Distance' property represents the total gap between the two touch points in the pinch, from the start till the end. This measures the full spread of a pinch gesture.
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
+  - name: position
+    summary: |
+      The 'Position' property holds the final position of the pinch gesture right before it concluded. It's the last recorded position of the pinch.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
   - name: scale
     summary: |
       The 'Scale' property computes the final scaling factor considering the overall distance the pinch gesture covered. It comes in handy when applying the final touches in zoom or scale interaction based on pinch gesture.
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
+  - name: startPosition
+    summary: |
+      The 'StartPosition' property stores the initial position where the pinch gesture started, providing a reference point to calculate the total movement when the pinch ends.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: velocity
+    summary: |
+      The 'Velocity' property calculates the speed of the pinch gesture based on its distance and time. This is beneficial when the effect of the pinch gesture is influenced by its speed.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: eventTypeId
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: screenPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
+  - name: screenStartPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
 methods:
 math_operations:

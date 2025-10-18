@@ -1,0 +1,42 @@
+name: SpriteMaskInteraction
+type: enums
+summary: |
+  [Unity's SpriteMaskInteraction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMaskInteraction.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: None
+    summary: |
+      [Unity's SpriteMaskInteraction.None Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMaskInteraction.None.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteMaskInteraction
+  - name: VisibleInsideMask
+    summary: |
+      [Unity's SpriteMaskInteraction.VisibleInsideMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMaskInteraction.VisibleInsideMask.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteMaskInteraction
+  - name: VisibleOutsideMask
+    summary: |
+      [Unity's SpriteMaskInteraction.VisibleOutsideMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMaskInteraction.VisibleOutsideMask.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteMaskInteraction
+methods:
+math_operations:

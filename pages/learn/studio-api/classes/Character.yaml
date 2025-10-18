@@ -1,427 +1,1140 @@
 name: Character
 type: classes
-summary: Represents an in-game character, providing properties and methods to control its movement, appearance, and interaction within the game environment.
+summary: |
+  Represents an in-game character, providing properties and methods to control its movement, appearance, and interaction within the game environment.
 description:
 code_samples:
 inherits:
-  - Class.Behaviour
+  - Class.NetworkBehaviour
+tags:
 constructors:
 properties:
-  - name: destination
+  - name: AnchorChanged
     summary: |
-
+      Event that fires when the characters anchor changes
     description:
     is_static: false
     code_samples:
-    type: DataType.Vector3
-  - name: isMoving
-    summary: Indicates whether the character is currently moving.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      print(tostring(player.character.isMoving))
-      ```
-    type: boolean
-  - name: distanceToDestination
-    summary: Returns the distance from the character to its destination.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      print(player.character.distanceToDestination)
-      ```
-    type: number
-  - name: destination
-    summary: The target destination of the character in the game world.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.destination = Vector3.New(0, 0, 0)
-      ```
-    type: DataType.Vector3
-  - name: anchor
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Anchor
-  - name: isAnchored
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: usePathfinding
-    summary: When set to true, the character uses pathfinding to navigate to its destination.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.usePathfinding = true
-      ```
-    type: boolean
-  - name: renderLayer
-    summary: Specifies the rendering layer of the character for drawing order.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.renderLayer = 1
-      ```
-    type: number
-  - name: renderPosition
-    summary: The position of the character in the game world for rendering purposes.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.renderPosition = Vector3.New(0, 0, 0)
-      ```
-    type: DataType.Vector3
-  - name: renderRotation
-    summary: The rotation of the character in the game world for rendering purposes.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.renderRotation = Quaternion.New(0, 0, 0, 1)
-      ```
-    type: DataType.Quaternion
-  - name: renderScale
-    summary: The scale of the character in the game world for rendering purposes.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.renderScale = Vector3.New(1, 1, 1)
-      ```
-    type: DataType.Vector3
-  - name: player
-    summary: Reference to the player object that controls or owns the character.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      print(player.character.player)
-      ```
-    type: Class.Player
-  - name: StateChanged
-    summary: An event that is triggered when the character's state changes.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.StateChanged:Connect(function(state)
-        print("Character state changed to " .. state)
-      end)
-      ```
-    type: Class.Event
-  - name: MoveFinished
-    summary: An event that is triggered when the character finishes moving to a destination.
-    is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character.MoveFinished:Connect(function()
-        print("Character has finished moving.")
-      end)
-      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: Class.Event
   - name: AnimationEvent
-    summary: An event that is triggered when an animation event occurs on the character.
+    summary: |
+      Event fired when an animation event occurs
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
       player.character.AnimationEvent:Connect(function(event)
         print("Animation event: " .. event)
       end)
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
-  - name: state
-    summary: The current state of the character.
+  - name: EmotePlayed
+    summary: |
+      Event that fires when the character plays an emote
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: EmoteStopped
+    summary: |
+      Event that fires when the character stops an emote in progress or a looping emote
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: MoveFinished
+    summary: |
+      Event fired when the character has finished moving
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
-      print(player.character.state)
+      player.character.MoveFinished:Connect(function()
+        print("Character has finished moving.")
+      end)
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: MoveStarted
+    summary: |
+      Event fired when the character has started moving
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: OutfitChanged
+    summary: |
+      Event that fires when the outfit of a character changes
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: StateChanged
+    summary: |
+      Event fired when the characters state changes
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character.StateChanged:Connect(function(state)
+        print("Character state changed to " .. state)
+      end)
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: anchor
+    summary: |
+      Return the character's current anchor
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Anchor
+  - name: chatBubbleTransform
+    summary: |
+      Returns the transform for chat bubbles.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Transform
+  - name: defaultOutfits
+    summary: |
+      Returns the collection of default outfits for the character
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.CharacterOutfit}
+  - name: destination
+    summary: |
+      Return the destination point of the current move
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      print(tostring(player.character.destination))
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: distanceToDestination
+    summary: |
+      Return the distance to the destination if character is moving or 0
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      print(tostring(player.character.distanceToDestination))
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: hasOutfit
+    summary: |
+      Returns true if the character has one or more outfits
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isAnchored
+    summary: |
+      Returns true if the character is currently anchored
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isIdle
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isMoving
+    summary: |
+      Returns true if the character is in a moving state (Walking, Running, or Jumping).
+      A character attached to an anchor is considered to be in an idle state, even if the anchor is set to play a walk or run animation.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      print(tostring(player.character.isMoving))
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: jogDistance
+    summary: |
+      Get/Set the distance at which the character will choose to jog instead of walk
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: jogSpeed
+    summary: |
+      Get/Set the characters jog speed
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: jumpSpeed
+    summary: |
+      Get/Set the characters run speed
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: outfits
+    summary: |
+      Return the outfits assigned to this character
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.CharacterOutfit}
+  - name: pet
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.Pet
+  - name: player
+    summary: |
+      Returns the player that is controlling this character if the character is the player character, otherwise null
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Player
+  - name: renderLayer
+    summary: |
+      The rendering layer of the character for drawing order.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: renderPosition
+    summary: |
+      The position of the character in the game world for rendering purposes.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character.renderPosition = Vector3.New(0, 0, 0)
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: renderRotation
+    summary: |
+      The rotation of the character in the game world for rendering purposes.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character.renderRotation = Quaternion.New(0, 0, 0, 1)
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Quaternion
+  - name: renderScale
+    summary: |
+      The scale of the character in the game world for rendering purposes.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character.renderScale = Vector3.New(1, 1, 1)
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: renderShadow
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: runDistance
+    summary: |
+      Get/Set the distance at which the character will choose to run instead of walk
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: runSpeed
+    summary: |
+      Get/Set the characters run speed
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: speed
-    summary: The movement speed of the character. You must wait for the player to connect before setting this property.
+    summary: |
+      The movement speed of the character. You must wait for the player to connect before setting this property.
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
       player.character.speed = 10
       ```
+    tags:
+      - ClientOnly
     type: number
-methods:
-  - name: Teleport
-    summary: Teleports the character to a specified position.
+  - name: state
+    summary: |
+      The current state of the character.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.CharacterState
+  - name: usePathfinding
+    summary: |
+      When set to true, the character uses pathfinding to navigate to its destination.
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
-      player.character:Teleport(Vector3.New(0, 0, 0))
+      player.character.usePathfinding = true
       ```
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: walkSpeed
+    summary: |
+      Get/Set the characters walk speed
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+methods:
+  - name: AddOutfit
+    summary: |
+      Adds an outfit to the character's current appearance.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: to
+      - name: outfit
+        type: Class.CharacterOutfit
+        tags:
+        default:
+        summary: |
+          The outfit asset to add to the character.
+    returns:
+      - type: void
+        summary:
+  - name: AttachToBone
+    summary: |
+      Attaches an object to a Character's bone.  You can use the Bones class to get a list of available bones.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: attachment
+        type: Class.Transform
+        tags:
+        default:
+        summary: |
+          Transform that you want to attach to the character.
+      - name: boneName
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the bone to attach the object to.
+      - name: offsetPosition
         type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          After being attached, the object's localPosition will be set to this value.
+      - name: offsetRotation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          After being attached, the object's localRotation will be set to this value.
+    returns:
+      - type: void
+        summary:
+  - name: AttachToBone
+    summary: |
+      Attaches an object to a Character's bone.  You can use the Bones class to get a list of available bones.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: attachment
+        type: Class.Transform
+        tags:
+        default:
+        summary: |
+          Transform that you want to attach to the character.
+      - name: boneName
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the bone to attach the object to.
+      - name: keepCurrentPosition
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          If true, the attachment will keep its current world position after being attached.
+      - name: keepCurrentRotation
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          If true, the attachment will keep its current world rotation after being attached.
+    returns:
+      - type: void
+        summary:
+  - name: CopyOutfit
+    summary: |
+      Copy the outfit from the given character replacing the default outfit and any additional outfits
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: character
+        type: Class.Character
+        tags:
         default:
         summary:
-      - name: callback
-        type: Class.LuaFunction
+    returns:
+      - type: void
+        summary:
+  - name: DetachFromBone
+    summary: |
+      Detaches an object that has been attached to this character.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: attachment
+        type: Class.Transform
+        tags:
+        default:
+        summary: |
+          Transform that you want to detach.
+    returns:
+      - type: void
+        summary:
+  - name: GetPathTo
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: areaMask
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: targetSearchDistance
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.NavMeshPath
+        summary:
+  - name: GetPathWithinRangeOf
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: destination
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: stopDistance
+        type: number
+        tags:
+        default:
+        summary:
+      - name: areaMask
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: targetSearchDistance
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.NavMeshPath
+        summary:
+  - name: HasAnimation
+    summary: |
+      Play a single character animation using a character animation asset
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: anim
+        type: string
+        tags:
         default:
         summary:
     returns:
       - type: boolean
         summary:
-  - name: SetIdle
-    summary: Sets the character to an idle state.
+  - name: JumpTo
+    summary: |
+      Jump from the current position to the given position
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character:SetIdle()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-    returns:
-      - type: void
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
         summary:
-  - name: PlayEmote
-    summary: Plays a specified emote animation on the character.
+      - name: taskCompleteCallback
+        type: (...any) -> (...any)
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: JumpTo
+    summary: |
+      Jump from the current position to the given position
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local player = client.localPlayer
-
-      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
-        print("Emote playback complete.")
-      end)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: emoteName
-        type: string
+      - name: position
+        type: DataType.Vector3
+        tags:
         default:
-        summary: The name of the emote to play.
-      - name: speed
+        summary:
+      - name: jumpSpeedMultiplier
         type: number
+        tags:
         default:
-        summary: The speed of the emote.
-      - name: loop
-        type: boolean
+        summary:
+      - name: jumpHeightMultiplier
+        type: number
+        tags:
         default:
-        summary: Whether the emote should loop.
+        summary:
+      - name: taskCompleteCallback
+        type: (...any) -> (...any)
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: MoveAlongPath
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: path
+        type: Class.NavMeshPath
+        tags:
+        default:
+        summary:
       - name: callback
-        type: Class.LuaFunction
+        type: (...any) -> (...any)
+        tags:
+          - optional
         default:
-        summary: A callback function to execute when the emote playback is complete.
+        summary:
     returns:
       - type: void
         summary:
   - name: MoveTo
-    summary: Moves the character to a specified position.
+    summary: |
+      Move the avatar to a position
+    description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
       player.character:MoveTo(Vector3.New(0, 0, 0))
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: position
         type: DataType.Vector3
+        tags:
         default:
-        summary: The target position for the character to move to.
+        summary: |
+          The target position for the character to move to.
       - name: areaMask
         type: number
+        tags:
+          - optional
         default:
-        summary: An optional mask to specify allowed movement areas.
+        summary: |
+          An optional mask to specify allowed movement areas.
       - name: callback
-        type: Class.LuaFunction
+        type: (...any) -> (...any)
+        tags:
+          - optional
         default:
-        summary: A callback function to execute when movement is complete.
+        summary: |
+          A callback function to execute when movement is complete.
+      - name: targetSearchDistance
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          The target search distance for the character to move to.
     returns:
       - type: boolean
-        summary: Returns true if movement is successfully initiated.
+        summary: |
+          True if movement is successfully initiated.
+  - name: MoveToAnchor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: anchor
+        type: Class.Anchor
+        tags:
+        default:
+        summary:
+      - name: areaMask
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: callback
+        type: (...any) -> (...any)
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: MoveWithinRangeOf
-    summary: Moves the character within a specified range of a position.
+    summary: |
+      Move the character within a certain distance of a position
+    description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
       player.character:MoveWithinRangeOf(Vector3.New(0, 0, 0), 5)
       ```
+    tags:
+      - ClientOnly
     parameters:
-      - name: position
+      - name: destination
         type: DataType.Vector3
+        tags:
         default:
-        summary: The target position for the character to approach.
-      - name: distance
+        summary: |
+          The target position for the character to move to.
+      - name: stopDistance
         type: number
+        tags:
         default:
-        summary: The desired distance from the target position.
+        summary: |
+          The distance to stop at.
       - name: areaMask
         type: number
+        tags:
+          - optional
         default:
-        summary: An optional mask to specify allowed movement areas.
+        summary: |
+          An optional mask to specify allowed movement areas.
       - name: callback
-        type: Class.LuaFunction
+        type: (...any) -> (...any)
+        tags:
+          - optional
         default:
-        summary: A callback function to execute when movement is complete.
+        summary: |
+          A callback function to execute when movement is complete.
+      - name: targetSearchDistance
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          The target search distance for the character to move to.
     returns:
       - type: boolean
-        summary: Returns true if movement is successfully initiated.
-  - name: TeleportToAnchor
+        summary: |
+          True if movement is successfully initiated.
+  - name: PlayAnimation
     summary: |
-
+      Play a single character animation using a character animation asset
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: anchor
-        type: Class.Anchor
+      - name: anim
+        type: Class.CharacterAnimation
+        tags:
+        default:
+        summary:
+      - name: speed
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: loop
+        type: boolean
+        tags:
+          - optional
         default:
         summary:
       - name: callback
-        type: Class.LuaFunction
+        type: (...any) -> (...any)
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: boolean
         summary:
-  - name: MoveToAnchor
+  - name: PlayAnimation
     summary: |
-
+      Play a single character animation using a character animation asset
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: anchor
-        type: Class.Anchor
+      - name: anim
+        type: string
+        tags:
         default:
         summary:
-      - name: distance
+      - name: speed
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: areaMask
-        type: number
+      - name: loop
+        type: boolean
+        tags:
+          - optional
         default:
         summary:
       - name: callback
-        type: Class.LuaFunction
+        type: (...any) -> (...any)
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: boolean
         summary:
-  - name: TweenRenderPosition
-    summary: Smoothly transitions the character's render position from one point to another.
+  - name: PlayEmote
+    summary: |
+      Plays a specified emote animation on the character.
+    description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
-      player.character:TweenRenderPosition(Vector3.New(0, 0, 0), Vector3.New(10, 0, 0))
+      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
+      print("Emote playback complete.")
+      end)
       ```
+    tags:
+      - ClientOnly
     parameters:
-      - name: from
-        type: DataType.Vector3
+      - name: emoteName
+        type: string
+        tags:
         default:
-        summary: The starting position for the tween.
-      - name: to
-        type: DataType.Vector3
+        summary: |
+          The name of the emote to play.
+      - name: loop
+        type: boolean
+        tags:
+          - optional
         default:
-        summary: The ending position for the tween.
+        summary: |
+          Whether the emote should loop.
+      - name: callback
+        type: (...any) -> (...any)
+        tags:
+          - optional
+        default:
+        summary: |
+          A callback function to execute when the emote playback is complete.
     returns:
-      - type: DataType.Tween
-        summary: A Tween object representing the transition.
-  - name: TweenRenderPositionTo
-    summary: Initiates a smooth transition for the character's render position to a specified destination.
+      - type: boolean
+        summary:
+  - name: PlayEmote
+    summary: |
+      Plays a specified emote animation on the character.
+    description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-
-      player.character:TweenRenderPositionTo(Vector3.New(10, 0, 0))
+      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
+      print("Emote playback complete.")
+      end)
       ```
+    tags:
+      - ClientOnly
     parameters:
-      - name: to
-        type: DataType.Vector3
+      - name: emoteName
+        type: string
+        tags:
         default:
-        summary: The target position for the character's render position.
-    returns:
-      - type: DataType.Tween
-        summary: A Tween object representing the transition.
-  - name: SetOutfit
-    summary: Sets the character's outfit to a specified asset.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: outfit
-        type: Class.CharacterOutfit
+        summary: |
+          The name of the emote to play.
+      - name: speed
+        type: number
+        tags:
         default:
-        summary: The outfit asset to apply to the character.
+        summary: |
+          The speed of the emote.
+      - name: loop
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether the emote should loop.
+      - name: callback
+        type: (...any) -> (...any)
+        tags:
+          - optional
+        default:
+        summary: |
+          A callback function to execute when the emote playback is complete.
     returns:
-      - type: void
+      - type: boolean
         summary:
-  - name: ResetOutfit
-    summary: Resets the character's outfit to its default appearance.
+  - name: PlaySpeakingAnimation
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: void
         summary:
   - name: RemoveOutfit
-    summary: Removes the character's current outfit.
+    summary: |
+      Remove an outfit from the character
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: outfit
         type: Class.CharacterOutfit
+        tags:
         default:
-        summary: The outfit asset to remove from the character.
+        summary: |
+          The outfit asset to remove from the character.
     returns:
       - type: void
         summary:
-  - name: AddOutfit
-    summary: Adds an outfit to the character's current appearance.
+  - name: ResetOutfit
+    summary: |
+      Reset the outfit back to the default state, for player characters this means their chosen outfit and
+      for npcs this means the outfit they were created with.
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetIdle
+    summary: |
+      Set the character into an idle state.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character:SetIdle()
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetOutfit
+    summary: |
+      Set the outfit for the character by removing all existing outfits and
+      replacing with the new outfit
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: outfit
         type: Class.CharacterOutfit
+        tags:
         default:
-        summary: The outfit asset to add to the character.
+        summary: |
+          The outfit asset to apply to the character.
     returns:
       - type: void
         summary:
+  - name: StopEmote
+    summary: |
+      Stop a looping emote that is playing
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Teleport
+    summary: |
+      Teleport the character to the given position
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character:Teleport(Vector3.New(0, 0, 0))
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The target position for the character to teleport to.
+      - name: taskCompleteCallback
+        type: (...any) -> (...any)
+        tags:
+          - optional
+        default:
+        summary: |
+          A callback function to execute when the teleport is complete.
+    returns:
+      - type: boolean
+        summary: |
+          True if teleport is successfully initiated.
+  - name: TeleportToAnchor
+    summary: |
+      Teleport the character to an anchor from wherever they are
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: anchor
+        type: Class.Anchor
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: TeleportToNearestNavMeshPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: TweenRenderPosition
+    summary: |
+      Smoothly transitions the character's render position from one point to another.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character:TweenRenderPosition(Vector3.New(0, 0, 0), Vector3.New(10, 0, 0))
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The starting position for the tween.
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The ending position for the tween.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object representing the transition.
+  - name: TweenRenderPositionTo
+    summary: |
+      Initiates a smooth transition for the character's render position to a specified destination.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character:TweenRenderPositionTo(Vector3.New(10, 0, 0))
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The target position for the character's render position.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object representing the transition.
+math_operations:

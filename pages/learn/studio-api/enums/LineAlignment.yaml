@@ -1,0 +1,32 @@
+name: LineAlignment
+type: enums
+summary: |
+  [Unity's LineAlignment Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineAlignment.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: TransformZ
+    summary: |
+      [Unity's LineAlignment.TransformZ Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineAlignment.TransformZ.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineAlignment
+  - name: View
+    summary: |
+      [Unity's LineAlignment.View Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineAlignment.View.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineAlignment
+methods:
+math_operations:

@@ -1,0 +1,48 @@
+name: SwipeDistanceCanceled
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.EventBase
+tags:
+constructors:
+properties:
+  - name: swipeProgress
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: velocity
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: eventTypeId
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+methods:
+  - name: Dispose
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

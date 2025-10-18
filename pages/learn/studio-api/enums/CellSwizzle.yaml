@@ -1,0 +1,72 @@
+name: CellSwizzle
+type: enums
+summary: |
+  [Unity's CellSwizzle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: XYZ
+    summary: |
+      [Unity's CellSwizzle.XYZ Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.XYZ.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+  - name: XZY
+    summary: |
+      [Unity's CellSwizzle.XZY Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.XZY.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+  - name: YXZ
+    summary: |
+      [Unity's CellSwizzle.YXZ Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.YXZ.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+  - name: YZX
+    summary: |
+      [Unity's CellSwizzle.YZX Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.YZX.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+  - name: ZXY
+    summary: |
+      [Unity's CellSwizzle.ZXY Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.ZXY.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+  - name: ZYX
+    summary: |
+      [Unity's CellSwizzle.ZYX Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CellSwizzle.ZYX.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+methods:
+math_operations:

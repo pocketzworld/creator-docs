@@ -1,0 +1,65 @@
+name: FurnitureState2D
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: bounds
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: cycleDuration
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: direction
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: isActive
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: name
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: parts
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.FurniturePart2D}
+methods:
+math_operations:

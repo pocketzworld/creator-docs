@@ -4,37 +4,139 @@ summary: |
   The 'Scene' class in the scene or 'game area'. It manages events related to player interactions with the scene and allows you to section and differentiate portions of your world into smaller chunks.
 description:
 code_samples:
+inherits:
+  - Class.MonoBehaviour
+tags:
 constructors:
 properties:
   - name: PlayerJoined
     summary: |
       An event triggered when a player joins the scene.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
+      - ReadOnly
     type: Class.Event
   - name: PlayerLeft
     summary: |
       An event triggered when a player leaves the scene.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
+      - ReadOnly
     type: Class.Event
   - name: id
     summary: |
       The unique identifier of the scene.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
+      - ReadOnly
     type: number
   - name: mainCamera
     summary: |
       The main camera associated with the scene.
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Camera
+  - name: name
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+  - name: playerCount
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
+  - name: players
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: {Class.Player}
+  - name: renderSettings
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.RenderSettings
 methods:
+  - name: ExtendLoadingScreen
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Instantiate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: prefab
+        type: Class.Scene
+        tags:
+        default:
+        summary:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: rotation
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: owner
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Scene
+        summary:
+  - name: MarkLoaded
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
 math_operations:

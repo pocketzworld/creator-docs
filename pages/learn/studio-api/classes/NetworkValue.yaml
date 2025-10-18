@@ -1,0 +1,20 @@
+name: NetworkValue
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Changed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.Event
+methods:
+math_operations:

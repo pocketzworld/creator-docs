@@ -46,6 +46,38 @@ properties:
       - ClientOnly
     type: number
 methods:
+  - name: CalculatePath
+    summary: |
+      [Unity's NavMesh.CalculatePath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.CalculatePath.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: sourcePosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: targetPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: areaMask
+        type: number
+        tags:
+        default:
+        summary:
+      - name: path
+        type: Class.NavMeshPath
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: FindClosestEdge
     summary: |
       [Unity's NavMesh.FindClosestEdge Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.FindClosestEdge.html)
@@ -103,6 +135,18 @@ methods:
         summary:
     returns:
       - type: number
+        summary:
+  - name: GetAreaNames
+    summary: |
+      [Unity's NavMesh.GetAreaNames Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMesh.GetAreaNames.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: {string}
         summary:
   - name: GetSettingsCount
     summary: |

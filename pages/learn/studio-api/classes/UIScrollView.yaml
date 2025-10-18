@@ -207,6 +207,15 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
+  - name: isEnabled
+    summary: |
+      Whether the scroll view gesture recognizer is enabled
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
   - name: isInertiaEnabled
     summary:
     description:
@@ -215,6 +224,14 @@ properties:
     tags:
       - ClientOnly
     type: boolean
+  - name: isPanEndIntercepted
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: () -> (boolean)
   - name: isScrolling
     summary: |
       True if the scroll view is currently moving (scrolling or animating).
@@ -234,6 +251,14 @@ properties:
     tags:
       - ClientOnly
     type: () -> ()
+  - name: onScrollableSizeChanged
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: (obj: number) -> ()
   - name: scrollDecelerationRate
     summary: |
       Controls the rate at which the scrolling movement slows after a user scrolls
@@ -339,6 +364,22 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: OnScrollWheel
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: evt
+        type: Class.WheelEvent
+        tags:
+        default:
+        summary:
     returns:
       - type: void
         summary:

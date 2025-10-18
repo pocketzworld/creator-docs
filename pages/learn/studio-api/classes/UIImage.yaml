@@ -32,6 +32,49 @@ methods:
     returns:
       - type: void
         summary:
+  - name: LoadFromCdnUrl
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: url
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: LoadItemPreview
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: category
+        type: string
+        tags:
+        default:
+        summary:
+      - name: id
+        type: string
+        tags:
+        default:
+        summary:
+      - name: clothingPaletteId
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: ShowLoadingIndicator
     summary:
     description:

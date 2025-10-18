@@ -1,0 +1,161 @@
+name: SideScrollerCamera
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: CenterOn
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: newTarget
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ClampPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: IsOutsideDeadzone
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: playerPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: cameraPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: PanCamera
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: evt
+        type: Class.PinchGestureChanged
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PanWorldPositionToScreenPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: worldPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: screenPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PostZoomMoveTowardsScreenPoint
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: screenPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateZoom
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ZoomIn
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ZoomOut
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

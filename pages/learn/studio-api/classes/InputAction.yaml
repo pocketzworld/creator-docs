@@ -30,6 +30,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.InputActionMap
+  - name: activeValueType
+    summary: |
+      [Unity's InputAction.activeValueType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-activeValueType.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Type
   - name: enabled
     summary: |
       [Unity's InputAction.enabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction-enabled.html)
@@ -145,6 +155,18 @@ methods:
     returns:
       - type: void
         summary:
+  - name: GetControlMagnitude
+    summary: |
+      [Unity's InputAction.GetControlMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.GetControlMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary:
   - name: GetTimeoutCompletionPercentage
     summary: |
       [Unity's InputAction.GetTimeoutCompletionPercentage Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.GetTimeoutCompletionPercentage.html)
@@ -205,6 +227,42 @@ methods:
     returns:
       - type: void
         summary:
+  - name: WasCompletedThisDynamicUpdate
+    summary: |
+      [Unity's InputAction.WasCompletedThisDynamicUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasCompletedThisDynamicUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: WasCompletedThisFrame
+    summary: |
+      [Unity's InputAction.WasCompletedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasCompletedThisFrame.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: WasPerformedThisDynamicUpdate
+    summary: |
+      [Unity's InputAction.WasPerformedThisDynamicUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPerformedThisDynamicUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
   - name: WasPerformedThisFrame
     summary: |
       [Unity's InputAction.WasPerformedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPerformedThisFrame.html)
@@ -217,9 +275,33 @@ methods:
     returns:
       - type: boolean
         summary:
+  - name: WasPressedThisDynamicUpdate
+    summary: |
+      [Unity's InputAction.WasPressedThisDynamicUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPressedThisDynamicUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
   - name: WasPressedThisFrame
     summary: |
       [Unity's InputAction.WasPressedThisFrame Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasPressedThisFrame.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: WasReleasedThisDynamicUpdate
+    summary: |
+      [Unity's InputAction.WasReleasedThisDynamicUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/InputSystem.InputAction.WasReleasedThisDynamicUpdate.html)
     description:
     is_static: false
     code_samples:

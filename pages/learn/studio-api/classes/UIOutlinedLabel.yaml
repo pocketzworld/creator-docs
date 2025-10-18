@@ -36,6 +36,14 @@ properties:
     tags:
       - ClientOnly
     type: boolean
+  - name: text
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: string
   - name: uppercase
     summary:
     description:

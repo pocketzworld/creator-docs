@@ -2,302 +2,597 @@ name: Color
 type: datatypes
 summary: |
   The Color datatype represents an RGBA (Red Green Blue Alpha) color. Colors are represented with numbers between 0 and 1, where 1 signifies the maximum intensity of a particular color component. RGB components define the color while the Alpha component defines the transparency.
-
+  
   Provides various functions and predefined colors which ranges from common colors like red, green, blue, white, black, to more specific colors such as yellow, cyan, magenta, gray, etc. Further it also provides functionalities such as linear interpolation between two colors, conversion from/to HSV color model, and generating a grayscale color.
-
+  [Unity's Color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.html)
 description:
 code_samples: |
   ```lua
   local color = Color.new(1, 0, 0) -- Red color
-
-  print(color.r) -- 1
-  print(color.g) -- 0
-  print(color.b) -- 0
   ```
 inherits:
+tags:
 constructors:
   - name: new
     summary: |
       Creates a new Color object with the provided red, green, blue, and optional alpha values. These values range from 0 to 1, where 0 represents no color and 1 represents full intensity of the color.
-    is_static: false
-    code_samples: |
-      ```lua
-      local color = Color.new(1, 0, 0) -- Red color
-      ```
+      [Unity's Color.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: r
         type: number
+        tags:
         default:
-        summary: The red component of the color.
+        summary: |
+          The red component of the color.
       - name: g
         type: number
+        tags:
         default:
-        summary: The green component of the color.
+        summary: |
+          The green component of the color.
       - name: b
         type: number
+        tags:
         default:
-        summary: The blue component of the color.
+        summary: |
+          The blue component of the color.
     returns:
       - type: DataType.Color
-        summary: Returns a new Color object with the specified red, green, and blue components.
+        summary: |
+          Returns a new Color object with the specified red, green, and blue components.
+  - name: new
+    summary: |
+      Creates a new Color object with the provided red, green, blue, and optional alpha values. These values range from 0 to 1, where 0 represents no color and 1 represents full intensity of the color.
+      [Unity's Color.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: r
+        type: number
+        tags:
+        default:
+        summary: |
+          The red component of the color.
+      - name: g
+        type: number
+        tags:
+        default:
+        summary: |
+          The green component of the color.
+      - name: b
+        type: number
+        tags:
+        default:
+        summary: |
+          The blue component of the color.
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns a new Color object with the specified red, green, and blue components.
 properties:
-  - name: grayscale
+  - name: a
     summary: |
-      The grayscale value of the color based on the intensities of the red, green, and blue components.
-    is_static: false
-    type: number
-    code_samples: |
-      ```lua
-        local color = Color.new(1, 0, 0) -- Red color
-        print(color.grayscale) -- 0.299
-      ```
-  - name: linear
-    summary: |
-      The linear (gamma space) equivalent of this color object. Game graphics are usually rendered in a color space known as gamma space, but many computations are done in linear space, thus this property can be useful when such conversions are necessary.
+      Access or change the alpha (transparency) component of the color where '1' is fully opaque and '0' is fully transparent.
+      [Unity's Color.a Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-a.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local color = Color.new(1, 0, 0) -- Red color
-      print(color.linear) -- 0.2126
+      color.a = 0.5
+      
+      print(color.a) -- 0.5
       ```
-    type: DataType.Color
-  - name: gamma
-    summary: |
-      The gamma space equivalent of this color object. When the computations are done in linear space, this conversion can be useful to switch back to Gamma space for rendering.
-    is_static: false
-    code_samples: |
-      ```lua
-      local color = Color.new(1, 0, 0) -- Red color
-      print(color.gamma) -- 0.2126
-      ```
-    type: DataType.Color
-  - name: maxColorComponent
-    summary: |
-      The maximum RGB component in the color. It can be useful when you want to identify the dominant color component.
-    is_static: false
-    code_samples: |
-      ```lua
-      local color = Color.new(1, 0, 0) -- Red color
-      print(color.maxColorComponent) -- 1
-      ```
-    type: number
-  - name: r
-    summary: |
-      Access or change the red component value of the color.
-    is_static: false
-    code_samples: |
-      ```lua
-      local color = Color.new(1, 0, 0) -- Red color
-      print(color.r) -- 1
-      ```
-    type: number
-  - name: g
-    summary: |
-      Access or change the green component value of the color.
-    is_static: false
-    code_samples: |
-      ```lua
-      local color = Color.new(1, 0, 0) -- Red color
-      print(color.g) -- 0
-      ```
+    tags:
+      - ClientAndServer
     type: number
   - name: b
     summary: |
       Access or change the blue component value of the color.
+      [Unity's Color.b Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-b.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local color = Color.new(1, 0, 0) -- Red color
       print(color.b) -- 0
       ```
+    tags:
+      - ClientAndServer
     type: number
-  - name: a
+  - name: black
     summary: |
-      Access or change the alpha (transparency) component of the color where '1' is fully opaque and '0' is fully transparent.
-    is_static: false
-    code_samples: |
-      ```lua
-      local color = Color.new(1, 0, 0) -- Red color
-      color.a = 0.5
-
-      print(color.a) -- 0.5
-      ```
-    type: number
-  - name: red
-    summary: |
-      Predefined Color object with red component set to maximum and all other components set to zero. It's a static property, accessible directly from the class.
+      Predefined black color object with all color components set to zero. As a static property, it can be accessed directly from the class.
+      [Unity's Color.black Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-black.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      print(Color.red) -- Color object with red component set to maximum
-      ```
-    type: DataType.Color
-  - name: green
-    summary: |
-      Predefined color object with green component at maximum while red, blue, and alpha components at zero. As a static property, it can be accessed directly from the class.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.green) -- Color object with green component set to maximum
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Color
   - name: blue
     summary: |
       Predefined color object with blue component set to maximum and all other components set to zero. One major use of this property can be for quick access to the pure blue color.
+      [Unity's Color.blue Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-blue.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      print(Color.blue) -- Color object with blue component set to maximum
-      ```
-    type: DataType.Color
-  - name: white
-    summary: |
-      Predefined color object with all components set to maximum, producing white color. It is a static property accessible directly from the class.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.white) -- Color object with all components set to maximum
-      ```
-    type: DataType.Color
-  - name: black
-    summary: |
-      Predefined black color object with all color components set to zero. As a static property, it can be accessed directly from the class.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.black) -- Color object with all components set to zero
-      ```
-    type: DataType.Color
-  - name: yellow
-    summary: |
-      Predefined yellow color object, offering a quick way to use yellow in your game. It is a static property, accessible directly from the class.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.yellow) -- Color object with yellow component set to maximum
-      ```
-    type: DataType.Color
-  - name: cyan
-    summary: |
-      Predefined cyan color object. It provides a quick and convenient way to use cyan in your game.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.cyan) -- Color object with cyan component set to maximum
-      ```
-    type: DataType.Color
-  - name: magenta
-    summary: |
-      Predefined magenta color object. It allows quick access to the magenta color.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.magenta) -- Color object with magenta component set to maximum
-      ```
-    type: DataType.Color
-  - name: gray
-    summary: |
-      Predefined gray color object, allowing for quick utilization of gray in a game scene or interface. As a static property, it's accessible directly from the class.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.gray) -- Color object with gray component set to maximum
-      ```
-    type: DataType.Color
-  - name: grey
-    summary: |
-      Predefined grey color object. As a static property, it can be accessed directly from the class. This makes it convenient to use grey color quickly and easily.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Color.grey) -- Color object with grey component set to maximum
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Color
   - name: clear
     summary: |
       Predefined color object with all components set to zero, resulting in a fully transparent color. Quick access to a transparent color can provide utility in many situations.
+      [Unity's Color.clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-clear.html)
+    description:
     is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: cyan
+    summary: |
+      Predefined cyan color object. It provides a quick and convenient way to use cyan in your game.
+      [Unity's Color.cyan Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-cyan.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: g
+    summary: |
+      Access or change the green component value of the color.
+      [Unity's Color.g Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-g.html)
+    description:
+    is_static: false
     code_samples: |
       ```lua
-      print(Color.clear) -- Color object with all components set to zero
+      local color = Color.new(1, 0, 0) -- Red color
+      print(color.g) -- 0
       ```
+    tags:
+      - ClientAndServer
+    type: number
+  - name: gamma
+    summary: |
+      The gamma space equivalent of this color object. When the computations are done in linear space, this conversion can be useful to switch back to Gamma space for rendering.
+      [Unity's Color.gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gamma.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local color = Color.new(1, 0, 0) -- Red color
+      print(color.gamma) -- 0.2126
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: gray
+    summary: |
+      Predefined gray color object, allowing for quick utilization of gray in a game scene or interface. As a static property, it's accessible directly from the class.
+      [Unity's Color.gray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-gray.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: grayscale
+    summary: |
+      The grayscale value of the color based on the intensities of the red, green, and blue components.
+      [Unity's Color.grayscale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grayscale.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local color = Color.new(1, 0, 0) -- Red color
+      print(color.grayscale) -- 0.299
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: green
+    summary: |
+      Predefined color object with green component at maximum while red, blue, and alpha components at zero. As a static property, it can be accessed directly from the class.
+      [Unity's Color.green Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-green.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: grey
+    summary: |
+      Predefined grey color object. As a static property, it can be accessed directly from the class. This makes it convenient to use grey color quickly and easily.
+      [Unity's Color.grey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-grey.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: linear
+    summary: |
+      The linear (gamma space) equivalent of this color object. Game graphics are usually rendered in a color space known as gamma space, but many computations are done in linear space, thus this property can be useful when such conversions are necessary.
+      [Unity's Color.linear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-linear.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local color = Color.new(1, 0, 0) -- Red color
+      print(color.linear) -- 0.2126
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: magenta
+    summary: |
+      Predefined magenta color object. It allows quick access to the magenta color.
+      [Unity's Color.magenta Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-magenta.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: maxColorComponent
+    summary: |
+      The maximum RGB component in the color. It can be useful when you want to identify the dominant color component.
+      [Unity's Color.maxColorComponent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-maxColorComponent.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local color = Color.new(1, 0, 0) -- Red color
+      print(color.maxColorComponent) -- 1
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: r
+    summary: |
+      Access or change the red component value of the color.
+      [Unity's Color.r Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-r.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local color = Color.new(1, 0, 0) -- Red color
+      print(color.r) -- 1
+      ```
+    tags:
+      - ClientAndServer
+    type: number
+  - name: red
+    summary: |
+      Predefined Color object with red component set to maximum and all other components set to zero. It's a static property, accessible directly from the class.
+      [Unity's Color.red Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-red.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: white
+    summary: |
+      Predefined color object with all components set to maximum, producing white color. It is a static property accessible directly from the class.
+      [Unity's Color.white Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-white.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Color
+  - name: yellow
+    summary: |
+      Predefined yellow color object, offering a quick way to use yellow in your game. It is a static property, accessible directly from the class.
+      [Unity's Color.yellow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-yellow.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Color
 methods:
-  - name: Lerp
+  - name: Alpha
     summary: |
-      Calculates and returns a color that is a certain percentage (defined by the third parameter) between two other colors. This can be used to smoothly transition between two colors.
-    is_static: true
-    code_samples: |
-      ```lua
-      local colorA = Color.new(1, 0, 0) -- Red color
-      local colorB = Color.new(0, 1, 0) -- Green color
-  
-      local transitionColor = Color.Lerp(colorA, colorB, 0.5) -- Transition color between red and green
-      ```
+      Returns a color with the specified alpha value.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
-        type: DataType.Color
-        default:
-        summary: The color to transition from.
-      - name: b
-        type: DataType.Color
-        default:
-        summary: The color to transition into.
-      - name: t
         type: number
+        tags:
         default:
-        summary: The percentage of the transition. 0 represents color 'a' and 1 represents color 'b'.
+        summary:
     returns:
       - type: DataType.Color
-        summary: Returns the interpolated color.
-  - name: LerpUnclamped
+        summary:
+  - name: Equals
     summary: |
-      Works similarly to 'Lerp', but without clamping the percentage (third parameter) between 0 and 1. This allows for extrapolation beyond the two original colors.
-    is_static: true
-    code_samples: |
-      ```lua
-      local colorA = Color.new(1, 0, 0) -- Red color
-      local colorB = Color.new(0, 1, 0) -- Green color
-
-      local transitionColor = Color.LerpUnclamped(colorA, colorB, 1.5) -- Extrapolated color beyond red and green
-      ```
+      [Unity's Color.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: a
+      - name: other
         type: DataType.Color
+        tags:
         default:
-        summary: The color to transition from.
-      - name: b
-        type: DataType.Color
-        default:
-        summary: The color to transition into.
-      - name: t
-        type: number
-        default:
-        summary: The percentage of the transition.
+        summary:
     returns:
-      - type: DataType.Color
-        summary: Returns the interpolated or extrapolated color.
+      - type: boolean
+        summary:
   - name: HSVToRGB
     summary: |
       Convert a color from HSV (Hue, Saturation, Value) color model to RGB (Red, Green, Blue) model. This function can be quite useful whenever you're dealing with HSV colors and need to convert them for use in RGB format.
+      [Unity's Color.HSVToRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.HSVToRGB.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local color = Color.HSVToRGB(0.5, 1, 1) -- RGB color from HSV color
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: H
         type: number
+        tags:
         default:
-        summary: The Hue component of the color, ranges between 0 to 1.
+        summary: |
+          The Hue component of the color, ranges between 0 to 1.
       - name: S
         type: number
+        tags:
         default:
-        summary: The Saturation component of the color, ranges between 0 to 1.
+        summary: |
+          The Saturation component of the color, ranges between 0 to 1.
       - name: V
         type: number
+        tags:
         default:
-        summary: The Value component of the color, ranges between 0 to 1.
+        summary: |
+          The Value component of the color, ranges between 0 to 1.
+      - name: hdr
+        type: boolean
+        tags:
+        default:
+        summary:
     returns:
       - type: DataType.Color
-        summary: Returns a Color object in RGB color space.
+        summary: |
+          Returns a Color object in RGB color space.
+  - name: Lerp
+    summary: |
+      Calculates and returns a color that is a certain percentage (defined by the third parameter) between two other colors. This can be used to smoothly transition between two colors.
+      [Unity's Color.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.Lerp.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      local colorA = Color.new(1, 0, 0) -- Red color
+      local colorB = Color.new(0, 1, 0) -- Green color
+      
+      local transitionColor = Color.Lerp(colorA, colorB, 0.5) -- Transition color between red and green
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The color to transition from.
+      - name: b
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The color to transition into.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The percentage of the transition. 0 represents color 'a' and 1 represents color 'b'.
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns the interpolated color.
+  - name: LerpUnclamped
+    summary: |
+      Works similarly to 'Lerp', but without clamping the percentage (third parameter) between 0 and 1. This allows for extrapolation beyond the two original colors.
+      [Unity's Color.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.LerpUnclamped.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      local colorA = Color.new(1, 0, 0) -- Red color
+      local colorB = Color.new(0, 1, 0) -- Green color
+      
+      local transitionColor = Color.LerpUnclamped(colorA, colorB, 1.5) -- Extrapolated color beyond red and green
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The color to transition from.
+      - name: b
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The color to transition into.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The percentage of the transition.
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns the interpolated or extrapolated color.
+  - name: MultiplyAlpha
+    summary: |
+      Returns a color with the alpha value multiplied by the specified factor.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Color
+        summary:
+  - name: RGBToHSV
+    summary: |
+      [Unity's Color.RGBToHSV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.RGBToHSV.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: rgbColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+      - type: number
+        summary:
+      - type: number
+        summary:
+  - name: ToHex
+    summary: |
+      Returns a hexadecimal string with the format #RRGGBB that can be used in rich text tags.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: string
+        summary:
+  - name: ToLuma
+    summary: |
+      Returns the luma value of the color, which represents its brightness.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: number
+        summary:
+math_operations:
+  - operation: '+'
+    summary: |
+      [Unity's Color.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_add.html)
+    type_a: Color
+    type_b: Color
+    return_type: Color
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '/'
+    summary: |
+      [Unity's Color.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_divide.html)
+    type_a: Color
+    type_b: number
+    return_type: Color
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '=='
+    summary: |
+      [Unity's Color.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_eq.html)
+    type_a: Color
+    type_b: Color
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Color.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html)
+    type_a: Color
+    type_b: Color
+    return_type: Color
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Color.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html)
+    type_a: Color
+    type_b: number
+    return_type: Color
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Color.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_multiply.html)
+    type_a: number
+    type_b: Color
+    return_type: Color
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '-'
+    summary: |
+      [Unity's Color.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color-operator_subtract.html)
+    type_a: Color
+    type_b: Color
+    return_type: Color
+    code_samples:
+    tags:
+      - ClientAndServer

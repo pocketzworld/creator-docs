@@ -2,158 +2,299 @@ name: LineRenderer
 type: classes
 summary: |
   Have you ever wanted to draw lines in your Unity game? Maybe you're creating a laser beam, a route, or even a spider's web. If so, the LineRenderer class is just the tool you need! The LineRenderer class in Unity enables developers to draw a series of connected segments in your scene directly from your scripts.
-
   LineRenderer is immensely versatile and can be used for almost anything that requires a dynamic line. You can customize the line's appearance using various properties like width, color, and texture. In addition, you can precisely control the line's shape by defining the points that the LineRenderer passes through.
-
-  Want to create a glowing neon trail in a dark room? Or the trajectory of a projectile? The LineRenderer has got you covered. Learn more by visiting [Unity's LineRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.html).
+  Want to create a glowing neon trail in a dark room? Or the trajectory of a projectile? The LineRenderer has got you covered.
+  [Unity's LineRenderer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.html)
 description:
 code_samples:
 inherits:
   - Class.Renderer
+tags:
 constructors:
 properties:
-  - name: startWidth
+  - name: alignment
     summary: |
-      The 'startWidth' property controls the width at the start of the line. Changing this value will make the beginning of the line wider or narrower. Check out [Unity's LineRenderer.startWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startWidth.html).
+      [Unity's LineRenderer.alignment Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-alignment.html)
+    description:
     is_static: false
     code_samples:
-    type: number
-  - name: endWidth
+    tags:
+      - ClientOnly
+    type: Enum.LineAlignment
+  - name: colorGradient
     summary: |
-      The 'endWidth' property works similar to 'startWidth', but it controls the width at the end of the line, effectively determining the tapering of the line. More details at [Unity's LineRenderer.endWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-endWidth.html).
+      [Unity's LineRenderer.colorGradient Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-colorGradient.html)
+    description:
     is_static: false
     code_samples:
-    type: number
-  - name: widthMultiplier
-    summary: |
-      The 'widthMultiplier' property multiplies the width of the line by a certain factor, effectively scaling the whole line's width. Visit [Unity's LineRenderer.widthMultiplier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-widthMultiplier.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: numCornerVertices
-    summary: |
-      The 'numCornerVertices' property influences how many vertices are created when the line bends at a corner. It comes in handy when designing smoother or sharper corners. More information can be found in [Unity's LineRenderer.numCornerVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-numCornerVertices.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: numCapVertices
-    summary: |
-      The 'numCapVertices' property dictates how many vertices are used to form the end cap of the line, controlling how rounded the end of a line appears. Check the [Unity's LineRenderer.numCapVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-numCapVertices.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: useWorldSpace
-    summary: |
-      The 'useWorldSpace' property allows the line to move along with the GameObject if set to false, else the line will be drawn in the global space. Visit [Unity's LineRenderer.useWorldSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-useWorldSpace.html).
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: loop
-    summary: |
-      The 'loop' property, when set to true, connects the start and end of the line, forming a continuous loop. Check [Unity's LineRenderer.loop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-loop.html) for more details.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: startColor
-    summary: |
-      The 'startColor' property defines the color at the start of the line. You can achieve cool gradient effects by having different start and end colors. See [Unity's LineRenderer.startColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startColor.html).
-    is_static: false
-    code_samples:
-    type: DataType.Color
+    tags:
+      - ClientOnly
+    type: Class.Gradient
   - name: endColor
     summary: |
-      The 'endColor' property modifies the color at the end of the line. Like 'startColor', this can help to create colorful gradients on your line. Check [Unity's LineRenderer.endColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-endColor.html).
+      The 'endColor' property modifies the color at the end of the line. Like 'startColor', this can help to create colorful gradients on your line.
+      [Unity's LineRenderer.endColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-endColor.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Color
-  - name: positionCount
+  - name: endWidth
     summary: |
-      The 'positionCount' property is used to indicate how many vertices the line has, effectively defining the line's complexity. More in [Unity's LineRenderer.positionCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-positionCount.html).
+      The 'endWidth' property works similar to 'startWidth', but it controls the width at the end of the line, effectively determining the tapering of the line.
+      [Unity's LineRenderer.endWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-endWidth.html)
+    description:
     is_static: false
     code_samples:
-    type: number
-  - name: textureScale
-    summary: |
-      The 'textureScale' property affects how often a texture is repeated along the line. Check [Unity's LineRenderer.textureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-textureScale.html) for more details.
-    is_static: false
-    code_samples:
-    type: DataType.Vector2
-  - name: shadowBias
-    summary: |
-      The 'shadowBias' helps in eliminating undesired lines by tweaking the rendering of shadows. More details are available in [Unity's LineRenderer.shadowBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-shadowBias.html).
-    is_static: false
-    code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: generateLightingData
     summary: |
-      The 'generateLightingData' property decides whether or not to generate lighting data for the line. Check the [Unity's LineRenderer.generateLightingData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-generateLightingData.html) for more insights.
+      The 'generateLightingData' property decides whether or not to generate lighting data for the line.
+      [Unity's LineRenderer.generateLightingData Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-generateLightingData.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: loop
+    summary: |
+      The 'loop' property, when set to true, connects the start and end of the line, forming a continuous loop.
+      [Unity's LineRenderer.loop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-loop.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: maskInteraction
+    summary: |
+      [Unity's LineRenderer.maskInteraction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-maskInteraction.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.SpriteMaskInteraction
+  - name: numCapVertices
+    summary: |
+      The 'numCapVertices' property dictates how many vertices are used to form the end cap of the line, controlling how rounded the end of a line appears.
+      [Unity's LineRenderer.numCapVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-numCapVertices.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: numCornerVertices
+    summary: |
+      The 'numCornerVertices' property influences how many vertices are created when the line bends at a corner. It comes in handy when designing smoother or sharper corners.
+      [Unity's LineRenderer.numCornerVertices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-numCornerVertices.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: positionCount
+    summary: |
+      The 'positionCount' property is used to indicate how many vertices the line has, effectively defining the line's complexity.
+      [Unity's LineRenderer.positionCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-positionCount.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: shadowBias
+    summary: |
+      The 'shadowBias' helps in eliminating undesired lines by tweaking the rendering of shadows.
+      [Unity's LineRenderer.shadowBias Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-shadowBias.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: startColor
+    summary: |
+      The 'startColor' property defines the color at the start of the line. You can achieve cool gradient effects by having different start and end colors.
+      [Unity's LineRenderer.startColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Color
+  - name: startWidth
+    summary: |
+      The 'startWidth' property controls the width at the start of the line. Changing this value will make the beginning of the line wider or narrower.
+      [Unity's LineRenderer.startWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-startWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: textureMode
+    summary: |
+      [Unity's LineRenderer.textureMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-textureMode.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.LineTextureMode
+  - name: textureScale
+    summary: |
+      The 'textureScale' property affects how often a texture is repeated along the line.
+      [Unity's LineRenderer.textureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-textureScale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: useWorldSpace
+    summary: |
+      The 'useWorldSpace' property allows the line to move along with the GameObject if set to false, else the line will be drawn in the global space.
+      [Unity's LineRenderer.useWorldSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-useWorldSpace.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: widthCurve
     summary: |
-      With 'widthCurve', you can apply a complex pattern to the variation of width along the line. It essentially provides you a powerful tool to craft the line's width to your desire. You can find more details in [Unity's LineRenderer.widthCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-widthCurve.html).
+      With 'widthCurve', you can apply a complex pattern to the variation of width along the line. It essentially provides you a powerful tool to craft the line's width to your desire.
+      [Unity's LineRenderer.widthCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-widthCurve.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.AnimationCurve
-methods:
-  - name: SetPosition
+  - name: widthMultiplier
     summary: |
-      The 'SetPosition' method allows you to manually set the position of any point along the line. This is important for defining the line's shape. More information can be found on [Unity's LineRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.SetPosition.html).
+      The 'widthMultiplier' property multiplies the width of the line by a certain factor, effectively scaling the whole line's width.
+      [Unity's LineRenderer.widthMultiplier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer-widthMultiplier.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: number
+methods:
+  - name: BakeMesh
+    summary: |
+      The 'BakeMesh' method allows you to create a static Mesh from the line. This could be extremely useful for saving the state of a line, or for use in other Mesh-based systems.
+      [Unity's LineRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.BakeMesh.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: index
-        type: number
+      - name: mesh
+        type: Class.Mesh
+        tags:
         default:
-        summary: The index of the position to be modified.
-      - name: position
-        type: DataType.Vector3
+        summary:
+      - name: camera
+        type: Class.Camera
+        tags:
         default:
-        summary: The new position for the specified point along the line.
+        summary:
+      - name: useTransform
+        type: boolean
+        tags:
+        default:
+        summary:
     returns:
       - type: void
         summary:
   - name: GetPosition
     summary: |
-      The 'GetPosition' method retrieves the position of a particular point along the line, helping in understanding and debugging the line's shape. Visit [Unity's LineRenderer.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.GetPosition.html) for further insight.
+      The 'GetPosition' method retrieves the position of a particular point along the line, helping in understanding and debugging the line's shape.
+      [Unity's LineRenderer.GetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.GetPosition.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: index
         type: number
+        tags:
         default:
-        summary: The index of the position to retrieve.
+        summary: |
+          The index of the position to retrieve.
     returns:
       - type: DataType.Vector3
-        summary: Returns the current position of the specified point on the line.
-  - name: Simplify
+        summary: |
+          Returns the current position of the specified point on the line.
+  - name: SetPosition
     summary: |
-      The 'Simplify' method simplifies the shape of the line using the Ramer-Douglas-Peucker algorithm, reducing the number of vertices on the line. This can help to decrease rendering cost. See [Unity's LineRenderer.Simplify Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.Simplify.html) for more information.
+      The 'SetPosition' method allows you to manually set the position of any point along the line. This is important for defining the line's shape.
+      [Unity's LineRenderer.SetPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.SetPosition.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: tolerance
+      - name: index
         type: number
+        tags:
         default:
-        summary: The maximum allowed error when simplifying the line.
+        summary: |
+          The index of the position to be modified.
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The new position for the specified point along the line.
     returns:
       - type: void
         summary:
-  - name: BakeMesh
+  - name: SetPositions
     summary: |
-      The 'BakeMesh' method allows you to create a static Mesh from the line. This could be extremely useful for saving the state of a line, or for use in other Mesh-based systems. More details can be found on [Unity's LineRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.BakeMesh.html).
+      [Unity's LineRenderer.SetPositions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.SetPositions.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: mesh
-        type: Class.Mesh
+      - name: positions
+        type: {DataType.Vector3}
+        tags:
         default:
         summary:
-      - name: useTransform
-        type: boolean
-        default:
+    returns:
+      - type: void
         summary:
+  - name: Simplify
+    summary: |
+      The 'Simplify' method simplifies the shape of the line using the Ramer-Douglas-Peucker algorithm, reducing the number of vertices on the line. This can help to decrease rendering cost.
+      [Unity's LineRenderer.Simplify Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.Simplify.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: tolerance
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum allowed error when simplifying the line.
     returns:
       - type: void
         summary:

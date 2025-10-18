@@ -1,0 +1,39 @@
+name: UINavigationView
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.UIView
+tags:
+constructors:
+properties:
+  - name: closeOverride
+    summary: |
+      Optional override for the close action of the view.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: () -> ()
+methods:
+  - name: DuplicatesView
+    summary: |
+      Allows to check if the top-most view on the navigation controller is
+      the same view as the one being pushed. The push will be ignored if it's a duplicate.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: view
+        type: Class.UINavigationView
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+math_operations:

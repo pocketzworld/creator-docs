@@ -1,0 +1,59 @@
+name: PetCharacterController
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: PetCreatedEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: PetOutfitChangedEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Event
+methods:
+  - name: GetPetForPlayer
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.PetInfo
+        summary:
+  - name: GetPetFromCharacter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: character
+        type: Class.Character
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.PetInfo
+        summary:
+math_operations:

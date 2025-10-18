@@ -1,0 +1,83 @@
+name: LeaderboardError
+type: enums
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Count
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: InternalError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: InvalidEntryID
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: InvalidEntryName
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: InvalidID
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: None
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: RequestThrottled
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+  - name: Timeout
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.LeaderboardError
+methods:
+math_operations:

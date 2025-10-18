@@ -70,7 +70,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's BackgroundRepeat.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundRepeat-operator_eq.html)
-    description:
     type_a: BackgroundRepeat
     type_b: BackgroundRepeat
     return_type: boolean

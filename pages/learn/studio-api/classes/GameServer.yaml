@@ -2,84 +2,299 @@ name: GameServer
 type: classes
 summary: |
   In Highrise's scripting environment, the GameServer class acts as the high-level game context the script is running remotely. Any server-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Server' or 'Client and Server' can access server - with 'Client and Server' scripts requiring you to check if `server` is not nil (or `client` is nil).
-
   Any high-level server events and interactions will be found in this type.
 description:
-tags:
-  - ServerOnly
-code_samples: |
-  ```lua
-    server.PlayerConnected:Connect(function(player)
-      print("Another player has connected named " .. player.name)
-    end)
-  ```
+code_samples:
 inherits:
+  - Class.Game
+tags:
 constructors:
 properties:
   - name: PlayerConnected
     summary: |
       An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player when in a Class.GameClient side script.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ServerOnly
-    code_samples:
-    returns:
+      - ReadOnly
     type: Class.Event
   - name: PlayerDisconnected
     summary: |
       An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ServerOnly
-    code_samples:
+      - ReadOnly
     type: Class.Event
   - name: isLoading
-    summary: Indicates whether the server is currently in a loading state.
+    summary: |
+      Indicates whether the server is currently in a loading state.
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: boolean
-methods:
-  - name: LoadScene
-    summary: Loads a scene into the game environment.
+  - name: sceneCount
+    summary:
+    description:
     is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+  - name: scenes
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: {Class.Scene}
+  - name: spectatorCount
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+  - name: spectatorScene
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    type: Class.Scene
+methods:
+  - name: GetMatchMakingPriority
+    summary:
+    description:
+    is_static: false
+    code_samples:
     tags:
       - ServerOnly
     parameters:
-      - name: sceneNameOrId
-        type: string or number
+    returns:
+      - type: number
+        summary:
+  - name: LoadScene
+    summary: |
+      Loads a scene into the game environment.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: sceneId
+        type: number
+        tags:
+        default:
         summary:
       - name: additive
         type: boolean
-        default: false
+        tags:
+        default:
         summary:
-    code_samples:
     returns:
       - type: Class.Scene
-  - name: MovePlayerToScene
-    summary: Moves a player to a specified scene within the game environment.
+        summary:
+  - name: LoadScene
+    summary: |
+      Loads a scene into the game environment.
+    description:
     is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: sceneName
+        type: string
+        tags:
+        default:
+        summary:
+      - name: additive
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Scene
+        summary:
+  - name: LoadSceneAdditive
+    summary: |
+      Loads a scene additively into the game environment.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: sceneId
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Scene
+        summary:
+  - name: LoadSceneAdditive
+    summary: |
+      Loads a scene additively into the game environment.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: sceneName
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.Scene
+        summary:
+  - name: MovePlayerToScene
+    summary: |
+      Moves a player to a specified scene within the game environment.
+    description:
+    is_static: false
+    code_samples:
     tags:
       - ServerOnly
     parameters:
       - name: player
         type: Class.Player
+        tags:
+        default:
         summary:
       - name: scene
         type: Class.Scene
+        tags:
+        default:
         summary:
-    code_samples:
     returns:
       - type: boolean
-  - name: LoadSceneAdditive
-    summary: Loads a scene additively into the game environment.
+        summary:
+  - name: OnWorldEvent
+    summary:
+    description:
     is_static: false
+    code_samples:
     tags:
       - ServerOnly
     parameters:
-      - name: sceneNameOrId
-        type: string or number
+      - name: callback
+        type: (eventName: string, isLocal: boolean, payload: any) -> ()
+        tags:
+        default:
         summary:
-    code_samples:
     returns:
-      - type: Class.Scene
+      - type: void
+        summary:
+  - name: SendWorldEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: eventName
+        type: string
+        tags:
+        default:
+        summary:
+      - name: eventPayload
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SendWorldEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: eventName
+        type: string
+        tags:
+        default:
+        summary:
+      - name: eventPayload
+        type: any
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (error: EmitWorldEventError) -> ()
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SendWorldEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: eventName
+        type: string
+        tags:
+        default:
+        summary:
+      - name: eventPayload
+        type: any
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: (error: EmitWorldEventError) -> ()
+        tags:
+        default:
+        summary:
+      - name: instanceIds
+        type: {string}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetMatchMakingPriority
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: priority
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:

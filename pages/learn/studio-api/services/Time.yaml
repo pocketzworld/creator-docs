@@ -1,38 +1,52 @@
 name: Time
-type: classes
+type: services
 summary: |
-  Provides controls over time-related aspects in your game Universe. It regulates the flow of time and pace of game actions, orchestrating object movements and animations.
-
+  The Time class provides access to time-related information and functionality in Unity. It allows you to measure time intervals, control the flow of time, and access various time-related properties such as delta time, fixed delta time, and server time. This class is essential for creating smooth animations, controlling game speed, and implementing time-based mechanics in your Unity projects.
 description:
 code_samples:
 inherits:
 tags:
-  - ServerAndClient
 constructors:
 properties:
   - name: deltaTime
     summary: |
-      'deltaTime' represents the time in seconds it took to complete the last frame. It's useful for smooth object motion or time-related calculations, reflecting real-world time more than game time.
-    is_static: false
+      The time in seconds it took to complete the last frame. This is useful for creating frame-rate independent movement and animations.
+    description:
+    is_static: true
+    code_samples:
     tags:
-      - ServerAndClient
-    code_samples: |
-      ```lua
-        function self:Update()
-          print("This frame took " .. Time.deltaTime .. " seconds")
-        end
-      ```
+      - ClientAndServer
+      - ReadOnly
     type: number
   - name: fixedDeltaTime
     summary: |
-      'fixedDeltaTime' signifies the time in seconds between physics updates (FixedUpdate calls). It's consistent between frames, crucial for physics calculations requiring stable performance.
-    is_static: false
-    code_samples: |
-      ```lua
-        function self:FixedUpdate()
-          print("This physics step took " .. Time.fixedDeltaTime .. " seconds and will always take that long, unless manually changed")
-        end
-      ```
+      The interval in seconds at which physics and other fixed frame rate updates are performed. This is typically set to 0.02 seconds (50 Hz) by default.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: serverTime
+    summary: |
+      The current server time in seconds since the server started. This is useful for synchronizing events across multiple clients.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: time
+    summary: |
+      The time in seconds since the start of the game. This is useful for creating time-based effects and animations.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
 methods:
 math_operations:

@@ -48,16 +48,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: number
-  - name: isDefaultPrevented
-    summary: |
-      [Unity's EventBase.isDefaultPrevented Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-isDefaultPrevented.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: boolean
   - name: isImmediatePropagationStopped
     summary: |
       [Unity's EventBase.isImmediatePropagationStopped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase-isImmediatePropagationStopped.html)
@@ -118,18 +108,6 @@ properties:
       - ReadOnly
     type: boolean
 methods:
-  - name: PreventDefault
-    summary: |
-      [Unity's EventBase.PreventDefault Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase.PreventDefault.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
   - name: StopImmediatePropagation
     summary: |
       [Unity's EventBase.StopImmediatePropagation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.EventBase.StopImmediatePropagation.html)

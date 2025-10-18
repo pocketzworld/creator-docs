@@ -8,6 +8,24 @@ tags:
 constructors:
 properties:
 methods:
+  - name: TryGetGlobalString
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: string
+        summary:
   - name: TryGetString
     summary:
     description:

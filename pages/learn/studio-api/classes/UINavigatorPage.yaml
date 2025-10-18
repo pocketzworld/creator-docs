@@ -1,0 +1,62 @@
+name: UINavigatorPage
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.UINavigationView
+tags:
+constructors:
+properties:
+  - name: ussNavigatorPage
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: contentContainer
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+methods:
+  - name: SetCloseButton
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: enabled
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetPrelocalizedTitle
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: title
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

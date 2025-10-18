@@ -2,36 +2,43 @@ name: LayerMask
 type: datatypes
 summary: |
   Specifies Layers to use in a Physics.Raycast.
-
+  
   A GameObject can use up to 32 LayerMasks supported by the Editor. The first 8 of these Layers are specified by Unity; the following 24 are controllable by the user.
-
+  
   Bitmasks represent the 32 Layers and define them as true or false. Each bitmask describes whether the Layer is used. As an example, bit 5 can be set to 1 (true). This will allow the use of the built-in Water setting.
-
+  
   Edit->Settings->Tags and Layers option shows the use of the 32 bitmasks. Each Layer is shown with a string setting. As an example Built-in Layer 0 is set as Default; Built-in Layer 1 is set as TransparentFX. New named Layers are added above bitmask layer 8. A selected GameObject will show the chosen Layer at top right of the Inspector. The example below has User Layer 13 set to "Wall". This causes the assigned GameObject to be treated as part of a building.
-
+  
   In the following script example, Physics.Raycast sends a ray into the world. Camera.main can be rotated around the y-axis and fire a ray. Three GameObjects represent walls that can be hit by the fired ray. Each GameObject has GameObject.label set to the "Wall" layerMask.
-
   [Unity's LayerMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.html)
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
   - name: value
     summary: |
       [Unity's LayerMask.value Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask-value.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
 methods:
-  - name: NameToLayer
+  - name: GetMask
     summary: |
-      [Unity's LayerMask.NameToLayer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.NameToLayer.html)
+      [Unity's LayerMask.GetMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.GetMask.html)
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: name
-        type: string
+      - name: layerNames
+        type: {string}
+        tags:
         default:
         summary:
     returns:
@@ -40,14 +47,35 @@ methods:
   - name: LayerToName
     summary: |
       [Unity's LayerMask.LayerToName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.LayerToName.html)
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: layer
         type: number
+        tags:
         default:
         summary:
     returns:
       - type: string
+        summary:
+  - name: NameToLayer
+    summary: |
+      [Unity's LayerMask.NameToLayer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LayerMask.NameToLayer.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: layerName
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
         summary:
 math_operations:

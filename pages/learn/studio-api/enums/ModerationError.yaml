@@ -1,0 +1,101 @@
+name: ModerationError
+type: enums
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Count
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: CursorInvalid
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: CursorInvalidLimit
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: InsufficientPermissions
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: InternalError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: InvalidUserId
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: None
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: RequestThrottled
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: Timeout
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+  - name: UnknownError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.ModerationError
+methods:
+math_operations:

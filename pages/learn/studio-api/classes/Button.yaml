@@ -38,6 +38,36 @@ constructors:
       - type: Class.Button
         summary:
 properties:
+  - name: iconOnlyUssClassName
+    summary: |
+      [Unity's Button.iconOnlyUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-iconOnlyUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: iconUssClassName
+    summary: |
+      [Unity's Button.iconUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-iconUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+  - name: imageUSSClassName
+    summary: |
+      [Unity's Button.imageUSSClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-imageUSSClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
   - name: ussClassName
     summary: |
       [Unity's Button.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-ussClassName.html)
@@ -47,6 +77,15 @@ properties:
     tags:
       - ClientOnly
       - ReadOnly
+    type: string
+  - name: text
+    summary: |
+      [Unity's Button.text Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Button-text.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: string
 methods:
 math_operations:

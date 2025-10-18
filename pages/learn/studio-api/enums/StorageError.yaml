@@ -1,0 +1,164 @@
+name: StorageError
+type: enums
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: AttributesTooLarge
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: ConcurrentModification
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: Count
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: CursorInvalid
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: CursorInvalidLimit
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: CursorNoMoreValues
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: InternalError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: InvalidAttributes
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: InvalidKey
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: InvalidValue
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: ModifierOwnerDestroyed
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: None
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: RequestThrottled
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: Timeout
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: TooManyQueuedUpdates
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: UnknownError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+  - name: ValueTooLarge
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.StorageError
+methods:
+math_operations:
