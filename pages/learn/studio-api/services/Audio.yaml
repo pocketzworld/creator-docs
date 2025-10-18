@@ -16,7 +16,7 @@ properties:
     tags:
       - ClientOnly
       - ReadOnly
-    type: (arg: Player) -> (boolean)
+    type: "(arg: Player) -> (boolean)"
   - name: client
     summary:
     description:
@@ -83,7 +83,7 @@ properties:
     tags:
       - ClientOnly
       - ReadOnly
-    type: (obj: RadioStation) -> ()
+    type: "(obj: RadioStation) -> ()"
   - name: radioEnabled
     summary:
     description:
@@ -153,12 +153,12 @@ methods:
         default:
         summary:
       - name: stationSelected
-        type: (obj: RadioStation) -> ()
+        type: "(obj: RadioStation) -> ()"
         tags:
         default:
         summary:
       - name: canModerateRadio
-        type: (arg: Player) -> (boolean)
+        type: "(arg: Player) -> (boolean)"
         tags:
         default:
         summary:

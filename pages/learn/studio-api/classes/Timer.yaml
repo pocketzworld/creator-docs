@@ -21,7 +21,7 @@ constructors:
         default:
         summary:
       - name: callback
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary:
@@ -68,7 +68,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary:
@@ -90,7 +90,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary:

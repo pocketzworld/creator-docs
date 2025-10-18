@@ -17,12 +17,12 @@ constructors:
       - ClientOnly
     parameters:
       - name: cellFromIndex
-        type: (arg: number) -> (UIView)
+        type: "(arg: number) -> (UIView)"
         tags:
         default:
         summary:
       - name: bindCell
-        type: (arg1: UIView, arg2: number) -> ()
+        type: "(arg1: UIView, arg2: number) -> ()"
         tags:
           - optional
         default:

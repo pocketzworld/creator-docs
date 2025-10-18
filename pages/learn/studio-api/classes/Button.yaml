@@ -30,7 +30,7 @@ constructors:
       - ClientOnly
     parameters:
       - name: clickEvent
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary:

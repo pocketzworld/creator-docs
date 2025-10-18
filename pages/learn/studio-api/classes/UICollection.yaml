@@ -117,7 +117,7 @@ methods:
       - ClientOnly
     parameters:
       - name: updates
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary:

@@ -101,7 +101,7 @@ methods:
       - ClientOnly
     parameters:
       - name: callback
-        type: (arg0: SpriteRenderer) -> ()
+        type: "(arg0: SpriteRenderer) -> ()"
         tags:
         default:
         summary:
@@ -118,7 +118,7 @@ methods:
       - ClientOnly
     parameters:
       - name: callback
-        type: (arg0: SpriteRenderer) -> ()
+        type: "(arg0: SpriteRenderer) -> ()"
         tags:
         default:
         summary:

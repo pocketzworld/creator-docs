@@ -601,7 +601,7 @@ methods:
         default:
         summary:
       - name: taskCompleteCallback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -634,7 +634,7 @@ methods:
         default:
         summary:
       - name: taskCompleteCallback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -656,7 +656,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -691,7 +691,7 @@ methods:
         summary: |
           An optional mask to specify allowed movement areas.
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -728,7 +728,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -769,7 +769,7 @@ methods:
         summary: |
           An optional mask to specify allowed movement areas.
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -813,7 +813,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -848,7 +848,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -885,7 +885,7 @@ methods:
         summary: |
           Whether the emote should loop.
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -929,7 +929,7 @@ methods:
         summary: |
           Whether the emote should loop.
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:
@@ -1047,7 +1047,7 @@ methods:
         summary: |
           The target position for the character to teleport to.
       - name: taskCompleteCallback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
           - optional
         default:

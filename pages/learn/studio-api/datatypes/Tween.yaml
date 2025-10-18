@@ -226,7 +226,7 @@ methods:
       - ClientOnly
     parameters:
       - name: easeDelegate
-        type: (normalizedTime: number, param: Vector4) -> (number)
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
         tags:
         default:
         summary: |
@@ -244,7 +244,7 @@ methods:
       - ClientOnly
     parameters:
       - name: easeDelegate
-        type: (normalizedTime: number, param: Vector4) -> (number)
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
         tags:
         default:
         summary: |
@@ -595,7 +595,7 @@ methods:
       - ClientOnly
     parameters:
       - name: easeDelegate
-        type: (normalizedTime: number, param: Vector4) -> (number)
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
         tags:
         default:
         summary: |
@@ -613,7 +613,7 @@ methods:
       - ClientOnly
     parameters:
       - name: easeDelegate
-        type: (normalizedTime: number, param: Vector4) -> (number)
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
         tags:
         default:
         summary: |
@@ -869,7 +869,7 @@ methods:
       - ClientOnly
     parameters:
       - name: callback
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary: |
@@ -890,7 +890,7 @@ methods:
       - ClientOnly
     parameters:
       - name: callback
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary: |

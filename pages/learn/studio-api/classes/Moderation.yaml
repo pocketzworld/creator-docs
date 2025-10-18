@@ -133,7 +133,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -211,7 +211,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -237,7 +237,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (userBans: {UserBan}, cursorId: string, error: ModerationError) -> ()
+        type: "(userBans: {UserBan}, cursorId: string, error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -274,7 +274,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -311,7 +311,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -358,7 +358,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -405,7 +405,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -442,7 +442,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -479,7 +479,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:
@@ -516,7 +516,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: ModerationError) -> ()
+        type: "(error: ModerationError) -> ()"
         tags:
         default:
         summary:

@@ -27,7 +27,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: LeaderboardError) -> ()
+        type: "(error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -53,7 +53,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: LeaderboardError) -> ()
+        type: "(error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -84,7 +84,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entries: {LeaderboardEntry}, error: LeaderboardError) -> ()
+        type: "(entries: {LeaderboardEntry}, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -110,7 +110,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entry: LeaderboardEntry, error: LeaderboardError) -> ()
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -136,7 +136,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entry: LeaderboardEntry, error: LeaderboardError) -> ()
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -172,7 +172,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entry: LeaderboardEntry, error: LeaderboardError) -> ()
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -203,7 +203,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entry: LeaderboardEntry, error: LeaderboardError) -> ()
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -224,7 +224,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: LeaderboardError) -> ()
+        type: "(error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -260,7 +260,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entry: LeaderboardEntry, error: LeaderboardError) -> ()
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:
@@ -291,7 +291,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (entry: LeaderboardEntry, error: LeaderboardError) -> ()
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
         tags:
         default:
         summary:

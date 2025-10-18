@@ -16,12 +16,12 @@ constructors:
       - ClientOnly
     parameters:
       - name: cellInstantiate
-        type: (arg1: number, arg2: any) -> (UIView)
+        type: "(arg1: number, arg2: any) -> (UIView)"
         tags:
         default:
         summary:
       - name: asyncFetch
-        type: (obj: UICollectionDelegateAsyncRequest) -> ()
+        type: "(obj: UICollectionDelegateAsyncRequest) -> ()"
         tags:
         default:
         summary:

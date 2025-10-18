@@ -46,7 +46,7 @@ methods:
       - ClientAndServer
     parameters:
       - name: callback
-        type: (...any) -> ()
+        type: "(...any) -> ()"
         tags:
         default:
         summary:

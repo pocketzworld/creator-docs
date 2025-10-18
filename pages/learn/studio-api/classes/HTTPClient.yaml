@@ -22,7 +22,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (response: HTTPResponse) -> ()
+        type: "(response: HTTPResponse) -> ()"
         tags:
         default:
         summary:

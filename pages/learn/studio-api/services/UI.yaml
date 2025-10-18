@@ -168,7 +168,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (obj: string) -> ()
+        type: "(obj: string) -> ()"
         tags:
         default:
         summary:
@@ -189,7 +189,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
         default:
         summary:
@@ -222,7 +222,7 @@ methods:
         default:
         summary:
       - name: outfitSaved
-        type: (obj: CharacterOutfit) -> ()
+        type: "(obj: CharacterOutfit) -> ()"
         tags:
           - optional
         default:
@@ -280,7 +280,7 @@ methods:
         default:
         summary:
       - name: outfitSaved
-        type: (obj: CharacterOutfit) -> ()
+        type: "(obj: CharacterOutfit) -> ()"
         tags:
         default:
         summary:
@@ -315,7 +315,7 @@ methods:
         default:
         summary:
       - name: closedWithoutSaving
-        type: () -> ()
+        type: "() -> ()"
         tags:
           - optional
         default:
@@ -373,7 +373,7 @@ methods:
         default:
         summary:
       - name: onClosed
-        type: () -> ()
+        type: "() -> ()"
         tags:
           - optional
         default:
@@ -465,7 +465,7 @@ methods:
       - ClientOnly
     parameters:
       - name: snapshotClosed
-        type: () -> ()
+        type: "() -> ()"
         tags:
           - optional
         default:

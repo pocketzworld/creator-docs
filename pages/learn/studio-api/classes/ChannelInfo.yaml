@@ -138,7 +138,7 @@ properties:
     code_samples:
     tags:
       - ServerOnly
-    type: (arg: Player) -> (boolean)
+    type: "(arg: Player) -> (boolean)"
 methods:
   - name: DisableProximityChat
     summary:

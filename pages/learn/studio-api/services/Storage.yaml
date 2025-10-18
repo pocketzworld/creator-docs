@@ -59,7 +59,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -98,7 +98,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -127,7 +127,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (value: any, error: StorageError) -> ()
+        type: "(value: any, error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -152,7 +152,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (value: any, error: StorageError) -> ()
+        type: "(value: any, error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -211,7 +211,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -260,7 +260,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -297,7 +297,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (values: {any}, cursorId: string, error: StorageError) -> ()
+        type: "(values: {any}, cursorId: string, error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -329,7 +329,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (values: {any}, cursorId: string, error: StorageError) -> ()
+        type: "(values: {any}, cursorId: string, error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -388,7 +388,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -437,7 +437,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -464,7 +464,7 @@ methods:
         default:
         summary:
       - name: modifier
-        type: (value: any) -> (any)
+        type: "(value: any) -> (any)"
         tags:
         default:
         summary:
@@ -491,12 +491,12 @@ methods:
         default:
         summary:
       - name: modifier
-        type: (value: any) -> (any)
+        type: "(value: any) -> (any)"
         tags:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:
@@ -524,7 +524,7 @@ methods:
         default:
         summary:
       - name: modifier
-        type: (value: any) -> (any)
+        type: "(value: any) -> (any)"
         tags:
         default:
         summary:
@@ -552,12 +552,12 @@ methods:
         default:
         summary:
       - name: modifier
-        type: (value: any) -> (any)
+        type: "(value: any) -> (any)"
         tags:
         default:
         summary:
       - name: callback
-        type: (error: StorageError) -> ()
+        type: "(error: StorageError) -> ()"
         tags:
         default:
         summary:

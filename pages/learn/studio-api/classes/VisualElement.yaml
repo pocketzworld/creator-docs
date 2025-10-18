@@ -776,7 +776,7 @@ methods:
           The currently supported gestures and their corresponding events are:
           DragGesture: DragGestureBegan, DragGestureChanged, DragGestureEnded
       - name: action
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
         default:
         summary: |
@@ -820,7 +820,7 @@ methods:
       - ClientOnly
     parameters:
       - name: action
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
         default:
         summary: |
@@ -860,7 +860,7 @@ methods:
       - ClientOnly
     parameters:
       - name: action
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
         default:
         summary: |
@@ -1050,7 +1050,7 @@ methods:
       - ClientOnly
     parameters:
       - name: comp
-        type: (x: VisualElement, y: VisualElement) -> (number)
+        type: "(x: VisualElement, y: VisualElement) -> (number)"
         tags:
         default:
         summary:

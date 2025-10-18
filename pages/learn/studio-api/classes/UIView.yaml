@@ -27,7 +27,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: (obj: UIView) -> ()
+    type: "(obj: UIView) -> ()"
   - name: displayEnd
     summary: |
       Callback function that is called when a view's display ends
@@ -36,7 +36,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: (obj: UIView) -> ()
+    type: "(obj: UIView) -> ()"
   - name: isDisplayed
     summary: |
       True if the view is currently being displayed
@@ -137,7 +137,7 @@ methods:
       - ClientOnly
     parameters:
       - name: handler
-        type: () -> (boolean)
+        type: "() -> (boolean)"
         tags:
         default:
         summary:

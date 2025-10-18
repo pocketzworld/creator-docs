@@ -25,7 +25,7 @@ constructors:
         default:
         summary:
       - name: callback
-        type: () -> ()
+        type: "() -> ()"
         tags:
         default:
         summary:

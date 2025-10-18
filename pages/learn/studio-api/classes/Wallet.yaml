@@ -17,7 +17,7 @@ methods:
       - ServerOnly
     parameters:
       - name: callback
-        type: (wallet: WalletState, error: WalletError) -> ()
+        type: "(wallet: WalletState, error: WalletError) -> ()"
         tags:
         default:
         summary:
@@ -43,7 +43,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (wallet: WalletState, error: WalletError) -> ()
+        type: "(wallet: WalletState, error: WalletError) -> ()"
         tags:
         default:
         summary:
@@ -69,7 +69,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (wallet: WalletState, error: WalletError) -> ()
+        type: "(wallet: WalletState, error: WalletError) -> ()"
         tags:
         default:
         summary:

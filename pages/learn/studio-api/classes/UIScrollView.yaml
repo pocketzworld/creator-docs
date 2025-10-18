@@ -231,7 +231,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> (boolean)
+    type: "() -> (boolean)"
   - name: isScrolling
     summary: |
       True if the scroll view is currently moving (scrolling or animating).
@@ -250,7 +250,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: onScrollableSizeChanged
     summary:
     description:
@@ -258,7 +258,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: (obj: number) -> ()
+    type: "(obj: number) -> ()"
   - name: scrollDecelerationRate
     summary: |
       Controls the rate at which the scrolling movement slows after a user scrolls

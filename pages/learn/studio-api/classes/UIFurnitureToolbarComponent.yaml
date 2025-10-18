@@ -15,7 +15,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: movePressed
     summary:
     description:
@@ -23,7 +23,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: removePressed
     summary:
     description:
@@ -31,7 +31,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: rotatePressed
     summary:
     description:
@@ -39,7 +39,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: setCadencePressed
     summary:
     description:
@@ -47,7 +47,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: setSpeedPressed
     summary:
     description:
@@ -55,7 +55,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
   - name: setTeleportPressed
     summary:
     description:
@@ -63,7 +63,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: () -> ()
+    type: "() -> ()"
 methods:
   - name: UpdateCadence
     summary:

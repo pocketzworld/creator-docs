@@ -38,7 +38,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (transactionId: string, error: InventoryError) -> ()
+        type: "(transactionId: string, error: InventoryError) -> ()"
         tags:
         default:
         summary:
@@ -64,7 +64,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (item: InventoryItem, error: InventoryError) -> ()
+        type: "(item: InventoryItem, error: InventoryError) -> ()"
         tags:
         default:
         summary:
@@ -95,7 +95,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (items: {InventoryItem}, cursorId: string, error: InventoryError) -> ()
+        type: "(items: {InventoryItem}, cursorId: string, error: InventoryError) -> ()"
         tags:
         default:
         summary:
@@ -121,7 +121,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (item: InventoryItem, error: InventoryError) -> ()
+        type: "(item: InventoryItem, error: InventoryError) -> ()"
         tags:
         default:
         summary:
@@ -152,7 +152,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (items: {InventoryItem}, cursorId: string, error: InventoryError) -> ()
+        type: "(items: {InventoryItem}, cursorId: string, error: InventoryError) -> ()"
         tags:
         default:
         summary:
@@ -189,7 +189,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (error: InventoryError) -> ()
+        type: "(error: InventoryError) -> ()"
         tags:
         default:
         summary:
