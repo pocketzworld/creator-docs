@@ -5,42 +5,42 @@ summary: |
 description:
 code_samples: |
   ```lua
-    -- Client and Server script:
-    local remoteFunction = RemoteFunction.new("TestRemoteFunction");
-    local lastSendTime = 0;
-    local lastPlayer = nil;
-    function self:ClientStart()
-        -- Get the tap handler on ourselves and invoke server on the remote function when tapped with a custom callback message
-        self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
-            print ("Tapped")
-            remoteFunction:InvokeServer("Hello from client!", function(response)
-                print(response)
-            end)
-        end)
-        -- when the client is invoked, print the server's message
-        remoteFunction.OnInvokeClient = function(message)
-            print (message)
-            return true;
-        end
-    end
-    function self:ServerStart()
-        server.PlayerConnected:Connect(function(player)
-            lastPlayer = player
-        end)
-        remoteFunction.OnInvokeServer = function(message)
-            print (message)
-            return "Hello from Server!";
-        end
-    end
-    function self:ServerUpdate()
-        lastSendTime = lastSendTime + Time.deltaTime;
-        if lastSendTime > 2 then
-            remoteFunction:InvokeClient(lastPlayer, "Unsolicited message from server!", function(response)
-                print(tostring(response))
-            end)
-            lastSendTime = 0
-        end
-    end
+  -- Client and Server script:
+  local remoteFunction = RemoteFunction.new("TestRemoteFunction");
+  local lastSendTime = 0;
+  local lastPlayer = nil;
+  function self:ClientStart()
+      -- Get the tap handler on ourselves and invoke server on the remote function when tapped with a custom callback message
+      self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
+          print ("Tapped")
+          remoteFunction:InvokeServer("Hello from client!", function(response)
+              print(response)
+          end)
+      end)
+      -- when the client is invoked, print the server's message
+      remoteFunction.OnInvokeClient = function(message)
+          print (message)
+          return true;
+      end
+  end
+  function self:ServerStart()
+      server.PlayerConnected:Connect(function(player)
+          lastPlayer = player
+      end)
+      remoteFunction.OnInvokeServer = function(message)
+          print (message)
+          return "Hello from Server!";
+      end
+  end
+  function self:ServerUpdate()
+      lastSendTime = lastSendTime + Time.deltaTime;
+      if lastSendTime > 2 then
+          remoteFunction:InvokeClient(lastPlayer, "Unsolicited message from server!", function(response)
+              print(tostring(response))
+          end)
+          lastSendTime = 0
+      end
+  end
   ```
 inherits:
 tags:

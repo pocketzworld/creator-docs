@@ -112,7 +112,12 @@ methods:
       different format for the key, use GetValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.GetPlayerValue(player, "HighScore", function(highScore)
+        print(`The high score is {tostring(highScore)}`)
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -142,7 +147,14 @@ methods:
       StorageError.None if an error occurred.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      function PrintValue(key: string)
+        Storage.GetValue(key, function(value)
+          print(`{key} is {tostring(value)}`)
+        end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -514,7 +526,16 @@ methods:
       number, boolean, table and Vector3. The callback parameter is the error code.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:ServerStart()
+        scene.PlayerJoined:Connect(function(scene, player)
+            Storage.UpdateValue("HighScore", function(currentScore)
+              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
+            end)
+        end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -542,7 +563,16 @@ methods:
       number, boolean, table and Vector3. The callback parameter is the error code.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:ServerStart()
+        scene.PlayerJoined:Connect(function(scene, player)
+            Storage.UpdateValue("HighScore", function(currentScore)
+              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
+            end)
+        end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
