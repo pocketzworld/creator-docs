@@ -1,0 +1,65 @@
+name: Game
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: info
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.WorldInstanceInfo
+  - name: isEditor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: playerCount
+    summary: |
+      The number of players that are currently connected to the world.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: players
+    summary: |
+      An array of all the players that are currently connected to the world.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: {Class.Player}
+methods:
+  - name: GetNetworkObject
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: networkId
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.NetworkObjectValue
+        summary:
+math_operations:

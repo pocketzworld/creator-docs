@@ -1,0 +1,32 @@
+name: HTTPClient
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: Request
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: request
+        type: Class.HTTPRequest
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(response: HTTPResponse) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

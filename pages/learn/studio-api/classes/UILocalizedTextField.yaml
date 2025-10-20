@@ -27,15 +27,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: cursorColor
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: DataType.Color
   - name: cursorIndex
     summary:
     description:
@@ -54,6 +45,14 @@ properties:
       - ReadOnly
     type: DataType.Vector2
   - name: doubleClickSelectsWord
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: emojiFallbackSupport
     summary:
     description:
     is_static: false
@@ -150,15 +149,6 @@ properties:
     tags:
       - ClientOnly
     type: number
-  - name: selectionColor
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: DataType.Color
   - name: showMixedValue
     summary:
     description:

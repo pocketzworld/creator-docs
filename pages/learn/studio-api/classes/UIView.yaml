@@ -27,7 +27,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: (UIView) -> ()
+    type: "(obj: UIView) -> ()"
   - name: displayEnd
     summary: |
       Callback function that is called when a view's display ends
@@ -36,7 +36,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: (UIView) -> ()
+    type: "(obj: UIView) -> ()"
   - name: isDisplayed
     summary: |
       True if the view is currently being displayed
@@ -81,6 +81,25 @@ methods:
     returns:
       - type: void
         summary:
+  - name: ClosePopupOrNavigateBack
+    summary: |
+      Close the view either by closing the popup it's in, or popping it from the navigation stack.
+      Returns true if the view was closed or navigated back, false otherwise.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: animated
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: Dispose
     summary:
     description:
@@ -118,7 +137,7 @@ methods:
       - ClientOnly
     parameters:
       - name: handler
-        type: () -> (boolean)
+        type: "() -> (boolean)"
         tags:
         default:
         summary:

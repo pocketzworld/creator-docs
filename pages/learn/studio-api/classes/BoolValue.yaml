@@ -1,35 +1,88 @@
 name: BoolValue
 type: classes
-summary: BoolValue class stores a single boolean value, extending from Class.Value. It's designed for synchronizing a boolean value across all clients in a networked environment, ensuring consistency of a specific flag or state, such as a game over condition. To effectively utilize BoolValue, familiarity with the base Class.Value documentation is advised.
+summary: |
+  BoolValue class stores a single boolean value, extending from Class.Value. It's designed for synchronizing a boolean value across all clients in a networked environment, ensuring consistency of a specific flag or state, such as a game over condition. To effectively utilize BoolValue, familiarity with the base Class.Value documentation is advised.
 description:
 code_samples:
 inherits:
+  - Class.NetworkValue
 tags:
-  - ServerAndClient
 constructors:
   - name: new
-    summary: Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+    summary: |
+      Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+    description:
     is_static: true
-    tags:
-      - ServerAndClient
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: name
         type: string
-        summary: Unique name for the BoolValue, serving as a key for synchronization.
-      - name: initialValue
-        type: boolean
-        summary: Initial boolean value of the BoolValue.
+        tags:
+        default:
+        summary:
     returns:
       - type: Class.BoolValue
-        summary: An instance of BoolValue with the provided initial value.
+        summary:
+  - name: new
+    summary: |
+      Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: initialValue
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.BoolValue
+        summary:
+  - name: new
+    summary: |
+      Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: initialValue
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.BoolValue
+        summary:
 properties:
   - name: value
-    summary: Represents the synchronized boolean value. Changes trigger notifications across clients via the Value.Changed event.
+    summary: |
+      Represents the synchronized boolean value. Changes trigger notifications across clients via the Value.Changed event.
+    description:
     is_static: false
-    tags:
-      - ServerAndClient
     code_samples:
+    tags:
+      - ClientAndServer
     type: boolean
 methods:
 math_operations:

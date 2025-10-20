@@ -1,679 +1,1130 @@
 name: VisualElement
 type: classes
-summary: Creates a new instance of VisualElement. This is the basic building block for UI elements, offering foundational features like layout, styling, and rendering.
+summary: |
+  Creates a new instance of VisualElement. This is the basic building block for UI elements, offering foundational features like layout, styling, and rendering.
+  [Unity's VisualElement Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.html)
 description:
 code_samples:
 inherits:
+  - Class.Focusable
+tags:
 constructors:
   - name: new
-    summary: Creates a new VisualElement.
+    summary: |
+      Creates a new VisualElement.
+      [Unity's VisualElement.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-ctor.html)
     description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      ```
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: Class.VisualElement
         summary:
 properties:
-  - name: viewDataKey
-    summary: A unique identifier for storing view-related data associated with this element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.viewDataKey = "myElement"
-      ```
-    type: string
   - name: canGrabFocus
-    summary: Indicates whether the element can capture user focus. This is useful for determining if the element is interactive.
+    summary: |
+      Indicates whether the element can capture user focus. This is useful for determining if the element is interactive.
+      [Unity's VisualElement.canGrabFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-canGrabFocus.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.canGrabFocus = true
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
-  - name: layout
-    summary: Defines the layout type of the element, which influences how it arranges its children.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.layout = Layout.Flex
-      ```
-    type: DataType.Rect
-  - name: contentRect
-    summary: Represents the rectangular area that contains the element's content, typically used for layout calculations.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.contentRect = Rect.new(0, 0, 100, 100)
-      ```
-    type: DataType.Rect
-  - name: worldBound
-    summary: The global (world) bounds of the element, indicating its position and size within the overall UI.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local worldBound = myElement.worldBound
-      ```
-    type: DataType.Rect
-  - name: localBound
-    summary: The local bounds of the element, representing its position and size relative to its parent.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local localBound = myElement.localBound
-      ```
-    type: DataType.Rect
-  - name: worldTransform
-    summary: The world transform of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local worldTransform = myElement.worldTransform
-      ```
-    type: DataType.Matrix4x4
-  - name: name
-    summary: The name of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.name = "myElement"
-      ```
-    type: string
-  - name: enabledInHierarchy
-    summary: Determines if the element is enabled in the hierarchy.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local enabledInHierarchy = myElement.enabledInHierarchy
-      ```
-    type: boolean
-  - name: enabledSelf
-    summary: Determines if the element is enabled.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.enabledSelf = true
-      ```
-    type: boolean
-  - name: visible
-    summary: Determines if the element is visible.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.visible = true
-      ```
-    type: boolean
-  - name: parent
-    summary: The parent of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local parent = myElement.parent
-      ```
-    type: Class.VisualElement
-  - name: contentContainer
-    summary: The content container of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local contentContainer = myElement.contentContainer
-      ```
-    type: Class.VisualElement
   - name: childCount
-    summary: The number of children of the element.
+    summary: |
+      The number of children of the element.
+      [Unity's VisualElement.childCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-childCount.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local childCount = myElement.childCount
-
-      print(childCount)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: style
-    summary: The style of the element.
+  - name: contentContainer
+    summary: |
+      The content container of the element.
+      [Unity's VisualElement.contentContainer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-contentContainer.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.style = IStyle.new()
-      ```
-    type: IStyle
-  - name: tooltip
-    summary: The tooltip of the element.
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+  - name: contentRect
+    summary: |
+      Represents the rectangular area that contains the element's content, typically used for layout calculations.
+      [Unity's VisualElement.contentRect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-contentRect.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement.tooltip = "This is a tooltip"
-      ```
-    type: string
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rect
+  - name: customStyle
+    summary: |
+      [Unity's VisualElement.customStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-customStyle.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: ICustomStyle
+  - name: dataSourceType
+    summary: |
+      [Unity's VisualElement.dataSourceType Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-dataSourceType.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.Type
+  - name: disablePlayModeTint
+    summary: |
+      [Unity's VisualElement.disablePlayModeTint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-disablePlayModeTint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
   - name: disabledUssClassName
-    summary:
+    summary: |
+      [Unity's VisualElement.disabledUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-disabledUssClassName.html)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: string
+  - name: enabledInHierarchy
+    summary: |
+      Determines if the element is enabled in the hierarchy.
+      [Unity's VisualElement.enabledInHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-enabledInHierarchy.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: enabledSelf
+    summary: |
+      Determines if the element is enabled.
+      [Unity's VisualElement.enabledSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-enabledSelf.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: experimental
+    summary: |
+      [Unity's VisualElement.experimental Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-experimental.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: IExperimentalFeatures
+  - name: layout
+    summary: |
+      Defines the layout type of the element, which influences how it arranges its children.
+      [Unity's VisualElement.layout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-layout.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rect
+  - name: localBound
+    summary: |
+      The local bounds of the element, representing its position and size relative to its parent.
+      [Unity's VisualElement.localBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-localBound.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rect
+  - name: name
+    summary: |
+      The name of the element.
+      [Unity's VisualElement.name Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-name.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: string
+  - name: panel
+    summary: |
+      [Unity's VisualElement.panel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-panel.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: IPanel
+  - name: parent
+    summary: |
+      The parent of the element.
+      [Unity's VisualElement.parent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-parent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+  - name: pickingMode
+    summary: |
+      [Unity's VisualElement.pickingMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-pickingMode.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.PickingMode
+  - name: resolvedStyle
+    summary: |
+      [Unity's VisualElement.resolvedStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-resolvedStyle.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: IResolvedStyle
+  - name: scaledPixelsPerPoint
+    summary: |
+      [Unity's VisualElement.scaledPixelsPerPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-scaledPixelsPerPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: schedule
+    summary: |
+      [Unity's VisualElement.schedule Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-schedule.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: IVisualElementScheduler
+  - name: style
+    summary: |
+      The style of the element.
+      [Unity's VisualElement.style Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-style.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: IStyle
+  - name: tooltip
+    summary: |
+      The tooltip of the element.
+      [Unity's VisualElement.tooltip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-tooltip.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: string
+  - name: transform
+    summary: |
+      [Unity's VisualElement.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-transform.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: ITransform
+  - name: viewDataKey
+    summary: |
+      A unique identifier for storing view-related data associated with this element.
+      [Unity's VisualElement.viewDataKey Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-viewDataKey.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: string
+  - name: visible
+    summary: |
+      Determines if the element is visible.
+      [Unity's VisualElement.visible Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-visible.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: visualTreeAssetSource
+    summary: |
+      [Unity's VisualElement.visualTreeAssetSource Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-visualTreeAssetSource.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualTreeAsset
+  - name: worldBound
+    summary: |
+      The global (world) bounds of the element, indicating its position and size within the overall UI.
+      [Unity's VisualElement.worldBound Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-worldBound.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rect
+  - name: worldTransform
+    summary: |
+      The world transform of the element.
+      [Unity's VisualElement.worldTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement-worldTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Matrix4x4
 methods:
-  - name: Q
-    summary: Query the element.
+  - name: Add
+    summary: |
+      Adds a child element to this element's hierarchy, making it a part of the visual tree.
+      [Unity's VisualElement.Add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Add.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local query = myElement:Q("myQuery")
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: name
-        type: string
-        default:
-        summary:
-    returns:
-      - type: Class.VisualElement
-        summary:
-  - name: RegisterCallback
-    summary: Register a callback.
-
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local myCallback = function()
-        -- Do something
-      end
-
-      myElement:RegisterCallback(myCallback, function()
-        print("Callback called")
-      end)
-      ```
-    parameters:
-    returns:
-      - type: string
-        summary:
-  - name: RegisterPressCallback
-    summary: Register a press callback.
-
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local myCallback = function()
-        -- Do something
-      end
-
-      myElement:RegisterPressCallback(function()
-        print("Press callback called")
-      end)
-      ```
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: RegisterLongPressCallback
-    summary: Register a long press callback.
-
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local myCallback = function()
-        -- Do something
-      end
-
-      myElement:RegisterLongPressCallback(function()
-        print("Long press callback called")
-      end)
-      ```
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Focus
-    summary: Focus the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:Focus()
-      ```
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: SetEnabled
-    summary: Set the enabled state of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:SetEnabled(true) -- Or false
-      ```
-    parameters:
-      - name: value
-        type: boolean
+      - name: child
+        type: Class.VisualElement
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: MarkDirtyRepaint
-    summary: Mark the element as dirty for repaint.
+  - name: AddStyleSheet
+    summary: |
+      Add a style sheet to this visual element
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:MarkDirtyRepaint()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-    returns:
-      - type: void
-        summary:
-  - name: ContainsPoint
-    summary: Check if the element contains a point.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local containsPoint = myElement:ContainsPoint(Vector2.new(0, 0))
-      ```
-    parameters:
-      - name: localPoint
-        type: DataType.Vector2
+      - name: sheet
+        type: Class.StyleSheet
+        tags:
         default:
         summary:
-    returns:
-      - type: boolean
-        summary:
-  - name: Overlaps
-    summary: Check if the element overlaps with another element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local otherElement = VisualElement.new()
-      local overlaps = myElement:Overlaps(otherElement)
-      ```
-    parameters:
-      - name: rectangle
-        type: DataType.Rect
-        default:
-        summary:
-    returns:
-      - type: boolean
-        summary:
-  - name: ClearClassList
-    summary: Clear the class list of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:ClearClassList()
-      ```
-    parameters:
     returns:
       - type: void
         summary:
   - name: AddToClassList
-    summary: Add a class to the class list of the
+    summary: |
+      Add a class to the class list of the element.
+      [Unity's VisualElement.AddToClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.AddToClassList.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:AddToClassList("myClass")
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: className
         type: string
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: RemoveFromClassList
-    summary: Remove a class from the class list of the element.
+  - name: BringToFront
+    summary: |
+      Bring the element to the front.
+      [Unity's VisualElement.BringToFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.BringToFront.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:RemoveFromClassList("myClass")
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: className
-        type: string
-        default:
-        summary:
     returns:
       - type: void
         summary:
-  - name: ToggleInClassList
-    summary: Toggle a class in the class list of the element. 
+  - name: Children
+    summary: |
+      [Unity's VisualElement.Children Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Children.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:ToggleInClassList("myClass")
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: className
-        type: string
-        default:
-        summary:
     returns:
-      - type: void
-        summary:
-  - name: EnableInClassList
-    summary: Enable a class in the class list of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:EnableInClassList("myClass")
-      ```
-    parameters:
-      - name: className
-        type: string
-        default:
-        summary:
-      - name: enable
-        type: boolean
-        default:
-        summary:
-    returns:
-      - type: void
+      - type: {Class.VisualElement}
         summary:
   - name: ClassListContains
-    summary: Check if the class list of the element contains a class.
+    summary: |
+      Check if the class list of the element contains a class.
+      [Unity's VisualElement.ClassListContains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ClassListContains.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local classListContains = myElement:ClassListContains("myClass")
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: cls
         type: string
+        tags:
         default:
         summary:
     returns:
       - type: boolean
         summary:
-  - name: Add
-    summary: Adds a child element to this element's hierarchy, making it a part of the visual tree.
+  - name: Clear
+    summary: |
+      Clear all children of the element.
+      [Unity's VisualElement.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Clear.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local child = VisualElement.new()
-      myElement:Add(child)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClearBindings
+    summary: |
+      [Unity's VisualElement.ClearBindings Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ClearBindings.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ClearClassList
+    summary: |
+      Clear the class list of the element.
+      [Unity's VisualElement.ClearClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ClearClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Contains
+    summary: |
+      Checks if this element includes a specified child element within its hierarchy.
+      [Unity's VisualElement.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Contains.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: child
         type: Class.VisualElement
+        tags:
         default:
         summary:
     returns:
-      - type: void
+      - type: boolean
         summary:
-  - name: Insert
-    summary: Insert a child at a specific index.
+  - name: ContainsPoint
+    summary: |
+      Check if the element contains a point.
+      [Unity's VisualElement.ContainsPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ContainsPoint.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local child = VisualElement.new()
-      myElement:Insert(0, child)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: index
-        type: number
-        default:
-        summary:
-      - name: element
-        type: Class.VisualElement
+      - name: localPoint
+        type: DataType.Vector2
+        tags:
         default:
         summary:
     returns:
-      - type: void
-        summary:
-  - name: Remove
-    summary: Removes a specified child element from this element's hierarchy.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local child = VisualElement.new()
-      myElement:Remove(child)
-      ```
-    parameters:
-      - name: element
-        type: Class.VisualElement
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: RemoveAt
-    summary: Remove a child at a specific index.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:RemoveAt(0)
-      ```
-    parameters:
-      - name: index
-        type: number
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: Clear
-    summary: Clear all children of the element.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:Clear()
-      ```
-    parameters:
-    returns:
-      - type: void
+      - type: boolean
         summary:
   - name: ElementAt
-    summary: Get a child at a specific index.
+    summary: |
+      Get a child at a specific index.
+      [Unity's VisualElement.ElementAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ElementAt.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local element = myElement:ElementAt(0)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: index
         type: number
+        tags:
         default:
         summary:
     returns:
       - type: Class.VisualElement
         summary:
-  - name: IndexOf
-    summary: Get the index of a child.
+  - name: EnableInClassList
+    summary: |
+      Enable a class in the class list of the element.
+      [Unity's VisualElement.EnableInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.EnableInClassList.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local index = myElement:IndexOf(VisualElement.new())
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: className
+        type: string
+        tags:
+        default:
+        summary:
+      - name: enable
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FindCommonAncestor
+    summary: |
+      Finds the closest common ancestor shared by this element and another specified element.
+      [Unity's VisualElement.FindCommonAncestor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.FindCommonAncestor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: other
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: Focus
+    summary: |
+      Focus the element.
+      [Unity's VisualElement.Focus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Focus.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: GetClasses
+    summary: |
+      [Unity's VisualElement.GetClasses Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.GetClasses.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: {string}
+        summary:
+  - name: GetResolvedStyleSize
+    summary: |
+      Gets the resolved style width and height as a Vector2.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Vector2
+        summary: |
+          A Vector2 where the x value is the resolved style width and the y value is the resolved style height
+  - name: IndexOf
+    summary: |
+      Get the index of a child.
+      [Unity's VisualElement.IndexOf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.IndexOf.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: element
         type: Class.VisualElement
+        tags:
         default:
         summary:
     returns:
       - type: number
         summary:
-  - name: BringToFront
-    summary: Bring the element to the front.
+  - name: Insert
+    summary: |
+      Insert a child at a specific index.
+      [Unity's VisualElement.Insert Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Insert.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:BringToFront()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: index
+        type: number
+        tags:
+        default:
+        summary:
+      - name: element
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IsDisplayed
+    summary: |
+      Returns true if the element is visible.  This is the equivalent of checking if the display style is none or flex.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary: |
+          Whether the element is currently visible.
+  - name: LocalToWorld
+    summary: |
+      [Unity's VisualElementExtensions.LocalToWorld Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.LocalToWorld.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: rect
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Rect
+        summary:
+  - name: LocalToWorld
+    summary: |
+      [Unity's VisualElementExtensions.LocalToWorld Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.LocalToWorld.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: MarkDirtyRepaint
+    summary: |
+      Mark the element as dirty for repaint.
+      [Unity's VisualElement.MarkDirtyRepaint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.MarkDirtyRepaint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: void
         summary:
-  - name: SendToBack
-    summary: Send the element to the back.
+  - name: Overlaps
+    summary: |
+      Check if the element overlaps with another element.
+      [Unity's VisualElement.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Overlaps.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:SendToBack()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
+      - name: rectangle
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
     returns:
-      - type: void
+      - type: boolean
         summary:
   - name: PlaceBehind
-    summary: Positions this element immediately behind a specified sibling element within the same parent.
+    summary: |
+      Positions this element immediately behind a specified sibling element within the same parent.
+      [Unity's VisualElement.PlaceBehind Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.PlaceBehind.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local sibling = VisualElement.new()
-      myElement:PlaceBehind(sibling)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: sibling
         type: Class.VisualElement
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
   - name: PlaceInFront
-    summary: Positions this element immediately in front of a specified sibling element within the same parent.
+    summary: |
+      Positions this element immediately in front of a specified sibling element within the same parent.
+      [Unity's VisualElement.PlaceInFront Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.PlaceInFront.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local sibling = VisualElement.new()
-      myElement:PlaceInFront(sibling)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: sibling
         type: Class.VisualElement
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Q
+    summary: |
+      [Unity's UQueryExtensions.Q Documentation](https://docs.unity3d.com/ScriptReference/UIElements.UQueryExtensions.Q.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: className
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.VisualElement
+        summary:
+  - name: RegisterCallback
+    summary: |
+      Registers a callback for a Highrise gesture event or Unity UI event.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: type
+        type: Class.Type
+        tags:
+        default:
+        summary: |
+          The event type to register for. Includes Unity UI events and Highrise gesture events.
+          The currently supported gestures and their corresponding events are:
+          DragGesture: DragGestureBegan, DragGestureChanged, DragGestureEnded
+      - name: action
+        type: "(...any) -> (...any)"
+        tags:
+        default:
+        summary: |
+          The callback to call when the event happens.
+      - name: phase
+        type: Enum.TrickleDown
+        tags:
+          - optional
+        default:
+        summary: |
+          Which phase the callback will be called during (Default NoTrickleDown).
+    returns:
+      - type: Class.Callback
+        summary: |
+          A Callback object that can be passed to UnregisterCallback
+  - name: RegisterGesture
+    summary: |
+      Registers a gesture with a VisualElement.  The VisualElement will now receive events from this gesture.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: gesture
+        type: Class.Gesture
+        tags:
+        default:
+        summary: |
+          The gesture to register.
+    returns:
+      - type: void
+        summary:
+  - name: RegisterLongPressCallback
+    summary: |
+      Register an action to be called when the element is long pressed
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: action
+        type: "(...any) -> (...any)"
+        tags:
+        default:
+        summary: |
+          The callback to call when the long press is completed
+      - name: pressEffect
+        type: Enum.PressEffect
+        tags:
+          - optional
+        default:
+        summary: |
+          The effect to apply to this element while it is pressed. Options are animating scale (Press), animating color (Highlight) or nothing (NONE) (Default Press)
+      - name: sound
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether pressing this element should play the standard Highrise long press sound effect (Default true)
+      - name: haptic
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether a light haptic pulse should be triggered when the long press is completed (Default false)
+    returns:
+      - type: Class.Callback
+        summary: |
+          A Callback object that can be passed to UnregisterCallback
+  - name: RegisterPressCallback
+    summary: |
+      Register an action to be called when the element is pressed
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: action
+        type: "(...any) -> (...any)"
+        tags:
+        default:
+        summary: |
+          The callback to call when this element is pressed
+      - name: pressEffect
+        type: Enum.PressEffect
+        tags:
+          - optional
+        default:
+        summary: |
+          The effect to apply to this element when it is pressed. Options are animating scale (Press), animating color (Highlight) or nothing (NONE) (Default Press)
+      - name: sound
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether pressing this element should play the standard Highrise button click sound effect (Default true)
+      - name: haptic
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether pressing this element should trigger a light haptic pulse (Default false)
+    returns:
+      - type: Class.Callback
+        summary: |
+          A Callback object that can be passed to UnregisterCallback
+  - name: Remove
+    summary: |
+      Removes a specified child element from this element's hierarchy.
+      [Unity's VisualElement.Remove Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Remove.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: element
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RemoveAt
+    summary: |
+      Remove a child at a specific index.
+      [Unity's VisualElement.RemoveAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.RemoveAt.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: index
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RemoveFromClassList
+    summary: |
+      Remove a class from the class list of the element.
+      [Unity's VisualElement.RemoveFromClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.RemoveFromClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: className
+        type: string
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
   - name: RemoveFromHierarchy
-    summary: Detaches this element from its parent, removing it from the visual tree.
+    summary: |
+      Detaches this element from its parent, removing it from the visual tree.
+      [Unity's VisualElement.RemoveFromHierarchy Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.RemoveFromHierarchy.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      myElement:RemoveFromHierarchy()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: void
         summary:
-  - name: Contains
-    summary: Checks if this element includes a specified child element within its hierarchy.
+  - name: RemoveStyleSheet
+    summary: |
+      Add a style sheet to this visual element
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local child = VisualElement.new()
-      local contains = myElement:Contains(child)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: child
-        type: Class.VisualElement
+      - name: sheet
+        type: Class.StyleSheet
+        tags:
         default:
         summary:
     returns:
-      - type: boolean
+      - type: void
         summary:
-  - name: FindCommonAncestor
-    summary: Finds the closest common ancestor shared by this element and another specified element.
+  - name: SendEvent
+    summary: |
+      [Unity's VisualElement.SendEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.SendEvent.html)
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local myElement = VisualElement.new()
-      local otherElement = VisualElement.new()
-      local commonAncestor = myElement:FindCommonAncestor(otherElement)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: other
-        type: Class.VisualElement
+      - name: e
+        type: Class.EventBase
+        tags:
         default:
         summary:
     returns:
-      - type: Class.VisualElement
+      - type: void
         summary:
+  - name: SendToBack
+    summary: |
+      Send the element to the back.
+      [Unity's VisualElement.SendToBack Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.SendToBack.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetDisplay
+    summary: |
+      Hide / Show an element.  This is the equivalent of setting the display style to none or flex.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: display
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Whether the element should be displayed
+    returns:
+      - type: void
+        summary:
+  - name: SetEnabled
+    summary: |
+      Set the enabled state of the element.
+      [Unity's VisualElement.SetEnabled Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.SetEnabled.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: value
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Sort
+    summary: |
+      [Unity's VisualElement.Sort Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.Sort.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: comp
+        type: "(x: VisualElement, y: VisualElement) -> (number)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ToggleInClassList
+    summary: |
+      Toggle a class in the class list of the element.
+      [Unity's VisualElement.ToggleInClassList Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.VisualElement.ToggleInClassList.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: className
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterCallback
+    summary: |
+      Unregisters a callback using a Callback object.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: callback
+        type: Class.Callback
+        tags:
+        default:
+        summary: |
+          The callback object that was returned by RegisterPressCallback, RegisterLongPressCallback or RegisterCallback.
+    returns:
+      - type: void
+        summary:
+  - name: WorldToLocal
+    summary: |
+      [Unity's VisualElementExtensions.WorldToLocal Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.WorldToLocal.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: rect
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Rect
+        summary:
+  - name: WorldToLocal
+    summary: |
+      [Unity's VisualElementExtensions.WorldToLocal Documentation](https://docs.unity3d.com/ScriptReference/UIElements.VisualElementExtensions.WorldToLocal.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+math_operations:

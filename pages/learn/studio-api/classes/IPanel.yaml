@@ -18,6 +18,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
+  - name: scaledPixelsPerPoint
+    summary: |
+      [Unity's IPanel.scaledPixelsPerPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel-scaledPixelsPerPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
   - name: visualTree
     summary: |
       [Unity's IPanel.visualTree Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IPanel-visualTree.html)

@@ -1,0 +1,56 @@
+name: NavMeshPath
+type: classes
+summary: |
+  [Unity's NavMeshPath Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPath.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+  - name: new
+    summary: |
+      [Unity's NavMeshPath.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPath-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: Class.NavMeshPath
+        summary:
+properties:
+  - name: corners
+    summary: |
+      [Unity's NavMeshPath.corners Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPath-corners.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {DataType.Vector3}
+  - name: status
+    summary: |
+      [Unity's NavMeshPath.status Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPath-status.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NavMeshPathStatus
+methods:
+  - name: ClearCorners
+    summary: |
+      [Unity's NavMeshPath.ClearCorners Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPath.ClearCorners.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

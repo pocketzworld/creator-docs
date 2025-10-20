@@ -1,0 +1,178 @@
+name: EntityDiagnostics
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: path
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+methods:
+  - name: PushBool
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PushChild
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.EntityDiagnostics
+        summary:
+  - name: PushGameObject
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: obj
+        type: Class.GameObject
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PushNull
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PushNumber
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PushQuaternion
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: quat
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PushString
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PushVector3
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: vec
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

@@ -1,208 +1,435 @@
 name: Audio
-type: classes
-summary: Manages and controls all audio-related functionalities within the game engine, including playing music and sounds, and adjusting their properties.
-description: |
-  The Audio class provides comprehensive control over the game's sound system. It allows for playing, pausing, stopping, and modifying audio sources, including both music and sound effects. This class supports features like adjusting volume and pitch, playing sounds globally or on specific game objects, and dynamically changing music intensity.
-code_samples: []
-inherits: []
-constructors: []
+type: services
+summary: |
+  The Audio class is responsible for controlling music and sound effects.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
 properties:
-  - name: isPlaying
-    summary: Indicates whether any audio is currently being played.
-    description: |
-      A boolean property that returns true if any audio source is currently playing, and false otherwise. Useful for conditional audio logic in your game.
+  - name: canModerateRadio
+    summary:
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: "(arg: Player) -> (boolean)"
+  - name: client
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.GameClient
+  - name: isPlaying
+    summary: |
+      True when music is playing, otherwise false.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: musicIntensity
-    summary: Represents the current intensity of the music playing.
-    description: |
-      A numerical value that represents the current intensity level of the music. This can be used to dynamically adjust game music based on in-game actions or player performance.
+    summary: |
+      An estimation of the perceived loudness of the currently playing audio source.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
+  - name: musicLength
+    summary: |
+      Length of the music track in seconds.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: musicTime
+    summary: |
+      Time in seconds since the music started.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: musicVolume
+    summary: |
+      Current music volume.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: onRadioStationChanged
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: "(obj: RadioStation) -> ()"
+  - name: radioEnabled
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: radioStation
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.RadioStation
 methods:
-  - name: GetMusicIntensity
-    summary: Returns the current music intensity within a specified range.
-    description: |
-      Gets the current music intensity, optionally normalizing it between a specified low and high range. If normalizeVolume is true, the intensity is adjusted to fall within the given range.
-    is_static: false
-    code_samples: []
-    parameters:
-      - name: low
-        type: number
-        default: null
-        summary: The lower bound of the intensity range.
-      - name: high
-        type: number
-        default: null
-        summary: The upper bound of the intensity range.
-      - name: normalizeVolume
-        type: boolean
-        default: null
-        summary: Whether to normalize the intensity within the specified range.
-    returns:
-      - type: number
-        summary: The current music intensity, possibly normalized.
   - name: DuckMusic
-    summary: Temporarily lowers the music volume.
-    description: |
-      Lowers the music volume for a specified duration, with optional fade-in and fade-out durations for a smoother transition.
+    summary: |
+      Temporarily lowers the music volume.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: duration
         type: number
-        default: null
-        summary: The duration to lower the music volume.
+        tags:
+        default:
+        summary: |
+          The duration to lower the music volume.
       - name: duckOutDuration
         type: number
-        default: null
-        summary: Duration for the volume to fade out to the ducked level.
+        tags:
+        default:
+        summary: |
+          Duration for the volume to fade out to the ducked level.
       - name: duckInDuration
         type: number
-        default: null
-        summary: Duration for the volume to return to normal after the specified duration.
+        tags:
+        default:
+        summary: |
+          Duration for the volume to return to normal after the specified duration.
     returns:
       - type: void
         summary:
-  - name: PlayMusic
-    summary: Plays music using an AudioShader.
-    description: |
-      Plays music through the specified AudioShader with an optional volume parameter.
+  - name: EnableRadioSupport
+    summary: |
+      Enables radio support in the current room, allowing users to pick a radio station.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: enabled
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: currentStation
+        type: Class.RadioStation
+        tags:
+        default:
+        summary:
+      - name: stationSelected
+        type: "(obj: RadioStation) -> ()"
+        tags:
+        default:
+        summary:
+      - name: canModerateRadio
+        type: "(arg: Player) -> (boolean)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetMusicIntensity
+    summary: |
+      Returns the current music intensity within a specified range.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: low
+        type: number
+        tags:
+        default:
+        summary: |
+          The lower bound of the intensity range.
+      - name: high
+        type: number
+        tags:
+        default:
+        summary: |
+          The upper bound of the intensity range.
+      - name: normalizeVolume
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Whether to normalize the intensity within the specified range.
+    returns:
+      - type: number
+        summary: |
+          The current music intensity, possibly normalized.
+  - name: PlayMusic
+    summary: |
+      Plays music using an audio shader.  Music played with PlayMusic will be affected by the music volume slider.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: shader
         type: Class.AudioShader
-        default: null
-        summary: The AudioShader to play.
+        tags:
+        default:
+        summary: |
+          The audio shader containing the music to play
       - name: volume
         type: number
-        default: null
-        summary: The volume at which to play the music.
+        tags:
+        default:
+        summary: |
+          Volume of the music in the range of 0-1
+      - name: fadeIn
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether the music should fade in as it starts playing (Default true)
+      - name: loop
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether the music will loop instead of just playing once (Default true)
+      - name: startTime
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
     returns:
       - type: void
         summary:
-  # Additional methods continue in a similar format.
   - name: PlayMusicURL
-    summary: Plays music from a specified URL.
-    description: |
-      Plays music directly from a given URL, allowing for streaming of audio content. The volume can be adjusted as needed.
+    summary: |
+      Plays music using a radio station URL.  Music played with PlayMusicURL will be affected by the music volume slider.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: url
         type: string
-        default: null
-        summary: The URL of the music to play.
+        tags:
+        default:
+        summary: |
+          The url of the music to play
       - name: volume
         type: number
-        default: null
-        summary: The volume at which to play the music.
-    returns:
-      - type: void
-        summary:
-  - name: StopMusic
-    summary: Stops currently playing music, with an optional fade-out.
-    description: |
-      Stops any currently playing music. An optional boolean parameter allows for a smooth fade-out effect instead of an abrupt stop.
-    is_static: false
-    code_samples: []
-    parameters:
-      - name: fadeOut
+        tags:
+        default:
+        summary: |
+          Volume of the music in the range of 0-1
+      - name: fadeIn
         type: boolean
-        default: null
-        summary: Whether to fade out the music instead of stopping abruptly.
+        tags:
+          - optional
+        default:
+        summary: |
+          Whether the music should fade in as it starts playing (Default true)
     returns:
       - type: void
         summary:
   - name: PlayShader
-    summary: Plays an audio effect using an AudioShader.
-    description: |
-      Utilizes an AudioShader to play a specific sound effect. This method is useful for playing non-music audio clips.
+    summary: |
+      Plays an audio effect using an AudioShader.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: shader
         type: Class.AudioShader
-        default: null
-        summary: The AudioShader to use for playing the sound.
+        tags:
+        default:
+        summary: |
+          The AudioShader to use for playing the sound.
     returns:
       - type: void
         summary:
-  - name: PlaySoundGlobal
-    summary: Plays a sound effect globally, without spatialization.
-    description: |
-      Plays a sound effect that is not tied to a specific location in the game world. Parameters include volume, pitch, and whether the sound should loop.
-    is_static: false
-    code_samples: []
-    parameters:
-      - name: shader
-        type: Class.AudioShader
-        default: null
-        summary: The AudioShader to play.
-      - name: volume
-        type: number
-        default: null
-        summary: The volume at which to play the sound.
-      - name: pitch
-        type: number
-        default: null
-        summary: The pitch at which to play the sound.
-      - name: spatialize
-        type: boolean
-        default: null
-        summary: Whether to spatialize the sound. False plays the sound globally.
-      - name: loop
-        type: boolean
-        default: null
-        summary: Whether the sound should loop.
-    returns:
-      - type: Class.AudioSource
-        summary: The AudioSource instance representing the played sound.
   - name: PlaySound
-    summary: Plays a sound effect attached to a specific game object.
-    description: |
-      Plays a sound effect that is spatialized and attached to a given game object, allowing the sound to move with the object.
+    summary: |
+      Plays a sound effect attached to a specific game object.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: shader
         type: Class.AudioShader
-        default: null
-        summary: The AudioShader to play.
+        tags:
+        default:
+        summary: |
+          The AudioShader to play.
       - name: gameObject
         type: Class.GameObject
-        default: null
-        summary: The GameObject to which the sound is attached.
+        tags:
+        default:
+        summary: |
+          The GameObject to which the sound is attached.
       - name: volume
         type: number
-        default: null
-        summary: The volume at which to play the sound.
+        tags:
+        default:
+        summary: |
+          The volume at which to play the sound.
       - name: pitch
         type: number
-        default: null
-        summary: The pitch of the sound.
+        tags:
+        default:
+        summary: |
+          The pitch of the sound.
       - name: spatialize
         type: boolean
-        default: null
-        summary: Whether the sound should be spatialized according to the game object's position.
+        tags:
+        default:
+        summary: |
+          Whether the sound should be spatialized according to the game object's position.
+      - name: loop
+        type: boolean
+        tags:
+        default:
+        summary:
     returns:
       - type: Class.AudioSource
-        summary: The AudioSource instance representing the played sound.
-  - name: StopAudioSource
-    summary: Stops a specific audio source.
-    description: |
-      Stops playback of a specific AudioSource, allowing for granular control over individual sounds.
+        summary: |
+          The AudioSource instance representing the played sound.
+  - name: PlaySoundGlobal
+    summary: |
+      Plays a sound effect globally, without spatialization.
+    description:
     is_static: false
-    code_samples: []
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: shader
+        type: Class.AudioShader
+        tags:
+        default:
+        summary: |
+          The AudioShader to play.
+      - name: volume
+        type: number
+        tags:
+        default:
+        summary: |
+          The volume at which to play the sound.
+      - name: pitch
+        type: number
+        tags:
+        default:
+        summary: |
+          The pitch at which to play the sound.
+      - name: loop
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Whether the sound should loop.
+    returns:
+      - type: Class.AudioSource
+        summary: |
+          The AudioSource instance representing the played sound.
+  - name: SetListenerPositionAndRotation
+    summary: |
+      Set the position and rotation of the audio listener
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: rotation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: StopAudioSource
+    summary: |
+      Stops a specific audio source.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: source
         type: Class.AudioSource
-        default: null
-        summary: The AudioSource to stop.
+        tags:
+        default:
+        summary: |
+          The AudioSource to stop.
     returns:
       - type: void
         summary:
-math_operations: []
+  - name: StopMusic
+    summary: |
+      Stops currently playing music, with an optional fade-out.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: fadeOut
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Whether to fade out the music instead of stopping abruptly.
+    returns:
+      - type: void
+        summary:
+math_operations:

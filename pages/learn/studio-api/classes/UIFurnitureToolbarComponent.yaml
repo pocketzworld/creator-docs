@@ -1,0 +1,116 @@
+name: UIFurnitureToolbarComponent
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+  - Class.UIView
+tags:
+constructors:
+properties:
+  - name: changeStatePressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+  - name: movePressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+  - name: removePressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+  - name: rotatePressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+  - name: setCadencePressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+  - name: setSpeedPressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+  - name: setTeleportPressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
+methods:
+  - name: UpdateCadence
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: cadence
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateMoveButton
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: moveDirection
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateSpeed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: speed
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

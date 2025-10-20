@@ -21,6 +21,16 @@ constructors:
       - type: Class.TextElement
         summary:
 properties:
+  - name: selectableUssClassName
+    summary: |
+      [Unity's TextElement.selectableUssClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-selectableUssClassName.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
   - name: ussClassName
     summary: |
       [Unity's TextElement.ussClassName Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-ussClassName.html)
@@ -34,6 +44,15 @@ properties:
   - name: displayTooltipWhenElided
     summary: |
       [Unity's TextElement.displayTooltipWhenElided Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-displayTooltipWhenElided.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: emojiFallbackSupport
+    summary: |
+      [Unity's TextElement.emojiFallbackSupport Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.TextElement-emojiFallbackSupport.html)
     description:
     is_static: false
     code_samples:

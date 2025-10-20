@@ -2,55 +2,99 @@ name: TapHandler
 type: classes
 summary: |
   A TapHandler is a class that can be used to detect when a GameObject has been tapped.
-  For a GameObject to be tapped, it must have a Collider component attached to it.
-
+  In order for a GameObject to be tappable, it must also have a Collider component attached to the same GameObject as the TapHandler or to a parent GameObject.
 description:
 code_samples:
 inherits:
-  - Class.Behaviour
+  - Class.WorldBehaviour
+tags:
 constructors:
 properties:
   - name: Tapped
-    summary: Called when the GameObject is tapped.
+    summary: |
+      Event fired when the tap handler is activated. Connect to this event to add custom behavior when the tap handler is tapped.
+      Event Parameters:
+          Position: the position on the TapHandler's collider that was tapped.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Connect to the Tapped event
-      self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
-          print("Tapped")
-      end)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
-  - name: moveTo
-    summary: Moves the GameObject to the specified position when it is tapped.
-    is_static: false
-    code_samples: |
-      ```lua
-      -- Move the GameObject to the specified position when it is tapped
-      self.gameObject:GetComponent(TapHandler).moveTo = Vector3.New(0, 0, 0)
-      ```
-    type: boolean
   - name: distance
-    summary: The distance the GameObject will move when it is tapped.
+    summary: |
+      If CheckDistance is enabled, the character must be within this distance of the tap handler when it is tapped for it to activate.  If move to is enabled, if the character is too far away, they will move within this distance of the TapHandler and then activate it.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Set the distance the GameObject will move when it is tapped
-      self.gameObject:GetComponent(TapHandler).distance = 1
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     type: number
+  - name: hasAnchors
+    summary: |
+      Returns true if the tap handler has anchors
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: moveTarget
+    summary: |
+      If the character has to move to activate the move handler, this is the position the character will move to.  This is the position of the move target if it exists, otherwise it is the tap handler's position.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: moveTo
+    summary: |
+      If CheckDistance is enabled, when a tap handler is tapped and the character is outside the tap handler's distance, the character will move to the TapHandler and activate it if MoveTo is true. If MoveTo is false, nothing happens.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
 methods:
+  - name: GetClosestAnchor
+    summary: |
+      Returns the closest anchor to the given world position
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The position to check for the nearest anchor.
+    returns:
+      - type: Class.Anchor
+        summary: |
+          The closest anchor associated with this TapHandler, if it exists.
   - name: Perform
     summary: |
-      Performs the tap action on the GameObject.
-      This method is called when the GameObject is tapped.
+      Activates the TapHandler as if it had been tapped.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Perform the tap action on the GameObject
-      self.gameObject:GetComponent(TapHandler):Perform()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The position on the tap handler's collider that was tapped.
     returns:
       - type: void
         summary:

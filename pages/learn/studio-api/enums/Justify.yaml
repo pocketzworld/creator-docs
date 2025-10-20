@@ -58,5 +58,15 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Enum.Justify
+  - name: SpaceEvenly
+    summary: |
+      [Unity's Justify.SpaceEvenly Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Justify.SpaceEvenly.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Justify
 methods:
 math_operations:

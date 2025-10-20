@@ -1,0 +1,47 @@
+name: LeaderboardEntry
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: id
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: string
+  - name: name
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: string
+  - name: rank
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+  - name: score
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+methods:
+math_operations:

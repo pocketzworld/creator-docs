@@ -7,6 +7,17 @@ inherits:
   - Class.UIView
 tags:
 constructors:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: Class.UISlider
+        summary:
 properties:
   - name: highValue
     summary:
@@ -59,16 +70,5 @@ methods:
         summary:
     returns:
       - type: void
-        summary:
-  - name: new
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: Class.UISlider
         summary:
 math_operations:

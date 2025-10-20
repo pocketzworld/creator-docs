@@ -1,0 +1,155 @@
+name: GridLayout
+type: classes
+summary: |
+  [Unity's GridLayout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.html)
+description:
+code_samples:
+inherits:
+  - Class.Behaviour
+tags:
+constructors:
+properties:
+  - name: cellGap
+    summary: |
+      [Unity's GridLayout.cellGap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout-cellGap.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: cellLayout
+    summary: |
+      [Unity's GridLayout.cellLayout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout-cellLayout.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellLayout
+  - name: cellSize
+    summary: |
+      [Unity's GridLayout.cellSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout-cellSize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: cellSwizzle
+    summary: |
+      [Unity's GridLayout.cellSwizzle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout-cellSwizzle.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.CellSwizzle
+methods:
+  - name: CellToLocalInterpolated
+    summary: |
+      [Unity's GridLayout.CellToLocalInterpolated Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.CellToLocalInterpolated.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: cellPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: GetBoundsLocal
+    summary: |
+      [Unity's GridLayout.GetBoundsLocal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.GetBoundsLocal.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: size
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Bounds
+        summary:
+  - name: GetLayoutCellCenter
+    summary: |
+      [Unity's GridLayout.GetLayoutCellCenter Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.GetLayoutCellCenter.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: LocalToCellInterpolated
+    summary: |
+      [Unity's GridLayout.LocalToCellInterpolated Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.LocalToCellInterpolated.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: localPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: LocalToWorld
+    summary: |
+      [Unity's GridLayout.LocalToWorld Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.LocalToWorld.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: localPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: WorldToLocal
+    summary: |
+      [Unity's GridLayout.WorldToLocal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GridLayout.WorldToLocal.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: worldPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+math_operations:

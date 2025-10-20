@@ -1,0 +1,350 @@
+name: RTSCamera
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: ApplyInertia
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: worldVelocity
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CalculateCameraDistanceToTarget
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: number
+        summary:
+  - name: CalculateRelativePosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: CalculateWorldVelocity
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: evt
+        type: Class.PinchGestureChanged
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: CenterOn
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: newTarget
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: newZoom
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CenterOnCharacterWithSpringiness
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: character
+        type: Class.Character
+        tags:
+        default:
+        summary:
+      - name: speed
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IsCharacterMoving
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: MouseRotateCamera
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: evt
+        type: Class.PinchGestureChanged
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PanCamera
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: evt
+        type: Class.PinchGestureChanged
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PanIfPlayerOutOfView
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: PanWorldPositionToScreenPosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: worldPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: screenPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PinchRotateAndZoomCamera
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: evt
+        type: Class.PinchGestureChanged
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PostZoomMoveTowardsScreenPoint
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: screenPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ResetInertia
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ResetPinchDrag
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ResetZoomScale
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: rotate
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ScreenPositionToWorldPoint
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: camera
+        type: Class.Camera
+        tags:
+        default:
+        summary:
+      - name: screenPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: UpdateInertia
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ZoomIn
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ZoomOut
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

@@ -2,194 +2,341 @@ name: Plane
 type: datatypes
 summary: |
   Represents a plane in 3D space defined by a normal vector and a distance from the origin. Used for geometric calculations like intersection points, containment tests, and distance measurements.
+  [Unity's Plane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.html)
 description:
 code_samples:
 inherits:
+tags:
 constructors:
   - name: new
     summary: |
       Creates a new plane with the specified normal and a point on the plane.
+      [Unity's Plane.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-ctor.html)
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: normal
+      - name: a
         type: DataType.Vector3
+        tags:
         default:
-        summary: The normal vector of the plane.
-      - name: point
+        summary:
+      - name: b
         type: DataType.Vector3
+        tags:
         default:
-        summary: A point on the plane.
+        summary:
+      - name: c
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
     returns:
       - type: DataType.Plane
-        summary: Returns a new Plane instance.
-properties:
-  - name: normal
+        summary: |
+          Returns a new Plane instance.
+  - name: new
     summary: |
-      The normal vector of the plane, perpendicular to its surface.
-    is_static: false
+      Creates a new plane with the specified normal and a point on the plane.
+      [Unity's Plane.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-ctor.html)
+    description:
+    is_static: true
     code_samples:
-    type: DataType.Vector3
+    tags:
+      - ClientOnly
+    parameters:
+      - name: inNormal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The normal vector of the plane.
+      - name: d
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Plane
+        summary: |
+          Returns a new Plane instance.
+  - name: new
+    summary: |
+      Creates a new plane with the specified normal and a point on the plane.
+      [Unity's Plane.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: inNormal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The normal vector of the plane.
+      - name: inPoint
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          A point on the plane.
+    returns:
+      - type: DataType.Plane
+        summary: |
+          Returns a new Plane instance.
+properties:
   - name: distance
     summary: |
       The shortest distance between the plane and the origin along its normal.
+      [Unity's Plane.distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-distance.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: flipped
     summary: |
       Returns a new plane with the normal vector flipped.
+      [Unity's Plane.flipped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-flipped.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Plane
+  - name: normal
+    summary: |
+      The normal vector of the plane, perpendicular to its surface.
+      [Unity's Plane.normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane-normal.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
 methods:
-  - name: Raycast
+  - name: ClosestPointOnPlane
     summary: |
-      Determines if a ray intersects the plane and returns the intersection point distance.
+      Finds the point on the plane closest to a given point.
+      [Unity's Plane.ClosestPointOnPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.ClosestPointOnPlane.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: ray
-        type: DataType.Ray
+      - name: point
+        type: DataType.Vector3
+        tags:
         default:
-        summary: The ray to test for intersection.
+        summary: |
+          The point in 3D space.
     returns:
-      - type: (boolean, number)
-        summary: A tuple containing intersection status and distance.
-  - name: SetNormalAndPosition
-    summary: |
-      Sets the normal vector and a point on the plane to redefine its position.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: inNormal
-        type: DataType.Vector3
-        default:
-        summary: The new normal vector of the plane.
-      - name: inPoint
-        type: DataType.Vector3
-        default:
-        summary: A new point on the plane.
-    returns:
-      - type: void
-        summary:
-  - name: Set3Points
-    summary: |
-      Recalculates the plane to contain three specified points.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: a
-        type: DataType.Vector3
-        default:
-        summary: The first point.
-      - name: b
-        type: DataType.Vector3
-        default:
-        summary: The second point.
-      - name: c
-        type: DataType.Vector3
-        default:
-        summary: The third point.
-    returns:
-      - type: void
-        summary:
+      - type: DataType.Vector3
+        summary: |
+          Returns the closest point on the plane.
   - name: Flip
     summary: |
       Flips the plane's normal vector.
+      [Unity's Plane.Flip Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Flip.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: GetDistanceToPoint
+    summary: |
+      Calculates the shortest distance from a point to the plane.
+      [Unity's Plane.GetDistanceToPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.GetDistanceToPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The point to calculate the distance from.
+    returns:
+      - type: number
+        summary:
+  - name: GetSide
+    summary: |
+      Determines which side of the plane a point lies on.
+      [Unity's Plane.GetSide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.GetSide.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The point to test.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the point is on the same side as the plane's normal.
+  - name: Raycast
+    summary: |
+      Determines if a ray intersects the plane and returns the intersection point distance.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: number
+        summary:
+  - name: SameSide
+    summary: |
+      Checks if two points are on the same side of the plane.
+      [Unity's Plane.SameSide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.SameSide.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: inPt0
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The first point.
+      - name: inPt1
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The second point.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the points are on the same side of the plane.
+  - name: Set3Points
+    summary: |
+      Recalculates the plane to contain three specified points.
+      [Unity's Plane.Set3Points Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Set3Points.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: a
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The first point.
+      - name: b
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The second point.
+      - name: c
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The third point.
+    returns:
+      - type: void
+        summary:
+  - name: SetNormalAndPosition
+    summary: |
+      Sets the normal vector and a point on the plane to redefine its position.
+      [Unity's Plane.SetNormalAndPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.SetNormalAndPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: inNormal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The new normal vector of the plane.
+      - name: inPoint
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          A new point on the plane.
     returns:
       - type: void
         summary:
   - name: Translate
     summary: |
       Moves the plane by a specified offset in 3D space.
+      [Unity's Plane.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Translate.html)
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: plane
         type: DataType.Plane
+        tags:
         default:
-        summary: The plane to translate.
+        summary: |
+          The plane to translate.
       - name: translation
         type: DataType.Vector3
+        tags:
         default:
-        summary: The translation offset.
+        summary: |
+          The translation offset.
     returns:
       - type: DataType.Plane
-        summary: Returns the translated plane.
-  - name: ClosestPointOnPlane
-    summary: |
-      Finds the point on the plane closest to a given point.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: point
-        type: DataType.Vector3
-        default:
-        summary: The point in 3D space.
-    returns:
-      - type: DataType.Vector3
-        summary: Returns the closest point on the plane.
-  - name: GetDistanceToPoint
-    summary: |
-      Calculates the shortest distance from a point to the plane.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: point
-        type: DataType.Vector3
-        default:
-        summary: The point to calculate the distance from.
-    returns:
-      - type: number
-  - name: GetSide
-    summary: |
-      Determines which side of the plane a point lies on.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: point
-        type: DataType.Vector3
-        default:
-        summary: The point to test.
-    returns:
-      - type: boolean
-        summary: Returns true if the point is on the same side as the plane's normal.
-  - name: SameSide
-    summary: |
-      Checks if two points are on the same side of the plane.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: inPt0
-        type: DataType.Vector3
-        default:
-        summary: The first point.
-      - name: inPt1
-        type: DataType.Vector3
-        default:
-        summary: The second point.
-    returns:
-      - type: boolean
-        summary: Returns true if the points are on the same side of the plane.
+        summary: |
+          Returns a copy of the original plane, translated by the specified offset.
   - name: Translate
     summary: |
-      Moves the plane in 3D space by a specified offset without changing its normal direction.
-    is_static: true
+      Moves the plane by a specified offset in 3D space.
+      [Unity's Plane.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Plane.Translate.html)
+    description:
+    is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: plane
-        type: DataType.Plane
-        default:
-        summary: The plane to translate.
       - name: translation
         type: DataType.Vector3
+        tags:
         default:
-        summary: The translation offset.
+        summary: |
+          The translation offset.
     returns:
-      - type: DataType.Plane
-        summary: Returns a new Plane instance that has been translated.
+      - type: void
+        summary:
 math_operations:

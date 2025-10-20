@@ -1,78 +1,36 @@
 name: Chat
-type: classes
+type: services
 summary: |
   The Chat service provides functionality for creating and managing chat channels to dictate how players communicate with each other, as well as how receiving messages work in the game.
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: allChannels
+  - name: ChannelDestroyed
     summary: |
-      All chat channels that exist in the game.
+      An event that is fired by the server to all clients when a channel is destroyed. Class.ChannelInfo is passed as the parameter.
     description:
     is_static: false
+    code_samples: |
+      ```lua
+      Chat.ChannelDestroyed:Connect(function(channel)
+        print("Channel " .. channel.name .. " has been destroyed.")
+      end)
+      ```
     tags:
-      - ServerOnly
-    code_samples:
-    type: ChannelInfo[]
-  - name: allJoinedChannels
-    summary: |
-      All chat channels that the player has joined.
-    description:
-    is_static: false
-    code_samples:
-    type: ChannelInfo[]
-  - name: TextMessageReceivedHandler
-    summary: |
-      An event that is fired when a client receives a text message. If this event has no connected listeners, the text message will display normally.
-
-      If you connect to this event to do custom messaging logic, use the `DisplayTextMessage` method to send the final results.
-
-      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
-        Chat:DisplayTextMessage(channel, player, message)
-      end)
-      ```
-    type: Class.Event
-  - name: WhisperReceivedHandler
-    summary: |
-      An event that is fired when a client receives a whisper. If this event has no connected listeners, the whisper will display normally.
-
-      If your game does not allow whispering at certain times or only with certain people, this event should be connected to and use the `DisplayTextMessage` method only when whispering is allowed.
-
-      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local canWhisper = false
-      Chat.WhisperReceivedHandler:Connect(function(channel, player, message)
-        if canWhisper then
-          Chat:DisplayTextMessage(channel, player, message)
-        end
-      end)
-      ```
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
   - name: PlayerJoinedChannel
-    summary: |
-      An event that is fired by the server to all clients in the same channel as the player that joined. Class.ChannelInfo and Class.Player are passed as the parameters.
+    summary:
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      Chat.PlayerJoinedChannel:Connect(function(channel, player)
-        Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
-          if message == "Hello" then
-            Chat:DisplayTextMessage(channel, player, "Hello, " .. player.name .. "!")
-          end
-        end)
-      end)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
   - name: PlayerLeftChannel
     summary: |
@@ -85,20 +43,158 @@ properties:
         print(player.name .. " has left the channel.")
       end)
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
-  - name: ChannelDestroyed
+  - name: TextMessageReceivedHandler
     summary: |
-      An event that is fired by the server to all clients when a channel is destroyed. Class.ChannelInfo is passed as the parameter.
+      An event that is fired when a client receives a text message. If this event has no connected listeners, the text message will display normally.
+      If you connect to this event to do custom messaging logic, use the `DisplayTextMessage` method to send the final results.
+      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
     description:
     is_static: false
     code_samples: |
       ```lua
-      Chat.ChannelDestroyed:Connect(function(channel)
-        print("Channel " .. channel.name .. " has been destroyed.")
+      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
+        Chat:DisplayTextMessage(channel, player, message)
       end)
       ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: Class.Event
+  - name: activeChannel
+    summary: |
+      The chat channel the local player is currently active in
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.ChannelInfo
+  - name: allChannels
+    summary: |
+      All chat channels that exist in the game.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: {Class.ChannelInfo}
+  - name: chatBubbleSound
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.AudioShader
+  - name: chatSentSound
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.AudioShader
+  - name: defaultChatBubbleBackgroundColor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Color
+  - name: defaultChatBubbleFontColor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Color
+  - name: joinedChannels
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: {Class.ChannelInfo}
+  - name: overrideChatBubbleSound
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: selfChatBubbleBackgroundColor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Color
+  - name: selfChatBubbleFontColor
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Color
+  - name: slowModeEnabled
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: boolean
+  - name: slowModeTimeout
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
 methods:
+  - name: AddPlayerToChannel
+    summary: |
+      Adds the given player to the given channel.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local channel = Chat:CreateChannel("General", true, true)
+      
+      server.PlayerConnected:Connect(function(player)
+        Chat:AddPlayerToChannel(channel, player)
+      end)
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: channelInfo
+        type: Class.ChannelInfo
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: CreateChannel
     summary: |
       Creates a new channel. If the channel already exists, it will return the existing channel.
@@ -107,10 +203,10 @@ methods:
     code_samples: |
       ```lua
       local isGameRunning = true
-
+      
       local ghostChannel = Chat:CreateChannel("Ghost", true, false)
       local generalChannel = Chat:CreateChannel("General", true, true)
-
+      
       server.PlayerConnected:Connect(function(player)
         if isGameRunning then
           Chat:AddPlayerToChannel(generalChannel, player) -- General channel is for players who are in the game
@@ -124,14 +220,23 @@ methods:
     parameters:
       - name: channelName
         type: string
+        tags:
         default:
         summary:
-      - name: allowText
+      - name: allowsText
         type: boolean
+        tags:
         default:
         summary:
-      - name: allowVoice
+      - name: allowsVoice
         type: boolean
+        tags:
+        default:
+        summary:
+      - name: priority
+        type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
@@ -145,11 +250,11 @@ methods:
     code_samples: |
       ```lua
       local generalChannel = Chat:CreateChannel("General", true, true)
-
+      
       server.PlayerConnected:Connect(function(player)
         Chat:AddPlayerToChannel(generalChannel, player)
       end)
-
+      
       server.PlayerDisconnected:Connect(function(player)
         Chat:RemovePlayerFromChannel(generalChannel, player)
       end)
@@ -161,35 +266,364 @@ methods:
     tags:
       - ServerOnly
     parameters:
-      - name: channel
+      - name: channelInfo
         type: Class.ChannelInfo
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: AddPlayerToChannel
+  - name: DisplayChatBubble
     summary: |
-      Adds the given player to the given channel.
+      Spawns a chat bubble at the given position with the given message and an optional nametag.
+      The chat bubble will have the same appearance and lifespan as a normal player chat message.
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local channel = Chat:CreateChannel("General", true, true)
-
-      server.PlayerConnected:Connect(function(player)
-        Chat:AddPlayerToChannel(channel, player)
-      end)
-      ```
+    code_samples:
     tags:
-      - ServerOnly
+      - ClientOnly
+    parameters:
+      - name: position
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: backgroundColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+      - name: fontColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayChatBubble
+    summary: |
+      Spawns a chat bubble at the given position with the given message and an optional nametag.
+      The chat bubble will have the same appearance and lifespan as a normal player chat message.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: backgroundColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+      - name: fontColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+      - name: overrideChatBubbleSound
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: chatBubbleSound
+        type: Class.AudioShader
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayChatBubble
+    summary: |
+      Spawns a chat bubble at the given position with the given message and an optional nametag.
+      The chat bubble will have the same appearance and lifespan as a normal player chat message.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: overrideChatBubbleSound
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: chatBubbleSound
+        type: Class.AudioShader
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayChatBubble
+    summary: |
+      Spawns a chat bubble at the given position with the given message and an optional nametag.
+      The chat bubble will have the same appearance and lifespan as a normal player chat message.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: name
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayTextMessage
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: channel
         type: Class.ChannelInfo
+        tags:
         default:
         summary:
+      - name: from
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: language
+        type: string
+        tags:
+        default:
+        summary:
+      - name: backgroundColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+      - name: fontColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayTextMessage
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        tags:
+        default:
+        summary:
+      - name: from
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: language
+        type: string
+        tags:
+        default:
+        summary:
+      - name: backgroundColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+      - name: fontColor
+        type: DataType.Color
+        tags:
+        default:
+        summary:
+      - name: overrideChatBubbleSound
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: chatBubbleSound
+        type: Class.AudioShader
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayTextMessage
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        tags:
+        default:
+        summary:
+      - name: from
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: language
+        type: string
+        tags:
+        default:
+        summary:
+      - name: overrideChatBubbleSound
+        type: boolean
+        tags:
+        default:
+        summary:
+      - name: chatBubbleSound
+        type: Class.AudioShader
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DisplayTextMessage
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: channel
+        type: Class.ChannelInfo
+        tags:
+        default:
+        summary:
+      - name: from
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: language
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetChannel
+    summary: |
+      Gets the chat channel with the given name
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: channelName
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.ChannelInfo
+        summary:
+  - name: ReapplyFilters
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
       - name: player
         type: Class.Player
+        tags:
         default:
         summary:
     returns:
@@ -200,80 +634,39 @@ methods:
       Removes the given player from the given channel.
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local isGameRunning = true
-
-      local function ResetGame(players)
-        for k, v in pairs(players) do
-          Chat:RemovePlayerFromChannel(generalChannel, v)
-          Chat:AddPlayerToChannel(ghostChannel, v)
-        end
-      end
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
-      - name: channel
+      - name: channelInfo
         type: Class.ChannelInfo
+        tags:
         default:
         summary:
       - name: player
         type: Class.Player
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: SetDefaultChannel
-    summary: |
-      Sets the default channel for the player. This will be the default channel text messages are sent to.
+  - name: SetActiveChannel
+    summary:
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      local generalChannel = Chat:CreateChannel("General", true, true)
-
-      server.PlayerConnected:Connect(function(player)
-        Chat:SetDefaultChannel(player, generalChannel)
-      end)
-      ```
+    code_samples:
+    tags:
+      - ServerOnly
     parameters:
       - name: channelInfo
         type: Class.ChannelInfo
+        tags:
         default:
         summary:
-    returns:
-      - type: boolean
-        summary:
-  - name: DisplayTextMessage
-    summary: |
-      Displays the given text message to the channel's chat log with a speech bubble over the given player's head.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local generalChannel = Chat:CreateChannel("General", true, true)
-
-      server.PlayerConnected:Connect(function(player)
-        Chat:AddPlayerToChannel(generalChannel, player)
-      end)
-
-      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
-        Chat:DisplayTextMessage(channel, player, message)
-      end)
-      ```
-    parameters:
-      - name: channel
-        type: Class.ChannelInfo
-        default:
-        summary:
-      - name: from
+      - name: player
         type: Class.Player
-        default:
-        summary:
-      - name: message
-        type: string
+        tags:
         default:
         summary:
     returns:

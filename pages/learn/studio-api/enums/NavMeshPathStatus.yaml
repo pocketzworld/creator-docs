@@ -1,0 +1,42 @@
+name: NavMeshPathStatus
+type: enums
+summary: |
+  [Unity's NavMeshPathStatus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPathStatus.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: PathComplete
+    summary: |
+      [Unity's NavMeshPathStatus.PathComplete Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPathStatus.PathComplete.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NavMeshPathStatus
+  - name: PathInvalid
+    summary: |
+      [Unity's NavMeshPathStatus.PathInvalid Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPathStatus.PathInvalid.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NavMeshPathStatus
+  - name: PathPartial
+    summary: |
+      [Unity's NavMeshPathStatus.PathPartial Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AI.NavMeshPathStatus.PathPartial.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NavMeshPathStatus
+methods:
+math_operations:

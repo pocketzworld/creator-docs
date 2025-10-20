@@ -1,6 +1,8 @@
 name: Vector2
 type: datatypes
-summary: Represents a 2D vector for positions, velocities, and directions.
+summary: |
+  Represents a 2D vector for positions, velocities, and directions.
+  [Unity's Vector2 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.html)
 description:
 code_samples: |
   ```lua
@@ -9,55 +11,192 @@ code_samples: |
   print(position.y) -- 2
   ```
 inherits:
+tags:
 constructors:
   - name: new
-    summary: Creates a Vector2 with specified x and y components.
-    is_static: false
+    summary: |
+      Creates a Vector2 with specified x and y components.
+      [Unity's Vector2.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-ctor.html)
+    description:
+    is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: x
         type: number
+        tags:
         default:
-        summary: The x component.
+        summary: |
+          The x component.
       - name: y
         type: number
+        tags:
         default:
-        summary: The y component.
+        summary: |
+          The y component.
     returns:
       - type: DataType.Vector2
-        summary: A new Vector2 instance.
+        summary: |
+          A new Vector2 instance.
 properties:
-  - name: normalized
-    summary: The normalized version of the Vector2.
-    is_static: false
+  - name: down
+    summary: |
+      A Vector2 pointing downwards.
+      [Unity's Vector2.down Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-down.html)
+    description:
+    is_static: true
     code_samples: |
       ```lua
-      local position = Vector2.new(1, 2)
-      local normalized = position.normalized
-
-      print(normalized.x) -- 0.44721359014511
+      print(Vector2.down.x) -- 0
+      print(Vector2.down.y) -- -1
       ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
+  - name: left
+    summary: |
+      A Vector2 pointing to the left.
+      [Unity's Vector2.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-left.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      print(Vector2.left.x) -- -1
+      print(Vector2.left.y) -- 0
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector2
   - name: magnitude
-    summary: The length of the Vector2.
+    summary: |
+      The length of the Vector2.
+      [Unity's Vector2.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-magnitude.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local position = Vector2.new(1, 2)
       print(position.magnitude) -- 2.2360679774998
       ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
+  - name: negativeInfinity
+    summary: |
+      A Vector2 with both components at negative infinity.
+      [Unity's Vector2.negativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-negativeInfinity.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      print(Vector2.negativeInfinity.x) -- -inf
+      print(Vector2.negativeInfinity.y) -- -inf
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
+  - name: normalized
+    summary: |
+      The normalized version of the Vector2.
+      [Unity's Vector2.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-normalized.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      local normalized = position.normalized
+      
+      print(normalized.x) -- 0.44721359014511
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
+  - name: one
+    summary: |
+      A Vector2 with both components set to one.
+      [Unity's Vector2.one Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-one.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      print(Vector2.one.x) -- 1
+      print(Vector2.one.y) -- 1
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
+  - name: positiveInfinity
+    summary: |
+      A Vector2 with both components at positive infinity.
+      [Unity's Vector2.positiveInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-positiveInfinity.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      print(Vector2.positiveInfinity.x) -- inf
+      print(Vector2.positiveInfinity.y) -- inf
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
+  - name: right
+    summary: |
+      A Vector2 pointing to the right.
+      [Unity's Vector2.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-right.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      print(Vector2.right.x) -- 1
+      print(Vector2.right.y) -- 0
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
   - name: sqrMagnitude
-    summary: The square of the Vector2's magnitude.
+    summary: |
+      The square of the Vector2's magnitude.
+      [Unity's Vector2.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-sqrMagnitude.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local position = Vector2.new(1, 2)
       print(position.sqrMagnitude) -- 5
       ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
+  - name: up
+    summary: |
+      A Vector2 pointing upwards.
+      [Unity's Vector2.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-up.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      print(Vector2.up.x) -- 0
+      print(Vector2.up.y) -- 1
+      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector2
   - name: x
-    summary: The x-component of the Vector2.
+    summary: |
+      The x-component of the Vector2.
+      [Unity's Vector2.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-x.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
@@ -67,176 +206,152 @@ properties:
       position.x = 3
       print(position.x) -- 3
       ```
+    tags:
+      - ClientAndServer
     type: number
   - name: y
-    summary: The y-component of the Vector2.
+    summary: |
+      The y-component of the Vector2.
+      [Unity's Vector2.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-y.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local position = Vector2.new(1, 2)
       print(position.y) -- 2
-
+      
       position.y = 3
       print(position.y) -- 3
       ```
+    tags:
+      - ClientAndServer
     type: number
   - name: zero
-    summary: A Vector2 with both components set to zero.
+    summary: |
+      A Vector2 with both components set to zero.
+      [Unity's Vector2.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-zero.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
       print(Vector2.zero.x) -- 0
       print(Vector2.zero.y) -- 0
       ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector2
-  - name: one
-    summary: A Vector2 with both components set to one.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.one.x) -- 1
-      print(Vector2.one.y) -- 1
-      ```
-    type: DataType.Vector2
-  - name: up
-    summary: A Vector2 pointing upwards.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.up.x) -- 0
-      print(Vector2.up.y) -- 1
-      ```
-    type: DataType.Vector2
-  - name: down
-    summary: A Vector2 pointing downwards.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.down.x) -- 0
-      print(Vector2.down.y) -- -1
-      ```
-    type: DataType.Vector2
-  - name: left
-    summary: A Vector2 pointing to the left.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.left.x) -- -1
-      print(Vector2.left.y) -- 0
-      ```
-    type: DataType.Vector2
-  - name: right
-    summary: A Vector2 pointing to the right.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.right.x) -- 1
-      print(Vector2.right.y) -- 0
-      ```
-    type: DataType.Vector2
-  - name: positiveInfinity
-    summary: A Vector2 with both components at positive infinity.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.positiveInfinity.x) -- inf
-      print(Vector2.positiveInfinity.y) -- inf
-      ```
-    type: DataType.Vector2
-  - name: negativeInfinity
-    summary: A Vector2 with both components at negative infinity.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.negativeInfinity.x) -- -inf
-      print(Vector2.negativeInfinity.y) -- -inf
-      ```
-    type: DataType.Vector2
-  - name: kEpsilon
-    summary: A very small positive number greater than zero.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.kEpsilon) -- 1.4012984643248e-45
-      ```
-    type: number
-  - name: kEpsilonNormalSqrt
-    summary: A small positive number for Vector2 computations.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Vector2.kEpsilonNormalSqrt) -- 1.1754943508223e-38
-      ``` 
-    type: number
 methods:
-  - name: Set
-    summary: Sets the x and y components of the Vector2.
-    is_static: false
-    code_samples: |
-      ```lua
-      local position = Vector2.new(1, 2)
-
-      position:Set(3, 4)
-      print(position.x) -- 3
-      print(position.y) -- 4
-      ```
+  - name: Angle
+    summary: |
+      [Unity's Vector2.Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Angle.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: newX
-        type: number
-        default:
-        summary: New 'x' component.
-      - name: newY
-        type: number
-        default:
-        summary: New 'y' component.
-    returns:
-      - type: void
-  - name: Scale
-    summary: Scales the Vector2 by another's components.
-    is_static: false
-    code_samples: |
-      ```lua
-      local position = Vector2.new(1, 2)
-      local scale = Vector2.new(3, 4)
-      
-      position:Scale(scale)
-      print(position.x) -- 3
-      print(position.y) -- 8
-      ```
-    parameters:
-      - name: scale
+      - name: from
         type: DataType.Vector2
+        tags:
         default:
-        summary: Vector2 to scale by.
-    returns:
-      - type: void
-  - name: Normalize
-    summary: Converts Vector2 to a direction vector of length 1.
-    is_static: false
-    code_samples: |
-      ```lua
-      local position = Vector2.new(1, 2)
-      position:Normalize()
-      
-      print(position.x) -- 0.44721359014511
-      print(position.y) -- 0.89442718029022
-      ```
-    parameters:
-    returns:
-      - type: void
-  - name: SqrMagnitude
-    summary: The square of the Vector2's magnitude.
-    is_static: false
-    code_samples: |
-      ```lua
-      local position = Vector2.new(1, 2)
-      print(position:SqrMagnitude()) -- 5
-      ```
-    parameters:
+        summary:
+      - name: to
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
     returns:
       - type: number
+        summary:
+  - name: ClampMagnitude
+    summary: |
+      [Unity's Vector2.ClampMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.ClampMagnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: vector
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: maxLength
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: Distance
+    summary: |
+      [Unity's Vector2.Distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Distance.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: b
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Dot
+    summary: |
+      [Unity's Vector2.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Dot.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: rhs
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Equals
+    summary: |
+      [Unity's Vector2.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: other
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: Lerp
-    summary: Linearly interpolates between two Vector2's.
+    summary: |
+      Linearly interpolates between two Vector2's.
+      [Unity's Vector2.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Lerp.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
@@ -247,23 +362,35 @@ methods:
       print(result.x) -- 2
       print(result.y) -- 3
       ```
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: DataType.Vector2
+        tags:
         default:
-        summary: First Vector2.
+        summary: |
+          First Vector2.
       - name: b
         type: DataType.Vector2
+        tags:
         default:
-        summary: Second Vector2.
+        summary: |
+          Second Vector2.
       - name: t
         type: number
+        tags:
         default:
-        summary: Interpolation factor.
+        summary: |
+          Interpolation factor.
     returns:
       - type: DataType.Vector2
+        summary:
   - name: LerpUnclamped
-    summary: Linearly interpolates between two Vector2's without clamping 't'.
+    summary: |
+      Linearly interpolates between two Vector2's without clamping 't'.
+      [Unity's Vector2.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.LerpUnclamped.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
@@ -274,23 +401,96 @@ methods:
       print(result.x) -- 5
       print(result.y) -- 6
       ```
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: DataType.Vector2
+        tags:
         default:
-        summary: Starting Vector2.
+        summary: |
+          Starting Vector2.
       - name: b
         type: DataType.Vector2
+        tags:
         default:
-        summary: Ending Vector2.
+        summary: |
+          Ending Vector2.
       - name: t
         type: number
+        tags:
         default:
-        summary: Interpolation factor.
+        summary: |
+          Interpolation factor.
     returns:
       - type: DataType.Vector2
+        summary:
+  - name: Magnitude
+    summary: |
+      [Unity's Vector2.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Magnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Max
+    summary: |
+      [Unity's Vector2.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Max.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: rhs
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: Min
+    summary: |
+      [Unity's Vector2.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Min.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: rhs
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
   - name: MoveTowards
-    summary: Moves a Vector2 towards another Vector2 within a maximum distance.
+    summary: |
+      Moves a Vector2 towards another Vector2 within a maximum distance.
+      [Unity's Vector2.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.MoveTowards.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
@@ -301,46 +501,97 @@ methods:
       print(result.x) -- 3
       print(result.y) -- 4
       ```
+    tags:
+      - ClientAndServer
     parameters:
       - name: current
         type: DataType.Vector2
+        tags:
         default:
-        summary: Current Vector2.
+        summary: |
+          Current Vector2.
       - name: target
         type: DataType.Vector2
+        tags:
         default:
-        summary: Target Vector2.
+        summary: |
+          Target Vector2.
       - name: maxDistanceDelta
         type: number
+        tags:
         default:
-        summary: Maximum movement distance.
+        summary: |
+          Maximum movement distance.
     returns:
       - type: DataType.Vector2
-  - name: Scale
-    summary: Multiplies two Vector2's component-wise.
+        summary:
+  - name: Normalize
+    summary: |
+      Converts Vector2 to a direction vector of length 1.
+      [Unity's Vector2.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Normalize.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
-      local a = Vector2.new(1, 2)
-      local b = Vector2.new(3, 4)
+      local position = Vector2.new(1, 2)
+      position:Normalize()
       
-      local result = Vector2.Scale(a, b)
-      print(result.x) -- 3
-      print(result.y) -- 8
+      print(position.x) -- 0.44721359014511
+      print(position.y) -- 0.89442718029022
       ```
+    tags:
+      - ClientAndServer
     parameters:
-      - name: a
+      - name: value
         type: DataType.Vector2
+        tags:
         default:
-        summary: First Vector2.
-      - name: b
-        type: DataType.Vector2
-        default:
-        summary: Second Vector2.
+        summary:
     returns:
       - type: DataType.Vector2
+        summary:
+  - name: Normalize
+    summary: |
+      Converts Vector2 to a direction vector of length 1.
+      [Unity's Vector2.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Normalize.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      position:Normalize()
+      
+      print(position.x) -- 0.44721359014511
+      print(position.y) -- 0.89442718029022
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Perpendicular
+    summary: |
+      [Unity's Vector2.Perpendicular Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Perpendicular.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: inDirection
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
   - name: Reflect
-    summary: Reflects a Vector2 off a surface Vector2.
+    summary: |
+      Reflects a Vector2 off a surface Vector2.
+      [Unity's Vector2.Reflect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Reflect.html)
+    description:
     is_static: true
     code_samples: |
       ```lua
@@ -351,28 +602,356 @@ methods:
       print(result.x) -- 1
       print(result.y) -- -2
       ```
+    tags:
+      - ClientAndServer
     parameters:
       - name: inDirection
         type: DataType.Vector2
+        tags:
         default:
-        summary: Direction of incoming Vector2.
+        summary: |
+          Direction of incoming Vector2.
+      - name: inNormal
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
     returns:
       - type: DataType.Vector2
-  - operation: "!="
-    summary: Checks if two Vector2's are not equal by comparing components.
+        summary:
+  - name: Scale
+    summary: |
+      Multiplies two Vector2's component-wise.
+      [Unity's Vector2.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Scale.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          First Vector2.
+      - name: b
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Second Vector2.
+    returns:
+      - type: DataType.Vector2
+        summary:
+  - name: Scale
+    summary: |
+      Multiplies two Vector2's component-wise.
+      [Unity's Vector2.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: scale
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Vector2 to scale by.
+    returns:
+      - type: void
+        summary:
+  - name: Set
+    summary: |
+      Sets the x and y components of the Vector2.
+      [Unity's Vector2.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Set.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      
+      position:Set(3, 4)
+      print(position.x) -- 3
+      print(position.y) -- 4
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: newX
+        type: number
+        tags:
+        default:
+        summary: |
+          New 'x' component.
+      - name: newY
+        type: number
+        tags:
+        default:
+        summary: |
+          New 'y' component.
+    returns:
+      - type: void
+        summary:
+  - name: SignedAngle
+    summary: |
+      [Unity's Vector2.SignedAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SignedAngle.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: from
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: to
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector2.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+      - type: DataType.Vector2
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector2.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+      - type: DataType.Vector2
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector2.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+      - name: deltaTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+      - type: DataType.Vector2
+        summary:
+  - name: SqrMagnitude
+    summary: |
+      The square of the Vector2's magnitude.
+      [Unity's Vector2.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SqrMagnitude.html)
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position:SqrMagnitude()) -- 5
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: SqrMagnitude
+    summary: |
+      The square of the Vector2's magnitude.
+      [Unity's Vector2.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position:SqrMagnitude()) -- 5
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: number
+        summary:
+math_operations:
+  - operation: '+'
+    summary: |
+      [Unity's Vector2.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_add.html)
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '/'
+    summary: |
+      [Unity's Vector2.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_divide.html)
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '/'
+    summary: |
+      [Unity's Vector2.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_divide.html)
+    type_a: Vector2
+    type_b: number
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '=='
+    summary: |
+      [Unity's Vector2.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_eq.html)
     type_a: Vector2
     type_b: Vector2
     return_type: boolean
     code_samples:
-  - operation: "-"
-    summary: Negates the x and y components of a Vector2.
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Vector2.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_multiply.html)
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Vector2.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_multiply.html)
+    type_a: Vector2
+    type_b: number
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Vector2.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_multiply.html)
+    type_a: number
+    type_b: Vector2
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '-'
+    summary: |
+      [Unity's Vector2.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_subtract.html)
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '-'
+    summary: |
+      [Unity's Vector2.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2-operator_subtract.html)
     type_a: Vector2
     type_b:
     return_type: Vector2
     code_samples:
-  - operation: "Normalize"
-    summary: Transforms a Vector2 into a unit vector, maintaining direction.
-    type_a: Vector2
-    type_b:
-    return_type: Vector2
-    code_samples:
+    tags:
+      - ClientAndServer

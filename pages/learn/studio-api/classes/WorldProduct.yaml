@@ -1,59 +1,51 @@
 name: WorldProduct
 type: classes
-summary: Represents a product that can be purchased by players in the game.
+summary: |
+  Represents a product that can be purchased by players in the game.
 description:
 code_samples:
 inherits:
-  - Class.Object
+tags:
 constructors:
-  - name: new
-    summary: Creates a new WorldProduct object.
-    is_static: true
-    code_samples: |
-      ```lua
-      local product = WorldProduct.new()
-      ```
-    returns:
-      - type: Class.WorldProduct
-        summary: The new WorldProduct object.
 properties:
-  - name: product_id
-    summary: The product ID of the product.
+  - name: description
+    summary: |
+      The description of the product.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ServerOnly
-    code_samples: |
-      ```lua
-      print(WorldProduct.product_id)
-      ```
+      - ReadOnly
+    type: string
+  - name: id
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: string
   - name: name
-    summary: The name of the product.
+    summary: |
+      The name of the product.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ServerOnly
-    code_samples: |
-      ```lua
-      print(WorldProduct.name)
-      ```
-    type: string
-  - name: description
-    summary: The description of the product.
-    is_static: false
-    tags:
-      - ServerOnly
-    code_samples: |
-      ```lua
-      print(WorldProduct.description)
-      ```
+      - ReadOnly
     type: string
   - name: price
-    summary: The price of the product in Gold.
+    summary: |
+      The price of the product in Gold.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ServerOnly
-    code_samples: |
-      ```lua
-      print(WorldProduct.price)
-      ```
+      - ReadOnly
     type: number
+methods:
+math_operations:

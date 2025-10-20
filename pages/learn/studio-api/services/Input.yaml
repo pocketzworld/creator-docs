@@ -1,116 +1,126 @@
 name: Input
-type: classes
+type: services
 summary: |
   The 'Input' class provides an interface to gather information from various external inputs. 'Input' works like a monitoring station, keeping track of user actions and triggering responses within the game.
-
   Each of these properties contain events that are fired when the corresponding action is performed, and game developers can add listeners to these events to trigger custom game logic.
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: isAltPressed
-    summary: |
-      The 'IsAltPressed' property indicates if the Alt key is currently being pressed on the keyboard. This can be useful for creating keyboard shortcuts or alternate modes within the game.
-    is_static: false
-    code_samples: |
-      ```lua
-      if Input.IsAltPressed then
-        -- Perform an action when the Alt key is pressed
-      end
-      ```
-    type: boolean
-  - name: isMouseInput
-    summary: |
-      The 'IsMouseInput' property helps to detect whether a mouse device is providing input. false == touch input
-    is_static: false
-    code_samples: |
-      ```lua
-      if Input.IsMouseInput then
-        -- Perform an action when the mouse is providing input
-      end
-      ```
-    type: boolean
-  - name: client
-    summary: |
-
-    is_static: false
-    code_samples:
-    type: Class.GameClient
-  - name: Tapped
-    summary: |
-
-    is_static: false
-    code_samples:
-    type: Class.Event
   - name: LongPressBegan
-    summary: |
-
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
   - name: LongPressContinue
-    summary: |
-
+    summary:
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
   - name: LongPressEnded
-    summary: |
-
+    summary:
+    description:
     is_static: false
     code_samples:
-    type: Class.Event
-  - name: PinchOrDragBegan
-    summary: |
-      The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.
-    is_static: false
-    code_samples: |
-      ```lua
-      Input.PinchOrDragBegan:Connect(function(pinchOrDrag)
-        -- Perform an action when a pinch or drag gesture begins
-      end)
-      ```
-    type: Class.Event
-  - name: PinchOrDragChanged
-    summary: |
-      The 'PinchOrDragChanged' property fires an event whenever there is a change in an ongoing pinch or drag gesture on the touch screen. This allows the game to continuously track such gestures and make corresponding adjustments in its state. See Class.PinchGestureChanged for more details on the parameter of the event.
-    is_static: false
-    code_samples: |
-      ```lua
-      Input.PinchOrDragChanged:Connect(function(pinchOrDrag)
-        -- Perform an action when a pinch or drag gesture changes
-      end)
-      ```
-    type: Class.Event
-  - name: PinchOrDragEnded
-    summary: |
-      The 'PinchOrDragEnded' property listens for the end of a pinch or drag gesture on a touch screen. This allows the game to know precisely when such a gesture ends and probably trigger appropriate actions thereafter. See Class.PinchGestureEnded for more details on the parameter of the event.
-    is_static: false
-    code_samples: |
-      ```lua
-      Input.PinchOrDragEnded:Connect(function(pinchOrDrag)
-        -- Perform an action when a pinch or drag gesture ends
-      end)
-      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
   - name: MouseWheel
     summary: |
       The 'MouseWheel' property listens for movements of the mouse wheel. This input allows interactions like zooming in or out or scrolling through menus, especially on platforms with a mouse device. See Class.MouseWheel for more details on the parameter of the event.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      Input.MouseWheel:Connect(function(mouseWheel)
-        -- Perform an action when the mouse wheel moves
-      end)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Event
-  - name: inputPanel
+  - name: PinchOrDragBegan
     summary: |
-
+      The 'PinchOrDragBegan' property listens for the beginning of pinch or drag gestures on a touch screen. Such gestures are common in mobile UI for operations like zooming or moving objects and can be leveraged effectively in game controls. See Class.PinchGestureBegan for more details on the parameter of the event.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      ```
-    type: Class.IPanel
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: PinchOrDragChanged
+    summary: |
+      The 'PinchOrDragChanged' property fires an event whenever there is a change in an ongoing pinch or drag gesture on the touch screen. This allows the game to continuously track such gestures and make corresponding adjustments in its state. See Class.PinchGestureChanged for more details on the parameter of the event.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: PinchOrDragEnded
+    summary: |
+      The 'PinchOrDragEnded' property listens for the end of a pinch or drag gesture on a touch screen. This allows the game to know precisely when such a gesture ends and probably trigger appropriate actions thereafter. See Class.PinchGestureEnded for more details on the parameter of the event.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: Tapped
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: client
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.GameClient
+  - name: inputPanel
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: IPanel
+  - name: isAltPressed
+    summary: |
+      The 'IsAltPressed' property indicates if the Alt key is currently being pressed on the keyboard. This can be useful for creating keyboard shortcuts or alternate modes within the game.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isMouseInput
+    summary: |
+      The 'IsMouseInput' property helps to detect whether a mouse device is providing input. false == touch input
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
 methods:
+math_operations:

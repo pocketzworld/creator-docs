@@ -2,164 +2,224 @@ name: RaycastHit
 type: datatypes
 summary: |
   Stores information returned by a raycast, a technique used to detect objects in a certain path or direction in video games. It contains data such as the hit collider, hit point, surface normal, distance from the ray's origin, etc.
+  [Unity's RaycastHit Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit.html)
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: collider
+  - name: barycentricCoordinate
     summary: |
-      Contains the collider hit by the ray. It can be used to access the collider's properties and methods.
+      Provides the barycentric coordinates of the hit point on the mesh. Barycentric coordinates are used to represent a point on a triangle.
+      [Unity's RaycastHit.barycentricCoordinate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-barycentricCoordinate.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
+      
+      local barycentricCoordinate = hit.barycentricCoordinate
+      print(barycentricCoordinate) -- Barycentric coordinates of the hit point
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: collider
+    summary: |
+      Contains the collider hit by the ray. It can be used to access the collider's properties and methods.
+      [Unity's RaycastHit.collider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-collider.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
+      local hit = Physics.Raycast(ray)
+      
       local collider = hit.collider
       print(collider.name) -- Name of the collider hit by the ray
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Collider
   - name: colliderInstanceID
     summary: |
       Holds the unique identifier for the collider hit by the ray. This identifier is unique to each collider in the game.
+      [Unity's RaycastHit.colliderInstanceID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-colliderInstanceID.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
+      
       local colliderInstanceID = hit.colliderInstanceID
       print(colliderInstanceID) -- Unique identifier of the collider hit by the ray
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: point
-    summary: |
-      The point in world space where the raycast hit the collider. It represents the position of the hit point.
-    is_static: false
-    code_samples: |
-      ```lua
-      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
-      local hit = Physics.Raycast(ray)
-
-      local point = hit.point
-      print(point) -- Position of the hit point
-      ```
-    type: DataType.Vector3
-  - name: normal
-    summary: |
-      Gives the normal of the surface hit by the ray. The normal is a vector perpendicular to the surface at the hit point.
-    is_static: false
-    code_samples: |
-      ```lua
-      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
-      local hit = Physics.Raycast(ray)
-
-      local normal = hit.normal
-      print(normal) -- Normal of the surface hit by the ray
-      ```
-    type: DataType.Vector3
-  - name: barycentricCoordinate
-    summary: |
-      Provides the barycentric coordinates of the hit point on the mesh. Barycentric coordinates are used to represent a point on a triangle.
-    is_static: false
-    code_samples: |
-      ```lua
-      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
-      local hit = Physics.Raycast(ray)
-
-      local barycentricCoordinate = hit.barycentricCoordinate
-      print(barycentricCoordinate) -- Barycentric coordinates of the hit point
-      ```
-    type: DataType.Vector3
   - name: distance
     summary: |
       Refers to the distance from the ray's origin to the hit point. It represents the length of the ray from the origin to the hit point.
+      [Unity's RaycastHit.distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-distance.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
+      
       local distance = hit.distance
       print(distance) -- Distance from the ray's origin to the hit point
       ```
+    tags:
+      - ClientOnly
     type: number
-  - name: triangleIndex
+  - name: lightmapCoord
     summary: |
-      Holds the index of the triangle hit by the ray. The triangle index is used to identify the triangle hit by the ray.
+      Provides the coordinates of the lightmap hit by the ray. The lightmap coordinates are used to map lightmaps to 3D models.
+      [Unity's RaycastHit.lightmapCoord Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-lightmapCoord.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
-      local triangleIndex = hit.triangleIndex
-      print(triangleIndex) -- Index of the triangle hit by the ray
+      
+      local lightmapCoord = hit.lightmapCoord
+      print(lightmapCoord) -- Coordinates of the lightmap hit by the ray
       ```
-    type: number
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
+  - name: normal
+    summary: |
+      Gives the normal of the surface hit by the ray. The normal is a vector perpendicular to the surface at the hit point.
+      [Unity's RaycastHit.normal Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-normal.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
+      local hit = Physics.Raycast(ray)
+      
+      local normal = hit.normal
+      print(normal) -- Normal of the surface hit by the ray
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: point
+    summary: |
+      The point in world space where the raycast hit the collider. It represents the position of the hit point.
+      [Unity's RaycastHit.point Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-point.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
+      local hit = Physics.Raycast(ray)
+      
+      local point = hit.point
+      print(point) -- Position of the hit point
+      ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: rigidbody
+    summary: |
+      Offers access to the Rigidbody of the hit object, if it has one. The Rigidbody is used to simulate physics on an object.
+      [Unity's RaycastHit.rigidbody Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-rigidbody.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
+      local hit = Physics.Raycast(ray)
+      
+      local rigidbody = hit.rigidbody
+      print(rigidbody.name) -- Name of the Rigidbody of the hit object
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Rigidbody
   - name: textureCoord
     summary: |
       Provides the coordinates of the texture hit by the ray. The texture coordinates are used to map textures to 3D models.
+      [Unity's RaycastHit.textureCoord Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-textureCoord.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
+      
       local textureCoord = hit.textureCoord
       print(textureCoord) -- Coordinates of the texture hit by the ray
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: textureCoord2
     summary: |
       Provides the coordinates of the second texture hit by the ray. The second texture coordinates are used to map textures to 3D models.
+      [Unity's RaycastHit.textureCoord2 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-textureCoord2.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
+      
       local textureCoord2 = hit.textureCoord2
       print(textureCoord2) -- Coordinates of the second texture hit by the ray
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector2
   - name: transform
     summary: |
       Provides the Transform of the object that was hit. The Transform represents the position, rotation, and scale of the object.
+      [Unity's RaycastHit.transform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-transform.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
+      
       local transform = hit.transform
       print(transform.name) -- Name of the object hit by the ray
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: Class.Transform
-  - name: rigidbody
+  - name: triangleIndex
     summary: |
-      Offers access to the Rigidbody of the hit object, if it has one. The Rigidbody is used to simulate physics on an object.
+      Holds the index of the triangle hit by the ray. The triangle index is used to identify the triangle hit by the ray.
+      [Unity's RaycastHit.triangleIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/RaycastHit-triangleIndex.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
       local hit = Physics.Raycast(ray)
-
-      local rigidbody = hit.rigidbody
-      print(rigidbody.name) -- Name of the Rigidbody of the hit object
+      
+      local triangleIndex = hit.triangleIndex
+      print(triangleIndex) -- Index of the triangle hit by the ray
       ```
-    type: Class.Rigidbody
-  - name: lightmapCoord
-    summary: |
-      Provides the coordinates of the lightmap hit by the ray. The lightmap coordinates are used to map lightmaps to 3D models.
-    is_static: false
-    code_samples: |
-      ```lua
-      local ray = Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1))
-      local hit = Physics.Raycast(ray)
-
-      local lightmapCoord = hit.lightmapCoord
-      print(lightmapCoord) -- Coordinates of the lightmap hit by the ray
-      ```
-    type: DataType.Vector2
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+methods:
+math_operations:

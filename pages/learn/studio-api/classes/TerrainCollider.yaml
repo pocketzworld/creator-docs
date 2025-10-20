@@ -2,16 +2,17 @@ name: TerrainCollider
 type: classes
 summary: |
   Walking on flat plains is easy, but what if your game's character needs to climb a hill or traverse a valley? That's where Unity's TerrainCollider comes in. Every terrain needs a Terrain Collider to interact appropriately with the game objects.
-
+  
   A Terrain Collider is essentially a component that gets automatically added alongside the Terrain component in Unity. It's what allows characters and objects to move on, collide, or bounce off the terrain according to the laws of physics.
-
+  
   Essentially, it adds a physical presence to the terrain in your Unity scenes, blocking GameObjects from passing through and enabling interactions. Without this, your terrain would just be an immaterial piece of scenery.
-
+  
   To understand more about how to use TerrainColliders, check the [Unity's TerrainCollider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TerrainCollider.html).
 description:
 code_samples:
 inherits:
   - Class.Collider
+tags:
 constructors:
 properties:
 methods:

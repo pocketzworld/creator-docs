@@ -121,7 +121,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's Length.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Length-operator_eq.html)
-    description:
     type_a: Length
     type_b: Length
     return_type: boolean

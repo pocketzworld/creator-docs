@@ -82,7 +82,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's StyleInt.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleInt-operator_eq.html)
-    description:
     type_a: StyleInt
     type_b: StyleInt
     return_type: boolean

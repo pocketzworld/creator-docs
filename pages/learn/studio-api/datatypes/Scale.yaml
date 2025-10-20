@@ -85,7 +85,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's Scale.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.Scale-operator_eq.html)
-    description:
     type_a: Scale
     type_b: Scale
     return_type: boolean

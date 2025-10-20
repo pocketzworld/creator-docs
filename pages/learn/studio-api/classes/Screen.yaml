@@ -16,6 +16,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
+      - ReadOnly
     type: number
   - name: cutouts
     summary: |
@@ -45,6 +46,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
+      - ReadOnly
     type: boolean
   - name: height
     summary: |
@@ -74,6 +76,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
+      - ReadOnly
     type: number
   - name: width
     summary: |

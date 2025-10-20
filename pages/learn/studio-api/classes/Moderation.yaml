@@ -1,0 +1,526 @@
+name: Moderation
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: OnBan
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: OnKick
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: OnMute
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: OnUnban
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: OnUnmute
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: infiniteDuration
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+methods:
+  - name: Ban
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Ban
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Ban
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: BanPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: BanPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: BanPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetBannedUsers
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: limit
+        type: number
+        tags:
+        default:
+        summary:
+      - name: cursorId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(userBans: {UserBan}, cursorId: string, error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Kick
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Kick
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: KickPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: KickPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Mute
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Mute
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: MutePlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: MutePlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: durationSeconds
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Unban
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Unban
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Unmute
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Unmute
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: userId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UnmutePlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UnmutePlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: ModerationError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

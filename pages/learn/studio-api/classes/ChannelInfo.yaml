@@ -5,57 +5,194 @@ summary: |
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: players
+  - name: activePlayers
     summary: |
-      The list of players in the channel.
+      All players that have this channel as their active channel
     description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
-    type: Player[]
-  - name: name
-    summary: |
-      The unique name of the channel.
-    description:
-    is_static: false
-    tags:
-      - ClientAndServer
-    code_samples:
-    type: string
+      - ReadOnly
+    type: {Class.Player}
   - name: allowsText
     summary: |
       Whether or not this channel allows text chat.
     description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
+      - ReadOnly
     type: boolean
   - name: allowsVoice
     summary: |
       Whether or not this channel allows voice chat.
     description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
+      - ReadOnly
     type: boolean
-  - name: priority
-    summary: |
-
+  - name: channelId
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: isWhisperChannel
+  - name: isActive
     summary: |
-      Whether or not this channel is specifically for whispering between participants.
+      The chat channel the local player is currently active in
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
+  - name: isJoined
+    summary: |
+      Whether the local player has the ability to switch to this channel
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: maxVolumeDistance
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: minVolumeDistance
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: name
+    summary: |
+      The unique name of the channel.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+  - name: players
+    summary: |
+      The list of players in the channel.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: {Class.Player}
+  - name: priority
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: proximityChatEnabled
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: speakerFilter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - WriteOnly
+    type: "(arg: Player) -> (boolean)"
 methods:
+  - name: DisableProximityChat
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: EnableProximityChat
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: maxVolumeDistance
+        type: number
+        tags:
+        default:
+        summary:
+      - name: minVolumeDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IsPlayerActiveChannel
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: IsPlayerInChannel
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
 math_operations:

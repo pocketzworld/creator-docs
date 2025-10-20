@@ -1,0 +1,73 @@
+name: PlayerCharacterController
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+  - Class.Component
+tags:
+constructors:
+properties:
+  - name: options
+    summary: |
+      Options for the player character controller including enabled state, tap to move, tap handlers, long press settings, tap mask, and character long press configuration.
+      The fields are:
+      - enabled (boolean): Whether the player character controller is enabled
+      - tapToMoveEnabled (boolean): Whether tap to move is enabled
+      - tapHandlersEnabled (boolean): Whether tap handlers are enabled
+      - emotesEnabled (boolean): Whether emotes are enabled
+      - enableLongPress (boolean): Whether long press is enabled
+      - characterLongPress ({height = (float), bounceDuration = (float)}): The long press configuration
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: {any}
+methods:
+  - name: HandleTapOn
+    summary: |
+      Handles tap events on colliders at the specified hit point.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: collider
+        type: Class.Collider
+        tags:
+        default:
+        summary: |
+          The collider that was tapped
+      - name: hitPoint
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The point where the tap occurred
+    returns:
+      - type: void
+        summary:
+  - name: IsAnchorOccupied
+    summary: |
+      Returns true if the given anchor is occupied
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: anchor
+        type: Class.Anchor
+        tags:
+        default:
+        summary: |
+          The anchor to check
+    returns:
+      - type: boolean
+        summary: |
+          True if the anchor is occupied, false otherwise
+math_operations:

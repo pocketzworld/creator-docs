@@ -1,0 +1,134 @@
+name: NavMeshLink
+type: classes
+summary: |
+  [Unity's NavMeshLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink.html)
+description:
+code_samples:
+inherits:
+  - Class.MonoBehaviour
+tags:
+constructors:
+properties:
+  - name: activated
+    summary: |
+      [Unity's NavMeshLink.activated Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-activated.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: agentTypeID
+    summary: |
+      [Unity's NavMeshLink.agentTypeID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-agentTypeID.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: area
+    summary: |
+      [Unity's NavMeshLink.area Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-area.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: autoUpdate
+    summary: |
+      [Unity's NavMeshLink.autoUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-autoUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: bidirectional
+    summary: |
+      [Unity's NavMeshLink.bidirectional Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-bidirectional.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: costModifier
+    summary: |
+      [Unity's NavMeshLink.costModifier Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-costModifier.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: endPoint
+    summary: |
+      [Unity's NavMeshLink.endPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-endPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: endTransform
+    summary: |
+      [Unity's NavMeshLink.endTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-endTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.Transform
+  - name: occupied
+    summary: |
+      [Unity's NavMeshLink.occupied Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-occupied.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: startPoint
+    summary: |
+      [Unity's NavMeshLink.startPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-startPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: startTransform
+    summary: |
+      [Unity's NavMeshLink.startTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-startTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.Transform
+  - name: width
+    summary: |
+      [Unity's NavMeshLink.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink-width.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+methods:
+  - name: UpdateLink
+    summary: |
+      [Unity's NavMeshLink.UpdateLink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/NavMeshLink.UpdateLink.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

@@ -1,0 +1,19 @@
+name: PlayerCharacterSpawner
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: OnCharacterSpawned
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Event
+methods:
+math_operations:

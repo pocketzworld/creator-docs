@@ -35,6 +35,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
+      - WriteOnly
     type: boolean
   - name: uppercase
     summary:
@@ -43,6 +44,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
+      - WriteOnly
     type: boolean
 methods:
   - name: AdjustFontSize

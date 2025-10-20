@@ -2,410 +2,1138 @@ name: Rigidbody
 type: classes
 summary: |
   The Rigidbody component adds physical properties to an object, allowing it to react to forces and torques, making it controlled by the unity physics engine. If you want an object to be affected by gravity, for instance, or if you want to be able to apply forces to it, you would attach a Rigidbody component to it. Rigidbody also keeps track of the object's position and orientation.
-
+  
   One common application of Rigidbodies is for creating objects that move and interact under physics control. On the other hand, you could also use Rigidbody for objects which move kinematically or which you want to move around the world but want to avoid intersection with other Rigidbodies. For a more detailed understanding, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.html).
 description:
 code_samples:
 inherits:
   - Class.Component
+tags:
 constructors:
 properties:
-  - name: velocity
+  - name: angularDamping
     summary: |
-      The 'velocity' property accesses the velocity of the Rigidbody. It is essentially the speed at which the Rigidbody is moving through 3D space in your game, as measured in units per second, giving you control over the speed at which an object moves. For more about velocity, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-velocity.html).
+      [Unity's Rigidbody.angularDamping Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-angularDamping.html)
+    description:
     is_static: false
     code_samples:
-    type: DataType.Vector3
+    tags:
+      - ClientOnly
+    type: number
   - name: angularVelocity
     summary: |
-      The 'angularVelocity' property describes the angular velocity vector of the Rigidbody in degrees per second. Angular velocity essentially measures the rate and direction of rotation. When working on rotating objects or adjusting spin on Rigidbodies this becomes very handy. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-angularVelocity.html) for more.
+      The 'angularVelocity' property describes the angular velocity vector of the Rigidbody in degrees per second. Angular velocity essentially measures the rate and direction of rotation. When working on rotating objects or adjusting spin on Rigidbodies this becomes very handy.
+      [Unity's Rigidbody.angularVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-angularVelocity.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
-  - name: drag
-    summary: |
-      The 'drag' property gives you control over the drag acting on the Rigidbody. Drag is a force that reduces the velocity of the Rigidbody making it decelerate over time as the force increases with speed. The ability to manipulate drag could help in emulating real-world physics like airflow resistance, slowing down your Rigidbody's linear movement over time. To learn more about this, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-drag.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: angularDrag
-    summary: |
-      The 'angularDrag' property controls the angular drag applied to the Rigidbody. Angular drag could be interpreted as your Rigidbody's rotational inertia or in simpler terms, resistance to changes in rotating speed. Modifying this could help in creating more realistic movements and spins. You can explore more in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-angularDrag.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: mass
-    summary: |
-      The 'mass' property allows you to alter the mass of the Rigidbody. The mass of an object is an important aspect in physics-based interactions and plays a crucial role when calculating how forces affect it. For example, giving an object a larger mass in the game would make it harder to push around. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-mass.html) provides more insights about this.
-    is_static: false
-    code_samples:
-    type: number
-  - name: useGravity
-    summary: |
-      The 'useGravity' property enables or disables the application of gravity on the Rigidbody. Disabling gravity might be useful for certain objects, like in a zero-gravity setting or while programming specific behaviors for an object, like a hover effect. To find out more, you can check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-useGravity.html).
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: maxDepenetrationVelocity
-    summary: |
-      The 'maxDepenetrationVelocity' property sets the maximum velocity the Rigidbody can have when resolving penetration. It's useful primarily for sleeping bodies that are directly moved or affected by other bodies that initiate overlaps. For details, see the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-maxDepenetrationVelocity.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: isKinematic
-    summary: |
-      The 'isKinematic' property, when enabled, makes the Rigidbody stop responding to forces, effectively turning off its built-in physics engine. The Rigidbody continues to interact with other non-kinematic bodies and collide with them but will move only when directly controlled by its Transform. This is useful when moving objects under direct player or script control. Please consult the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-isKinematic.html) for more information.
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: freezeRotation
-    summary: |
-      The 'freezeRotation' property, when enabled, causes the Rigidbody to stop rotating under the influence of external forces or impacts - its rotation only changes if directly manipulated. This property can be useful when you want to control Rigidbody rotation directly, or when simulating items that resist rotation such as wheels or gyros. Further details are in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-freezeRotation.html).
-    is_static: false
-    code_samples:
-    type: boolean
   - name: automaticCenterOfMass
     summary: |
-      The 'automaticCenterOfMass' property determines whether the system should automatically compute the Rigidbody's center of mass. When this property is set to true, Unity calculates the center of mass based on the attached colliders. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-automaticCenterOfMass.html) provides an in-depth understanding of this.
+      The 'automaticCenterOfMass' property determines whether the system should automatically compute the Rigidbody's center of mass. When this property is set to true, Unity calculates the center of mass based on the attached colliders.
+      [Unity's Rigidbody.automaticCenterOfMass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-automaticCenterOfMass.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: automaticInertiaTensor
+    summary: |
+      The 'automaticInertiaTensor' property enables or disables automatic calculations of the Rigidbody's inertia tensor based on its attached colliders. Disabling this allows setting custom inertia tensors, which can be beneficial for fine-tuning the rotational behavior of complex Rigidbody setups.
+      [Unity's Rigidbody.automaticInertiaTensor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-automaticInertiaTensor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: centerOfMass
     summary: |
-      The 'centerOfMass' property helps manage Rigidbody's center of mass, a crucial factor in simulating physical behaviors. You can manually specify the local space position of the center of mass or let Unity automatically compute it. See the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-centerOfMass.html) for more on this.
+      The 'centerOfMass' property helps manage Rigidbody's center of mass, a crucial factor in simulating physical behaviors. You can manually specify the local space position of the center of mass or let Unity automatically compute it.
+      [Unity's Rigidbody.centerOfMass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-centerOfMass.html)
+    description:
     is_static: false
     code_samples:
-    type: DataType.Vector3
-  - name: worldCenterOfMass
-    summary: |
-      The 'worldCenterOfMass' property accesses the global space position of the center of mass of the Rigidbody. This property is particularly handy when relying on the center of mass to calculate forces or torques that should affect the Rigidbody. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-worldCenterOfMass.html) provides a deeper understanding of this.
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: automaticInertiaTensor
-    summary: |
-      The 'automaticInertiaTensor' property enables or disables automatic calculations of the Rigidbody's inertia tensor based on its attached colliders. Disabling this allows setting custom inertia tensors, which can be beneficial for fine-tuning the rotational behavior of complex Rigidbody setups. For additional information, refer to [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-automaticInertiaTensor.html).
-    is_static: false
-    code_samples:
-    type: boolean
-  - name: inertiaTensorRotation
-    summary: |
-      The 'inertiaTensorRotation' property specifies the rotation of the local space in which the inertia tensor is defined. This allows you to adjust the "shape" of the Rigidbody's mass. This property, in combination with inertiaTensor, can be used to fine-tune the rotational behavior of the Rigidbody. Detailed explanations are provided in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-inertiaTensorRotation.html).
-    is_static: false
-    code_samples:
-    type: DataType.Quaternion
-  - name: inertiaTensor
-    summary: |
-      The 'inertiaTensor' property determines the Rigidbody's inertia tensor, a measure of an object's resistance to changes in its rotational motion. Defining a custom inertia tensor can help simulate more complex rotational behavior. For more details, see the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-inertiaTensor.html).
-    is_static: false
-    code_samples:
+    tags:
+      - ClientOnly
     type: DataType.Vector3
   - name: detectCollisions
     summary: |
-      The 'detectCollisions' property gives you control over whether the Rigidbody will detect collisions or not. In some cases, you may want to move a Rigidbody through a scene without triggering hooks like OnCollisionEnter. In such situations, disabling detectCollisions can be helpful. You can learn more from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-detectCollisions.html).
+      The 'detectCollisions' property gives you control over whether the Rigidbody will detect collisions or not. In some cases, you may want to move a Rigidbody through a scene without triggering hooks like OnCollisionEnter. In such situations, disabling detectCollisions can be helpful.
+      [Unity's Rigidbody.detectCollisions Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-detectCollisions.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-  - name: position
-    summary: |
-      The 'position' property gives you access to the position of the Rigidbody. It can be used to directly set the position of the Rigidbody in world space, and can be of significance while operating in kinematic mode or when you want to bypass physics simulation. For more context, visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-position.html).
-    is_static: false
-    code_samples:
-    type: DataType.Vector3
-  - name: rotation
-    summary: |
-      The 'rotation' property provides you with access to the rotation of the Rigidbody. It can be used to directly set the rotation of the Rigidbody in world space. It can be crucial while operating in kinematic mode or when you want to bypass physics simulation to manually rotate the Rigidbody. For an in-depth understanding, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-rotation.html).
-    is_static: false
-    code_samples:
-    type: DataType.Quaternion
-  - name: solverIterations
-    summary: |
-      The 'solverIterations' property allows you to adjust the number of solver iterations Unity performs for the Rigidbody. More iterations typically lead to more stable physics, but at the cost of extra computational overhead. Find more details in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-solverIterations.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: sleepThreshold
-    summary: |
-      The 'sleepThreshold' property defines the minimum energy a Rigidbody must have before it can be put to sleep. When a Rigidbody is asleep, it won't register any physics updates until it's woken up, saving processing power. Visit the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-sleepThreshold.html) to learn more.
-    is_static: false
-    code_samples:
-    type: number
-  - name: maxAngularVelocity
-    summary: |
-      The 'maxAngularVelocity' property sets the maximum angular velocity of the Rigidbody. It can prevent fast rotating objects from moving too quickly, which could lead to instability in the physics simulation. To know more about maximum angular velocity, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-maxAngularVelocity.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: maxLinearVelocity
-    summary: |
-      The 'maxLinearVelocity' property sets the maximum linear velocity of the Rigidbody. It is an effective way to cap the speed of fast-moving objects for stability or gameplay reasons. For more details, you can check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-maxLinearVelocity.html).
-    is_static: false
-    code_samples:
-    type: number
-  - name: solverVelocityIterations
-    summary: |
-      The 'solverVelocityIterations' property sets the number of solver iterations used to solve velocity constraints. More iterations can improve stability but have performance implications. Additional information on this topic can be found at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-solverVelocityIterations.html).
-    is_static: false
-    code_samples:
-    type: number
   - name: excludeLayers
     summary: |
       [Unity's Rigidbody.excludeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-excludeLayers.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.LayerMask
+  - name: freezeRotation
+    summary: |
+      The 'freezeRotation' property, when enabled, causes the Rigidbody to stop rotating under the influence of external forces or impacts - its rotation only changes if directly manipulated. This property can be useful when you want to control Rigidbody rotation directly, or when simulating items that resist rotation such as wheels or gyros.
+      [Unity's Rigidbody.freezeRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-freezeRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
   - name: includeLayers
     summary: |
       [Unity's Rigidbody.includeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-includeLayers.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: DataType.LayerMask
+  - name: inertiaTensor
+    summary: |
+      The 'inertiaTensor' property determines the Rigidbody's inertia tensor, a measure of an object's resistance to changes in its rotational motion. Defining a custom inertia tensor can help simulate more complex rotational behavior.
+      [Unity's Rigidbody.inertiaTensor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-inertiaTensor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: inertiaTensorRotation
+    summary: |
+      The 'inertiaTensorRotation' property specifies the rotation of the local space in which the inertia tensor is defined. This allows you to adjust the "shape" of the Rigidbody's mass. This property, in combination with inertiaTensor, can be used to fine-tune the rotational behavior of the Rigidbody.
+      [Unity's Rigidbody.inertiaTensorRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-inertiaTensorRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Quaternion
+  - name: isKinematic
+    summary: |
+      The 'isKinematic' property, when enabled, makes the Rigidbody stop responding to forces, effectively turning off its built-in physics engine. The Rigidbody continues to interact with other non-kinematic bodies and collide with them but will move only when directly controlled by its Transform. This is useful when moving objects under direct player or script control.
+      [Unity's Rigidbody.isKinematic Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-isKinematic.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: linearDamping
+    summary: |
+      [Unity's Rigidbody.linearDamping Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-linearDamping.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: linearVelocity
+    summary: |
+      [Unity's Rigidbody.linearVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-linearVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: mass
+    summary: |
+      The 'mass' property allows you to alter the mass of the Rigidbody. The mass of an object is an important aspect in physics-based interactions and plays a crucial role when calculating how forces affect it. For example, giving an object a larger mass in the game would make it harder to push around.
+      [Unity's Rigidbody.mass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-mass.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: maxAngularVelocity
+    summary: |
+      The 'maxAngularVelocity' property sets the maximum angular velocity of the Rigidbody. It can prevent fast rotating objects from moving too quickly, which could lead to instability in the physics simulation.
+      [Unity's Rigidbody.maxAngularVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-maxAngularVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: maxDepenetrationVelocity
+    summary: |
+      The 'maxDepenetrationVelocity' property sets the maximum velocity the Rigidbody can have when resolving penetration. It's useful primarily for sleeping bodies that are directly moved or affected by other bodies that initiate overlaps.
+      [Unity's Rigidbody.maxDepenetrationVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-maxDepenetrationVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: maxLinearVelocity
+    summary: |
+      The 'maxLinearVelocity' property sets the maximum linear velocity of the Rigidbody. It is an effective way to cap the speed of fast-moving objects for stability or gameplay reasons.
+      [Unity's Rigidbody.maxLinearVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-maxLinearVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: position
+    summary: |
+      The 'position' property gives you access to the position of the Rigidbody. It can be used to directly set the position of the Rigidbody in world space, and can be of significance while operating in kinematic mode or when you want to bypass physics simulation.
+      [Unity's Rigidbody.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-position.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: rotation
+    summary: |
+      The 'rotation' property provides you with access to the rotation of the Rigidbody. It can be used to directly set the rotation of the Rigidbody in world space. It can be crucial while operating in kinematic mode or when you want to bypass physics simulation to manually rotate the Rigidbody.
+      [Unity's Rigidbody.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-rotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Quaternion
+  - name: sleepThreshold
+    summary: |
+      The 'sleepThreshold' property defines the minimum energy a Rigidbody must have before it can be put to sleep. When a Rigidbody is asleep, it won't register any physics updates until it's woken up, saving processing power.
+      [Unity's Rigidbody.sleepThreshold Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-sleepThreshold.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: solverIterations
+    summary: |
+      The 'solverIterations' property allows you to adjust the number of solver iterations Unity performs for the Rigidbody. More iterations typically lead to more stable physics, but at the cost of extra computational overhead.
+      [Unity's Rigidbody.solverIterations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-solverIterations.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: solverVelocityIterations
+    summary: |
+      The 'solverVelocityIterations' property sets the number of solver iterations used to solve velocity constraints. More iterations can improve stability but have performance implications.
+      [Unity's Rigidbody.solverVelocityIterations Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-solverVelocityIterations.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: useGravity
+    summary: |
+      The 'useGravity' property enables or disables the application of gravity on the Rigidbody. Disabling gravity might be useful for certain objects, like in a zero-gravity setting or while programming specific behaviors for an object, like a hover effect.
+      [Unity's Rigidbody.useGravity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-useGravity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: worldCenterOfMass
+    summary: |
+      The 'worldCenterOfMass' property accesses the global space position of the center of mass of the Rigidbody. This property is particularly handy when relying on the center of mass to calculate forces or torques that should affect the Rigidbody.
+      [Unity's Rigidbody.worldCenterOfMass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-worldCenterOfMass.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
 methods:
   - name: AddExplosionForce
     summary: |
-      The 'AddExplosionForce' method applies a force to the Rigidbody that simulates the effect of an explosion at a given location. The force diminishes with increasing distance from the explosion source. This method can be used to create dynamic force effects in gameplay, like grenade explosions. Refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html) for more details.
+      The 'AddExplosionForce' method applies a force to the Rigidbody that simulates the effect of an explosion at a given location. The force diminishes with increasing distance from the explosion source. This method can be used to create dynamic force effects in gameplay, like grenade explosions.
+      [Unity's Rigidbody.AddExplosionForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: explosionForce
         type: number
+        tags:
         default:
-        summary: The magnitude of the force of the explosion.
+        summary: |
+          The magnitude of the force of the explosion.
       - name: explosionPosition
         type: DataType.Vector3
+        tags:
         default:
-        summary: The position of the explosion origin.
+        summary: |
+          The position of the explosion origin.
       - name: explosionRadius
         type: number
+        tags:
         default:
-        summary: The maximum distance from the explosion origin at which the explosion force is considered.
+        summary: |
+          The maximum distance from the explosion origin at which the explosion force is considered.
+      - name: upwardsModifier
+        type: number
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+        default:
+        summary:
     returns:
       - type: void
-        summary: This method does not return a value.
-  - name: AddForceAtPosition
+        summary:
+  - name: AddExplosionForce
     summary: |
-      The 'AddForceAtPosition' method applies a force to the Rigidbody at a specific position. Instead of applying the force through the center of mass, the force is applied at the specified position, creating a torque and causing the Rigidbody to rotate. This method is useful for creating precise scripted physics effects. For more information, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForceAtPosition.html).
+      The 'AddExplosionForce' method applies a force to the Rigidbody that simulates the effect of an explosion at a given location. The force diminishes with increasing distance from the explosion source. This method can be used to create dynamic force effects in gameplay, like grenade explosions.
+      [Unity's Rigidbody.AddExplosionForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: force
-        type: DataType.Vector3
+      - name: explosionForce
+        type: number
+        tags:
         default:
-        summary: The vector to apply as a force.
-      - name: position
+        summary: |
+          The magnitude of the force of the explosion.
+      - name: explosionPosition
         type: DataType.Vector3
+        tags:
         default:
-        summary: The position in world coordinates where the force is applied.
+        summary: |
+          The position of the explosion origin.
+      - name: explosionRadius
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum distance from the explosion origin at which the explosion force is considered.
+      - name: upwardsModifier
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+          - optional
+        default:
+        summary:
     returns:
       - type: void
-        summary: This method does not return a value.
-  - name: AddRelativeForce
-    summary: |
-      The 'AddRelativeForce' method applies a force to the Rigidbody relative to its coordinate system, as opposed to world coordinates. This is useful in situations where you want an object to push forward on its local axis, or similar operation relative to the object rather than the world. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeForce.html) provides more details about force application in the local space of the Rigidbody.
-    is_static: false
-    code_samples:
-    parameters:
-      - name: force
-        type: DataType.Vector3
-        default:
-        summary: The vector to apply as a force in the local space of the Rigidbody.
-    returns:
-      - type: void
-        summary: This method does not return a value.
+        summary:
   - name: AddForce
     summary: |
-      The 'AddForce' method applies a force to the Rigidbody in world coordinates. You can use this method to give an initial speed to a Rigidbody, or to simulate actions like a gust of wind or torrent pushing an object. You manipulate the speed and direction of Rigidbody through this method. For more context and examples, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForce.html).
+      The 'AddForce' method applies a force to the Rigidbody in world coordinates. You can use this method to give an initial speed to a Rigidbody, or to simulate actions like a gust of wind or torrent pushing an object. You manipulate the speed and direction of Rigidbody through this method.
+      [Unity's Rigidbody.AddForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForce.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: force
         type: DataType.Vector3
+        tags:
         default:
-        summary: The vector to apply as a force in the global space.
+        summary: |
+          The vector to apply as a force in the global space.
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+          - optional
+        default:
+        summary:
     returns:
       - type: void
-        summary: This method does not return a value.
-  - name: SweepTest
+        summary:
+  - name: AddForce
     summary: |
-      The 'SweepTest' method checks if a Rigidbody would collide with anything, if it was moved through the Scene. This can be used to predict collisions before moving an object or to find out if an area is clear from obstacles. The method provides information about what the Rigidbody would hit if it was moved through its environment. You can understand more about sweep testing from the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SweepTest.html).
+      The 'AddForce' method applies a force to the Rigidbody in world coordinates. You can use this method to give an initial speed to a Rigidbody, or to simulate actions like a gust of wind or torrent pushing an object. You manipulate the speed and direction of Rigidbody through this method.
+      [Unity's Rigidbody.AddForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForce.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: direction
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddForce
+    summary: |
+      The 'AddForce' method applies a force to the Rigidbody in world coordinates. You can use this method to give an initial speed to a Rigidbody, or to simulate actions like a gust of wind or torrent pushing an object. You manipulate the speed and direction of Rigidbody through this method.
+      [Unity's Rigidbody.AddForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForce.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddForceAtPosition
+    summary: |
+      The 'AddForceAtPosition' method applies a force to the Rigidbody at a specific position. Instead of applying the force through the center of mass, the force is applied at the specified position, creating a torque and causing the Rigidbody to rotate. This method is useful for creating precise scripted physics effects.
+      [Unity's Rigidbody.AddForceAtPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForceAtPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: force
         type: DataType.Vector3
+        tags:
         default:
-        summary: The direction in which to sweep the Rigidbody.
-      - name: maxDistance
-        type: number
+        summary: |
+          The vector to apply as a force.
+      - name: position
+        type: DataType.Vector3
+        tags:
         default:
-        summary: The maximum distance over which to sweep the Rigidbody.
-    returns:
-      - type: (boolean, DataType.RaycastHit)
-        summary: Returns true if a Rigidbody collider is hit, and includes information about the object hit in a RaycastHit object.
-  - name: SetDensity
-    summary: |
-      The 'SetDensity' method forces the mass of the Rigidbody to adjust to the given density. This method is useful for recalculating mass after changing the mass of the object, especially when dealing with variable density fluids or building a physics puzzle. Read more about this in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SetDensity.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: density
-        type: number
+        summary: |
+          The position in world coordinates where the force is applied.
+      - name: mode
+        type: Enum.ForceMode
+        tags:
         default:
-        summary: The density to be set on the Rigidbody.
+        summary:
     returns:
       - type: void
-        summary: This method does not return a value.
-  - name: MovePosition
+        summary:
+  - name: AddForceAtPosition
     summary: |
-      The 'MovePosition' method moves the Rigidbody to the specified position by calculating the appropriate linear velocity required to move the Rigidbody to that position during the next physics update. This method is particularly useful when you want to instantly move a Rigidbody in response to player input or AI calculations. For further details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.MovePosition.html).
+      The 'AddForceAtPosition' method applies a force to the Rigidbody at a specific position. Instead of applying the force through the center of mass, the force is applied at the specified position, creating a torque and causing the Rigidbody to rotate. This method is useful for creating precise scripted physics effects.
+      [Unity's Rigidbody.AddForceAtPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForceAtPosition.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: force
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The vector to apply as a force.
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The position in world coordinates where the force is applied.
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddRelativeForce
+    summary: |
+      The 'AddRelativeForce' method applies a force to the Rigidbody relative to its coordinate system, as opposed to world coordinates. This is useful in situations where you want an object to push forward on its local axis, or similar operation relative to the object rather than the world.
+      [Unity's Rigidbody.AddRelativeForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeForce.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: force
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The vector to apply as a force in the local space of the Rigidbody.
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddRelativeForce
+    summary: |
+      The 'AddRelativeForce' method applies a force to the Rigidbody relative to its coordinate system, as opposed to world coordinates. This is useful in situations where you want an object to push forward on its local axis, or similar operation relative to the object rather than the world.
+      [Unity's Rigidbody.AddRelativeForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeForce.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddRelativeForce
+    summary: |
+      The 'AddRelativeForce' method applies a force to the Rigidbody relative to its coordinate system, as opposed to world coordinates. This is useful in situations where you want an object to push forward on its local axis, or similar operation relative to the object rather than the world.
+      [Unity's Rigidbody.AddRelativeForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeForce.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddRelativeTorque
+    summary: |
+      [Unity's Rigidbody.AddRelativeTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: torque
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddRelativeTorque
+    summary: |
+      [Unity's Rigidbody.AddRelativeTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddRelativeTorque
+    summary: |
+      [Unity's Rigidbody.AddRelativeTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddRelativeTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddTorque
+    summary: |
+      [Unity's Rigidbody.AddTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: torque
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddTorque
+    summary: |
+      [Unity's Rigidbody.AddTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddTorque
+    summary: |
+      [Unity's Rigidbody.AddTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+      - name: mode
+        type: Enum.ForceMode
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ClosestPointOnBounds
+    summary: |
+      The 'ClosestPointOnBounds' method finds the closest point to the provided position on the collider's boundary of the attached Rigidbody. This method can be advantageous in numerous scenarios such as checking how close an object is to touching or hitting something.
+      [Unity's Rigidbody.ClosestPointOnBounds Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.ClosestPointOnBounds.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: position
         type: DataType.Vector3
+        tags:
         default:
-        summary: The target position for the Rigidbody in world space.
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: MoveRotation
-    summary: |
-      The 'MoveRotation' method rotates the Rigidbody to the specified rotation by calculating the appropriate angular velocity required to rotate the Rigidbody to that rotation during the next physics update. It is commonly used for rotating Rigidbodies that are under the influence of physics. For more details, check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.MoveRotation.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: rot
-        type: DataType.Quaternion
-        default:
-        summary: The new rotation for the Rigidbody.
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: Move
-    summary: |
-      The 'Move' method simultaneously changes the position and rotation of the Rigidbody to match the specified position and rotation. This method affects the Rigidbody's position and rotation using physics and is therefore useful for moving objects under the control of physics. To understand more about it, take a look at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.Move.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: position
-        type: DataType.Vector3
-        default:
-        summary: The new position for the Rigidbody in world space.
-      - name: rotation
-        type: DataType.Quaternion
-        default:
-        summary: The new rotation for the Rigidbody.
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: Sleep
-    summary: |
-      The 'Sleep' method is used to put the Rigidbody to sleep. When a Rigidbody is asleep, it won't register any physics updates until it's woken up, saving processing power. In most cases, you won't need to manually put a Rigidbody to sleep, as Unity does it automatically when objects come to rest. However, there may be times when you need to put a Rigidbody to sleep instantly, for example, when a game object should freeze in place. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.Sleep.html) provides more insight into this topic.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: IsSleeping
-    summary: |
-      The 'IsSleeping' method checks whether the Rigidbody is sleeping or not. It can be used to confirm that a Rigidbody is asleep, for instance, before applying a force to it, since such changes would wake up the Rigidbody. If you want to know more, check the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.IsSleeping.html).
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: boolean
-        summary: Returns true if the Rigidbody is asleep, false otherwise.
-  - name: WakeUp
-    summary: |
-      The 'WakeUp' method is used to wake up a sleeping Rigidbody. Once woken, it will start receiving physics updates again. This is often useful when you want to instantly wake up a Rigidbody to reapply physics to it. For more on this, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.WakeUp.html).
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: ResetCenterOfMass
-    summary: |
-      The 'ResetCenterOfMass' method resets the center of mass of the Rigidbody by calculating it based on the attached colliders. This can be useful if the Rigidbody's mass or shape has changed, and you need to recalibrate the center of mass. You can learn more in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.ResetCenterOfMass.html).
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: ResetInertiaTensor
-    summary: |
-      The 'ResetInertiaTensor' method resets the inertia tensor of the Rigidbody by calculating it based on the shape of the attached colliders. This is similar to ResetCenterOfMass and is useful when the Rigidbody's mass or shape has changed. The inertia tensor influences how the Rigidbody's shape behaves when it rotates. Check out the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.ResetInertiaTensor.html) for more in-depth information.
-    is_static: false
-    code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary: This method does not return a value.
-  - name: GetRelativePointVelocity
-    summary: |
-      The 'GetRelativePointVelocity' function retrieves the velocity at which a point on the Rigidbody moves, relative to the Rigidbody, including any rotational velocity. This can be handy for numerous physical simulations or visual effects, such as calculating the directions of sparks when a rotating wheel hits an obstacle. More information can be found at the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetRelativePointVelocity.html).
-    is_static: false
-    code_samples:
-    parameters:
-      - name: relativePoint
-        type: DataType.Vector3
-        default:
-        summary: The point on the Rigidbody in local space for which to retrieve the relative velocity.
+        summary: |
+          The world space point to find the closest point on the object to.
     returns:
       - type: DataType.Vector3
-        summary: Returns the relative velocity of the specified point.
-  - name: GetPointVelocity
+        summary: |
+          Returns the point on the bounding box of the collider attached to the Rigidbody that is closest to the specified location.
+  - name: GetAccumulatedForce
     summary: |
-      The 'GetPointVelocity' method provides the velocity at which a point on the object is moving, including rotational velocity. This method is commonly used for visual effects or physics computations. For example, you might want to release a particle system at the position where a rotating wheel makes contact with the ground, and you want the particles to inherit the wheel's velocity at the contact point. You can explore more on this topic in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetPointVelocity.html).
+      The 'GetAccumulatedForce' method obtains the force accumulated on the Rigidbody over one physics simulation step. This is useful in certain effects or physics-based calculators that need to understand the amount of force being put on an object.
+      [Unity's Rigidbody.GetAccumulatedForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedForce.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: step
+        type: number
+        tags:
+        default:
+        summary: |
+          The step index to retrieve accumulated forces for.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          Returns the accumulated force for the given step.
+  - name: GetAccumulatedForce
+    summary: |
+      The 'GetAccumulatedForce' method obtains the force accumulated on the Rigidbody over one physics simulation step. This is useful in certain effects or physics-based calculators that need to understand the amount of force being put on an object.
+      [Unity's Rigidbody.GetAccumulatedForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedForce.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: step
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          The step index to retrieve accumulated forces for.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          Returns the accumulated force for the given step.
+  - name: GetAccumulatedTorque
+    summary: |
+      The 'GetAccumulatedTorque' method retrieves the torque accumulated on the Rigidbody over one physics simulation step. Just like 'GetAccumulatedForce', this method is useful where you need to calculate the rotation effects based on the amount of torque applied on an object.
+      [Unity's Rigidbody.GetAccumulatedTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: step
+        type: number
+        tags:
+        default:
+        summary: |
+          The step index to retrieve accumulated torques for.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          Returns the accumulated torque for the given step.
+  - name: GetAccumulatedTorque
+    summary: |
+      The 'GetAccumulatedTorque' method retrieves the torque accumulated on the Rigidbody over one physics simulation step. Just like 'GetAccumulatedForce', this method is useful where you need to calculate the rotation effects based on the amount of torque applied on an object.
+      [Unity's Rigidbody.GetAccumulatedTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedTorque.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: step
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          The step index to retrieve accumulated torques for.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          Returns the accumulated torque for the given step.
+  - name: GetPointVelocity
+    summary: |
+      The 'GetPointVelocity' method provides the velocity at which a point on the object is moving, including rotational velocity. This method is commonly used for visual effects or physics computations. For example, you might want to release a particle system at the position where a rotating wheel makes contact with the ground, and you want the particles to inherit the wheel's velocity at the contact point.
+      [Unity's Rigidbody.GetPointVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetPointVelocity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: worldPoint
         type: DataType.Vector3
+        tags:
         default:
-        summary: The point in world space to calculate the velocity for.
+        summary: |
+          The point in world space to calculate the velocity for.
     returns:
       - type: DataType.Vector3
-        summary: Returns the velocity of the specified point.
-  - name: GetAccumulatedForce
+        summary: |
+          Returns the velocity of the specified point.
+  - name: GetRelativePointVelocity
     summary: |
-      The 'GetAccumulatedForce' method obtains the force accumulated on the Rigidbody over one physics simulation step. This is useful in certain effects or physics-based calculators that need to understand the amount of force being put on an object. For more details, refer to the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedForce.html).
+      The 'GetRelativePointVelocity' function retrieves the velocity at which a point on the Rigidbody moves, relative to the Rigidbody, including any rotational velocity. This can be handy for numerous physical simulations or visual effects, such as calculating the directions of sparks when a rotating wheel hits an obstacle.
+      [Unity's Rigidbody.GetRelativePointVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetRelativePointVelocity.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: step
-        type: number
+      - name: relativePoint
+        type: DataType.Vector3
+        tags:
         default:
-        summary: The step index to retrieve accumulated forces for.
+        summary: |
+          The point on the Rigidbody in local space for which to retrieve the relative velocity.
     returns:
       - type: DataType.Vector3
-        summary: Returns the accumulated force for the given step.
-  - name: GetAccumulatedTorque
+        summary: |
+          Returns the relative velocity of the specified point.
+  - name: IsSleeping
     summary: |
-      The 'GetAccumulatedTorque' method retrieves the torque accumulated on the Rigidbody over one physics simulation step. Just like 'GetAccumulatedForce', this method is useful where you need to calculate the rotation effects based on the amount of torque applied on an object. The [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedTorque.html) provides additional context for this.
+      The 'IsSleeping' method checks whether the Rigidbody is sleeping or not. It can be used to confirm that a Rigidbody is asleep, for instance, before applying a force to it, since such changes would wake up the Rigidbody.
+      [Unity's Rigidbody.IsSleeping Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.IsSleeping.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: step
-        type: number
-        default:
-        summary: The step index to retrieve accumulated torques for.
     returns:
-      - type: DataType.Vector3
-        summary: Returns the accumulated torque for the given step.
-  - name: ClosestPointOnBounds
+      - type: boolean
+        summary: |
+          Returns true if the Rigidbody is asleep, false otherwise.
+  - name: Move
     summary: |
-      The 'ClosestPointOnBounds' method finds the closest point to the provided position on the collider's boundary of the attached Rigidbody. This method can be advantageous in numerous scenarios such as checking how close an object is to touching or hitting something. You can delve deeper into this topic in the [official Unity documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.ClosestPointOnBounds.html).
+      The 'Move' method simultaneously changes the position and rotation of the Rigidbody to match the specified position and rotation. This method affects the Rigidbody's position and rotation using physics and is therefore useful for moving objects under the control of physics.
+      [Unity's Rigidbody.Move Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.Move.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: position
         type: DataType.Vector3
+        tags:
         default:
-        summary: The world space point to find the closest point on the object to.
+        summary: |
+          The new position for the Rigidbody in world space.
+      - name: rotation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The new rotation for the Rigidbody.
     returns:
-      - type: DataType.Vector3
-        summary: Returns the point on the bounding box of the collider attached to the Rigidbody that is closest to the specified location.
+      - type: void
+        summary:
+  - name: MovePosition
+    summary: |
+      The 'MovePosition' method moves the Rigidbody to the specified position by calculating the appropriate linear velocity required to move the Rigidbody to that position during the next physics update. This method is particularly useful when you want to instantly move a Rigidbody in response to player input or AI calculations.
+      [Unity's Rigidbody.MovePosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.MovePosition.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The target position for the Rigidbody in world space.
+    returns:
+      - type: void
+        summary:
+  - name: MoveRotation
+    summary: |
+      The 'MoveRotation' method rotates the Rigidbody to the specified rotation by calculating the appropriate angular velocity required to rotate the Rigidbody to that rotation during the next physics update. It is commonly used for rotating Rigidbodies that are under the influence of physics.
+      [Unity's Rigidbody.MoveRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.MoveRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: rot
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          The new rotation for the Rigidbody.
+    returns:
+      - type: void
+        summary:
+  - name: PublishTransform
+    summary: |
+      [Unity's Rigidbody.PublishTransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.PublishTransform.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ResetCenterOfMass
+    summary: |
+      The 'ResetCenterOfMass' method resets the center of mass of the Rigidbody by calculating it based on the attached colliders. This can be useful if the Rigidbody's mass or shape has changed, and you need to recalibrate the center of mass.
+      [Unity's Rigidbody.ResetCenterOfMass Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.ResetCenterOfMass.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ResetInertiaTensor
+    summary: |
+      The 'ResetInertiaTensor' method resets the inertia tensor of the Rigidbody by calculating it based on the shape of the attached colliders. This is similar to ResetCenterOfMass and is useful when the Rigidbody's mass or shape has changed. The inertia tensor influences how the Rigidbody's shape behaves when it rotates.
+      [Unity's Rigidbody.ResetInertiaTensor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.ResetInertiaTensor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetDensity
+    summary: |
+      The 'SetDensity' method forces the mass of the Rigidbody to adjust to the given density. This method is useful for recalculating mass after changing the mass of the object, especially when dealing with variable density fluids or building a physics puzzle.
+      [Unity's Rigidbody.SetDensity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SetDensity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: density
+        type: number
+        tags:
+        default:
+        summary: |
+          The density to be set on the Rigidbody.
+    returns:
+      - type: void
+        summary:
+  - name: Sleep
+    summary: |
+      The 'Sleep' method is used to put the Rigidbody to sleep. When a Rigidbody is asleep, it won't register any physics updates until it's woken up, saving processing power. In most cases, you won't need to manually put a Rigidbody to sleep, as Unity does it automatically when objects come to rest. However, there may be times when you need to put a Rigidbody to sleep instantly, for example, when a game object should freeze in place.
+      [Unity's Rigidbody.Sleep Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.Sleep.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SweepTest
+    summary: |
+      The 'SweepTest' method checks if a Rigidbody would collide with anything, if it was moved through the Scene. This can be used to predict collisions before moving an object or to find out if an area is clear from obstacles. The method provides information about what the Rigidbody would hit if it was moved through its environment.
+      [Unity's Rigidbody.SweepTest Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SweepTest.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction in which to sweep the Rigidbody.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if a Rigidbody collider is hit, and includes information about the object hit in a RaycastHit object.
+      - type: DataType.RaycastHit
+        summary:
+  - name: SweepTest
+    summary: |
+      The 'SweepTest' method checks if a Rigidbody would collide with anything, if it was moved through the Scene. This can be used to predict collisions before moving an object or to find out if an area is clear from obstacles. The method provides information about what the Rigidbody would hit if it was moved through its environment.
+      [Unity's Rigidbody.SweepTest Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SweepTest.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction in which to sweep the Rigidbody.
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum distance over which to sweep the Rigidbody.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if a Rigidbody collider is hit, and includes information about the object hit in a RaycastHit object.
+      - type: DataType.RaycastHit
+        summary:
+  - name: SweepTestAll
+    summary: |
+      [Unity's Rigidbody.SweepTestAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SweepTestAll.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: SweepTestAll
+    summary: |
+      [Unity's Rigidbody.SweepTestAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SweepTestAll.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: WakeUp
+    summary: |
+      The 'WakeUp' method is used to wake up a sleeping Rigidbody. Once woken, it will start receiving physics updates again. This is often useful when you want to instantly wake up a Rigidbody to reapply physics to it.
+      [Unity's Rigidbody.WakeUp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.WakeUp.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
 math_operations:

@@ -2,81 +2,107 @@ name: Ray
 type: datatypes
 summary: |
   Represents a line in 3D space extending indefinitely from a source point (origin) in a specified direction. It is utilized extensively for ray casting and collision detection.
+  [Unity's Ray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray.html)
 description:
 code_samples:
 inherits:
+tags:
 constructors:
   - name: new
     summary: |
       Creates a new Ray instance with specified origin and direction vectors. If the direction vector's magnitude is not 1, it's normalized. The origin and direction vectors are stored in the Ray instance.
-    is_static: false
+      [Unity's Ray.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray-ctor.html)
+    description:
+    is_static: true
     code_samples: |
       ```lua
       local origin = Vector3.new(0, 0, 0)
       local direction = Vector3.new(0, 0, 1)
-
+      
       local ray = Ray.new(origin, direction)
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: origin
         type: DataType.Vector3
+        tags:
         default:
-        summary: The starting point of the ray in 3D space.
+        summary: |
+          The starting point of the ray in 3D space.
       - name: direction
         type: DataType.Vector3
+        tags:
         default:
-        summary: The direction of the ray in 3D space.
+        summary: |
+          The direction of the ray in 3D space.
     returns:
       - type: DataType.Ray
-        summary: Returns a new Ray instance with specified origin and direction.
+        summary: |
+          Returns a new Ray instance with specified origin and direction.
 properties:
-  - name: origin
-    summary: |
-      Represents the starting point of the ray in 3D space.
-    is_static: false
-    code_samples: |
-      ```lua
-      local origin = Vector3.new(0, 0, 0)
-      local direction = Vector3.new(0, 0, 1)
-
-      local ray = Ray.new(origin, direction)
-      print(ray.origin) -- (0, 0, 0)
-      ```
-    type: DataType.Vector3
   - name: direction
     summary: |
       Depicts the path along which the ray extends in 3D space. The direction vector is normalized to have a magnitude of 1.
+      [Unity's Ray.direction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray-direction.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local origin = Vector3.new(0, 0, 0)
       local direction = Vector3.new(0, 0, 1)
-
+      
       local ray = Ray.new(origin, direction)
       print(ray.direction) -- (0, 0, 1)
       ```
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: origin
+    summary: |
+      Represents the starting point of the ray in 3D space.
+      [Unity's Ray.origin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray-origin.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local origin = Vector3.new(0, 0, 0)
+      local direction = Vector3.new(0, 0, 1)
+      
+      local ray = Ray.new(origin, direction)
+      print(ray.origin) -- (0, 0, 0)
+      ```
+    tags:
+      - ClientOnly
     type: DataType.Vector3
 methods:
   - name: GetPoint
     summary: |
       Retrieves a point along the ray at a specified distance from the origin. The distance is measured in the direction of the ray.
+      [Unity's Ray.GetPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Ray.GetPoint.html)
+    description:
     is_static: false
     code_samples: |
       ```lua
       local origin = Vector3.new(0, 0, 0)
       local direction = Vector3.new(0, 0, 1)
-
+      
       local ray = Ray.new(origin, direction)
       local point = ray:GetPoint(5)
-
+      
       print(point) -- (0, 0, 5)
       ```
+    tags:
+      - ClientOnly
     parameters:
       - name: distance
         type: number
+        tags:
         default:
-        summary: The distance along the ray from the origin point.
+        summary: |
+          The distance along the ray from the origin point.
     returns:
       - type: DataType.Vector3
-        summary: Returns the point at the given distance along the ray.
+        summary: |
+          Returns the point at the given distance along the ray.
 math_operations:

@@ -27,6 +27,15 @@ properties:
     tags:
       - ClientOnly
     type: DataType.Color
+  - name: drawMode
+    summary: |
+      [Unity's SpriteRenderer.drawMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-drawMode.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.SpriteDrawMode
   - name: flipX
     summary: |
       [Unity's SpriteRenderer.flipX Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-flipX.html)
@@ -45,6 +54,15 @@ properties:
     tags:
       - ClientOnly
     type: boolean
+  - name: maskInteraction
+    summary: |
+      [Unity's SpriteRenderer.maskInteraction Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-maskInteraction.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.SpriteMaskInteraction
   - name: size
     summary: |
       [Unity's SpriteRenderer.size Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-size.html)
@@ -63,6 +81,15 @@ properties:
     tags:
       - ClientOnly
     type: Class.Sprite
+  - name: tileMode
+    summary: |
+      [Unity's SpriteRenderer.tileMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-tileMode.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.SpriteTileMode
 methods:
   - name: RegisterSpriteChangeCallback
     summary: |
@@ -74,7 +101,7 @@ methods:
       - ClientOnly
     parameters:
       - name: callback
-        type: (SpriteRenderer) -> ()
+        type: "(arg0: SpriteRenderer) -> ()"
         tags:
         default:
         summary:
@@ -91,7 +118,7 @@ methods:
       - ClientOnly
     parameters:
       - name: callback
-        type: (SpriteRenderer) -> ()
+        type: "(arg0: SpriteRenderer) -> ()"
         tags:
         default:
         summary:

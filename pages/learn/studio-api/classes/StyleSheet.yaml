@@ -1,0 +1,13 @@
+name: StyleSheet
+type: classes
+summary: |
+  [Unity's StyleSheet Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleSheet.html)
+description:
+code_samples:
+inherits:
+  - Class.ScriptableObject
+tags:
+constructors:
+properties:
+methods:
+math_operations:

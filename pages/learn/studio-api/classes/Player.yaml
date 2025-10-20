@@ -1,65 +1,247 @@
 name: Player
 type: classes
 summary: |
-  The 'Player' class in Highrise represents each individual participant in the game. It is a crucial element, acting as the bridge between the player's real-world actions and their in-game avatar's behaviors. The class comprises the 'name' attribute of the players for easy identification, and an 'avatar' object that maps to the player's in-game character. It also includes event-based methods that respond to specific activities such as the instantiation and destruction of a player's avatar.
+  The 'Player' class in Highrise represents each individual participant in the game. It is a crucial element, acting as the bridge between the player's real-world actions and their in-game avatar's behaviors.
 description:
-code_samples: |
-  ```lua
-    scene.PlayerJoined:Connect(function(scene, player)
-      player.CharacterChanged:Connect(function(player, newCharacter, oldCharacter)
-        if not oldCharacter then
-          -- Player just got a new character! Do any setup here
-        end
-      end)
-    end)
-  ```
+code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: chatBubbleTransform
+  - name: CharacterChanged
     summary: |
-
+      Event fired when the player's character changes.  This is called when player.character is set to a new object and not when the character's outfit changes.
+      Event Parameters:
+          Player: the player whose character object changed
+          New Character: the new character object
+          Old Character: the previous character object, if it exists
     description:
     is_static: false
     code_samples:
-    type: Class.Transform
-  - name: name
-    summary: |
-      The 'name' property holds the name of the player. This can be used to identify the player in the game, for example, in the chat or in the leaderboard.
-    is_static: false
     tags:
       - ClientAndServer
-    code_samples:
-    type: string
-  - name: id
+      - ReadOnly
+    type: Class.Event
+  - name: PetOutfitChanged
     summary: |
-      The 'id' property holds the unique identifier of the player. This is an alternative way to track players via number.
+      Event fired when the player's pet changes, either by changing to a different pet or changing the accessories equipped to the current pet.
+      Event Parameters:
+          Player: the player whose pet changed
+          Outfit: the new outfit of the pet
+    description:
     is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: StartedSpeaking
+    summary: |
+      Event fired when the player starts talking in a voice channel.
+      Event Parameters:
+          Player: the player who started speaking
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: StoppedSpeaking
+    summary: |
+      Event fired when the player stops talking in a voice channel.
+      Event Parameters:
+          Player: the player who stopped speaking
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: activeChannel
+    summary: |
+      The chat channel the player is currently active in.
+    description:
+    is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
-    type: number
+      - ReadOnly
+    type: Class.ChannelInfo
   - name: character
     summary: |
-      This property gives you access to the player's. It allows you to manipulate the character's properties and behavior, such as changing its appearance or controlling its movement.
-
-      Only server scripts can set the character
+      The character that represents this player in the world. It allows you to manipulate the character's properties and behavior, such as changing its appearance or controlling its movement.
+      Only server scripts can set the character.
+    description:
     is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    code_samples:
     type: Class.Character
-  - name: CharacterChanged
+  - name: chatBubbleTransform
     summary: |
-      An event that is triggered when the player's character is changed. This is useful for performing actions that need to be executed when the player's character is updated, including from nil to anything.
-
-      Parameters are Player player, Character newCharacter, Character oldCharacter
+      The transform where chat bubbles are spawned. It can be used to position objects above a character's head.
+    description:
     is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Transform
+  - name: hasPet
+    summary: |
+      Returns true if the player has a pet, false otherwise.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: id
+    summary: |
+      An identifier for the player's current connection to the world.  If the player leaves and joins the same world instance or a different one this value will change.  For a unique identifier for the player that will not change, use player.user.Id.
+    description:
+    is_static: false
+    code_samples:
     tags:
       - ClientAndServer
-    parameters:
+      - ReadOnly
+    type: number
+  - name: isAgeVerifiedAbove18
+    summary: |
+      True if the player is above the age of 18, false otherwise.
+    description:
+    is_static: false
     code_samples:
-    returns:
-    type: Class.Event
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: isDestroyed
+    summary: |
+      True if the player has left the world, false otherwise.  If the player rejoins the world, a new Player object will be created, so this value will not change after the player has left.  Use this instead of comparing to nil when checking if a Player object is valid.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: isDisconnected
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: isLocal
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isModerator
+    summary: |
+      True if this player has moderation rights in this world instance.  If this world instance is an owned room, it will be true for the room owner and any moderators they have added.  For world instances that are not owned rooms, it is true for the world owner and any members of the world.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: isSpeaking
+    summary: |
+      Returns whether the player is currently speaking in a voice channel.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isSubscriber
+    summary: |
+      Whether this player has an active subscription to Highrise+.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: name
+    summary: |
+      The name of the player. This can be used to identify the player in the game in the chat or in the leaderboard, for example.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+  - name: pet
+    summary: |
+      Contains information about the player's current pet, nil if the player does not have a pet.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Pet
+  - name: user
+    summary: |
+      The user associated with the player.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.User
+  - name: voicePosition
+    summary: |
+      When proximity chat is enabled, voice position is the position used for this player when calculating voice volume. If this is not set, the character's position is used.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: voiceVolume
+    summary: |
+      If this player is speaking, this returns the volume of their voice on a scale from 0-1.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
 methods:
+  - name: IsUsingPetType
+    summary: |
+      Returns whether the player is currently using a pet of the specified type.  This type matches the value returned by player.pet.skeletonId.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: petId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the pet type matches, otherwise false.
 math_operations:

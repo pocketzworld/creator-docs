@@ -1,791 +1,1133 @@
 name: Vector3
 type: datatypes
-summary: Vector3 represents three-dimensional space as coordinates, physical quantities, or directions, containing three numerical components (x, y, and z). It is used in Unity for physics, animations, and transformations.
+summary: |
+  Vector3 represents three-dimensional space as coordinates, physical quantities, or directions, containing three numerical components (x, y, and z). It is used in Unity for physics, animations, and transformations.
+  [Unity's Vector3 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.html)
 description:
-code_samples: |
-  ```lua
-  local position = Vector3.new(1, 2, 3)
-
-  print(position.x) -- 1
-  print(position.y) -- 2
-  print(position.z) -- 3
-  ```
+code_samples:
 inherits:
 tags:
-  - ServerAndClient
 constructors:
   - name: new
-    summary: Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
+    summary: |
+      Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
+      [Unity's Vector3.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-ctor.html)
+    description:
     is_static: true
-    tags:
-      - ServerAndClient
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: x
         type: number
+        tags:
         default:
-        summary: Specifies the x-coordinate value.
+        summary: |
+          Specifies the x-coordinate value.
       - name: y
         type: number
+        tags:
         default:
-        summary: Specifies the y-coordinate value.
-      - name: z
-        type: number
-        default:
-        summary: Specifies the z-coordinate value.
+        summary: |
+          Specifies the y-coordinate value.
     returns:
       - type: DataType.Vector3
-        summary: A Vector3 instance with the specified coordinates.
-properties:  
+        summary: |
+          A Vector3 instance with the specified coordinates.
   - name: new
-    summary: Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
+    summary: |
+      Instantiates a new Vector3 object by specifying x, y, and z coordinates, representing a point in the Unity game world's 3D space.
+      [Unity's Vector3.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-ctor.html)
+    description:
     is_static: true
-    tags:
-      - ServerAndClient
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: x
         type: number
+        tags:
         default:
-        summary: Specifies the x-coordinate value.
+        summary: |
+          Specifies the x-coordinate value.
       - name: y
         type: number
+        tags:
         default:
-        summary: Specifies the y-coordinate value.
+        summary: |
+          Specifies the y-coordinate value.
       - name: z
         type: number
+        tags:
         default:
-        summary: Specifies the z-coordinate value.
+        summary: |
+          Specifies the z-coordinate value.
     returns:
       - type: DataType.Vector3
-        summary: A Vector3 instance with the specified coordinates.
-
-  - name: normalized
-    summary: Returns a version of this Vector3 with a magnitude of one, maintaining its direction. Useful for unit direction vectors.
-    is_static: false
-    code_samples: |
-      ```lua
-      local normalizedVector = position.normalized
-      print(normalizedVector) -- Vector3(0.26726123690605, 0.5345224738121, 0.80178368043899)
-      ```
-    type: DataType.Vector3
-  - name: magnitude
-    summary: Provides the length of a Vector3, calculated as the Euclidean distance to (0,0,0), useful for distance calculations in 3D space.
-    is_static: false
-    code_samples: |
-      ```lua
-      local magnitude = position.magnitude
-      print(magnitude) -- 3.7416573867739
-      ```
-    type: number
-  - name: sqrMagnitude
-    summary: Returns the square of the magnitude, an alternative for performance-sensitive calculations where exact distance is not necessary.
-    is_static: false
-    code_samples: |
-      ```lua
-      local sqrMagnitude = position.sqrMagnitude
-      print(sqrMagnitude) -- 14
-      ```
-    type: number
-  - name: x
-    summary: Represents the x-coordinate of the Vector3, allowing direct manipulation or reading of its x-component.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples: |
-      ```lua
-      position.x = 5
-      print(position.x) -- 5
-      ```
-    type: number
-  - name: y
-    summary: Corresponds to the y-coordinate of the Vector3, for manipulating or reading the y-component.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples: |
-      ```lua
-      position.y = 10
-      print(position.y) -- 10
-      ```
-    type: number
-  - name: z
-    summary: Represents the z-coordinate of the Vector3, used for direct manipulation or reading of the z-component.
-    is_static: false
-    tags:
-      - ServerAndClient
-    code_samples: |
-      ```lua
-      position.z = 15
-      print(position.z) -- 15
-      ```
-    type: number
-  - name: zero
-    summary: Generates a Vector3 with zero values for all coordinates, representing the origin in 3D space or indicating no motion or rotation.
-    is_static: true
-    code_samples: |
-      ```lua
-      local zeroVector = Vector3.zero
-      print(zeroVector) -- Vector3(0, 0, 0)
-      ```
-    type: DataType.Vector3
-  - name: one
-    summary: Generates a Vector3 object with all components set to 1, useful for pointing diagonally in 3D space.
-    is_static: true
-    code_samples: |
-      ```lua
-      local oneVector = Vector3.one
-      print(oneVector) -- Vector3(1, 1, 1)
-      ```
-    type: DataType.Vector3
-  - name: forward
-    summary: Returns a Vector3 pointing towards the positive Z-axis, useful for designating a forward direction.
+        summary: |
+          A Vector3 instance with the specified coordinates.
+properties:
+  - name: back
+    summary: |
+      Provides a Vector3 pointing towards the negative Z-axis, often used to designate a backward direction.
+      [Unity's Vector3.back Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-back.html)
+    description:
     is_static: true
     code_samples:
-    type: DataType.Vector3
-  - name: back
-    summary: Provides a Vector3 pointing towards the negative Z-axis, often used to designate a backward direction.
-    is_static: true
-    code_samples: |
-      ```lua
-      local backVector = Vector3.back
-      print(backVector) -- Vector3(0, 0, -1)
-      ```
-    type: DataType.Vector3
-  - name: up
-    summary: Offers a Vector3 pointing upwards along the positive Y-axis, handy for upward movements or orientations.
-    is_static: true
-    code_samples: |
-      ```lua
-      local upVector = Vector3.up
-      print(upVector) -- Vector3(0, 1, 0)
-      ```
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector3
   - name: down
-    summary: Represents a Vector3 pointing downwards along the negative Y-axis, typically used for downward directions.
+    summary: |
+      Represents a Vector3 pointing downwards along the negative Y-axis, typically used for downward directions.
+      [Unity's Vector3.down Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-down.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local downVector = Vector3.down
-      print(downVector) -- Vector3(0, -1, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector3
+  - name: forward
+    summary: |
+      Returns a Vector3 pointing towards the positive Z-axis, useful for designating a forward direction.
+      [Unity's Vector3.forward Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-forward.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector3
   - name: left
-    summary: Returns a Vector3 pointing in the negative X-axis direction, used to signify left direction in 3D space.
+    summary: |
+      Returns a Vector3 pointing in the negative X-axis direction, used to signify left direction in 3D space.
+      [Unity's Vector3.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-left.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local leftVector = Vector3.left
-      print(leftVector) -- Vector3(-1, 0, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector3
-  - name: right
-    summary: Provides a Vector3 pointing towards the positive X-axis, recognized as the right direction in 3D space.
+  - name: magnitude
+    summary: |
+      Provides the length of a Vector3, calculated as the Euclidean distance to (0,0,0), useful for distance calculations in 3D space.
+      [Unity's Vector3.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-magnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: negativeInfinity
+    summary: |
+      Generates a Vector3 with all components set to negative infinity, representing the smallest possible values in 3D space.
+      [Unity's Vector3.negativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-negativeInfinity.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local rightVector = Vector3.right
-      print(rightVector) -- Vector3(1, 0, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector3
+  - name: normalized
+    summary: |
+      Returns a version of this Vector3 with a magnitude of one, maintaining its direction. Useful for unit direction vectors.
+      [Unity's Vector3.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-normalized.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector3
+  - name: one
+    summary: |
+      Generates a Vector3 object with all components set to 1, useful for pointing diagonally in 3D space.
+      [Unity's Vector3.one Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-one.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector3
   - name: positiveInfinity
-    summary: Yields a Vector3 with all components set to positive infinity, useful for representing very large values.
+    summary: |
+      Yields a Vector3 with all components set to positive infinity, useful for representing very large values.
+      [Unity's Vector3.positiveInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-positiveInfinity.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local positiveInfinityVector = Vector3.positiveInfinity
-      print(positiveInfinityVector) -- Vector3(inf, inf, inf)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector3
-  - name: negativeInfinity
-    summary: Generates a Vector3 with all components set to negative infinity, representing the smallest possible values in 3D space.
+  - name: right
+    summary: |
+      Provides a Vector3 pointing towards the positive X-axis, recognized as the right direction in 3D space.
+      [Unity's Vector3.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-right.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local negativeInfinityVector = Vector3.negativeInfinity
-      print(negativeInfinityVector) -- Vector3(-inf, -inf, -inf)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: DataType.Vector3
-  - name: kEpsilon
-    summary: Provides a very small positive number, used for comparisons to determine if Vector3 components are approximately zero, considering floating-point inaccuracies.
-    is_static: true
-    code_samples: |
-      ```lua
-      local epsilon = Vector3.kEpsilon
-      print(epsilon) -- 1.4012984643248e-45
-      ```
-  - name: kEpsilonNormalSqrt
-    summary: A small positive number used in square root calculations, representing a negligible threshold value for comparing Vector3 magnitudes.
-    is_static: true
-    code_samples: |
-      ```lua
-      local epsilonSqrt = Vector3.kEpsilonNormalSqrt
-      print(epsilonSqrt) -- 1.1754943508223e-38
-      ```
+  - name: sqrMagnitude
+    summary: |
+      Returns the square of the magnitude, an alternative for performance-sensitive calculations where exact distance is not necessary.
+      [Unity's Vector3.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-sqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
+  - name: up
+    summary: |
+      Offers a Vector3 pointing upwards along the positive Y-axis, handy for upward movements or orientations.
+      [Unity's Vector3.up Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-up.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector3
+  - name: x
+    summary: |
+      Represents the x-coordinate of the Vector3, allowing direct manipulation or reading of its x-component.
+      [Unity's Vector3.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-x.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: y
+    summary: |
+      Corresponds to the y-coordinate of the Vector3, for manipulating or reading the y-component.
+      [Unity's Vector3.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-y.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: z
+    summary: |
+      Represents the z-coordinate of the Vector3, used for direct manipulation or reading of the z-component.
+      [Unity's Vector3.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-z.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: zero
+    summary: |
+      Generates a Vector3 with zero values for all coordinates, representing the origin in 3D space or indicating no motion or rotation.
+      [Unity's Vector3.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-zero.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: DataType.Vector3
 methods:
-  - name: Set
-    summary: Changes the x, y, and z values of an existing Vector3 object, useful for simultaneous updates to all three components.
-    is_static: false
-    code_samples: |
-      ```lua
-      position:Set(5, 10, 15)
-      print(position) -- Vector3(5, 10, 15)
-      ```
-    parameters:
-      - name: newX
-        type: number
-        default:
-        summary: The new value for the x-coordinate.
-      - name: newY
-        type: number
-        default:
-        summary: The new value for the y-coordinate.
-      - name: newZ
-        type: number
-        default:
-        summary: The new value for the z-coordinate.
-    returns:
-      - type: void
-        summary:
-  - name: Scale
-    summary: Multiplies each component of the Vector3 by the corresponding components of another Vector3, used to alter the scale without changing its direction.
-    is_static: false
-    code_samples: |
-      ```lua
-      position:Scale(Vector3.new(2, 2, 2))
-      print(position) -- Vector3(10, 20, 30)
-      ```
-    parameters:
-      - name: scale
-        type: DataType.Vector3
-        default:
-        summary: A Vector3 by which the instance vector is scaled.
-    returns:
-      - type: void
-        summary:
-  - name: Normalize
-    summary: Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
-    is_static: false
-    code_samples: |
-      ```lua
-      position:Normalize()
-      print(position) -- Vector3(0.26726123690605, 0.5345224738121, 0.80178368043899)
-      ```
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Slerp
-    summary: Creates a smooth transition between two Vector3 points on a sphere's surface, ideal for smooth transitions in rotations or positions.
+  - name: Angle
+    summary: |
+      Calculates the angle in degrees between two Vector3s, useful for determining the required rotation to align one Vector3 with another.
+      [Unity's Vector3.Angle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Angle.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local start = Vector3.new(1, 0, 0)
-      local finish = Vector3.new(0, 1, 0)
-
-      local slerpVector = Vector3.Slerp(start, finish, 0.5)
-      print(slerpVector) -- Vector3(0.70710676908493, 0.70710676908493, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: a
+      - name: from
         type: DataType.Vector3
+        tags:
         default:
-        summary: The starting Vector3 point.
-      - name: b
+        summary: |
+          The origin Vector3 for angle measurement.
+      - name: to
         type: DataType.Vector3
+        tags:
         default:
-        summary: The ending Vector3 point.
-      - name: t
+        summary: |
+          The destination Vector3 for angle measurement.
+    returns:
+      - type: number
+        summary: |
+          The angle in degrees between the two Vector3s.
+  - name: ClampMagnitude
+    summary: |
+      Limits the magnitude of a Vector3 to a specified maximum, useful for constraining movement or other vector magnitudes.
+      [Unity's Vector3.ClampMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.ClampMagnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: vector
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The Vector3 to clamp.
+      - name: maxLength
         type: number
+        tags:
         default:
-        summary: The interpolation factor between 0 and 1.
+        summary: |
+          The maximum length to which the vector's magnitude will be clamped.
     returns:
       - type: DataType.Vector3
-        summary: A Vector3 point along the shortest path between 'a' and 'b'.
-  - name: SlerpUnclamped
-    summary: Similar to 'Slerp' but allows the 't' value to exceed the 0 to 1 range, enabling extrapolation beyond the original points.
-    is_static: true
-    code_samples: |
-      ```lua
-      local position = Vector3.new(1, 0, 0)
-
-      local a = Vector3.new(0, 1, 0)
-      local b = Vector3.new(0, 0, 1)
-
-      local t = 1.5
-      local result = Vector3.SlerpUnclamped(a, b, t)
-
-      print(result) -- Vector3(0, -0.5, 0.5)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Vector3
-        default:
-        summary: The starting Vector3 point.
-      - name: b
-        type: DataType.Vector3
-        default:
-        summary: The ending Vector3 point.
-      - name: t
-        type: number
-        default:
-        summary: An extrapolation factor beyond 0 and 1.
-    returns:
-      - type: DataType.Vector3
-        summary: A new Vector3 point potentially extrapolated beyond 'b'.
-  - name: RotateTowards
-    summary: Gradually rotates a Vector3 'current' to align with a 'target' Vector3, with specified maximum rotation and magnitude change limits.
-    is_static: true
-    code_samples: |
-      ```lua
-      local current = Vector3.new(1, 0, 0)
-      local target = Vector3.new(0, 1, 0)
-
-      local maxRadiansDelta = 0.1
-      local maxMagnitudeDelta = 0.1
-
-      local result = Vector3.RotateTowards(current, target, maxRadiansDelta, maxMagnitudeDelta)
-
-      print(result) -- Vector3(0.70710676908493, 0.70710676908493, 0)
-      ```
-    parameters:
-      - name: current
-        type: DataType.Vector3
-        default:
-        summary: The current Vector3 from which rotation starts.
-      - name: target
-        type: DataType.Vector3
-        default:
-        summary: The target Vector3 towards which rotation is aimed.
-      - name: maxRadiansDelta
-        type: number
-        default:
-        summary: Maximum rotation allowed in radians.
-      - name: maxMagnitudeDelta
-        type: number
-        default:
-        summary: Maximum change in magnitude allowed.
-    returns:
-      - type: DataType.Vector3
-        summary: The Vector3 after rotating towards the target.
-  - name: Lerp
-    summary: Performs linear interpolation between two Vector3s, transitioning from 'a' to 'b' based on the 't' ratio.
-    is_static: true
-    code_samples: |
-      ```lua
-      local start = Vector3.new(1, 0, 0)
-      local finish = Vector3.new(0, 1, 0)
-
-      local lerpVector = Vector3.Lerp(start, finish, 0.5)
-      print(lerpVector) -- Vector3(0.5, 0.5, 0)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Vector3
-        default:
-        summary: The starting Vector3 point.
-      - name: b
-        type: DataType.Vector3
-        default:
-        summary: The ending Vector3 point.
-      - name: t
-        type: number
-        default:
-        summary: The interpolation factor, in the range 0 to 1.
-    returns:
-      - type: DataType.Vector3
-        summary: A new Vector3 point interpolated between 'a' and 'b'.
-  - name: LerpUnclamped
-    summary: Similar to 'Lerp', this method performs linear interpolation between two points, but allows 't' to exceed the 0 to 1 range, enabling extrapolation.
-    is_static: true
-    code_samples: |
-      ```lua
-      local start = Vector3.new(1, 0, 0)
-      local finish = Vector3.new(0, 1, 0)
-
-      local t = 1.5
-      local result = Vector3.LerpUnclamped(start, finish, t)
-
-      print(result) -- Vector3(-0.5, 0.5, 0)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Vector3
-        default:
-        summary: The starting Vector3 point.
-      - name: b
-        type: DataType.Vector3
-        default:
-        summary: The ending Vector3 point.
-      - name: t
-        type: number
-        default:
-        summary: The interpolation factor, not limited to between 0 and 1.
-    returns:
-      - type: DataType.Vector3
-        summary: A new Vector3 point interpolated (or extrapolated) between 'a' and 'b'.
-  - name: MoveTowards
-    summary: Moves a Vector3 ('current') incrementally towards a target Vector3 ('target') at a specified 'maxDistanceDelta'.
-    is_static: true
-    code_samples: |
-      ```lua
-      local current = Vector3.new(1, 0, 0)
-      local target = Vector3.new(0, 1, 0)
-
-      local maxDistanceDelta = 0.1
-      local result = Vector3.MoveTowards(current, target, maxDistanceDelta)
-
-      print(result) -- Vector3(0.9, 0.1, 0)
-      ```
-    parameters:
-      - name: current
-        type: DataType.Vector3
-        default:
-        summary: The current Vector3 to move.
-      - name: target
-        type: DataType.Vector3
-        default:
-        summary: The target Vector3 to move towards.
-      - name: maxDistanceDelta
-        type: number
-        default:
-        summary: The maximum distance the Vector3 can move in one call.
-    returns:
-      - type: DataType.Vector3
-        summary: A Vector3 moved towards the target.
-  - name: Scale
-    summary: Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Vector3.new(1, 2, 3)
-      local b = Vector3.new(4, 5, 6)
-
-      local result = Vector3.Scale(a, b)
-      print(result) -- Vector3(4, 10, 18)
-      ```
-    parameters:
-      - name: a
-        type: DataType.Vector3
-        default:
-        summary: The first Vector3 used for scaling.
-      - name: b
-        type: DataType.Vector3
-        default:
-        summary: The second Vector3 used for scaling.
-    returns:
-      - type: DataType.Vector3
-        summary: The resulting Vector3 after scaling.
+        summary: |
+          A new Vector3 with its magnitude clamped to the specified maximum length.
   - name: Cross
-    summary: Calculates the cross product of two Vector3 instances, resulting in a Vector3 perpendicular to both, used for finding normals or rotation axes.
+    summary: |
+      Calculates the cross product of two Vector3 instances, resulting in a Vector3 perpendicular to both, used for finding normals or rotation axes.
+      [Unity's Vector3.Cross Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Cross.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local lhs = Vector3.new(1, 0, 0)
-      local rhs = Vector3.new(0, 1, 0)
-
-      local crossProduct = Vector3.Cross(lhs, rhs)
-      print(crossProduct) -- Vector3(0, 0, 1)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: lhs
         type: DataType.Vector3
+        tags:
         default:
-        summary: The first Vector3 to cross.
+        summary: |
+          The first Vector3 to cross.
       - name: rhs
         type: DataType.Vector3
+        tags:
         default:
-        summary: The second Vector3 to cross.
+        summary: |
+          The second Vector3 to cross.
     returns:
       - type: DataType.Vector3
-        summary: The cross product of the two Vector3s.
-  - name: Reflect
-    summary: Reflects a Vector3 off a surface with a specified normal, useful for simulating reflections or ricochets.
+        summary: |
+          The cross product of the two Vector3s.
+  - name: Distance
+    summary: |
+      Calculates the distance between two Vector3 points, typically used to determine how far apart two objects are in 3D space.
+      [Unity's Vector3.Distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Distance.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local inDirection = Vector3.new(1, 0, 0)
-      local inNormal = Vector3.new(0, 1, 0)
-
-      local reflectedVector = Vector3.Reflect(inDirection, inNormal)
-      print(reflectedVector) -- Vector3(1, 0, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: inDirection
+      - name: a
         type: DataType.Vector3
+        tags:
         default:
-        summary: The incoming Vector3 to reflect.
-      - name: inNormal
+        summary: |
+          The first Vector3 point.
+      - name: b
         type: DataType.Vector3
+        tags:
         default:
-        summary: The normal Vector3 off which to reflect.
+        summary: |
+          The second Vector3 point.
+    returns:
+      - type: number
+        summary: |
+          The distance between the two Vector3 points.
+  - name: Dot
+    summary: |
+      Calculates the Dot Product of two Vector3s, useful for determining directional alignment or the angle between vectors.
+      [Unity's Vector3.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Dot.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The first Vector3 for the dot product.
+      - name: rhs
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The second Vector3 for the dot product.
+    returns:
+      - type: number
+        summary: |
+          The dot product of the two Vector3s.
+  - name: Equals
+    summary: |
+      [Unity's Vector3.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: other
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Lerp
+    summary: |
+      Performs linear interpolation between two Vector3s, transitioning from 'a' to 'b' based on the 't' ratio.
+      [Unity's Vector3.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Lerp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The starting Vector3 point.
+      - name: b
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The ending Vector3 point.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The interpolation factor, in the range 0 to 1.
     returns:
       - type: DataType.Vector3
-        summary: The reflected Vector3.
-  - name: Normalize
-    summary: Normalizes a Vector3, returning a new Vector3 with the same direction but a magnitude of 1, useful for direction without magnitude concern.
+        summary: |
+          A new Vector3 point interpolated between 'a' and 'b'.
+  - name: LerpUnclamped
+    summary: |
+      Similar to 'Lerp', this method performs linear interpolation between two points, but allows 't' to exceed the 0 to 1 range, enabling extrapolation.
+      [Unity's Vector3.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.LerpUnclamped.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local vector = Vector3.new(1, 2, 3)
-      local normalizedVector = Vector3.Normalize(vector)
-
-      print(normalizedVector) -- Vector3(0.26726123690605, 0.5345224738121, 0.80178368043899)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The starting Vector3 point.
+      - name: b
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The ending Vector3 point.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The interpolation factor, not limited to between 0 and 1.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          A new Vector3 point interpolated (or extrapolated) between 'a' and 'b'.
+  - name: Magnitude
+    summary: |
+      Returns the magnitude (length) of a Vector3, useful for distance calculations from the origin.
+      [Unity's Vector3.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Magnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: vector
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The Vector3 of which to calculate the magnitude.
+    returns:
+      - type: number
+        summary: |
+          The magnitude of the Vector3.
+  - name: Max
+    summary: |
+      Produces a Vector3 from the largest x, y, and z components of two given Vector3s, useful for defining bounds or extents.
+      [Unity's Vector3.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Max.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The first of two Vector3s to compare.
+      - name: rhs
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The second of two Vector3s to compare.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          A Vector3 composed of the largest components of the two compared Vector3s
+  - name: Min
+    summary: |
+      Returns a Vector3 composed of the smallest x, y, and z components from two given Vector3s, useful for bounding calculations.
+      [Unity's Vector3.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Min.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: lhs
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The first Vector3 for comparison.
+      - name: rhs
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The second Vector3 for comparison.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          A Vector3 made up of the smallest components from the two input Vector3s.
+  - name: MoveTowards
+    summary: |
+      Moves a Vector3 ('current') incrementally towards a target Vector3 ('target') at a specified 'maxDistanceDelta'.
+      [Unity's Vector3.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.MoveTowards.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The current Vector3 to move.
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The target Vector3 to move towards.
+      - name: maxDistanceDelta
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum distance the Vector3 can move in one call.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          A Vector3 moved towards the target.
+  - name: Normalize
+    summary: |
+      Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
+      [Unity's Vector3.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: value
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 to normalize.
+        summary: |
+          The Vector3 to normalize.
     returns:
       - type: DataType.Vector3
-        summary: A normalized version of the input Vector3.
-  - name: Dot
-    summary: Calculates the Dot Product of two Vector3s, useful for determining directional alignment or the angle between vectors.
-    is_static: true
-    code_samples: |
-      ```lua
-      local lhs = Vector3.new(1, 0, 0)
-      local rhs = Vector3.new(0, 1, 0)
-  
-      local dotProduct = Vector3.Dot(lhs, rhs)
-      print(dotProduct) -- 0
-      ```
+        summary: |
+          A normalized version of the input Vector3.
+  - name: Normalize
+    summary: |
+      Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
+      [Unity's Vector3.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: lhs
-        type: DataType.Vector3
-        default:
-        summary: The first Vector3 for the dot product.
-      - name: rhs
-        type: DataType.Vector3
-        default:
-        summary: The second Vector3 for the dot product.
     returns:
-      - type: number
-        summary: The dot product of the two Vector3s.
-  - name: Project
-    summary: Projects a Vector3 onto another, useful for finding the component of one vector in the direction of another.
+      - type: void
+        summary:
+  - name: OrthoNormalize
+    summary: |
+      [Unity's Vector3.OrthoNormalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.OrthoNormalize.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local vector = Vector3.new(1, 2, 3)
-      local onNormal = Vector3.new(1, 0, 0)
-
-      local projectedVector = Vector3.Project(vector, onNormal)
-      print(projectedVector) -- Vector3(1, 0, 0)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: normal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: tangent
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+  - name: OrthoNormalize
+    summary: |
+      [Unity's Vector3.OrthoNormalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.OrthoNormalize.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: normal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: tangent
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: binormal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+  - name: Project
+    summary: |
+      Projects a Vector3 onto another, useful for finding the component of one vector in the direction of another.
+      [Unity's Vector3.Project Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Project.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: vector
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 being projected.
+        summary: |
+          The Vector3 being projected.
       - name: onNormal
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 on which the projection occurs.
+        summary: |
+          The Vector3 on which the projection occurs.
     returns:
       - type: DataType.Vector3
-        summary: The projection of the first Vector3 onto the second.
+        summary: |
+          The projection of the first Vector3 onto the second.
   - name: ProjectOnPlane
-    summary: Projects a Vector3 onto a plane defined by a normal orthogonal Vector3, useful for aligning objects to surfaces.
+    summary: |
+      Projects a Vector3 onto a plane defined by a normal orthogonal Vector3, useful for aligning objects to surfaces.
+      [Unity's Vector3.ProjectOnPlane Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.ProjectOnPlane.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local vector = Vector3.new(1, 2, 3)
-      local planeNormal = Vector3.new(0, 1, 0)
-
-      local projectedVector = Vector3.ProjectOnPlane(vector, planeNormal)
-      print(projectedVector) -- Vector3(1, 0, 3)
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: vector
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 being projected onto a plane.
+        summary: |
+          The Vector3 being projected onto a plane.
       - name: planeNormal
         type: DataType.Vector3
+        tags:
         default:
-        summary: The normal Vector3 of the plane onto which the projection occurs.
+        summary: |
+          The normal Vector3 of the plane onto which the projection occurs.
     returns:
       - type: DataType.Vector3
-        summary: The Vector3 after being projected onto a plane.
-  - name: Angle
-    summary: Calculates the angle in degrees between two Vector3s, useful for determining the required rotation to align one Vector3 with another.
+        summary: |
+          The Vector3 after being projected onto a plane.
+  - name: Reflect
+    summary: |
+      Reflects a Vector3 off a surface with a specified normal, useful for simulating reflections or ricochets.
+      [Unity's Vector3.Reflect Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Reflect.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local from = Vector3.new(1, 0, 0)
-      local to = Vector3.new(0, 1, 0)
-
-      local angle = Vector3.Angle(from, to)
-      print(angle) -- 90
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: from
+      - name: inDirection
         type: DataType.Vector3
+        tags:
         default:
-        summary: The origin Vector3 for angle measurement.
-      - name: to
+        summary: |
+          The incoming Vector3 to reflect.
+      - name: inNormal
         type: DataType.Vector3
+        tags:
         default:
-        summary: The destination Vector3 for angle measurement.
+        summary: |
+          The normal Vector3 off which to reflect.
     returns:
-      - type: number
-        summary: The angle in degrees between the two Vector3s.
-  - name: SignedAngle
-    summary: Calculates the angle between two Vector3s with a sign indicating rotation direction around a given axis.
+      - type: DataType.Vector3
+        summary: |
+          The reflected Vector3.
+  - name: RotateTowards
+    summary: |
+      Gradually rotates a Vector3 'current' to align with a 'target' Vector3, with specified maximum rotation and magnitude change limits.
+      [Unity's Vector3.RotateTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.RotateTowards.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local from = Vector3.new(1, 0, 0)
-      local to = Vector3.new(0, 1, 0)
-
-      local axis = Vector3.new(0, 0, 1)
-      local angle = Vector3.SignedAngle(from, to, axis)
-      print(angle) -- 90
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: from
+      - name: current
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 from where the angle measurement starts.
-      - name: to
+        summary: |
+          The current Vector3 from which rotation starts.
+      - name: target
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 to which the angle measurement is made.
-      - name: axis
-        type: DataType.Vector3
+        summary: |
+          The target Vector3 towards which rotation is aimed.
+      - name: maxRadiansDelta
+        type: number
+        tags:
         default:
-        summary: The axis around which the rotation angle is measured.
+        summary: |
+          Maximum rotation allowed in radians.
+      - name: maxMagnitudeDelta
+        type: number
+        tags:
+        default:
+        summary: |
+          Maximum change in magnitude allowed.
     returns:
-      - type: number
-        summary: The signed angle in degrees between the two Vector3s.
-  - name: Distance
-    summary: Calculates the distance between two Vector3 points, typically used to determine how far apart two objects are in 3D space.
+      - type: DataType.Vector3
+        summary: |
+          The Vector3 after rotating towards the target.
+  - name: Scale
+    summary: |
+      Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
+      [Unity's Vector3.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local a = Vector3.new(1, 0, 0)
-      local b = Vector3.new(0, 1, 0)
-
-      local distance = Vector3.Distance(a, b)
-      print(distance) -- 1.4142135381699
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: DataType.Vector3
+        tags:
         default:
-        summary: The first Vector3 point.
+        summary: |
+          The first Vector3 used for scaling.
       - name: b
         type: DataType.Vector3
+        tags:
         default:
-        summary: The second Vector3 point.
+        summary: |
+          The second Vector3 used for scaling.
     returns:
-      - type: number
-        summary: The distance between the two Vector3 points.
-  - name: ClampMagnitude
-    summary: Limits the magnitude of a Vector3 to a specified maximum, useful for constraining movement or other vector magnitudes.
-    is_static: true
-    code_samples: |
-      ```lua
-      local vector = Vector3.new(1, 2, 3)
-      local maxLength = 2
-
-      local clampedVector = Vector3.ClampMagnitude(vector, maxLength)
-      print(clampedVector) -- Vector3(0.55470019578934, 1.1094003915787, 1.6641006469727)
-      ```
+      - type: DataType.Vector3
+        summary:
+  - name: Scale
+    summary: |
+      Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
+      [Unity's Vector3.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: vector
+      - name: scale
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 to clamp.
-      - name: maxLength
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Set
+    summary: |
+      Changes the x, y, and z values of an existing Vector3 object, useful for simultaneous updates to all three components.
+      [Unity's Vector3.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Set.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: newX
         type: number
+        tags:
         default:
-        summary: The maximum length to which the Vector3's magnitude is clamped.
+        summary: |
+          The new value for the x-coordinate.
+      - name: newY
+        type: number
+        tags:
+        default:
+        summary: |
+          The new value for the y-coordinate.
+      - name: newZ
+        type: number
+        tags:
+        default:
+        summary: |
+          The new value for the z-coordinate.
     returns:
-      - type: DataType.Vector3
-        summary: The Vector3 with its magnitude clamped.
-  - name: Magnitude
-    summary: Returns the magnitude (length) of a Vector3, useful for distance calculations from the origin.
+      - type: void
+        summary:
+  - name: SignedAngle
+    summary: |
+      Calculates the angle between two Vector3s with a sign indicating rotation direction around a given axis.
+      [Unity's Vector3.SignedAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SignedAngle.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local vector = Vector3.new(1, 2, 3)
-      local magnitude = Vector3.Magnitude(vector)
-
-      print(magnitude) -- 3.7416573867739
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: vector
+      - name: from
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 of which to calculate the magnitude.
+        summary: |
+          The Vector3 from where the angle measurement starts.
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The Vector3 to which the angle measurement is made.
+      - name: axis
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The axis around which the rotation angle is measured.
     returns:
       - type: number
-        summary: The magnitude of the Vector3.
+        summary: |
+          The signed angle in degrees between the two Vector3s.
+  - name: Slerp
+    summary: |
+      Creates a smooth transition between two Vector3 points on a sphere's surface, ideal for smooth transitions in rotations or positions.
+      [Unity's Vector3.Slerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Slerp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: a
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The starting Vector3 point.
+      - name: b
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The ending Vector3 point.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The interpolation factor between 0 and 1.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          A Vector3 point along the shortest path between 'a' and 'b'.
+  - name: SlerpUnclamped
+    summary: |
+      Similar to 'Slerp' but allows the 't' value to exceed the 0 to 1 range, enabling extrapolation beyond the original points.
+      [Unity's Vector3.SlerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SlerpUnclamped.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: a
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The starting Vector3 point.
+      - name: b
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The ending Vector3 point.
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          An extrapolation factor beyond 0 and 1.
+    returns:
+      - type: DataType.Vector3
+        summary: |
+          A new Vector3 point potentially extrapolated beyond 'b'.
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector3.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector3.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector3.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+      - name: deltaTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
   - name: SqrMagnitude
-    summary: Calculates the square of the magnitude of a Vector3, often used for performance reasons in relative length comparisons.
+    summary: |
+      Calculates the square of the magnitude of a Vector3, often used for performance reasons in relative length comparisons.
+      [Unity's Vector3.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SqrMagnitude.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      local vector = Vector3.new(1, 2, 3)
-      local sqrMagnitude = Vector3.SqrMagnitude(vector)
-
-      print(sqrMagnitude) -- 14
-      ```
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: vector
         type: DataType.Vector3
+        tags:
         default:
-        summary: The Vector3 of which to calculate the square of the magnitude.
+        summary: |
+          The Vector3 of which to calculate the square of the magnitude.
     returns:
       - type: number
-        summary: The square of the magnitude of the Vector3.
-  - name: Min
-    summary: Returns a Vector3 composed of the smallest x, y, and z components from two given Vector3s, useful for bounding calculations.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Vector3.new(1, 2, 3)
-      local b = Vector3.new(3, 2, 1)
-
-      local minVector = Vector3.Min(a, b)
-      print(minVector) -- Vector3(1, 2, 1)
-      ```
-    parameters:
-      - name: lhs
-        type: DataType.Vector3
-        default:
-        summary: The first Vector3 for comparison.
-      - name: rhs
-        type: DataType.Vector3
-        default:
-        summary: The second Vector3 for comparison.
-    returns:
-      - type: DataType.Vector3
-        summary: A Vector3 made up of the smallest components from the two input Vector3s.
-  - name: Max
-    summary: Produces a Vector3 from the largest x, y, and z components of two given Vector3s, useful for defining bounds or extents.
-    is_static: true
-    code_samples: |
-      ```lua
-      local a = Vector3.new(1, 2, 3)
-      local b = Vector3.new(3, 2, 1)
-
-      local maxVector = Vector3.Max(a, b)
-      print(maxVector) -- Vector3(3, 2, 3)
-      ```
-    parameters:
-      - name: lhs
-        type: DataType.Vector3
-        default:
-        summary: The first of two Vector3s to compare.
-      - name: rhs
-        type: DataType.Vector3
-        default:
-        summary: The second of two Vector3s to compare.
-    returns:
-      - type: DataType.Vector3
-        summary: A Vector3 composed of the largest components of the two compared Vector3s.
+        summary: |
+          The square of the magnitude of the Vector3.
+math_operations:
+  - operation: '+'
+    summary: |
+      [Unity's Vector3.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_add.html)
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '/'
+    summary: |
+      [Unity's Vector3.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_divide.html)
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '=='
+    summary: |
+      [Unity's Vector3.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_eq.html)
+    type_a: Vector3
+    type_b: Vector3
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Vector3.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_multiply.html)
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '*'
+    summary: |
+      [Unity's Vector3.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_multiply.html)
+    type_a: number
+    type_b: Vector3
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '-'
+    summary: |
+      [Unity's Vector3.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_subtract.html)
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer
+  - operation: '-'
+    summary: |
+      [Unity's Vector3.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3-operator_subtract.html)
+    type_a: Vector3
+    type_b:
+    return_type: Vector3
+    code_samples:
+    tags:
+      - ClientAndServer

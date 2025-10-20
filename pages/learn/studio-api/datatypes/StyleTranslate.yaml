@@ -82,7 +82,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's StyleTranslate.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleTranslate-operator_eq.html)
-    description:
     type_a: StyleTranslate
     type_b: StyleTranslate
     return_type: boolean

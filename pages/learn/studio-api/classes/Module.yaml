@@ -1,0 +1,36 @@
+name: Module
+type: classes
+summary: |
+  Abstract base class for Module.  Provides the enabled state and priority
+  of the module and abstract methods for loading and unloading.
+description:
+code_samples:
+inherits:
+  - Class.ScriptableObject
+tags:
+constructors:
+properties:
+  - name: category
+    summary: |
+      Category name used for settings dialog
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
+methods:
+  - name: Unbind
+    summary: |
+      Unbind the module from the singleton instance
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

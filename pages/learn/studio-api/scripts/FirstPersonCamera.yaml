@@ -1,0 +1,96 @@
+name: FirstPersonCamera
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: OnLocalCharacter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: character
+        type: Class.Character
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: rotate
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RotateCamera
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: evt
+        type: Class.PinchGestureChanged
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetFirstPersonView
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePosition
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:

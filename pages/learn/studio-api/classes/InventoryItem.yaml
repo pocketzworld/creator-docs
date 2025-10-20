@@ -5,29 +5,18 @@ summary: |
 description:
 code_samples:
 inherits:
-  - Class.Object
+tags:
 constructors:
 properties:
-  - name: id
-    summary: |
-      The id of the item
-    description:
-    is_static: false
-    code_samples:
-    type: string
-  - name: holderId
-    summary: |
-      The id of the holder which owns this item
-    description:
-    is_static: false
-    code_samples:
-    type: string
   - name: amount
     summary: |
       How many of this item the owner owns.  Includes items that have been reserved.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: number
   - name: available
     summary: |
@@ -35,6 +24,9 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: number
   - name: createdAt
     summary: |
@@ -42,20 +34,49 @@ properties:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
     type: number
-  - name: updatedAt
+  - name: holderId
     summary: |
-      The last time the state of this item changed.  The time is in the UTC time zone expressed in unix epoch seconds.  You can use os.date to format this time into a human-readable format.
+      The id of the holder which owns this item
     description:
     is_static: false
     code_samples:
-    type: number
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: string
+  - name: id
+    summary: |
+      The id of the item
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: string
   - name: reservations
     summary: |
       Returns an array of InventoryReservations which contain how many items are reserved and the purpose.
     description:
     is_static: false
     code_samples:
-    type: 
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: {Class.InventoryReservation}
+  - name: updatedAt
+    summary: |
+      The last time the state of this item changed.  The time is in the UTC time zone expressed in unix epoch seconds.  You can use os.date to format this time into a human-readable format.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
 methods:
 math_operations:

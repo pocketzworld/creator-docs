@@ -87,7 +87,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's BackgroundPosition.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.BackgroundPosition-operator_eq.html)
-    description:
     type_a: BackgroundPosition
     type_b: BackgroundPosition
     return_type: boolean

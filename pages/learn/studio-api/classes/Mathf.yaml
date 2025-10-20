@@ -1,222 +1,86 @@
 name: Mathf
-type: datatypes
+type: classes
 summary: |
-  [Unity's Mathf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.html)
+  The Mathf class provides a collection of common mathematical functions and constants. It includes methods for basic arithmetic operations, trigonometric functions, interpolation, and utility functions for working with angles and values. This class is essential for performing mathematical calculations in Unity scripts and is commonly used for game mechanics, animations, and physics calculations.
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: PI
-    summary: |
-      [Unity's Mathf.PI Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-PI.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: Infinity
-    summary: |
-      [Unity's Mathf.Infinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-Infinity.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
-  - name: NegativeInfinity
-    summary: |
-      [Unity's Mathf.NegativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-NegativeInfinity.html)
-    description:
-    is_static: true
-    code_samples:
-    type: number
   - name: Deg2Rad
     summary: |
-      [Unity's Mathf.Deg2Rad Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-Deg2Rad.html)
+      The constant used to convert degrees to radians.
     description:
     is_static: true
     code_samples:
-    type: number
-  - name: Rad2Deg
-    summary: |
-      [Unity's Mathf.Rad2Deg Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-Rad2Deg.html)
-    description:
-    is_static: true
-    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
   - name: Epsilon
     summary: |
-      [Unity's Mathf.Epsilon Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf-Epsilon.html)
+      A tiny floating point value used for comparisons.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: Infinity
+    summary: |
+      A representation of positive infinity.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: NegativeInfinity
+    summary: |
+      A representation of negative infinity.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: PI
+    summary: |
+      The mathematical constant pi.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: Rad2Deg
+    summary: |
+      The constant used to convert radians to degrees.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: number
 methods:
-  - name: ClosestPowerOfTwo
+  - name: Abs
     summary: |
-      [Unity's Mathf.ClosestPowerOfTwo Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.ClosestPowerOfTwo.html)
+      Returns the absolute value of the given value.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: value
         type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: IsPowerOfTwo
-    summary: |
-      [Unity's Mathf.IsPowerOfTwo Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.IsPowerOfTwo.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-    returns:
-      - type: boolean
-        summary:
-  - name: NextPowerOfTwo
-    summary: |
-      [Unity's Mathf.NextPowerOfTwo Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.NextPowerOfTwo.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: GammaToLinearSpace
-    summary: |
-      [Unity's Mathf.GammaToLinearSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.GammaToLinearSpace.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: LinearToGammaSpace
-    summary: |
-      [Unity's Mathf.LinearToGammaSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LinearToGammaSpace.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: CorrelatedColorTemperatureToRGB
-    summary: |
-      [Unity's Mathf.CorrelatedColorTemperatureToRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.CorrelatedColorTemperatureToRGB.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: kelvin
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Color
-        summary:
-  - name: PerlinNoise
-    summary: |
-      [Unity's Mathf.PerlinNoise Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PerlinNoise.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: x
-        type: number
-        default:
-        summary:
-      - name: y
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: PerlinNoise1D
-    summary: |
-      [Unity's Mathf.PerlinNoise1D Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PerlinNoise1D.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: x
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Sin
-    summary: |
-      [Unity's Mathf.Sin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sin.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Cos
-    summary: |
-      [Unity's Mathf.Cos Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Cos.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Tan
-    summary: |
-      [Unity's Mathf.Tan Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Tan.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Asin
-    summary: |
-      [Unity's Mathf.Asin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Asin.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
+        tags:
         default:
         summary:
     returns:
@@ -224,461 +88,16 @@ methods:
         summary:
   - name: Acos
     summary: |
-      [Unity's Mathf.Acos Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Acos.html)
+      Returns the arc-cosine of the given value in radians.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: f
         type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Atan
-    summary: |
-      [Unity's Mathf.Atan Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Atan.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Atan2
-    summary: |
-      [Unity's Mathf.Atan2 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Atan2.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: y
-        type: number
-        default:
-        summary:
-      - name: x
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Sqrt
-    summary: |
-      [Unity's Mathf.Sqrt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sqrt.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Abs
-    summary: |
-      [Unity's Mathf.Abs Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Abs.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Min
-    summary: |
-      [Unity's Mathf.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Min.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: a
-        type: number
-        default:
-        summary:
-      - name: b
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Max
-    summary: |
-      [Unity's Mathf.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Max.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: a
-        type: number
-        default:
-        summary:
-      - name: b
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Pow
-    summary: |
-      [Unity's Mathf.Pow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Pow.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-      - name: p
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Exp
-    summary: |
-      [Unity's Mathf.Exp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Exp.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: power
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Log
-    summary: |
-      [Unity's Mathf.Log Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Log.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-      - name: p
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Log10
-    summary: |
-      [Unity's Mathf.Log10 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Log10.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Ceil
-    summary: |
-      [Unity's Mathf.Ceil Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Ceil.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Floor
-    summary: |
-      [Unity's Mathf.Floor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Floor.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Round
-    summary: |
-      [Unity's Mathf.Round Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Round.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: CeilToInt
-    summary: |
-      [Unity's Mathf.CeilToInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.CeilToInt.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: FloorToInt
-    summary: |
-      [Unity's Mathf.FloorToInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.FloorToInt.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: RoundToInt
-    summary: |
-      [Unity's Mathf.RoundToInt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.RoundToInt.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Sign
-    summary: |
-      [Unity's Mathf.Sign Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Sign.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: f
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Clamp
-    summary: |
-      [Unity's Mathf.Clamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Clamp.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-      - name: min
-        type: number
-        default:
-        summary:
-      - name: max
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Clamp01
-    summary: |
-      [Unity's Mathf.Clamp01 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Clamp01.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Lerp
-    summary: |
-      [Unity's Mathf.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Lerp.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: a
-        type: number
-        default:
-        summary:
-      - name: b
-        type: number
-        default:
-        summary:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: LerpUnclamped
-    summary: |
-      [Unity's Mathf.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LerpUnclamped.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: a
-        type: number
-        default:
-        summary:
-      - name: b
-        type: number
-        default:
-        summary:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: LerpAngle
-    summary: |
-      [Unity's Mathf.LerpAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.LerpAngle.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: a
-        type: number
-        default:
-        summary:
-      - name: b
-        type: number
-        default:
-        summary:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: MoveTowards
-    summary: |
-      [Unity's Mathf.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.MoveTowards.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: current
-        type: number
-        default:
-        summary:
-      - name: target
-        type: number
-        default:
-        summary:
-      - name: maxDelta
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: MoveTowardsAngle
-    summary: |
-      [Unity's Mathf.MoveTowardsAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.MoveTowardsAngle.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: current
-        type: number
-        default:
-        summary:
-      - name: target
-        type: number
-        default:
-        summary:
-      - name: maxDelta
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: SmoothStep
-    summary: |
-      [Unity's Mathf.SmoothStep Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothStep.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: from
-        type: number
-        default:
-        summary:
-      - name: to
-        type: number
-        default:
-        summary:
-      - name: t
-        type: number
-        default:
-        summary:
-    returns:
-      - type: number
-        summary:
-  - name: Gamma
-    summary: |
-      [Unity's Mathf.Gamma Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Gamma.html)
-    description:
-    is_static: true
-    code_samples:
-    parameters:
-      - name: value
-        type: number
-        default:
-        summary:
-      - name: absmax
-        type: number
-        default:
-        summary:
-      - name: gamma
-        type: number
+        tags:
         default:
         summary:
     returns:
@@ -686,75 +105,189 @@ methods:
         summary:
   - name: Approximately
     summary: |
-      [Unity's Mathf.Approximately Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Approximately.html)
+      Compares two floating point values and returns true if they are approximately equal.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: number
+        tags:
         default:
         summary:
       - name: b
         type: number
+        tags:
         default:
         summary:
     returns:
       - type: boolean
         summary:
-  - name: Repeat
+  - name: Asin
     summary: |
-      [Unity's Mathf.Repeat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Repeat.html)
+      Returns the arc-sine of the given value in radians. Bruh.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: t
+      - name: f
         type: number
-        default:
-        summary:
-      - name: length
-        type: number
+        tags:
         default:
         summary:
     returns:
       - type: number
         summary:
-  - name: PingPong
+  - name: Atan
     summary: |
-      [Unity's Mathf.PingPong Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.PingPong.html)
+      Returns the arc-tangent of the given value in radians.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: t
+      - name: f
         type: number
-        default:
-        summary:
-      - name: length
-        type: number
+        tags:
         default:
         summary:
     returns:
       - type: number
         summary:
-  - name: InverseLerp
+  - name: Atan2
     summary: |
-      [Unity's Mathf.InverseLerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.InverseLerp.html)
+      Returns the arc-tangent of y/x in radians.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Ceil
+    summary: |
+      Returns the smallest integer greater than or equal to the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: CeilToInt
+    summary: |
+      Returns the smallest integer greater than or equal to the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Clamp
+    summary: |
+      Clamps the given value between the minimum and maximum values.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+      - name: min
+        type: number
+        tags:
+        default:
+        summary:
+      - name: max
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Clamp01
+    summary: |
+      Clamps the given value between 0 and 1.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: ClosestPowerOfTwo
+    summary: |
+      Returns the closest power of two to the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Cos
+    summary: |
+      Returns the cosine of the given angle in radians.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: a
         type: number
-        default:
-        summary:
-      - name: b
-        type: number
-        default:
-        summary:
-      - name: value
-        type: number
+        tags:
         default:
         summary:
     returns:
@@ -762,30 +295,598 @@ methods:
         summary:
   - name: DeltaAngle
     summary: |
-      [Unity's Mathf.DeltaAngle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.DeltaAngle.html)
+      Calculates the shortest difference between two given angles.
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: current
         type: number
+        tags:
         default:
         summary:
       - name: target
         type: number
+        tags:
         default:
         summary:
     returns:
       - type: number
         summary:
-  - name: ToString
+  - name: Exp
     summary: |
-      [Unity's Mathf.ToString Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.ToString.html)
+      Returns e raised to the power of the given value.
     description:
-    is_static: false
+    is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
+      - name: power
+        type: number
+        tags:
+        default:
+        summary:
     returns:
-      - type: string
+      - type: number
+        summary:
+  - name: Floor
+    summary: |
+      Returns the largest integer less than or equal to the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: InverseLerp
+    summary: |
+      Calculates the linear parameter t that produces the interpolant value within the range [a, b].
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+      - name: b
+        type: number
+        tags:
+        default:
+        summary:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: IsPowerOfTwo
+    summary: |
+      Returns true if the given value is a power of two.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Lerp
+    summary: |
+      Linearly interpolates between two values.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+      - name: b
+        type: number
+        tags:
+        default:
+        summary:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: LerpAngle
+    summary: |
+      Linearly interpolates between two angles in degrees.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+      - name: b
+        type: number
+        tags:
+        default:
+        summary:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: LerpUnclamped
+    summary: |
+      Linearly interpolates between two values without clamping the interpolant.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+      - name: b
+        type: number
+        tags:
+        default:
+        summary:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Log
+    summary: |
+      Returns the natural logarithm of the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Log10
+    summary: |
+      Returns the base-10 logarithm of the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Max
+    summary: |
+      Returns the largest of two values.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+      - name: b
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Min
+    summary: |
+      Returns the smallest of two values.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+      - name: b
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: MoveTowards
+    summary: |
+      Moves a value towards a target value by a maximum delta.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: number
+        tags:
+        default:
+        summary:
+      - name: target
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxDelta
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: MoveTowardsAngle
+    summary: |
+      Moves an angle towards a target angle by a maximum delta.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: number
+        tags:
+        default:
+        summary:
+      - name: target
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxDelta
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: NextPowerOfTwo
+    summary: |
+      Returns the next power of two that is greater than or equal to the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: PingPong
+    summary: |
+      Ping-pongs the value t, so that it is never larger than length and never smaller than 0.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+      - name: length
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Pow
+    summary: |
+      Returns f raised to power p.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Repeat
+    summary: |
+      Loops the value t, so that it is never larger than length and never smaller than 0.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+      - name: length
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Round
+    summary: |
+      Returns the value rounded to the nearest integer.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Sign
+    summary: |
+      Returns the sign of the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Sin
+    summary: |
+      Returns the sine of the given angle in radians.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: SmoothDamp
+    summary: |
+      Gradually changes a value towards a target value over time.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: number
+        tags:
+        default:
+        summary:
+      - name: target
+        type: number
+        tags:
+        default:
+        summary:
+      - name: currentV
+        type: number
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+      - name: deltaTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+      - type: number
+        summary:
+  - name: SmoothDampAngle
+    summary: |
+      Gradually changes an angle towards a target angle over time.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: number
+        tags:
+        default:
+        summary:
+      - name: target
+        type: number
+        tags:
+        default:
+        summary:
+      - name: currentV
+        type: number
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+      - name: deltaTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+      - type: number
+        summary:
+  - name: SmoothStep
+    summary: |
+      Interpolates between two values using a smooth step function.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary:
+      - name: to
+        type: number
+        tags:
+        default:
+        summary:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Sqrt
+    summary: |
+      Returns the square root of the given value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: f
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: Tan
+    summary: |
+      Returns the tangent of the given angle in radians.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
         summary:
 math_operations:

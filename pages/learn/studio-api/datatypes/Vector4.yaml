@@ -1,495 +1,709 @@
 name: Vector4
 type: datatypes
-summary: Represents a vector or a point in four-dimensional space, commonly used for RGBA values, 4D transforms, or 3D transformations with homogeneous coordinates.
+summary: |
+  Represents a vector or a point in four-dimensional space, commonly used for RGBA values, 4D transforms, or 3D transformations with homogeneous coordinates.
+  [Unity's Vector4 Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.html)
 description:
-code_samples: |
-  ```lua
-  local v1 = Vector4.new(1, 2, 3, 4)
-  print(v1.x, v1.y, v1.z, v1.w)  -- 1, 2, 3, 4
-  ```
+code_samples:
 inherits:
+tags:
 constructors:
   - name: new
-    summary: Creates a new Vector4 instance with specified 'x', 'y', 'z', and 'w' components, useful for RGBA color representation or spatial coordinates.
+    summary: |
+      Creates a new Vector4 instance with specified 'x', 'y', 'z', and 'w' components, useful for RGBA color representation or spatial coordinates.
+      [Unity's Vector4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-ctor.html)
+    description:
     is_static: true
     code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: x
         type: number
+        tags:
         default:
-        summary: The 'x' component of the Vector4.
+        summary: |
+          The 'x' component of the Vector4.
       - name: y
         type: number
+        tags:
         default:
-        summary: The 'y' component of the Vector4.
+        summary: |
+          The 'y' component of the Vector4.
+    returns:
+      - type: DataType.Vector4
+        summary: |
+          Returns a new Vector4 instance.
+  - name: new
+    summary: |
+      Creates a new Vector4 instance with specified 'x', 'y', 'z', and 'w' components, useful for RGBA color representation or spatial coordinates.
+      [Unity's Vector4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary: |
+          The 'x' component of the Vector4.
+      - name: y
+        type: number
+        tags:
+        default:
+        summary: |
+          The 'y' component of the Vector4.
       - name: z
         type: number
+        tags:
         default:
-        summary: The 'z' component of the Vector4.
+        summary: |
+          The 'z' component of the Vector4.
+    returns:
+      - type: DataType.Vector4
+        summary: |
+          Returns a new Vector4 instance.
+  - name: new
+    summary: |
+      Creates a new Vector4 instance with specified 'x', 'y', 'z', and 'w' components, useful for RGBA color representation or spatial coordinates.
+      [Unity's Vector4.new Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-ctor.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary: |
+          The 'x' component of the Vector4.
+      - name: y
+        type: number
+        tags:
+        default:
+        summary: |
+          The 'y' component of the Vector4.
+      - name: z
+        type: number
+        tags:
+        default:
+        summary: |
+          The 'z' component of the Vector4.
       - name: w
         type: number
+        tags:
         default:
-        summary: The 'w' component of the Vector4.
+        summary: |
+          The 'w' component of the Vector4.
     returns:
       - type: DataType.Vector4
-        summary: Returns a new Vector4 instance.
+        summary: |
+          Returns a new Vector4 instance.
 properties:
-  - name: normalized
-    summary: Provides a normalized version of the Vector4, with a length of 1, useful for direction-only applications.
-    is_static: false
-    code_samples: |
-      ```lua
-      local v1 = Vector4.new(1, 2, 3, 4)
-      local v2 = v1.normalized
-
-      print(v2.x, v2.y, v2.z, v2.w)  -- 0.1826, 0.3651, 0.5477, 0.7303
-      ```
-    type: DataType.Vector4
-  - name: magnitude
-    summary: Provides the length of the Vector4, useful for distance calculations or scaling vectors.
-    is_static: false
-    code_samples: | 
-      ```lua 
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1.magnitude)  -- 5.4772
-      ```
-    type: number
-  - name: sqrMagnitude
-    summary: Returns the square of the magnitude of the Vector4, a performance-friendly alternative for length comparisons.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1.sqrMagnitude)  -- 30
-      ```
-    type: number
-  - name: x
-    summary: Accesses the 'x' component of the Vector4, representing different dimensions or the 'Red' component in RGBA.
-    is_static: false
-    code_samples: | 
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1.x)  -- 1
-      ```
-    type: number
-  - name: y
-    summary: Accesses the 'y' component of the Vector4, representing different dimensions or the 'Green' component in RGBA.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1.y)  -- 2
-      ```
-    type: number
-  - name: z
-    summary: Accesses the 'z' component of the Vector4, representing different dimensions or the 'Blue' component in RGBA.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1.z)  -- 3
-      ```
-    type: number
-  - name: w
-    summary: Accesses the 'w' component of the Vector4, representing different dimensions or the 'Alpha' component in RGBA.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1.w)  -- 4
-      ```
-    type: number
-  - name: zero
-    summary: Represents a Vector4 with all components set to zero.
+  - name: kEpsilon
+    summary: |
+      [Unity's Vector4.kEpsilon Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-kEpsilon.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.zero
-        print(v1.x, v1.y, v1.z, v1.w)  -- 0, 0, 0, 0
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: magnitude
+    summary: |
+      Provides the length of the Vector4, useful for distance calculations or scaling vectors.
+      [Unity's Vector4.magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-magnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: negativeInfinity
+    summary: |
+      Represents a Vector4 with all components set to negative infinity, useful for setting minimum limits.
+      [Unity's Vector4.negativeInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-negativeInfinity.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector4
+  - name: normalized
+    summary: |
+      Provides a normalized version of the Vector4, with a length of 1, useful for direction-only applications.
+      [Unity's Vector4.normalized Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-normalized.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector4
   - name: one
-    summary: Represents a Vector4 with all components set to one, useful for certain mathematical operations.
+    summary: |
+      Represents a Vector4 with all components set to one, useful for certain mathematical operations.
+      [Unity's Vector4.one Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-one.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.one
-        print(v1.x, v1.y, v1.z, v1.w)  -- 1, 1, 1, 1
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector4
   - name: positiveInfinity
-    summary: Represents a Vector4 with all components set to positive infinity, useful for setting maximum limits.
+    summary: |
+      Represents a Vector4 with all components set to positive infinity, useful for setting maximum limits.
+      [Unity's Vector4.positiveInfinity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-positiveInfinity.html)
+    description:
     is_static: true
-    code_samples: | 
-      ```lua
-        local v1 = Vector4.positiveInfinity
-        print(v1.x, v1.y, v1.z, v1.w)  -- inf, inf, inf, inf
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: DataType.Vector4
-  - name: negativeInfinity
-    summary: Represents a Vector4 with all components set to negative infinity, useful for setting minimum limits.
-    is_static: true
-    code_samples: | 
-      ```lua
-        local v1 = Vector4.negativeInfinity
-        print(v1.x, v1.y, v1.z, v1.w)  -- -inf, -inf, -inf, -inf
-      ```
-    type: DataType.Vector4
-  - name: kEpsilon
-    summary: Represents a tiny positive number close to zero, used to handle calculations related to precision.
-    is_static: true
-    code_samples: | 
-      ```lua
-        local v1 = Vector4.kEpsilon
-        print(v1.x, v1.y, v1.z, v1.w)  -- 1e-05, 1e-05, 1e-05, 1e-05
-      ```
+  - name: sqrMagnitude
+    summary: |
+      Returns the square of the magnitude of the Vector4, a performance-friendly alternative for length comparisons.
+      [Unity's Vector4.sqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-sqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
+  - name: w
+    summary: |
+      Accesses the 'w' component of the Vector4, representing different dimensions or the 'Alpha' component in RGBA.
+      [Unity's Vector4.w Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-w.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: x
+    summary: |
+      Accesses the 'x' component of the Vector4, representing different dimensions or the 'Red' component in RGBA.
+      [Unity's Vector4.x Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-x.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: y
+    summary: |
+      Accesses the 'y' component of the Vector4, representing different dimensions or the 'Green' component in RGBA.
+      [Unity's Vector4.y Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-y.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: z
+    summary: |
+      Accesses the 'z' component of the Vector4, representing different dimensions or the 'Blue' component in RGBA.
+      [Unity's Vector4.z Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-z.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: zero
+    summary: |
+      Represents a Vector4 with all components set to zero.
+      [Unity's Vector4.zero Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-zero.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector4
 methods:
-  - name: Set
-    summary: Sets the 'x', 'y', 'z', and 'w' components of the Vector4, enhancing code readability and efficiency.
-    is_static: false
-    code_samples: | 
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        v1:Set(5, 6, 7, 8)
-
-        print(v1.x, v1.y, v1.z, v1.w)  -- 5, 6, 7, 8
-      ```
+  - name: Distance
+    summary: |
+      Computes the distance between two Vector4's, useful for object spacing or collision detection.
+      [Unity's Vector4.Distance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Distance.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: newX
-        type: number
-        default:
-        summary: The new 'x' component.
-      - name: newY
-        type: number
-        default:
-        summary: The new 'y' component.
-      - name: newZ
-        type: number
-        default:
-        summary: The new 'z' component.
-      - name: newW
-        type: number
-        default:
-        summary: The new 'w' component.
-    returns:
-      - type: void
-        summary:
-  - name: Scale
-    summary: Scales a Vector4 by another Vector4's components, useful for dimension or shape scaling.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(2, 3, 4, 5)
-        v1:Scale(v2)
-
-        print(v1.x, v1.y, v1.z, v1.w)  -- 2, 6, 12, 20
-      ```
-    parameters:
-      - name: scale
+      - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The Vector4 to scale by.
-    returns:
-      - type: void
-        summary:
-  - name: Normalize
-    summary: Transforms the Vector4 into a vector of same direction but with length 1, ideal for direction-only uses.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        v1:Normalize()
-
-        print(v1.x, v1.y, v1.z, v1.w)  -- 0.1826, 0.3651, 0.5477, 0.7303
-      ```
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: SqrMagnitude
-    summary: Provides the square of the magnitude of the Vector4, an efficient method for length comparisons.
-    is_static: false
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        print(v1:SqrMagnitude())  -- 30
-      ```
-    parameters:
+        summary: |
+          The first Vector4.
+      - name: b
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The second Vector4.
     returns:
       - type: number
-        summary: Returns the square of the magnitude.
+        summary: |
+          Returns the distance between the two Vector4's.
+  - name: Dot
+    summary: |
+      Computes the dot product of two Vector4's, reflecting their angular relationship.
+      [Unity's Vector4.Dot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Dot.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: a
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The first Vector4.
+      - name: b
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The second Vector4.
+    returns:
+      - type: number
+        summary: |
+          Returns the dot product.
+  - name: Equals
+    summary: |
+      [Unity's Vector4.Equals Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Equals.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: other
+        type: DataType.Vector4
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
   - name: Lerp
-    summary: Performs Linear Interpolation between two Vector4's based on a parameter 't', useful for smooth transitions.
+    summary: |
+      Performs Linear Interpolation between two Vector4's based on a parameter 't', useful for smooth transitions.
+      [Unity's Vector4.Lerp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Lerp.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local v3 = Vector4.Lerp(v1, v2, 0.5)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 3, 4, 5, 6
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The starting Vector4.
+        summary: |
+          The starting Vector4.
       - name: b
         type: DataType.Vector4
+        tags:
         default:
-        summary: The ending Vector4.
+        summary: |
+          The ending Vector4.
       - name: t
         type: number
+        tags:
         default:
-        summary: The interpolation factor.
+        summary: |
+          The interpolation factor.
     returns:
       - type: DataType.Vector4
-        summary: Returns an interpolated Vector4.
+        summary: |
+          Returns an interpolated Vector4.
   - name: LerpUnclamped
-    summary: Similar to 'Lerp' but without clamping the 't' parameter, offering more freedom in interpolation.
+    summary: |
+      Similar to 'Lerp' but without clamping the 't' parameter, offering more freedom in interpolation.
+      [Unity's Vector4.LerpUnclamped Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.LerpUnclamped.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local v3 = Vector4.LerpUnclamped(v1, v2, 2)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 9, 10, 11, 12
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The start Vector4.
+        summary: |
+          The start Vector4.
       - name: b
         type: DataType.Vector4
+        tags:
         default:
-        summary: The end Vector4.
+        summary: |
+          The end Vector4.
       - name: t
         type: number
+        tags:
         default:
-        summary: The interpolation fraction.
+        summary: |
+          The interpolation fraction.
     returns:
       - type: DataType.Vector4
-        summary: Returns an unclamped interpolated Vector4.
-  - name: MoveTowards
-    summary: Moves a Vector4 'current' towards 'target', limited by 'maxDistanceDelta', useful for smooth object movement.
+        summary: |
+          Returns an unclamped interpolated Vector4.
+  - name: Magnitude
+    summary: |
+      Calculates the length of the Vector4, useful for finding the distance it spans in 4D space.
+      [Unity's Vector4.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Magnitude.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local v3 = Vector4.MoveTowards(v1, v2, 2)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 3, 4, 5, 6
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: a
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The Vector4 to compute the magnitude for.
+    returns:
+      - type: number
+        summary: |
+          Returns the magnitude of the Vector4.
+  - name: Max
+    summary: |
+      Returns a Vector4 with the largest components of two Vector4's, useful for limiting operations.
+      [Unity's Vector4.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Max.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: lhs
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The first Vector4.
+      - name: rhs
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The second Vector4.
+    returns:
+      - type: DataType.Vector4
+        summary: |
+          Returns a Vector4 with the largest components.
+  - name: Min
+    summary: |
+      Returns a Vector4 with the smallest components of two Vector4's, useful for bounding box operations.
+      [Unity's Vector4.Min Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Min.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: lhs
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The first Vector4.
+      - name: rhs
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The second Vector4.
+    returns:
+      - type: DataType.Vector4
+        summary: |
+          Returns a Vector4 with the smallest components.
+  - name: MoveTowards
+    summary: |
+      Moves a Vector4 'current' towards 'target', limited by 'maxDistanceDelta', useful for smooth object movement.
+      [Unity's Vector4.MoveTowards Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.MoveTowards.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: current
         type: DataType.Vector4
+        tags:
         default:
-        summary: The current position.
+        summary: |
+          The current position.
       - name: target
         type: DataType.Vector4
+        tags:
         default:
-        summary: The target position.
+        summary: |
+          The target position.
       - name: maxDistanceDelta
         type: number
+        tags:
         default:
-        summary: The max distance to move.
+        summary: |
+          The max distance to move.
     returns:
       - type: DataType.Vector4
-        summary: Returns a Vector4 closer to the target.
-  - name: Scale
-    summary: Multiplies two Vector4's component-wise, useful for component-wise data manipulation.
-    is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(2, 3, 4, 5)
-        local v3 = Vector4.Scale(v1, v2)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 2, 6, 12, 20
-      ```
-    parameters: 
-      - name: a
-        type: DataType.Vector4
-        default:
-        summary: The first Vector4.
-      - name: b
-        type: DataType.Vector4
-        default:
-        summary: The second Vector4.
-    returns:
-      - type: DataType.Vector4
-        summary: Returns a new Vector4 from component-wise multiplication.
+        summary: |
+          Returns a Vector4 closer to the target.
   - name: Normalize
-    summary: Normalizes a Vector4 and returns a new Vector4 with length 1, ideal for direction-only vectors.
+    summary: |
+      Transforms the Vector4 into a vector of same direction but with length 1, ideal for direction-only uses.
+      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.Normalize(v1)
-
-        print(v2.x, v2.y, v2.z, v2.w)  -- 0.1826, 0.3651, 0.5477, 0.7303
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The Vector4 to normalize.
+        summary: |
+          The Vector4 to normalize.
     returns:
       - type: DataType.Vector4
-        summary: Returns a normalized Vector4.
-  - name: Dot
-    summary: Computes the dot product of two Vector4's, reflecting their angular relationship.
-    is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local dotProduct = Vector4.Dot(v1, v2)
-
-        print(dotProduct)  -- 70
-      ```
+        summary:
+  - name: Normalize
+    summary: |
+      Transforms the Vector4 into a vector of same direction but with length 1, ideal for direction-only uses.
+      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: a
-        type: DataType.Vector4
-        default:
-        summary: The first Vector4.
-      - name: b
-        type: DataType.Vector4
-        default:
-        summary: The second Vector4.
     returns:
-      - type: number
-        summary: Returns the dot product.
+      - type: void
+        summary:
   - name: Project
-    summary: Projects a Vector4 onto another Vector4, useful for finding the nearest point on a defined line.
+    summary: |
+      Projects a Vector4 onto another Vector4, useful for finding the nearest point on a defined line.
+      [Unity's Vector4.Project Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Project.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local v3 = Vector4.Project(v1, v2)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 2.5, 3, 3.5, 4
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The Vector4 to project.
+        summary: |
+          The Vector4 to project.
       - name: b
         type: DataType.Vector4
+        tags:
         default:
-        summary: The Vector4 to project onto.
+        summary: |
+          The Vector4 to project onto.
     returns:
       - type: DataType.Vector4
-        summary: Returns the projection of 'a' onto 'b'.
-  - name: Distance
-    summary: Computes the distance between two Vector4's, useful for object spacing or collision detection.
+        summary: |
+          Returns the projection of 'a' onto 'b'.
+  - name: Scale
+    summary: |
+      Multiplies two Vector4's component-wise, useful for component-wise data manipulation.
+      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local distance = Vector4.Distance(v1, v2)
-
-        print(distance)  -- 8.0
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The first Vector4.
+        summary: |
+          The first Vector4.
       - name: b
         type: DataType.Vector4
+        tags:
         default:
-        summary: The second Vector4.
-    returns:
-      - type: number
-        summary: Returns the distance between the two Vector4's.
-  - name: Magnitude
-    summary: Calculates the length of the Vector4, useful for finding the distance it spans in 4D space.
-    is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local magnitude = Vector4.Magnitude(v1)
-
-        print(magnitude)  -- 5.4772
-      ```
-    parameters:
-      - name: a
-        type: DataType.Vector4
-        default:
-        summary: The Vector4 to compute the magnitude for.
-    returns:
-      - type: number
-        summary: Returns the magnitude of the Vector4.
-  - name: Min
-    summary: Returns a Vector4 with the smallest components of two Vector4's, useful for bounding box operations.
-    is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local v3 = Vector4.Min(v1, v2)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 1, 2, 3, 4
-      ```
-    parameters:
-      - name: lhs
-        type: DataType.Vector4
-        default:
-        summary: The first Vector4.
-      - name: rhs
-        type: DataType.Vector4
-        default:
-        summary: The second Vector4.
+        summary: |
+          The second Vector4.
     returns:
       - type: DataType.Vector4
-        summary: Returns a Vector4 with the smallest components.
-  - name: Max
-    summary: Returns a Vector4 with the largest components of two Vector4's, useful for limiting operations.
-    is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local v2 = Vector4.new(5, 6, 7, 8)
-        local v3 = Vector4.Max(v1, v2)
-
-        print(v3.x, v3.y, v3.z, v3.w)  -- 5, 6, 7, 8
-      ```
+        summary: |
+          Returns a new Vector4 with the scaled components.
+  - name: Scale
+    summary: |
+      Multiplies two Vector4's component-wise, useful for component-wise data manipulation.
+      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: lhs
+      - name: scale
         type: DataType.Vector4
+        tags:
         default:
-        summary: The first Vector4.
-      - name: rhs
-        type: DataType.Vector4
-        default:
-        summary: The second Vector4.
+        summary:
     returns:
-      - type: DataType.Vector4
-        summary: Returns a Vector4 with the largest components.
+      - type: void
+        summary:
+  - name: Set
+    summary: |
+      Sets the 'x', 'y', 'z', and 'w' components of the Vector4, enhancing code readability and efficiency.
+      [Unity's Vector4.Set Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Set.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: newX
+        type: number
+        tags:
+        default:
+        summary: |
+          The new 'x' component.
+      - name: newY
+        type: number
+        tags:
+        default:
+        summary: |
+          The new 'y' component.
+      - name: newZ
+        type: number
+        tags:
+        default:
+        summary: |
+          The new 'z' component.
+      - name: newW
+        type: number
+        tags:
+        default:
+        summary: |
+          The new 'w' component.
+    returns:
+      - type: void
+        summary:
   - name: SqrMagnitude
-    summary: Gives the square of the magnitude of a Vector4, an efficient comparison method that avoids square root calculations.
+    summary: |
+      Provides the square of the magnitude of the Vector4, an efficient method for length comparisons.
+      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-        local v1 = Vector4.new(1, 2, 3, 4)
-        local sqrMagnitude = Vector4.SqrMagnitude(v1)
-
-        print(sqrMagnitude)  -- 30
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: a
         type: DataType.Vector4
+        tags:
         default:
-        summary: The Vector4 to square the magnitude of.
+        summary: |
+          The Vector4 to compute the square of the magnitude for.
     returns:
       - type: number
-        summary: Returns the square of the Vector4's magnitude.
+        summary: |
+          Returns the square of the magnitude.
+  - name: SqrMagnitude
+    summary: |
+      Provides the square of the magnitude of the Vector4, an efficient method for length comparisons.
+      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: number
+        summary: |
+          Returns the square of the magnitude.
+math_operations:
+  - operation: '+'
+    summary: |
+      [Unity's Vector4.operator_add Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_add.html)
+    type_a: Vector4
+    type_b: Vector4
+    return_type: Vector4
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '/'
+    summary: |
+      [Unity's Vector4.operator_divide Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_divide.html)
+    type_a: Vector4
+    type_b: number
+    return_type: Vector4
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '=='
+    summary: |
+      [Unity's Vector4.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_eq.html)
+    type_a: Vector4
+    type_b: Vector4
+    return_type: boolean
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '*'
+    summary: |
+      [Unity's Vector4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_multiply.html)
+    type_a: Vector4
+    type_b: number
+    return_type: Vector4
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '*'
+    summary: |
+      [Unity's Vector4.operator_multiply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_multiply.html)
+    type_a: number
+    type_b: Vector4
+    return_type: Vector4
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '-'
+    summary: |
+      [Unity's Vector4.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_subtract.html)
+    type_a: Vector4
+    type_b: Vector4
+    return_type: Vector4
+    code_samples:
+    tags:
+      - ClientOnly
+  - operation: '-'
+    summary: |
+      [Unity's Vector4.operator_subtract Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4-operator_subtract.html)
+    type_a: Vector4
+    type_b:
+    return_type: Vector4
+    code_samples:
+    tags:
+      - ClientOnly

@@ -1,0 +1,93 @@
+name: Grid
+type: classes
+summary: |
+  [Unity's Grid Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid.html)
+description:
+code_samples:
+inherits:
+  - Class.GridLayout
+tags:
+constructors:
+properties:
+  - name: cellGap
+    summary: |
+      [Unity's Grid.cellGap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid-cellGap.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: cellLayout
+    summary: |
+      [Unity's Grid.cellLayout Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid-cellLayout.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.CellLayout
+  - name: cellSize
+    summary: |
+      [Unity's Grid.cellSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid-cellSize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: cellSwizzle
+    summary: |
+      [Unity's Grid.cellSwizzle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid-cellSwizzle.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.CellSwizzle
+methods:
+  - name: InverseSwizzle
+    summary: |
+      [Unity's Grid.InverseSwizzle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid.InverseSwizzle.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: swizzle
+        type: Enum.CellSwizzle
+        tags:
+        default:
+        summary:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+  - name: Swizzle
+    summary: |
+      [Unity's Grid.Swizzle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Grid.Swizzle.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: swizzle
+        type: Enum.CellSwizzle
+        tags:
+        default:
+        summary:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+math_operations:

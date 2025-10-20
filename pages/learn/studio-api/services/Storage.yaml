@@ -1,313 +1,39 @@
 name: Storage
-type: classes
+type: services
 summary: |
-  The Storage API provides functionality for saving and loading persistent data.  This can be used for player-specific data such as storing player progress or a high score.  This can also be used for global data for tracking the progress of all players or a global leaderboard.  The Storage API is only available on the server.  For saving a player's obtained items or currency, use the Inventory API.  See StorageError for a list of errors that can be returned from Storage functions.  There is a limit of how often Storage functions can be called before functions will start returning StorageError.RequestThrottled.  See the documentation for StorageError.RequestThrottled for details.
-  In Unity, the Storage file is located at `Library/localStorage`. You can open this file with a text editor to see the data stored in it.
+  The Storage API provides functionality for saving and loading persistent data. This can be used
+  for player-specific data such as storing player progress or a high score. This can also be used
+  for global data for tracking the progress of all players or a global leaderboard. The Storage
+  API is only available on the server. For saving a player's obtained items or currency, use the
+  Inventory API. See StorageError for a list of errors that can be returned from Storage
+  functions. There is a limit of how often Storage functions can be called before functions will
+  start returning StorageError.RequestThrottled. See the documentation for
+  StorageError.RequestThrottled for details. In Unity, the Storage file is located at
+  Library/localStorage. You can open this file with a text editor to see the data stored in it.
 description:
 code_samples:
 inherits:
 tags:
-  - ServerOnly
 constructors:
 properties:
 methods:
-  - name: GetValue
+  - name: DeletePlayerValue
     summary: |
-      Retrieves a value from storage with the given key.  The callback parameters are the value and error code.  Value will be nil and the error code will be StorageError.None if the value does not exist.  Value will be nil and the error code will be a value other than StorageError.None if an error occurred.
+      This is the equivalent of calling DeleteValue(player.user.id .. "/" .. key, callback).  This deletes a value that is specific to the player.  If you want to delete a global value or use a different format for the key, use DeleteValue instead.
     description:
     is_static: true
-    code_samples: |
-      ```lua
-        function PrintValue(key: string)
-          Storage.GetValue(key, function(value)
-            print(`{key} is {tostring(value)}`)
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: GetPlayerValue
-    summary: |
-      This is the equivalent of calling GetValue(player.user.id .. "/" .. key, callback).  This retrieves a value that is specific to the player.  If you want to get a global value or use a different format for the key, use GetValue instead.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        Storage.GetPlayerValue(player, "HighScore", function(highScore)
-          print(`The high score is {tostring(highScore)}`)
-        end)
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
       - name: player
         type: Class.Player
+        tags:
         default:
         summary:
       - name: key
         type: string
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: SetValue
-    summary: |
-      Sets a value in storage with the given key.  Currently supported types are string, number, boolean, table and Vector3.  If you have a global value whose value depends on the previous value, for example a leaderboard table where new high scores are inserted between existing ones, use UpdateValue instead or else data could be lost when multiple world instances set the value at the same time.  If your value is a number that needs to be increased or decreased, use IncrementValue instead.  The callback parameter is the error code.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        Storage.SetValue("HighScore", 100, function(errorCode)
-          print(`The error code was {StorageError[errorCode]}`)
-        end)
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: value
-        type: any
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: SetPlayerValue
-    summary: |
-      This is the equivalent of calling SetValue(player.user.id .. "|" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        --!SerializeField
-        local spawnPoint: Transform = nil
-
-        local setSpawnPointRequest = Event.new("SetSpawnPoint")
-
-        function self:ClientStart()
-          function self:OnTriggerEnter(other : Collider)
-            setSpawnPointRequest:FireServer(spawnPoint.position)
-          end
-        end
-
-        function self:ServerStart()
-          setSpawnPointRequest:Connect(function(player: Player, spawnPoint: Vector3)
-            Storage.SetPlayerValue(player, "SpawnPoint", spawnPoint, function(errorCode)
-              print(`The error code was {StorageError[errorCode]}`)
-            end)
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: value
-        type: any
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: UpdateValue
-    summary: |
-      UpdateValue will use GetValue to retrieve the current value, then call the modifier function with the value as a parameter.  If the value does not exist, nil will be passed to the modifier function.  UpdateValue will then use SetValue to set the value to what is returned from the modifier function.  If the modifier function returns nil, the value will not be set and the callback will be immediately called.  The modifier function may be called multiple times if other world instances have made changes to the value.  Currently supported types are string, number, boolean, table and Vector3.  The callback parameter is the error code.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        function self:ServerStart()
-          scene.PlayerJoined:Connect(function(scene, player)
-            Storage.UpdateValue("HighScore", function(currentScore)
-              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
-            end)
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: modifier
-        type: function
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: UpdatePlayerValue
-    summary: |
-      This is the equivalent of calling UpdateValue(player.user.id .. "/" .. key, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        local submitScoreRequest = Event.new("SubmitScoreRequest")
-
-        function self:ClientStart()
-          function SubmitScore(score: number)
-            submitScoreRequest:FireServer(score)
-          end
-        end
-
-        function self:ServerStart()
-          submitScoreRequest:Connect(function(player: Player, score: number)
-            Storage.UpdatePlayerValue("HighScore", function(currentScore: number)
-              return if currentScore == nil or score > currentScore then score else nil
-            end)
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: modifier
-        type: function
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: IncrementValue
-    summary: |
-      If the value for the given key is a number, it will be increased by the amount.  If the value does not exist, it will be set to the amount.  This is safe to use for global values.  The callback parameter is the error code. 
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        function self:ServerStart()
-          scene.PlayerJoined:Connect(function(scene, player)
-            Storage.IncrementValue("Visits", 1)
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: amount
-        type: number
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: IncrementPlayerValue
-    summary: |
-      This is the equivalent of calling IncrementValue(player.user.id .. "/" .. key, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        function self:ServerStart()
-          scene.PlayerJoined:Connect(function(scene, player)
-            Storage.IncrementPlayerValue(player, "Visits", 1)
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: amount
-        type: number
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: DeleteValue
-    summary: |
-      Deletes the value with the given key from storage.  The callback parameter is the error code. 
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        Storage.DeleteValue("HighScore", function(errorCode)
-          print(`The error code was {StorageError[errorCode]}`)
-        end)
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary:
-      - name: callback
-        type: function
+        tags:
         default:
         summary:
     returns:
@@ -318,76 +44,236 @@ methods:
       This is the equivalent of calling DeleteValue(player.user.id .. "/" .. key, callback).  This deletes a value that is specific to the player.  If you want to delete a global value or use a different format for the key, use DeleteValue instead.
     description:
     is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DeleteValue
+    summary: |
+      Deletes the value with the given key from storage.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DeleteValue
+    summary: |
+      Deletes the value with the given key from storage.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPlayerValue
+    summary: |
+      This is the equivalent of calling GetValue(player.user.id .. "/" .. key, callback). This
+      retrieves a value that is specific to the player. If you want to get a global value or use a
+      different format for the key, use GetValue instead.
+    description:
+    is_static: true
     code_samples: |
       ```lua
-        Storage.DeletePlayerValue(player, "HighScore", function(errorCode)
-          print(`The error code was {StorageError[errorCode]}`)
-        end)
+      Storage.GetPlayerValue(player, "HighScore", function(highScore)
+        print(`The high score is {tostring(highScore)}`)
+      end)
       ```
     tags:
       - ServerOnly
     parameters:
       - name: player
         type: Class.Player
+        tags:
         default:
         summary:
       - name: key
         type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: "(value: any, error: StorageError) -> ()"
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
-  - name: SearchValue
+  - name: GetValue
     summary: |
-      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursor ID that can be passed to SearchValue to retrieve the next group of results.  If the cursor ID is nil, then there are no more results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value, the cursor ID, and the error code.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
+      Retrieves a value from storage with the given key. The callback parameters are the value
+      and error code. Value will be nil and the error code will be StorageError.None if the value
+      does not exist. Value will be nil and the error code will be a value other than
+      StorageError.None if an error occurred.
     description:
     is_static: true
     code_samples: |
       ```lua
-        function Search(key: string, limit: number, cursorId: string)
-          Storage.SearchValue(key, limit, cursorId, function(data, newCursorId, errorCode)
-            if(data == nil) then
-              print(`Got error {StorageError[errorCode]} while searching`)
-              return
-            end
-            
-            for index, entry in data do
-              for key, value in entry do
-                print(`{key} : {tostring(value)}`)
-              end
-            end
-            
-            if(newCursorId ~= nil) then
-              Search(key, limit, newCursorId)
-            else
-              print("done")
-            end
-          end)
-        end
-        Search("scores/", 10)
+      function PrintValue(key: string)
+        Storage.GetValue(key, function(value)
+          print(`{key} is {tostring(value)}`)
+        end)
+      end
       ```
     tags:
       - ServerOnly
     parameters:
       - name: key
         type: string
-        default:
-        summary:
-      - name: limit
-        type: number
-        default:
-        summary:
-      - name: cursorId
-        type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: "(value: any, error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IncrementPlayerValue
+    summary: |
+      This is the equivalent of calling IncrementValue(player.user.id .. "/" .. key, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: amount
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IncrementPlayerValue
+    summary: |
+      This is the equivalent of calling IncrementValue(player.user.id .. "/" .. key, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: amount
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IncrementValue
+    summary: |
+      If the value for the given key is a number, it will be increased by the amount.  If the value does not exist, it will be set to the amount.  This is safe to use for global values.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: amount
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IncrementValue
+    summary: |
+      If the value for the given key is a number, it will be increased by the amount.  If the value does not exist, it will be set to the amount.  This is safe to use for global values.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: amount
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
         default:
         summary:
     returns:
@@ -398,52 +284,311 @@ methods:
       This is the equivalent of calling SearchValue(player.user.id .. "/" .. key, callback).  This searches for values that are specific to the player.  If you want to search for global values or use a different format for the key, use SearchValue instead.
     description:
     is_static: true
-    code_samples: |
-      ```lua
-        function self:ServerStart()
-          scene.PlayerJoined:Connect(function(scene, player)
-            Storage.SearchPlayerValue(player, "scores/", 10, nil, function(data, newCursorId, errorCode)
-              if(data == nil) then
-                print(`Got error {StorageError[errorCode]} while searching`)
-                return
-              end
-              
-              for index, entry in data do
-                for key, value in entry do
-                  print(`{key} : {tostring(value)}`)
-                end
-              end
-              
-              if(newCursorId ~= nil) then
-                Storage.SearchPlayerValue(player, "scores/", 10, newCursorId)
-              else
-                print("done")
-              end
-            end)
-          end)
-        end
-      ```
+    code_samples:
     tags:
       - ServerOnly
     parameters:
       - name: player
         type: Class.Player
+        tags:
         default:
         summary:
       - name: key
         type: string
+        tags:
         default:
         summary:
       - name: limit
         type: number
+        tags:
         default:
         summary:
       - name: cursorId
         type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: "(values: {any}, cursorId: string, error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SearchValue
+    summary: |
+      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursor ID that can be passed to SearchValue to retrieve the next group of results.  If the cursor ID is nil, then there are no more results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value, the cursor ID, and the error code.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: limit
+        type: number
+        tags:
+        default:
+        summary:
+      - name: cursorId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(values: {any}, cursorId: string, error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetPlayerValue
+    summary: |
+      This is the equivalent of calling SetValue(player.user.id .. "|" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetPlayerValue
+    summary: |
+      This is the equivalent of calling SetValue(player.user.id .. "|" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: any
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetValue
+    summary: |
+      Sets a value in storage with the given key.  Currently supported types are string, number, boolean, table and Vector3.  If you have a global value whose value depends on the previous value, for example a leaderboard table where new high scores are inserted between existing ones, use UpdateValue instead or else data could be lost when multiple world instances set the value at the same time.  If your value is a number that needs to be increased or decreased, use IncrementValue instead.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetValue
+    summary: |
+      Sets a value in storage with the given key.  Currently supported types are string, number, boolean, table and Vector3.  If you have a global value whose value depends on the previous value, for example a leaderboard table where new high scores are inserted between existing ones, use UpdateValue instead or else data could be lost when multiple world instances set the value at the same time.  If your value is a number that needs to be increased or decreased, use IncrementValue instead.  The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: value
+        type: any
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePlayerValue
+    summary: |
+      This is the equivalent of calling UpdateValue(player.user.id .. "/" .. key, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: modifier
+        type: "(value: any) -> (any)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdatePlayerValue
+    summary: |
+      This is the equivalent of calling UpdateValue(player.user.id .. "/" .. key, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: modifier
+        type: "(value: any) -> (any)"
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateValue
+    summary: |
+      UpdateValue will use GetValue to retrieve the current value, then call the modifier function
+      with the value as a parameter. If the value does not exist, nil will be passed to the modifier
+      function. UpdateValue will then use SetValue to set the value to what is returned from the
+      modifier function. If the modifier function returns nil, the value will not be set and the
+      callback will be immediately called. The modifier function may be called multiple times if
+      other world instances have made changes to the value. Currently supported types are string,
+      number, boolean, table and Vector3. The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      function self:ServerStart()
+        scene.PlayerJoined:Connect(function(scene, player)
+            Storage.UpdateValue("HighScore", function(currentScore)
+              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
+            end)
+        end)
+      end
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: modifier
+        type: "(value: any) -> (any)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateValue
+    summary: |
+      UpdateValue will use GetValue to retrieve the current value, then call the modifier function
+      with the value as a parameter. If the value does not exist, nil will be passed to the modifier
+      function. UpdateValue will then use SetValue to set the value to what is returned from the
+      modifier function. If the modifier function returns nil, the value will not be set and the
+      callback will be immediately called. The modifier function may be called multiple times if
+      other world instances have made changes to the value. Currently supported types are string,
+      number, boolean, table and Vector3. The callback parameter is the error code.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      function self:ServerStart()
+        scene.PlayerJoined:Connect(function(scene, player)
+            Storage.UpdateValue("HighScore", function(currentScore)
+              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
+            end)
+        end)
+      end
+      ```
+    tags:
+      - ServerOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: modifier
+        type: "(value: any) -> (any)"
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: StorageError) -> ()"
+        tags:
         default:
         summary:
     returns:

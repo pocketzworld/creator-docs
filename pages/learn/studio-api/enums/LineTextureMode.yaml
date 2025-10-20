@@ -1,0 +1,62 @@
+name: LineTextureMode
+type: enums
+summary: |
+  [Unity's LineTextureMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineTextureMode.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: DistributePerSegment
+    summary: |
+      [Unity's LineTextureMode.DistributePerSegment Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineTextureMode.DistributePerSegment.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineTextureMode
+  - name: RepeatPerSegment
+    summary: |
+      [Unity's LineTextureMode.RepeatPerSegment Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineTextureMode.RepeatPerSegment.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineTextureMode
+  - name: Static
+    summary: |
+      [Unity's LineTextureMode.Static Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineTextureMode.Static.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineTextureMode
+  - name: Stretch
+    summary: |
+      [Unity's LineTextureMode.Stretch Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineTextureMode.Stretch.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineTextureMode
+  - name: Tile
+    summary: |
+      [Unity's LineTextureMode.Tile Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineTextureMode.Tile.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.LineTextureMode
+methods:
+math_operations:

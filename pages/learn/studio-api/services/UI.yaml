@@ -34,6 +34,15 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.Event
+  - name: SidebarPlayerTapped
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: aboveChat
     summary:
     description:
@@ -42,6 +51,14 @@ properties:
     tags:
       - ClientOnly
       - ReadOnly
+    type: Class.VisualElement
+  - name: bannerRoot
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     type: Class.VisualElement
   - name: hud
     summary:
@@ -52,6 +69,14 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.VisualElement
+  - name: playerUIEventHandler
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: IPlayerUIEventHandler
   - name: popupRoot
     summary:
     description:
@@ -60,10 +85,50 @@ properties:
     tags:
       - ClientOnly
     type: Class.VisualElement
+  - name: toastRoot
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.VisualElement
 methods:
+  - name: AddWorldTopButton
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: button
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+      - name: index
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: CloseCloset
     summary: |
       Closes the closet UI if it is open.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: CloseDialog
+    summary:
     description:
     is_static: false
     code_samples:
@@ -103,7 +168,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: (string) -> ()
+        type: "(obj: string) -> ()"
         tags:
         default:
         summary:
@@ -124,10 +189,21 @@ methods:
         default:
         summary:
       - name: callback
-        type: (...any) -> (...any)
+        type: "(...any) -> (...any)"
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: HideWorldControls
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -151,7 +227,7 @@ methods:
         default:
         summary:
       - name: outfitSaved
-        type: (CharacterOutfit) -> ()
+        type: "(obj: CharacterOutfit) -> ()"
         tags:
         default:
         summary:
@@ -186,7 +262,65 @@ methods:
         default:
         summary:
       - name: closedWithoutSaving
-        type: () -> ()
+        type: "() -> ()"
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: OpenDialog
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: buttons
+        type: {Class.UIGenericMenuButton}
+        tags:
+        default:
+        summary:
+      - name: title
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: className
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: icon
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: content
+        type: Class.VisualElement
+        tags:
+          - optional
+        default:
+        summary:
+      - name: sound
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+      - name: closeOnBackgroundClick
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+      - name: onClosed
+        type: "() -> ()"
         tags:
           - optional
         default:
@@ -242,6 +376,33 @@ methods:
     returns:
       - type: number
         summary:
+  - name: ShowConfirmationToast
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: message
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ShowWorldControls
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
   - name: TakeRoomSnapshot
     summary:
     description:
@@ -251,7 +412,7 @@ methods:
       - ClientOnly
     parameters:
       - name: snapshotClosed
-        type: () -> ()
+        type: "() -> ()"
         tags:
           - optional
         default:

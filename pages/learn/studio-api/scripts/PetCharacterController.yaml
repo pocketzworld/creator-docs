@@ -1,0 +1,75 @@
+name: PetCharacterController
+type: scripts
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: PetCreatedEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: PetOutfitChangedEvent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: Class.Event
+methods:
+  - name: GetPetForPlayer
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {any}
+        summary: |
+          The pet info, containing:
+          - player (Player): The player that owns the pet
+          - character (Character): The character that represents the pet
+          - outfit (CharacterOutfit): The outfit of the pet
+          - traits (string[]): The traits of the pet
+          - characterChangedEvent (Event): The event that is fired when the character changes
+          - petOutfitChangedEvent (Event): The event that is fired when the pet outfit changes
+  - name: GetPetFromCharacter
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: character
+        type: Class.Character
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {any}
+        summary: |
+          The pet info, containing:
+          - player (Player): The player that owns the pet
+          - character (Character): The character that represents the pet
+          - outfit (CharacterOutfit): The outfit of the pet
+          - traits (string[]): The traits of the pet
+          - characterChangedEvent (Event): The event that is fired when the character changes
+          - petOutfitChangedEvent (Event): The event that is fired when the pet outfit changes
+math_operations:

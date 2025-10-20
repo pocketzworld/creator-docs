@@ -82,7 +82,6 @@ math_operations:
   - operation: '=='
     summary: |
       [Unity's StyleBackgroundSize.operator_eq Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.StyleBackgroundSize-operator_eq.html)
-    description:
     type_a: StyleBackgroundSize
     type_b: StyleBackgroundSize
     return_type: boolean

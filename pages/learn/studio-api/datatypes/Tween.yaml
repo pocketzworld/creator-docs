@@ -1,866 +1,1084 @@
 name: Tween
 type: datatypes
-summary: Tween object for creating smooth animations and transitions.
-  Tween objects are used to create smooth animations and transitions between values. They can be used to animate properties of objects, such as position, scale, rotation, and color. Tweens can be played, paused, stopped, and updated. They can also be delayed, looped, and ping-ponged. Easing functions can be applied to tweens to create different effects, such as acceleration and deceleration. Tweens can be created using the Tween.new method.
+summary: |
+  Tween object for creating smooth animations and transitions. Tween objects are used to create smooth animations and transitions between values. They can be used to animate properties of objects, such as position, scale, rotation, and color. Tweens can be played, paused, stopped, and updated. They can also be delayed, looped, and ping-ponged. Easing functions can be applied to tweens to create different effects, such as acceleration and deceleration. Tweens can be created using the Tween.new method.
 description:
 code_samples:
 inherits:
+tags:
 constructors:
 properties:
-  - name: isPlaying
-    summary: Indicates if the tween is currently playing. If the tween is playing, it is animating its properties.
+  - name: duration
+    summary: |
+      Returns the tween duration in seconds.  Note that zero will be returned if the tween is not playing.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      print(tween.isPlaying) -- false
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: isAnyTweenAnimating
+    summary: |
+      Returns true if any tween is currently animating.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: isPaused
-    summary: Indicates if the tween is currently paused. If the tween is paused, it can be resumed by calling the Play method.
+    summary: |
+      Returns true if the tween is currently paused
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      print(tween.isPaused) -- false
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isPlaying
+    summary: |
+      Returns true if the tween is valid and currently playing.  Note that false will always
+      be returned for Element tweens as the play state is managed by the top level collection tween.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
   - name: isValid
-    summary: Indicates if the tween is valid and can be used. If the tween is not valid, it has been stopped or removed from the tween manager.
+    summary: |
+      Returns true if the tween has not been stopped
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      print(tween.isValid) -- true
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: boolean
-  - name: time
-    summary: Current time of the tween.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      print(tween.time) -- 0
-      ```
-    type: number
   - name: normalizedTime
-    summary: Current time of the tween normalized to the range [0, 1]. This value represents the progress of the tween animation.
+    summary: |
+      Get the current elapsed time using a normalized time of 0-1
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      print(tween.normalizedTime) -- 0
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: duration
-    summary: Total duration of the tween. The tween will take this amount of time to complete.
+  - name: time
+    summary: |
+      Get current elapsed time in seconds.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      print(tween.duration) -- 1
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
     type: number
-  - name: IsAnyTweenAnimating
-    summary: Checks if any tween is currently animating. Returns true if any tween is playing, and false if no tweens are playing.
-    is_static: true
-    code_samples: |
-      ```lua
-      print(Tween.IsAnyTweenAnimating()) -- false
-      ```
-    type: boolean
 methods:
-  - name: Play
-    summary: Plays the tween animation. If the tween is already playing, it will restart from the beginning.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Play()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: Stop
-    summary: Stops the tween animation. If the tween is set to destroy, deactivate, or disable on stop, it will be removed from the tween manager.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Stop()
-      ```
-    parameters:
-      - name: executeCallbacks
-        type: boolean
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: Pause
-    summary: Pauses the tween animation. The tween can be resumed by calling the Play method.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Pause()
-      ```
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Update
-    summary: Updates the tween animation for the given delta time. Returns true if the tween is still playing, and false if it has finished.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Update(0.1)
-      ```
-    parameters:
-      - name: deltaTime
-        type: number
-        default:
-        summary:
-    returns:
-      - type: boolean
-        summary:
-  - name: Priority
-    summary: Sets the priority of the tween. Higher priority tweens will be played before lower priority tweens.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Priority(1)
-      ```
-    parameters:
-      - name: priority
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: Delay
-    summary: Delays the start of the tween animation. The tween will not start until the delay time has passed.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Delay(1)
-      ```
-    parameters:
-      - name: seconds
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
   - name: AddDelay
-    summary: Adds additional delay to the tween animation. The tween will not start until the delay time has passed.
+    summary: |
+      Add a number of seconds to the existing delay amount.  If the value added decreases
+      the delay below zero the it will be set to zero.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:AddDelay(1)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: seconds
         type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: Duration
-    summary: Sets the duration of the tween animation. The tween will take this amount of time to complete.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Duration(2)
-      ```
-    parameters:
-      - name: seconds
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: Id
-    summary: Sets the ID of the tween. The ID can be used to identify the tween in the tween manager.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Id(1)
-      ```
-    parameters:
-      - name: id
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: DestroyOnStop
-    summary: Sets whether the tween should be destroyed when stopped. If true, the tween will be removed from the tween manager when stopped.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:DestroyOnStop(true)
-      ```
-    parameters:
-      - name: value
-        type: boolean
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: DeactivateOnStop
-    summary: Sets whether the tween should be deactivated when stopped. If true, the tween will be deactivated when stopped.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:DeactivateOnStop(true)
-      ```
-    parameters:
-      - name: value
-        type: boolean
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: DisableOnStop
-    summary: Sets whether the tween should be disabled when stopped. If true, the tween will be disabled when stopped.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:DisableOnStop(true)
-      ```
-    parameters:
-      - name: value
-        type: boolean
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
   - name: AutoStop
-    summary: Sets whether the tween should automatically stop when finished. If true, the tween will stop automatically when it reaches the end of its duration.
+    summary: |
+      Whether or not the tween should automatically stop itself when the float Tween.time is greater
+      or equal to the float Tween.duration
+      
+      Note that a tween set to not auto stop will never end until manually stopped.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:AutoStop(true)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: value
         type: boolean
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: PingPong
-    summary: Creates a ping-pong effect for the tween animation. The tween will play forward and then backward.
+  - name: DeactivateOnStop
+    summary: |
+      Set the tween to automatically deactivate the GameObject attached to the target when the Tween stops
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:PingPong()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: From
-    summary: Starts the tween animation from a specified point. The tween will start from the current value of the tween target.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:From()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: Loop
-    summary: Loops the tween animation a specified number of times. If the count is set to -1, the tween will loop indefinitely.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Loop(2)
-      ```
-    parameters:
-      - name: count
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: UnscaledTime
-    summary: Sets whether the tween should use unscaled time for its animation. If true, the tween will not be affected by time scale.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:UnscaledTime(true)
-      ```
-    parameters:
-      - name: unscaled
+      - name: value
         type: boolean
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: Element
-    summary: Sets the element associated with the tween animation. The tween will animate the properties of the specified element.
+  - name: Delay
+    summary: |
+      Amount of time to wait before starting the tween.
+      
+      Note that the OnStart method will not be called until after the delay.
+      
+      When Delay is used on a looping tween the delay is only applied once and not on each loop.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:Element(DataType.Tween)
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: element
-        type: DataType.Tween
+      - name: seconds
+        type: number
+        tags:
+        default:
+        summary: |
+          Delay in seconds
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: DestroyOnStop
+    summary: |
+      Set the tween to automatically destroy the GameObject attached to the target when the Tween stops
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: value
+        type: boolean
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseInQuadratic
-    summary: Applies an ease-in quadratic easing function to the tween. This function accelerates the tween animation.
+  - name: DisableOnStop
+    summary: |
+      Automatically disable the target Component when the Tween stops
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInQuadratic()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
+      - name: value
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseOutQuadratic
-    summary: Applies an ease-out quadratic easing function to the tween. This function decelerates the tween animation.
+  - name: Duration
+    summary: |
+      Set the duration in seconds of the tween.
+      
+      Using the Duration modifier on either a Sequence or a Group will cause the duration of
+      all elements to be overridden with the given duration.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutQuadratic()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
+      - name: seconds
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration in seconds
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseInOutQuadratic
-    summary: Applies an ease-in-out quadratic easing function to the tween. This function accelerates and decelerates the tween animation.
+  - name: EaseIn
+    summary: |
+      Ease in using the given easing function
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutQuadratic()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
+      - name: easeDelegate
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
+        tags:
+        default:
+        summary: |
+          Delegate to use for easing int
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseInCubic
-    summary: Applies an ease-in cubic easing function to the tween. This function accelerates the tween animation.
+  - name: EaseIn
+    summary: |
+      Ease in using the given easing function
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInCubic()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-    returns:
-      - type: DataType.Tween
+      - name: easeDelegate
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
+        tags:
+        default:
+        summary: |
+          Delegate to use for easing int
+      - name: param
+        type: DataType.Vector4
+        tags:
+        default:
         summary:
-  - name: EaseOutCubic
-    summary: Applies an ease-out cubic easing function to the tween. This function decelerates the tween animation.
-    is_static: false
-    code_samples: | 
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutCubic()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInOutCubic
-    summary: Applies an ease-in-out cubic easing function to the tween. This function accelerates and decelerates the tween animation.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutCubic()
-      ```
-    parameters:
     returns:
       - type: DataType.Tween
         summary:
   - name: EaseInBack
-    summary: Applies an ease-in back easing function to the tween. This function overshoots the target value before settling into place.
+    summary: |
+      Applies an ease-in back easing function to the tween. This function overshoots the target value before settling into place.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInBack()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: amplitude
         type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseOutBack
-    summary: Applies an ease-out back easing function to the tween. This function overshoots the target value before settling into place.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutBack()
-      ```
-    parameters:
-      - name: amplitude
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInOutBack
-    summary: Applies an ease-in-out back easing function to the tween. This function overshoots the target value before settling into place.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutBack()
-      ```
-    parameters:
-      - name: amplitude
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInElastic
-    summary: Applies an ease-in elastic easing function to the tween. This function creates a spring-like effect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInElastic()
-      ```
-    parameters:
-      - name: oscillations
-        type: number
-        default:
-        summary:
-      - name: springiness
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseOutElastic
-    summary: Applies an ease-out elastic easing function to the tween. This function creates a spring-like effect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutElastic()
-      ```
-    parameters:
-      - name: oscillations
-        type: number
-        default:
-        summary:
-      - name: springiness
-        type: number
-        default:
-        summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInOutElastic
-    summary: Applies an ease-in-out elastic easing function to the tween. This function creates a spring-like effect.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutElastic()
-      ```
-    parameters:
-      - name: oscillations
-        type: number
-        default:
-        summary:
-      - name: springiness
-        type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
   - name: EaseInBounce
-    summary: Applies an ease-in bounce easing function to the tween. This function creates a bouncing effect.
+    summary: |
+      Applies an ease-in bounce easing function to the tween. This function creates a bouncing effect.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInBounce()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: oscillations
         type: number
+        tags:
+          - optional
         default:
         summary:
       - name: springiness
         type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseOutBounce
-    summary: Applies an ease-out bounce easing function to the tween. This function creates a bouncing effect.
+  - name: EaseInCircle
+    summary: |
+      Applies an ease-in circle easing function to the tween. This function accelerates the tween animation.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutBounce()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInCubic
+    summary: |
+      Ease in using Cubic interpolation
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInCubicBezier
+    summary: |
+      Applies an ease-in cubic Bezier easing function to the tween. This function accelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: p0
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p1
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p2
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p3
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInElastic
+    summary: |
+      Applies an ease-in elastic easing function to the tween. This function creates a spring-like effect.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: oscillations
         type: number
+        tags:
+          - optional
         default:
         summary:
       - name: springiness
         type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInExponential
+    summary: |
+      Applies an ease-in exponential easing function to the tween. This function accelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: exponent
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutBack
+    summary: |
+      Applies an ease-in-out back easing function to the tween. This function overshoots the target value before settling into place.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: amplitude
+        type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
   - name: EaseInOutBounce
-    summary: Applies an ease-in-out bounce easing function to the tween. This function creates a bouncing effect.
+    summary: |
+      Applies an ease-in-out bounce easing function to the tween. This function creates a bouncing effect.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutBounce()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: oscillations
         type: number
+        tags:
+          - optional
         default:
         summary:
       - name: springiness
         type: number
+        tags:
+          - optional
         default:
         summary:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInSine
-    summary: Applies an ease-in sine easing function to the tween. This function accelerates the tween animation.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInSine()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseOutSine
-    summary: Applies an ease-out sine easing function to the tween. This function decelerates the tween animation.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutSine()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInOutSine
-    summary: Applies an ease-in-out sine easing function to the tween. This function accelerates and decelerates the tween animation.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutSine()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseInCircle
-    summary: Applies an ease-in circular easing function to the tween. This function accelerates the tween animation.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInCircle()
-      ```
-    parameters:
-    returns:
-      - type: DataType.Tween
-        summary:
-  - name: EaseOutCircle
-    summary: Applies an ease-out circular easing function to the tween. This function decelerates the tween animation.
-    is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutCircle()
-      ```
-    parameters:
     returns:
       - type: DataType.Tween
         summary:
   - name: EaseInOutCircle
-    summary: Applies an ease-in-out circular easing function to the tween. This function accelerates and decelerates the tween animation.
+    summary: |
+      Applies an ease-in-out circle easing function to the tween. This function accelerates and decelerates the tween animation.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutCircle()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseInExponential
-    summary: Applies an ease-in exponential easing function to the tween. This function accelerates the tween animation.
+  - name: EaseInOutCubic
+    summary: |
+      Ease in and out using Cubic interpolation
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInExponential()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: exponent
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutCubicBezier
+    summary: |
+      Applies an ease-in-out cubic Bezier easing function to the tween. This function accelerates and decelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: p0
         type: number
+        tags:
+        default:
+        summary:
+      - name: p1
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p2
+        type: number
+        tags:
+        default:
+        summary:
+      - name: p3
+        type: number
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseOutExponential
-    summary: Applies an ease-out exponential easing function to the tween. This function decelerates the tween animation.
+  - name: EaseInOutElastic
+    summary: |
+      Applies an ease-in-out elastic easing function to the tween. This function creates a spring-like effect.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutExponential()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: exponent
+      - name: oscillations
         type: number
+        tags:
+          - optional
+        default:
+        summary:
+      - name: springiness
+        type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
   - name: EaseInOutExponential
-    summary: Applies an ease-in-out exponential easing function to the tween. This function accelerates and decelerates the tween animation.
+    summary: |
+      Applies an ease-in-out exponential easing function to the tween. This function accelerates and decelerates the tween animation.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutExponential()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: exponent
         type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseInCubicBezier
-    summary: Applies an ease-in cubic Bezier easing function to the tween. This function accelerates the tween animation.
+  - name: EaseInOutQuadratic
+    summary: |
+      Ease in and out using Quadratic interpolation
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInCubicBezier()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: p0
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInOutSine
+    summary: |
+      Applies an ease-in-out sine easing function to the tween. This function accelerates and decelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInQuadratic
+    summary: |
+      Ease in using Quadratic interpolation
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseInSine
+    summary: |
+      Applies an ease-in sine easing function to the tween. This function accelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOut
+    summary: |
+      Ease out using the given easing function
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: easeDelegate
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
+        tags:
+        default:
+        summary: |
+          Delegate to use for easing out
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOut
+    summary: |
+      Ease out using the given easing function
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: easeDelegate
+        type: "(normalizedTime: number, param: Vector4) -> (number)"
+        tags:
+        default:
+        summary: |
+          Delegate to use for easing out
+      - name: easeParams
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          Optional easing paramters
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutBack
+    summary: |
+      Applies an ease-out back easing function to the tween. This function overshoots the target value before settling into place.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: amplitude
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: p1
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutBounce
+    summary: |
+      Applies an ease-out bounce easing function to the tween. This function creates a bouncing effect.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: oscillations
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: p2
+      - name: springiness
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: p3
-        type: number
-        default:
+    returns:
+      - type: DataType.Tween
         summary:
+  - name: EaseOutCircle
+    summary: |
+      Applies an ease-out circle easing function to the tween. This function decelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutCubic
+    summary: |
+      Ease Out using Cubic interpolation
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: DataType.Tween
         summary:
   - name: EaseOutCubicBezier
-    summary: Applies an ease-out cubic Bezier easing function to the tween. This function decelerates the tween animation.
+    summary: |
+      Applies an ease-out cubic Bezier easing function to the tween. This function decelerates the tween animation.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseOutCubicBezier()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: p0
         type: number
+        tags:
         default:
         summary:
       - name: p1
         type: number
+        tags:
         default:
         summary:
       - name: p2
         type: number
+        tags:
         default:
         summary:
       - name: p3
         type: number
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
-  - name: EaseInOutCubicBezier
-    summary: Applies an ease-in-out cubic Bezier easing function to the tween. This function accelerates and decelerates the tween animation.
+  - name: EaseOutElastic
+    summary: |
+      Applies an ease-out elastic easing function to the tween. This function creates a spring-like effect.
+    description:
     is_static: false
-    code_samples: |
-      ```lua
-      local tween = Tween.new()
-
-      tween:EaseInOutCubicBezier()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
-      - name: p0
+      - name: oscillations
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: p1
+      - name: springiness
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: p2
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutExponential
+    summary: |
+      Applies an ease-out exponential easing function to the tween. This function decelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: exponent
         type: number
+        tags:
+          - optional
         default:
         summary:
-      - name: p3
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutQuadratic
+    summary: |
+      Ease Out using Quadratic interpolation
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: EaseOutSine
+    summary: |
+      Applies an ease-out sine easing function to the tween. This function decelerates the tween animation.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Element
+    summary: |
+      Adds an element to a Sequext or Group tween
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: element
+        type: DataType.Tween
+        tags:
+        default:
+        summary: |
+          element to add
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: From
+    summary: |
+      Switch the tween to start the configured 'from' value and end at the current value
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Id
+    summary: |
+      Set a unique identifier for the tween. Setting a unique identifier value of zero indicates
+      that a tween has no identifier.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: id
         type: number
+        tags:
+        default:
+        summary: |
+          Unique identier
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Loop
+    summary: |
+      Loop the tween
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: count
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          Number of loops or -1 to loop forever
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: OnPlay
+    summary: |
+      Callback to invoke when the Tween starts playing and the delay is finished
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: callback
+        type: "() -> ()"
+        tags:
+        default:
+        summary: |
+          Action
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: OnStop
+    summary: |
+      Callback to invoke when the Tween is stopped
+      
+      Note that the OnStop callback may not be called if the tween is stopped using
+      an executeCallbacks value of false.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: callback
+        type: "() -> ()"
+        tags:
+        default:
+        summary: |
+          Action
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Pause
+    summary: |
+      Pause the tween until either Play is called again or the tween is stopped
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: PingPong
+    summary: |
+      Enables or PingPong mode.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: PingPong
+    summary: |
+      Enables or PingPong mode.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: value
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Play
+    summary: |
+      Start the tween playing.  Note that once a tween begins playing it can no longer
+      me modified.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Priority
+    summary: |
+      Sets a user defined value that indicates the priority of the tween.  This priority is
+      then used in Tween.Frame to allow the application to determine the max priority being run
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: priority
+        type: number
+        tags:
         default:
         summary:
     returns:
       - type: DataType.Tween
         summary:
   - name: Reset
-    summary: Resets all tweens. This will stop all tweens and remove them from the tween manager.
+    summary: |
+      Call to completely reset the tween system by stopping all running tweens, clearing all the caches, and stopping the updater
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      Tween.Reset()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
     returns:
       - type: void
         summary:
-  - name: StopAll
-    summary: Stops all tweens. This will stop all tweens and remove them from the tween manager.
+  - name: Stop
+    summary: |
+      Stop all tweens running on a target object
+    description:
     is_static: true
-    code_samples: |
-      ```lua
-      Tween.StopAll()
-      ```
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary: |
+          Optional identifier to filter by (0 = no identifier)
+      - name: executeCallbacks
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          True if any remaining callbacks such as OnStop should be called (Default true)
+    returns:
+      - type: void
+        summary:
+  - name: Stop
+    summary: |
+      Stop all tweens running on a target object
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
     parameters:
       - name: executeCallbacks
         type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          True if any remaining callbacks such as OnStop should be called (Default true)
+    returns:
+      - type: void
+        summary:
+  - name: StopAll
+    summary: |
+      Stop all playing tweens
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: executeCallbacks
+        type: boolean
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: void
         summary:
+  - name: UnscaledTime
+    summary: |
+      Sets the animation to use unscaled time rather than normal scaled time
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: unscaled
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          True to use unscaled time
+    returns:
+      - type: DataType.Tween
+        summary:
+  - name: Update
+    summary: |
+      Manually update the tween by adding the given amount of delta time
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: deltaTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary: |
+          True if the tween is still running
 math_operations:

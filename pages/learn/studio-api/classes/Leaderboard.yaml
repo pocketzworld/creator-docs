@@ -1,0 +1,301 @@
+name: Leaderboard
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+  - name: DeleteEntry
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: entryId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: DeleteEntryForPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetEntries
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: fromRank
+        type: number
+        tags:
+        default:
+        summary:
+      - name: limit
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entries: {LeaderboardEntry}, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetEntry
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: entryId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetEntryForPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IncrementScore
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: entryId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: score
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: IncrementScoreForPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: score
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Reset
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetScore
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: entryId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+      - name: score
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetScoreForPlayer
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: leaderboardId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: score
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(entry: LeaderboardEntry, error: LeaderboardError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:

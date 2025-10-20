@@ -1,154 +1,15 @@
 name: Inventory
-type: classes
-summary: |
-  The Inventory API provides functionality for handling owned items and currencies.  Inventories can be stored per player, but also supports non-player ids to allow for features such as storage boxes for either a single player or group of players.  Changes to the inventory are handled through InventoryTransactions which contains actions that are either all processed when a operation succeeds or are all skipped if the operation fails.  This means you will never have cases such as a player buying an item from a shop within the world, losing their currency, but not getting the item, or cases such as two players trading items and the items end up duplicated or permanently lost.  The Inventory API is only available on the server.  See InventoryError for a list of errors that can be returned from Inventory functions.  There is a limit of how often Inventory functions can be called before functions will start returning InventoryError.RequestThrottled.  See the documentation for InventoryError.RequestThrottled for details.
+type: services
+summary:
 description:
 code_samples:
 inherits:
 tags:
-  - ServerOnly
 constructors:
 properties:
 methods:
-  - name: GetItem
-    summary: |
-      Returns the data for a particular item owned by the holder.  The callback parameters are an InventoryItem containing the item data and the error code.  The item will be nil and the error code will be InventoryError.None if the holder does not own the item.  The item will be nil and the error code will be a value other than InventoryError.None if an error occurred.
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-    parameters:
-      - name: holderId
-        type: string
-        default:
-        summary:
-      - name: itemId
-        type: string
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: GetPlayerItem
-    summary: |
-      This is the equivalent of calling GetItem(player.user.id, callback).
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        function PrintItem(player: Player, itemId: string)
-          Inventory.GetPlayerItem(player, itemId, function(item)
-            if(item == nil) then
-              print(`Player {player.name} does not have {itemId}`)
-            else
-              print(`Player {player.name} has {item.amount} of {item.id}`)
-            end
-          end)
-        end
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: itemId
-        type: string
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: GetItems
-    summary: |
-      Returns up to the given limit number of items the holder owns.  To get the first group of items, pass in nil for the cursorId.  The callback includes a cursorId that can be passed to GetItems to retrieve the next group of items.  If the cursor ID is nil, then there are no more items.  The callback parameters are an array of InventoryItem, the cursor ID, and the error code.  The array will be empty and the error code will be InventoryError.None if the holder owns no items.  The array will be nil and the error code will be a value other than InventoryError.None if an error occurred.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-        function GetItems(holder: string, limit: number, cursorId: string)
-          Inventory.GetItems(holder, limit, cursorId, function(items, newCursorId, errorCode)
-            if(items == nil) then
-              print(`Got error {InventoryError[errorCode]} while getting items`)
-              return
-            end
-                    
-            for index, item in items do
-              print(`{item.id} : {item.amount}`)
-            end
-            
-            if(newCursorId ~= nil) then
-              GetItems(holder, limit, newCursorId)
-            else
-              print("done")
-            end
-          end)
-        end
-        GetItems("SharedStorage", 15)
-      ```
-    tags:
-      - ServerOnly
-    parameters:
-      - name: holderId
-        type: string
-        default:
-        summary:
-      - name: limit
-        type: number
-        default:
-        summary:
-      - name: cursorId
-        type: string
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: GetPlayerItems
-    summary: |
-      This is the equivalent of calling GetItems(player.user.id, limit, cursorId, callback).
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        default:
-        summary:
-      - name: limit
-        type: number
-        default:
-        summary:
-      - name: cursorId
-        type: string
-        default:
-        summary:
-      - name: callback
-        type: function
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
   - name: CommitTransaction
-    summary: |
-      CommitTransaction will perform all the actions contained in the transaction if the returned error code is InventoryError.None or none of the actions if the returned error code is a value other than InventoryError.None.  The callback parameters are the transaction ID and error code.  The returned transaction ID can be used to call RollbackTransaction if the actions need to be undone.
+    summary:
     description:
     is_static: true
     code_samples:
@@ -157,18 +18,149 @@ methods:
     parameters:
       - name: transaction
         type: Class.InventoryTransaction
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CommitTransaction
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: transaction
+        type: Class.InventoryTransaction
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: "(transactionId: string, error: InventoryError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetItem
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: holderId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: itemId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(item: InventoryItem, error: InventoryError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetItems
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: holderId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: limit
+        type: number
+        tags:
+        default:
+        summary:
+      - name: cursor
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(items: {InventoryItem}, cursorId: string, error: InventoryError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPlayerItem
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: itemId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(item: InventoryItem, error: InventoryError) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: GetPlayerItems
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: limit
+        type: number
+        tags:
+        default:
+        summary:
+      - name: cursor
+        type: string
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(items: {InventoryItem}, cursorId: string, error: InventoryError) -> ()"
+        tags:
         default:
         summary:
     returns:
       - type: void
         summary:
   - name: RollbackTransaction
-    summary: |
-      Undos the actions of a committed transaction by passing in the transaction ID that was returned in the callback of CommitTransaction.  The callback parameter is the error code.
+    summary:
     description:
     is_static: true
     code_samples:
@@ -177,10 +169,28 @@ methods:
     parameters:
       - name: transactionId
         type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RollbackTransaction
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: transactionId
+        type: string
+        tags:
         default:
         summary:
       - name: callback
-        type: function
+        type: "(error: InventoryError) -> ()"
+        tags:
         default:
         summary:
     returns:

@@ -1,118 +1,134 @@
 name: Timer
 type: classes
-summary: |
-
+summary:
 description:
 code_samples:
 inherits:
+tags:
 constructors:
   - name: new
-    summary: Creates a new timer
+    summary: |
+      Creates a new timer
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: interval
         type: number
+        tags:
         default:
         summary:
       - name: callback
-        type: Class.LuaFunction
+        type: "() -> ()"
+        tags:
         default:
         summary:
       - name: repeats
         type: boolean
+        tags:
         default:
         summary:
     returns:
       - type: Class.Timer
         summary:
 properties:
-  - name: interval
-    summary: |
-
-    description:
-    is_static: false
-    code_samples:
-    type: number
   - name: enabled
-    summary: |
-
+    summary:
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: boolean
+  - name: interval
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
 methods:
   - name: After
-    summary: Behaves like Timer.new(interval, callback, false)
+    summary: |
+      Behaves like Timer.new(interval, callback, false)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: interval
         type: number
+        tags:
         default:
         summary:
       - name: callback
-        type: Class.LuaFunction
+        type: "() -> ()"
+        tags:
         default:
         summary:
     returns:
       - type: Class.Timer
         summary:
   - name: Every
-    summary: Behaves like Timer.new(interval, callback, true)
+    summary: |
+      Behaves like Timer.new(interval, callback, true)
     description:
     is_static: true
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: interval
         type: number
+        tags:
         default:
         summary:
       - name: callback
-        type: Class.LuaFunction
+        type: "() -> ()"
+        tags:
         default:
         summary:
     returns:
       - type: Class.Timer
         summary:
-  - name: SetEnabled
-    summary: Enables or disables the timer
+  - name: Restart
+    summary: |
+      Starts the timer and resets its elapsed time
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
-      - name: enabled
-        type: boolean
-        default:
-        summary:
     returns:
       - type: void
         summary:
   - name: Start
-    summary: Starts the timer
+    summary: |
+      Starts the timer
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientAndServer
     parameters:
     returns:
       - type: void
         summary:
   - name: Stop
-    summary: Stops the timer
+    summary: |
+      Stops the timer
     description:
     is_static: false
     code_samples:
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: Restart
-    summary: Starts the timer and resets its elapsed time
-    description:
-    is_static: false
-    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
     returns:
       - type: void

@@ -1,0 +1,29 @@
+name: WalletState
+type: classes
+summary:
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: earnedGold
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+  - name: gold
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: number
+methods:
+math_operations:

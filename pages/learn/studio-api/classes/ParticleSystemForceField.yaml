@@ -2,66 +2,98 @@ name: ParticleSystemForceField
 type: classes
 summary: |
   The Unity class ParticleSystemForceField gives you the power of controlling the behavior of your particles based on their interactions with force fields in the environment. Specially made for use with the Class.ParticleSystem class, it offers a broader degree of freedom over the movement of particles within a scene.
-
+  
   These force fields are essentially areas designated within the Particle System that exert specific forces on the particles, guiding their motion and behavior. This could be used to simulate natural forces like gravity, magnetic fields, wind or even custom forces that serve your game's specific needs.
-
+  
   The properties of these force fields, like their range, length and the gravity focus, can be tweaked to design various appealing and realistic particle effects. You'll find it an indispensable tool in building vibrant and interactive environments.
-
+  
   Refer to [Unity's ParticleSystemForceField Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField.html) to further understand its potentials and applications.
-
 description:
 code_samples:
 inherits:
   - Class.Behaviour
+tags:
 constructors:
 properties:
-  - name: startRange
-    summary: |
-      The 'startRange' property signifies the radius from the center of the ParticleSystemForceField where the force begins to apply. This helps in defining the initial region of influence of the force field. More about this property can be found at [Unity's ParticleSystemForceField.startRange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-startRange.html).
-    is_static: false
-    code_samples:
-    type: number
   - name: endRange
     summary: |
-      The 'endRange' property refers to the outer radius from the center where the force ceases to apply, defining the ultimate scope of the force field. For more details on this property, refer to [Unity's ParticleSystemForceField.endRange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-endRange.html).
+      The 'endRange' property refers to the outer radius from the center where the force ceases to apply, defining the ultimate scope of the force field.
+      [Unity's ParticleSystemForceField.endRange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-endRange.html)
+    description:
     is_static: false
     code_samples:
-    type: number
-  - name: length
-    summary: |
-      The 'length' property sets the extent of the ParticleSystemForceField along its local Z-axis. It can be used to configure a depth-wise influence of the force, providing a 3D move space for the particles. Learn more about it at [Unity's ParticleSystemForceField.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-length.html).
-    is_static: false
-    code_samples:
+    tags:
+      - ClientOnly
     type: number
   - name: gravityFocus
     summary: |
-      The 'gravityFocus' property influences the focus point for gravitational forces. That's to say, it adjusts how much the particles rush to reach an imaginary focus point. More details can be found in [Unity's ParticleSystemForceField.gravityFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-gravityFocus.html).
+      The 'gravityFocus' property influences the focus point for gravitational forces. That's to say, it adjusts how much the particles rush to reach an imaginary focus point.
+      [Unity's ParticleSystemForceField.gravityFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-gravityFocus.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: number
-  - name: rotationRandomness
+  - name: length
     summary: |
-      The 'rotationRandomness' property introduces variability to the direction of the particles when in contact with the force field. This can be handy for generating organic and less predictable visual effects. More information can be found at [Unity's ParticleSystemForceField.rotationRandomness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-rotationRandomness.html).
+      The 'length' property sets the extent of the ParticleSystemForceField along its local Z-axis. It can be used to configure a depth-wise influence of the force, providing a 3D move space for the particles.
+      [Unity's ParticleSystemForceField.length Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-length.html)
+    description:
     is_static: false
     code_samples:
-    type: DataType.Vector2
+    tags:
+      - ClientOnly
+    type: number
   - name: multiplyDragByParticleSize
     summary: |
-      With 'multiplyDragByParticleSize' property set to true, the particles' drag will scale in relation to their size. Enabling this may result in larger particles showing slower movement than smaller ones. For more information, visit [Unity's ParticleSystemForceField.multiplyDragByParticleSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-multiplyDragByParticleSize.html).
+      With 'multiplyDragByParticleSize' property set to true, the particles' drag will scale in relation to their size. Enabling this may result in larger particles showing slower movement than smaller ones.
+      [Unity's ParticleSystemForceField.multiplyDragByParticleSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-multiplyDragByParticleSize.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
   - name: multiplyDragByParticleVelocity
     summary: |
-      The 'multiplyDragByParticleVelocity' property implies that the faster a particle moves, the more drag will be applied to it when this property is set to true. This property adds a sense of fluid dynamics to the particle system. Check out [Unity's ParticleSystemForceField.multiplyDragByParticleVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-multiplyDragByParticleVelocity.html).
+      The 'multiplyDragByParticleVelocity' property implies that the faster a particle moves, the more drag will be applied to it when this property is set to true. This property adds a sense of fluid dynamics to the particle system.
+      [Unity's ParticleSystemForceField.multiplyDragByParticleVelocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-multiplyDragByParticleVelocity.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
+  - name: rotationRandomness
+    summary: |
+      The 'rotationRandomness' property introduces variability to the direction of the particles when in contact with the force field. This can be handy for generating organic and less predictable visual effects.
+      [Unity's ParticleSystemForceField.rotationRandomness Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-rotationRandomness.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: startRange
+    summary: |
+      The 'startRange' property signifies the radius from the center of the ParticleSystemForceField where the force begins to apply. This helps in defining the initial region of influence of the force field.
+      [Unity's ParticleSystemForceField.startRange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-startRange.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
   - name: vectorField
     summary: |
-      The 'vectorField' property associates a Texture3D to the ParticleSystemForceField, providing a 3D grid of vectors that can facilitate complex motion. Visit [Unity's ParticleSystemForceField.vectorField Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-vectorField.html) for more details.
+      The 'vectorField' property associates a Texture3D to the ParticleSystemForceField, providing a 3D grid of vectors that can facilitate complex motion.
+      [Unity's ParticleSystemForceField.vectorField Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystemForceField-vectorField.html)
+    description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: Class.Texture3D
 methods:
 math_operations:

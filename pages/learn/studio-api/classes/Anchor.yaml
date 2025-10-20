@@ -1,82 +1,107 @@
 name: Anchor
 type: classes
 summary: |
-    Anchors enable specific actions for players upon reaching designated points in the environment, such as sitting down, standing up, or other actions.
+  Anchors enable specific actions for characters upon reaching designated points in the environment, such as sitting down, standing up, or other actions.
 description:
 code_samples:
 inherits:
-  - Class.Behaviour
+  - Class.NetworkBehaviour
+tags:
 constructors:
 properties:
   - name: Entered
     summary: |
-      Called when a player enters the anchor.
+      Called when a player's character enters the anchor.
+      Event Parameters:
+          Anchor: the anchor that was entered
+          Character: the character that entered the anchor
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: Class.Event
-    returns:
-      - type: void
-        summary:
   - name: Exited
     summary: |
-      Called when a player exits the anchor.
+      Called when a player's character exits the anchor.
+      Event Parameters:
+          Anchor: the anchor that was exited
+          Character: the character that exited the anchor
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
     type: Class.Event
-    returns:
-      - type: void
-        summary:
-  - name: enterFromPosition
-    summary: |
-      Enters the anchor from a specific position.
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Vector3
-    returns:
-      - type: void
-        summary:
-  - name: exitToPosition
-    summary: |
-      Exits the anchor to a specific position.
-    description:
-    is_static: false
-    code_samples:
-    type: Class.Vector3
-    returns:
-      - type: void
-        summary:
   - name: enterFrom
     summary: |
-      Enters the anchor from a specific transform.
+      The transform that a character will move to before entering the anchor.
     description:
     is_static: false
     code_samples:
-    type: Transform
-    returns:
-      - type: void
-        summary:
+    tags:
+      - ClientOnly
+    type: Class.Transform
+  - name: enterFromPosition
+    summary: |
+      Returns the EnterFrom transform's position if it is set, otherwise returns the default entry position.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
   - name: exitTo
     summary: |
-      Exits the anchor to a specific transform.
+      The transform that a character will move to when exiting the anchor.
     description:
     is_static: false
     code_samples:
-    type: Transform
-    parameters:
-    returns:
-      - type: void
-        summary:
+    tags:
+      - ClientOnly
+    type: Class.Transform
+  - name: exitToPosition
+    summary: |
+      Returns the ExitTo transform's position if it is set, otherwise returns the default exit position.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: isOccupied
+    summary: |
+      Whether the anchor is currently occupied by a character.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
   - name: isTappable
     summary: |
-      Returns whether the anchor is tappable.
+      The tappable state of the anchor.
+      If an anchor is not tappable, the only way a character can be attached to it is using Character:MoveToAnchor or Character:TeleportToAnchor.
     description:
     is_static: false
     code_samples:
+    tags:
+      - ClientOnly
     type: boolean
-    returns:
-      - type: boolean
-        summary: Whether the anchor is tappable.
+  - name: occupant
+    summary: |
+      The character that is currently occupying the anchor.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.Character
 methods:
+math_operations:
