@@ -155,6 +155,19 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Clear
+    summary: |
+      The 'Clear' method removes all particles in the ParticleSystem. It's a handy way to reset the ParticleSystem to an empty state.
+      [Unity's ParticleSystem.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Clear.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: withChildren
         type: boolean
         tags:
@@ -193,6 +206,20 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the ParticleSystem is still alive.
+  - name: IsAlive
+    summary: |
+      The 'IsAlive' method lets you know if the ParticleSystem is still alive, meaning if it is still emitting particles or any of its particles are still alive. Allows for decision-making based on ParticleSystem's state of activity.
+      [Unity's ParticleSystem.IsAlive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.IsAlive.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: withChildren
         type: boolean
         tags:
@@ -213,12 +240,38 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Pause
+    summary: |
+      The 'Pause' method halts the simulation of the ParticleSystem in its current state. It can be resumed later using the Play method.
+      [Unity's ParticleSystem.Pause Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Pause.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: withChildren
         type: boolean
         tags:
         default:
         summary: |
           Should the pause request apply to all child systems?
+    returns:
+      - type: void
+        summary:
+  - name: Play
+    summary: |
+      To restart the ParticleSystem or resume it after a pause, use the 'Play' method. It includes an optional parameter to include all child systems.
+      [Unity's ParticleSystem.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:
@@ -257,6 +310,81 @@ methods:
         default:
         summary: |
           The number of seconds to advance the ParticleSystem simulation by.
+    returns:
+      - type: void
+        summary:
+  - name: Simulate
+    summary: |
+      The 'Simulate' method advances the simulation of the ParticleSystem by the given number of seconds. It's particularly useful when creating effects that happen instantly, rather than over time.
+      [Unity's ParticleSystem.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Simulate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The number of seconds to advance the ParticleSystem simulation by.
+      - name: withChildren
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Should the simulation include all children of this ParticleSystem?
+    returns:
+      - type: void
+        summary:
+  - name: Simulate
+    summary: |
+      The 'Simulate' method advances the simulation of the ParticleSystem by the given number of seconds. It's particularly useful when creating effects that happen instantly, rather than over time.
+      [Unity's ParticleSystem.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Simulate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The number of seconds to advance the ParticleSystem simulation by.
+      - name: withChildren
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Should the simulation include all children of this ParticleSystem?
+      - name: restart
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Should the ParticleSystem be restarted before the simulation is run?
+    returns:
+      - type: void
+        summary:
+  - name: Simulate
+    summary: |
+      The 'Simulate' method advances the simulation of the ParticleSystem by the given number of seconds. It's particularly useful when creating effects that happen instantly, rather than over time.
+      [Unity's ParticleSystem.Simulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Simulate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: t
+        type: number
+        tags:
+        default:
+        summary: |
+          The number of seconds to advance the ParticleSystem simulation by.
       - name: withChildren
         type: boolean
         tags:
@@ -275,6 +403,19 @@ methods:
         default:
         summary: |
           Should Unity simulate each individual time step for the full duration of 't'?
+    returns:
+      - type: void
+        summary:
+  - name: Stop
+    summary: |
+      The 'Stop' method halts the emission of particles, providing the option to stop instantaneously or let live particles die out naturally. Extremely helpful in controlling the lifecycle of particle emissions.
+      [Unity's ParticleSystem.Stop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/ParticleSystem.Stop.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: void
         summary:

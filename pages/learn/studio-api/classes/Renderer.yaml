@@ -357,6 +357,23 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetPropertyBlock
+    summary: |
+      [Unity's Renderer.SetPropertyBlock Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Renderer.SetPropertyBlock.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: properties
+        type: Class.MaterialPropertyBlock
+        tags:
+        default:
+        summary:
       - name: materialIndex
         type: number
         tags:

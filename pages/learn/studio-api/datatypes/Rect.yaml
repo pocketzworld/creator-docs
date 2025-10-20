@@ -326,6 +326,54 @@ methods:
       - ClientOnly
     parameters:
       - name: point
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Contains
+    summary: |
+      Check if a point is within the Rect. This method determines if a point is inside the Rect.
+      [Unity's Rect.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Contains.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      local point = Vector2.new(50, 50)
+      
+      print(rect:Contains(point)) -- true
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: Contains
+    summary: |
+      Check if a point is within the Rect. This method determines if a point is inside the Rect.
+      [Unity's Rect.Contains Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Contains.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect = Rect.new(0, 0, 100, 100)
+      local point = Vector2.new(50, 50)
+      
+      print(rect:Contains(point)) -- true
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
         type: DataType.Vector3
         tags:
         default:
@@ -427,6 +475,30 @@ methods:
         summary:
     returns:
       - type: DataType.Vector2
+        summary:
+  - name: Overlaps
+    summary: |
+      Determine if the Rect overlaps with another Rect. This method checks if the Rect overlaps with another Rect.
+      [Unity's Rect.Overlaps Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rect.Overlaps.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local rect1 = Rect.new(0, 0, 100, 100)
+      local rect2 = Rect.new(50, 50, 100, 100)
+      
+      print(rect1:Overlaps(rect2)) -- true
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: other
+        type: DataType.Rect
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
         summary:
   - name: Overlaps
     summary: |

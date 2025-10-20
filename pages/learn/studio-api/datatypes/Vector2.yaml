@@ -746,6 +746,79 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+      - type: DataType.Vector2
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector2.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector2
+        summary:
+      - type: DataType.Vector2
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector2.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
       - name: maxSpeed
         type: number
         tags:

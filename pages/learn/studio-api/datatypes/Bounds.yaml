@@ -144,6 +144,25 @@ methods:
     returns:
       - type: void
         summary:
+  - name: Encapsulate
+    summary: |
+      Grows the Bounds to include a point or bounds. You would typically use this when you have a set of points and you want a bounding box that encloses all these points.
+      [Unity's Bounds.Encapsulate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Encapsulate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The new point to include within the bounding box.
+    returns:
+      - type: void
+        summary:
   - name: Equals
     summary: |
       Checks if two bounding boxes are equal in terms of their center and extents.
@@ -174,6 +193,25 @@ methods:
     parameters:
       - name: amount
         type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The amount by which the bounding box should be expanded (shrank if negative).
+    returns:
+      - type: void
+        summary:
+  - name: Expand
+    summary: |
+      Increases the size of the bounding box by the given amount (in both directions).
+      [Unity's Bounds.Expand Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Bounds.Expand.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: amount
+        type: number
         tags:
         default:
         summary: |

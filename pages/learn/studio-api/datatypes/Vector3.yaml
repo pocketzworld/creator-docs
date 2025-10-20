@@ -608,6 +608,30 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+  - name: OrthoNormalize
+    summary: |
+      [Unity's Vector3.OrthoNormalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.OrthoNormalize.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: normal
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: tangent
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
       - name: binormal
         type: DataType.Vector3
         tags:
@@ -906,6 +930,79 @@ methods:
       - type: DataType.Vector3
         summary: |
           A new Vector3 point potentially extrapolated beyond 'b'.
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector3.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
+  - name: SmoothDamp
+    summary: |
+      [Unity's Vector3.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SmoothDamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: current
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: target
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: currentVelocity
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: smoothTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxSpeed
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Vector3
+        summary:
+      - type: DataType.Vector3
+        summary:
   - name: SmoothDamp
     summary: |
       [Unity's Vector3.SmoothDamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.SmoothDamp.html)

@@ -254,6 +254,108 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: BoxCast
+    summary: |
+      [Unity's Physics.BoxCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.BoxCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: orientation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: BoxCast
+    summary: |
+      [Unity's Physics.BoxCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.BoxCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: orientation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: BoxCast
+    summary: |
+      [Unity's Physics.BoxCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.BoxCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
       - name: orientation
         type: DataType.Quaternion
         tags:
@@ -298,6 +400,102 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: BoxCastAll
+    summary: |
+      [Unity's Physics.BoxCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.BoxCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: orientation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: BoxCastAll
+    summary: |
+      [Unity's Physics.BoxCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.BoxCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: orientation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: BoxCastAll
+    summary: |
+      [Unity's Physics.BoxCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.BoxCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
       - name: orientation
         type: DataType.Quaternion
         tags:
@@ -315,6 +513,79 @@ methods:
         summary:
     returns:
       - type: {DataType.RaycastHit}
+        summary:
+  - name: CapsuleCast
+    summary: |
+      [Unity's Physics.CapsuleCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CapsuleCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point1
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: point2
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: CapsuleCast
+    summary: |
+      [Unity's Physics.CapsuleCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CapsuleCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point1
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: point2
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
         summary:
   - name: CapsuleCast
     summary: |
@@ -389,6 +660,75 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: CapsuleCastAll
+    summary: |
+      [Unity's Physics.CapsuleCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CapsuleCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point1
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: point2
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: CapsuleCastAll
+    summary: |
+      [Unity's Physics.CapsuleCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CapsuleCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point1
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: point2
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
       - name: maxDistance
         type: number
         tags:
@@ -401,6 +741,55 @@ methods:
         summary:
     returns:
       - type: {DataType.RaycastHit}
+        summary:
+  - name: CheckBox
+    summary: |
+      [Unity's Physics.CheckBox Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CheckBox.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: CheckBox
+    summary: |
+      [Unity's Physics.CheckBox Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CheckBox.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: orientation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
         summary:
   - name: CheckBox
     summary: |
@@ -458,7 +847,56 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: CheckCapsule
+    summary: |
+      [Unity's Physics.CheckCapsule Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CheckCapsule.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: start
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: end
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
       - name: layerMask
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: CheckSphere
+    summary: |
+      [Unity's Physics.CheckSphere Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.CheckSphere.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
         type: number
         tags:
         default:
@@ -651,12 +1089,62 @@ methods:
         default:
         summary: |
           Second collider.
+    returns:
+      - type: void
+        summary:
+  - name: IgnoreCollision
+    summary: |
+      Prevent physics engine from processing collisions between two specified colliders.
+      [Unity's Physics.IgnoreCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.IgnoreCollision.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: collider1
+        type: Class.Collider
+        tags:
+        default:
+        summary: |
+          First collider.
+      - name: collider2
+        type: Class.Collider
+        tags:
+        default:
+        summary: |
+          Second collider.
       - name: ignore
         type: boolean
         tags:
         default:
         summary: |
           Whether to ignore collisions.
+    returns:
+      - type: void
+        summary:
+  - name: IgnoreLayerCollision
+    summary: |
+      Make physics engine ignore all collisions between colliders in two specified layers.
+      [Unity's Physics.IgnoreLayerCollision Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.IgnoreLayerCollision.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: layer1
+        type: number
+        tags:
+        default:
+        summary: |
+          First layer ID.
+      - name: layer2
+        type: number
+        tags:
+        default:
+        summary: |
+          Second layer ID.
     returns:
       - type: void
         summary:
@@ -710,6 +1198,30 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: Linecast
+    summary: |
+      [Unity's Physics.Linecast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Linecast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: start
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: end
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
       - name: layerMask
         type: number
         tags:
@@ -739,12 +1251,88 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: {Class.Collider}
+        summary:
+  - name: OverlapBox
+    summary: |
+      [Unity's Physics.OverlapBox Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.OverlapBox.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: orientation
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {Class.Collider}
+        summary:
+  - name: OverlapBox
+    summary: |
+      [Unity's Physics.OverlapBox Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.OverlapBox.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: center
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: halfExtents
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
       - name: orientation
         type: DataType.Quaternion
         tags:
         default:
         summary:
       - name: layerMask
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {Class.Collider}
+        summary:
+  - name: OverlapCapsule
+    summary: |
+      [Unity's Physics.OverlapCapsule Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.OverlapCapsule.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: point0
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: point1
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
         type: number
         tags:
         default:
@@ -806,6 +1394,32 @@ methods:
         default:
         summary: |
           Sphere radius.
+    returns:
+      - type: {Class.Collider}
+        summary: |
+          Array of colliders within the sphere.
+  - name: OverlapSphere
+    summary: |
+      Find all colliders touching or inside an imaginary sphere, useful for area damage or proximity checks.
+      [Unity's Physics.OverlapSphere Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.OverlapSphere.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Sphere center.
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary: |
+          Sphere radius.
       - name: layerMask
         type: number
         tags:
@@ -816,6 +1430,148 @@ methods:
       - type: {Class.Collider}
         summary: |
           Array of colliders within the sphere.
+  - name: Raycast
+    summary: |
+      Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features.
+      [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary: |
+          Defines the origin and direction of the ray.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if any collider is hit, with collision details.
+      - type: DataType.RaycastHit
+        summary:
+  - name: Raycast
+    summary: |
+      Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features.
+      [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary: |
+          Defines the origin and direction of the ray.
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum distance to check for collisions.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if any collider is hit, with collision details.
+      - type: DataType.RaycastHit
+        summary:
+  - name: Raycast
+    summary: |
+      Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features.
+      [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary: |
+          Defines the origin and direction of the ray.
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum distance to check for collisions.
+      - name: layerMask
+        type: number
+        tags:
+        default:
+        summary: |
+          LayerMask to selectively ignore colliders.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if any collider is hit, with collision details.
+      - type: DataType.RaycastHit
+        summary:
+  - name: Raycast
+    summary: |
+      Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features.
+      [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if any collider is hit, with collision details.
+      - type: DataType.RaycastHit
+        summary:
+  - name: Raycast
+    summary: |
+      Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features.
+      [Unity's Physics.Raycast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.Raycast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary: |
+          The maximum distance to check for collisions.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if any collider is hit, with collision details.
+      - type: DataType.RaycastHit
+        summary:
   - name: Raycast
     summary: |
       Trace a path in 3D space to detect colliders, useful for implementing bullet paths or line-of-sight features.
@@ -853,6 +1609,121 @@ methods:
         summary: |
           Returns true if any collider is hit, with collision details.
       - type: DataType.RaycastHit
+        summary:
+  - name: RaycastAll
+    summary: |
+      [Unity's Physics.RaycastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RaycastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: RaycastAll
+    summary: |
+      [Unity's Physics.RaycastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RaycastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: RaycastAll
+    summary: |
+      [Unity's Physics.RaycastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RaycastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layerMask
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: RaycastAll
+    summary: |
+      [Unity's Physics.RaycastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RaycastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: RaycastAll
+    summary: |
+      [Unity's Physics.RaycastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.RaycastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
         summary:
   - name: RaycastAll
     summary: |
@@ -914,6 +1785,156 @@ methods:
     tags:
       - ClientOnly
     parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: SphereCast
+    summary: |
+      [Unity's Physics.SphereCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: SphereCast
+    summary: |
+      [Unity's Physics.SphereCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layerMask
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: SphereCast
+    summary: |
+      [Unity's Physics.SphereCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: SphereCast
+    summary: |
+      [Unity's Physics.SphereCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+      - type: DataType.RaycastHit
+        summary:
+  - name: SphereCast
+    summary: |
+      [Unity's Physics.SphereCast Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCast.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: origin
         type: DataType.Vector3
         tags:
@@ -943,6 +1964,146 @@ methods:
       - type: boolean
         summary:
       - type: DataType.RaycastHit
+        summary:
+  - name: SphereCastAll
+    summary: |
+      [Unity's Physics.SphereCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: SphereCastAll
+    summary: |
+      [Unity's Physics.SphereCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: SphereCastAll
+    summary: |
+      [Unity's Physics.SphereCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: ray
+        type: DataType.Ray
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layerMask
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: SphereCastAll
+    summary: |
+      [Unity's Physics.SphereCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
+        summary:
+  - name: SphereCastAll
+    summary: |
+      [Unity's Physics.SphereCastAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Physics.SphereCastAll.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: origin
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: radius
+        type: number
+        tags:
+        default:
+        summary:
+      - name: direction
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: maxDistance
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.RaycastHit}
         summary:
   - name: SphereCastAll
     summary: |

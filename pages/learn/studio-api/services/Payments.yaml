@@ -37,6 +37,28 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: AcknowledgePurchase
+    summary: |
+      Acknowledge a purchase made by the current user.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+    parameters:
+      - name: purchase
+        type: Class.WorldProductPurchase
+        tags:
+        default:
+        summary:
+      - name: wasConsumed
+        type: boolean
+        tags:
+        default:
+        summary:
       - name: callback
         type: "(error: PaymentsError) -> ()"
         tags:

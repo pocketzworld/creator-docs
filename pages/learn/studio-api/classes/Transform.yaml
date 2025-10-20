@@ -427,6 +427,65 @@ methods:
     tags:
       - ClientOnly
     parameters:
+      - name: target
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: LookAt
+    summary: |
+      The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character.
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: target
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+      - name: worldUp
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: LookAt
+    summary: |
+      The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character.
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: worldPosition
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: LookAt
+    summary: |
+      The 'LookAt' method makes the GameObject rotate towards a target. This method is ideal in contexts where the GameObject needs to continually face another, for example, a GameObject camera following a character.
+      [Unity's Transform.LookAt Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.LookAt.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: worldPosition
         type: DataType.Vector3
         tags:
@@ -434,6 +493,121 @@ methods:
         summary:
       - name: worldUp
         type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: eulers
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: eulers
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: relativeTo
+        type: Enum.Space
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: axis
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: angle
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: axis
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: angle
+        type: number
+        tags:
+        default:
+        summary:
+      - name: relativeTo
+        type: Enum.Space
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Rotate
+    summary: |
+      [Unity's Transform.Rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: xAngle
+        type: number
+        tags:
+        default:
+        summary:
+      - name: yAngle
+        type: number
+        tags:
+        default:
+        summary:
+      - name: zAngle
+        type: number
         tags:
         default:
         summary:
@@ -550,6 +724,25 @@ methods:
         default:
         summary: |
           The new local rotation for the GameObject.
+    returns:
+      - type: void
+        summary:
+  - name: SetParent
+    summary: |
+      The 'SetParent' method is used to set the parent of the GameObject's transform. It's handy when you need to dynamically create parent-child relationships between GameObjects.
+      [Unity's Transform.SetParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.SetParent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: p
+        type: Class.Transform
+        tags:
+        default:
+        summary: |
+          The target parent Transform.
     returns:
       - type: void
         summary:
@@ -690,6 +883,94 @@ methods:
     tags:
       - ClientOnly
     parameters:
+      - name: translation
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: translation
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: relativeTo
+        type: Enum.Space
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: translation
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: relativeTo
+        type: Class.Transform
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: x
         type: number
         tags:
@@ -707,6 +988,38 @@ methods:
         summary:
       - name: relativeTo
         type: Enum.Space
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Translate
+    summary: |
+      [Unity's Transform.Translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Transform.Translate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: z
+        type: number
+        tags:
+        default:
+        summary:
+      - name: relativeTo
+        type: Class.Transform
         tags:
         default:
         summary:

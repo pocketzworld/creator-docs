@@ -630,6 +630,43 @@ methods:
     returns:
       - type: DataType.Matrix4x4
         summary:
+  - name: CalculateProjectionMatrixFromPhysicalProperties
+    summary: |
+      [Unity's Camera.CalculateProjectionMatrixFromPhysicalProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CalculateProjectionMatrixFromPhysicalProperties.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: focalLength
+        type: number
+        tags:
+        default:
+        summary:
+      - name: sensorSize
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: lensShift
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+      - name: nearClip
+        type: number
+        tags:
+        default:
+        summary:
+      - name: farClip
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Matrix4x4
+        summary:
   - name: CopyFrom
     summary: |
       Copies settings from another Camera, including all properties and transformation matrices.

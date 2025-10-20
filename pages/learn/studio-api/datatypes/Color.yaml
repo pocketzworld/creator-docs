@@ -385,6 +385,38 @@ methods:
         default:
         summary: |
           The Value component of the color, ranges between 0 to 1.
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns a Color object in RGB color space.
+  - name: HSVToRGB
+    summary: |
+      Convert a color from HSV (Hue, Saturation, Value) color model to RGB (Red, Green, Blue) model. This function can be quite useful whenever you're dealing with HSV colors and need to convert them for use in RGB format.
+      [Unity's Color.HSVToRGB Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Color.HSVToRGB.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: H
+        type: number
+        tags:
+        default:
+        summary: |
+          The Hue component of the color, ranges between 0 to 1.
+      - name: S
+        type: number
+        tags:
+        default:
+        summary: |
+          The Saturation component of the color, ranges between 0 to 1.
+      - name: V
+        type: number
+        tags:
+        default:
+        summary: |
+          The Value component of the color, ranges between 0 to 1.
       - name: hdr
         type: boolean
         tags:

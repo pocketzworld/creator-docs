@@ -456,6 +456,96 @@ methods:
         default:
         summary: |
           Duration of the transition relative to animation length.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateHashName
+        type: number
+        tags:
+        default:
+        summary:
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          Index of the layer.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateHashName
+        type: number
+        tags:
+        default:
+        summary:
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          Index of the layer.
+      - name: normalizedTimeOffset
+        type: number
+        tags:
+        default:
+        summary: |
+          Adjusts the starting point of the transition.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateHashName
+        type: number
+        tags:
+        default:
+        summary:
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
       - name: layer
         type: number
         tags:
@@ -469,6 +559,228 @@ methods:
         summary: |
           Adjusts the starting point of the transition.
       - name: normalizedTransitionTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state.
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state.
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          Index of the layer.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state.
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          Index of the layer.
+      - name: normalizedTimeOffset
+        type: number
+        tags:
+        default:
+        summary: |
+          Adjusts the starting point of the transition.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFade
+    summary: |
+      Transitions from the current state to another over a relative duration.
+      [Unity's Animator.CrossFade Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFade.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state.
+      - name: normalizedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the transition relative to animation length.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          Index of the layer.
+      - name: normalizedTimeOffset
+        type: number
+        tags:
+        default:
+        summary: |
+          Adjusts the starting point of the transition.
+      - name: normalizedTransitionTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateHashName
+        type: number
+        tags:
+        default:
+        summary:
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateHashName
+        type: number
+        tags:
+        default:
+        summary:
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateHashName
+        type: number
+        tags:
+        default:
+        summary:
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary:
+      - name: fixedTimeOffset
         type: number
         tags:
         default:
@@ -515,6 +827,136 @@ methods:
     returns:
       - type: void
         summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state to transition to.
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+    returns:
+      - type: void
+        summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state to transition to.
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state to transition to.
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary:
+      - name: fixedTimeOffset
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CrossFadeInFixedTime
+    summary: |
+      Gradually blends from the current animation to another over a fixed time.
+      [Unity's Animator.CrossFadeInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.CrossFadeInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state to transition to.
+      - name: fixedTransitionDuration
+        type: number
+        tags:
+        default:
+        summary: |
+          The duration of the transition.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary:
+      - name: fixedTimeOffset
+        type: number
+        tags:
+        default:
+        summary:
+      - name: normalizedTransitionTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: GetBool
     summary: |
       Retrieves the value of a boolean parameter in the Animator.
@@ -530,6 +972,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary: |
+          The current state (true or false) of the specified parameter.
+  - name: GetBool
+    summary: |
+      Retrieves the value of a boolean parameter in the Animator.
+      [Unity's Animator.GetBool Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetBool.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the parameter.
     returns:
       - type: boolean
         summary: |
@@ -590,6 +1052,26 @@ methods:
       - type: number
         summary: |
           The float value of the specified parameter.
+  - name: GetFloat
+    summary: |
+      Retrieves a float parameter from the Animator.
+      [Unity's Animator.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the parameter to retrieve.
+    returns:
+      - type: number
+        summary: |
+          The float value of the specified parameter.
   - name: GetInteger
     summary: |
       Fetches the value of an integer parameter in the Animator.
@@ -605,6 +1087,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: number
+        summary: |
+          The current state of the specified parameter.
+  - name: GetInteger
+    summary: |
+      Fetches the value of an integer parameter in the Animator.
+      [Unity's Animator.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.GetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the parameter.
     returns:
       - type: number
         summary: |
@@ -742,6 +1244,19 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: InterruptMatchTarget
+    summary: |
+      Interrupts automatic target matching, allowing manual control.
+      [Unity's Animator.InterruptMatchTarget Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.InterruptMatchTarget.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: completeMatch
         type: boolean
         tags:
@@ -789,6 +1304,141 @@ methods:
       - type: boolean
         summary: |
           True if the parameter is controlled by a curve, false otherwise.
+  - name: IsParameterControlledByCurve
+    summary: |
+      Checks if a parameter is controlled by a curve.
+      [Unity's Animator.IsParameterControlledByCurve Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.IsParameterControlledByCurve.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the parameter to check.
+    returns:
+      - type: boolean
+        summary: |
+          True if the parameter is controlled by a curve, false otherwise.
+  - name: Play
+    summary: |
+      Plays an animation state, allowing direct control over animation playback.
+      [Unity's Animator.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateNameHash
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Play
+    summary: |
+      Plays an animation state, allowing direct control over animation playback.
+      [Unity's Animator.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateNameHash
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          The layer index.
+    returns:
+      - type: void
+        summary:
+  - name: Play
+    summary: |
+      Plays an animation state, allowing direct control over animation playback.
+      [Unity's Animator.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateNameHash
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          The layer index.
+      - name: normalizedTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Play
+    summary: |
+      Plays an animation state, allowing direct control over animation playback.
+      [Unity's Animator.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state.
+    returns:
+      - type: void
+        summary:
+  - name: Play
+    summary: |
+      Plays an animation state, allowing direct control over animation playback.
+      [Unity's Animator.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          The layer index.
+    returns:
+      - type: void
+        summary:
   - name: Play
     summary: |
       Plays an animation state, allowing direct control over animation playback.
@@ -816,6 +1466,121 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayInFixedTime
+    summary: |
+      Plays an animation state at a specified time scale, unaffected by Animator speed.
+      [Unity's Animator.PlayInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.PlayInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateNameHash
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayInFixedTime
+    summary: |
+      Plays an animation state at a specified time scale, unaffected by Animator speed.
+      [Unity's Animator.PlayInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.PlayInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateNameHash
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          The layer index.
+    returns:
+      - type: void
+        summary:
+  - name: PlayInFixedTime
+    summary: |
+      Plays an animation state at a specified time scale, unaffected by Animator speed.
+      [Unity's Animator.PlayInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.PlayInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateNameHash
+        type: number
+        tags:
+        default:
+        summary:
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          The layer index.
+      - name: fixedTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayInFixedTime
+    summary: |
+      Plays an animation state at a specified time scale, unaffected by Animator speed.
+      [Unity's Animator.PlayInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.PlayInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state to play.
+    returns:
+      - type: void
+        summary:
+  - name: PlayInFixedTime
+    summary: |
+      Plays an animation state at a specified time scale, unaffected by Animator speed.
+      [Unity's Animator.PlayInFixedTime Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.PlayInFixedTime.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stateName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the state to play.
+      - name: layer
+        type: number
+        tags:
+        default:
+        summary: |
+          The layer index.
     returns:
       - type: void
         summary:
@@ -880,6 +1645,49 @@ methods:
     returns:
       - type: void
         summary:
+  - name: ResetTrigger
+    summary: |
+      Clears a trigger parameter.
+      [Unity's Animator.ResetTrigger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.ResetTrigger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the trigger parameter to reset.
+    returns:
+      - type: void
+        summary:
+  - name: SetBool
+    summary: |
+      Sets the value of a boolean parameter in the Animator.
+      [Unity's Animator.SetBool Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetBool.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: value
+        type: boolean
+        tags:
+        default:
+        summary: |
+          The value to be set.
+    returns:
+      - type: void
+        summary:
   - name: SetBool
     summary: |
       Sets the value of a boolean parameter in the Animator.
@@ -898,6 +1706,89 @@ methods:
           Name of the parameter.
       - name: value
         type: boolean
+        tags:
+        default:
+        summary: |
+          The value to be set.
+    returns:
+      - type: void
+        summary:
+  - name: SetFloat
+    summary: |
+      Sets the value of a float parameter.
+      [Unity's Animator.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary: |
+          The value to be set.
+    returns:
+      - type: void
+        summary:
+  - name: SetFloat
+    summary: |
+      Sets the value of a float parameter.
+      [Unity's Animator.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary: |
+          The value to be set.
+      - name: dampTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: deltaTime
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetFloat
+    summary: |
+      Sets the value of a float parameter.
+      [Unity's Animator.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the parameter.
+      - name: value
+        type: number
         tags:
         default:
         summary: |
@@ -955,6 +1846,31 @@ methods:
         tags:
         default:
         summary:
+      - name: value
+        type: number
+        tags:
+        default:
+        summary: |
+          The value to be set.
+    returns:
+      - type: void
+        summary:
+  - name: SetInteger
+    summary: |
+      Assigns an integer value to an integer parameter in the Animator.
+      [Unity's Animator.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the parameter.
       - name: value
         type: number
         tags:
@@ -1024,6 +1940,112 @@ methods:
         default:
         summary: |
           The weight by which the body parts follow the lookAtPosition.
+    returns:
+      - type: void
+        summary:
+  - name: SetLookAtWeight
+    summary: |
+      Sets the weights for the head and body parts to look at a position.
+      [Unity's Animator.SetLookAtWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLookAtWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: weight
+        type: number
+        tags:
+        default:
+        summary: |
+          The weight by which the body parts follow the lookAtPosition.
+      - name: bodyWeight
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetLookAtWeight
+    summary: |
+      Sets the weights for the head and body parts to look at a position.
+      [Unity's Animator.SetLookAtWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLookAtWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: weight
+        type: number
+        tags:
+        default:
+        summary: |
+          The weight by which the body parts follow the lookAtPosition.
+      - name: bodyWeight
+        type: number
+        tags:
+        default:
+        summary:
+      - name: headWeight
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetLookAtWeight
+    summary: |
+      Sets the weights for the head and body parts to look at a position.
+      [Unity's Animator.SetLookAtWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLookAtWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: weight
+        type: number
+        tags:
+        default:
+        summary: |
+          The weight by which the body parts follow the lookAtPosition.
+      - name: bodyWeight
+        type: number
+        tags:
+        default:
+        summary:
+      - name: headWeight
+        type: number
+        tags:
+        default:
+        summary:
+      - name: eyesWeight
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetLookAtWeight
+    summary: |
+      Sets the weights for the head and body parts to look at a position.
+      [Unity's Animator.SetLookAtWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetLookAtWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: weight
+        type: number
+        tags:
+        default:
+        summary: |
+          The weight by which the body parts follow the lookAtPosition.
       - name: bodyWeight
         type: number
         tags:
@@ -1062,6 +2084,25 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetTrigger
+    summary: |
+      Activates a trigger parameter to change the animator's state.
+      [Unity's Animator.SetTrigger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animator.SetTrigger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the trigger parameter.
     returns:
       - type: void
         summary:

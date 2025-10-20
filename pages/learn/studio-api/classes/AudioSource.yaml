@@ -314,11 +314,49 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Play
+    summary: |
+      Starts playing the assigned audio clip, allowing for sound playback control.
+      [Unity's AudioSource.Play Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.Play.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: delay
         type: number
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: PlayClipAtPoint
+    summary: |
+      Plays an AudioClip at a specified world position, as a static method.
+      [Unity's AudioSource.PlayClipAtPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.PlayClipAtPoint.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: clip
+        type: Class.AudioClip
+        tags:
+        default:
+        summary: |
+          The AudioClip to be played.
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The world position where the AudioClip will be played.
     returns:
       - type: void
         summary:
@@ -368,6 +406,25 @@ methods:
         default:
         summary: |
           The delay time in seconds before the audio clip starts playing.
+    returns:
+      - type: void
+        summary:
+  - name: PlayOneShot
+    summary: |
+      Plays an audio clip once on demand, ignoring the AudioSource's regular clip.
+      [Unity's AudioSource.PlayOneShot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AudioSource.PlayOneShot.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: clip
+        type: Class.AudioClip
+        tags:
+        default:
+        summary: |
+          The audio clip to play once.
     returns:
       - type: void
         summary:

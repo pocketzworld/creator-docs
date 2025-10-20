@@ -228,6 +228,25 @@ methods:
     tags:
       - ClientAndServer
     parameters:
+      - name: euler
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          A Quaternion from the Euler angles.
+  - name: Euler
+    summary: |
+      Creates a Quaternion rotation from Euler angles.
+      [Unity's Quaternion.Euler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Euler.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
       - name: x
         type: number
         tags:
@@ -360,6 +379,26 @@ methods:
       - type: DataType.Quaternion
         summary: |
           Returns a Quaternion that is interpolated over an arbitrary range.
+  - name: LookRotation
+    summary: |
+      Provides a quaternion that makes an object face towards a specified direction.
+      [Unity's Quaternion.LookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.LookRotation.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: forward
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction to be faced.
+    returns:
+      - type: DataType.Quaternion
+        summary: |
+          A Quaternion that aligns an object's forward direction towards the specified direction.
   - name: LookRotation
     summary: |
       Provides a quaternion that makes an object face towards a specified direction.
@@ -536,6 +575,25 @@ methods:
         default:
         summary: |
           The vector to rotate to.
+    returns:
+      - type: void
+        summary:
+  - name: SetLookRotation
+    summary: |
+      Aligns the Quaternion's z-axis towards a target direction.
+      [Unity's Quaternion.SetLookRotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.SetLookRotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: view
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The target direction vector.
     returns:
       - type: void
         summary:

@@ -48,6 +48,38 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Apply
+    summary: |
+      The 'Apply' method is used to apply all previous set pixel and color changes. You can specify whether to update mipmap levels and if the texture should become unreadable after applying changes.
+      [Unity's Texture3D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.Apply.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: updateMipmaps
+        type: boolean
+        tags:
+        default:
+        summary: |
+          If set to true, the mipmap levels are recalculated.
+    returns:
+      - type: void
+        summary:
+  - name: Apply
+    summary: |
+      The 'Apply' method is used to apply all previous set pixel and color changes. You can specify whether to update mipmap levels and if the texture should become unreadable after applying changes.
+      [Unity's Texture3D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.Apply.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: updateMipmaps
         type: boolean
         tags:
@@ -212,6 +244,38 @@ methods:
         default:
         summary: |
           The depth coordinate of the pixel.
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns the color of the pixel at the specified coordinates.
+  - name: GetPixel
+    summary: |
+      The 'GetPixel' method retrieves the color of a specific pixel at the provided location within the texture.
+      [Unity's Texture3D.GetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixel.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary: |
+          The horizontal coordinate of the pixel.
+      - name: y
+        type: number
+        tags:
+        default:
+        summary: |
+          The vertical coordinate of the pixel.
+      - name: z
+        type: number
+        tags:
+        default:
+        summary: |
+          The depth coordinate of the pixel.
       - name: mipLevel
         type: number
         tags:
@@ -221,6 +285,38 @@ methods:
       - type: DataType.Color
         summary: |
           Returns the color of the pixel at the specified coordinates.
+  - name: GetPixelBilinear
+    summary: |
+      The 'GetPixelBilinear' method fetches the color of a pixel using bilinear interpolation from the coordinates provided. This can give smoother results when fetching colors from textures.
+      [Unity's Texture3D.GetPixelBilinear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixelBilinear.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: u
+        type: number
+        tags:
+        default:
+        summary: |
+          The horizontal coordinate (between 0 and 1) of the pixel.
+      - name: v
+        type: number
+        tags:
+        default:
+        summary: |
+          The vertical coordinate (between 0 and 1) of the pixel.
+      - name: w
+        type: number
+        tags:
+        default:
+        summary: |
+          The depth coordinate (between 0 and 1) of the pixel.
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns the color of the pixel with bilinear interpolation at the specified coordinates.
   - name: GetPixelBilinear
     summary: |
       The 'GetPixelBilinear' method fetches the color of a pixel using bilinear interpolation from the coordinates provided. This can give smoother results when fetching colors from textures.
@@ -267,6 +363,18 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: {DataType.Color}
+        summary:
+  - name: GetPixels
+    summary: |
+      [Unity's Texture3D.GetPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.GetPixels.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: miplevel
         type: number
         tags:
@@ -274,6 +382,43 @@ methods:
         summary:
     returns:
       - type: {DataType.Color}
+        summary:
+  - name: SetPixel
+    summary: |
+      The 'SetPixel' method allows you to modify a pixel color at the specified position in the texture. It takes the position coordinates and new color as parameters.
+      [Unity's Texture3D.SetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture3D.SetPixel.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary: |
+          The horizontal coordinate of the pixel.
+      - name: y
+        type: number
+        tags:
+        default:
+        summary: |
+          The vertical coordinate of the pixel.
+      - name: z
+        type: number
+        tags:
+        default:
+        summary: |
+          The depth coordinate of the pixel.
+      - name: color
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The new color of the pixel.
+    returns:
+      - type: void
         summary:
   - name: SetPixel
     summary: |

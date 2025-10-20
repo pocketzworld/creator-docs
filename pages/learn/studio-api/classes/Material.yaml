@@ -286,6 +286,26 @@ methods:
       - type: DataType.Color
         summary: |
           The Color value of the specified property.
+  - name: GetColor
+    summary: |
+      The 'GetColor' method fetches the color value of a named property from a material. The retrieved color can be used in various ways such as coloring other elements or calculations affecting color data.
+      [Unity's Material.GetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the property to retrieve the color from.
+    returns:
+      - type: DataType.Color
+        summary: |
+          The Color value of the specified property.
   - name: GetColorArray
     summary: |
       [Unity's Material.GetColorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetColorArray.html)
@@ -297,6 +317,23 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.Color}
+        summary:
+  - name: GetColorArray
+    summary: |
+      [Unity's Material.GetColorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetColorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -322,6 +359,26 @@ methods:
       - type: number
         summary: |
           The float value of the given property.
+  - name: GetFloat
+    summary: |
+      The 'GetFloat' method fetches the float value of a named property within a material. This method is often used when working with float properties of a shader that are needed for mathematical operations.
+      [Unity's Material.GetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the float property to retrieve.
+    returns:
+      - type: number
+        summary: |
+          The float value of the given property.
   - name: GetFloatArray
     summary: |
       [Unity's Material.GetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetFloatArray.html)
@@ -333,6 +390,23 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {number}
+        summary:
+  - name: GetFloatArray
+    summary: |
+      [Unity's Material.GetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetFloatArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -358,6 +432,26 @@ methods:
       - type: number
         summary: |
           The integer value of the specified property.
+  - name: GetInteger
+    summary: |
+      The 'GetInteger' method gets the integer value of a named property in a material. This can be useful when working with shader properties that represent quantifiable data or entries in an array.
+      [Unity's Material.GetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The property name to retrieve the integer value from.
+    returns:
+      - type: number
+        summary: |
+          The integer value of the specified property.
   - name: GetMatrix
     summary: |
       The 'GetMatrix' method fetches the Matrix4x4 value of a named property in a material. This can be useful when manipulating transformations or other matrix operations within the shader used by the material.
@@ -377,6 +471,26 @@ methods:
       - type: DataType.Matrix4x4
         summary: |
           The Matrix4x4 value of the specified property.
+  - name: GetMatrix
+    summary: |
+      The 'GetMatrix' method fetches the Matrix4x4 value of a named property in a material. This can be useful when manipulating transformations or other matrix operations within the shader used by the material.
+      [Unity's Material.GetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the Matrix4x4 property to retrieve.
+    returns:
+      - type: DataType.Matrix4x4
+        summary: |
+          The Matrix4x4 value of the specified property.
   - name: GetMatrixArray
     summary: |
       [Unity's Material.GetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetMatrixArray.html)
@@ -388,6 +502,23 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.Matrix4x4}
+        summary:
+  - name: GetMatrixArray
+    summary: |
+      [Unity's Material.GetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetMatrixArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -456,6 +587,32 @@ methods:
         default:
         summary: |
           Whether to look in the shader's fallbacks if the tag isn't found.
+    returns:
+      - type: string
+        summary: |
+          The value of the shader tag if it exists; otherwise, the defaultValue.
+  - name: GetTag
+    summary: |
+      The 'GetTag' method retrieves the value of a shader tag from this material, providing more control over the rendering process. If the specified tag does not exist, a fallback value can be provided.
+      [Unity's Material.GetTag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTag.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: tag
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the shader tag to retrieve.
+      - name: searchFallbacks
+        type: boolean
+        tags:
+        default:
+        summary: |
+          Whether to look in the shader's fallbacks if the tag isn't found.
       - name: defaultValue
         type: string
         tags:
@@ -485,6 +642,26 @@ methods:
       - type: Class.Texture
         summary: |
           The Texture object currently in use by the material.
+  - name: GetTexture
+    summary: |
+      'GetTexture' is a method that retrieves the texture mapped to a named property within a material. This allows you to access and potentially change the texture used by a material at runtime.
+      [Unity's Material.GetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the property to retrieve the texture from.
+    returns:
+      - type: Class.Texture
+        summary: |
+          The Texture object currently in use by the material.
   - name: GetTextureOffset
     summary: |
       The 'GetTextureOffset' method retrieves the current texture offset of a property. This can be used to ascertain the current texture offset applied to a material.
@@ -500,6 +677,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: DataType.Vector2
+        summary: |
+          The current texture offset of the material's property.
+  - name: GetTextureOffset
+    summary: |
+      The 'GetTextureOffset' method retrieves the current texture offset of a property. This can be used to ascertain the current texture offset applied to a material.
+      [Unity's Material.GetTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTextureOffset.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the property to get the texture offset from.
     returns:
       - type: DataType.Vector2
         summary: |
@@ -547,6 +744,26 @@ methods:
       - type: DataType.Vector2
         summary: |
           The current texture tiling of the material's property.
+  - name: GetTextureScale
+    summary: |
+      The 'GetTextureScale' method gets the current texture tiling of a property. This can be used in your project to determine the scaling factor applied to the texture of a material.
+      [Unity's Material.GetTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetTextureScale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the property to get the texture scale from.
+    returns:
+      - type: DataType.Vector2
+        summary: |
+          The current texture tiling of the material's property.
   - name: GetVector
     summary: |
       The 'GetVector' method retrieves the Vector4 value of a named property in a material. This can be useful when dealing with vector properties of a shader.
@@ -566,6 +783,26 @@ methods:
       - type: DataType.Vector4
         summary: |
           The Vector4 value of the specified property.
+  - name: GetVector
+    summary: |
+      The 'GetVector' method retrieves the Vector4 value of a named property in a material. This can be useful when dealing with vector properties of a shader.
+      [Unity's Material.GetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetVector.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The property name to retrieve the Vector4 value from.
+    returns:
+      - type: DataType.Vector4
+        summary: |
+          The Vector4 value of the specified property.
   - name: GetVectorArray
     summary: |
       [Unity's Material.GetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetVectorArray.html)
@@ -577,6 +814,23 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.Vector4}
+        summary:
+  - name: GetVectorArray
+    summary: |
+      [Unity's Material.GetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.GetVectorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -602,6 +856,26 @@ methods:
       - type: boolean
         summary: |
           Returns true if the buffer property exists; false otherwise.
+  - name: HasBuffer
+    summary: |
+      The 'HasBuffer' method verifies if the material has a particular buffer property. This is useful when dealing with advanced rendering techniques that involve ComputeBuffers or GraphicsBuffers.
+      [Unity's Material.HasBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the buffer property to check.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the buffer property exists; false otherwise.
   - name: HasColor
     summary: |
       The 'HasColor' method is used to check if the material has a certain color property. This is done before getting or setting a color property to avoid errors.
@@ -617,6 +891,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the color property exists; false otherwise.
+  - name: HasColor
+    summary: |
+      The 'HasColor' method is used to check if the material has a certain color property. This is done before getting or setting a color property to avoid errors.
+      [Unity's Material.HasColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the color property to check.
     returns:
       - type: boolean
         summary: |
@@ -640,6 +934,26 @@ methods:
       - type: boolean
         summary: |
           Returns true if the constant buffer property exists; false otherwise.
+  - name: HasConstantBuffer
+    summary: |
+      The 'HasConstantBuffer' method checks if the material has a specific constant buffer property. This can be important in high-end graphics where constant buffers are used to hold resources for shaders.
+      [Unity's Material.HasConstantBuffer Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasConstantBuffer.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the constant buffer property to check.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the constant buffer property exists; false otherwise.
   - name: HasFloat
     summary: |
       The 'HasFloat' method checks if the material has a specific float property. This is useful to prevent errors before attempting to access a float property.
@@ -655,6 +969,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the float property exists; otherwise, false.
+  - name: HasFloat
+    summary: |
+      The 'HasFloat' method checks if the material has a specific float property. This is useful to prevent errors before attempting to access a float property.
+      [Unity's Material.HasFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the float property to check.
     returns:
       - type: boolean
         summary: |
@@ -678,6 +1012,26 @@ methods:
       - type: boolean
         summary: |
           Returns true if the integer property exists; otherwise, false.
+  - name: HasInteger
+    summary: |
+      The 'HasInteger' method checks if the material has a specific integer property. This is useful when dealing with custom shaders that may or may not have specific properties.
+      [Unity's Material.HasInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name for the integer property to check.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the integer property exists; otherwise, false.
   - name: HasMatrix
     summary: |
       The 'HasMatrix' method checks if the material has a specific matrix property. It's useful in preventing errors when trying to access a matrix property.
@@ -693,6 +1047,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the matrix property exists; otherwise, false.
+  - name: HasMatrix
+    summary: |
+      The 'HasMatrix' method checks if the material has a specific matrix property. It's useful in preventing errors when trying to access a matrix property.
+      [Unity's Material.HasMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the matrix property to check.
     returns:
       - type: boolean
         summary: |
@@ -717,6 +1091,25 @@ methods:
       - type: boolean
         summary: |
           Returns true if the property exists; otherwise, false.
+  - name: HasProperty
+    summary: |
+      The 'HasProperty' method checks whether the material has a property with a given name. This can be useful to prevent errors before trying to set or get a property.
+      [Unity's Material.HasProperty Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasProperty.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the property exists; otherwise, false.
   - name: HasTexture
     summary: |
       'HasTexture' is a method that checks if the material has a specific texture property. This is handy to avoid errors when trying to access a texture property.
@@ -736,6 +1129,26 @@ methods:
       - type: boolean
         summary: |
           Returns true if the texture property exists; otherwise, false.
+  - name: HasTexture
+    summary: |
+      'HasTexture' is a method that checks if the material has a specific texture property. This is handy to avoid errors when trying to access a texture property.
+      [Unity's Material.HasTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the texture property to check.
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the texture property exists; otherwise, false.
   - name: HasVector
     summary: |
       The 'HasVector' method checks if a specific vector property exists in the material. This can help in preventing errors when trying to access this property.
@@ -751,6 +1164,26 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: boolean
+        summary: |
+          Returns true if the vector property exists; otherwise, false.
+  - name: HasVector
+    summary: |
+      The 'HasVector' method checks if a specific vector property exists in the material. This can help in preventing errors when trying to access this property.
+      [Unity's Material.HasVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.HasVector.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the vector property to check.
     returns:
       - type: boolean
         summary: |
@@ -830,6 +1263,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetColor
+    summary: |
+      The 'SetColor' method sets a color property in the material. This can be used to change the color of the material at runtime, allowing for dynamic visual effects.
+      [Unity's Material.SetColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name for the color property to set.
+      - name: value
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The color value to set the property to.
+    returns:
+      - type: void
+        summary:
   - name: SetColorArray
     summary: |
       [Unity's Material.SetColorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetColorArray.html)
@@ -841,6 +1299,28 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+      - name: values
+        type: {DataType.Color}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetColorArray
+    summary: |
+      [Unity's Material.SetColorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetColorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -876,6 +1356,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetFloat
+    summary: |
+      'SetFloat' is a method used to set a float property in the material. It is typically used to interact with float properties defined in the shader used by the material.
+      [Unity's Material.SetFloat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetFloat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the property to set.
+      - name: value
+        type: number
+        tags:
+        default:
+        summary: |
+          The float value to set the property to.
+    returns:
+      - type: void
+        summary:
   - name: SetFloatArray
     summary: |
       [Unity's Material.SetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetFloatArray.html)
@@ -887,6 +1392,28 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+      - name: values
+        type: {number}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetFloatArray
+    summary: |
+      [Unity's Material.SetFloatArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetFloatArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -922,6 +1449,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetInteger
+    summary: |
+      The 'SetInteger' method is used to set an integer property in the material. It can be used to interact with integer properties defined in the shader used by the material.
+      [Unity's Material.SetInteger Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetInteger.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the property to set.
+      - name: value
+        type: number
+        tags:
+        default:
+        summary: |
+          The integer value to set the property to.
+    returns:
+      - type: void
+        summary:
   - name: SetMatrix
     summary: |
       'SetMatrix' is a method that sets a Matrix4x4 property in the material. This can be used to affect transformations or other matrix operations within the shader used by the material.
@@ -946,6 +1498,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetMatrix
+    summary: |
+      'SetMatrix' is a method that sets a Matrix4x4 property in the material. This can be used to affect transformations or other matrix operations within the shader used by the material.
+      [Unity's Material.SetMatrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetMatrix.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the Matrix4x4 property to set.
+      - name: value
+        type: DataType.Matrix4x4
+        tags:
+        default:
+        summary: |
+          The Matrix4x4 value to set the property to.
+    returns:
+      - type: void
+        summary:
   - name: SetMatrixArray
     summary: |
       [Unity's Material.SetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetMatrixArray.html)
@@ -957,6 +1534,28 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+      - name: values
+        type: {DataType.Matrix4x4}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetMatrixArray
+    summary: |
+      [Unity's Material.SetMatrixArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetMatrixArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:
@@ -1062,6 +1661,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetTexture
+    summary: |
+      The 'SetTexture' method assigns a texture to a named property within a shader. It can be used to dynamically change the textures used by a material at runtime.
+      [Unity's Material.SetTexture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetTexture.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the texture property to set.
+      - name: value
+        type: Class.Texture
+        tags:
+        default:
+        summary: |
+          The Texture object to use.
+    returns:
+      - type: void
+        summary:
   - name: SetTextureOffset
     summary: |
       The 'SetTextureOffset' method adjusts the texture coordinates of a material, effectively shifting the texture. This can be useful for creating effects like scrolling textures.
@@ -1077,6 +1701,31 @@ methods:
         tags:
         default:
         summary:
+      - name: value
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          The amount of texture offset to apply.
+    returns:
+      - type: void
+        summary:
+  - name: SetTextureOffset
+    summary: |
+      The 'SetTextureOffset' method adjusts the texture coordinates of a material, effectively shifting the texture. This can be useful for creating effects like scrolling textures.
+      [Unity's Material.SetTextureOffset Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetTextureOffset.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The property name to which Texture offset will be applied.
       - name: value
         type: DataType.Vector2
         tags:
@@ -1110,6 +1759,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetTextureScale
+    summary: |
+      'SetTextureScale' adjusts the scaling of the texture coordinates of a material, effectively altering the tiling of the texture. This feature can be used for various visual effects, like magnifying or shrinking the appearance of a texture.
+      [Unity's Material.SetTextureScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetTextureScale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The property name to which Texture scaling will be applied.
+      - name: value
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          The amount of texture scaling to apply.
+    returns:
+      - type: void
+        summary:
   - name: SetVector
     summary: |
       The 'SetVector' method sets a Vector4 property in the material. This can be very useful when applying transformations or other operations that can be done through vector properties of a shader.
@@ -1134,6 +1808,31 @@ methods:
     returns:
       - type: void
         summary:
+  - name: SetVector
+    summary: |
+      The 'SetVector' method sets a Vector4 property in the material. This can be very useful when applying transformations or other operations that can be done through vector properties of a shader.
+      [Unity's Material.SetVector Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetVector.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the Vector4 property to set.
+      - name: value
+        type: DataType.Vector4
+        tags:
+        default:
+        summary: |
+          The Vector4 value to set the property to.
+    returns:
+      - type: void
+        summary:
   - name: SetVectorArray
     summary: |
       [Unity's Material.SetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetVectorArray.html)
@@ -1145,6 +1844,28 @@ methods:
     parameters:
       - name: nameID
         type: number
+        tags:
+        default:
+        summary:
+      - name: values
+        type: {DataType.Vector4}
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: SetVectorArray
+    summary: |
+      [Unity's Material.SetVectorArray Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Material.SetVectorArray.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: name
+        type: string
         tags:
         default:
         summary:

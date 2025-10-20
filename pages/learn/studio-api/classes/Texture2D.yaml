@@ -256,6 +256,38 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Apply
+    summary: |
+      The Apply method updates the texture with any changes made since the last time Apply was called. If the texture is used in a material, it is necessary to call this method for the changes to be rendered on screen.
+      For more details, visit [Unity's Texture2D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.Apply.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: updateMipmaps
+        type: boolean
+        tags:
+        default:
+        summary: |
+          If true, the mipmap levels are regenerated automatically.
+    returns:
+      - type: void
+        summary:
+  - name: Apply
+    summary: |
+      The Apply method updates the texture with any changes made since the last time Apply was called. If the texture is used in a material, it is necessary to call this method for the changes to be rendered on screen.
+      For more details, visit [Unity's Texture2D.Apply Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.Apply.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: updateMipmaps
         type: boolean
         tags:
@@ -449,6 +481,32 @@ methods:
         default:
         summary: |
           The y-coordinate of the pixel.
+    returns:
+      - type: DataType.Color
+        summary: |
+          The color of the pixel at the specified coordinates.
+  - name: GetPixel
+    summary: |
+      The GetPixel method fetches the color of a pixel at a given position on the texture. This can be useful to create color-based logic or to read color information from textures.
+      To learn more, refer to [Unity's Texture2D.GetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixel.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary: |
+          The x-coordinate of the pixel.
+      - name: y
+        type: number
+        tags:
+        default:
+        summary: |
+          The y-coordinate of the pixel.
       - name: mipLevel
         type: number
         tags:
@@ -479,6 +537,31 @@ methods:
         default:
         summary: |
           The v-coordinate (vertical) of the pixel.
+    returns:
+      - type: DataType.Color
+        summary: |
+          Returns the color of the pixel at the specified coordinates, blended using bilinear filtering.
+  - name: GetPixelBilinear
+    summary: |
+      The GetPixelBilinear method retrieves the color of a pixel using bilinear filtering. Bilinear filtering considers the four pixels surrounding specific coordinates and returns a blended color, producing a smoother result. More about this at [Unity's Texture2D.GetPixelBilinear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixelBilinear.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: u
+        type: number
+        tags:
+        default:
+        summary: |
+          The u-coordinate (horizontal) of the pixel.
+      - name: v
+        type: number
+        tags:
+        default:
+        summary: |
+          The v-coordinate (vertical) of the pixel.
       - name: mipLevel
         type: number
         tags:
@@ -488,6 +571,67 @@ methods:
       - type: DataType.Color
         summary: |
           Returns the color of the pixel at the specified coordinates, blended using bilinear filtering.
+  - name: GetPixels
+    summary: |
+      [Unity's Texture2D.GetPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixels.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: {DataType.Color}
+        summary:
+  - name: GetPixels
+    summary: |
+      [Unity's Texture2D.GetPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixels.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: miplevel
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.Color}
+        summary:
+  - name: GetPixels
+    summary: |
+      [Unity's Texture2D.GetPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixels.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary:
+      - name: y
+        type: number
+        tags:
+        default:
+        summary:
+      - name: blockWidth
+        type: number
+        tags:
+        default:
+        summary:
+      - name: blockHeight
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {DataType.Color}
+        summary:
   - name: GetPixels
     summary: |
       [Unity's Texture2D.GetPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.GetPixels.html)
@@ -567,6 +711,37 @@ methods:
         default:
         summary: |
           The y-coordinate of the lower left corner of the region where pixels are written in the Texture2D.
+    returns:
+      - type: void
+        summary:
+  - name: ReadPixels
+    summary: |
+      The ReadPixels method reads pixel data from the framebuffer and stores it into a region of the Texture2D. This operation can be particularly helpful when implementing features like screenshots.
+      Detailed info can be found at [Unity's Texture2D.ReadPixels Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.ReadPixels.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: source
+        type: DataType.Rect
+        tags:
+        default:
+        summary: |
+          The region of the screen from which pixels are read.
+      - name: destX
+        type: number
+        tags:
+        default:
+        summary: |
+          The x-coordinate of the lower left corner of the region where pixels are written in the Texture2D.
+      - name: destY
+        type: number
+        tags:
+        default:
+        summary: |
+          The y-coordinate of the lower left corner of the region where pixels are written in the Texture2D.
       - name: recalculateMipMaps
         type: boolean
         tags:
@@ -602,6 +777,37 @@ methods:
       - type: boolean
         summary: |
           Returns true if the re-initialization is successful.
+  - name: SetPixel
+    summary: |
+      The SetPixel method lets you change a pixel's color at a specific position on the texture. This is a critical tool for runtime texture manipulation or applying custom drawn effects on textures.
+      To understand more about it, see [Unity's Texture2D.SetPixel Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture2D.SetPixel.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: x
+        type: number
+        tags:
+        default:
+        summary: |
+          The x-coordinate of the pixel.
+      - name: y
+        type: number
+        tags:
+        default:
+        summary: |
+          The y-coordinate of the pixel.
+      - name: color
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          The desired color for the pixel.
+    returns:
+      - type: void
+        summary:
   - name: SetPixel
     summary: |
       The SetPixel method lets you change a pixel's color at a specific position on the texture. This is a critical tool for runtime texture manipulation or applying custom drawn effects on textures.

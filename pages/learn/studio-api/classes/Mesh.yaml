@@ -255,6 +255,19 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Clear
+    summary: |
+      The 'Clear' method removes all vertex and index data from the Mesh. It's useful for cleaning up Meshes or if you need to rebuild a Mesh from scratch.
+      [Unity's Mesh.Clear Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.Clear.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: keepVertexLayout
         type: boolean
         tags:
@@ -437,8 +450,42 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: {number}
+        summary:
+  - name: GetIndices
+    summary: |
+      [Unity's Mesh.GetIndices Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetIndices.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: submesh
+        type: number
+        tags:
+        default:
+        summary:
       - name: applyBaseVertex
         type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: {number}
+        summary:
+  - name: GetTriangles
+    summary: |
+      [Unity's Mesh.GetTriangles Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mesh.GetTriangles.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: submesh
+        type: number
         tags:
         default:
         summary:
