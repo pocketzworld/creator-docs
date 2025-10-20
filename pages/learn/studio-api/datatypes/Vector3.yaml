@@ -576,6 +576,19 @@ methods:
       - type: DataType.Vector3
         summary: |
           A normalized version of the input Vector3.
+  - name: Normalize
+    summary: |
+      Adjusts the Vector3 to a length of one while maintaining its direction, useful for when only the direction is of interest.
+      [Unity's Vector3.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Normalize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
   - name: OrthoNormalize
     summary: |
       [Unity's Vector3.OrthoNormalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.OrthoNormalize.html)
@@ -747,6 +760,24 @@ methods:
           The second Vector3 used for scaling.
     returns:
       - type: DataType.Vector3
+        summary:
+  - name: Scale
+    summary: |
+      Creates a new Vector3 from the product of corresponding components of two given Vector3s, affecting the size without changing direction.
+      [Unity's Vector3.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: scale
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
         summary:
   - name: Set
     summary: |

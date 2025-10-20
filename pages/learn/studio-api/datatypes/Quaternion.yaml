@@ -432,6 +432,19 @@ methods:
       - type: DataType.Quaternion
         summary: |
           The normalized version of the quaternion.
+  - name: Normalize
+    summary: |
+      Modifies the quaternion to a unit length version of itself.
+      [Unity's Quaternion.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.Normalize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
   - name: RotateTowards
     summary: |
       Gradually changes a Quaternion towards a target rotation.

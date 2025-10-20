@@ -110,14 +110,6 @@ properties:
     tags:
       - ClientOnly
     type: IEmojiParser
-  - name: fixRightToLeft
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    type: "(arg1: string, arg2: TextElement) -> (string)"
   - name: inputUssClassName
     summary:
     description:

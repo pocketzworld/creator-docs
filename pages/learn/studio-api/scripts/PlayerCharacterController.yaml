@@ -11,12 +11,19 @@ properties:
   - name: options
     summary: |
       Options for the player character controller including enabled state, tap to move, tap handlers, long press settings, tap mask, and character long press configuration.
+      The fields are:
+      - enabled (boolean): Whether the player character controller is enabled
+      - tapToMoveEnabled (boolean): Whether tap to move is enabled
+      - tapHandlersEnabled (boolean): Whether tap handlers are enabled
+      - emotesEnabled (boolean): Whether emotes are enabled
+      - enableLongPress (boolean): Whether long press is enabled
+      - characterLongPress ({height = (float), bounceDuration = (float)}): The long press configuration
     description:
     is_static: false
     code_samples:
     tags:
       - ClientAndServer
-    type: Class.PlayerCharacterControllerOptions
+    type: {any}
 methods:
   - name: HandleTapOn
     summary: |
@@ -26,6 +33,7 @@ methods:
     code_samples:
     tags:
       - ClientAndServer
+      - NoSelfParameter
     parameters:
       - name: collider
         type: Class.Collider
@@ -50,6 +58,7 @@ methods:
     code_samples:
     tags:
       - ClientAndServer
+      - NoSelfParameter
     parameters:
       - name: anchor
         type: Class.Anchor

@@ -20,7 +20,7 @@ constructors:
     is_static: true
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
     parameters:
     returns:
       - type: Class.GameObject
@@ -34,7 +34,7 @@ constructors:
     is_static: true
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
     parameters:
       - name: name
         type: string
@@ -53,7 +53,7 @@ constructors:
     is_static: true
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
     parameters:
       - name: name
         type: string

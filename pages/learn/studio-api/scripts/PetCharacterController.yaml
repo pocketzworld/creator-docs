@@ -31,6 +31,7 @@ methods:
     code_samples:
     tags:
       - ClientAndServer
+      - NoSelfParameter
     parameters:
       - name: player
         type: Class.Player
@@ -38,8 +39,15 @@ methods:
         default:
         summary:
     returns:
-      - type: Class.PetInfo
-        summary:
+      - type: {any}
+        summary: |
+          The pet info, containing:
+          - player (Player): The player that owns the pet
+          - character (Character): The character that represents the pet
+          - outfit (CharacterOutfit): The outfit of the pet
+          - traits (string[]): The traits of the pet
+          - characterChangedEvent (Event): The event that is fired when the character changes
+          - petOutfitChangedEvent (Event): The event that is fired when the pet outfit changes
   - name: GetPetFromCharacter
     summary:
     description:
@@ -47,6 +55,7 @@ methods:
     code_samples:
     tags:
       - ClientAndServer
+      - NoSelfParameter
     parameters:
       - name: character
         type: Class.Character
@@ -54,6 +63,13 @@ methods:
         default:
         summary:
     returns:
-      - type: Class.PetInfo
-        summary:
+      - type: {any}
+        summary: |
+          The pet info, containing:
+          - player (Player): The player that owns the pet
+          - character (Character): The character that represents the pet
+          - outfit (CharacterOutfit): The outfit of the pet
+          - traits (string[]): The traits of the pet
+          - characterChangedEvent (Event): The event that is fired when the character changes
+          - petOutfitChangedEvent (Event): The event that is fired when the pet outfit changes
 math_operations:

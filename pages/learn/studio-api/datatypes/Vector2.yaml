@@ -425,6 +425,23 @@ methods:
     returns:
       - type: DataType.Vector2
         summary:
+  - name: Magnitude
+    summary: |
+      [Unity's Vector2.Magnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Magnitude.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: a
+        type: DataType.Vector2
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
   - name: Max
     summary: |
       [Unity's Vector2.Max Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Max.html)
@@ -533,6 +550,26 @@ methods:
     returns:
       - type: DataType.Vector2
         summary:
+  - name: Normalize
+    summary: |
+      Converts Vector2 to a direction vector of length 1.
+      [Unity's Vector2.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Normalize.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      position:Normalize()
+      
+      print(position.x) -- 0.44721359014511
+      print(position.y) -- 0.89442718029022
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+    returns:
+      - type: void
+        summary:
   - name: Perpendicular
     summary: |
       [Unity's Vector2.Perpendicular Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Perpendicular.html)
@@ -606,6 +643,25 @@ methods:
           Second Vector2.
     returns:
       - type: DataType.Vector2
+        summary:
+  - name: Scale
+    summary: |
+      Multiplies two Vector2's component-wise.
+      [Unity's Vector2.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: scale
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Vector2 to scale by.
+    returns:
+      - type: void
         summary:
   - name: Set
     summary: |
@@ -724,6 +780,23 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: number
+        summary:
+  - name: SqrMagnitude
+    summary: |
+      The square of the Vector2's magnitude.
+      [Unity's Vector2.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.SqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local position = Vector2.new(1, 2)
+      print(position:SqrMagnitude()) -- 5
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
     returns:
       - type: number
         summary:

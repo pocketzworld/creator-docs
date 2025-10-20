@@ -20,16 +20,6 @@ properties:
     tags:
       - ClientOnly
     type: number
-  - name: angularDrag
-    summary: |
-      The 'angularDrag' property controls the angular drag applied to the Rigidbody. Angular drag could be interpreted as your Rigidbody's rotational inertia or in simpler terms, resistance to changes in rotating speed. Modifying this could help in creating more realistic movements and spins.
-      [Unity's Rigidbody.angularDrag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-angularDrag.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
   - name: angularVelocity
     summary: |
       The 'angularVelocity' property describes the angular velocity vector of the Rigidbody in degrees per second. Angular velocity essentially measures the rate and direction of rotation. When working on rotating objects or adjusting spin on Rigidbodies this becomes very handy.
@@ -80,16 +70,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: drag
-    summary: |
-      The 'drag' property gives you control over the drag acting on the Rigidbody. Drag is a force that reduces the velocity of the Rigidbody making it decelerate over time as the force increases with speed. The ability to manipulate drag could help in emulating real-world physics like airflow resistance, slowing down your Rigidbody's linear movement over time.
-      [Unity's Rigidbody.drag Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-drag.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
   - name: excludeLayers
     summary: |
       [Unity's Rigidbody.excludeLayers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-excludeLayers.html)
@@ -266,16 +246,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: velocity
-    summary: |
-      The 'velocity' property accesses the velocity of the Rigidbody. It is essentially the speed at which the Rigidbody is moving through 3D space in your game, as measured in units per second, giving you control over the speed at which an object moves.
-      [Unity's Rigidbody.velocity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody-velocity.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: DataType.Vector3
   - name: worldCenterOfMass
     summary: |
       The 'worldCenterOfMass' property accesses the global space position of the center of mass of the Rigidbody. This property is particularly handy when relying on the center of mass to calculate forces or torques that should affect the Rigidbody.

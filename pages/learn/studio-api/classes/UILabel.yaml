@@ -44,14 +44,6 @@ properties:
     tags:
       - ClientOnly
     type: "(obj: string) -> ()"
-  - name: text
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: string
   - name: titlecase
     summary: |
       Set the text field to titlecase mode.  Node that this will not change the current value of

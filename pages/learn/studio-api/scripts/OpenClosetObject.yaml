@@ -23,6 +23,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void

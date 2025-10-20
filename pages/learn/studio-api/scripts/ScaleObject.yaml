@@ -23,6 +23,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -34,6 +35,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -45,6 +47,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -56,6 +59,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: duration
         type: number
@@ -72,6 +76,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: endScale
         type: DataType.Vector3
@@ -88,6 +93,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: startScale
         type: DataType.Vector3

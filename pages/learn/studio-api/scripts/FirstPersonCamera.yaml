@@ -15,6 +15,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: player
         type: Class.Player
@@ -36,6 +37,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: rotate
         type: DataType.Vector2
@@ -52,6 +54,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.PinchGestureChanged
@@ -68,6 +71,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: target
         type: DataType.Vector3
@@ -84,6 +88,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void

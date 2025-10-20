@@ -15,6 +15,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: velocity
         type: DataType.Vector3
@@ -31,6 +32,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: number
@@ -42,6 +44,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: DataType.Vector3
@@ -53,6 +56,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.PinchGestureChanged
@@ -69,6 +73,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: newTarget
         type: DataType.Vector3
@@ -90,6 +95,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: character
         type: Class.Character
@@ -111,6 +117,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: boolean
@@ -122,6 +129,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.PinchGestureChanged
@@ -138,6 +146,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -149,6 +158,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: worldPosition
         type: DataType.Vector3
@@ -170,6 +180,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.PinchGestureChanged
@@ -186,6 +197,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: screenPosition
         type: DataType.Vector3
@@ -202,6 +214,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -213,6 +226,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -224,6 +238,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -235,6 +250,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: camera
         type: Class.Camera
@@ -256,6 +272,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -267,6 +284,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -278,6 +296,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -289,6 +308,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void

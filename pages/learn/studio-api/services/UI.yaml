@@ -221,59 +221,6 @@ methods:
         tags:
         default:
         summary:
-      - name: outfitSaved
-        type: "(obj: CharacterOutfit) -> ()"
-        tags:
-          - optional
-        default:
-        summary:
-      - name: title
-        type: string
-        tags:
-          - optional
-        default:
-        summary:
-      - name: contents
-        type: Class.ClothingCollection
-        tags:
-          - optional
-        default:
-        summary:
-      - name: showPlayerInventory
-        type: boolean
-        tags:
-          - optional
-        default:
-        summary:
-      - name: defaultOutfit
-        type: Class.CharacterOutfit
-        tags:
-          - optional
-        default:
-        summary:
-      - name: saveButtonText
-        type: string
-        tags:
-          - optional
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: OpenCloset
-    summary: |
-      Open a closet view with the player inventory and a collection of clothing items.
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: player
-        type: Class.Player
-        tags:
-        default:
-        summary:
       - name: title
         type: string
         tags:

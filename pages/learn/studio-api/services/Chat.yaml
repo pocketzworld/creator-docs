@@ -64,26 +64,6 @@ properties:
       - ClientAndServer
       - ReadOnly
     type: Class.Event
-  - name: WhisperReceivedHandler
-    summary: |
-      An event that is fired when a client receives a whisper. If this event has no connected listeners, the whisper will display normally.
-      If your game does not allow whispering at certain times or only with certain people, this event should be connected to and use the `DisplayTextMessage` method only when whispering is allowed.
-      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
-    description:
-    is_static: false
-    code_samples: |
-      ```lua
-      local canWhisper = false
-      Chat.WhisperReceivedHandler:Connect(function(channel, player, message)
-        if canWhisper then
-          Chat:DisplayTextMessage(channel, player, message)
-        end
-      end)
-      ```
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: Class.Event
   - name: activeChannel
     summary: |
       The chat channel the local player is currently active in
@@ -215,27 +195,6 @@ methods:
     returns:
       - type: void
         summary:
-  - name: ApplyVideoToSurface
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: userId
-        type: string
-        tags:
-        default:
-        summary:
-      - name: go
-        type: Class.GameObject
-        tags:
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
   - name: CreateChannel
     summary: |
       Creates a new channel. If the channel already exists, it will return the existing channel.
@@ -315,17 +274,6 @@ methods:
     returns:
       - type: void
         summary:
-  - name: DisableVideo
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
   - name: DisplayChatBubble
     summary: |
       Spawns a chat bubble at the given position with the given message and an optional nametag.
@@ -334,7 +282,7 @@ methods:
     is_static: false
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
     parameters:
       - name: position
         type: Class.Transform
@@ -372,7 +320,7 @@ methods:
     is_static: false
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
     parameters:
       - name: position
         type: Class.Transform
@@ -645,17 +593,6 @@ methods:
           - optional
         default:
         summary:
-    returns:
-      - type: void
-        summary:
-  - name: EnableVideo
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
     returns:
       - type: void
         summary:
@@ -675,38 +612,6 @@ methods:
         summary:
     returns:
       - type: Class.ChannelInfo
-        summary:
-  - name: GetLiveVoiceChannelId
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: string
-        summary:
-  - name: OverrideVoiceChannel
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: channel
-        type: Class.ChannelInfo
-        tags:
-        default:
-        summary:
-      - name: voiceChannelId
-        type: string
-        tags:
-        default:
-        summary:
-    returns:
-      - type: void
         summary:
   - name: ReapplyFilters
     summary:
@@ -766,38 +671,5 @@ methods:
         summary:
     returns:
       - type: void
-        summary:
-  - name: StartBroadcasting
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: StopBroadcasting
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
-  - name: allJoinedChannels
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: {Class.ChannelInfo}
         summary:
 math_operations:

@@ -24,6 +24,7 @@ methods:
     code_samples:
     tags:
       - ClientAndServer
+      - NoSelfParameter
     parameters:
       - name: position
         type: DataType.Vector3

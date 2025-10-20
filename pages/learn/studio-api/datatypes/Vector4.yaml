@@ -489,6 +489,19 @@ methods:
     returns:
       - type: DataType.Vector4
         summary:
+  - name: Normalize
+    summary: |
+      Transforms the Vector4 into a vector of same direction but with length 1, ideal for direction-only uses.
+      [Unity's Vector4.Normalize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Normalize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
   - name: Project
     summary: |
       Projects a Vector4 onto another Vector4, useful for finding the nearest point on a defined line.
@@ -541,6 +554,24 @@ methods:
       - type: DataType.Vector4
         summary: |
           Returns a new Vector4 with the scaled components.
+  - name: Scale
+    summary: |
+      Multiplies two Vector4's component-wise, useful for component-wise data manipulation.
+      [Unity's Vector4.Scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.Scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: scale
+        type: DataType.Vector4
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: Set
     summary: |
       Sets the 'x', 'y', 'z', and 'w' components of the Vector4, enhancing code readability and efficiency.
@@ -594,6 +625,20 @@ methods:
         default:
         summary: |
           The Vector4 to compute the square of the magnitude for.
+    returns:
+      - type: number
+        summary: |
+          Returns the square of the magnitude.
+  - name: SqrMagnitude
+    summary: |
+      Provides the square of the magnitude of the Vector4, an efficient method for length comparisons.
+      [Unity's Vector4.SqrMagnitude Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector4.SqrMagnitude.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
     returns:
       - type: number
         summary: |

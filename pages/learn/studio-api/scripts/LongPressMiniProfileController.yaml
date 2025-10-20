@@ -15,6 +15,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.LongPressBeganEvent
@@ -31,6 +32,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.LongPressContinueEvent
@@ -47,6 +49,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.LongPressEndedEvent
@@ -63,6 +66,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: position
         type: DataType.Vector2
@@ -81,6 +85,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void

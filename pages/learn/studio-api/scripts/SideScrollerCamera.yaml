@@ -15,6 +15,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: newTarget
         type: DataType.Vector3
@@ -31,6 +32,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: position
         type: DataType.Vector3
@@ -47,6 +49,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: playerPosition
         type: DataType.Vector3
@@ -68,6 +71,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: evt
         type: Class.PinchGestureChanged
@@ -84,6 +88,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: worldPosition
         type: DataType.Vector3
@@ -105,6 +110,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
       - name: screenPosition
         type: DataType.Vector3
@@ -121,6 +127,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -132,6 +139,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -143,6 +151,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
@@ -154,6 +163,7 @@ methods:
     code_samples:
     tags:
       - ClientOnly
+      - NoSelfParameter
     parameters:
     returns:
       - type: void
