@@ -13,5 +13,8 @@
   },
   "enums": {
     "title": "Enums"
+  },
+  "scripts": {
+    "title": "Scripts"
   }
 }

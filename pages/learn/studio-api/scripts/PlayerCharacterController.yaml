@@ -17,13 +17,13 @@ properties:
       - tapHandlersEnabled (boolean): Whether tap handlers are enabled
       - emotesEnabled (boolean): Whether emotes are enabled
       - enableLongPress (boolean): Whether long press is enabled
-      - characterLongPress ({height = (float), bounceDuration = (float)}): The long press configuration
+      - characterLongPress (height = (float), bounceDuration = (float)): The long press configuration
     description:
     is_static: false
     code_samples:
     tags:
       - ClientAndServer
-    type: {any}
+    type: { any }
 methods:
   - name: HandleTapOn
     summary: |
