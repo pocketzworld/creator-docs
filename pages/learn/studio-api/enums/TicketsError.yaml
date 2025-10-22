@@ -1,4 +1,4 @@
-name: EmitWorldEventError
+name: TicketsError
 type: enums
 summary:
 description:
@@ -15,25 +15,7 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
-  - name: InvalidEventError
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.EmitWorldEventError
-  - name: InvalidPayloadError
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.EmitWorldEventError
+    type: Enum.TicketsError
   - name: None
     summary:
     description:
@@ -42,8 +24,8 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
-  - name: RequestThrottled
+    type: Enum.TicketsError
+  - name: Timeout
     summary:
     description:
     is_static: true
@@ -51,6 +33,15 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
+    type: Enum.TicketsError
+  - name: UnknownError
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.TicketsError
 methods:
 math_operations:
