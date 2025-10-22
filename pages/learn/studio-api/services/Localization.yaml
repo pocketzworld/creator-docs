@@ -7,6 +7,15 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: locale
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
 methods:
   - name: TryGetString
     summary:

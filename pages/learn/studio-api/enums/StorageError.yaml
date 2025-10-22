@@ -25,15 +25,6 @@ properties:
       - ServerOnly
       - ReadOnly
     type: Enum.StorageError
-  - name: Count
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.StorageError
   - name: CursorInvalid
     summary:
     description:
