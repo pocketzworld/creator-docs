@@ -1,4 +1,4 @@
-name: EmitWorldEventError
+name: HTTPError
 type: enums
 summary:
 description:
@@ -15,8 +15,8 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
-  - name: InvalidEventError
+    type: Enum.HTTPError
+  - name: InvalidURL
     summary:
     description:
     is_static: true
@@ -24,16 +24,7 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
-  - name: InvalidPayloadError
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.EmitWorldEventError
+    type: Enum.HTTPError
   - name: None
     summary:
     description:
@@ -42,7 +33,7 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
+    type: Enum.HTTPError
   - name: RequestThrottled
     summary:
     description:
@@ -51,6 +42,24 @@ properties:
     tags:
       - ServerOnly
       - ReadOnly
-    type: Enum.EmitWorldEventError
+    type: Enum.HTTPError
+  - name: RequestTooLarge
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPError
+  - name: ResponseTooLarge
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPError
 methods:
 math_operations:
