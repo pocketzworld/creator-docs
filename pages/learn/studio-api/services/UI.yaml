@@ -7,6 +7,24 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: ChatInputFocusIn
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: ChatInputFocusOut
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: EmoteSelected
     summary:
     description:
@@ -60,6 +78,15 @@ properties:
     tags:
       - ClientOnly
     type: Class.VisualElement
+  - name: chatInputFocused
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
   - name: hud
     summary:
     description:
