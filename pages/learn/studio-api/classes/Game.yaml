@@ -18,7 +18,7 @@ properties:
     type: Class.WorldInstanceInfo
   - name: isEditor
     summary: |
-      Whether the game is currently being run in the Highrise Studio editor.
+      Indicates whether the game is currently being run in the Highrise Studio editor.
     description:
     is_static: false
     code_samples:
