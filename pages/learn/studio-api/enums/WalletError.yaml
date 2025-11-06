@@ -1,14 +1,36 @@
 name: WalletError
 type: enums
-summary:
+summary: |
+  Error codes returned by wallet operations (GetWallet, TransferGold).
+  Check for `WalletError.None` to confirm successful transfers.
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Wallet.TransferGoldToPlayer(player, 100, function(walletState, error)
+      if error == WalletError.None then
+          print("Transfer successful!")
+      elseif error == WalletError.InsufficientResources then
+          print("Not enough gold in wallet")
+      elseif error == WalletError.UserNotFound then
+          print("User not found")
+      elseif error == WalletError.RequestThrottled then
+          print("Too many requests, wait before retrying")
+      else
+          print("Transfer failed: " .. tostring(error))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: InsufficientResources
-    summary:
+    summary: |
+      The world wallet does not have enough gold to complete the transfer.
+      Check wallet balance with GetWallet() before attempting large transfers.
+      World creators need to top up their wallet to continue rewarding players.
     description:
     is_static: true
     code_samples:
@@ -17,7 +39,8 @@ properties:
       - ReadOnly
     type: Enum.WalletError
   - name: InternalError
-    summary:
+    summary: |
+      An internal server error occurred. Retry the operation.
     description:
     is_static: true
     code_samples:
@@ -26,7 +49,8 @@ properties:
       - ReadOnly
     type: Enum.WalletError
   - name: None
-    summary:
+    summary: |
+      Operation completed successfully with no errors.
     description:
     is_static: true
     code_samples:
@@ -35,7 +59,9 @@ properties:
       - ReadOnly
     type: Enum.WalletError
   - name: RequestThrottled
-    summary:
+    summary: |
+      Too many wallet requests sent too quickly. Wait before retrying.
+      Rate limiting is in effect to prevent abuse.
     description:
     is_static: true
     code_samples:
@@ -44,7 +70,9 @@ properties:
       - ReadOnly
     type: Enum.WalletError
   - name: UserNotFound
-    summary:
+    summary: |
+      The specified user ID does not exist or is invalid.
+      Verify the user ID is correct before retrying.
     description:
     is_static: true
     code_samples:

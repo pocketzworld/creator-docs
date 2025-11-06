@@ -1,5 +1,5 @@
-name: FurnitureState2D
-type: classes
+name: HTTPError
+type: enums
 summary:
 description:
 code_samples:
@@ -7,59 +7,59 @@ inherits:
 tags:
 constructors:
 properties:
-  - name: bounds
+  - name: InternalError
     summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ServerOnly
       - ReadOnly
-    type: DataType.Vector3
-  - name: cycleDuration
+    type: Enum.HTTPError
+  - name: InvalidURL
     summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ServerOnly
       - ReadOnly
-    type: number
-  - name: direction
+    type: Enum.HTTPError
+  - name: None
     summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ServerOnly
       - ReadOnly
-    type: number
-  - name: isActive
+    type: Enum.HTTPError
+  - name: RequestThrottled
     summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ServerOnly
       - ReadOnly
-    type: boolean
-  - name: name
+    type: Enum.HTTPError
+  - name: RequestTooLarge
     summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ServerOnly
       - ReadOnly
-    type: string
-  - name: parts
+    type: Enum.HTTPError
+  - name: ResponseTooLarge
     summary:
     description:
-    is_static: false
+    is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ServerOnly
       - ReadOnly
-    type: {Class.FurniturePart2D}
+    type: Enum.HTTPError
 methods:
 math_operations:

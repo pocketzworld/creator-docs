@@ -1,8 +1,14 @@
 name: PlayerCharacterController
 type: scripts
-summary:
+summary: |
+  PlayerCharacterController is a module script that manages player character interactions in Highrise Studio.
+  It handles tap-to-move, tap events, long press interactions, emotes, and anchor occupancy.
+  This is a module script that can be required in your Lua code.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  local PlayerCharacterController = require("PlayerCharacterController")
+  ```
 inherits:
   - Class.Component
 tags:
@@ -10,27 +16,38 @@ constructors:
 properties:
   - name: options
     summary: |
-      Options for the player character controller including enabled state, tap to move, tap handlers, long press settings, tap mask, and character long press configuration.
+      Options for the player character controller including enabled state, tap to move, tap handlers, long press settings, and character long press configuration.
       The fields are:
       - enabled (boolean): Whether the player character controller is enabled
       - tapToMoveEnabled (boolean): Whether tap to move is enabled
       - tapHandlersEnabled (boolean): Whether tap handlers are enabled
       - emotesEnabled (boolean): Whether emotes are enabled
       - enableLongPress (boolean): Whether long press is enabled
-      - characterLongPress (height = (float), bounceDuration = (float)): The long press configuration
+      - characterLongPress (table with height (float), bounceDuration (float)): The long press configuration
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PlayerCharacterController = require("PlayerCharacterController")
+      PlayerCharacterController.options.enabled = true
+      PlayerCharacterController.options.tapToMoveEnabled = true
+      PlayerCharacterController.options.emotesEnabled = false
+      PlayerCharacterController.options.characterLongPress.height = 0.5
+      ```
     tags:
       - ClientAndServer
-    type: { any }
+    type: {any}
 methods:
   - name: HandleTapOn
     summary: |
       Handles tap events on colliders at the specified hit point.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PlayerCharacterController = require("PlayerCharacterController")
+      PlayerCharacterController.HandleTapOn(collider, hitPoint)
+      ```
     tags:
       - ClientAndServer
       - NoSelfParameter
@@ -39,23 +56,27 @@ methods:
         type: Class.Collider
         tags:
         default:
-        summary: |
-          The collider that was tapped
+        summary:
       - name: hitPoint
         type: DataType.Vector3
         tags:
         default:
-        summary: |
-          The point where the tap occurred
+        summary:
     returns:
       - type: void
         summary:
   - name: IsAnchorOccupied
     summary: |
-      Returns true if the given anchor is occupied
+      Returns true if the given anchor is occupied.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PlayerCharacterController = require("PlayerCharacterController")
+      if PlayerCharacterController.IsAnchorOccupied(anchor) then
+          print("Anchor is occupied")
+      end
+      ```
     tags:
       - ClientAndServer
       - NoSelfParameter
@@ -64,10 +85,8 @@ methods:
         type: Class.Anchor
         tags:
         default:
-        summary: |
-          The anchor to check
+        summary:
     returns:
       - type: boolean
-        summary: |
-          True if the anchor is occupied, false otherwise
+        summary:
 math_operations:

@@ -1,6 +1,71 @@
 name: ThirdPersonCamera
 type: scripts
-summary:
+summary: |
+  ThirdPersonCamera is a built-in client-side camera script for third-person perspective gameplay with orbit controls in Highrise Studio.
+  This script positions the camera at a configurable distance behind the player, orbiting around a pivot point above the player's head.
+  Supports pitch (vertical) and yaw (horizontal) rotation, zoom control, collision avoidance to prevent clipping through obstacles, and automatic transition to first-person view when zoomed in fully.
+  Input events are automatically connected for touch/mouse control: drag to rotate, pinch to zoom (touch), mouse wheel to zoom.
+  To add this camera to your scene: Right Click in Hierarchy > Highrise > Cameras > ThirdPersonCamera
+  
+  Configurable Parameters (via Unity Inspector):
+  Camera Position:
+  - _cameraHeight: Height of pivot point above player position in world units (default: 2.5, around head/shoulder height)
+  - _startZoom: Initial distance from pivot in world units (default: 7.5, medium distance behind player)
+  - _minimumZoom: Minimum zoom distance in world units - zooming closer triggers first-person mode (default: 3)
+  - _maximumZoom: Maximum zoom distance in world units (default: 25, far view)
+  - _offset: Additional position offset in world units (X=left/right, Y=up/down, Z=forward/back) - default: Vector3(0,0,0) for centered camera
+  
+  Rotation Settings:
+  - _pitchEnabled: Whether vertical rotation (up/down) is clamped to limits (default: true)
+  - _pitchStart: Initial pitch angle in degrees - how far the camera starts looking down (default: 5, slight downward angle)
+  - _pitchMin: Minimum pitch angle in degrees - negative values look UP (default: -2, allows slight upward tilt)
+  - _pitchMax: Maximum pitch angle in degrees - positive values look DOWN (default: 30, allows looking down at player)
+  - _yawEnabled: Whether horizontal rotation (left/right) is clamped to limits (default: false, allows full 360° orbit)
+  - _yawMin: Minimum yaw angle in degrees (default: -360 for full rotation)
+  - _yawMax: Maximum yaw angle in degrees (default: 360 for full rotation)
+  - _rotationSensitivity: How fast the camera rotates - scale of 1-10, higher = faster (default: 2 = medium speed)
+  
+  Collision Avoidance (prevents camera from going through walls/objects):
+  - _enableCollisionAvoidance: Whether to automatically pull camera forward when obstacles detected (default: true, recommended)
+  - _collisionOffset: Safety buffer distance from obstacles in world units (default: 0.2, prevents clipping)
+  - _obstacleDistanceMinFar: Minimum distance to maintain from obstacles when camera is far in world units (default: 3)
+  - _obstacleDistanceMinNear: Minimum distance to maintain from obstacles when camera is near in world units (default: 0)
+  - _rayDistanceMaxFar: Maximum detection distance for obstacles in world units (default: 10)
+  - _rayDistanceMinNear: Minimum detection distance for obstacles in world units (default: 0.1)
+  
+  First/Third Person Transition:
+  - _enableFirstPerson: Whether to automatically switch to first-person view when fully zoomed in (default: true)
+  - _thirdPersonFOV: Field of view in third-person mode in degrees - lower = more zoomed in (default: 60, typical range 50-70)
+  - _firstPersonFOV: Field of view in first-person mode in degrees (default: 60, same as third-person for seamless transition)
+  - _enableSmoothTransition: Whether to smoothly blend FOV when transitioning between modes (default: true)
+  - _FOVTransitionSpeed: How fast FOV changes - scale of 1-10, higher = faster (default: 3 = medium speed)
+  
+  Internal Constants:
+  - ROTATION_SMOOTHNESS: Fixed smoothing factor for rotation (1.0)
+  - ZOOM_SENSITIVITY: Fixed zoom sensitivity (1.0)
+  - SENSITIVITY_SCALE: Scale factor converting 1-10 range to actual sensitivity (0.1)
+  
+  How It Works:
+  - Pivot Point: Camera orbits around a point above the player's head (player position + _cameraHeight)
+  - On Start: Initializes camera zoom, rotation angles (pitch/yaw), and field of view
+  - Input Handling:
+  - Touch: Single finger drag rotates camera around player, two finger pinch zooms in/out
+  - Mouse: Drag rotates camera around player, mouse wheel zooms in/out
+  - Every frame in Update: Calculates where the camera should be and applies the position
+  - Camera Positioning:
+  - Starts at pivot point (above player's head)
+  - Moves backward by zoom distance
+  - Rotates around pivot based on pitch (vertical angle) and yaw (horizontal angle)
+  - Applies optional offset for custom positioning
+  - Collision Detection: When enabled, checks if obstacles are between pivot and camera
+  - If obstacle detected: Automatically moves camera forward to avoid going through walls
+  - Maintains safety buffer (_collisionOffset) to prevent clipping
+  - Zoom Behavior:
+  - When zoomed out (_minimumZoom or more): Standard third-person view behind player
+  - When zoomed in (below _minimumZoom): Automatically switches to first-person view at player's eye level
+  - FOV Transition: Smoothly or instantly changes field of view when switching between first/third person modes
+  - Rotation terminology: Pitch = looking up/down, Yaw = rotating left/right around player
+  - Reset: Returns camera to initial settings when triggered
 description:
 code_samples:
 inherits:
@@ -9,7 +74,8 @@ constructors:
 properties:
 methods:
   - name: IsActive
-    summary:
+    summary: |
+      Internal function that checks if the camera component is enabled and active in the scene.
     description:
     is_static: false
     code_samples:
@@ -21,7 +87,8 @@ methods:
       - type: boolean
         summary:
   - name: ResetCamera
-    summary:
+    summary: |
+      Internal function that resets camera to initial settings: returns zoom to _startZoom, rotation to starting angles, and FOV to third-person mode.
     description:
     is_static: false
     code_samples:
@@ -33,7 +100,8 @@ methods:
       - type: void
         summary:
   - name: Rotate
-    summary:
+    summary: |
+      Internal function that applies rotation to the camera with sensitivity and smoothing. Updates pitch (vertical angle - looking up/down) and yaw (horizontal angle - rotating around player), clamping to configured limits if enabled.
     description:
     is_static: false
     code_samples:

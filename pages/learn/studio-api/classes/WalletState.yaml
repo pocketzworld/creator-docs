@@ -1,26 +1,85 @@
 name: WalletState
 type: classes
-summary:
+summary: |
+  Represents the current state of the world's wallet.
+  Returned by wallet operations to show balance and earnings.
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Wallet.GetWallet(function(walletState, error)
+      if error == WalletError.None then
+          print("Current balance: " .. walletState.Gold .. " gold")
+          print("Total earned: " .. walletState.EarnedGold .. " gold")
+          print("Total spent: " .. (walletState.EarnedGold - walletState.Gold) .. " gold")
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: earnedGold
-    summary:
+    summary: |
+      The total amount of gold earned by this world across its lifetime.
+      This value only increases and represents cumulative earnings.
+      Use to track total revenue or world popularity.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Wallet.GetWallet(function(walletState, error)
+          if error == WalletError.None then
+              print("All-time earnings: " .. walletState.EarnedGold)
+              
+              -- Track milestone
+              if walletState.EarnedGold >= 10000 then
+                  print("World has earned over 10,000 gold!")
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: gold
-    summary:
+    summary: |
+      The current available gold balance in the wallet.
+      This is the amount available for transferring to players.
+      Decreases with each TransferGold operation.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Check balance before transfer
+      Wallet.GetWallet(function(walletState, error)
+          if error == WalletError.None then
+              local availableGold = walletState.Gold
+              print("Available: " .. availableGold .. " gold")
+              
+              if availableGold >= 100 then
+                  -- Safe to transfer
+                  Wallet.TransferGoldToPlayer(player, 100, function(newState, error)
+                      if error == WalletError.None then
+                          print("New balance: " .. newState.Gold)
+                      end
+                  end)
+              else
+                  print("Insufficient gold for transfer")
+              end
+          end
+      end)
+      
+      -- Calculate total spent
+      Wallet.GetWallet(function(walletState, error)
+          if error == WalletError.None then
+              local totalSpent = walletState.EarnedGold - walletState.Gold
+              print("Total gold given to players: " .. totalSpent)
+          end
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly

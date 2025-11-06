@@ -1,18 +1,78 @@
 name: Wallet
 type: classes
-summary:
+summary: |
+  Global wallet system for transferring gold (currency) to players in your world.
+  Allows world creators to reward players with gold that can be used across Highrise.
+  
+  IMPORTANT: 
+  - Server-side only
+  - Rate limited
+  - Gold is transferred from the world creator's wallet
+  - Requires world to be published and monetization enabled
+  
+  Use cases:
+  - Reward players for achievements or milestones
+  - Prize pools for competitions or events
+  - Payment for in-world services or contributions
+  - Daily login bonuses
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(Server)
+  
+  function self:ServerStart()
+      -- Check wallet balance
+      Wallet.GetWallet(function(walletState, error)
+          if error == WalletError.None then
+              print("Available gold: " .. walletState.Gold)
+              print("Total earned: " .. walletState.EarnedGold)
+          end
+      end)
+      
+      -- Reward a player
+      Wallet.TransferGoldToPlayer(player, 100, function(walletState, error)
+          if error == WalletError.None then
+              print("Transferred 100 gold to " .. player.name)
+              print("Remaining balance: " .. walletState.Gold)
+          end
+      end)
+  end
+  ```
 inherits:
 tags:
 constructors:
 properties:
 methods:
   - name: GetWallet
-    summary:
+    summary: |
+      Retrieves the current wallet state for this world.
+      Shows available gold balance and total earned gold.
+      
+      IMPORTANT: Rate limited. Do not call repeatedly in loops.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Check wallet balance before transferring
+      Wallet.GetWallet(function(walletState, error)
+          if error == WalletError.None then
+              print("Current balance: " .. walletState.Gold)
+              print("Total earned: " .. walletState.EarnedGold)
+              
+              if walletState.Gold >= 1000 then
+                  print("Enough gold for large prizes!")
+              else
+                  print("Low on gold, top up needed")
+              end
+          elseif error == WalletError.InsufficientResources then
+              print("No gold available in wallet")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -25,10 +85,35 @@ methods:
       - type: void
         summary:
   - name: TransferGold
-    summary:
+    summary: |
+      Transfers gold from the world wallet to a user by their user ID.
+      Gold is deducted from the world creator's wallet.
+      
+      IMPORTANT:
+      - Amount must be positive
+      - Wallet must have sufficient gold
+      - Rate limited
+      - Transaction is final and cannot be reversed
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Transfer gold to a user by ID
+      Wallet.TransferGold("user_123", 500, function(walletState, error)
+          if error == WalletError.None then
+              print("Successfully transferred 500 gold")
+              print("New wallet balance: " .. walletState.Gold)
+          elseif error == WalletError.InsufficientResources then
+              print("Not enough gold in wallet")
+          elseif error == WalletError.UserNotFound then
+              print("User ID not found")
+          elseif error == WalletError.RequestThrottled then
+              print("Too many transfers, slow down")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -51,10 +136,61 @@ methods:
       - type: void
         summary:
   - name: TransferGoldToPlayer
-    summary:
+    summary: |
+      Transfers gold from the world wallet to a player (convenience method).
+      Equivalent to TransferGold(player.user.id, amount, callback).
+      
+      IMPORTANT:
+      - Amount must be positive
+      - Wallet must have sufficient gold
+      - Rate limited
+      - Transaction is final and cannot be reversed
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Reward player for achievement
+      function RewardPlayer(player, goldAmount)
+          Wallet.TransferGoldToPlayer(player, goldAmount, function(walletState, error)
+              if error == WalletError.None then
+                  print("Rewarded " .. player.name .. " with " .. goldAmount .. " gold!")
+                  print("Remaining balance: " .. walletState.Gold)
+                  
+                  -- Notify player
+                  -- (Send UI notification here)
+              elseif error == WalletError.InsufficientResources then
+                  print("ERROR: Wallet has insufficient gold")
+              end
+          end)
+      end
+      
+      -- Daily login bonus
+      server.PlayerConnected:Connect(function(player)
+          Storage.GetPlayerValue(player, "LastLogin", function(lastLogin, error)
+              local today = os.date("%Y-%m-%d")
+              if lastLogin ~= today then
+                  -- Give daily bonus
+                  Wallet.TransferGoldToPlayer(player, 10, function(wallet, error)
+                      if error == WalletError.None then
+                          print(player.name .. " received 10 gold daily bonus")
+                          Storage.SetPlayerValue(player, "LastLogin", today)
+                      end
+                  end)
+              end
+          end)
+      end)
+      
+      -- Competition prize
+      function AwardWinner(player)
+          Wallet.TransferGoldToPlayer(player, 1000, function(wallet, error)
+              if error == WalletError.None then
+                  print(player.name .. " won 1000 gold!")
+              end
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:

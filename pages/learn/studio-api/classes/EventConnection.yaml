@@ -1,9 +1,24 @@
 name: EventConnection
 type: classes
 summary: |
-  EventConnection class manages the connections between event triggers and their corresponding responders in Highrise, facilitating communication and action triggering based on game state changes. These connections are established when events are connected and can be severed using the Disconnect method when no longer needed, halting further communication between linked entities. It serves as a crucial component in event-driven programming, ensuring responsive and dynamic gameplay.
+  EventConnection manages the connection between an event and its callback function.
+  Returned when calling Event:Connect(), allowing you to later disconnect the callback.
+  
+  Use EventConnection to:
+  - Stop listening to events when no longer needed
+  - Clean up connections to prevent memory leaks
+  - Conditionally enable/disable event handlers
 description:
-code_samples:
+code_samples: |
+  ```lua
+  local event = Event.new("PlayerJoined")
+  local connection = event:Connect(function(player)
+      print(player.name .. " joined!")
+  end)
+  
+  -- Later, stop listening to the event
+  connection:Disconnect()
+  ```
 inherits:
 tags:
 constructors:
@@ -11,10 +26,19 @@ properties:
 methods:
   - name: Disconnect
     summary: |
-      Terminates the event connection, halting communication between the event trigger and its responder.
+      Disconnects the callback from the event.
+      After calling this, the callback will no longer be invoked when the event fires.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local connection = event:Connect(function()
+          print("Event fired")
+      end)
+      
+      -- Disconnect when done
+      connection:Disconnect()
+      ```
     tags:
       - ClientAndServer
     parameters:

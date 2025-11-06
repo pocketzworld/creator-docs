@@ -1,6 +1,32 @@
 name: FirstPersonCamera
 type: scripts
-summary:
+summary: |
+  FirstPersonCamera is a built-in client-side camera script that provides first-person perspective gameplay.
+  This script automatically tracks the local player's character and updates the camera position every frame to follow the player at a configured height offset.
+  The camera supports touch and mouse input for rotation with configurable sensitivity, smoothing, and rotation limits (pitch/yaw).
+  Input events (PinchOrDragBegan, PinchOrDragChanged, PinchOrDragEnded) are automatically connected to handle camera rotation.
+  To add this camera to your scene: Right Click in Hierarchy > Highrise > Cameras > FirstPersonCamera
+  
+  Configurable Parameters (via Unity Inspector):
+  - cameraHeightFromPlayer: Height offset of the camera from player position in world units (default: 1.5, typical eye height)
+  - EnableMaxPitch: Whether to limit vertical rotation/looking up and down (default: true)
+  - EnableMaxYaw: Whether to limit horizontal rotation/looking left and right (default: false, allows full 360° rotation)
+  - minPitch: Minimum pitch angle in degrees - negative values look UP (default: -45, allows looking up 45°)
+  - maxPitch: Maximum pitch angle in degrees - positive values look DOWN (default: 45, allows looking down 45°)
+  - minYaw: Minimum yaw angle in degrees for left rotation (default: -360 for full rotation)
+  - maxYaw: Maximum yaw angle in degrees for right rotation (default: 360 for full rotation)
+  - touchRotationSensitivity: How fast the camera rotates from touch input - higher = faster (default: 0.4, range 0.1-1.0 recommended)
+  - mouseRotationSensitivity: How fast the camera rotates from mouse input - higher = faster (default: 0.25, range 0.1-0.5 recommended)
+  - rotationSmoothing: Smoothing applied per frame - 1 = full smoothing, 0 = instant/no smoothing (default: 1)
+  - FOV: Field of view in degrees - higher = wider view, lower = zoomed in (default: 70, typical range 60-90 for FPS)
+  
+  How It Works:
+  - On Start: Initializes camera rotation and detects appropriate sensitivity for touch vs mouse input
+  - Automatically tracks when the local player's character spawns or changes
+  - Every frame in Update: Positions camera at player's eye level (player position + height offset) and applies rotation
+  - Input handling: Touch/mouse drag rotates the camera, with movement converted to rotation angles based on sensitivity
+  - Rotation terminology: Pitch = vertical rotation (looking up/down), Yaw = horizontal rotation (looking left/right)
+  - Rotation limits: When enabled, clamps how far you can look up/down or left/right
 description:
 code_samples:
 inherits:
@@ -9,7 +35,8 @@ constructors:
 properties:
 methods:
   - name: OnLocalCharacter
-    summary:
+    summary: |
+      Internal function called when the local player's character spawns or changes. Sets up the camera to follow the character.
     description:
     is_static: false
     code_samples:
@@ -31,7 +58,8 @@ methods:
       - type: void
         summary:
   - name: Rotate
-    summary:
+    summary: |
+      Internal function that applies rotation to the camera with sensitivity and smoothing. Updates pitch (vertical looking up/down) and yaw (horizontal looking left/right), clamping to configured limits if enabled.
     description:
     is_static: false
     code_samples:
@@ -48,7 +76,8 @@ methods:
       - type: void
         summary:
   - name: RotateCamera
-    summary:
+    summary: |
+      Internal function that processes touch/mouse drag input to rotate the camera. Converts screen movement (in pixels) to rotation angles, applies sensitivity, and updates both horizontal and vertical rotation.
     description:
     is_static: false
     code_samples:
@@ -65,7 +94,8 @@ methods:
       - type: void
         summary:
   - name: SetFirstPersonView
-    summary:
+    summary: |
+      Internal function that positions the camera at the target position plus the configured height offset (cameraHeightFromPlayer in world units).
     description:
     is_static: false
     code_samples:
@@ -82,7 +112,8 @@ methods:
       - type: void
         summary:
   - name: UpdatePosition
-    summary:
+    summary: |
+      Internal function called every frame. Positions the camera at the player's eye level (player position + height offset) and applies the current pitch and yaw rotation.
     description:
     is_static: false
     code_samples:

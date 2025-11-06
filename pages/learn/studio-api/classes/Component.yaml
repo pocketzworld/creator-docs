@@ -101,37 +101,19 @@ methods:
     tags:
       - ClientAndServer
     parameters:
-      - name: type
+      - name: t
         type: Class.Type
         tags:
         default:
         summary: |
           The type of the component to retrieve.
-    returns:
-      - type: Class.Component
-        summary: |
-          The first component of the specified type attached to the GameObject's children.
-  - name: GetComponentInChildren
-    summary: |
-      Searches the GameObject's children for a component of a specific type, extending component access to child GameObjects.
-      [Unity's Component.GetComponentInChildren Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInChildren.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientAndServer
-    parameters:
-      - name: t
-        type: Class.Type
-        tags:
-        default:
-        summary:
       - name: includeInactive
         type: boolean
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Whether to include inactive GameObjects in the search.
     returns:
       - type: Class.Component
         summary: |
@@ -146,37 +128,19 @@ methods:
     tags:
       - ClientAndServer
     parameters:
-      - name: type
+      - name: t
         type: Class.Type
         tags:
         default:
         summary: |
           The type of the component to retrieve.
-    returns:
-      - type: Class.Component
-        summary: |
-          The component, if located in a parent.
-  - name: GetComponentInParent
-    summary: |
-      Looks for a specified component type in the GameObject's parent hierarchy, useful for accessing shared components in parent objects.
-      [Unity's Component.GetComponentInParent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponentInParent.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientAndServer
-    parameters:
-      - name: t
-        type: Class.Type
-        tags:
-        default:
-        summary:
       - name: includeInactive
         type: boolean
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Whether to include inactive GameObjects in the search.
     returns:
       - type: Class.Component
         summary: |

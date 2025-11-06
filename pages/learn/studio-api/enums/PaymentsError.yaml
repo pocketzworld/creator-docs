@@ -1,14 +1,30 @@
 name: PaymentsError
 type: enums
-summary:
+summary: |
+  PaymentsError enum contains all possible error codes returned from Payments API operations.
+  Check the error parameter in callbacks to determine if the operation succeeded or failed.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Payments.GetProduct("bundle_id", function(product, error)
+      if error == PaymentsError.None then
+          print("Success")
+      elseif error == PaymentsError.InvalidProductId then
+          print("Product not found")
+      elseif error == PaymentsError.RequestThrottled then
+          print("Too many requests, try again later")
+      else
+          print("Error: " .. tostring(error))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: CursorInvalid
-    summary:
+    summary: |
+      The cursor is invalid
     description:
     is_static: true
     code_samples:
@@ -17,7 +33,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: CursorInvalidLimit
-    summary:
+    summary: |
+      The cursor limit is invalid
     description:
     is_static: true
     code_samples:
@@ -26,7 +43,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: CursorNoMoreValues
-    summary:
+    summary: |
+      No more values available for the cursor
     description:
     is_static: true
     code_samples:
@@ -35,7 +53,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: InternalError
-    summary:
+    summary: |
+      An internal server error occurred
     description:
     is_static: true
     code_samples:
@@ -44,7 +63,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: InvalidProductId
-    summary:
+    summary: |
+      The provided product ID is invalid
     description:
     is_static: true
     code_samples:
@@ -53,7 +73,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: InvalidPurchaseId
-    summary:
+    summary: |
+      The provided purchase ID is invalid
     description:
     is_static: true
     code_samples:
@@ -62,7 +83,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: InvalidUserId
-    summary:
+    summary: |
+      The provided user ID is invalid
     description:
     is_static: true
     code_samples:
@@ -71,7 +93,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: None
-    summary:
+    summary: |
+      No error occurred - operation successful
     description:
     is_static: true
     code_samples:
@@ -80,7 +103,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: PurchaseAlreadyAcknowledged
-    summary:
+    summary: |
+      This purchase has already been acknowledged
     description:
     is_static: true
     code_samples:
@@ -89,7 +113,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: RequestThrottled
-    summary:
+    summary: |
+      Too many requests sent - rate limit exceeded
     description:
     is_static: true
     code_samples:
@@ -98,7 +123,8 @@ properties:
       - ReadOnly
     type: Enum.PaymentsError
   - name: UnknownPayment
-    summary:
+    summary: |
+      The payment or purchase is unknown
     description:
     is_static: true
     code_samples:

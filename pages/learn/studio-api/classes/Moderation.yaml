@@ -1,72 +1,198 @@
 name: Moderation
 type: classes
-summary:
+summary: |
+  Global moderation system for managing player behavior in your world.
+  Provides ban, kick, mute functionality with event notifications and ban list retrieval.
+  
+  IMPORTANT: Server-side only. Rate limited.
+  
+  Use cases:
+  - Ban disruptive players temporarily or permanently
+  - Kick players to immediately remove them from the world
+  - Mute players to prevent them from chatting
+  - Listen to moderation events to log actions or notify moderators
+  - Retrieve banned users list for moderation UI
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(Server)
+  
+  function self:ServerStart()
+      -- Ban a player for 1 hour
+      Moderation.BanPlayer(player, 3600, "Inappropriate behavior", function(error)
+          if error == ModerationError.None then
+              print("Player banned successfully")
+          end
+      end)
+      
+      -- Listen for ban events
+      Moderation.OnBan:Connect(function(userId, duration, message)
+          print("User " .. userId .. " was banned for " .. duration .. " seconds")
+      end)
+  end
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: OnBan
-    summary:
+    summary: |
+      Event fired when a player is banned.
+      
+      Event Parameters:
+          userId (string): The user ID of the banned player
+          durationSeconds (number): Ban duration in seconds (or InfiniteDuration)
+          message (string): The ban reason message
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.OnBan:Connect(function(userId, durationSeconds, message)
+          print("BANNED: " .. userId)
+          print("Duration: " .. durationSeconds .. " seconds")
+          print("Reason: " .. message)
+          
+          -- Log to storage
+          Storage.SetValue("BanLog_" .. userId, {
+              timestamp = os.time(),
+              duration = durationSeconds,
+              reason = message
+          })
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.Event
   - name: OnKick
-    summary:
+    summary: |
+      Event fired when a player is kicked from the world.
+      
+      Event Parameters:
+          userId (string): The user ID of the kicked player
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.OnKick:Connect(function(userId)
+          print("KICKED: " .. userId)
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.Event
   - name: OnMute
-    summary:
+    summary: |
+      Event fired when a player is muted.
+      
+      Event Parameters:
+          userId (string): The user ID of the muted player
+          durationSeconds (number): Mute duration in seconds (or InfiniteDuration)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.OnMute:Connect(function(userId, durationSeconds)
+          print("MUTED: " .. userId .. " for " .. durationSeconds .. " seconds")
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.Event
   - name: OnUnban
-    summary:
+    summary: |
+      Event fired when a player is unbanned.
+      
+      Event Parameters:
+          userId (string): The user ID of the unbanned player
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.OnUnban:Connect(function(userId)
+          print("UNBANNED: " .. userId)
+          Storage.DeleteValue("BanLog_" .. userId)
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.Event
   - name: OnUnmute
-    summary:
+    summary: |
+      Event fired when a player is unmuted.
+      
+      Event Parameters:
+          userId (string): The user ID of the unmuted player
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.OnUnmute:Connect(function(userId)
+          print("UNMUTED: " .. userId)
+      end)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.Event
   - name: infiniteDuration
-    summary:
+    summary: |
+      Constant value representing a permanent/infinite duration for bans and mutes.
+      Use this instead of a large number to indicate a permanent action.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Permanently ban a player
+      Moderation.BanPlayer(player, Moderation.InfiniteDuration, "Permanent ban")
+      
+      -- Permanently mute a player
+      Moderation.MutePlayer(player, Moderation.InfiniteDuration)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
 methods:
   - name: Ban
-    summary:
+    summary: |
+      Bans a user by their user ID.
+      
+      Overloads:
+      - Ban(userId, duration)
+      - Ban(userId, duration, message)
+      - Ban(userId, duration, message, callback)
+      
+      Use `Moderation.InfiniteDuration` for permanent bans.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Ban for 1 hour (3600 seconds)
+      Moderation.Ban("user_123", 3600)
+      
+      -- Ban with reason
+      Moderation.Ban("user_123", 3600, "Spamming chat")
+      
+      -- Ban with error handling
+      Moderation.Ban("user_123", 3600, "Inappropriate behavior", function(error)
+          if error == ModerationError.None then
+              print("Ban successful")
+          elseif error == ModerationError.InvalidUserId then
+              print("User ID not found")
+          elseif error == ModerationError.InsufficientPermissions then
+              print("No permission to ban")
+          end
+      end)
+      
+      -- Permanent ban
+      Moderation.Ban("user_123", Moderation.InfiniteDuration, "Permanent ban")
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -84,10 +210,39 @@ methods:
       - type: void
         summary:
   - name: Ban
-    summary:
+    summary: |
+      Bans a user by their user ID.
+      
+      Overloads:
+      - Ban(userId, duration)
+      - Ban(userId, duration, message)
+      - Ban(userId, duration, message, callback)
+      
+      Use `Moderation.InfiniteDuration` for permanent bans.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Ban for 1 hour (3600 seconds)
+      Moderation.Ban("user_123", 3600)
+      
+      -- Ban with reason
+      Moderation.Ban("user_123", 3600, "Spamming chat")
+      
+      -- Ban with error handling
+      Moderation.Ban("user_123", 3600, "Inappropriate behavior", function(error)
+          if error == ModerationError.None then
+              print("Ban successful")
+          elseif error == ModerationError.InvalidUserId then
+              print("User ID not found")
+          elseif error == ModerationError.InsufficientPermissions then
+              print("No permission to ban")
+          end
+      end)
+      
+      -- Permanent ban
+      Moderation.Ban("user_123", Moderation.InfiniteDuration, "Permanent ban")
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -110,10 +265,39 @@ methods:
       - type: void
         summary:
   - name: Ban
-    summary:
+    summary: |
+      Bans a user by their user ID.
+      
+      Overloads:
+      - Ban(userId, duration)
+      - Ban(userId, duration, message)
+      - Ban(userId, duration, message, callback)
+      
+      Use `Moderation.InfiniteDuration` for permanent bans.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Ban for 1 hour (3600 seconds)
+      Moderation.Ban("user_123", 3600)
+      
+      -- Ban with reason
+      Moderation.Ban("user_123", 3600, "Spamming chat")
+      
+      -- Ban with error handling
+      Moderation.Ban("user_123", 3600, "Inappropriate behavior", function(error)
+          if error == ModerationError.None then
+              print("Ban successful")
+          elseif error == ModerationError.InvalidUserId then
+              print("User ID not found")
+          elseif error == ModerationError.InsufficientPermissions then
+              print("No permission to ban")
+          end
+      end)
+      
+      -- Permanent ban
+      Moderation.Ban("user_123", Moderation.InfiniteDuration, "Permanent ban")
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -141,10 +325,26 @@ methods:
       - type: void
         summary:
   - name: BanPlayer
-    summary:
+    summary: |
+      Bans a player object (convenience method that uses player.user.id).
+      
+      Overloads:
+      - BanPlayer(player, duration)
+      - BanPlayer(player, duration, message)
+      - BanPlayer(player, duration, message, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Ban player for 24 hours
+      Moderation.BanPlayer(player, 86400, "Harassment", function(error)
+          if error == ModerationError.None then
+              print(player.name .. " has been banned for 24 hours")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -162,10 +362,26 @@ methods:
       - type: void
         summary:
   - name: BanPlayer
-    summary:
+    summary: |
+      Bans a player object (convenience method that uses player.user.id).
+      
+      Overloads:
+      - BanPlayer(player, duration)
+      - BanPlayer(player, duration, message)
+      - BanPlayer(player, duration, message, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Ban player for 24 hours
+      Moderation.BanPlayer(player, 86400, "Harassment", function(error)
+          if error == ModerationError.None then
+              print(player.name .. " has been banned for 24 hours")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -188,10 +404,26 @@ methods:
       - type: void
         summary:
   - name: BanPlayer
-    summary:
+    summary: |
+      Bans a player object (convenience method that uses player.user.id).
+      
+      Overloads:
+      - BanPlayer(player, duration)
+      - BanPlayer(player, duration, message)
+      - BanPlayer(player, duration, message, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Ban player for 24 hours
+      Moderation.BanPlayer(player, 86400, "Harassment", function(error)
+          if error == ModerationError.None then
+              print(player.name .. " has been banned for 24 hours")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -219,10 +451,38 @@ methods:
       - type: void
         summary:
   - name: GetBannedUsers
-    summary:
+    summary: |
+      Retrieves a paginated list of banned users for this world.
+      Use for building moderation UIs or reviewing ban history.
+      
+      IMPORTANT: Rate limited. Do not call repeatedly in loops.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Get first 20 banned users
+      Moderation.GetBannedUsers(20, nil, function(bans, cursor, error)
+          if error == ModerationError.None then
+              print("Found " .. #bans .. " banned users")
+              
+              for i, ban in ipairs(bans) do
+                  print("Banned user: " .. ban.user.name)
+                  print("  Reason: " .. ban.message)
+                  print("  Banned by: " .. ban.bannedBy.name)
+                  print("  Expires at: " .. ban.expiresAt)
+              end
+              
+              -- Get next page if cursor exists
+              if cursor ~= nil then
+                  Moderation.GetBannedUsers(20, cursor, function(moreBans, nextCursor, error)
+                      -- Handle next page
+                  end)
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -245,10 +505,24 @@ methods:
       - type: void
         summary:
   - name: Kick
-    summary:
+    summary: |
+      Kicks a user from the world immediately (does not prevent rejoin).
+      Use Ban if you want to prevent the user from rejoining.
+      
+      Overloads:
+      - Kick(userId)
+      - Kick(userId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Kick a user
+      Moderation.Kick("user_123", function(error)
+          if error == ModerationError.None then
+              print("User kicked")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -261,10 +535,24 @@ methods:
       - type: void
         summary:
   - name: Kick
-    summary:
+    summary: |
+      Kicks a user from the world immediately (does not prevent rejoin).
+      Use Ban if you want to prevent the user from rejoining.
+      
+      Overloads:
+      - Kick(userId)
+      - Kick(userId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Kick a user
+      Moderation.Kick("user_123", function(error)
+          if error == ModerationError.None then
+              print("User kicked")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -282,10 +570,25 @@ methods:
       - type: void
         summary:
   - name: KickPlayer
-    summary:
+    summary: |
+      Kicks a player from the world immediately (convenience method).
+      
+      Overloads:
+      - KickPlayer(player)
+      - KickPlayer(player, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Kick player for rule violation
+      Moderation.KickPlayer(player, function(error)
+          if error == ModerationError.None then
+              print(player.name .. " has been kicked")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -298,10 +601,25 @@ methods:
       - type: void
         summary:
   - name: KickPlayer
-    summary:
+    summary: |
+      Kicks a player from the world immediately (convenience method).
+      
+      Overloads:
+      - KickPlayer(player)
+      - KickPlayer(player, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Kick player for rule violation
+      Moderation.KickPlayer(player, function(error)
+          if error == ModerationError.None then
+              print(player.name .. " has been kicked")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -319,10 +637,28 @@ methods:
       - type: void
         summary:
   - name: Mute
-    summary:
+    summary: |
+      Mutes a user, preventing them from sending chat messages.
+      
+      Overloads:
+      - Mute(userId, duration)
+      - Mute(userId, duration, callback)
+      
+      Use `Moderation.InfiniteDuration` for permanent mutes.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Mute for 10 minutes
+      Moderation.Mute("user_123", 600, function(error)
+          if error == ModerationError.None then
+              print("User muted for 10 minutes")
+          end
+      end)
+      
+      -- Permanent mute
+      Moderation.Mute("user_123", Moderation.InfiniteDuration)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -340,10 +676,28 @@ methods:
       - type: void
         summary:
   - name: Mute
-    summary:
+    summary: |
+      Mutes a user, preventing them from sending chat messages.
+      
+      Overloads:
+      - Mute(userId, duration)
+      - Mute(userId, duration, callback)
+      
+      Use `Moderation.InfiniteDuration` for permanent mutes.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Mute for 10 minutes
+      Moderation.Mute("user_123", 600, function(error)
+          if error == ModerationError.None then
+              print("User muted for 10 minutes")
+          end
+      end)
+      
+      -- Permanent mute
+      Moderation.Mute("user_123", Moderation.InfiniteDuration)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -366,10 +720,25 @@ methods:
       - type: void
         summary:
   - name: MutePlayer
-    summary:
+    summary: |
+      Mutes a player (convenience method).
+      
+      Overloads:
+      - MutePlayer(player, duration)
+      - MutePlayer(player, duration, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Mute player for spam
+      Moderation.MutePlayer(player, 300, function(error)
+          if error == ModerationError.None then
+              print(player.name .. " muted for 5 minutes")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -387,10 +756,25 @@ methods:
       - type: void
         summary:
   - name: MutePlayer
-    summary:
+    summary: |
+      Mutes a player (convenience method).
+      
+      Overloads:
+      - MutePlayer(player, duration)
+      - MutePlayer(player, duration, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Mute player for spam
+      Moderation.MutePlayer(player, 300, function(error)
+          if error == ModerationError.None then
+              print(player.name .. " muted for 5 minutes")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -413,10 +797,23 @@ methods:
       - type: void
         summary:
   - name: Unban
-    summary:
+    summary: |
+      Removes a ban from a user by their user ID.
+      
+      Overloads:
+      - Unban(userId)
+      - Unban(userId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Unban a user
+      Moderation.Unban("user_123", function(error)
+          if error == ModerationError.None then
+              print("User unbanned successfully")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -429,10 +826,23 @@ methods:
       - type: void
         summary:
   - name: Unban
-    summary:
+    summary: |
+      Removes a ban from a user by their user ID.
+      
+      Overloads:
+      - Unban(userId)
+      - Unban(userId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Unban a user
+      Moderation.Unban("user_123", function(error)
+          if error == ModerationError.None then
+              print("User unbanned successfully")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -450,10 +860,22 @@ methods:
       - type: void
         summary:
   - name: Unmute
-    summary:
+    summary: |
+      Removes a mute from a user.
+      
+      Overloads:
+      - Unmute(userId)
+      - Unmute(userId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.Unmute("user_123", function(error)
+          if error == ModerationError.None then
+              print("User unmuted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -466,10 +888,22 @@ methods:
       - type: void
         summary:
   - name: Unmute
-    summary:
+    summary: |
+      Removes a mute from a user.
+      
+      Overloads:
+      - Unmute(userId)
+      - Unmute(userId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.Unmute("user_123", function(error)
+          if error == ModerationError.None then
+              print("User unmuted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -487,10 +921,22 @@ methods:
       - type: void
         summary:
   - name: UnmutePlayer
-    summary:
+    summary: |
+      Removes a mute from a player (convenience method).
+      
+      Overloads:
+      - UnmutePlayer(player)
+      - UnmutePlayer(player, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.UnmutePlayer(player, function(error)
+          if error == ModerationError.None then
+              print(player.name .. " unmuted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -503,10 +949,22 @@ methods:
       - type: void
         summary:
   - name: UnmutePlayer
-    summary:
+    summary: |
+      Removes a mute from a player (convenience method).
+      
+      Overloads:
+      - UnmutePlayer(player)
+      - UnmutePlayer(player, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Moderation.UnmutePlayer(player, function(error)
+          if error == ModerationError.None then
+              print(player.name .. " unmuted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:

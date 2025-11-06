@@ -1,8 +1,29 @@
 name: Payments
 type: services
 summary: |
-  The Payments service provides methods for creating and managing payments in your game.
-  Check out the PaymentsError class for error codes that can be returned by the Payments service.
+  The Payments API provides functionality for managing In-World Purchases (IWP) in Highrise Studio.
+  
+  Use Payments for:
+  - Creating purchasable products (items, bundles, subscriptions)
+  - Processing player purchases with real currency (Gold)
+  - Tracking purchase history
+  - Acknowledging and fulfilling purchases
+  
+  Purchase Flow (Server-side):
+  1. Set up PurchaseHandler to receive purchase notifications
+  2. Grant items/rewards to the player
+  3. Call AcknowledgePurchase to confirm fulfillment
+  
+  Products are configured in the Highrise Studio dashboard and retrieved via GetProduct/GetProducts.
+  
+  TESTING IN STUDIO:
+  You can use `goldfish` and `eel` as test product IDs for IWP purchases in Studio even if your world hasn't been uploaded yet.
+  If your world IS uploaded and has IWP configured in Creator Portal, use your actual product IDs instead.
+  
+  Rate Limiting: Payment functions have rate limits. Excessive calls will return PaymentsError.RequestThrottled.
+  
+  IMPORTANT: Server-side payment methods (GetProduct, AcknowledgePurchase, etc.) are only available on the SERVER.
+  Client-side methods (PromptPurchase, ClosePurchasePrompt) are only available on the CLIENT.
 description:
 code_samples:
 inherits:
@@ -10,20 +31,53 @@ tags:
 constructors:
 properties:
   - name: PurchaseHandler
-    summary:
+    summary: |
+      Handler that gets called when a player makes a purchase.
+      Set this to process purchases and grant rewards to players.
+      You must call AcknowledgePurchase after fulfilling the purchase.
+      
+      TESTING: Test purchases in Studio using product IDs "goldfish" or "eel".
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:ServerStart()
+          Payments.PurchaseHandler = function(purchase, player)
+              print(player.name .. " purchased product: " .. purchase.product_id)
+              
+              -- Handle different products (test IDs: "goldfish", "eel")
+              if purchase.product_id == "goldfish" or purchase.product_id == "premium_coins" then
+                  -- Grant premium coins
+                  local transaction = InventoryTransaction.new()
+                  transaction:GivePlayer(player, "premium_coins", 100)
+                  Inventory.CommitTransaction(transaction)
+              elseif purchase.product_id == "eel" or purchase.product_id == "premium_bundle" then
+                  -- Grant premium bundle
+                  local transaction = InventoryTransaction.new()
+                  transaction:GivePlayer(player, "premium_coins", 500)
+                  transaction:GivePlayer(player, "exclusive_item", 1)
+                  Inventory.CommitTransaction(transaction)
+              end
+              
+              -- Always acknowledge the purchase after granting items
+              Payments.AcknowledgePurchase(purchase, true)
+          end
+      end
+      ```
     tags:
       - ServerOnly
     type: "(purchase: WorldProductPurchase, player: Player) -> ()"
 methods:
   - name: AcknowledgePurchase
     summary: |
-      Acknowledge a purchase made by the current user.
+      Acknowledges a purchase to confirm it has been fulfilled.
+      Set wasConsumed to true for consumable items, false for permanent items.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Payments.AcknowledgePurchase(purchase, true)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -42,10 +96,14 @@ methods:
         summary:
   - name: AcknowledgePurchase
     summary: |
-      Acknowledge a purchase made by the current user.
+      Acknowledges a purchase to confirm it has been fulfilled.
+      Set wasConsumed to true for consumable items, false for permanent items.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Payments.AcknowledgePurchase(purchase, true)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -80,10 +138,31 @@ methods:
         summary:
   - name: GetProduct
     summary: |
-      Get a product by its ID.
+      Retrieves a product by its ID.
+      Use this to get product details like name, description, and price.
+      
+      TESTING: Use "goldfish" or "eel" as test product IDs in Studio before your world is uploaded.
+      Once uploaded with IWP configured in Creator Portal, use your actual product IDs.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Test in Studio with built-in test products
+      Payments.GetProduct("goldfish", function(product, error)
+          if error == PaymentsError.None and product ~= nil then
+              print("Product: " .. product.name)
+              print("Price: " .. product.price .. " Gold")
+              print("Description: " .. product.description)
+          end
+      end)
+      
+      -- Use actual product IDs once world is uploaded
+      Payments.GetProduct("premium_bundle", function(product, error)
+          if error == PaymentsError.None and product ~= nil then
+              print("Product: " .. product.name)
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -102,10 +181,27 @@ methods:
         summary:
   - name: GetProducts
     summary: |
-      Get a list of In-World Purchases (IWP).
+      Retrieves a list of all available In-World Purchase products.
+      
+      TESTING: In Studio, this returns test products "goldfish" and "eel" before your world is uploaded.
+      Once uploaded with IWP configured, this returns your actual configured products.
+      
+      Pagination: Pass nil for cursorId to get first results. Use returned nextCursorId for next page.
+      If returned nextCursorId is nil, no more results exist.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Get all products (includes test products in Studio)
+      Payments.GetProducts(nil, function(products, nextCursorId, error)
+          if error == PaymentsError.None then
+              print("Available products:")
+              for i, product in ipairs(products) do
+                  print("- " .. product.name .. ": " .. product.price .. " Gold")
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -124,10 +220,23 @@ methods:
         summary:
   - name: GetPurchases
     summary: |
-      Get a list of purchases made by the specified user.
+      Retrieves a list of purchases made by a player for a specific product.
+      
+      Pagination: Pass nil for cursorId to get first results. Use returned nextCursorId for next page.
+      If returned nextCursorId is nil, no more results exist.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Payments.GetPurchases(player, "premium_bundle", 10, nil, function(purchases, nextCursorId, error)
+          if error == PaymentsError.None then
+              print("Found " .. #purchases .. " purchases")
+              for i, purchase in ipairs(purchases) do
+                  print("Purchase ID: " .. purchase.id .. " on " .. os.date("%Y-%m-%d", purchase.purchase_date))
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:

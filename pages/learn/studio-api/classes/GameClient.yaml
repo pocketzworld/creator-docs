@@ -1,12 +1,50 @@
 name: GameClient
 type: classes
 summary: |
-  In Highrise's scripting environment, the GameClient class acts as the high-level game context the script is running in. Any client-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Client' or 'Client and Server' can access client - with 'Client and Server' requiring you to check if `client` is not nil (or `server` is nil).
-  The GameClient is essential for managing critical client-specific activities, such as identifying the local player or the main camera. It also enables responding to events like the connection and disconnection of players during gameplay.
-  It stands as the bridge between local operations and the expansive game environment, providing a hassle-free way to tap into and manage client-side functionalities.
+  The global `client` object provides access to client-side game context and is available in Client and ClientAndServer scripts.
+  Inherits from Game, so all Game properties (Players, Info, PlayerCount, etc.) are also available.
+  
+  Use cases:
+  - Accessing the local player (the player running this client)
+  - Responding to player connections and disconnections from the client's perspective
+  - Client-specific UI updates and interactions
+  - Managing local player state and input
+  
+  Availability:
+  - Client scripts: `client` is always available
+  - ClientAndServer scripts: Check if `client ~= nil` or `server == nil` to determine if running on client
+  
+  Example usage:
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(ClientAndServer)
+  
+  function self:ClientStart()
+      -- Access local player
+      local myPlayer = client.localPlayer
+      print("I am: " .. myPlayer.name)
+      
+      -- RECOMMENDED: Use scene.players for players in current scene
+      print("Players in this scene: " .. scene.playerCount)
+      
+      -- Use client.players for all players across all scenes
+      print("Total players in world: " .. client.playerCount)
+      print("Room ID: " .. client.info.roomId)
+  end
+  
+  function self:Start()
+      -- Check if running on client or server
+      if client ~= nil then
+          print("Running on client")
+          print("Local player: " .. client.localPlayer.name)
+      elseif server ~= nil then
+          print("Running on server")
+      end
+  end
+  ```
 inherits:
+  - Class.Game
 tags:
 constructors:
 properties:
@@ -32,20 +70,109 @@ properties:
     type: Class.Event
   - name: PlayerConnected
     summary: |
-      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player when in a Class.GameClient side script.
+      Event triggered when a player connects to the game from the client's perspective.
+      Fires for all players, including the local player and remote players.
+      
+      NOTE: This fires when a player connects, NOT when their avatar spawns.
+      For avatar spawn events, use player.CharacterChanged event.
+      
+      Event Parameters:
+          Player: The player who connected
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Client)
+      
+      function self:ClientStart()
+          client.PlayerConnected:Connect(function(player)
+              print(player.name .. " connected!")
+              
+              -- Check if it's the local player
+              if player == client.localPlayer then
+                  print("I connected!")
+              else
+                  print("Another player connected")
+              end
+              
+              -- Display welcome message
+              print("Welcome " .. player.name .. " (ID: " .. player.user.id .. ")")
+          end)
+      end
+      ```
+      ```lua
+      --!Type(ClientAndServer)
+      
+      -- Track players on both client and server
+      function self:ClientStart()
+          client.PlayerConnected:Connect(function(player)
+              print("[CLIENT] Player connected: " .. player.name)
+              -- Update UI for client
+          end)
+      end
+      
+      function self:ServerStart()
+          server.PlayerConnected:Connect(function(player)
+              print("[SERVER] Player connected: " .. player.name)
+              -- Initialize server-side player data
+          end)
+      end
+      ```
     tags:
       - ClientOnly
       - ReadOnly
     type: Class.Event
   - name: PlayerDisconnected
     summary: |
-      An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
+      Event triggered when a player disconnects from the game from the client's perspective.
+      Fires for all players, including remote players (but not typically for local player as the client stops running).
+      Use this to clean up client-side resources or update UI when other players leave.
+      
+      Event Parameters:
+          Player: The player who disconnected
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Client)
+      
+      function self:ClientStart()
+          client.PlayerDisconnected:Connect(function(player)
+              print(player.name .. " disconnected!")
+              
+              -- Clean up client-side references
+              print("Goodbye " .. player.name)
+              
+              -- Update player count UI (use scene.playerCount for current scene)
+              print("Players in scene: " .. scene.playerCount)
+          end)
+      end
+      ```
+      ```lua
+      --!Type(Client)
+      
+      -- Example: Track and display active players
+      local playerList = {}
+      
+      function self:ClientStart()
+          -- RECOMMENDED: Use scene.players for current scene
+          for i, player in ipairs(scene.players) do
+              playerList[player.user.id] = player.name
+          end
+          
+          -- Track players joining the scene
+          scene.PlayerJoined:Connect(function(scene, player)
+              playerList[player.user.id] = player.name
+              print("Added to scene: " .. player.name)
+          end)
+          
+          -- Track players leaving the scene
+          scene.PlayerLeft:Connect(function(scene, player)
+              playerList[player.user.id] = nil
+              print("Left scene: " .. player.name)
+          end)
+      end
+      ```
     tags:
       - ClientOnly
       - ReadOnly
@@ -72,10 +199,31 @@ properties:
     type: boolean
   - name: localPlayer
     summary: |
-      This property provides a direct handle to the game's local player from the client's perspective, facilitating easy interaction and local player management.
+      Provides direct access to the local player on this client.
+      This is the player instance representing the user running this specific client.
+      Use this to access local player properties, character, or user information.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Client)
+      
+      function self:ClientStart()
+          local me = client.localPlayer
+          print("My name: " .. me.name)
+          print("My user ID: " .. me.user.id)
+          
+          -- Access local player character
+          if me.character ~= nil then
+              print("My position: " .. tostring(me.character.Position))
+          end
+          
+          -- Check if local player is a moderator
+          if me.isModerator then
+              print("I am a moderator!")
+          end
+      end
+      ```
     tags:
       - ClientOnly
       - ReadOnly

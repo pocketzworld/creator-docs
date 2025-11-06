@@ -1,44 +1,75 @@
 name: LeaderboardEntry
 type: classes
-summary:
+summary: |
+  LeaderboardEntry contains data for a single leaderboard entry.
+  Returned from Leaderboard API methods with player information, score, and ranking.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Leaderboard.GetEntryForPlayer("global_scores", player, function(entry, error)
+      if error == LeaderboardError.None and entry ~= nil then
+          print("Player: " .. entry.name)
+          print("Rank: #" .. entry.rank)
+          print("Score: " .. entry.score)
+          print("Entry ID: " .. entry.id)
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: id
-    summary:
+    summary: |
+      The unique identifier for this leaderboard entry (usually player.user.id).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Entry ID: " .. entry.id)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: name
-    summary:
+    summary: |
+      The display name for this entry (usually player.name).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Player: " .. entry.name)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: rank
-    summary:
+    summary: |
+      The current rank position of this entry (1 = first place).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Rank: #" .. entry.rank)
+      if entry.rank <= 3 then
+          print("Top 3 player!")
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: score
-    summary:
+    summary: |
+      The score value for this entry.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Score: " .. entry.score)
+      ```
     tags:
       - ServerOnly
       - ReadOnly

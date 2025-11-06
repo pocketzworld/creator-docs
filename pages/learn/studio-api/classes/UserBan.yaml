@@ -1,53 +1,124 @@
 name: UserBan
 type: classes
-summary:
+summary: |
+  Represents a banned user record with ban details.
+  Returned by `Moderation.GetBannedUsers()` for moderation management.
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Moderation.GetBannedUsers(20, nil, function(bans, cursor, error)
+      if error == ModerationError.None then
+          for i, ban in ipairs(bans) do
+              print("Banned: " .. ban.user.name)
+              print("  By: " .. ban.bannedBy.name)
+              print("  Reason: " .. ban.message)
+              print("  Created: " .. ban.createdAt)
+              print("  Expires: " .. ban.expiresAt)
+              
+              -- Check if ban is permanent
+              if ban.expiresAt == math.huge then
+                  print("  (Permanent ban)")
+              end
+          end
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: bannedBy
-    summary:
+    summary: |
+      The User object of the moderator who issued the ban.
+      Contains Name, Id, IsSubscriber, and IsAgeVerifiedAbove18.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Banned by: " .. ban.bannedBy.name)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.User
   - name: createdAt
-    summary:
+    summary: |
+      Unix timestamp (seconds since epoch) when the ban was created.
+      Use with os.date() to format as human-readable date.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local banDate = os.date("%Y-%m-%d %H:%M:%S", ban.createdAt)
+      print("Banned on: " .. banDate)
+      
+      -- Calculate how long ago the ban was issued
+      local timeSinceBan = os.time() - ban.createdAt
+      print("Banned " .. timeSinceBan .. " seconds ago")
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: expiresAt
-    summary:
+    summary: |
+      Unix timestamp (seconds since epoch) when the ban will expire.
+      Will be infinity (math.huge) for permanent bans.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if ban.expiresAt == math.huge then
+          print("Permanent ban")
+      else
+          local expireDate = os.date("%Y-%m-%d %H:%M:%S", ban.expiresAt)
+          print("Expires on: " .. expireDate)
+          
+          -- Calculate remaining time
+          local timeRemaining = ban.expiresAt - os.time()
+          if timeRemaining > 0 then
+              print("Time remaining: " .. timeRemaining .. " seconds")
+          else
+              print("Ban has expired")
+          end
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: message
-    summary:
+    summary: |
+      The reason message provided when the ban was issued.
+      May be empty if no reason was specified.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if ban.message ~= "" then
+          print("Ban reason: " .. ban.message)
+      else
+          print("No reason provided")
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: user
-    summary:
+    summary: |
+      The User object of the banned player.
+      Contains Name, Id, IsSubscriber, and IsAgeVerifiedAbove18.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local bannedUser = ban.user
+      print("Banned user: " .. bannedUser.name)
+      print("User ID: " .. bannedUser.id)
+      ```
     tags:
       - ServerOnly
       - ReadOnly

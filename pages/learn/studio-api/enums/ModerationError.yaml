@@ -1,23 +1,35 @@
 name: ModerationError
 type: enums
-summary:
+summary: |
+  Error codes returned by moderation operations (Ban, Kick, Mute, etc.).
+  Check for `ModerationError.None` to confirm successful operations.
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Moderation.BanPlayer(player, 3600, "Rule violation", function(error)
+      if error == ModerationError.None then
+          print("Ban successful")
+      elseif error == ModerationError.InvalidUserId then
+          print("User not found")
+      elseif error == ModerationError.InsufficientPermissions then
+          print("No permission to ban")
+      elseif error == ModerationError.RequestThrottled then
+          print("Too many requests, slow down")
+      else
+          print("Error: " .. tostring(error))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
-  - name: Count
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.ModerationError
   - name: CursorInvalid
-    summary:
+    summary: |
+      The cursor ID provided to GetBannedUsers is invalid or expired.
+      Start from the beginning with a nil cursor.
     description:
     is_static: true
     code_samples:
@@ -26,7 +38,9 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: CursorInvalidLimit
-    summary:
+    summary: |
+      The limit parameter for GetBannedUsers is invalid (too high or too low).
+      Typical valid range is 1-100.
     description:
     is_static: true
     code_samples:
@@ -35,7 +49,9 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: InsufficientPermissions
-    summary:
+    summary: |
+      The requesting player does not have permission to perform this moderation action.
+      Only moderators and world owners can use moderation features.
     description:
     is_static: true
     code_samples:
@@ -44,7 +60,8 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: InternalError
-    summary:
+    summary: |
+      An internal server error occurred. Retry the operation.
     description:
     is_static: true
     code_samples:
@@ -53,7 +70,9 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: InvalidUserId
-    summary:
+    summary: |
+      The specified user ID does not exist or is invalid.
+      Verify the user ID is correct.
     description:
     is_static: true
     code_samples:
@@ -62,7 +81,8 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: None
-    summary:
+    summary: |
+      Operation completed successfully with no errors.
     description:
     is_static: true
     code_samples:
@@ -71,7 +91,9 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: RequestThrottled
-    summary:
+    summary: |
+      Too many moderation requests sent too quickly. Wait before retrying.
+      Rate limiting is in effect to prevent abuse.
     description:
     is_static: true
     code_samples:
@@ -80,7 +102,9 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: Timeout
-    summary:
+    summary: |
+      The operation timed out before completing.
+      Retry the operation.
     description:
     is_static: true
     code_samples:
@@ -89,7 +113,8 @@ properties:
       - ReadOnly
     type: Enum.ModerationError
   - name: UnknownError
-    summary:
+    summary: |
+      An unknown error occurred. Check server logs for details.
     description:
     is_static: true
     code_samples:

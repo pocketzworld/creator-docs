@@ -1,6 +1,62 @@
 name: SideScrollerCamera
 type: scripts
-summary:
+summary: |
+  SideScrollerCamera is a built-in client-side camera script for side-scrolling 2D/2.5D gameplay in Highrise Studio.
+  This script uses orthographic projection and automatically follows the local player character with smooth interpolation, deadzone support, optional boundaries, and manual pan/zoom controls.
+  The camera can be overridden by manual panning/zooming and will resume automatic following when the player moves again.
+  Input events are automatically connected for touch/mouse control: drag to pan (if enabled), pinch to zoom (touch), mouse wheel to zoom.
+  To add this camera to your scene: Right Click in Hierarchy > Highrise > Cameras > SideScrollerCamera
+  
+  Configurable Parameters (via Unity Inspector):
+  Zoom Settings:
+  - canZoom: Whether the camera can be zoomed by user (default: true)
+  - zoom: Initial zoom level - half-height of visible area in world units (default: 10.0, shows 20 units tall)
+  - zoomMin: Minimum zoom - closer view, less visible (default: 5.0)
+  - zoomMax: Maximum zoom - farther view, more visible (default: 15.0)
+  - mobileZoomSensitivity: How fast pinch zoom responds - higher = faster (default: 1)
+  
+  Follow Settings:
+  - camerFollowPlayer: Whether the camera automatically follows the player (default: true, recommended)
+  - cameraFollowSpeed: How fast camera catches up to player - higher = faster (default: 3.0)
+  - xOffset: Horizontal offset from player in world units - 0 = centered (default: 0.0)
+  - yOffset: Vertical offset from player in world units (default: 5.0, camera sits above player)
+  - canPan: Whether player can manually drag to pan camera (default: true)
+  
+  Boundary Settings (limits how far camera can move):
+  - boundary: Whether to enforce camera movement boundaries relative to player position (default: false)
+  - minBoundaryX/maxBoundaryX: How far camera can move left/right from player in world units (default: -10.0 to 10.0)
+  - minBoundaryY/maxBoundaryY: How far camera can move up/down from player in world units (default: -10.0 to 10.0)
+  
+  Deadzone Settings (prevents camera jitter from small movements):
+  - deadzone: Whether to use a deadzone - camera only moves when player leaves this area (default: true, recommended)
+  - deadzoneWidth: Width of the deadzone rectangle in world units (default: 3.0)
+  - deadzoneHeight: Height of the deadzone rectangle in world units (default: 3.0)
+  
+  Terminology:
+  - Orthographic: Flat 2D projection without perspective depth - perfect for side-scrollers
+  - Deadzone: Safe area where player can move without camera following (prevents jittery camera)
+  - Pan: Manually dragging to move the camera
+  - Zoom: How much of the world is visible vertically (orthographicSize)
+  - Offset: How far the camera sits from the player's actual position
+  
+  How It Works:
+  - Camera Type: Always uses orthographic (2D/flat) projection for side-scrolling games
+  - On Start: Positions camera and connects to track when player spawns
+  - Camera Override: When you manually pan/zoom, camera stops auto-following until player moves again
+  - Input Handling:
+  - Touch: One finger drag pans, two finger pinch zooms
+  - Mouse: Drag pans, mouse wheel zooms
+  - Every frame in Update:
+  - If auto-follow enabled: Smoothly moves camera toward player
+  - Applies current zoom level
+  - Following Behavior:
+  - Camera follows player position + configured offsets (xOffset, yOffset)
+  - If player is in deadzone: Camera stays still (reduces jitter)
+  - If player leaves deadzone: Camera smoothly follows
+  - Smooth following: Faster when player is far, slower when close (feels natural)
+  - Boundaries (when enabled): Limits how far camera can move from player (creates contained play area)
+  - Manual Control: Dragging/zooming overrides auto-follow until player moves
+  - Reset: Returns camera to auto-follow mode at player position
 description:
 code_samples:
 inherits:
@@ -9,7 +65,8 @@ constructors:
 properties:
 methods:
   - name: CenterOn
-    summary:
+    summary: |
+      Immediately sets camera target and position to newTarget. Updates both target variable and camera.transform.position (X and Y only, preserves Z).
     description:
     is_static: false
     code_samples:
@@ -26,7 +83,8 @@ methods:
       - type: void
         summary:
   - name: ClampPosition
-    summary:
+    summary: |
+      Clamps a position within configured boundaries relative to player position. If boundary is disabled, returns position unchanged. Calculates min/max X/Y boundaries by adding minBoundaryX/Y and maxBoundaryX/Y to player position, then clamps the input position.
     description:
     is_static: false
     code_samples:
@@ -43,7 +101,8 @@ methods:
       - type: DataType.Vector3
         summary:
   - name: IsOutsideDeadzone
-    summary:
+    summary: |
+      Checks if player position is outside the configured deadzone centered on camera position. If deadzone is disabled, returns true (always follow). Calculates half-widths of deadzone, computes absolute X and Y deltas between player and camera, returns true if either delta exceeds half-width.
     description:
     is_static: false
     code_samples:
@@ -65,7 +124,8 @@ methods:
       - type: boolean
         summary:
   - name: PanCamera
-    summary:
+    summary: |
+      Handles camera panning from touch/mouse drag input. If canPan is disabled, returns immediately. Converts current event position to world space, calls PanWorldPositionToScreenPosition to maintain lastPanWorldPosition under cursor/finger, updates lastPanWorldPosition for next frame.
     description:
     is_static: false
     code_samples:
@@ -82,7 +142,8 @@ methods:
       - type: void
         summary:
   - name: PanWorldPositionToScreenPosition
-    summary:
+    summary: |
+      Adjusts camera position so a specific world position appears at a specific screen position. Converts screen position to world position after adjustment, calculates delta, applies to target with boundary clamping, calls CenterOn to update camera.
     description:
     is_static: false
     code_samples:
@@ -104,7 +165,8 @@ methods:
       - type: void
         summary:
   - name: PostZoomMoveTowardsScreenPoint
-    summary:
+    summary: |
+      Adjusts camera position after zoom to keep the screen point under cursor/finger at the same world location. Converts screen position to world position before zoom, calls UpdateZoom to apply new zoom, then calls PanWorldPositionToScreenPosition to maintain the world point's screen location.
     description:
     is_static: false
     code_samples:
@@ -121,7 +183,8 @@ methods:
       - type: void
         summary:
   - name: UpdatePosition
-    summary:
+    summary: |
+      Updates camera position to follow player character with smooth interpolation. Calculates target position as player position + xOffset/yOffset. If player is moving and not manually panning, clears cameraOverridden flag. If camera is overridden, skips following. Checks IsOutsideDeadzone and updates targetPosition if player is outside. Smoothly lerps camera toward targetPosition using dynamic lerp factor based on distance (Time.deltaTime * cameraFollowSpeed * (distance / 10), clamped 0.01-1). Preserves camera's original Z position. Updates both camera.transform.position and target variable.
     description:
     is_static: false
     code_samples:
@@ -133,7 +196,8 @@ methods:
       - type: void
         summary:
   - name: UpdateZoom
-    summary:
+    summary: |
+      Applies current zoom value to camera.orthographicSize.
     description:
     is_static: false
     code_samples:
@@ -145,7 +209,8 @@ methods:
       - type: void
         summary:
   - name: ZoomIn
-    summary:
+    summary: |
+      Decreases zoom by 1, clamped between zoomMin and zoomMax.
     description:
     is_static: false
     code_samples:
@@ -157,7 +222,8 @@ methods:
       - type: void
         summary:
   - name: ZoomOut
-    summary:
+    summary: |
+      Increases zoom by 1, clamped between zoomMin and zoomMax.
     description:
     is_static: false
     code_samples:

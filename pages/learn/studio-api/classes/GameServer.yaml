@@ -1,10 +1,42 @@
 name: GameServer
 type: classes
 summary: |
-  In Highrise's scripting environment, the GameServer class acts as the high-level game context the script is running remotely. Any server-level interaction or manipulation will be found in this class. Specifically, scripts marked 'Server' or 'Client and Server' can access server - with 'Client and Server' scripts requiring you to check if `server` is not nil (or `client` is nil).
-  Any high-level server events and interactions will be found in this type.
+  The global `server` object provides access to server-side game context and is available in Server and ClientAndServer scripts.
+  Inherits from Game, so all Game properties (Players, Info, PlayerCount, etc.) are also available.
+  
+  Use cases:
+  - Managing player connections and disconnections (authoritative source)
+  - Scene management (loading, unloading, moving players between scenes)
+  - Matchmaking priority configuration
+  - Cross-world event communication (SendWorldEvent, OnWorldEvent)
+  - Server-side game logic and state management
+  
+  Availability:
+  - Server scripts: `server` is always available
+  - ClientAndServer scripts: Check if `server ~= nil` or `client == nil` to determine if running on server
+  
+  Available on: Server and ClientAndServer scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(Server)
+  
+  function self:ServerStart()
+      print("Server started!")
+      
+      -- RECOMMENDED: Use scene.playerCount for players in current scene
+      print("Players in this scene: " .. scene.playerCount)
+      
+      -- Use server.playerCount for total across all scenes
+      print("Total players in world: " .. server.playerCount)
+      print("World ID: " .. server.info.worldId)
+      
+      -- Listen for player connections
+      server.PlayerConnected:Connect(function(player)
+          print(player.name .. " joined the server")
+      end)
+  end
+  ```
 inherits:
   - Class.Game
 tags:
@@ -12,20 +44,72 @@ constructors:
 properties:
   - name: PlayerConnected
     summary: |
-      An event that is triggered when a new player gets connected to the game. This mechanism allows developers to trigger specific actions in response to a player's connection. Note that this is not when the player's Class.Avatar is spawned. For avatar spawn, see Class.Player when in a Class.GameClient side script.
+      Event triggered when a player connects to the server.
+      This is the authoritative server-side event for player connections.
+      Fires before the client-side PlayerConnected event.
+      
+      NOTE: This fires when a player connects, NOT when their avatar spawns.
+      For avatar spawn events, use player.CharacterChanged event or PlayerCharacterSpawner.OnCharacterSpawned.
+      
+      Event Parameters:
+          Player: The player who connected
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          server.PlayerConnected:Connect(function(player)
+              print("[SERVER] " .. player.name .. " connected!")
+              print("User ID: " .. player.user.id)
+              
+              -- Use scene.playerCount for players in current scene (recommended)
+              print("Players in scene: " .. scene.playerCount)
+              -- Use server.playerCount for total across all scenes
+              print("Total players: " .. server.playerCount)
+              
+              -- Initialize player data on server
+              Storage.SetPlayerValue(player, "JoinTime", os.time())
+              
+              -- Grant starting items
+              local transaction = InventoryTransaction.new()
+              transaction:GivePlayer(player, "welcome_coins", 100)
+              Inventory.CommitTransaction(transaction)
+          end)
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: Class.Event
   - name: PlayerDisconnected
     summary: |
-      An event that is set off when a player disconnects from the game. This feature is crucial in managing actions that follow a player's disconnection.
+      Event triggered when a player disconnects from the server.
+      This is the authoritative server-side event for player disconnections.
+      Use this to save player data, clean up resources, or notify other players.
+      
+      Event Parameters:
+          Player: The player who disconnected
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          server.PlayerDisconnected:Connect(function(player)
+              print("[SERVER] " .. player.name .. " disconnected!")
+              
+              -- Save player session data
+              Storage.SetPlayerValue(player, "LastSeen", os.time())
+              
+              -- Notify remaining players
+              print("Players in scene: " .. scene.playerCount)
+              print("Total players in world: " .. server.playerCount)
+          end)
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
@@ -33,42 +117,90 @@ properties:
   - name: isLoading
     summary: |
       Indicates whether the server is currently in a loading state.
+      Returns true while the server is initializing scenes and resources.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerUpdate()
+          if server.isLoading then
+              -- Server is still loading, don't start game logic yet
+              return
+          end
+          
+          -- Normal game logic here
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: boolean
   - name: sceneCount
-    summary:
+    summary: |
+      The total number of loaded scenes in the world.
+      Equivalent to #server.Scenes
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          print("Active scenes: " .. server.sceneCount)
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: scenes
-    summary:
+    summary: |
+      Array of all loaded scenes in the world.
+      Use this to iterate through scenes or find a specific scene.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          print("Total scenes: " .. server.sceneCount)
+          
+          for i, scene in ipairs(server.scenes) do
+              print("Scene " .. i .. " player count: " .. #scene.players)
+          end
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: {Class.Scene}
   - name: spectatorCount
-    summary:
+    summary: |
+      The number of spectators currently in the spectator scene.
+      Spectators are observers who don't count towards the MaxPlayers limit.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerUpdate()
+          if server.spectatorCount > 0 then
+              print("Spectators watching: " .. server.spectatorCount)
+          end
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: spectatorScene
-    summary:
+    summary: |
+      Gets or sets the spectator scene where players can observe without actively participating.
+      Spectators don't count towards the MaxPlayers limit.
     description:
     is_static: false
     code_samples:
@@ -78,10 +210,20 @@ properties:
     type: Class.Scene
 methods:
   - name: GetMatchMakingPriority
-    summary:
+    summary: |
+      Gets the current matchmaking priority for this world instance.
+      Returns the priority value set by SetMatchMakingPriority (default is 0).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          local currentPriority = server.GetMatchMakingPriority()
+          print("Current matchmaking priority: " .. currentPriority)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -91,9 +233,29 @@ methods:
   - name: LoadScene
     summary: |
       Loads a scene into the game environment.
+      Can load scenes by name (string) or scene ID (int).
+      
+      Parameters:
+      - sceneName/sceneId: The scene to load
+      - additive: If true, adds the scene without unloading others. If false, replaces the current scene.
+      
+      Returns the loaded WorldScene object.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Load a scene by name (replacing current scene)
+          local mainScene = server.LoadScene("MainArena", false)
+          print("Loaded scene: " .. mainScene.name)
+          
+          -- Load additional scene additively
+          local bonusScene = server.LoadScene("BonusArea", true)
+          print("Added bonus scene")
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -113,9 +275,29 @@ methods:
   - name: LoadScene
     summary: |
       Loads a scene into the game environment.
+      Can load scenes by name (string) or scene ID (int).
+      
+      Parameters:
+      - sceneName/sceneId: The scene to load
+      - additive: If true, adds the scene without unloading others. If false, replaces the current scene.
+      
+      Returns the loaded WorldScene object.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Load a scene by name (replacing current scene)
+          local mainScene = server.LoadScene("MainArena", false)
+          print("Loaded scene: " .. mainScene.name)
+          
+          -- Load additional scene additively
+          local bonusScene = server.LoadScene("BonusArea", true)
+          print("Added bonus scene")
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -135,9 +317,27 @@ methods:
   - name: LoadSceneAdditive
     summary: |
       Loads a scene additively into the game environment.
+      Convenience method equivalent to LoadScene(sceneName, true) or LoadScene(sceneId, true).
+      Can load scenes by name (string) or scene ID (int).
+      
+      Returns the loaded WorldScene object.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Load base scene
+          local mainScene = server.LoadScene("MainWorld", false)
+          
+          -- Add additional scenes
+          local shopScene = server.LoadSceneAdditive("Shop")
+          local pvpScene = server.LoadSceneAdditive("PvPArena")
+          
+          print("Total scenes loaded: " .. server.sceneCount)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -152,9 +352,27 @@ methods:
   - name: LoadSceneAdditive
     summary: |
       Loads a scene additively into the game environment.
+      Convenience method equivalent to LoadScene(sceneName, true) or LoadScene(sceneId, true).
+      Can load scenes by name (string) or scene ID (int).
+      
+      Returns the loaded WorldScene object.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Load base scene
+          local mainScene = server.LoadScene("MainWorld", false)
+          
+          -- Add additional scenes
+          local shopScene = server.LoadSceneAdditive("Shop")
+          local pvpScene = server.LoadSceneAdditive("PvPArena")
+          
+          print("Total scenes loaded: " .. server.sceneCount)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -169,9 +387,35 @@ methods:
   - name: MovePlayerToScene
     summary: |
       Moves a player to a specified scene within the game environment.
+      Useful for multi-scene worlds where players can be in different areas.
+      
+      Returns true if the move was successful, false otherwise.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Load multiple scenes
+          local lobbyScene = server.LoadScene("Lobby", false)
+          local gameScene = server.LoadScene("GameArena", true)
+          
+          -- Move player to game scene when they're ready
+          server.PlayerConnected:Connect(function(player)
+              -- Start in lobby
+              print(player.name .. " spawned in lobby")
+              
+              -- Move to game scene after 5 seconds
+              Timer.After(5, function()
+                  local success = server.MovePlayerToScene(player, gameScene)
+                  if success then
+                      print(player.name .. " moved to game arena")
+                  end
+              end)
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -189,10 +433,38 @@ methods:
       - type: boolean
         summary:
   - name: OnWorldEvent
-    summary:
+    summary: |
+      Registers a callback to receive world events from other instances or the current instance.
+      Use this to listen for events sent via SendWorldEvent from other world instances.
+      
+      Callback Parameters:
+      - eventName (string): The name of the event
+      - isLocal (bool): True if event was sent from this instance, false if from another instance
+      - payload (table): The event data sent by SendWorldEvent
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Listen for world events
+          server.OnWorldEvent(function(eventName, isLocal, payload)
+              print("Received world event: " .. eventName)
+              print("Is from this instance: " .. tostring(isLocal))
+              
+              if eventName == "GlobalAnnouncement" then
+                  print("Announcement: " .. payload.message)
+                  -- Notify all players in the current scene (recommended)
+                  for i, player in ipairs(scene.players) do
+                      -- Send UI notification to players in this scene
+                  end
+              elseif eventName == "PlayerAchievement" then
+                  print(payload.playerName .. " earned: " .. payload.achievement)
+              end
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -205,10 +477,47 @@ methods:
       - type: void
         summary:
   - name: SendWorldEvent
-    summary:
+    summary: |
+      Sends a custom event to other world instances, enabling cross-instance communication.
+      Useful for global notifications, leaderboard updates, or coordinating multiple world instances.
+      
+      Event name must be 1-128 characters.
+      Payload is a Lua table/value that will be serialized and sent to other instances.
+      
+      Overloads:
+      - SendWorldEvent(eventName, payload): Fire and forget
+      - SendWorldEvent(eventName, payload, callback): Get error feedback
+      - SendWorldEvent(eventName, payload, callback, instanceIds): Target specific instances
+      
+      IMPORTANT: Rate limited. Avoid sending events too frequently.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Send a global event to all instances
+          server.SendWorldEvent("GlobalAnnouncement", {
+              message = "Special event starting!",
+              timestamp = os.time()
+          })
+          
+          -- Send with error handling
+          server.SendWorldEvent("PlayerAchievement", {
+              playerName = "John",
+              achievement = "First Victory"
+          }, function(error)
+              if error == EmitWorldEventError.None then
+                  print("Event sent successfully!")
+              elseif error == EmitWorldEventError.RequestThrottled then
+                  print("Too many events sent, throttled")
+              else
+                  print("Error sending event: " .. tostring(error))
+              end
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -226,10 +535,47 @@ methods:
       - type: void
         summary:
   - name: SendWorldEvent
-    summary:
+    summary: |
+      Sends a custom event to other world instances, enabling cross-instance communication.
+      Useful for global notifications, leaderboard updates, or coordinating multiple world instances.
+      
+      Event name must be 1-128 characters.
+      Payload is a Lua table/value that will be serialized and sent to other instances.
+      
+      Overloads:
+      - SendWorldEvent(eventName, payload): Fire and forget
+      - SendWorldEvent(eventName, payload, callback): Get error feedback
+      - SendWorldEvent(eventName, payload, callback, instanceIds): Target specific instances
+      
+      IMPORTANT: Rate limited. Avoid sending events too frequently.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Send a global event to all instances
+          server.SendWorldEvent("GlobalAnnouncement", {
+              message = "Special event starting!",
+              timestamp = os.time()
+          })
+          
+          -- Send with error handling
+          server.SendWorldEvent("PlayerAchievement", {
+              playerName = "John",
+              achievement = "First Victory"
+          }, function(error)
+              if error == EmitWorldEventError.None then
+                  print("Event sent successfully!")
+              elseif error == EmitWorldEventError.RequestThrottled then
+                  print("Too many events sent, throttled")
+              else
+                  print("Error sending event: " .. tostring(error))
+              end
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -252,10 +598,47 @@ methods:
       - type: void
         summary:
   - name: SendWorldEvent
-    summary:
+    summary: |
+      Sends a custom event to other world instances, enabling cross-instance communication.
+      Useful for global notifications, leaderboard updates, or coordinating multiple world instances.
+      
+      Event name must be 1-128 characters.
+      Payload is a Lua table/value that will be serialized and sent to other instances.
+      
+      Overloads:
+      - SendWorldEvent(eventName, payload): Fire and forget
+      - SendWorldEvent(eventName, payload, callback): Get error feedback
+      - SendWorldEvent(eventName, payload, callback, instanceIds): Target specific instances
+      
+      IMPORTANT: Rate limited. Avoid sending events too frequently.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Send a global event to all instances
+          server.SendWorldEvent("GlobalAnnouncement", {
+              message = "Special event starting!",
+              timestamp = os.time()
+          })
+          
+          -- Send with error handling
+          server.SendWorldEvent("PlayerAchievement", {
+              playerName = "John",
+              achievement = "First Victory"
+          }, function(error)
+              if error == EmitWorldEventError.None then
+                  print("Event sent successfully!")
+              elseif error == EmitWorldEventError.RequestThrottled then
+                  print("Too many events sent, throttled")
+              else
+                  print("Error sending event: " .. tostring(error))
+              end
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -283,10 +666,37 @@ methods:
       - type: void
         summary:
   - name: SetMatchMakingPriority
-    summary:
+    summary: |
+      Sets the matchmaking priority for this world instance.
+      Higher priority instances are more likely to receive new players.
+      Use this to balance player distribution or prioritize certain instances.
+      
+      Default priority is 0. Higher values = higher priority.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          -- Set lower priority if almost full
+          if server.playerCount >= server.info.maxPlayers - 2 then
+              server.SetMatchMakingPriority(-100)
+              print("Instance almost full, lowered priority")
+          end
+      end
+      
+      function self:ServerUpdate()
+          -- Dynamically adjust based on player count
+          if server.playerCount < 3 then
+              server.SetMatchMakingPriority(100) -- High priority when empty
+          elseif server.playerCount > 10 then
+              server.SetMatchMakingPriority(-50) -- Lower priority when busy
+          else
+              server.SetMatchMakingPriority(0) -- Normal priority
+          end
+      end
+      ```
     tags:
       - ServerOnly
     parameters:

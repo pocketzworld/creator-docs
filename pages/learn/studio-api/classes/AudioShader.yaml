@@ -98,11 +98,7 @@ properties:
       Maximum range at which the clip can be heard
     description:
     is_static: false
-    code_samples: |
-      ```lua
-      -- Set the spatial range of the audio
-      audioShaderInstance.spatialRange = 10
-      ```
+    code_samples:
     tags:
       - ClientOnly
       - ReadOnly

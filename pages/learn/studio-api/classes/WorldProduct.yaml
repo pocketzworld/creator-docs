@@ -1,48 +1,76 @@
 name: WorldProduct
 type: classes
 summary: |
-  Represents a product that can be purchased by players in the game.
+  WorldProduct represents a purchasable product configured in your world.
+  Contains product information including ID, name, description, and price in Gold.
+  Retrieved via Payments.GetProduct or Payments.GetProducts.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Payments.GetProduct("premium_bundle", function(product, error)
+      if error == PaymentsError.None and product ~= nil then
+          print("ID: " .. product.id)
+          print("Name: " .. product.name)
+          print("Description: " .. product.description)
+          print("Price: " .. product.price .. " Gold")
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: description
     summary: |
-      The description of the product.
+      The description of the product shown to players.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Description: " .. product.description)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: id
-    summary:
+    summary: |
+      The unique identifier for this product.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Product ID: " .. product.id)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: name
     summary: |
-      The name of the product.
+      The display name of the product.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Product name: " .. product.name)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: price
     summary: |
-      The price of the product in Gold.
+      The price of the product in Highrise Gold currency.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Price: " .. product.price .. " Gold")
+      if product.price > 100 then
+          print("Premium product")
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly

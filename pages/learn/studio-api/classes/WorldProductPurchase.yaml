@@ -1,38 +1,64 @@
 name: WorldProductPurchase
 type: classes
 summary: |
-  Represents a product purchase made by a player in the game.
+  WorldProductPurchase represents a completed purchase transaction.
+  Received in Payments.PurchaseHandler when a player makes a purchase.
+  Contains purchase details including product ID, user ID, and timestamp.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Payments.PurchaseHandler = function(purchase, player)
+      print("Purchase ID: " .. purchase.id)
+      print("Product: " .. purchase.product_id)
+      print("Buyer: " .. purchase.user_id)
+      print("Date: " .. os.date("%Y-%m-%d", purchase.purchase_date))
+      
+      -- Grant rewards and acknowledge
+      -- ... (grant items logic)
+      Payments.AcknowledgePurchase(purchase, true)
+  end
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: id
-    summary:
+    summary: |
+      The unique identifier for this purchase transaction.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Purchase ID: " .. purchase.id)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: product_id
     summary: |
-      The product ID of the product.
+      The ID of the product that was purchased.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Product ID: " .. purchase.product_id)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: purchase_date
     summary: |
-      The date and time the purchase was made.
+      Unix epoch timestamp (UTC) when the purchase was made.
+      Use os.date() to format into human-readable format.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local purchaseDate = os.date("%Y-%m-%d %H:%M:%S", purchase.purchase_date)
+      print("Purchased on: " .. purchaseDate)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
@@ -42,7 +68,13 @@ properties:
       The user ID of the player who made the purchase.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Buyer ID: " .. purchase.user_id)
+      if purchase.user_id == player.user.id then
+          print("Purchase belongs to this player")
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly

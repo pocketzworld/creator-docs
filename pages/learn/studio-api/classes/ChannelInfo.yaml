@@ -1,9 +1,30 @@
 name: ChannelInfo
 type: classes
 summary: |
-  Represents a chat channel in the game that voice and text can be sent through in order to communicate with the correct other players.
+  Represents a chat channel configuration returned by `Chat:CreateChannel()`.
+  Use this to configure proximity chat and speaker filters for the channel.
+  
+  Channels manage voice and text communication between players, allowing you to control who can speak to whom.
+  
+  Example usage:
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(Server)
+  
+  function self:ServerStart()
+      -- Create a channel
+      local teamChannel = Chat:CreateChannel("TeamChat", true, true)
+      
+      -- Configure proximity chat
+      teamChannel:EnableProximityChat(50, 10)
+      
+      -- Add players to the channel
+      server.PlayerConnected:Connect(function(player)
+          Chat:AddPlayerToChannel(teamChannel, player)
+      end)
+  end
+  ```
 inherits:
 tags:
 constructors:
@@ -122,20 +143,98 @@ properties:
       - ReadOnly
     type: boolean
   - name: speakerFilter
-    summary:
+    summary: |
+      Filter function to control which players can speak in this channel.
+      Return true to allow the player to speak, false to block them.
+      
+      Use cases:
+      - Mute specific players
+      - Require certain conditions to speak (level, role, etc.)
+      - Implement custom mute systems
+      - Create "listen-only" channels
+      
+      IMPORTANT: Server-side only.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      local announcementChannel = Chat:CreateChannel("Announcements", true, true)
+      
+      -- Only moderators can speak
+      announcementChannel.SpeakerFilter = function(player)
+          return player.isModerator
+      end
+      
+      -- All players added can listen, but only mods can speak
+      for i, player in ipairs(scene.players) do
+          Chat:AddPlayerToChannel(announcementChannel, player)
+      end
+      ```
+      ```lua
+      --!Type(Server)
+      
+      -- Minimum level requirement to speak
+      local experiencedChannel = Chat:CreateChannel("Veterans", true, true)
+      
+      experiencedChannel.SpeakerFilter = function(player)
+          -- Check player level from storage
+          local playerLevel = 1 -- Get from storage
+          return playerLevel >= 10
+      end
+      ```
+      ```lua
+      --!Type(Server)
+      
+      -- Custom mute system
+      local mutedPlayers = {}
+      local mainChannel = Chat:CreateChannel("Main", true, true)
+      
+      mainChannel.SpeakerFilter = function(player)
+          return not mutedPlayers[player.user.id]
+      end
+      
+      -- Mute a player
+      function MutePlayer(player)
+          mutedPlayers[player.user.id] = true
+          Chat:ReapplyFilters(player) -- Refresh the filter
+      end
+      
+      -- Unmute a player
+      function UnmutePlayer(player)
+          mutedPlayers[player.user.id] = nil
+          Chat:ReapplyFilters(player)
+      end
+      ```
     tags:
       - ServerOnly
       - WriteOnly
     type: "(arg: Player) -> (boolean)"
 methods:
   - name: DisableProximityChat
-    summary:
+    summary: |
+      Disables proximity chat for this channel, making voice chat global.
+      All players in the channel will hear each other at full volume regardless of distance.
+      
+      IMPORTANT: Server-side only.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Create a global voice channel
+      local globalChannel = Chat:CreateChannel("Global", true, true)
+      
+      -- Disable proximity so everyone hears each other
+      globalChannel:DisableProximityChat()
+      
+      -- Or re-enable it later
+      Timer.After(60, function()
+          globalChannel:EnableProximityChat(50, 10)
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -143,10 +242,42 @@ methods:
       - type: void
         summary:
   - name: EnableProximityChat
-    summary:
+    summary: |
+      Enables proximity-based voice chat for this channel.
+      Voice volume decreases with distance between players.
+      
+      Parameters:
+      - maxVolumeDistance: Distance in units where voice is at maximum volume
+      - minVolumeDistance: Distance in units where voice is at minimum volume (muted)
+      
+      IMPORTANT: Server-side only. Only affects voice chat, not text chat.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Create a proximity voice channel
+      local proximityChannel = Chat:CreateChannel("Proximity", true, true)
+      
+      -- Voice is loudest within 10 units, fades until 50 units
+      proximityChannel:EnableProximityChat(50, 10)
+      
+      -- Add all players
+      for i, player in ipairs(scene.players) do
+          Chat:AddPlayerToChannel(proximityChannel, player)
+      end
+      ```
+      ```lua
+      --!Type(Server)
+      
+      -- Different zones with different proximity ranges
+      local whispearChannel = Chat:CreateChannel("Whisper", false, true)
+      whisperChannel:EnableProximityChat(5, 1) -- Very close range
+      
+      local shoutChannel = Chat:CreateChannel("Shout", false, true)
+      shoutChannel:EnableProximityChat(100, 20) -- Long range
+      ```
     tags:
       - ServerOnly
     parameters:

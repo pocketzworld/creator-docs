@@ -9,6 +9,14 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: position
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
   - name: eventTypeId
     summary:
     description:

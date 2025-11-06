@@ -100,8 +100,8 @@ methods:
         summary:
   - name: AutoStop
     summary: |
-      Whether or not the tween should automatically stop itself when the float Tween.time is greater
-      or equal to the float Tween.duration
+      Whether or not the tween should automatically stop itself when the  is greater
+      or equal to the 
       
       Note that a tween set to not auto stop will never end until manually stopped.
     description:
@@ -821,6 +821,50 @@ methods:
     returns:
       - type: DataType.Tween
         summary:
+  - name: FromTo
+    summary: |
+      Creates a Tween that interpolates from one value to another, invoking the callback with the updated value.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary: |
+          The starting value.
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          The ending value.
+      - name: callback
+        type: "(obj: number) -> ()"
+        tags:
+        default:
+        summary: |
+          The callback that will be called each time the value is updated.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          Returns a tween object that can be customized with additional function calls.
+  - name: Group
+    summary: |
+      Create a tween that runs a group of elements in parallel.  Use the Element method to
+      add child tweens to the group.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
   - name: Id
     summary: |
       Set a unique identifier for the tween. Setting a unique identifier value of zero indicates
@@ -982,6 +1026,19 @@ methods:
     returns:
       - type: void
         summary:
+  - name: Sequence
+    summary: |
+      Create a tween that runs a sequence of child tweens in order.  Use the Element method to
+      add child tweens to the sequence.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: DataType.Tween
+        summary:
   - name: Stop
     summary: |
       Stop all tweens running on a target object
@@ -1081,4 +1138,22 @@ methods:
       - type: boolean
         summary: |
           True if the tween is still running
+  - name: Wait
+    summary: |
+      Create a tween that just waits for a given amount of time and then finishes.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: duration
+        type: number
+        tags:
+        default:
+        summary: |
+          Duration of the wait
+    returns:
+      - type: DataType.Tween
+        summary:
 math_operations:

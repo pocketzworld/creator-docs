@@ -1,17 +1,65 @@
 name: Timer
 type: classes
-summary:
+summary: |
+  Timer utility for scheduling delayed or repeating callbacks.
+  Use for countdown timers, delays, periodic actions, and game events.
+  
+  Three ways to create timers:
+  - `Timer.After(seconds, callback)` - One-time delay (most common)
+  - `Timer.Every(seconds, callback)` - Repeating timer
+  - `Timer.new(seconds, callback, repeats)` - Full control
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Delay an action by 3 seconds
+  Timer.After(3, function()
+      print("3 seconds have passed!")
+  end)
+  
+  -- Repeat every 5 seconds
+  local repeatingTimer = Timer.Every(5, function()
+      print("This prints every 5 seconds")
+  end)
+  
+  -- Stop the repeating timer later
+  Timer.After(30, function()
+      repeatingTimer:Stop()
+      print("Stopped repeating timer")
+  end)
+  ```
 inherits:
 tags:
 constructors:
   - name: new
     summary: |
-      Creates a new timer
+      Creates a new timer with full control over interval, callback, and repeat behavior.
+      
+      Parameters:
+      - interval: Time in seconds before callback fires
+      - callback: Function to call when timer completes
+      - repeats: true for repeating timer, false for one-time
+      
+      TIP: Use Timer.After() or Timer.Every() for cleaner syntax.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- One-time timer
+      local oneShot = Timer.new(3, function()
+          print("3 seconds elapsed")
+      end, false)
+      
+      -- Repeating timer
+      local repeating = Timer.new(1, function()
+          print("Every second")
+      end, true)
+      
+      -- Equivalent shortcuts:
+      -- Timer.After(3, callback) == Timer.new(3, callback, false)
+      -- Timer.Every(1, callback) == Timer.new(1, callback, true)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -35,19 +83,41 @@ constructors:
         summary:
 properties:
   - name: enabled
-    summary:
+    summary: |
+      True if the timer is currently running, false if stopped.
+      Use to check timer state.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local myTimer = Timer.After(5, function() print("Done!") end)
+      
+      function self:Update()
+          if myTimer.enabled then
+              print("Timer is still running...")
+          else
+              print("Timer has finished or was stopped")
+          end
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: interval
-    summary:
+    summary: |
+      The interval in seconds between timer callbacks.
+      For repeating timers, this is how often the callback fires.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local timer = Timer.Every(2, function()
+          print("Tick!")
+      end)
+      
+      print("Timer interval: " .. timer.interval .. " seconds")
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
@@ -55,10 +125,43 @@ properties:
 methods:
   - name: After
     summary: |
-      Behaves like Timer.new(interval, callback, false)
+      Creates a one-time timer that fires after the specified delay.
+      Equivalent to Timer.new(interval, callback, false).
+      
+      This is the most common timer pattern for delays.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Delay action by 5 seconds
+      Timer.After(5, function()
+          print("5 seconds later...")
+      end)
+      ```
+      ```lua
+      --!Type(Server)
+      
+      -- Welcome message after player joins
+      function self:ServerStart()
+          scene.PlayerJoined:Connect(function(scene, player)
+              Timer.After(2, function()
+                  print("Welcome " .. player.name .. "!")
+              end)
+          end)
+      end
+      ```
+      ```lua
+      -- Chain multiple delayed actions
+      Timer.After(1, function()
+          print("1 second")
+          Timer.After(1, function()
+              print("2 seconds")
+              Timer.After(1, function()
+                  print("3 seconds - done!")
+              end)
+          end)
+      end)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -77,10 +180,64 @@ methods:
         summary:
   - name: Every
     summary: |
-      Behaves like Timer.new(interval, callback, true)
+      Creates a repeating timer that fires at regular intervals.
+      Equivalent to Timer.new(interval, callback, true).
+      
+      Timer continues until explicitly stopped with Stop().
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Print message every 2 seconds
+      local timer = Timer.Every(2, function()
+          print("Tick every 2 seconds")
+      end)
+      
+      -- Stop it later
+      Timer.After(10, function()
+          timer:Stop()
+      end)
+      ```
+      ```lua
+      --!Type(Server)
+      
+      -- Countdown timer
+      local timeRemaining = 60
+      local countdownTimer = Timer.Every(1, function()
+          timeRemaining = timeRemaining - 1
+          print("Time remaining: " .. timeRemaining)
+          
+          if timeRemaining <= 0 then
+              countdownTimer:Stop()
+              print("Countdown finished!")
+          end
+      end)
+      ```
+      ```lua
+      --!Type(Server)
+      
+      -- Spawn enemies periodically
+      local spawnTimer = Timer.Every(10, function()
+          if scene.playerCount > 0 then
+              print("Spawning enemy wave!")
+              -- Spawn logic here
+          end
+      end)
+      
+      -- Pause spawning when no players
+      scene.PlayerLeft:Connect(function(scene, player)
+          if scene.playerCount == 0 then
+              spawnTimer:Stop()
+          end
+      end)
+      
+      -- Resume spawning when players join
+      scene.PlayerJoined:Connect(function(scene, player)
+          if scene.playerCount == 1 then
+              spawnTimer:Start()
+          end
+      end)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -99,10 +256,22 @@ methods:
         summary:
   - name: Restart
     summary: |
-      Starts the timer and resets its elapsed time
+      Starts the timer and resets its elapsed time to zero.
+      For repeating timers, this resets the countdown before the next callback.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local timer = Timer.Every(5, function()
+          print("Every 5 seconds")
+      end)
+      
+      -- Reset timer when something happens
+      function OnPlayerAction()
+          timer:Restart() -- Start the 5 second countdown again
+          print("Timer restarted!")
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -111,10 +280,22 @@ methods:
         summary:
   - name: Start
     summary: |
-      Starts the timer
+      Starts or resumes the timer without resetting elapsed time.
+      If timer was stopped, it continues from where it left off.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local timer = Timer.Every(5, function()
+          print("Repeated action")
+      end)
+      
+      -- Stop and start timer
+      timer:Stop()
+      Timer.After(10, function()
+          timer:Start() -- Resume timer
+      end)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -123,10 +304,22 @@ methods:
         summary:
   - name: Stop
     summary: |
-      Stops the timer
+      Stops the timer. It will not fire until Start() or Restart() is called.
+      Does not reset the elapsed time (use Restart() for that).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local countdownTimer = Timer.Every(1, function()
+          print("Tick!")
+      end)
+      
+      -- Stop after 10 seconds
+      Timer.After(10, function()
+          countdownTimer:Stop()
+          print("Timer stopped")
+      end)
+      ```
     tags:
       - ClientAndServer
     parameters:

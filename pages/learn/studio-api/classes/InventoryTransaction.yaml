@@ -1,18 +1,47 @@
 name: InventoryTransaction
 type: classes
 summary: |
-  InventoryTransaction contains a list of actions that will be performed when the transaction is passed to Inventory.CommitTransaction.  Because each function returns the InventoryTransaction, they can be chained to quickly add all the actions to the object.
+  InventoryTransaction contains a list of actions that will be performed when passed to Inventory.CommitTransaction.
+  
+  All methods return the InventoryTransaction instance, allowing method chaining for quick action setup.
+  
+  Available operations:
+  - Give/GivePlayer: Add items to inventory
+  - Take/TakePlayer: Remove items from inventory
+  - Move/MovePlayers: Transfer items between holders
+  - Reserve/ReservePlayer: Lock items for specific purpose
+  - Release/ReleasePlayer: Unlock reserved items
+  
+  IMPORTANT: Transactions are atomic - all operations succeed or all fail.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Method chaining example
+  local transaction = InventoryTransaction.new()
+      :GivePlayer(player, "coins", 100)
+      :TakePlayer(player, "gems", 5)
+      :GivePlayer(player, "sword", 1)
+  
+  Inventory.CommitTransaction(transaction, function(transactionId, error)
+      if error == InventoryError.None then
+          print("All operations completed successfully")
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
   - name: new
     summary: |
-      Instantiates a new InventoryTransaction object.
+      Creates a new InventoryTransaction instance.
+      After creating, add operations using Give, Take, Move, Reserve, or Release methods.
+      Then commit using Inventory.CommitTransaction().
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -24,9 +53,14 @@ methods:
   - name: Give
     summary: |
       Adds the given quantity of the given item to the holder's inventory.
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:Give(player.user.id, "potion", 3)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -50,10 +84,16 @@ methods:
         summary:
   - name: GivePlayer
     summary: |
-      This is the equivalent of calling Give(player.user.id, itemId, quantity).
+      Adds the given quantity of the given item to the player's inventory.
+      Convenience method equivalent to: Give(player.user.id, itemId, quantity)
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:GivePlayer(player, "coins", 100)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -77,10 +117,16 @@ methods:
         summary:
   - name: Move
     summary: |
-      Removes the given quantity of the given item from the from holder's inventory and adds the same quantity of that item to the to holder's inventory.
+      Transfers items from one holder to another.
+      Removes quantity from fromHolderId and adds to toHolderId.
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:Move(fromPlayer.user.id, toPlayer.user.id, "gold", 50)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -109,10 +155,16 @@ methods:
         summary:
   - name: MovePlayers
     summary: |
-      This is the equivalent of calling Move(fromPlayer.user.id, toPlayer.user.id, itemId, quantity).
+      Transfers items from one player to another.
+      Convenience method equivalent to: Move(fromPlayer.user.id, toPlayer.user.id, itemId, quantity)
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:MovePlayers(sender, receiver, "gift", 1)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -141,10 +193,16 @@ methods:
         summary:
   - name: Release
     summary: |
-      Removes the given quantity of the given item from the player's reserved items.
+      Releases previously reserved items, making them available again.
+      The reservedFor parameter must match the one used in Reserve.
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:Release(player.user.id, "weapon", "equipped", 1)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -173,10 +231,16 @@ methods:
         summary:
   - name: ReleasePlayer
     summary: |
-      This is the equivalent of calling Release(player.user.id, itemId, reservedFor, quantity).
+      Releases previously reserved items for a player.
+      Convenience method equivalent to: Release(player.user.id, itemId, reservedFor, quantity)
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:ReleasePlayer(player, "armor", "equipped", 1)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -205,10 +269,17 @@ methods:
         summary:
   - name: Reserve
     summary: |
-      Adds the given quantity of the given item to the holder's reserved items.  Items that are reserved cannot be added or removed with Give, Take or Move.  Use Release to remove the items from the reserved items.
+      Reserves items for a specific purpose, preventing them from being modified by other operations.
+      Reserved items cannot be given, taken, or moved until released.
+      Use the reservedFor parameter to identify the reservation purpose.
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:Reserve(player.user.id, "weapon", "equipped", 1)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -237,10 +308,16 @@ methods:
         summary:
   - name: ReservePlayer
     summary: |
-      This is the equivalent of calling Reserve(player.user.id, itemId, reservedFor, quantity).
+      Reserves items for a specific purpose for a player.
+      Convenience method equivalent to: Reserve(player.user.id, itemId, reservedFor, quantity)
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:ReservePlayer(player, "armor", "equipped", 1)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -270,9 +347,14 @@ methods:
   - name: Take
     summary: |
       Removes the given quantity of the given item from the holder's inventory.
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:Take(player.user.id, "health_potion", 1)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -296,10 +378,16 @@ methods:
         summary:
   - name: TakePlayer
     summary: |
-      This is the equivalent of calling Take(player.user.id, itemId, quantity).
+      Removes the given quantity of the given item from the player's inventory.
+      Convenience method equivalent to: Take(player.user.id, itemId, quantity)
+      Returns the transaction instance for method chaining.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local transaction = InventoryTransaction.new()
+      transaction:TakePlayer(player, "gems", 10)
+      ```
     tags:
       - ServerOnly
     parameters:

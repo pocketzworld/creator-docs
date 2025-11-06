@@ -1,18 +1,40 @@
 name: StringValue
 type: classes
 summary: |
-  The StringValue class is used to store a single string value. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single string value that all clients should be synchronized on.
+  StringValue class stores a single string value, extending from Class.Value.
+  It's designed for synchronizing text data across all clients in a networked environment,
+  such as game messages, player names, or status updates.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a StringValue to track game status
+  local gameStatus = StringValue.new("GameStatus", "Waiting")
+  
+  -- Listen for changes
+  gameStatus.Changed:Connect(function(newVal, oldVal)
+      print("Status changed from " .. oldVal .. " to " .. newVal)
+  end)
+  
+  -- Update the value (syncs to all clients)
+  gameStatus.value = "In Progress"
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new StringValue instance with a specified name and empty string as default initial value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local playerName = StringValue.new("PlayerName")
+      -- Initial value is empty string by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -25,10 +47,15 @@ constructors:
       - type: Class.StringValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new StringValue instance with a specified name and empty string as default initial value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local playerName = StringValue.new("PlayerName")
+      -- Initial value is empty string by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -46,10 +73,15 @@ constructors:
       - type: Class.StringValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new StringValue instance with a specified name and empty string as default initial value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local playerName = StringValue.new("PlayerName")
+      -- Initial value is empty string by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -74,10 +106,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized string value of the StringValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized string value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local message = StringValue.new("WelcomeMessage", "Hello!")
+      message.value = "Welcome to the game!" -- Syncs to all clients
+      print(message.value)
+      ```
     tags:
       - ClientAndServer
     type: string
