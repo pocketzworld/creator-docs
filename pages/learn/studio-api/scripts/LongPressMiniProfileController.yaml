@@ -1,6 +1,12 @@
 name: LongPressMiniProfileController
 type: scripts
-summary:
+summary: |
+  LongPressMiniProfileController is a built-in component script that automatically handles long press interactions to display mini profiles for characters.
+  
+  This script sets itself up automatically in ClientAwake - you don't need to call any of its methods manually.
+  All event handlers and tap detection are configured automatically when the script initializes.
+  
+  Simply attach this component to a GameObject in your scene, and it will handle long press interactions on characters.
 description:
 code_samples:
 inherits:
@@ -9,7 +15,9 @@ constructors:
 properties:
 methods:
   - name: HandleLongPressBegan
-    summary:
+    summary: |
+      Internal event handler automatically connected in ClientAwake to handle the beginning of a long press gesture.
+      You do not need to call this method manually.
     description:
     is_static: false
     code_samples:
@@ -26,7 +34,9 @@ methods:
       - type: void
         summary:
   - name: HandleLongPressContinue
-    summary:
+    summary: |
+      Internal event handler automatically connected in ClientAwake to handle the continuation of an ongoing long press gesture.
+      You do not need to call this method manually.
     description:
     is_static: false
     code_samples:
@@ -43,7 +53,9 @@ methods:
       - type: void
         summary:
   - name: HandleLongPressEnded
-    summary:
+    summary: |
+      Internal event handler automatically connected in ClientAwake to handle the end of a long press gesture.
+      You do not need to call this method manually.
     description:
     is_static: false
     code_samples:
@@ -60,7 +72,8 @@ methods:
       - type: void
         summary:
   - name: RayCast
-    summary:
+    summary: |
+      Internal method used to detect taps. You do not need to call this method manually.
     description:
     is_static: false
     code_samples:
@@ -79,7 +92,9 @@ methods:
       - type: DataType.RaycastHit
         summary:
   - name: SetupTapMask
-    summary:
+    summary: |
+      Internal method called automatically in ClientAwake to set up tap mask for detecting long press events.
+      You do not need to call this method manually.
     description:
     is_static: false
     code_samples:

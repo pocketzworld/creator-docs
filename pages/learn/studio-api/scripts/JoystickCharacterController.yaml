@@ -1,6 +1,40 @@
 name: JoystickCharacterController
 type: scripts
-summary:
+summary: |
+  JoystickCharacterController is a built-in component that replaces PlayerCharacterController to enable on-screen joystick-based character movement.
+  This controller provides touch-based controls with an on-screen joystick for moving characters in your world.
+  IMPORTANT: This is a replacement for PlayerCharacterController, not an addition. You must remove PlayerCharacterController when using this controller.
+  NOTE: Joystick is still in beta and may have some limitations. It does not currently support multi-touch input or the Anchor property.
+  
+  To add JoystickCharacterController to your world:
+  1. In the project view, right-click and select Create > Highrise > World Scene variant
+  2. Rename the scene variant (e.g., "JoystickScenePrefab")
+  3. In the scene variant, add the JoystickCharacterController component
+  4. Remove the default PlayerCharacterController component
+  5. Customize the Joystick properties in the inspector
+  6. Click "Use this prefab" to set it as the default scene variant
+  
+  Configurable Properties (via Unity Inspector):
+  Basic Properties:
+  - Footstep Walk Sound: Sound played when character is walking
+  - Footstep Run Sound: Sound played when character is running
+  - External Input Action: External input action for keyboards/gamepads (recommended: "Movement/Movement")
+  - Running Speed Threshold: Speed at which character switches from walking to running
+  - Is 2D: Uses XY coordinates of joystick as XY world coordinates (useful for 2D games)
+  
+  Advanced Properties:
+  - Max Link Distance: Maximum in-world distance between character and link endpoint
+  - Max Line Angle: Angle between movement direction and link's jump direction
+  - Max Link Move Step Change: Difference proportion between desired movement and actual nav mesh movement
+  
+  Considerations:
+  - Performance: Joystick controllers can be more performance-intensive due to continuous input processing
+  - Camera Movement: Ensure your camera follows the character (default RTS camera is compatible)
+  - Customization: Adjust properties to fit your game's needs
+  - Feedback: Provide visual and audio feedback for movement and actions
+  
+  For more information and detailed setup instructions, see:
+  https://create.highrise.game/learn/studio/create/characters/controllers/joystick
 description:
 code_samples:
 inherits:
@@ -9,7 +43,8 @@ tags:
 constructors:
 properties:
   - name: movementEnabled
-    summary:
+    summary: |
+      Controls whether movement is enabled for the joystick character controller. When disabled, the character will not respond to joystick input.
     description:
     is_static: false
     code_samples:
@@ -18,7 +53,8 @@ properties:
     type: boolean
 methods:
   - name: SetLocalPlayerPosition
-    summary:
+    summary: |
+      Sets the position of the local player character to the specified world position.
     description:
     is_static: false
     code_samples:

@@ -1,17 +1,30 @@
 name: PlayerCharacterSpawner
 type: scripts
-summary:
+summary: |
+  PlayerCharacterSpawner is a module script responsible for spawning player characters when they join the scene.
+  This script can be modified by creating an override version in your project to customize spawn behavior.
+  This is a module script that can be required in your Lua code.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  local PlayerCharacterSpawner = require("PlayerCharacterSpawner")
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: OnCharacterSpawned
-    summary:
+    summary: |
+      Event that fires when a character is spawned. Connect to this event to handle character spawn logic.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PlayerCharacterSpawner = require("PlayerCharacterSpawner")
+      PlayerCharacterSpawner.OnCharacterSpawned:Connect(function(character)
+          print("Character spawned: " .. tostring(character))
+      end)
+      ```
     tags:
       - ClientAndServer
     type: Class.Event

@@ -1,49 +1,197 @@
 name: Time
 type: services
 summary: |
-  The Time class provides access to time-related information and functionality in Unity. It allows you to measure time intervals, control the flow of time, and access various time-related properties such as delta time, fixed delta time, and server time. This class is essential for creating smooth animations, controlling game speed, and implementing time-based mechanics in your Unity projects.
+  Global Time utility providing frame timing and server synchronization.
+  Essential for frame-rate independent animations, physics, and time-based mechanics.
+  
+  Use cases:
+  - Smooth, frame-rate independent movement (Time.deltaTime)
+  - Physics calculations (Time.fixedDeltaTime)
+  - Server time synchronization (Time.serverTime)
+  - Elapsed time tracking (Time.time)
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Frame-rate independent rotation
+  function self:Update()
+      local rotation = self.transform.eulerAngles
+      rotation.y = rotation.y + (45 * Time.deltaTime) -- 45 degrees per second
+      self.transform.eulerAngles = rotation
+  end
+  
+  -- Track elapsed time
+  local startTime = Time.time
+  Timer.After(5, function()
+      print("Elapsed: " .. (Time.time - startTime) .. " seconds")
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: deltaTime
     summary: |
-      The time in seconds it took to complete the last frame. This is useful for creating frame-rate independent movement and animations.
+      Time in seconds since the last frame.
+      Use this to make movement and animations frame-rate independent.
+      Multiply speeds by deltaTime to ensure consistent behavior regardless of frame rate.
+      
+      IMPORTANT: Use in Update(), not FixedUpdate() (which already has fixed timing).
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Smooth movement (frame-rate independent)
+      function self:Update()
+          local speed = 5 -- units per second
+          local movement = Vector3.forward * speed * Time.deltaTime
+          self.transform.position = self.transform.position + movement
+      end
+      ```
+      ```lua
+      -- Rotate object smoothly
+      local rotationSpeed = 90 -- degrees per second
+      
+      function self:Update()
+          local rotation = self.transform.eulerAngles
+          rotation.y = rotation.y + (rotationSpeed * Time.deltaTime)
+          self.transform.eulerAngles = rotation
+      end
+      ```
+      ```lua
+      -- Count down timer
+      local countdown = 60
+      
+      function self:Update()
+          countdown = countdown - Time.deltaTime
+          if countdown <= 0 then
+              print("Time's up!")
+              countdown = 60 -- Reset
+          end
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: number
   - name: fixedDeltaTime
     summary: |
-      The interval in seconds at which physics and other fixed frame rate updates are performed. This is typically set to 0.02 seconds (50 Hz) by default.
+      The fixed time interval in seconds between physics updates.
+      Typically 0.02 seconds (50 Hz). Consistent regardless of frame rate.
+      Use in FixedUpdate() for physics calculations.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:FixedUpdate()
+          print("Fixed delta time: " .. Time.fixedDeltaTime)
+          
+          -- Physics forces (already frame-rate independent in FixedUpdate)
+          local rb = self.gameObject:GetComponent(Rigidbody)
+          if rb then
+              rb:AddForce(Vector3.up * 10)
+          end
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: number
   - name: serverTime
     summary: |
-      The current server time in seconds since the server started. This is useful for synchronizing events across multiple clients.
+      The current server time in seconds since the server started.
+      Use for synchronizing events across multiple clients.
+      Server-authoritative and consistent for all clients.
+      
+      IMPORTANT: Use serverTime for multiplayer synchronization, not Time.time.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Sync event across all clients at specific server time
+      local eventStartTime = Time.serverTime + 5 -- Start in 5 seconds
+      
+      function self:ServerStart()
+          print("Server started at: " .. Time.serverTime)
+          
+          -- Schedule synchronized event
+          Timer.After(5, function()
+              local event = Event.new("GameStart")
+              event:FireAllClients(eventStartTime)
+          end)
+      end
+      
+      function self:ServerUpdate()
+          -- Check if it's time for an event
+          if Time.serverTime >= eventStartTime then
+              -- Start game logic
+          end
+      end
+      ```
+      ```lua
+      --!Type(ClientAndServer)
+      
+      -- Track server time for cooldowns
+      local lastActionTime = 0
+      local cooldown = 3 -- 3 second cooldown
+      
+      function self:ServerStart()
+          server.PlayerConnected:Connect(function(player)
+              -- Use server time for authoritative cooldowns
+              if Time.serverTime >= lastActionTime + cooldown then
+                  lastActionTime = Time.serverTime
+                  print("Action allowed")
+              else
+                  print("Cooldown remaining: " .. (lastActionTime + cooldown - Time.serverTime))
+              end
+          end)
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: number
   - name: time
     summary: |
-      The time in seconds since the start of the game. This is useful for creating time-based effects and animations.
+      Time in seconds since the game started (scene loaded).
+      Use for tracking elapsed time and creating time-based effects.
+      Resets when the scene reloads.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Track total playtime
+      function self:Start()
+          print("Game started at time: " .. Time.time)
+      end
+      
+      function self:Update()
+          print("Elapsed time: " .. Time.time .. " seconds")
+      end
+      ```
+      ```lua
+      -- Spawn enemies after certain time
+      function self:Update()
+          if Time.time >= 30 and not enemiesSpawned then
+              print("30 seconds elapsed - spawning enemies!")
+              enemiesSpawned = true
+          end
+      end
+      ```
+      ```lua
+      -- Periodic action using time
+      local nextActionTime = 0
+      
+      function self:Update()
+          if Time.time >= nextActionTime then
+              print("Periodic action triggered")
+              nextActionTime = Time.time + 5 -- Every 5 seconds
+          end
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly

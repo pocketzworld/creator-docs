@@ -1,6 +1,9 @@
 name: PlaySound
 type: scripts
-summary:
+summary: |
+  PlaySound is a built-in component for playing sound effects in your scene.
+  This component can be found in the built-in components section of the Assets Catalog and attached to any GameObject.
+  Use it to play sound effects at specific moments or in response to events.
 description:
 code_samples:
 inherits:
@@ -9,10 +12,17 @@ constructors:
 properties:
 methods:
   - name: Play
-    summary:
+    summary: |
+      Plays the sound effect associated with this component.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!SerializedField
+      local SoundObject : GameObject = nil
+      local soundPlayer = SoundObject:GetComponent(PlaySound)
+      soundPlayer.Play()
+      ```
     tags:
       - ClientOnly
       - NoSelfParameter

@@ -1,9 +1,45 @@
 name: Scene
 type: classes
 summary: |
-  The 'Scene' class in the scene or 'game area'. It manages events related to player interactions with the scene and allows you to section and differentiate portions of your world into smaller chunks.
+  The global `scene` object represents the current world scene.
+  Scenes allow you to section your world into different areas with separate player management.
+  
+  Use cases:
+  - Access players in the current scene (`scene.players`, `scene.playerCount`)
+  - Listen for players joining or leaving the scene
+  - Get the scene's main camera (client-side)
+  - Instantiate scene prefabs (server-side)
+  - Access scene name and ID
+  
+  
+  Example usage:
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(ClientAndServer)
+  
+  function self:Start()
+      print("Scene: " .. scene.name)
+      print("Players in scene: " .. scene.playerCount)
+      
+      -- Iterate through scene players
+      for i, player in ipairs(scene.players) do
+          print("  - " .. player.name)
+      end
+  end
+  
+  function self:ServerStart()
+      -- Listen for players joining this scene
+      scene.PlayerJoined:Connect(function(scene, player)
+          print(player.name .. " joined the scene!")
+      end)
+      
+      -- Listen for players leaving this scene
+      scene.PlayerLeft:Connect(function(scene, player)
+          print(player.name .. " left the scene!")
+      end)
+  end
+  ```
 inherits:
   - Class.MonoBehaviour
 tags:
@@ -31,7 +67,8 @@ properties:
     type: Class.Event
   - name: id
     summary: |
-      The unique identifier of the scene.
+      A unique identifier for this scene instance. This id indicates the order in which the scene was instantiated, not where it appears in the World Settings scene list.
+      You can use `scene.name` to get that identifier.
     description:
     is_static: false
     code_samples:
@@ -98,10 +135,36 @@ methods:
       - type: void
         summary:
   - name: Instantiate
-    summary:
+    summary: |
+      Instantiates a scene prefab at the specified position and rotation.
+      The owner parameter determines which player "owns" the instantiated scene.
+      
+      IMPORTANT: Server-side only.
+      
+      Available on: Server only
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          server.PlayerConnected:Connect(function(player)
+              -- Create a personal scene instance for the player
+              local personalScene = scene.Instantiate(
+                  scenePrefab,
+                  Vector3.new(0, 0, 0),
+                  Vector3.new(0, 0, 0),
+                  player
+              )
+              
+              print("Created personal scene for " .. player.name)
+              
+              -- Move player to their personal scene
+              server.MovePlayerToScene(player, personalScene)
+          end)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:

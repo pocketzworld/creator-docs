@@ -75,15 +75,6 @@ properties:
     tags:
       - ClientOnly
     type: number
-  - name: onRadioStationChanged
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: "(obj: RadioStation) -> ()"
   - name: radioEnabled
     summary:
     description:
@@ -93,15 +84,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
-  - name: radioStation
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: Class.RadioStation
 methods:
   - name: DuckMusic
     summary: |
@@ -130,38 +112,6 @@ methods:
         default:
         summary: |
           Duration for the volume to return to normal after the specified duration.
-    returns:
-      - type: void
-        summary:
-  - name: EnableRadioSupport
-    summary: |
-      Enables radio support in the current room, allowing users to pick a radio station.
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: enabled
-        type: boolean
-        tags:
-        default:
-        summary:
-      - name: currentStation
-        type: Class.RadioStation
-        tags:
-        default:
-        summary:
-      - name: stationSelected
-        type: "(obj: RadioStation) -> ()"
-        tags:
-        default:
-        summary:
-      - name: canModerateRadio
-        type: "(arg: Player) -> (boolean)"
-        tags:
-        default:
-        summary:
     returns:
       - type: void
         summary:

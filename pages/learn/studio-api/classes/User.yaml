@@ -1,44 +1,113 @@
 name: User
 type: classes
-summary:
+summary: |
+  Represents a Highrise user account with their profile information.
+  Access via `player.user` to get user details for any player.
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Access user information through a player
+  local user = player.user
+  
+  print("Name: " .. user.name)
+  print("User ID: " .. user.id)
+  print("Subscriber: " .. tostring(user.isSubscriber))
+  print("Age verified: " .. tostring(user.isAgeVerifiedAbove18))
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: id
-    summary:
+    summary: |
+      The unique user ID for this Highrise account.
+      This ID is persistent across all worlds and sessions.
+      Use this for storage keys, leaderboards, and identifying users.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Store user-specific data using their ID
+      local userId = player.user.id
+      Storage.SetPlayerValue(player, "Score", 100)
+      
+      -- Check if player owns something
+      Storage.GetValue("ItemOwner_sword", function(ownerId, error)
+          if ownerId == player.user.id then
+              print(player.name .. " owns the sword!")
+          end
+      end)
+      
+      -- Use in leaderboards
+      Leaderboard.SetScore("global", player.user.id, player.name, 1000)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: string
   - name: isAgeVerifiedAbove18
-    summary:
+    summary: |
+      True if the user has verified their age as 18 or older.
+      Use this to restrict access to age-gated content or features.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Restrict access to mature content
+      if player.user.isAgeVerifiedAbove18 then
+          -- Allow access to adult-only area
+          server.MovePlayerToScene(player, adultScene)
+      else
+          print("Age verification required for this area")
+      end
+      
+      -- Filter chat for non-verified users
+      if not player.user.isAgeVerifiedAbove18 then
+          -- Apply stricter chat filters
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: isSubscriber
-    summary:
+    summary: |
+      True if the user has an active Highrise+ subscription.
+      Use this to provide exclusive features or rewards for subscribers.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if player.user.isSubscriber then
+          print(player.name .. " is a Highrise+ subscriber!")
+          -- Grant subscriber perks
+          local transaction = InventoryTransaction.new()
+          transaction:GivePlayer(player, "subscriber_badge", 1)
+          Inventory.CommitTransaction(transaction)
+      else
+          print(player.name .. " is not a subscriber")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: name
-    summary:
+    summary: |
+      The display name of the user as it appears in Highrise.
+      This is the same as `player.name` for convenience.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local userName = player.user.name
+      print("Welcome, " .. userName .. "!")
+      
+      -- Note: player.name is a shortcut for player.user.name
+      print(player.name == player.user.name) -- true
+      ```
     tags:
       - ClientAndServer
       - ReadOnly

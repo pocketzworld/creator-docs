@@ -1,19 +1,57 @@
 name: BoolValue
 type: classes
 summary: |
-  BoolValue class stores a single boolean value, extending from Class.Value. It's designed for synchronizing a boolean value across all clients in a networked environment, ensuring consistency of a specific flag or state, such as a game over condition. To effectively utilize BoolValue, familiarity with the base Class.Value documentation is advised.
+  BoolValue is a networked boolean variable that automatically synchronizes across all players in your world.
+  When you change a BoolValue on the server, all connected clients are automatically notified of the new value.
+  
+  Common uses:
+  - Game state flags (isGameStarted, isRoundActive)
+  - Feature toggles (isDoorOpen, isEventRunning)
+  - Player-specific states (isPlayerReady, hasCompletedTutorial)
+  
+  How it works:
+  - Server changes the value using: boolValue.value = true
+  - All clients automatically receive the update
+  - Clients listen for changes using: boolValue.Changed:Connect(function(newVal, oldVal) ... end)
+  
+  IMPORTANT Rules:
+  - ALWAYS change values on SERVER side only (changing on client won't sync to others)
+  - Connect to Changed event on CLIENT side to react to updates
+  - Each BoolValue needs a unique name within your script
+  
+  Player-specific vs Global:
+  - Global: Use for world-wide states (isNightTime, isStoreOpen) - one value for everyone
+  - Player-specific: Use for per-player states (isPlayerReady) - separate value for each player
+  Pass player object in constructor OR append player.id to name
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a BoolValue to track game state
+  local gameStarted = BoolValue.new("GameStarted", false)
+  
+  -- Listen for changes
+  gameStarted.Changed:Connect(function(newVal, oldVal)
+      print("Game started changed from " .. tostring(oldVal) .. " to " .. tostring(newVal))
+  end)
+  
+  -- Update the value (syncs to all clients)
+  gameStarted.value = true
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
     summary: |
-      Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+      Creates a new BoolValue instance with a specified name and initial value.
+      Used for unique identification and initial state setting across clients.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local gameOver = BoolValue.new("GameOver", false)
+      local doorOpen = BoolValue.new("MainDoorOpen", true)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -27,10 +65,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+      Creates a new BoolValue instance with a specified name and initial value.
+      Used for unique identification and initial state setting across clients.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local gameOver = BoolValue.new("GameOver", false)
+      local doorOpen = BoolValue.new("MainDoorOpen", true)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -49,10 +92,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new BoolValue instance with a specified name and initial value, used for unique identification and initial state setting across clients.
+      Creates a new BoolValue instance with a specified name and initial value.
+      Used for unique identification and initial state setting across clients.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local gameOver = BoolValue.new("GameOver", false)
+      local doorOpen = BoolValue.new("MainDoorOpen", true)
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -80,7 +128,15 @@ properties:
       Represents the synchronized boolean value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local isActive = BoolValue.new("IsActive", false)
+      isActive.value = true -- Syncs to all clients
+      
+      if isActive.value then
+          print("System is active")
+      end
+      ```
     tags:
       - ClientAndServer
     type: boolean

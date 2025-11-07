@@ -1,17 +1,94 @@
 name: NetworkValue
 type: classes
-summary:
+summary: |
+  Base class for all networked value types (BoolValue, NumberValue, StringValue, etc.).
+  Provides the Changed event that all value types inherit.
+  
+  Do not instantiate directly - use specific value types instead:
+  - BoolValue
+  - NumberValue  
+  - StringValue
+  - IntValue
+  - Vector2Value
+  - Vector3Value
+  - QuaternionValue
+  - TableValue
+  - NetworkObjectValue
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Use specific value types, not NetworkValue directly
+  local myNumber = NumberValue.new("Score", 0)
+  local myBool = BoolValue.new("GameActive", false)
+  local myString = StringValue.new("Status", "waiting")
+  
+  -- All inherit the Changed event
+  myNumber.Changed:Connect(function(newVal, oldVal)
+      print("Score changed from " .. oldVal .. " to " .. newVal)
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: Changed
-    summary:
+    summary: |
+      Event fired when the value changes.
+      All value types (BoolValue, NumberValue, etc.) inherit this event.
+      
+      IMPORTANT:
+      - Values should be changed on the server
+      - Connect to this event on the client to receive updates
+      
+      Event Parameters:
+          newValue: The new value
+          oldValue: The previous value
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server: Create and modify value
+      --!Type(Server)
+      local score = NumberValue.new("PlayerScore", 0)
+      
+      function self:ServerStart()
+          -- Change value on server
+          score.value = 100
+      end
+      
+      -- Client: Listen for changes
+      --!Type(Client)
+      local score = NumberValue.new("PlayerScore", 0)
+      
+      function self:ClientStart()
+          score.Changed:Connect(function(newVal, oldVal)
+              print("Score updated: " .. newVal)
+              -- Update UI here
+          end)
+      end
+      ```
+      ```lua
+      -- Example with BoolValue
+      local gameActive = BoolValue.new("GameActive", false)
+      
+      gameActive.Changed:Connect(function(newVal, oldVal)
+          if newVal then
+              print("Game started!")
+          else
+              print("Game ended!")
+          end
+      end)
+      ```
+      ```lua
+      -- Example with Vector3Value
+      local targetPos = Vector3Value.new("TargetPosition", Vector3.zero)
+      
+      targetPos.Changed:Connect(function(newPos, oldPos)
+          print("Target moved from " .. tostring(oldPos) .. " to " .. tostring(newPos))
+      end)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly

@@ -1,14 +1,35 @@
 name: StorageError
 type: enums
-summary:
+summary: |
+  Error codes returned by Storage operations (SetValue, GetValue, UpdateValue, etc.).
+  Check for `StorageError.None` to confirm successful operations.
+  
+  Available on: Server scripts only
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Storage.SetValue("PlayerScore", 1000, function(error)
+      if error == StorageError.None then
+          print("Saved successfully!")
+      elseif error == StorageError.InvalidKey then
+          print("Invalid key format")
+      elseif error == StorageError.ValueTooLarge then
+          print("Value exceeds size limit")
+      elseif error == StorageError.RequestThrottled then
+          print("Too many requests, slow down")
+      else
+          print("Error: " .. tostring(error))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: AttributesTooLarge
-    summary:
+    summary: |
+      The attributes data exceeds the maximum size limit.
+      Keep attribute data small for search efficiency.
     description:
     is_static: true
     code_samples:
@@ -17,16 +38,10 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: ConcurrentModification
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.StorageError
-  - name: Count
-    summary:
+    summary: |
+      Another operation modified the same key simultaneously.
+      Use UpdateValue instead of SetValue for atomic updates to prevent this.
+      Retry the operation with the latest value.
     description:
     is_static: true
     code_samples:
@@ -35,7 +50,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: CursorInvalid
-    summary:
+    summary: |
+      The cursor ID provided to Search operations is invalid or expired.
+      Start from the beginning with a nil cursor.
     description:
     is_static: true
     code_samples:
@@ -44,7 +61,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: CursorInvalidLimit
-    summary:
+    summary: |
+      The limit parameter for Search operations is invalid (too high or too low).
+      Typical valid range is 1-100.
     description:
     is_static: true
     code_samples:
@@ -53,7 +72,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: CursorNoMoreValues
-    summary:
+    summary: |
+      No more values available for the cursor in Search operations.
+      You've reached the end of the results.
     description:
     is_static: true
     code_samples:
@@ -62,7 +83,8 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: InternalError
-    summary:
+    summary: |
+      An internal server error occurred. Retry the operation.
     description:
     is_static: true
     code_samples:
@@ -71,7 +93,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: InvalidAttributes
-    summary:
+    summary: |
+      The attributes provided are invalid or incorrectly formatted.
+      Used with SearchValue operations.
     description:
     is_static: true
     code_samples:
@@ -80,7 +104,10 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: InvalidKey
-    summary:
+    summary: |
+      The storage key is invalid or contains illegal characters.
+      Keys should be alphanumeric with underscores/hyphens.
+      Maximum key length is typically 128 characters.
     description:
     is_static: true
     code_samples:
@@ -89,7 +116,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: InvalidValue
-    summary:
+    summary: |
+      The value type is not supported for storage.
+      Only strings, numbers, booleans, tables, Vector2, Vector3, and Quaternion are supported.
     description:
     is_static: true
     code_samples:
@@ -98,7 +127,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: ModifierOwnerDestroyed
-    summary:
+    summary: |
+      The modifier function's owner object was destroyed during UpdateValue.
+      Ensure the script object remains valid during asynchronous operations.
     description:
     is_static: true
     code_samples:
@@ -107,7 +138,8 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: None
-    summary:
+    summary: |
+      Operation completed successfully with no errors.
     description:
     is_static: true
     code_samples:
@@ -116,7 +148,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: RequestThrottled
-    summary:
+    summary: |
+      Too many storage requests sent too quickly. Wait before retrying.
+      Rate limiting is in effect to prevent abuse and ensure performance.
     description:
     is_static: true
     code_samples:
@@ -125,7 +159,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: Timeout
-    summary:
+    summary: |
+      The operation timed out before completing.
+      Retry the operation or check network connectivity.
     description:
     is_static: true
     code_samples:
@@ -134,7 +170,10 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: TooManyQueuedUpdates
-    summary:
+    summary: |
+      Too many storage updates have been queued.
+      Wait for pending operations to complete before queuing more.
+      Consider batching updates or spacing them out.
     description:
     is_static: true
     code_samples:
@@ -143,7 +182,8 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: UnknownError
-    summary:
+    summary: |
+      An unknown error occurred. Check server logs for details.
     description:
     is_static: true
     code_samples:
@@ -152,7 +192,9 @@ properties:
       - ReadOnly
     type: Enum.StorageError
   - name: ValueTooLarge
-    summary:
+    summary: |
+      The value exceeds the maximum storage size limit.
+      Typical limit is 64KB per value. Consider splitting large data.
     description:
     is_static: true
     code_samples:

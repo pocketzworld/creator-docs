@@ -1,18 +1,40 @@
 name: IntValue
 type: classes
 summary: |
-  The IntValue class is used to store a single integer value, which is a number without decimals. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
+  IntValue class stores a single integer value (whole numbers without decimals), extending from Class.Value.
+  It's designed for synchronizing integer values across all clients in a networked environment,
+  such as player scores, round numbers, or item counts.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create an IntValue to track player lives
+  local playerLives = IntValue.new("PlayerLives", 3)
+  
+  -- Listen for changes
+  playerLives.Changed:Connect(function(newVal, oldVal)
+      print("Lives changed from " .. oldVal .. " to " .. newVal)
+  end)
+  
+  -- Update the value (syncs to all clients)
+  playerLives.value = playerLives.value - 1
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new IntValue instance with a specified name and default initial value of 0.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local counter = IntValue.new("Counter")
+      -- Initial value is 0 by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -25,10 +47,15 @@ constructors:
       - type: Class.IntValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new IntValue instance with a specified name and default initial value of 0.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local counter = IntValue.new("Counter")
+      -- Initial value is 0 by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -46,10 +73,15 @@ constructors:
       - type: Class.IntValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new IntValue instance with a specified name and default initial value of 0.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local counter = IntValue.new("Counter")
+      -- Initial value is 0 by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -74,10 +106,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized integer value of the IntValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized integer value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local points = IntValue.new("Points", 0)
+      points.value = 100 -- Syncs to all clients
+      print("Current points: " .. points.value)
+      ```
     tags:
       - ClientAndServer
     type: number

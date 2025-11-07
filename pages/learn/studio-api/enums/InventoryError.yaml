@@ -1,23 +1,28 @@
 name: InventoryError
 type: enums
-summary:
+summary: |
+  InventoryError enum contains all possible error codes returned from Inventory API operations.
+  Check the error parameter in callbacks to determine if the operation succeeded or failed.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Inventory.GetPlayerItem(player, "sword", function(item, error)
+      if error == InventoryError.None then
+          print("Success")
+      elseif error == InventoryError.RequestThrottled then
+          print("Too many requests, try again later")
+      else
+          print("Error: " .. tostring(error))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
-  - name: Count
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.InventoryError
   - name: CursorInvalid
-    summary:
+    summary: |
+      The cursor is invalid
     description:
     is_static: true
     code_samples:
@@ -26,7 +31,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: CursorInvalidLimit
-    summary:
+    summary: |
+      The cursor limit is invalid
     description:
     is_static: true
     code_samples:
@@ -35,7 +41,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: CursorNoMoreValues
-    summary:
+    summary: |
+      No more values available for the cursor
     description:
     is_static: true
     code_samples:
@@ -44,7 +51,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: InternalError
-    summary:
+    summary: |
+      An internal server error occurred
     description:
     is_static: true
     code_samples:
@@ -53,7 +61,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: InvalidHolderId
-    summary:
+    summary: |
+      The provided holder ID is invalid
     description:
     is_static: true
     code_samples:
@@ -62,7 +71,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: InvalidItemId
-    summary:
+    summary: |
+      The provided item ID is invalid
     description:
     is_static: true
     code_samples:
@@ -71,7 +81,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: InvalidReservationId
-    summary:
+    summary: |
+      The provided reservation ID is invalid
     description:
     is_static: true
     code_samples:
@@ -80,7 +91,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: NoActions
-    summary:
+    summary: |
+      Transaction has no actions
     description:
     is_static: true
     code_samples:
@@ -89,7 +101,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: None
-    summary:
+    summary: |
+      No error occurred - operation successful
     description:
     is_static: true
     code_samples:
@@ -98,7 +111,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: RequestThrottled
-    summary:
+    summary: |
+      Too many requests sent - rate limit exceeded
     description:
     is_static: true
     code_samples:
@@ -107,7 +121,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: Timeout
-    summary:
+    summary: |
+      The operation timed out
     description:
     is_static: true
     code_samples:
@@ -116,7 +131,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: TooManyActions
-    summary:
+    summary: |
+      Too many actions in the transaction
     description:
     is_static: true
     code_samples:
@@ -125,7 +141,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: TransactionError
-    summary:
+    summary: |
+      Transaction operation failed
     description:
     is_static: true
     code_samples:
@@ -134,7 +151,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: UnknownError
-    summary:
+    summary: |
+      An unknown error occurred
     description:
     is_static: true
     code_samples:
@@ -143,7 +161,8 @@ properties:
       - ReadOnly
     type: Enum.InventoryError
   - name: UnknownTransaction
-    summary:
+    summary: |
+      The transaction ID is unknown or expired
     description:
     is_static: true
     code_samples:

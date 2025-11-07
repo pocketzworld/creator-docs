@@ -1,89 +1,188 @@
 name: WorldInstanceInfo
 type: classes
-summary:
+summary: |
+  Contains information about the current world instance, including room settings, ownership, and configuration.
+  Access via `game.Info`, `client.Info`, or `server.Info`.
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Access world instance information
+  local info = game.info
+  
+  print("World ID: " .. info.worldId)
+  print("Room ID: " .. info.roomId)
+  print("Max Players: " .. info.maxPlayers)
+  print("Creator: " .. info.creatorId)
+  print("Owner: " .. info.ownerId)
+  print("Is Private: " .. tostring(info.isPrivate))
+  print("Allows Spectating: " .. tostring(info.allowsSpectating))
+  print("Locale: " .. info.locale)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: allowsSpectating
-    summary:
+    summary: |
+      True if spectating is enabled for this room.
+      Spectators can watch without counting towards the player limit.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if game.info.allowsSpectating then
+          print("Spectating is enabled")
+          print("Current spectators: " .. server.spectatorCount)
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: creatorId
-    summary:
+    summary: |
+      The user ID of the world creator (the person who built/published the world).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Check if a player is the world creator
+      if player.user.id == game.info.creatorId then
+          print(player.name .. " is the world creator!")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: string
   - name: isOwnedRoom
-    summary:
+    summary: |
+      True if this is an owned room (private room instance owned by a user).
+      False for public world instances.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if game.info.isOwnedRoom then
+          print("This is a private owned room")
+          print("Owner: " .. game.info.ownerId)
+      else
+          print("This is a public world instance")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: isPrivate
-    summary:
+    summary: |
+      True if this room is set to private (requires invitation to join).
+      False if the room is public and anyone can join.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if game.info.isPrivate then
+          print("This is a private room - invite only")
+      else
+          print("This is a public room - anyone can join")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: locale
-    summary:
+    summary: |
+      The locale/language code for this room (e.g., "en-US", "es-ES", "ja-JP").
+      Use this to provide localized content or language-specific features.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local locale = game.info.locale
+      print("Room locale: " .. locale)
+      
+      -- Provide localized messages
+      if locale == "es-ES" then
+          print("¡Bienvenido!")
+      elseif locale == "ja-JP" then
+          print("ようこそ!")
+      else
+          print("Welcome!")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: string
   - name: maxPlayers
-    summary:
+    summary: |
+      The maximum number of players allowed in this world instance.
+      Use this to check if the room is full or manage player limits.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if game.playerCount >= game.info.maxPlayers then
+          print("Room is full!")
+      else
+          print("Available slots: " .. (game.info.maxPlayers - game.playerCount))
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: number
   - name: ownerId
-    summary:
+    summary: |
+      The user ID of the room owner (for owned rooms).
+      For public worlds, this may be empty or the same as CreatorId.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Check if a player owns this room
+      if game.info.isOwnedRoom and player.user.id == game.info.ownerId then
+          print(player.name .. " owns this room!")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: string
   - name: roomId
-    summary:
+    summary: |
+      The unique identifier for this specific room instance.
+      Each active room has a unique RoomId, even if they use the same world template.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("This room's ID: " .. game.info.roomId)
+      
+      -- Save room-specific data
+      Storage.SetValue("RoomStats_" .. game.info.roomId, {
+          totalVisits = 100,
+          createdAt = os.time()
+      })
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: string
   - name: worldId
-    summary:
+    summary: |
+      The unique identifier for this world (the world template/design).
+      Multiple room instances can share the same WorldId.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("World template ID: " .. game.info.worldId)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly

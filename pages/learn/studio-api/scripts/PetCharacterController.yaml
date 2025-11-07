@@ -1,34 +1,62 @@
 name: PetCharacterController
 type: scripts
-summary:
+summary: |
+  PetCharacterController is a module script that manages pet characters in Highrise Studio.
+  It handles pet creation, outfit changes, and provides methods to retrieve pet information.
+  This is a module script that can be required in your Lua code.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  local PetCharacterController = require("PetCharacterController")
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: PetCreatedEvent
-    summary:
+    summary: |
+      Event that fires when a pet is created.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PetCharacterController = require("PetCharacterController")
+      PetCharacterController.PetCreatedEvent:Connect(function(petInfo)
+          print("Pet created for player: " .. tostring(petInfo.player))
+      end)
+      ```
     tags:
       - ClientAndServer
     type: Class.Event
   - name: PetOutfitChangedEvent
-    summary:
+    summary: |
+      Event that fires when a pet's outfit is changed.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PetCharacterController = require("PetCharacterController")
+      PetCharacterController.PetOutfitChangedEvent:Connect(function(petInfo)
+          print("Pet outfit changed for: " .. tostring(petInfo.character))
+      end)
+      ```
     tags:
       - ClientAndServer
     type: Class.Event
 methods:
   - name: GetPetForPlayer
-    summary:
+    summary: |
+      Retrieves pet information for a specific player.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PetCharacterController = require("PetCharacterController")
+      local petInfo = PetCharacterController.GetPetForPlayer(player)
+      if petInfo then
+          print("Player has pet: " .. tostring(petInfo.character))
+      end
+      ```
     tags:
       - ClientAndServer
       - NoSelfParameter
@@ -49,10 +77,17 @@ methods:
           - characterChangedEvent (Event): The event that is fired when the character changes
           - petOutfitChangedEvent (Event): The event that is fired when the pet outfit changes
   - name: GetPetFromCharacter
-    summary:
+    summary: |
+      Retrieves pet information from a character instance.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local PetCharacterController = require("PetCharacterController")
+      local petInfo = PetCharacterController.GetPetFromCharacter(character)
+      print("Pet owner: " .. tostring(petInfo.player))
+      print("Pet traits: " .. tostring(petInfo.traits))
+      ```
     tags:
       - ClientAndServer
       - NoSelfParameter

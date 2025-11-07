@@ -12,9 +12,18 @@ properties:
   - name: AnchorChanged
     summary: |
       Event that fires when the characters anchor changes
+      Event Parameters:
+          Anchor: the new anchor that the character is on
+          Old Anchor: the old anchor that the character was on
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character.AnchorChanged:Connect(function(anchor, oldAnchor)
+        print("Character anchor changed to " .. anchor.name .. " from " .. oldAnchor.name)
+      end)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
@@ -22,6 +31,8 @@ properties:
   - name: AnimationEvent
     summary: |
       Event fired when an animation event occurs
+      Event Parameters:
+          Event: an instance of the AnimationEvent class
     description:
     is_static: false
     code_samples: |
@@ -38,6 +49,10 @@ properties:
   - name: EmotePlayed
     summary: |
       Event that fires when the character plays an emote
+      Event Parameters:
+          Name: the name of the emote that was played
+          Loop: whether the emote is looping
+          TimeScale: the speed of the emote
     description:
     is_static: false
     code_samples:
@@ -48,6 +63,7 @@ properties:
   - name: EmoteStopped
     summary: |
       Event that fires when the character stops an emote in progress or a looping emote
+      Event Parameters: none
     description:
     is_static: false
     code_samples:
@@ -58,6 +74,7 @@ properties:
   - name: MoveFinished
     summary: |
       Event fired when the character has finished moving
+      Event Parameters: none
     description:
     is_static: false
     code_samples: |
@@ -74,6 +91,7 @@ properties:
   - name: MoveStarted
     summary: |
       Event fired when the character has started moving
+      Event Parameters: none
     description:
     is_static: false
     code_samples:
@@ -84,6 +102,8 @@ properties:
   - name: OutfitChanged
     summary: |
       Event that fires when the outfit of a character changes
+      Event Parameters:
+          Character: the character that had its outfit changed
     description:
     is_static: false
     code_samples:
@@ -94,6 +114,9 @@ properties:
   - name: StateChanged
     summary: |
       Event fired when the characters state changes
+      Event Parameters:
+          State: the new state of the character
+          Old State: the old state of the character
     description:
     is_static: false
     code_samples: |
@@ -195,7 +218,7 @@ properties:
     type: boolean
   - name: isMoving
     summary: |
-      Returns true if the character is in a moving state (Walking, Running, or Jumping).
+      Returns true if the character is in a moving state (Walking, Running, Jogging, or Jumping).
       A character attached to an anchor is considered to be in an idle state, even if the anchor is set to play a walk or run animation.
     description:
     is_static: false
@@ -338,13 +361,13 @@ properties:
     type: number
   - name: speed
     summary: |
-      The movement speed of the character. You must wait for the player to connect before setting this property.
+      The movement speed of the character, relative to its animation's movement speed. You must wait for the player to connect before setting this property.
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-      player.character.speed = 10
+      player.character.speed = 10  -- Set the character's speed to 10x
       ```
     tags:
       - ClientOnly
@@ -689,21 +712,21 @@ methods:
           - optional
         default:
         summary: |
-          An optional mask to specify allowed movement areas.
+          An optional mask to specify allowed movement areas; -1 by default.
       - name: callback
         type: "(...any) -> (...any)"
         tags:
           - optional
         default:
         summary: |
-          A callback function to execute when movement is complete.
+          A callback function to execute when movement is complete; no-op by default.
       - name: targetSearchDistance
         type: number
         tags:
           - optional
         default:
         summary: |
-          The target search distance for the character to move to.
+          The target search distance for the character to move to; 2 units by default.
     returns:
       - type: boolean
         summary: |
@@ -767,21 +790,21 @@ methods:
           - optional
         default:
         summary: |
-          An optional mask to specify allowed movement areas.
+          An optional mask to specify allowed movement areas; -1 by default.
       - name: callback
         type: "(...any) -> (...any)"
         tags:
           - optional
         default:
         summary: |
-          A callback function to execute when movement is complete.
+          A callback function to execute when movement is complete; no-op by default.
       - name: targetSearchDistance
         type: number
         tags:
           - optional
         default:
         summary: |
-          The target search distance for the character to move to.
+          The target search distance for the character to move to; 2 units by default.
     returns:
       - type: boolean
         summary: |

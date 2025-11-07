@@ -289,47 +289,6 @@ methods:
       - name: upwardsModifier
         type: number
         tags:
-        default:
-        summary:
-      - name: mode
-        type: Enum.ForceMode
-        tags:
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: AddExplosionForce
-    summary: |
-      The 'AddExplosionForce' method applies a force to the Rigidbody that simulates the effect of an explosion at a given location. The force diminishes with increasing distance from the explosion source. This method can be used to create dynamic force effects in gameplay, like grenade explosions.
-      [Unity's Rigidbody.AddExplosionForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: explosionForce
-        type: number
-        tags:
-        default:
-        summary: |
-          The magnitude of the force of the explosion.
-      - name: explosionPosition
-        type: DataType.Vector3
-        tags:
-        default:
-        summary: |
-          The position of the explosion origin.
-      - name: explosionRadius
-        type: number
-        tags:
-        default:
-        summary: |
-          The maximum distance from the explosion origin at which the explosion force is considered.
-      - name: upwardsModifier
-        type: number
-        tags:
           - optional
         default:
         summary:
@@ -420,36 +379,6 @@ methods:
         tags:
         default:
         summary:
-      - name: mode
-        type: Enum.ForceMode
-        tags:
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: AddForceAtPosition
-    summary: |
-      The 'AddForceAtPosition' method applies a force to the Rigidbody at a specific position. Instead of applying the force through the center of mass, the force is applied at the specified position, creating a torque and causing the Rigidbody to rotate. This method is useful for creating precise scripted physics effects.
-      [Unity's Rigidbody.AddForceAtPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForceAtPosition.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: force
-        type: DataType.Vector3
-        tags:
-        default:
-        summary: |
-          The vector to apply as a force.
-      - name: position
-        type: DataType.Vector3
-        tags:
-        default:
-        summary: |
-          The position in world coordinates where the force is applied.
       - name: mode
         type: Enum.ForceMode
         tags:
@@ -772,26 +701,6 @@ methods:
       - name: step
         type: number
         tags:
-        default:
-        summary: |
-          The step index to retrieve accumulated forces for.
-    returns:
-      - type: DataType.Vector3
-        summary: |
-          Returns the accumulated force for the given step.
-  - name: GetAccumulatedForce
-    summary: |
-      The 'GetAccumulatedForce' method obtains the force accumulated on the Rigidbody over one physics simulation step. This is useful in certain effects or physics-based calculators that need to understand the amount of force being put on an object.
-      [Unity's Rigidbody.GetAccumulatedForce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedForce.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: step
-        type: number
-        tags:
           - optional
         default:
         summary: |
@@ -800,26 +709,6 @@ methods:
       - type: DataType.Vector3
         summary: |
           Returns the accumulated force for the given step.
-  - name: GetAccumulatedTorque
-    summary: |
-      The 'GetAccumulatedTorque' method retrieves the torque accumulated on the Rigidbody over one physics simulation step. Just like 'GetAccumulatedForce', this method is useful where you need to calculate the rotation effects based on the amount of torque applied on an object.
-      [Unity's Rigidbody.GetAccumulatedTorque Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.GetAccumulatedTorque.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: step
-        type: number
-        tags:
-        default:
-        summary: |
-          The step index to retrieve accumulated torques for.
-    returns:
-      - type: DataType.Vector3
-        summary: |
-          Returns the accumulated torque for the given step.
   - name: GetAccumulatedTorque
     summary: |
       The 'GetAccumulatedTorque' method retrieves the torque accumulated on the Rigidbody over one physics simulation step. Just like 'GetAccumulatedForce', this method is useful where you need to calculate the rotation effects based on the amount of torque applied on an object.
@@ -1077,28 +966,6 @@ methods:
         summary: |
           Returns true if a Rigidbody collider is hit, and includes information about the object hit in a RaycastHit object.
       - type: DataType.RaycastHit
-        summary:
-  - name: SweepTestAll
-    summary: |
-      [Unity's Rigidbody.SweepTestAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.SweepTestAll.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: direction
-        type: DataType.Vector3
-        tags:
-        default:
-        summary:
-      - name: maxDistance
-        type: number
-        tags:
-        default:
-        summary:
-    returns:
-      - type: {DataType.RaycastHit}
         summary:
   - name: SweepTestAll
     summary: |

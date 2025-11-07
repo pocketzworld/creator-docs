@@ -1,15 +1,35 @@
 name: Storage
 type: services
 summary: |
-  The Storage API provides functionality for saving and loading persistent data. This can be used
-  for player-specific data such as storing player progress or a high score. This can also be used
-  for global data for tracking the progress of all players or a global leaderboard. The Storage
-  API is only available on the server. For saving a player's obtained items or currency, use the
-  Inventory API. See StorageError for a list of errors that can be returned from Storage
-  functions. There is a limit of how often Storage functions can be called before functions will
-  start returning StorageError.RequestThrottled. See the documentation for
-  StorageError.RequestThrottled for details. In Unity, the Storage file is located at
-  Library/localStorage. You can open this file with a text editor to see the data stored in it.
+  The Storage API provides persistent data storage that survives world restarts and player sessions.
+  Think of it as a database for your world - data is saved permanently until you delete it.
+  
+  Common uses:
+  - Player progress (levels completed, achievements unlocked)
+  - Player preferences (settings, customization choices)
+  - World state (time of day, resource counts, building placements)
+  - Leaderboards and high scores
+  
+  IMPORTANT Limitations:
+  - SERVER SIDE ONLY: Can only be called from server scripts (not client scripts)
+  - Rate Limited: Limit calls to avoid RequestThrottled errors (roughly 10-20 calls per second recommended)
+  - Data Size: Keep individual values reasonable (under 100KB recommended) - use multiple keys for large datasets
+  - For player items/currency: Use Inventory API instead (it's optimized for that)
+  
+  Supported data types: string, number, boolean, table (nested tables supported), Vector3
+  
+  Data Persistence: All data persists permanently across:
+  - World restarts
+  - Player sessions
+  - Server updates
+  Data only deletes when you explicitly call DeleteValue or DeletePlayerValue
+  
+  Player-specific vs Global:
+  - Player functions (GetPlayerValue, SetPlayerValue, etc.) automatically prefix with player's user ID
+  - Global functions use the exact key you provide
+  - player.user.id = unique permanent ID across all worlds, player.id = temporary session ID (don't use for storage!)
+  
+  Unity Development: Storage file located at Library/localStorage (can view/edit in text editor for testing)
 description:
 code_samples:
 inherits:
@@ -19,10 +39,21 @@ properties:
 methods:
   - name: DeletePlayerValue
     summary: |
-      This is the equivalent of calling DeleteValue(player.user.id .. "/" .. key, callback).  This deletes a value that is specific to the player.  If you want to delete a global value or use a different format for the key, use DeleteValue instead.
+      Deletes a player-specific value from storage.
+      Equivalent to: DeleteValue(player.user.id .. "/" .. key, callback)
+      For global values or custom key formats, use DeleteValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.DeletePlayerValue(player, "TempData")
+      
+      Storage.DeletePlayerValue(player, "Progress", function(error)
+          if error == StorageError.None then
+              print("Player progress reset")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -41,10 +72,21 @@ methods:
         summary:
   - name: DeletePlayerValue
     summary: |
-      This is the equivalent of calling DeleteValue(player.user.id .. "/" .. key, callback).  This deletes a value that is specific to the player.  If you want to delete a global value or use a different format for the key, use DeleteValue instead.
+      Deletes a player-specific value from storage.
+      Equivalent to: DeleteValue(player.user.id .. "/" .. key, callback)
+      For global values or custom key formats, use DeleteValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.DeletePlayerValue(player, "TempData")
+      
+      Storage.DeletePlayerValue(player, "Progress", function(error)
+          if error == StorageError.None then
+              print("Player progress reset")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -68,10 +110,21 @@ methods:
         summary:
   - name: DeleteValue
     summary: |
-      Deletes the value with the given key from storage.  The callback parameter is the error code.
+      Deletes a value from storage with the given key.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Delete without callback
+      Storage.DeleteValue("TemporaryData")
+      
+      -- Delete with callback
+      Storage.DeleteValue("OldLeaderboard", function(error)
+          if error == StorageError.None then
+              print("Value deleted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -85,10 +138,21 @@ methods:
         summary:
   - name: DeleteValue
     summary: |
-      Deletes the value with the given key from storage.  The callback parameter is the error code.
+      Deletes a value from storage with the given key.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Delete without callback
+      Storage.DeleteValue("TemporaryData")
+      
+      -- Delete with callback
+      Storage.DeleteValue("OldLeaderboard", function(error)
+          if error == StorageError.None then
+              print("Value deleted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -107,15 +171,17 @@ methods:
         summary:
   - name: GetPlayerValue
     summary: |
-      This is the equivalent of calling GetValue(player.user.id .. "/" .. key, callback). This
-      retrieves a value that is specific to the player. If you want to get a global value or use a
-      different format for the key, use GetValue instead.
+      Retrieves a player-specific value from storage.
+      Equivalent to: GetValue(player.user.id .. "/" .. key, callback)
+      For global values or custom key formats, use GetValue instead.
     description:
     is_static: true
     code_samples: |
       ```lua
-      Storage.GetPlayerValue(player, "HighScore", function(highScore)
-        print(`The high score is {tostring(highScore)}`)
+      Storage.GetPlayerValue(player, "HighScore", function(value, error)
+          if error == StorageError.None then
+              print(player.name .. " high score: " .. tostring(value))
+          end
       end)
       ```
     tags:
@@ -141,19 +207,20 @@ methods:
         summary:
   - name: GetValue
     summary: |
-      Retrieves a value from storage with the given key. The callback parameters are the value
-      and error code. Value will be nil and the error code will be StorageError.None if the value
-      does not exist. Value will be nil and the error code will be a value other than
-      StorageError.None if an error occurred.
+      Retrieves a value from storage with the given key.
+      The callback receives the value and error code.
+      If the key doesn't exist, value is nil and error is StorageError.None.
     description:
     is_static: true
     code_samples: |
       ```lua
-      function PrintValue(key: string)
-        Storage.GetValue(key, function(value)
-          print(`{key} is {tostring(value)}`)
-        end)
-      end
+      Storage.GetValue("GlobalHighScore", function(value, error)
+          if error == StorageError.None then
+              print("High score: " .. tostring(value))
+          else
+              print("Error: " .. tostring(error))
+          end
+      end)
       ```
     tags:
       - ServerOnly
@@ -173,10 +240,23 @@ methods:
         summary:
   - name: IncrementPlayerValue
     summary: |
-      This is the equivalent of calling IncrementValue(player.user.id .. "/" .. key, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
+      Increments a player-specific numeric value by the specified amount.
+      Equivalent to: IncrementValue(player.user.id .. "/" .. key, amount, callback)
+      For global values or custom key formats, use IncrementValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Add points to player
+      Storage.IncrementPlayerValue(player, "Points", 10)
+      
+      -- Add currency with callback
+      Storage.IncrementPlayerValue(player, "Coins", 50, function(error)
+          if error == StorageError.None then
+              print("Coins added")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -200,10 +280,23 @@ methods:
         summary:
   - name: IncrementPlayerValue
     summary: |
-      This is the equivalent of calling IncrementValue(player.user.id .. "/" .. key, amount, callback).  This increments a value that is specific to the player.  If you want to increment a global value or use a different format for the key, use IncrementValue instead.
+      Increments a player-specific numeric value by the specified amount.
+      Equivalent to: IncrementValue(player.user.id .. "/" .. key, amount, callback)
+      For global values or custom key formats, use IncrementValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Add points to player
+      Storage.IncrementPlayerValue(player, "Points", 10)
+      
+      -- Add currency with callback
+      Storage.IncrementPlayerValue(player, "Coins", 50, function(error)
+          if error == StorageError.None then
+              print("Coins added")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -232,10 +325,23 @@ methods:
         summary:
   - name: IncrementValue
     summary: |
-      If the value for the given key is a number, it will be increased by the amount.  If the value does not exist, it will be set to the amount.  This is safe to use for global values.  The callback parameter is the error code.
+      Increments a numeric value by the specified amount.
+      If the value doesn't exist, it will be set to the amount.
+      Safe for concurrent access - use this instead of UpdateValue for simple number increments.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Increment global player count
+      Storage.IncrementValue("TotalPlayers", 1)
+      
+      -- Decrement with callback
+      Storage.IncrementValue("AvailableSlots", -1, function(error)
+          if error == StorageError.None then
+              print("Slot taken")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -254,10 +360,23 @@ methods:
         summary:
   - name: IncrementValue
     summary: |
-      If the value for the given key is a number, it will be increased by the amount.  If the value does not exist, it will be set to the amount.  This is safe to use for global values.  The callback parameter is the error code.
+      Increments a numeric value by the specified amount.
+      If the value doesn't exist, it will be set to the amount.
+      Safe for concurrent access - use this instead of UpdateValue for simple number increments.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Increment global player count
+      Storage.IncrementValue("TotalPlayers", 1)
+      
+      -- Decrement with callback
+      Storage.IncrementValue("AvailableSlots", -1, function(error)
+          if error == StorageError.None then
+              print("Slot taken")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -281,10 +400,23 @@ methods:
         summary:
   - name: SearchPlayerValue
     summary: |
-      This is the equivalent of calling SearchValue(player.user.id .. "/" .. key, callback).  This searches for values that are specific to the player.  If you want to search for global values or use a different format for the key, use SearchValue instead.
+      Searches for player-specific values that start with the given key prefix.
+      Equivalent to: SearchValue(player.user.id .. "/" .. key, limit, cursorId, callback)
+      For global values or custom key formats, use SearchValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Search player's saved levels
+      Storage.SearchPlayerValue(player, "level_", 5, nil, function(values, cursorId, error)
+          if error == StorageError.None then
+              print("Found " .. #values .. " saved levels")
+              for i, entry in ipairs(values) do
+                  print("Level: " .. tostring(entry))
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -318,10 +450,31 @@ methods:
         summary:
   - name: SearchValue
     summary: |
-      Returns up to the given limit number of the most recent values that start with the given key.  To get the first group of results, pass in nil for the cursorId.  The callback includes a cursor ID that can be passed to SearchValue to retrieve the next group of results.  If the cursor ID is nil, then there are no more results.  The callback parameters are an array of values, where each is a table with the value's name as the key and its value as the value, the cursor ID, and the error code.  The array will be empty and the error code will be StorageError.None if no values are found.  The array will be nil and the error code will be a value other than StorageError.None if an error occurred.
+      Searches for values that start with the given key prefix.
+      Returns up to 'limit' most recent matching values.
+      
+      Pagination: Pass nil for cursorId to get first results. Use returned cursorId for next page.
+      If returned cursorId is nil, no more results exist.
+      
+      Callback receives: array of values (tables with key-value pairs), cursorId, error
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Search for all player scores
+      Storage.SearchValue("player_scores/", 10, nil, function(values, cursorId, error)
+          if error == StorageError.None then
+              for i, entry in ipairs(values) do
+                  print("Found: " .. tostring(entry))
+              end
+              
+              -- Get next page if available
+              if cursorId ~= nil then
+                  -- Call SearchValue again with cursorId for next page
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -350,10 +503,21 @@ methods:
         summary:
   - name: SetPlayerValue
     summary: |
-      This is the equivalent of calling SetValue(player.user.id .. "|" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
+      Sets a player-specific value in storage.
+      Equivalent to: SetValue(player.user.id .. "/" .. key, value, callback)
+      For global values or custom key formats, use SetValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.SetPlayerValue(player, "Level", 5)
+      
+      Storage.SetPlayerValue(player, "Inventory", { coins = 100, gems = 5 }, function(error)
+          if error == StorageError.None then
+              print("Player data saved")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -377,10 +541,21 @@ methods:
         summary:
   - name: SetPlayerValue
     summary: |
-      This is the equivalent of calling SetValue(player.user.id .. "|" .. key, value, callback).  This sets a value that is specific to the player.  If you want to set a global value or use a different format for the key, use SetValue instead.
+      Sets a player-specific value in storage.
+      Equivalent to: SetValue(player.user.id .. "/" .. key, value, callback)
+      For global values or custom key formats, use SetValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.SetPlayerValue(player, "Level", 5)
+      
+      Storage.SetPlayerValue(player, "Inventory", { coins = 100, gems = 5 }, function(error)
+          if error == StorageError.None then
+              print("Player data saved")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -409,10 +584,25 @@ methods:
         summary:
   - name: SetValue
     summary: |
-      Sets a value in storage with the given key.  Currently supported types are string, number, boolean, table and Vector3.  If you have a global value whose value depends on the previous value, for example a leaderboard table where new high scores are inserted between existing ones, use UpdateValue instead or else data could be lost when multiple world instances set the value at the same time.  If your value is a number that needs to be increased or decreased, use IncrementValue instead.  The callback parameter is the error code.
+      Sets a value in storage with the given key.
+      Supported types: string, number, boolean, table, Vector3
+      
+      CAUTION: For values that depend on previous values (e.g., leaderboards), use UpdateValue to prevent data loss.
+      For incrementing/decrementing numbers, use IncrementValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Without callback
+      Storage.SetValue("GameMode", "TeamDeathmatch")
+      
+      -- With callback
+      Storage.SetValue("ServerConfig", { maxPlayers = 10, friendlyFire = false }, function(error)
+          if error == StorageError.None then
+              print("Config saved successfully")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -431,10 +621,25 @@ methods:
         summary:
   - name: SetValue
     summary: |
-      Sets a value in storage with the given key.  Currently supported types are string, number, boolean, table and Vector3.  If you have a global value whose value depends on the previous value, for example a leaderboard table where new high scores are inserted between existing ones, use UpdateValue instead or else data could be lost when multiple world instances set the value at the same time.  If your value is a number that needs to be increased or decreased, use IncrementValue instead.  The callback parameter is the error code.
+      Sets a value in storage with the given key.
+      Supported types: string, number, boolean, table, Vector3
+      
+      CAUTION: For values that depend on previous values (e.g., leaderboards), use UpdateValue to prevent data loss.
+      For incrementing/decrementing numbers, use IncrementValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Without callback
+      Storage.SetValue("GameMode", "TeamDeathmatch")
+      
+      -- With callback
+      Storage.SetValue("ServerConfig", { maxPlayers = 10, friendlyFire = false }, function(error)
+          if error == StorageError.None then
+              print("Config saved successfully")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -458,10 +663,22 @@ methods:
         summary:
   - name: UpdatePlayerValue
     summary: |
-      This is the equivalent of calling UpdateValue(player.user.id .. "/" .. key, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
+      Safely updates a player-specific value based on its current state.
+      Equivalent to: UpdateValue(player.user.id .. "/" .. key, modifier, callback)
+      For global values or custom key formats, use UpdateValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.UpdatePlayerValue(player, "Stats", function(currentStats)
+          if currentStats == nil then
+              return { kills = 1, deaths = 0 }
+          else
+              currentStats.kills = currentStats.kills + 1
+              return currentStats
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -485,10 +702,22 @@ methods:
         summary:
   - name: UpdatePlayerValue
     summary: |
-      This is the equivalent of calling UpdateValue(player.user.id .. "/" .. key, modifier, callback).  This updates a value that is specific to the player.  If you want to update a global value or use a different format for the key, use UpdateValue instead.
+      Safely updates a player-specific value based on its current state.
+      Equivalent to: UpdateValue(player.user.id .. "/" .. key, modifier, callback)
+      For global values or custom key formats, use UpdateValue instead.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Storage.UpdatePlayerValue(player, "Stats", function(currentStats)
+          if currentStats == nil then
+              return { kills = 1, deaths = 0 }
+          else
+              currentStats.kills = currentStats.kills + 1
+              return currentStats
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -517,24 +746,51 @@ methods:
         summary:
   - name: UpdateValue
     summary: |
-      UpdateValue will use GetValue to retrieve the current value, then call the modifier function
-      with the value as a parameter. If the value does not exist, nil will be passed to the modifier
-      function. UpdateValue will then use SetValue to set the value to what is returned from the
-      modifier function. If the modifier function returns nil, the value will not be set and the
-      callback will be immediately called. The modifier function may be called multiple times if
-      other world instances have made changes to the value. Currently supported types are string,
-      number, boolean, table and Vector3. The callback parameter is the error code.
+      Safely updates a value based on its current state - prevents data loss from simultaneous updates.
+      
+      Why use this instead of Get then Set:
+      - PROBLEM: If two players trigger updates at the same time, one update can be lost
+      Example: Player A and B both try to add their score to leaderboard
+      Player A reads 100, adds 50 = 150
+      Player B reads 100 (before A saves), adds 30 = 130
+      Result: Only 130 saved, Player A's 50 points lost!
+      - SOLUTION: UpdateValue ensures both updates apply correctly (result = 180)
+      
+      How it works:
+      1. Retrieves current value (nil if doesn't exist)
+      2. Calls your modifier function with current value
+      3. Saves the value your modifier returns
+      4. If another update happened simultaneously, retries automatically with new current value
+      
+      The modifier may be called multiple times if concurrent updates detected.
+      Return nil from modifier to cancel the update (no change saved).
+      
+      When to use:
+      - Leaderboards (adding new high scores)
+      - Counters (tracking total events)
+      - Lists (adding items to shared arrays)
+      - Any value that depends on its previous value
+      
+      When NOT to use:
+      - Simple overwrites (use SetValue - it's faster)
+      - Number increments (use IncrementValue - it's optimized for this)
     description:
     is_static: true
     code_samples: |
       ```lua
-      function self:ServerStart()
-        scene.PlayerJoined:Connect(function(scene, player)
-            Storage.UpdateValue("HighScore", function(currentScore)
-              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
-            end)
-        end)
-      end
+      -- Update leaderboard with new high score
+      Storage.UpdateValue("GlobalHighScore", function(currentScore)
+          local newScore = 1000
+          if currentScore == nil or newScore > currentScore then
+              return newScore
+          else
+              return nil -- Don't update if score isn't higher
+          end
+      end, function(error)
+          if error == StorageError.None then
+              print("High score updated")
+          end
+      end)
       ```
     tags:
       - ServerOnly
@@ -554,24 +810,51 @@ methods:
         summary:
   - name: UpdateValue
     summary: |
-      UpdateValue will use GetValue to retrieve the current value, then call the modifier function
-      with the value as a parameter. If the value does not exist, nil will be passed to the modifier
-      function. UpdateValue will then use SetValue to set the value to what is returned from the
-      modifier function. If the modifier function returns nil, the value will not be set and the
-      callback will be immediately called. The modifier function may be called multiple times if
-      other world instances have made changes to the value. Currently supported types are string,
-      number, boolean, table and Vector3. The callback parameter is the error code.
+      Safely updates a value based on its current state - prevents data loss from simultaneous updates.
+      
+      Why use this instead of Get then Set:
+      - PROBLEM: If two players trigger updates at the same time, one update can be lost
+      Example: Player A and B both try to add their score to leaderboard
+      Player A reads 100, adds 50 = 150
+      Player B reads 100 (before A saves), adds 30 = 130
+      Result: Only 130 saved, Player A's 50 points lost!
+      - SOLUTION: UpdateValue ensures both updates apply correctly (result = 180)
+      
+      How it works:
+      1. Retrieves current value (nil if doesn't exist)
+      2. Calls your modifier function with current value
+      3. Saves the value your modifier returns
+      4. If another update happened simultaneously, retries automatically with new current value
+      
+      The modifier may be called multiple times if concurrent updates detected.
+      Return nil from modifier to cancel the update (no change saved).
+      
+      When to use:
+      - Leaderboards (adding new high scores)
+      - Counters (tracking total events)
+      - Lists (adding items to shared arrays)
+      - Any value that depends on its previous value
+      
+      When NOT to use:
+      - Simple overwrites (use SetValue - it's faster)
+      - Number increments (use IncrementValue - it's optimized for this)
     description:
     is_static: true
     code_samples: |
       ```lua
-      function self:ServerStart()
-        scene.PlayerJoined:Connect(function(scene, player)
-            Storage.UpdateValue("HighScore", function(currentScore)
-              return if currentScore == nil or player.HighScore > currentScore then player.HighScore else nil
-            end)
-        end)
-      end
+      -- Update leaderboard with new high score
+      Storage.UpdateValue("GlobalHighScore", function(currentScore)
+          local newScore = 1000
+          if currentScore == nil or newScore > currentScore then
+              return newScore
+          else
+              return nil -- Don't update if score isn't higher
+          end
+      end, function(error)
+          if error == StorageError.None then
+              print("High score updated")
+          end
+      end)
       ```
     tags:
       - ServerOnly

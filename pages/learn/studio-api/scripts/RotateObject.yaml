@@ -1,6 +1,9 @@
 name: RotateObject
 type: scripts
-summary:
+summary: |
+  RotateObject is a built-in component for rotating GameObjects continuously or over a specified duration.
+  This component can be found in the built-in components section of the Assets Catalog and dragged onto any GameObject.
+  Configure rotation speed, duration, and control playback through pause, resume, and restart methods.
 description:
 code_samples:
 inherits:
@@ -8,7 +11,8 @@ tags:
 constructors:
 properties:
   - name: RotateCompletedEvent
-    summary:
+    summary: |
+      Event that fires when the rotation animation completes.
     description:
     is_static: false
     code_samples:
@@ -17,7 +21,8 @@ properties:
     type: Class.Event
 methods:
   - name: Pause
-    summary:
+    summary: |
+      Pauses the rotation animation.
     description:
     is_static: false
     code_samples:
@@ -29,7 +34,8 @@ methods:
       - type: void
         summary:
   - name: Restart
-    summary:
+    summary: |
+      Restarts the rotation animation from the beginning.
     description:
     is_static: false
     code_samples:
@@ -41,7 +47,8 @@ methods:
       - type: void
         summary:
   - name: Resume
-    summary:
+    summary: |
+      Resumes the rotation animation from where it was paused.
     description:
     is_static: false
     code_samples:
@@ -53,7 +60,8 @@ methods:
       - type: void
         summary:
   - name: SetDuration
-    summary:
+    summary: |
+      Sets the duration for the rotation animation in seconds.
     description:
     is_static: false
     code_samples:
@@ -70,7 +78,8 @@ methods:
       - type: void
         summary:
   - name: SetRotataionSpeed
-    summary:
+    summary: |
+      Sets the rotation speed vector for each axis (x, y, z).
     description:
     is_static: false
     code_samples:

@@ -7,15 +7,6 @@ inherits:
 tags:
 constructors:
 properties:
-  - name: Count
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.EmitWorldEventError
   - name: InternalError
     summary:
     description:

@@ -1,6 +1,9 @@
 name: MoveObject
 type: scripts
-summary:
+summary: |
+  MoveObject is a built-in component for moving GameObjects along a path defined by travel points.
+  This component can be found in the built-in components section of the Assets Catalog and dragged onto any GameObject.
+  Add travel points to create a path, configure duration, and control playback through pause, resume, and restart methods.
 description:
 code_samples:
 inherits:
@@ -8,7 +11,8 @@ tags:
 constructors:
 properties:
   - name: MoveCompletedEvent
-    summary:
+    summary: |
+      Event that fires when the movement animation completes.
     description:
     is_static: false
     code_samples:
@@ -17,7 +21,8 @@ properties:
     type: Class.Event
 methods:
   - name: AddTravelPoint
-    summary:
+    summary: |
+      Adds a new travel point to the movement path.
     description:
     is_static: false
     code_samples:
@@ -34,7 +39,8 @@ methods:
       - type: void
         summary:
   - name: ClearTravelPoints
-    summary:
+    summary: |
+      Clears all travel points from the movement path.
     description:
     is_static: false
     code_samples:
@@ -46,7 +52,8 @@ methods:
       - type: void
         summary:
   - name: OnMoveCompleted
-    summary:
+    summary: |
+      Called when the movement animation completes.
     description:
     is_static: false
     code_samples:
@@ -58,7 +65,8 @@ methods:
       - type: void
         summary:
   - name: Pause
-    summary:
+    summary: |
+      Pauses the movement animation.
     description:
     is_static: false
     code_samples:
@@ -70,7 +78,8 @@ methods:
       - type: void
         summary:
   - name: Restart
-    summary:
+    summary: |
+      Restarts the movement animation from the beginning.
     description:
     is_static: false
     code_samples:
@@ -82,7 +91,8 @@ methods:
       - type: void
         summary:
   - name: Resume
-    summary:
+    summary: |
+      Resumes the movement animation from where it was paused.
     description:
     is_static: false
     code_samples:
@@ -94,7 +104,8 @@ methods:
       - type: void
         summary:
   - name: SetDuration
-    summary:
+    summary: |
+      Sets the duration for the entire movement animation in seconds.
     description:
     is_static: false
     code_samples:

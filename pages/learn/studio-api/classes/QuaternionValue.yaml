@@ -1,17 +1,40 @@
 name: QuaternionValue
 type: classes
-summary:
+summary: |
+  QuaternionValue class stores a single Quaternion value (3D rotation), extending from Class.Value.
+  It's designed for synchronizing rotation data across all clients in a networked environment,
+  such as object rotations, camera orientations, or character facing directions.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a QuaternionValue to track door rotation
+  local doorRotation = QuaternionValue.new("DoorRotation", Quaternion.identity)
+  
+  -- Listen for changes
+  doorRotation.Changed:Connect(function(newVal, oldVal)
+      print("Door rotation changed")
+  end)
+  
+  -- Update the value (syncs to all clients)
+  doorRotation.value = Quaternion.Euler(0, 90, 0)
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new QuaternionValue instance with a specified name and default initial value of Quaternion.identity.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local objectRotation = QuaternionValue.new("ObjectRotation")
+      -- Initial value is Quaternion.identity by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -24,10 +47,15 @@ constructors:
       - type: Class.QuaternionValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new QuaternionValue instance with a specified name and default initial value of Quaternion.identity.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local objectRotation = QuaternionValue.new("ObjectRotation")
+      -- Initial value is Quaternion.identity by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -45,10 +73,15 @@ constructors:
       - type: Class.QuaternionValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new QuaternionValue instance with a specified name and default initial value of Quaternion.identity.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local objectRotation = QuaternionValue.new("ObjectRotation")
+      -- Initial value is Quaternion.identity by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -73,10 +106,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized Quaternion value of the QuaternionValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized Quaternion value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local rotation = QuaternionValue.new("Rotation", Quaternion.identity)
+      rotation.value = Quaternion.Euler(0, 45, 0) -- Syncs to all clients
+      print("Rotation: " .. tostring(rotation.value))
+      ```
     tags:
       - ClientAndServer
     type: DataType.Quaternion

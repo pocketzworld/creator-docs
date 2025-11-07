@@ -212,34 +212,6 @@ methods:
       - name: useTransform
         type: boolean
         tags:
-        default:
-        summary:
-    returns:
-      - type: void
-        summary:
-  - name: BakeMesh
-    summary: |
-      The 'BakeMesh' method allows you to create a static Mesh from the line. This could be extremely useful for saving the state of a line, or for use in other Mesh-based systems.
-      [Unity's LineRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/LineRenderer.BakeMesh.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: mesh
-        type: Class.Mesh
-        tags:
-        default:
-        summary:
-      - name: camera
-        type: Class.Camera
-        tags:
-        default:
-        summary:
-      - name: useTransform
-        type: boolean
-        tags:
           - optional
         default:
         summary:

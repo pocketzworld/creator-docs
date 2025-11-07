@@ -1,18 +1,40 @@
 name: Vector3Value
 type: classes
 summary: |
-  The Vector3Value class is used to store a single Datatype.Vector3 value. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single integer value that all clients should be synchronized on.
+  Vector3Value class stores a single Vector3 value (3D coordinates), extending from Class.Value.
+  It's designed for synchronizing 3D position, rotation, or direction data across all clients in a networked environment,
+  such as object positions, spawn points, or movement directions.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a Vector3Value to track target position
+  local targetPos = Vector3Value.new("TargetPosition", Vector3.new(0, 0, 0))
+  
+  -- Listen for changes
+  targetPos.Changed:Connect(function(newVal, oldVal)
+      print("Target moved to: " .. tostring(newVal))
+  end)
+  
+  -- Update the value (syncs to all clients)
+  targetPos.value = Vector3.new(10, 5, 10)
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new Vector3Value instance with a specified name and default initial value of Vector3.zero.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local velocity = Vector3Value.new("Velocity")
+      -- Initial value is Vector3.zero by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -25,10 +47,15 @@ constructors:
       - type: Class.Vector3Value
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new Vector3Value instance with a specified name and default initial value of Vector3.zero.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local velocity = Vector3Value.new("Velocity")
+      -- Initial value is Vector3.zero by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -46,10 +73,15 @@ constructors:
       - type: Class.Vector3Value
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new Vector3Value instance with a specified name and default initial value of Vector3.zero.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local velocity = Vector3Value.new("Velocity")
+      -- Initial value is Vector3.zero by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -74,10 +106,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized Vector3 value of the Vector3Value. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized Vector3 value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector3Value.new("Position", Vector3.new(0, 0, 0))
+      position.value = Vector3.new(5, 10, 5) -- Syncs to all clients
+      print("Position: " .. tostring(position.value))
+      ```
     tags:
       - ClientAndServer
     type: DataType.Vector3

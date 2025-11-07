@@ -77,4 +77,92 @@ properties:
       - ClientOnly
     type: DataType.Rect
 methods:
+  - name: TweenAlpha
+    summary: |
+      Creates a tween that transitions the color of an image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending color of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenAlpha
+    summary: |
+      Creates a tween that transitions the color of an image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary: |
+          Starting color of the object.
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending color of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenColor
+    summary: |
+      Creates a tween that transitions the alpha of an image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending alpha of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenColor
+    summary: |
+      Creates a tween that transitions the alpha of an image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Starting alpha of the object.
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending alpha of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
 math_operations:

@@ -1,6 +1,59 @@
 name: HighriseCamera
 type: scripts
-summary:
+summary: |
+  HighriseCamera is a built-in client-side camera script providing simplified top-down camera controls for Highrise Studio.
+  This script is similar to RTSCamera but without rotation controls - the camera maintains a fixed pitch and yaw angle while supporting panning, zooming, inertia, and optional features like keeping the player in view or centering on the player.
+  The camera uses a target point that it looks at from a fixed angle, with configurable zoom distance. Supports both perspective and orthographic projection.
+  Input events are automatically connected for touch/mouse control: drag to pan, pinch to zoom (touch), mouse wheel to zoom.
+  To add this camera to your scene: Right Click in Hierarchy > Highrise > Cameras > HighriseCamera
+  
+  Configurable Parameters (via Unity Inspector):
+  Zoom Settings:
+  - zoom: Initial zoom level in world units - how high/far the camera sits (default: 15, medium height)
+  - zoomMin: Minimum zoom distance in world units (default: 10, closest view)
+  - zoomMax: Maximum zoom distance in world units (default: 50, farthest view)
+  - fov: Field of view in degrees - lower = more zoomed in appearance (default: 30, typical for top-down)
+  
+  Defaults:
+  - pitch: Fixed pitch angle in degrees - how far camera looks down (default: 30, angled downward, cannot be changed by user)
+  - yaw: Fixed yaw angle in degrees - horizontal angle (default: 45, diagonal view, cannot be changed by user)
+  - centerOnCharacterWhenSpawned: Automatically centers camera on player when they spawn (default: true)
+  - centerOnCharacterWhenMovingSpeed: How fast camera follows moving player - 0 = disabled, 1 = immediate (default: 0 = no auto-follow)
+  - orthographic: Use flat/isometric projection instead of perspective (default: false = perspective with depth)
+  - keepPlayerInView: Automatically pan camera if player moves outside view bounds (default: false)
+  - keepPlayerInViewPanDuration: How long in seconds the camera takes to pan back to player (default: 0.5 seconds)
+  
+  Internal Constants:
+  - playerViewBoundsPercentage: Screen percentage for player movement before camera follows (0.7 = 70%)
+  - inertia settings: Controls momentum-based camera movement on touch devices after drag ends
+  - resetLerpDuration: Duration for camera reset animation (1.2 seconds)
+  
+  Terminology:
+  - Target: The point in the world the camera looks at
+  - Pitch: Fixed vertical angle (cannot be rotated by player) - how far camera looks down
+  - Yaw: Fixed horizontal angle (cannot be rotated by player) - diagonal view
+  - Zoom: Distance from camera to target in world units
+  - Inertia: Momentum that continues camera movement after touch input ends
+  - Pan: Moving the camera horizontally/vertically across the world
+  
+  How It Works:
+  - Key Difference from RTSCamera: Camera angle is FIXED - players cannot rotate the view, only pan and zoom
+  - On Start: If centerOnCharacterWhenSpawned enabled, moves camera to look at player when they spawn
+  - Input Handling: 
+  - Touch: One finger drag pans camera, two finger pinch zooms (no rotation), swipe applies momentum
+  - Mouse: Drag pans camera, mouse wheel zooms (no rotation)
+  - Every frame in Update: 
+  - Checks if camera needs to reset, follow player, or continue inertia movement
+  - If player is moving and centerOnCharacterWhenMovingSpeed > 0, smoothly follows player
+  - Positions camera at calculated distance from target at fixed pitch and yaw angles
+  - Camera Positioning: Camera sits at zoom distance from target, looking down at fixed pitch angle (30°), at fixed yaw angle (45°)
+  - Fixed Angles: Unlike RTSCamera which allows rotation, this camera maintains constant pitch and yaw
+  - Zoom Behavior:
+  - Perspective mode (default): Zoom changes actual camera distance in 3D space
+  - Orthographic mode: Zoom changes visible area size (like 2D map zoom)
+  - Keep Player In View: When enabled and player moves to edge of screen (70% boundary), camera automatically pans to follow
+  - Reset: Returns camera to player position with default zoom
+  - Inertia (touch only): After swiping, camera continues moving and gradually slows down
 description:
 code_samples:
 inherits:
@@ -9,7 +62,8 @@ constructors:
 properties:
 methods:
   - name: ApplyInertia
-    summary:
+    summary: |
+      Applies inertia to camera based on world velocity. Scales velocity by inertiaMultiplier (2), clamps to max based on current zoom level (closer = slower, farther = faster), stores in inertiaVelocity for UpdateInertia to process.
     description:
     is_static: false
     code_samples:
@@ -26,7 +80,8 @@ methods:
       - type: void
         summary:
   - name: CalculateCameraDistanceToTarget
-    summary:
+    summary: |
+      Calculates distance from camera to target based on zoom and fov. In orthographic mode returns fixed value (100). In perspective mode uses frustumHeight and fov to calculate distance via trigonometry.
     description:
     is_static: false
     code_samples:
@@ -38,7 +93,8 @@ methods:
       - type: number
         summary:
   - name: CalculateRelativePosition
-    summary:
+    summary: |
+      Calculates camera's world position relative to target. Creates rotation from fixed pitch and yaw values, positions camera at calculated distance behind target in rotated direction. Unlike RTSCamera, rotation is fixed and does not include rotation offsets.
     description:
     is_static: false
     code_samples:
@@ -50,7 +106,8 @@ methods:
       - type: DataType.Vector3
         summary:
   - name: CalculateWorldVelocity
-    summary:
+    summary: |
+      Converts screen-space swipe velocity from evt.velocity to world-space velocity. Clamps input velocity to MaxSwipeVelocity (400), converts start and end screen positions to world positions, returns the delta (inverted for natural movement).
     description:
     is_static: false
     code_samples:
@@ -67,7 +124,8 @@ methods:
       - type: DataType.Vector3
         summary:
   - name: CenterOn
-    summary:
+    summary: |
+      Sets camera target to newTarget position and optionally updates zoom (if newZoom provided), clamped to zoomMin/zoomMax.
     description:
     is_static: false
     code_samples:
@@ -89,7 +147,8 @@ methods:
       - type: void
         summary:
   - name: CenterOnCharacterWithSpringiness
-    summary:
+    summary: |
+      Smoothly moves camera target toward character position using spring interpolation. Speed (0-1) controls interpolation: 0 = no movement, 1 = immediate. Calculates weighted average between character position and current target, calls CenterOn.
     description:
     is_static: false
     code_samples:
@@ -111,7 +170,8 @@ methods:
       - type: void
         summary:
   - name: IsCharacterMoving
-    summary:
+    summary: |
+      Returns true if local player character exists and character state is Walking, Running, or Jumping.
     description:
     is_static: false
     code_samples:
@@ -123,7 +183,8 @@ methods:
       - type: boolean
         summary:
   - name: PanCamera
-    summary:
+    summary: |
+      Handles camera panning from touch/mouse drag input. On first pan frame, stores the world position under the touch point, then calls PanWorldPositionToScreenPosition to keep that world point under the finger/cursor.
     description:
     is_static: false
     code_samples:
@@ -140,7 +201,8 @@ methods:
       - type: void
         summary:
   - name: PanIfPlayerOutOfView
-    summary:
+    summary: |
+      Monitors local player character's screen position. If outside configured view bounds (70% of screen), sets state to PlayerOffScreenFollow and smoothly pans camera using SmoothStep interpolation over keepPlayerInViewPanDuration to bring player back into bounds.
     description:
     is_static: false
     code_samples:
@@ -152,7 +214,8 @@ methods:
       - type: void
         summary:
   - name: PanWorldPositionToScreenPosition
-    summary:
+    summary: |
+      Adjusts camera target so a specific world position appears at a specific screen position. Creates a plane at the world position, casts ray from screen position, calculates required target adjustment to align them.
     description:
     is_static: false
     code_samples:
@@ -174,7 +237,8 @@ methods:
       - type: void
         summary:
   - name: PinchZoomCamera
-    summary:
+    summary: |
+      Handles camera zoom from two-finger pinch gestures. Uses evt.scale to calculate new zoom level, clamps between zoomMin and zoomMax. Calls PostZoomMoveTowardsScreenPoint to maintain the pinch center point's world position during zoom.
     description:
     is_static: false
     code_samples:
@@ -191,7 +255,8 @@ methods:
       - type: void
         summary:
   - name: PostZoomMoveTowardsScreenPoint
-    summary:
+    summary: |
+      Adjusts camera target position after zoom to keep the screen point under the cursor/finger at the same world location. Only affects perspective cameras (orthographic zoom doesn't change viewed area).
     description:
     is_static: false
     code_samples:
@@ -208,7 +273,8 @@ methods:
       - type: void
         summary:
   - name: ResetInertia
-    summary:
+    summary: |
+      Clears inertia velocity and magnitude, stopping all momentum-based camera movement.
     description:
     is_static: false
     code_samples:
@@ -220,7 +286,8 @@ methods:
       - type: void
         summary:
   - name: ResetPinchDrag
-    summary:
+    summary: |
+      Resets pinch/drag tracking variables (lastDirection, lastPinchScreenPosition, wasPanning, wasPinching) to prepare for new input.
     description:
     is_static: false
     code_samples:
@@ -232,7 +299,8 @@ methods:
       - type: void
         summary:
   - name: ResetZoomScale
-    summary:
+    summary: |
+      Stores current zoom value as initialZoomOfPinch for pinch zoom calculations.
     description:
     is_static: false
     code_samples:
@@ -244,7 +312,8 @@ methods:
       - type: void
         summary:
   - name: ScreenPositionToWorldPoint
-    summary:
+    summary: |
+      Casts a ray from screen position through camera into world, intersects with world up plane (Y=0), and returns the world position. Used internally for converting screen touches to world coordinates.
     description:
     is_static: false
     code_samples:
@@ -266,7 +335,8 @@ methods:
       - type: DataType.Vector3
         summary:
   - name: UpdateInertia
-    summary:
+    summary: |
+      Updates inertia-based camera movement. If inertia magnitude is above threshold (0.5), applies dampening (inertiaDampeningFactor 0.93 normalized to frame rate), updates target position by inertiaVelocity * deltaTime. Only active on touch devices (not mouse).
     description:
     is_static: false
     code_samples:
@@ -278,7 +348,8 @@ methods:
       - type: void
         summary:
   - name: UpdatePosition
-    summary:
+    summary: |
+      Applies all camera calculations to the transform. Sets camera.orthographicSize or camera.fieldOfView based on orthographic mode. Positions camera at CalculateRelativePosition + target. Calls LookAt to aim camera at target.
     description:
     is_static: false
     code_samples:
@@ -290,7 +361,8 @@ methods:
       - type: void
         summary:
   - name: ZoomIn
-    summary:
+    summary: |
+      Decreases zoom by 1, clamped between zoomMin and zoomMax.
     description:
     is_static: false
     code_samples:
@@ -302,7 +374,8 @@ methods:
       - type: void
         summary:
   - name: ZoomOut
-    summary:
+    summary: |
+      Increases zoom by 1, clamped between zoomMin and zoomMax.
     description:
     is_static: false
     code_samples:

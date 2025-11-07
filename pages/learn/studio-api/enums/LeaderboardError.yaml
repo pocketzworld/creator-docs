@@ -1,23 +1,28 @@
 name: LeaderboardError
 type: enums
-summary:
+summary: |
+  LeaderboardError enum contains all possible error codes returned from Leaderboard API operations.
+  Check the error parameter in callbacks to determine if the operation succeeded or failed.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Leaderboard.SetScoreForPlayer("scores", player, 100, function(entry, error)
+      if error == LeaderboardError.None then
+          print("Score set successfully")
+      elseif error == LeaderboardError.RequestThrottled then
+          print("Too many requests, try again later")
+      else
+          print("Error: " .. tostring(error))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
-  - name: Count
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ServerOnly
-      - ReadOnly
-    type: Enum.LeaderboardError
   - name: InternalError
-    summary:
+    summary: |
+      An internal server error occurred
     description:
     is_static: true
     code_samples:
@@ -26,7 +31,8 @@ properties:
       - ReadOnly
     type: Enum.LeaderboardError
   - name: InvalidEntryID
-    summary:
+    summary: |
+      The provided entry ID is invalid
     description:
     is_static: true
     code_samples:
@@ -35,7 +41,8 @@ properties:
       - ReadOnly
     type: Enum.LeaderboardError
   - name: InvalidEntryName
-    summary:
+    summary: |
+      The provided entry name is invalid
     description:
     is_static: true
     code_samples:
@@ -44,7 +51,8 @@ properties:
       - ReadOnly
     type: Enum.LeaderboardError
   - name: InvalidID
-    summary:
+    summary: |
+      The provided leaderboard ID is invalid
     description:
     is_static: true
     code_samples:
@@ -53,7 +61,8 @@ properties:
       - ReadOnly
     type: Enum.LeaderboardError
   - name: None
-    summary:
+    summary: |
+      No error occurred - operation successful
     description:
     is_static: true
     code_samples:
@@ -62,7 +71,8 @@ properties:
       - ReadOnly
     type: Enum.LeaderboardError
   - name: RequestThrottled
-    summary:
+    summary: |
+      Too many requests sent - rate limit exceeded
     description:
     is_static: true
     code_samples:
@@ -71,7 +81,8 @@ properties:
       - ReadOnly
     type: Enum.LeaderboardError
   - name: Timeout
-    summary:
+    summary: |
+      The operation timed out
     description:
     is_static: true
     code_samples:

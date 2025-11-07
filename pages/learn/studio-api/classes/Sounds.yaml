@@ -7,17 +7,6 @@ inherits:
   - Class.Module
 tags:
 constructors:
-  - name: new
-    summary:
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: Class.Sounds
-        summary:
 properties:
   - name: Alert
     summary: |

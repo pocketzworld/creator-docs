@@ -1,17 +1,40 @@
 name: Vector2Value
 type: classes
-summary:
+summary: |
+  Vector2Value class stores a single Vector2 value (2D coordinates), extending from Class.Value.
+  It's designed for synchronizing 2D position or direction data across all clients in a networked environment,
+  such as UI positions, 2D game coordinates, or directional input.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a Vector2Value to track cursor position
+  local cursorPos = Vector2Value.new("CursorPosition", Vector2.new(0, 0))
+  
+  -- Listen for changes
+  cursorPos.Changed:Connect(function(newVal, oldVal)
+      print("Cursor moved to: " .. tostring(newVal))
+  end)
+  
+  -- Update the value (syncs to all clients)
+  cursorPos.value = Vector2.new(100, 50)
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new Vector2Value instance with a specified name and default initial value of Vector2.zero.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local velocity = Vector2Value.new("Velocity")
+      -- Initial value is Vector2.zero by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -24,10 +47,15 @@ constructors:
       - type: Class.Vector2Value
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new Vector2Value instance with a specified name and default initial value of Vector2.zero.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local velocity = Vector2Value.new("Velocity")
+      -- Initial value is Vector2.zero by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -45,10 +73,15 @@ constructors:
       - type: Class.Vector2Value
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new Vector2Value instance with a specified name and default initial value of Vector2.zero.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local velocity = Vector2Value.new("Velocity")
+      -- Initial value is Vector2.zero by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -73,10 +106,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized Vector2 value of the Vector2Value. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized Vector2 value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local position = Vector2Value.new("Position", Vector2.new(10, 20))
+      position.value = Vector2.new(15, 25) -- Syncs to all clients
+      print("X: " .. position.value.x .. " Y: " .. position.value.y)
+      ```
     tags:
       - ClientAndServer
     type: DataType.Vector2

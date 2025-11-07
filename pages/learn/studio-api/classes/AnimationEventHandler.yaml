@@ -3,12 +3,13 @@ type: classes
 summary: |
   Attach this script to a GameObject with an Animator to receive events when the animation graph
   state changes.
-  
+description:
+code_samples: |
+  ```lua
   self:GetComponent(AnimationEventHandler).StateExit:Connect(function(clip)
       print("AnimationClip " .. clip.name .. " finished playing")
   end)
-description:
-code_samples:
+  ```
 inherits:
   - Class.WorldBehaviour
 tags:

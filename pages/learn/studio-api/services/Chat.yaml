@@ -10,7 +10,9 @@ constructors:
 properties:
   - name: ChannelDestroyed
     summary: |
-      An event that is fired by the server to all clients when a channel is destroyed. Class.ChannelInfo is passed as the parameter.
+      An event that is fired by the server to all clients when a channel is destroyed.
+      Event Parameters:
+          Channel: a ChannelInfo instance representing the channel that was destroyed.
     description:
     is_static: false
     code_samples: |
@@ -34,7 +36,10 @@ properties:
     type: Class.Event
   - name: PlayerLeftChannel
     summary: |
-      An event that is fired by the server to all clients in the same channel as the player that left. Class.ChannelInfo and Class.Player are passed as the parameters.
+      An event that is fired by the server to all clients, regardless of their channel.
+      Event Parameters:
+          Channel: a ChannelInfo instance representing the channel the player left.
+          Player: the Player instance that left the channel.
     description:
     is_static: false
     code_samples: |
@@ -51,7 +56,10 @@ properties:
     summary: |
       An event that is fired when a client receives a text message. If this event has no connected listeners, the text message will display normally.
       If you connect to this event to do custom messaging logic, use the `DisplayTextMessage` method to send the final results.
-      Class.ChannelInfo, Class.Player (the sender), and string are passed as the parameters.
+      Event Parameters:
+          Channel: a ChannelInfo instance representing the channel the message was received in.
+          Player: the Player instance that sent the message.
+          Message: the message that was received.
     description:
     is_static: false
     code_samples: |

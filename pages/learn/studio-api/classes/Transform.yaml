@@ -1035,6 +1035,25 @@ methods:
     tags:
       - ClientOnly
     parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          End position of the tween in local space.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalPosition
+    summary: |
+      Creates a tween that moves the transform's local position from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: from
         type: DataType.Vector3
         tags:
@@ -1053,7 +1072,7 @@ methods:
           A Tween object you can use to further customize the motion.
   - name: TweenLocalPositionTo
     summary: |
-      Creates a tween that moves the transform's local position from one position to the other.
+      Creates a tween that moves the transform from its current local position to the specified local position.
     description:
     is_static: false
     code_samples:
@@ -1066,6 +1085,113 @@ methods:
         default:
         summary: |
           End position of the tween in local space.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalRotation
+    summary: |
+      Creates a tween that moves the transform's local rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalRotation
+    summary: |
+      Creates a tween that moves the transform's local rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          Starting rotation of the object.
+      - name: to
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalRotation
+    summary: |
+      Creates a tween that moves the transform's local rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalRotation
+    summary: |
+      Creates a tween that moves the transform's local rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Starting rotation of the object.
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalScale
+    summary: |
+      Creates a tween that moves the transform's local scale from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending scale of the object.
     returns:
       - type: DataType.Tween
         summary: |
@@ -1095,6 +1221,50 @@ methods:
       - type: DataType.Tween
         summary: |
           A Tween object you can use to further customize the motion.
+  - name: TweenLocalScale
+    summary: |
+      Creates a tween that moves the transform's local scale from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending scale of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLocalScale
+    summary: |
+      Creates a tween that moves the transform's local scale from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary: |
+          Starting scale of the object.
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending scale of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
   - name: TweenLocalScaleTo
     summary: |
       Creates a tween that changes the transform's local scale from its current scale to the specified scale.
@@ -1110,6 +1280,69 @@ methods:
         default:
         summary: |
           Ending scale of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLookAt
+    summary: |
+      Creates a tween that rotates an object to face a specific direction.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction to look in.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenLookAt
+    summary: |
+      Creates a tween that rotates an object to face a specific direction.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The direction to look in.
+      - name: up
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          The up vector of the rotation.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenPosition
+    summary: |
+      Creates a tween that moves the transform from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          End position of the tween in world space.
     returns:
       - type: DataType.Tween
         summary: |
@@ -1154,6 +1387,94 @@ methods:
         default:
         summary: |
           End position of the tween in world space.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotation
+    summary: |
+      Creates a tween that moves the transform's rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotation
+    summary: |
+      Creates a tween that moves the transform's rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          Starting rotation of the object.
+      - name: to
+        type: DataType.Quaternion
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotation
+    summary: |
+      Creates a tween that moves the transform's rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotation
+    summary: |
+      Creates a tween that moves the transform's rotation from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Starting rotation of the object.
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending rotation of the object.
     returns:
       - type: DataType.Tween
         summary: |

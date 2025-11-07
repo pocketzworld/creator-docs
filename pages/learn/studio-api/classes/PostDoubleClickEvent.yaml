@@ -1,13 +1,23 @@
-name: Furniture2D
+name: PostDoubleClickEvent
 type: classes
-summary:
+summary: |
+  Event sent when additional rapid clicks occur on an element after a double click
 description:
 code_samples:
 inherits:
+  - Class.EventBase
 tags:
 constructors:
 properties:
-  - name: childAssets
+  - name: position
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector2
+  - name: eventTypeId
     summary:
     description:
     is_static: false
@@ -15,33 +25,17 @@ properties:
     tags:
       - ClientOnly
       - ReadOnly
-    type: {Class.Furniture2D}
-  - name: descriptorId
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: string
-  - name: directions
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: {number}
-  - name: states
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: {Class.FurnitureState2D}
+    type: number
 methods:
+  - name: Dispose
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
 math_operations:

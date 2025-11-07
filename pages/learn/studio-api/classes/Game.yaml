@@ -1,56 +1,179 @@
 name: Game
 type: classes
-summary:
+summary: |
+  The global `game` object provides access to core game state and information available on both client and server.
+  This is the base class for both `client` (GameClient) and `server` (GameServer) objects.
+  
+  Use cases:
+  - Accessing all connected players in the world
+  - Getting world instance information (room ID, creator, privacy settings, etc.)
+  - Checking if running in Unity Editor
+  - Retrieving networked GameObjects by their network ID
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Iterate through all connected players
+  for i, player in ipairs(game.players) do
+      print("Player " .. i .. ": " .. player.name)
+  end
+  
+  -- Check world instance info
+  print("World ID: " .. game.info.worldId)
+  print("Max Players: " .. game.info.maxPlayers)
+  print("Is Private: " .. tostring(game.info.isPrivate))
+  
+  -- Get player count
+  print("Connected players: " .. game.playerCount)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: info
-    summary:
+    summary: |
+      Provides information about the current world instance, including room settings, creator information, and privacy flags.
+      See WorldInstanceInfo for all available properties (WorldId, RoomId, CreatorId, MaxPlayers, IsPrivate, etc.).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local worldInfo = game.info
+      print("Room ID: " .. worldInfo.roomId)
+      print("Creator: " .. worldInfo.creatorId)
+      print("Max Players: " .. worldInfo.maxPlayers)
+      
+      if worldInfo.isPrivate then
+          print("This is a private room")
+      end
+      
+      if worldInfo.allowsSpectating then
+          print("Spectating is allowed")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: Class.WorldInstanceInfo
   - name: isEditor
-    summary:
+    summary: |
+      Indicates whether the script is currently running in the Unity Editor.
+      Use this to enable editor-specific behavior, debugging features, or disable certain functionality during development.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Conditional behavior based on environment
+      if game.isEditor then
+          print("Running in Unity Editor - debug mode enabled")
+          -- Enable debug features
+      else
+          print("Running in production")
+          -- Disable debug features
+      end
+      
+      -- Useful for development-only features
+      if game.isEditor then
+          -- Show detailed logs only in editor
+          print("Detailed debug information...")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: playerCount
     summary: |
-      The number of players that are currently connected to the world.
+      The total number of players connected to the world instance (across all scenes).
+      Equivalent to `#game.players`.
+      
+      IMPORTANT: In most cases, you should use `scene.playerCount` instead.
+      - `game.playerCount` returns total players across all scenes
+      - `scene.playerCount` returns only players in a specific scene (recommended)
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- RECOMMENDED: Use scene.playerCount for current scene
+      print("Players in this scene: " .. scene.playerCount)
+      
+      -- Use game.playerCount for total across all scenes
+      if game.playerCount >= game.info.maxPlayers then
+          print("Room is full!")
+      end
+      
+      print("Total: " .. game.playerCount .. " = " .. #game.players)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: number
   - name: players
     summary: |
-      An array of all the players that are currently connected to the world.
+      An array of all the players currently connected to the world instance (across all scenes).
+      
+      IMPORTANT: In most cases, you should use `scene.players` instead of `game.players`.
+      - `game.players` returns ALL players in the entire world instance
+      - `scene.players` returns only players in a specific scene (recommended)
+      
+      Use game.players only when you need to access players across all scenes.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- RECOMMENDED: Use scene.players for players in current scene
+      for i, player in ipairs(scene.players) do
+          print(player.name .. " is in this scene")
+      end
+      
+      -- Use game.players when you need all players across all scenes
+      print("Total players in world: " .. #game.players)
+      for i, player in ipairs(game.players) do
+          print(player.name .. " (ID: " .. player.user.id .. ")")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: {Class.Player}
 methods:
   - name: GetNetworkObject
-    summary:
+    summary: |
+      Retrieves a NetworkObjectValue for a GameObject by its network ID.
+      Network IDs are used to identify networked GameObjects across clients and servers.
+      Use this to access networked GameObjects when you have their network ID (e.g., from a NetworkObjectValue's value, or from another networked reference).
+      
+      Returns a NetworkObjectValue that can be used to synchronize the GameObject reference across the network.
+      Returns nil if the network ID doesn't exist or the object isn't found.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Get a network object by ID
+      local networkId = 12345
+      local networkObject = game.GetNetworkObject(networkId)
+      
+      if networkObject ~= nil then
+          -- Access the actual GameObject
+          local gameObject = networkObject.value
+          if gameObject ~= nil then
+              print("Found object: " .. gameObject.name)
+          end
+      else
+          print("Network object not found")
+      end
+      
+      -- Example: Store and retrieve a networked GameObject
+      local myObject = GameObject.Find("MyNetworkedObject")
+      local networkId = myObject:GetComponent(NetworkObject).NetworkId
+      
+      -- Later, retrieve it
+      local storedObject = game.GetNetworkObject(networkId)
+      if storedObject ~= nil then
+          local retrievedGameObject = storedObject.value
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:

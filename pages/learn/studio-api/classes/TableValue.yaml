@@ -1,17 +1,44 @@
 name: TableValue
 type: classes
-summary:
+summary: |
+  TableValue class stores a Lua table (complex data structure), extending from Class.Value.
+  It's designed for synchronizing table data across all clients in a networked environment,
+  such as player inventories, game settings, or complex state objects.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a TableValue to track game settings
+  local gameSettings = TableValue.new("GameSettings", {
+      difficulty = "normal",
+      maxPlayers = 10,
+      teamMode = true
+  })
+  
+  -- Listen for changes
+  gameSettings.Changed:Connect(function(newVal, oldVal)
+      print("Game settings changed")
+  end)
+  
+  -- Update the value (syncs to all clients)
+  gameSettings.value = { difficulty = "hard", maxPlayers = 8, teamMode = false }
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new TableValue instance with a specified name and empty table as default initial value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local data = TableValue.new("GameData")
+      -- Initial value is empty table by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -24,10 +51,15 @@ constructors:
       - type: Class.TableValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new TableValue instance with a specified name and empty table as default initial value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local data = TableValue.new("GameData")
+      -- Initial value is empty table by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -45,10 +77,15 @@ constructors:
       - type: Class.TableValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new TableValue instance with a specified name and empty table as default initial value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local data = TableValue.new("GameData")
+      -- Initial value is empty table by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -73,10 +110,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized table value of the TableValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized table value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local inventory = TableValue.new("Inventory", { coins = 100, gems = 5 })
+      inventory.value = { coins = 150, gems = 7 } -- Syncs to all clients
+      print("Coins: " .. inventory.value.coins)
+      ```
     tags:
       - ClientAndServer
     type: {any}

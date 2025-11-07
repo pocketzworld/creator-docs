@@ -1,7 +1,34 @@
 name: Event
 type: classes
 summary: |
-  Event in Highrise signifies key moments or changes in the game environment, facilitating dynamic and responsive gameplay. It provides a structured way to define, trigger, and respond to in-game occurrences, such as a player joining or leaving. Events can be triggered on specific clients, all clients, or on the server, with corresponding actions attached through connections to functions. This mechanism is pivotal for creating interactive and adaptive game experiences.
+  Event provides a messaging system for sending data between server and clients, or broadcasting game state changes.
+  Think of events as a way to say "something happened" and notify interested listeners with optional data.
+  
+  Common uses:
+  - Client tells server about player action (button clicked, item collected)
+  - Server tells client(s) about game updates (score changed, round started)
+  - Broadcasting announcements to all players
+  - Triggering UI updates or gameplay effects
+  
+  How it works:
+  1. Create an event with a unique name: local myEvent = Event.new("EventName")
+  2. Connect listeners to respond: myEvent:Connect(function(data) ... end)
+  3. Fire the event to send data: myEvent:FireServer(data) or myEvent:FireAllClients(data)
+  
+  Parameters you can pass:
+  - Types: string, number, boolean, table, Vector3, Player objects
+  - Avoid large tables (under 1KB recommended) - use Storage or Inventory for big data
+  
+  IMPORTANT: Event names must be unique within each script
+  - Different scripts can have events with the same name (they're separate)
+  - Within one script, each event name can only be used once
+  - In ClientAndServer scripts, matching event names on client/server sides automatically connect
+  
+  Performance tips:
+  - FireAllClients sends to everyone - use sparingly for important updates only
+  - For frequent per-player updates, use FireClient instead
+  - Events are fast but not instant - expect small network delay (~50-200ms)
+  - If client disconnects mid-event, it's safely ignored (no error)
 description:
 code_samples:
 inherits:
@@ -9,10 +36,62 @@ tags:
 constructors:
   - name: new
     summary: |
-      Initializes a new event, marking a specific occurrence within the game that warrants reaction or handling.
+      Creates a new Event with the specified name.
+      
+      Event Binding Rules:
+      - One event per name within a script
+      - Events with same name in different scripts are separate
+      - In ClientAndServer scripts, matching names auto-connect client/server sides
+      - Can create events conditionally (e.g., only on certain clients)
+      
+      Best Practice: Create events at the top of ClientAndServer scripts for client-server communication.
+      Advanced: Create events conditionally in functions when only specific clients need them.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(ClientAndServer)
+      local event = Event.new("MyEvent")
+      function self:ClientStart()
+          event:Connect(function(message)
+              print(message)
+          end)
+      end
+      function self:ServerStart()
+          Timer.After(1, function()
+              event:FireAllClients("Hello from server!")
+          end)
+      end)
+      ```
+      ```lua
+      --!Type(ClientAndServer)
+      -- In this example, the server creates 26 events, one for each letter of the alphabet.
+      -- Every second, the server fires the event for the next letter.
+      -- However, clients only care when their player's name starts with the chosen letter.
+      -- Instead of creating all 26 events on every client, the client only creates the needed event.
+      local playerNameLetterEvents = {}
+      function self:ServerStart()
+          for i = 1, 26 do
+              playerNameLetterEvents[i] = Event.new("PlayerNameLetterEvent" .. string.char(64 + i))
+          end
+          local currentLetterIndex = 1
+          Timer.Every(1, function()
+              playerNameLetterEvents[currentLetterIndex]:FireAllClients()
+              currentLetterIndex = currentLetterIndex + 1
+              if currentLetterIndex > 26 then
+                  currentLetterIndex = 1
+              end
+          end)
+      end
+      function self:ClientStart()
+          local firstLetter = string.sub(client.localPlayer.name, 1, 1):upper()
+          local letterIndex = string.byte(firstLetter) - 64
+          playerNameLetterEvents[letterIndex] = Event.new("PlayerNameLetterEvent" .. string.char(64 + letterIndex))
+          playerNameLetterEvents[letterIndex]:Connect(function()
+              print("It's a magical time for people whose names start with " .. firstLetter)
+          end)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -27,10 +106,13 @@ constructors:
 properties:
   - name: name
     summary: |
-      Identifies the event, aiding in differentiation and specific event handling.
+      The unique name identifier for this event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Event name: " .. myEvent.name)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
@@ -38,10 +120,70 @@ properties:
 methods:
   - name: Connect
     summary: |
-      Establishes a linkage between the event and a specific response function, ensuring automatic execution upon event triggering.
+      Connects a callback function to this event.
+      The callback is invoked whenever the event is fired.
+      
+      IMPORTANT Parameter Handling:
+      - When receiving from FireServer: First parameter is ALWAYS the player object, followed by your custom parameters
+      - When receiving from FireClient/FireAllClients: Only your custom parameters (no automatic player object)
+      
+      Returns an EventConnection that can be used to disconnect later.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(ClientAndServer)
+      local event = Event.new("CustomEvent")
+      
+      -- CLIENT: Connect to receive from server (no player object)
+      function self:ClientStart()
+          event:Connect(function(message, score)
+              print("Received from server: " .. message .. " | Score: " .. score)
+          end)
+      end
+      
+      -- SERVER: Connect to receive from client (player object is first parameter)
+      function self:ServerStart()
+          event:Connect(function(player, action, data)
+              print(player.name .. " sent action: " .. action)
+              print("Data: " .. tostring(data))
+          end)
+      end
+      ```
+      ```lua
+      --!Type(ClientAndServer)
+      local event = Event.new("PlayerScore")
+      
+      -- SERVER: Fire to client (send data)
+      function self:ServerStart()
+          event:FireClient(player, "You scored!", 100)
+      end
+      
+      -- CLIENT: Receive from server (no player object)
+      function self:ClientStart()
+          event:Connect(function(message, points)
+              print(message) -- "You scored!"
+              print("Points: " .. points) -- 100
+          end)
+      end
+      ```
+      ```lua
+      --!Type(ClientAndServer)
+      local event = Event.new("PlayerAction")
+      
+      -- CLIENT: Fire to server (don't send player)
+      function self:ClientStart()
+          event:FireServer("jump", Vector3.new(0, 5, 0))
+      end
+      
+      -- SERVER: Receive from client (player is first parameter automatically)
+      function self:ServerStart()
+          event:Connect(function(player, action, position)
+              print(player.name .. " performed: " .. action)
+              print("Position: " .. tostring(position))
+          end)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -53,12 +195,24 @@ methods:
     returns:
       - type: Class.EventConnection
         summary: |
-          An EventConnection instance denoting the connection between the event and its response function.
+          An EventConnection instance that can be used to disconnect the callback.
   - name: Fire
-    summary:
+    summary: |
+      Fires the event locally in the same context where Fire is called.
+      - In server scripts: fires on server only
+      - In client scripts: fires on that specific client only
+      - Does NOT send across network - for local callbacks only
+      Use this for triggering local code without network communication.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local event = Event.new("LocalEvent")
+      event:Connect(function(message)
+          print(message)
+      end)
+      event:Fire("Hello!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -72,10 +226,18 @@ methods:
         summary:
   - name: FireAllClients
     summary: |
-      Broadcasts the event to all connected clients, useful for global notifications or updates.
+      Fires the event to ALL connected clients (called from SERVER side only).
+      Use this to broadcast important updates that everyone needs to know.
+      Performance note: Sends to every player, so use sparingly for critical updates only (round start, game over, etc.)
+      For frequent or player-specific updates, use FireClient or FireClients instead.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("GlobalAnnouncement")
+      event:FireAllClients("Game starting in 10 seconds!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -88,10 +250,17 @@ methods:
       - type: void
         summary:
   - name: FireAllOtherClients
-    summary:
+    summary: |
+      Fires the event to all clients except the specified player.
+      Useful for broadcasting actions to other players.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("PlayerAction")
+      event:FireAllOtherClients(player, player.name .. " scored a goal!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -109,10 +278,17 @@ methods:
       - type: void
         summary:
   - name: FireAllOtherSceneClients
-    summary:
+    summary: |
+      Fires the event to all clients in a specific scene except the specified player.
+      Combines scene filtering with player exclusion.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("ScenePlayerAction")
+      event:FireAllOtherSceneClients(scene, player, player.name .. " joined the scene!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -136,10 +312,17 @@ methods:
         summary:
   - name: FireClient
     summary: |
-      Activates the event for a particular client, enabling targeted notifications or actions.
+      Fires the event to a specific client (called from SERVER side only).
+      Use this to send data or notifications to one specific player.
+      More efficient than FireAllClients when only one player needs to know.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("PlayerNotification")
+      event:FireClient(player, "You earned 100 points!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -157,10 +340,18 @@ methods:
       - type: void
         summary:
   - name: FireClients
-    summary:
+    summary: |
+      Fires the event to multiple specific clients.
+      Called from server to send data to selected players.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("TeamMessage")
+      local teamPlayers = { player1, player2, player3 }
+      event:FireClients(teamPlayers, "Your team won!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -178,10 +369,17 @@ methods:
       - type: void
         summary:
   - name: FireSceneClients
-    summary:
+    summary: |
+      Fires the event to all clients in a specific scene.
+      Useful for scene-specific events in multi-scene worlds.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("SceneEvent")
+      event:FireSceneClients(scene, "Event started in this scene!")
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -200,10 +398,18 @@ methods:
         summary:
   - name: FireServer
     summary: |
-      Triggers the event on the server side, often leading to updates in game state or other server-managed data.
+      Fires the event to the server (called from CLIENT side only).
+      Use this when the client needs to tell the server about a player action or request.
+      The server's Connect callback will automatically receive the player object as the FIRST parameter, followed by your custom parameters.
+      Security note: Always validate client data on server - clients can send anything, including fake/invalid data.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Client side
+      local event = Event.new("PlayerAction")
+      event:FireServer("jump", player.Position)
+      ```
     tags:
       - ClientAndServer
     parameters:

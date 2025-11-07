@@ -1,6 +1,9 @@
 name: PlayMusic
 type: scripts
-summary:
+summary: |
+  PlayMusic is a built-in component for playing background music in your scene.
+  This component can be found in the built-in components section of the Assets Catalog and attached to any GameObject.
+  Use it to play music from AudioShader assets or from URLs.
 description:
 code_samples:
 inherits:
@@ -9,10 +12,17 @@ constructors:
 properties:
 methods:
   - name: Play
-    summary:
+    summary: |
+      Plays the specified music AudioShader asset.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!SerializedField
+      local MusicObject : GameObject = nil
+      local musicPlayer = MusicObject:GetComponent(PlayMusic)
+      musicPlayer.Play(musicAsset)
+      ```
     tags:
       - ClientOnly
       - NoSelfParameter
@@ -26,10 +36,17 @@ methods:
       - type: void
         summary:
   - name: PlayFromURL
-    summary:
+    summary: |
+      Plays music from a URL. Useful for streaming audio or loading external music files.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!SerializedField
+      local MusicObject : GameObject = nil
+      local musicPlayer = MusicObject:GetComponent(PlayMusic)
+      musicPlayer.PlayFromURL("https://example.com/music.mp3")
+      ```
     tags:
       - ClientOnly
       - NoSelfParameter
@@ -43,10 +60,18 @@ methods:
       - type: void
         summary:
   - name: StopMusic
-    summary:
+    summary: |
+      Stops the currently playing music. Optionally fades out the music before stopping.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!SerializedField
+      local MusicObject : GameObject = nil
+      local musicPlayer = MusicObject:GetComponent(PlayMusic)
+      musicPlayer.StopMusic(true) -- fade out
+      musicPlayer.StopMusic(false) -- stop immediately
+      ```
     tags:
       - ClientOnly
       - NoSelfParameter

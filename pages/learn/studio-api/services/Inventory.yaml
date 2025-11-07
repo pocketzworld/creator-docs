@@ -1,6 +1,21 @@
 name: Inventory
 type: services
-summary:
+summary: |
+  The Inventory API provides functionality for managing player items and currency in Highrise Studio.
+  
+  Use Inventory for:
+  - Player items (weapons, collectibles, consumables)
+  - Currency and virtual goods
+  - Transaction-based inventory operations
+  
+  IMPORTANT: Inventory API is only available on the SERVER side.
+  
+  Transaction System:
+  - All inventory changes are done through transactions for data consistency
+  - Transactions can be committed (applied) or rolled back (cancelled)
+  - Use InventoryTransaction with: Give, Take, Move, Reserve, Release operations
+  
+  For persistent non-item data (scores, progress), use the Storage API instead.
 description:
 code_samples:
 inherits:
@@ -9,10 +24,39 @@ constructors:
 properties:
 methods:
   - name: CommitTransaction
-    summary:
+    summary: |
+      Commits an inventory transaction, applying all operations.
+      
+      Use InventoryTransaction to create transactions with:
+      - Give/GivePlayer (add items to inventory)
+      - Take/TakePlayer (remove items from inventory)
+      - Move/MovePlayers (transfer items between holders)
+      - Reserve/ReservePlayer (lock items for specific purpose)
+      - Release/ReleasePlayer (unlock reserved items)
+      
+      Transactions ensure atomic operations - all succeed or all fail.
+      A transaction ID is returned which can be used for rollback if needed.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Without callback
+      local transaction = InventoryTransaction.new()
+      transaction:GivePlayer(player, "coins", 100)
+      transaction:TakePlayer(player, "gems", 5)
+      Inventory.CommitTransaction(transaction)
+      
+      -- With callback
+      local transaction = InventoryTransaction.new()
+      transaction:GivePlayer(player, "sword", 1)
+      Inventory.CommitTransaction(transaction, function(transactionId, error)
+          if error == InventoryError.None then
+              print("Transaction committed: " .. transactionId)
+          else
+              print("Transaction failed: " .. tostring(error))
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -25,10 +69,39 @@ methods:
       - type: void
         summary:
   - name: CommitTransaction
-    summary:
+    summary: |
+      Commits an inventory transaction, applying all operations.
+      
+      Use InventoryTransaction to create transactions with:
+      - Give/GivePlayer (add items to inventory)
+      - Take/TakePlayer (remove items from inventory)
+      - Move/MovePlayers (transfer items between holders)
+      - Reserve/ReservePlayer (lock items for specific purpose)
+      - Release/ReleasePlayer (unlock reserved items)
+      
+      Transactions ensure atomic operations - all succeed or all fail.
+      A transaction ID is returned which can be used for rollback if needed.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Without callback
+      local transaction = InventoryTransaction.new()
+      transaction:GivePlayer(player, "coins", 100)
+      transaction:TakePlayer(player, "gems", 5)
+      Inventory.CommitTransaction(transaction)
+      
+      -- With callback
+      local transaction = InventoryTransaction.new()
+      transaction:GivePlayer(player, "sword", 1)
+      Inventory.CommitTransaction(transaction, function(transactionId, error)
+          if error == InventoryError.None then
+              print("Transaction committed: " .. transactionId)
+          else
+              print("Transaction failed: " .. tostring(error))
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -46,10 +119,26 @@ methods:
       - type: void
         summary:
   - name: GetItem
-    summary:
+    summary: |
+      Retrieves a single item from an inventory holder's inventory.
+      The callback receives the item and error code.
+      If the item doesn't exist, item is nil and error is InventoryError.None.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Inventory.GetItem(player.user.id, "sword_123", function(item, error)
+          if error == InventoryError.None then
+              if item ~= nil then
+                  print("Item amount: " .. item.amount)
+              else
+                  print("Item not found")
+              end
+          else
+              print("Error: " .. tostring(error))
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -72,10 +161,31 @@ methods:
       - type: void
         summary:
   - name: GetItems
-    summary:
+    summary: |
+      Retrieves multiple items from an inventory holder's inventory with pagination.
+      
+      Pagination: Pass nil for cursor to get first results. Use returned cursor for next page.
+      If returned cursor is nil, no more results exist.
+      
+      Callback receives: array of InventoryItems, cursor, error
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Inventory.GetItems(player.user.id, 10, nil, function(items, cursor, error)
+          if error == InventoryError.None then
+              print("Found " .. #items .. " items")
+              for i, item in ipairs(items) do
+                  print("Item: " .. item.id .. " x" .. item.amount)
+              end
+              
+              -- Get next page if available
+              if cursor ~= nil then
+                  -- Call GetItems again with cursor
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -103,10 +213,19 @@ methods:
       - type: void
         summary:
   - name: GetPlayerItem
-    summary:
+    summary: |
+      Retrieves a single item from a player's inventory.
+      Convenience method equivalent to: GetItem(player.user.id, itemId, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Inventory.GetPlayerItem(player, "coins", function(item, error)
+          if error == InventoryError.None and item ~= nil then
+              print(player.name .. " has " .. item.amount .. " coins")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -129,10 +248,22 @@ methods:
       - type: void
         summary:
   - name: GetPlayerItems
-    summary:
+    summary: |
+      Retrieves multiple items from a player's inventory with pagination.
+      Convenience method equivalent to: GetItems(player.user.id, limit, cursor, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Inventory.GetPlayerItems(player, 20, nil, function(items, cursor, error)
+          if error == InventoryError.None then
+              print(player.name .. " inventory:")
+              for i, item in ipairs(items) do
+                  print("- " .. item.id .. ": " .. item.amount)
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -160,10 +291,29 @@ methods:
       - type: void
         summary:
   - name: RollbackTransaction
-    summary:
+    summary: |
+      Rolls back a previously committed transaction, reversing all operations.
+      
+      Use this to undo inventory changes if something goes wrong after a transaction.
+      For example, if a player disconnects before receiving their purchased items.
+      
+      Requires the transactionId returned from CommitTransaction.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Without callback
+      Inventory.RollbackTransaction(transactionId)
+      
+      -- With callback
+      Inventory.RollbackTransaction(transactionId, function(error)
+          if error == InventoryError.None then
+              print("Transaction rolled back successfully")
+          else
+              print("Rollback failed: " .. tostring(error))
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -176,10 +326,29 @@ methods:
       - type: void
         summary:
   - name: RollbackTransaction
-    summary:
+    summary: |
+      Rolls back a previously committed transaction, reversing all operations.
+      
+      Use this to undo inventory changes if something goes wrong after a transaction.
+      For example, if a player disconnects before receiving their purchased items.
+      
+      Requires the transactionId returned from CommitTransaction.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Without callback
+      Inventory.RollbackTransaction(transactionId)
+      
+      -- With callback
+      Inventory.RollbackTransaction(transactionId, function(error)
+          if error == InventoryError.None then
+              print("Transaction rolled back successfully")
+          else
+              print("Rollback failed: " .. tostring(error))
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:

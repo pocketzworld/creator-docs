@@ -61,26 +61,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: anamorphism
-    summary: |
-      Creates anamorphic lens effects by compressing the image in one dimension.
-      [Unity's Camera.anamorphism Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-anamorphism.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
-  - name: aperture
-    summary: |
-      Emulates the aperture of a physical camera, impacting light intake and depth of field.
-      [Unity's Camera.aperture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-aperture.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
   - name: aspect
     summary: |
       Sets the aspect ratio (width/height) for the Camera.
@@ -101,26 +81,6 @@ properties:
     tags:
       - ClientOnly
     type: DataType.Color
-  - name: barrelClipping
-    summary: |
-      Determines the clipping level for light entering the camera, affecting edge brightness.
-      [Unity's Camera.barrelClipping Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-barrelClipping.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
-  - name: bladeCount
-    summary: |
-      Sets the number of diaphragm blades, affecting the shape of out-of-focus areas.
-      [Unity's Camera.bladeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-bladeCount.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
   - name: cameraToWorldMatrix
     summary: |
       Provides a matrix transforming from camera space to world space.
@@ -182,16 +142,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.Camera
-  - name: curvature
-    summary: |
-      Simulates lens curvature, affecting perspective distortion in the rendered image.
-      [Unity's Camera.curvature Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-curvature.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: DataType.Vector2
   - name: depth
     summary: |
       Specifies the Camera's depth in the rendering order.
@@ -232,26 +182,6 @@ properties:
     tags:
       - ClientOnly
     type: number
-  - name: focalLength
-    summary: |
-      Represents the focal length of the camera lens, affecting the field of view.
-      [Unity's Camera.focalLength Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-focalLength.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
-  - name: focusDistance
-    summary: |
-      Adjusts the distance to the focus plane, useful for depth of field effects.
-      [Unity's Camera.focusDistance Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-focusDistance.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
   - name: forceIntoRenderTexture
     summary: |
       Forces Camera's view to always render to a texture for advanced image processing.
@@ -262,49 +192,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: iso
-    summary: |
-      Simulates the ISO setting of a physical camera, affecting image brightness and noise.
-      [Unity's Camera.iso Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-iso.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
-  - name: kMaxAperture
-    summary: |
-      Defines the maximum logical aperture size for camera simulations, affecting depth of field and light intake.
-      [Unity's Camera.kMaxAperture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMaxAperture.html)
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: number
-  - name: kMaxBladeCount
-    summary: |
-      Sets the maximum number of aperture blades for detailed bokeh simulation in camera effects.
-      [Unity's Camera.kMaxBladeCount Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMaxBladeCount.html)
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: number
-  - name: kMinAperture
-    summary: |
-      Specifies the minimum logical aperture size for cameras, constraining physical camera simulations.
-      [Unity's Camera.kMinAperture Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-kMinAperture.html)
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: number
   - name: kMinBladeCount
     summary: |
       Indicates the minimum number of aperture blades for simulating camera bokeh effects.
@@ -326,16 +213,6 @@ properties:
     tags:
       - ClientOnly
     type: boolean
-  - name: lensShift
-    summary: |
-      Allows shifting the lens in relation to the sensor, correcting for keystone distortion.
-      [Unity's Camera.lensShift Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-lensShift.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: DataType.Vector2
   - name: main
     summary: |
       Accesses the main Camera in the scene, designated by the 'MainCamera' tag.
@@ -491,26 +368,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: number
-  - name: sensorSize
-    summary: |
-      Imitates the physical dimensions of the camera sensor, affecting the angle of view.
-      [Unity's Camera.sensorSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-sensorSize.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: DataType.Vector2
-  - name: shutterSpeed
-    summary: |
-      Mimics a camera's shutter speed, influencing exposure and motion blur.
-      [Unity's Camera.shutterSpeed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-shutterSpeed.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: number
   - name: transparencySortAxis
     summary: |
       Custom axis for sorting transparent objects when using Custom Axis mode.
@@ -535,16 +392,6 @@ properties:
     summary: |
       Determines if Unity performs occlusion culling for this Camera.
       [Unity's Camera.useOcclusionCulling Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-useOcclusionCulling.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: boolean
-  - name: usePhysicalProperties
-    summary: |
-      Enables physical camera settings to simulate real camera properties.
-      [Unity's Camera.usePhysicalProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera-usePhysicalProperties.html)
     description:
     is_static: false
     code_samples:
@@ -606,44 +453,8 @@ methods:
         type: number
         tags:
         default:
-        summary:
-      - name: sensorSize
-        type: DataType.Vector2
-        tags:
-        default:
-        summary:
-      - name: lensShift
-        type: DataType.Vector2
-        tags:
-        default:
-        summary:
-      - name: nearClip
-        type: number
-        tags:
-        default:
-        summary:
-      - name: farClip
-        type: number
-        tags:
-        default:
-        summary:
-    returns:
-      - type: DataType.Matrix4x4
-        summary:
-  - name: CalculateProjectionMatrixFromPhysicalProperties
-    summary: |
-      [Unity's Camera.CalculateProjectionMatrixFromPhysicalProperties Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.CalculateProjectionMatrixFromPhysicalProperties.html)
-    description:
-    is_static: true
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: focalLength
-        type: number
-        tags:
-        default:
-        summary:
+        summary: |
+          The focal length of the camera.
       - name: sensorSize
         type: DataType.Vector2
         tags:
@@ -738,34 +549,6 @@ methods:
       - type: number
         summary: |
           The calculated vertical field of view.
-  - name: GetGateFittedFieldOfView
-    summary: |
-      Calculates the field of view based on gate fitting, useful for matching physical camera settings.
-      [Unity's Camera.GetGateFittedFieldOfView Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.GetGateFittedFieldOfView.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: number
-        summary: |
-          The calculated field of view.
-  - name: GetGateFittedLensShift
-    summary: |
-      Determines the lens shift required based on gate fitting, aiding in accurate camera simulation.
-      [Unity's Camera.GetGateFittedLensShift Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Camera.GetGateFittedLensShift.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: DataType.Vector2
-        summary: |
-          The required lens shift.
   - name: HorizontalToVerticalFieldOfView
     summary: |
       Converts a horizontal field of view to a vertical field of view based on the aspect ratio.

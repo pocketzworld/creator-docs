@@ -267,36 +267,6 @@ methods:
       - name: useTransform
         type: boolean
         tags:
-        default:
-        summary: |
-          Flag indicating whether to transform the mesh into world space.
-    returns:
-      - type: void
-        summary:
-  - name: BakeMesh
-    summary: |
-      Generates a mesh based on the current trail configuration.
-      [Unity's TrailRenderer.BakeMesh Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TrailRenderer.BakeMesh.html)
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-      - name: mesh
-        type: Class.Mesh
-        tags:
-        default:
-        summary: |
-          The mesh to bake the trail into.
-      - name: camera
-        type: Class.Camera
-        tags:
-        default:
-        summary:
-      - name: useTransform
-        type: boolean
-        tags:
           - optional
         default:
         summary: |

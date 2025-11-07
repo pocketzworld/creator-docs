@@ -1,79 +1,119 @@
 name: InventoryItem
 type: classes
 summary: |
-  InventoryItem contains the data for an item retrieved through either Inventory.GetItem or Inventory.GetItems.
+  InventoryItem contains the data for an item retrieved through Inventory.GetItem or Inventory.GetItems.
+  Provides information about item quantity, availability, timestamps, and reservations.
 description:
-code_samples:
+code_samples: |
+  ```lua
+  Inventory.GetPlayerItem(player, "sword", function(item, error)
+      if error == InventoryError.None and item ~= nil then
+          print("Item ID: " .. item.id)
+          print("Total amount: " .. item.amount)
+          print("Available: " .. item.available)
+          print("Reserved: " .. (item.amount - item.available))
+          print("Created: " .. os.date("%Y-%m-%d", item.createdAt))
+      end
+  end)
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: amount
     summary: |
-      How many of this item the owner owns.  Includes items that have been reserved.
+      Total quantity of this item the owner has (includes reserved items).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Total items: " .. item.amount)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: available
     summary: |
-      How many of this item the owner owns that are not reserved.
+      Quantity of this item that is not reserved and can be used in transactions.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Available items: " .. item.available)
+      local reservedCount = item.amount - item.available
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: createdAt
     summary: |
-      The time the holder first gained this item.  The time is in the UTC time zone expressed in unix epoch seconds.  You can use os.date to format this time into a human-readable format.
+      Unix epoch timestamp (UTC) when the holder first obtained this item.
+      Use os.date() to format into human-readable format.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local createdDate = os.date("%Y-%m-%d %H:%M:%S", item.createdAt)
+      print("Item created: " .. createdDate)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: number
   - name: holderId
     summary: |
-      The id of the holder which owns this item
+      The ID of the holder (player) who owns this item.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Owner ID: " .. item.holderId)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: id
     summary: |
-      The id of the item
+      The unique identifier of the item.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      print("Item ID: " .. item.id)
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: string
   - name: reservations
     summary: |
-      Returns an array of InventoryReservations which contain how many items are reserved and the purpose.
+      Array of InventoryReservations showing how many items are reserved and their purposes.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      for i, reservation in ipairs(item.reservations) do
+          print("Reserved: " .. reservation.amount .. " for " .. reservation.reservedFor)
+      end
+      ```
     tags:
       - ServerOnly
       - ReadOnly
     type: {Class.InventoryReservation}
   - name: updatedAt
     summary: |
-      The last time the state of this item changed.  The time is in the UTC time zone expressed in unix epoch seconds.  You can use os.date to format this time into a human-readable format.
+      Unix epoch timestamp (UTC) when this item was last modified.
+      Use os.date() to format into human-readable format.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local updatedDate = os.date("%Y-%m-%d %H:%M:%S", item.updatedAt)
+      print("Item updated: " .. updatedDate)
+      ```
     tags:
       - ServerOnly
       - ReadOnly

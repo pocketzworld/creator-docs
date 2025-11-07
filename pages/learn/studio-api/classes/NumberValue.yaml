@@ -1,18 +1,40 @@
 name: NumberValue
 type: classes
 summary: |
-  The NumberValue class is used to store a single number value, which unlike Class.IntValue supports decimal points. It is a subclass of the Class.Value and it is recommended to check out that documentation before continuing on. This class is useful for tracking a single number value that all clients should be synchronized on.
+  NumberValue class stores a single number value with decimal point support, extending from Class.Value.
+  Unlike IntValue, this supports floating-point numbers for precise calculations.
+  It's designed for synchronizing numeric values across all clients in a networked environment.
+  IMPORTANT: Values should be changed on the server side. The Changed event should be connected on the client side to receive updates.
+  NOTE: You can optionally pass a player object as the third parameter to associate the value with a specific player.
+  Alternatively, you can concatenate the player ID to the name: "ValueName" .. tostring(player.id)
 description:
-code_samples:
+code_samples: |
+  ```lua
+  -- Create a NumberValue to track player health
+  local playerHealth = NumberValue.new("PlayerHealth", 100.0)
+  
+  -- Listen for changes
+  playerHealth.Changed:Connect(function(newVal, oldVal)
+      print("Health changed from " .. oldVal .. " to " .. newVal)
+  end)
+  
+  -- Update the value (syncs to all clients)
+  playerHealth.value = 75.5
+  ```
 inherits:
   - Class.NetworkValue
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new NumberValue instance with a specified name and default initial value of 0.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local counter = NumberValue.new("Counter")
+      -- Initial value is 0 by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -25,10 +47,15 @@ constructors:
       - type: Class.NumberValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new NumberValue instance with a specified name and default initial value of 0.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local counter = NumberValue.new("Counter")
+      -- Initial value is 0 by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -46,10 +73,15 @@ constructors:
       - type: Class.NumberValue
         summary:
   - name: new
-    summary:
+    summary: |
+      Creates a new NumberValue instance with a specified name and default initial value of 0.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local counter = NumberValue.new("Counter")
+      -- Initial value is 0 by default
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -74,10 +106,15 @@ constructors:
 properties:
   - name: value
     summary: |
-      The currently synchronized number value of the NumberValue. This is the value that all clients will be synchronized on and if changed, notified that the value is now different from the Value.Changed event.
+      Represents the synchronized number value. Changes trigger notifications across clients via the Value.Changed event.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local score = NumberValue.new("Score", 0)
+      score.value = 42.5 -- Syncs to all clients
+      print("Current score: " .. score.value)
+      ```
     tags:
       - ClientAndServer
     type: number

@@ -1,6 +1,24 @@
 name: Leaderboard
 type: classes
-summary:
+summary: |
+  The Leaderboard API provides functionality for managing competitive leaderboards in Highrise Studio.
+  
+  Use Leaderboard for:
+  - Player rankings and scores
+  - High score tracking
+  - Competitive game statistics
+  - Multiple leaderboards (daily, weekly, all-time, etc.)
+  
+  IMPORTANT: Leaderboard API is only available on the SERVER side.
+  
+  Key Features:
+  - Set or increment player scores
+  - Retrieve individual entries or ranked ranges
+  - Support for multiple leaderboards via leaderboardId
+  - Automatic ranking system
+  - Player-specific convenience methods
+  
+  Rate Limiting: Leaderboard functions have rate limits. Excessive calls will return LeaderboardError.RequestThrottled.
 description:
 code_samples:
 inherits:
@@ -9,10 +27,18 @@ constructors:
 properties:
 methods:
   - name: DeleteEntry
-    summary:
+    summary: |
+      Deletes a specific entry from a leaderboard.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.DeleteEntry("global_scores", entryId, function(error)
+          if error == LeaderboardError.None then
+              print("Entry deleted")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -35,10 +61,19 @@ methods:
       - type: void
         summary:
   - name: DeleteEntryForPlayer
-    summary:
+    summary: |
+      Deletes a player's entry from a leaderboard.
+      Convenience method equivalent to: DeleteEntry(leaderboardId, player.user.id, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.DeleteEntryForPlayer("global_scores", player, function(error)
+          if error == LeaderboardError.None then
+              print("Player entry removed")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -61,10 +96,23 @@ methods:
       - type: void
         summary:
   - name: GetEntries
-    summary:
+    summary: |
+      Retrieves a range of leaderboard entries starting from a specific rank.
+      Returns entries sorted by rank.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Get top 10 entries
+      Leaderboard.GetEntries("global_scores", 1, 10, function(entries, error)
+          if error == LeaderboardError.None then
+              print("Top 10 Players:")
+              for i, entry in ipairs(entries) do
+                  print(entry.rank .. ". " .. entry.name .. " - " .. entry.score)
+              end
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -92,10 +140,18 @@ methods:
       - type: void
         summary:
   - name: GetEntry
-    summary:
+    summary: |
+      Retrieves a specific entry from a leaderboard by entry ID.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.GetEntry("global_scores", entryId, function(entry, error)
+          if error == LeaderboardError.None and entry ~= nil then
+              print("Rank #" .. entry.rank .. ": " .. entry.name .. " - " .. entry.score)
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -118,10 +174,21 @@ methods:
       - type: void
         summary:
   - name: GetEntryForPlayer
-    summary:
+    summary: |
+      Retrieves a player's entry from a leaderboard.
+      Convenience method equivalent to: GetEntry(leaderboardId, player.user.id, callback)
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.GetEntryForPlayer("global_scores", player, function(entry, error)
+          if error == LeaderboardError.None and entry ~= nil then
+              print(player.name .. " is rank #" .. entry.rank .. " with " .. entry.score)
+          else
+              print("Player not on leaderboard")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -144,10 +211,20 @@ methods:
       - type: void
         summary:
   - name: IncrementScore
-    summary:
+    summary: |
+      Increments the score for a leaderboard entry.
+      If the entry doesn't exist, it will be created with the incremented score.
+      Returns the updated entry with new rank and score.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.IncrementScore("daily_scores", player.user.id, player.name, 10, function(entry, error)
+          if error == LeaderboardError.None then
+              print("New score: " .. entry.score .. " | Rank: " .. entry.rank)
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -180,10 +257,20 @@ methods:
       - type: void
         summary:
   - name: IncrementScoreForPlayer
-    summary:
+    summary: |
+      Increments a player's score on a leaderboard.
+      Convenience method that uses player.user.id as entryId and player.name as name.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Add 5 points to player's score
+      Leaderboard.IncrementScoreForPlayer("global_scores", player, 5, function(entry, error)
+          if error == LeaderboardError.None then
+              print("New rank: #" .. entry.rank .. " with " .. entry.score .. " points")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -211,10 +298,19 @@ methods:
       - type: void
         summary:
   - name: Reset
-    summary:
+    summary: |
+      Resets a leaderboard, removing all entries.
+      Use this for seasonal resets or clearing old data.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.Reset("daily_scores", function(error)
+          if error == LeaderboardError.None then
+              print("Leaderboard reset successfully")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -232,10 +328,20 @@ methods:
       - type: void
         summary:
   - name: SetScore
-    summary:
+    summary: |
+      Sets the score for a leaderboard entry.
+      If the entry doesn't exist, it will be created.
+      Returns the updated entry with new rank and score.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      Leaderboard.SetScore("weekly_scores", player.user.id, player.name, 1000, function(entry, error)
+          if error == LeaderboardError.None then
+              print(entry.name .. " is rank #" .. entry.rank .. " with " .. entry.score .. " points")
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -268,10 +374,20 @@ methods:
       - type: void
         summary:
   - name: SetScoreForPlayer
-    summary:
+    summary: |
+      Sets a player's score on a leaderboard.
+      Convenience method that uses player.user.id as entryId and player.name as name.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      -- Set player's score to 1500
+      Leaderboard.SetScoreForPlayer("weekly_scores", player, 1500, function(entry, error)
+          if error == LeaderboardError.None then
+              print(entry.name .. " is now rank #" .. entry.rank)
+          end
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:

@@ -2,22 +2,74 @@ name: Player
 type: classes
 summary: |
   The 'Player' class in Highrise represents each individual participant in the game. It is a crucial element, acting as the bridge between the player's real-world actions and their in-game avatar's behaviors.
+  
+  Provides access to the player's user information, character, moderation status, and events.
+  
+  Access players via:
+  - `client.localPlayer` - The local player on client
+  - `scene.players` - All players in current scene (recommended)
+  - `game.players` - All players across all scenes
+  
+  Example usage:
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(Server)
+  
+  function self:ServerStart()
+      server.PlayerConnected:Connect(function(player)
+          print(player.name .. " joined!")
+          print("User ID: " .. player.user.id)
+          print("Is Moderator: " .. tostring(player.isModerator))
+          print("Age Verified: " .. tostring(player.isAgeVerifiedAbove18))
+      end)
+  end
+  ```
 inherits:
 tags:
 constructors:
 properties:
   - name: CharacterChanged
     summary: |
-      Event fired when the player's character changes.  This is called when player.character is set to a new object and not when the character's outfit changes.
+      Event fired when the player's character object changes.
+      Triggered when player.character is set to a new GameObject, NOT when the character's outfit changes.
+      
+      Use this to detect when a player spawns or respawns.
+      
       Event Parameters:
           Player: the player whose character object changed
-          New Character: the new character object
-          Old Character: the previous character object, if it exists
+          New Character: the new character GameObject (can be nil)
+          Old Character: the previous character GameObject (can be nil)
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          scene.PlayerJoined:Connect(function(scene, player)
+              -- Character may not exist yet, wait for it
+              player.CharacterChanged:Connect(function(player, newChar, oldChar)
+                  if newChar ~= nil then
+                      print(player.name .. " character spawned!")
+                      
+                      -- Setup character on spawn
+                      newChar.transform.position = Vector3.new(0, 5, 0)
+                      
+                      -- Add custom components
+                      local healthComponent = newChar:GetComponent(HealthSystem)
+                      if healthComponent then
+                          healthComponent:SetMaxHealth(100)
+                      end
+                  end
+                  
+                  if oldChar ~= nil then
+                      print(player.name .. " character destroyed")
+                  end
+              end)
+          end)
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
@@ -71,11 +123,33 @@ properties:
     type: Class.ChannelInfo
   - name: character
     summary: |
-      The character that represents this player in the world. It allows you to manipulate the character's properties and behavior, such as changing its appearance or controlling its movement.
-      Only server scripts can set the character.
+      The character GameObject that represents this player in the world.
+      Use this to manipulate the player's visual representation, position, and movement.
+      
+      NOTE: Only server scripts can set the character.
+      Character can be nil if the player hasn't spawned yet.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Access player character
+      if player.character ~= nil then
+          local pos = player.character.transform.position
+          print(player.name .. " is at: " .. tostring(pos))
+          
+          -- Teleport player
+          player.character.transform.position = Vector3.new(0, 10, 0)
+      end
+      
+      -- Wait for character to spawn
+      player.CharacterChanged:Connect(function(player, newChar, oldChar)
+          if newChar ~= nil then
+              print(player.name .. " character spawned!")
+          end
+      end)
+      ```
     tags:
       - ClientAndServer
     type: Class.Character
@@ -101,7 +175,7 @@ properties:
     type: boolean
   - name: id
     summary: |
-      An identifier for the player's current connection to the world.  If the player leaves and joins the same world instance or a different one this value will change.  For a unique identifier for the player that will not change, use player.user.Id.
+      An identifier for the player's current connection to the world.  If the player leaves and joins the same world instance or a different one this value will change.  For a unique identifier for the player that will not change, use player.user.id.
     description:
     is_static: false
     code_samples:
@@ -111,35 +185,97 @@ properties:
     type: number
   - name: isAgeVerifiedAbove18
     summary: |
-      True if the player is above the age of 18, false otherwise.
+      True if the player has verified their age as 18 or older.
+      Use this to restrict access to age-gated content or features.
+      
+      This is the same as `player.user.isAgeVerifiedAbove18` for convenience.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      -- Restrict access to mature content
+      function AllowAccess(player)
+          if not player.isAgeVerifiedAbove18 then
+              print("Age verification required")
+              return false
+          end
+          return true
+      end
+      
+      -- Age-gated scene
+      local matureScene = server.LoadScene("MatureContent", true)
+      server.PlayerConnected:Connect(function(player)
+          if player.isAgeVerifiedAbove18 then
+              server.MovePlayerToScene(player, matureScene)
+          end
+      end)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: isDestroyed
     summary: |
-      True if the player has left the world, false otherwise.  If the player rejoins the world, a new Player object will be created, so this value will not change after the player has left.  Use this instead of comparing to nil when checking if a Player object is valid.
+      True if the player has left the world and this Player object is no longer valid.
+      
+      IMPORTANT: If the player rejoins, a NEW Player object will be created.
+      This value will never change back to false once it becomes true.
+      
+      Use this instead of comparing to nil when checking if a Player object is valid.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      local playerData = {}
+      
+      function self:ServerStart()
+          server.PlayerConnected:Connect(function(player)
+              playerData[player.user.id] = player
+          end)
+          
+          server.PlayerDisconnected:Connect(function(player)
+              -- Clean up player data
+              playerData[player.user.id] = nil
+          end)
+      end
+      
+      function self:ServerUpdate()
+          -- Check if stored player is still valid
+          for userId, player in pairs(playerData) do
+              if player.isDestroyed then
+                  print("Player " .. userId .. " has left")
+                  playerData[userId] = nil
+              end
+          end
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: isDisconnected
-    summary:
+    summary: |
+      True if the player has disconnected from the server (network disconnection).
+      Similar to IsDestroyed but specifically for network disconnections.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      if player.isDisconnected then
+          print(player.name .. " has disconnected")
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
     type: boolean
   - name: isLocal
-    summary:
+    summary: |
+      Whether this player is the local player on the client.
     description:
     is_static: false
     code_samples:
@@ -149,10 +285,40 @@ properties:
     type: boolean
   - name: isModerator
     summary: |
-      True if this player has moderation rights in this world instance.  If this world instance is an owned room, it will be true for the room owner and any moderators they have added.  For world instances that are not owned rooms, it is true for the world owner and any members of the world.
+      True if this player has moderation rights in this world instance.
+      
+      For owned rooms: True for the room owner and any moderators they've added
+      For public worlds: True for the world creator and any world members
+      
+      Use this to grant special permissions or commands to moderators.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(Server)
+      
+      function self:ServerStart()
+          server.PlayerConnected:Connect(function(player)
+              if player.isModerator then
+                  print(player.name .. " is a moderator!")
+                  
+                  -- Grant moderator perks
+                  local transaction = InventoryTransaction.new()
+                  transaction:GivePlayer(player, "mod_badge", 1)
+                  Inventory.CommitTransaction(transaction)
+              end
+          end)
+      end
+      
+      -- Restrict commands to moderators
+      function HandleCommand(player, command)
+          if command == "/kick" and player.isModerator then
+              -- Process kick command
+          else
+              print("Only moderators can use this command")
+          end
+      end
+      ```
     tags:
       - ClientAndServer
       - ReadOnly
@@ -199,10 +365,24 @@ properties:
     type: Class.Pet
   - name: user
     summary: |
-      The user associated with the player.
+      The User object containing the player's Highrise account information.
+      Use `player.user.id` for persistent user identification.
+      Use `player.name` as a shortcut for `player.user.name`.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local user = player.user
+      print("Name: " .. user.name)
+      print("ID: " .. user.id)
+      print("Subscriber: " .. tostring(user.isSubscriber))
+      
+      -- Store user-specific data
+      Storage.SetPlayerValue(player, "Score", 100)
+      
+      -- Add to leaderboard
+      Leaderboard.SetScore("global", player.user.id, player.name, 1000)
+      ```
     tags:
       - ClientAndServer
       - ReadOnly

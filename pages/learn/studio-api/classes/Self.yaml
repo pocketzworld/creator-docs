@@ -1,8 +1,65 @@
 name: Self
 type: classes
-summary:
+summary: |
+  The `self` object represents your Lua script instance and provides access to Unity lifecycle methods.
+  Inherits from LuaBehaviour, giving you access to `self.gameObject` and `self.transform`.
+  
+  Lifecycle Methods Available:
+  - **Shared**: Start, Update, LateUpdate, FixedUpdate
+  - **Client-Only**: ClientStart, ClientUpdate, ClientLateUpdate, ClientFixedUpdate
+  - **Server-Only**: ServerStart, ServerUpdate, ServerLateUpdate, ServerFixedUpdate
+  - **Enable/Disable**: OnEnable, OnDisable, OnDestroy (and Client/Server variants)
+  - **Physics**: OnTriggerEnter, OnTriggerStay, OnTriggerExit, OnCollisionEnter, OnCollisionStay, OnCollisionExit
+  
+  IMPORTANT:
+  - Client methods only run on client scripts
+  - Server methods only run on server scripts
+  - Shared methods run on both (or based on script type)
+  - Use `self.gameObject` to access the GameObject this script is attached to
+  - Use `self.transform` to access the Transform component
+  
+  Available on: Client and Server scripts
 description:
-code_samples:
+code_samples: |
+  ```lua
+  --!Type(ClientAndServer)
+  
+  -- Variables declared at script level are shared between client and server
+  local playerCount = 0
+  
+  function self:Start()
+      -- Runs on both client and server
+      print("Script started!")
+      print("Attached to: " .. self.gameObject.name)
+  end
+  
+  function self:ClientStart()
+      -- Only runs on client
+      print("Client initialized")
+  end
+  
+  function self:ServerStart()
+      -- Only runs on server
+      print("Server initialized")
+      server.PlayerConnected:Connect(function(player)
+          playerCount = playerCount + 1
+      end)
+  end
+  
+  function self:Update()
+      -- Runs every frame (based on script type)
+  end
+  
+  function self:ClientUpdate()
+      -- Runs every frame on client only
+      -- Good for UI updates, input handling
+  end
+  
+  function self:ServerUpdate()
+      -- Runs every frame on server only
+      -- Good for game logic, AI
+  end
+  ```
 inherits:
   - Class.LuaBehaviour
 tags:
@@ -32,7 +89,9 @@ methods:
       - type: void
         summary:
   - name: ClientFixedUpdate
-    summary:
+    summary: |
+      Called at fixed frame rate, CLIENT ONLY.
+      Use for client-side physics.
     description:
     is_static: false
     code_samples:
@@ -43,7 +102,8 @@ methods:
       - type: void
         summary:
   - name: ClientLateUpdate
-    summary:
+    summary: |
+      Called after all ClientUpdate methods, CLIENT ONLY.
     description:
     is_static: false
     code_samples:
@@ -87,10 +147,23 @@ methods:
       - type: void
         summary:
   - name: ClientStart
-    summary:
+    summary: |
+      Called when the script is first loaded, CLIENT ONLY.
+      Use for client-specific initialization like UI setup.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(ClientAndServer)
+      
+      function self:ClientStart()
+          print("Client started!")
+          print("Local player: " .. client.localPlayer.name)
+          
+          -- Setup client-specific systems
+          -- Initialize UI, input handlers, etc.
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -98,10 +171,23 @@ methods:
       - type: void
         summary:
   - name: ClientUpdate
-    summary:
+    summary: |
+      Called every frame, CLIENT ONLY.
+      Use for UI updates, input handling, client-side animations.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:ClientUpdate()
+          -- Check for player input
+          if Input.GetKeyDown(KeyCode.Space) then
+              print("Space pressed!")
+          end
+          
+          -- Update UI elements
+          -- Handle camera movement
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -109,10 +195,22 @@ methods:
       - type: void
         summary:
   - name: FixedUpdate
-    summary:
+    summary: |
+      Called at a fixed frame rate (typically 50 times per second).
+      Use for physics operations like applying forces.
+      Frame-rate independent by default.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:FixedUpdate()
+          -- Apply physics force
+          local rb = self.gameObject:GetComponent(Rigidbody)
+          if rb then
+              rb:AddForce(Vector3.up * 10)
+          end
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -120,7 +218,9 @@ methods:
       - type: void
         summary:
   - name: LateUpdate
-    summary:
+    summary: |
+      Called after all Update methods have completed.
+      Use for camera following or operations that depend on other Updates.
     description:
     is_static: false
     code_samples:
@@ -131,10 +231,18 @@ methods:
       - type: void
         summary:
   - name: OnCollisionEnter
-    summary:
+    summary: |
+      Called when this object collides with another (not a trigger).
+      Both GameObjects need colliders, and IsTrigger must be false on both.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:OnCollisionEnter(collision)
+          print("Collided with: " .. collision.gameObject.name)
+          print("Impact force: " .. collision.relativeVelocity.magnitude)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -147,10 +255,16 @@ methods:
       - type: void
         summary:
   - name: OnCollisionExit
-    summary:
+    summary: |
+      Called when this object stops colliding with another.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:OnCollisionExit(collision)
+          print("Stopped colliding with: " .. collision.gameObject.name)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -163,10 +277,17 @@ methods:
       - type: void
         summary:
   - name: OnCollisionStay
-    summary:
+    summary: |
+      Called every frame while colliding with another object.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:OnCollisionStay(collision)
+          -- Continuously handle collision
+          print("Still colliding with: " .. collision.gameObject.name)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -212,10 +333,23 @@ methods:
       - type: void
         summary:
   - name: OnTriggerEnter
-    summary:
+    summary: |
+      Called when a collider enters this object's trigger collider.
+      Both GameObjects need a Collider, and one must have IsTrigger = true.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:OnTriggerEnter(collider)
+          print("Trigger entered by: " .. collider.gameObject.name)
+          
+          -- Check if it's a player
+          local character = collider.gameObject:GetComponent(Character)
+          if character then
+              print("Player entered trigger zone!")
+          end
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -228,10 +362,16 @@ methods:
       - type: void
         summary:
   - name: OnTriggerExit
-    summary:
+    summary: |
+      Called when a collider exits this object's trigger collider.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:OnTriggerExit(collider)
+          print("Trigger exited by: " .. collider.gameObject.name)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -244,10 +384,17 @@ methods:
       - type: void
         summary:
   - name: OnTriggerStay
-    summary:
+    summary: |
+      Called every frame while a collider is inside this object's trigger collider.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:OnTriggerStay(collider)
+          -- Continuously check while inside trigger
+          print("Object still in trigger: " .. collider.gameObject.name)
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -271,7 +418,9 @@ methods:
       - type: void
         summary:
   - name: ServerFixedUpdate
-    summary:
+    summary: |
+      Called at fixed frame rate, SERVER ONLY.
+      Use for server-side physics and deterministic gameplay.
     description:
     is_static: false
     code_samples:
@@ -282,7 +431,8 @@ methods:
       - type: void
         summary:
   - name: ServerLateUpdate
-    summary:
+    summary: |
+      Called after all ServerUpdate methods, SERVER ONLY.
     description:
     is_static: false
     code_samples:
@@ -326,10 +476,27 @@ methods:
       - type: void
         summary:
   - name: ServerStart
-    summary:
+    summary: |
+      Called when the script is first loaded, SERVER ONLY.
+      Use for server-specific initialization like setting up game state.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      --!Type(ClientAndServer)
+      
+      function self:ServerStart()
+          print("Server started!")
+          
+          -- Setup server-specific systems
+          server.PlayerConnected:Connect(function(player)
+              print(player.name .. " connected")
+          end)
+          
+          -- Initialize game state
+          Storage.SetValue("GameState", "waiting")
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -337,10 +504,24 @@ methods:
       - type: void
         summary:
   - name: ServerUpdate
-    summary:
+    summary: |
+      Called every frame, SERVER ONLY.
+      Use for game logic, AI, server-authoritative gameplay.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local gameTime = 0
+      
+      function self:ServerUpdate()
+          -- Update game timer
+          gameTime = gameTime + Time.deltaTime
+          
+          -- Server-side game logic
+          -- AI updates
+          -- Spawn management
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -348,10 +529,20 @@ methods:
       - type: void
         summary:
   - name: Start
-    summary:
+    summary: |
+      Called when the script is first loaded, before Update methods.
+      Use for initialization logic that should run on both client and server.
+      Runs based on script type (Client, Server, or ClientAndServer).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:Start()
+          print("Script initialized!")
+          print("GameObject: " .. self.gameObject.name)
+          print("Position: " .. tostring(self.transform.position))
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:
@@ -359,10 +550,21 @@ methods:
       - type: void
         summary:
   - name: Update
-    summary:
+    summary: |
+      Called every frame. Use for frame-based logic and animations.
+      Runs based on script type (Client, Server, or ClientAndServer).
+      NOT frame-rate independent - use Time.deltaTime for smooth movement.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      function self:Update()
+          -- Rotate object smoothly
+          local rotation = self.transform.eulerAngles
+          rotation.y = rotation.y + (90 * Time.deltaTime)
+          self.transform.eulerAngles = rotation
+      end
+      ```
     tags:
       - ClientAndServer
     parameters:

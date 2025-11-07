@@ -1075,6 +1075,446 @@ methods:
     returns:
       - type: void
         summary:
+  - name: TweenOpacity
+    summary: |
+      Creates a tween that transitions the opacity of a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenOpacity
+    summary: |
+      Creates a tween that transitions the opacity of a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary: |
+          Starting scale of the VisualElement.
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotate
+    summary: |
+      Creates a tween that rotates a VisualElement from one angle to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.StyleRotate
+        tags:
+        default:
+        summary: |
+          Ending rotation of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotate
+    summary: |
+      Creates a tween that rotates a VisualElement from one angle to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.StyleRotate
+        tags:
+        default:
+        summary: |
+          Starting rotation of the VisualElement.
+      - name: to
+        type: DataType.StyleRotate
+        tags:
+        default:
+        summary: |
+          Ending rotation of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotate
+    summary: |
+      Creates a tween that rotates a VisualElement from one angle to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending rotation of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenRotate
+    summary: |
+      Creates a tween that rotates a VisualElement from one angle to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary: |
+          Starting rotation of the VisualElement.
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending rotation of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.StyleScale
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.StyleScale
+        tags:
+        default:
+        summary: |
+          Starting scale of the VisualElement.
+      - name: to
+        type: DataType.StyleScale
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Starting scale of the VisualElement.
+      - name: to
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Starting scale of the VisualElement.
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenScale
+    summary: |
+      Creates a tween that scales a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: number
+        tags:
+        default:
+        summary: |
+          Starting scale of the VisualElement.
+      - name: to
+        type: number
+        tags:
+        default:
+        summary: |
+          Ending scale of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTranslate
+    summary: |
+      Creates a tween that translates a VisualElement from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.StyleTranslate
+        tags:
+        default:
+        summary: |
+          Ending position of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTranslate
+    summary: |
+      Creates a tween that translates a VisualElement from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.StyleTranslate
+        tags:
+        default:
+        summary: |
+          Starting position of the VisualElement.
+      - name: to
+        type: DataType.StyleTranslate
+        tags:
+        default:
+        summary: |
+          Ending position of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTranslate
+    summary: |
+      Creates a tween that translates a VisualElement from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Ending position of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTranslate
+    summary: |
+      Creates a tween that translates a VisualElement from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Starting position of the VisualElement.
+      - name: to
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          Ending position of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTranslate
+    summary: |
+      Creates a tween that translates a VisualElement from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending position of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTranslate
+    summary: |
+      Creates a tween that translates a VisualElement from one position to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Starting position of the VisualElement.
+      - name: to
+        type: DataType.Vector3
+        tags:
+        default:
+        summary: |
+          Ending position of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
   - name: UnregisterCallback
     summary: |
       Unregisters a callback using a Callback object.
