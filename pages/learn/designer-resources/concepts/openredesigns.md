@@ -29,6 +29,8 @@ They may not be used as bases for any regular Concept.
 
 [emooni](https://highrise.game/catalog/designer-profile/emooni)
 
+[eriee_v](https://highrise.game/catalog/designer-profile/eriee_v)
+
 [feIine](https://highrise.game/catalog/designer-profile/feIine)
 
 [grass4life](https://highrise.game/catalog/designer-profile/grass4life)
@@ -58,6 +60,8 @@ They may not be used as bases for any regular Concept.
 [killibill](https://highrise.game/catalog/designer-profile/killibill)
 
 [Kittimu](https://highrise.game/catalog/designer-profile/Kittimu)
+
+[kpariina](https://highrise.game/catalog/designer-profile/kpariina)
 
 [Kumquatt_](https://highrise.game/catalog/designer-profile/Kumquatt_)
 
