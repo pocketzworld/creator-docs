@@ -43,6 +43,8 @@ They may not be used as bases for any regular Concept.
 
 [Lil_Buns](https://highrise.game/catalog/designer-profile/Lil_Buns)
 
+[iMooseMoo](https://highrise.game/catalog/designer-profile/iMooseMoo)
+
 [iPix](https://highrise.game/catalog/designer-profile/iPix)
 
 [IrisEstella](https://highrise.game/catalog/designer-profile/IrisEstella)
