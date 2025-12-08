@@ -65,6 +65,26 @@ properties:
       - ClientAndServer
       - ReadOnly
     type: Class.Event
+  - name: SpectatorJoined
+    summary: |
+      An event that is triggered when a spectator joins the scene.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: SpectatorLeft
+    summary: |
+      An event that is triggered when a spectator leaves the scene.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
   - name: id
     summary: |
       A unique identifier for this scene instance. This id indicates the order in which the scene was instantiated, not where it appears in the World Settings scene list.

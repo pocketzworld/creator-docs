@@ -114,6 +114,26 @@ properties:
       - ServerOnly
       - ReadOnly
     type: Class.Event
+  - name: SpectatorConnected
+    summary: |
+      An event that is triggered when a new spectator connects to the game.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
+  - name: SpectatorDisconnected
+    summary: |
+      An event that is triggered when a spectator disconnects from the game.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Class.Event
   - name: isLoading
     summary: |
       Indicates whether the server is currently in a loading state.

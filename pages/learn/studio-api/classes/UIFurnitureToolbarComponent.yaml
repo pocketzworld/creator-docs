@@ -15,7 +15,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
   - name: movePressed
     summary:
     description:
@@ -23,7 +23,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
   - name: removePressed
     summary:
     description:
@@ -31,7 +31,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
   - name: rotatePressed
     summary:
     description:
@@ -39,7 +39,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
   - name: setCadencePressed
     summary:
     description:
@@ -47,7 +47,15 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
+  - name: setParentPressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: () -> ()
   - name: setSpeedPressed
     summary:
     description:
@@ -55,7 +63,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
   - name: setTeleportPressed
     summary:
     description:
@@ -63,7 +71,7 @@ properties:
     code_samples:
     tags:
       - ClientOnly
-    type: "() -> ()"
+    type: () -> ()
 methods:
   - name: UpdateCadence
     summary:
@@ -91,6 +99,22 @@ methods:
     parameters:
       - name: moveDirection
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateParent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: parentFurnitureId
+        type: string
         tags:
         default:
         summary:

@@ -277,6 +277,34 @@ methods:
     returns:
       - type: void
         summary:
+  - name: FireAllOtherClients
+    summary: |
+      Fires the event to all clients except the specified player.
+      Useful for broadcasting actions to other players.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("PlayerAction")
+      event:FireAllOtherClients(player, player.name .. " scored a goal!")
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: FireAllOtherSceneClients
     summary: |
       Fires the event to all clients in a specific scene except the specified player.
@@ -302,6 +330,76 @@ methods:
         tags:
         default:
         summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireAllOtherSceneClients
+    summary: |
+      Fires the event to all clients in a specific scene except the specified player.
+      Combines scene filtering with player exclusion.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("ScenePlayerAction")
+      event:FireAllOtherSceneClients(scene, player, player.name .. " joined the scene!")
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: scene
+        type: Class.Scene
+        tags:
+        default:
+        summary:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireAllOtherSpectators
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireAllSpectators
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
       - name: __ELLIPSIS__
         type: any
         tags:
@@ -339,6 +437,35 @@ methods:
     returns:
       - type: void
         summary:
+  - name: FireClient
+    summary: |
+      Fires the event to a specific client (called from SERVER side only).
+      Use this to send data or notifications to one specific player.
+      More efficient than FireAllClients when only one player needs to know.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("PlayerNotification")
+      event:FireClient(player, "You earned 100 points!")
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: id
+        type: number
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: FireClients
     summary: |
       Fires the event to multiple specific clients.
@@ -357,6 +484,35 @@ methods:
     parameters:
       - name: players
         type: {Class.Player}
+        tags:
+        default:
+        summary:
+      - name: __ELLIPSIS__
+        type: any
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: FireClients
+    summary: |
+      Fires the event to multiple specific clients.
+      Called from server to send data to selected players.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      -- Server side
+      local event = Event.new("TeamMessage")
+      local teamPlayers = { player1, player2, player3 }
+      event:FireClients(teamPlayers, "Your team won!")
+      ```
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: id
+        type: {number}
         tags:
         default:
         summary:

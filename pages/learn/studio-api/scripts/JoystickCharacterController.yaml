@@ -19,7 +19,8 @@ summary: |
   - Footstep Walk Sound: Sound played when character is walking
   - Footstep Run Sound: Sound played when character is running
   - External Input Action: External input action for keyboards/gamepads (recommended: "Movement/Movement")
-  - Running Speed Threshold: Speed at which character switches from walking to running
+  - Jogging Speed Threshold: Speed at which character switches from walking to jogging
+  - Running Speed Threshold: Speed at which character switches from jogging to running
   - Is 2D: Uses XY coordinates of joystick as XY world coordinates (useful for 2D games)
   
   Advanced Properties:

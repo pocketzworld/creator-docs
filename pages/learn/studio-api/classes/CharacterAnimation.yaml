@@ -9,5 +9,35 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: duration
+    summary: |
+      Return the duration of the animation which is always derived from the front animation
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: isLooping
+    summary: |
+      Returns true if the animation should loop when complete
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: name
+    summary: |
+      Gets the name of the animation which is always derived from the front animation
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: string
 methods:
 math_operations:

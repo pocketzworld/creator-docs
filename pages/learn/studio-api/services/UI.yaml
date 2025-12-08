@@ -96,6 +96,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.VisualElement
+  - name: isLightModeEnabled
+    summary: |
+      Returns true if the app is in light mode.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
   - name: playerUIEventHandler
     summary:
     description:
