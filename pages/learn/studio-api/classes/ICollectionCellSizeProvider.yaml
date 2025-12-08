@@ -1,0 +1,12 @@
+name: ICollectionCellSizeProvider
+type: classes
+summary: |
+  The interface that provides the size of a cell in a collection layout.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+methods:
+math_operations:

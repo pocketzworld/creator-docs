@@ -107,16 +107,6 @@ methods:
         tags:
         default:
         summary:
-      - name: canSetParent
-        type: boolean
-        tags:
-        default:
-        summary:
-      - name: parentFurnitureId
-        type: string
-        tags:
-        default:
-        summary:
     returns:
       - type: void
         summary:

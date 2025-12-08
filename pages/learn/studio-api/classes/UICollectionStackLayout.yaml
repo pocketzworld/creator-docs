@@ -39,6 +39,15 @@ constructors:
       - type: Class.UICollectionStackLayout
         summary:
 properties:
+  - name: cellSizeProvider
+    summary: |
+      Provider for calculating custom cell sizes.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: ICollectionCellSizeProvider
   - name: count
     summary:
     description:
