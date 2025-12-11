@@ -24,10 +24,10 @@ code_samples: |
       -- Access local player
       local myPlayer = client.localPlayer
       print("I am: " .. myPlayer.name)
-      
+  
       -- RECOMMENDED: Use scene.players for players in current scene
       print("Players in this scene: " .. scene.playerCount)
-      
+  
       -- Use client.players for all players across all scenes
       print("Total players in world: " .. client.playerCount)
       print("Room ID: " .. client.info.roomId)

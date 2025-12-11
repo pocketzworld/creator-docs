@@ -20,6 +20,23 @@ constructors:
     returns:
       - type: Class.UIButton
         summary:
+  - name: new
+    summary: |
+      Create a new UI Button instance.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: text
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: Class.UIButton
+        summary:
 properties:
   - name: contentContainer
     summary:

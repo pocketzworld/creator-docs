@@ -48,6 +48,14 @@ properties:
     tags:
       - ClientOnly
     type: "() -> ()"
+  - name: setParentPressed
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> ()"
   - name: setSpeedPressed
     summary:
     description:
@@ -91,6 +99,22 @@ methods:
     parameters:
       - name: moveDirection
         type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateParent
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: parentFurnitureId
+        type: string
         tags:
         default:
         summary:

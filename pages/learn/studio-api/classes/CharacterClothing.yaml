@@ -26,6 +26,12 @@ constructors:
           - optional
         default:
         summary:
+      - name: styleIndex
+        type: number
+        tags:
+          - optional
+        default:
+        summary:
     returns:
       - type: Class.CharacterClothing
         summary:

@@ -111,6 +111,19 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.Event
+  - name: OutfitLoaded
+    summary: |
+      Event that fires when an outfit finishes loading
+      Event Parameters:
+          Character: the character that had its outfit changed
+          Outfit: the outfit that was loaded
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: StateChanged
     summary: |
       Event fired when the characters state changes
@@ -227,6 +240,16 @@ properties:
       local player = client.localPlayer
       print(tostring(player.character.isMoving))
       ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isOutfitLoaded
+    summary: |
+      Returns true if the character's current outfit is fully loaded
+    description:
+    is_static: false
+    code_samples:
     tags:
       - ClientOnly
       - ReadOnly

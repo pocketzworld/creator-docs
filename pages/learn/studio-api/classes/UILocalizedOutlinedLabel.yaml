@@ -64,8 +64,106 @@ constructors:
     returns:
       - type: Class.UILocalizedOutlinedLabel
         summary:
+  - name: new
+    summary:
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: param1
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: param2
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: param3
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: param4
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: param5
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.UILocalizedOutlinedLabel
+        summary:
 properties:
 methods:
+  - name: SetKey
+    summary: |
+      Sets the text of this label using a localization key.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: key
+        type: string
+        tags:
+        default:
+        summary:
+      - name: param1
+        type: string
+        tags:
+          - optional
+        default:
+        summary: |
+          Text to fill in for the first parameter, indicated by {{$1}} in the localized string.
+      - name: param2
+        type: string
+        tags:
+          - optional
+        default:
+        summary: |
+          Text to fill in for the second parameter, indicated by {{$2}} in the localized string.
+      - name: param3
+        type: string
+        tags:
+          - optional
+        default:
+        summary: |
+          Text to fill in for the third parameter, indicated by {{$3}} in the localized string.
+      - name: param4
+        type: string
+        tags:
+          - optional
+        default:
+        summary: |
+          Text to fill in for the fourth parameter, indicated by {{$4}} in the localized string.
+      - name: param5
+        type: string
+        tags:
+          - optional
+        default:
+        summary: |
+          Text to fill in for the fifth parameter, indicated by {{$5}} in the localized string.
+    returns:
+      - type: void
+        summary:
   - name: SetPluralText
     summary:
     description:
@@ -112,7 +210,8 @@ methods:
       - type: void
         summary:
   - name: SetText
-    summary:
+    summary: |
+      Sets the text of this label using a LocalizedString object. You can get a LocalizedString object from the Strings table or Localization.TryGetString.
     description:
     is_static: false
     code_samples:
@@ -129,31 +228,36 @@ methods:
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Text to fill in for the first parameter, indicated by {{$1}} in the localized string.
       - name: param2
         type: string
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Text to fill in for the second parameter, indicated by {{$2}} in the localized string.
       - name: param3
         type: string
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Text to fill in for the third parameter, indicated by {{$3}} in the localized string.
       - name: param4
         type: string
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Text to fill in for the fourth parameter, indicated by {{$4}} in the localized string.
       - name: param5
         type: string
         tags:
           - optional
         default:
-        summary:
+        summary: |
+          Text to fill in for the fifth parameter, indicated by {{$5}} in the localized string.
     returns:
       - type: void
         summary:
