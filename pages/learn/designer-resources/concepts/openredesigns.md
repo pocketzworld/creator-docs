@@ -101,6 +101,8 @@ They may not be used as bases for any regular Concept.
 
 [Rozovey](https://highrise.game/catalog/designer-profile/Rozovey)
 
+[satanlei](https://highrise.game/catalog/designer-profile/satanlei)
+
 [Serahnity](https://highrise.game/catalog/designer-profile/Serahnity)
 
 [Shaikuma](https://highrise.game/catalog/designer-profile/Shaikuma)
@@ -124,6 +126,8 @@ They may not be used as bases for any regular Concept.
 [TunaX](https://highrise.game/catalog/designer-profile/TunaX)
 
 [tutuwu](https://highrise.game/catalog/designer-profile/tutuwu)
+
+[UnIovable](https://highrise.game/catalog/designer-profile/UnIovable)
 
 [Valimonroe](https://highrise.game/catalog/designer-profile/Valimonroe)
 
