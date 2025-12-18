@@ -91,6 +91,8 @@ They may not be used as bases for any regular Concept.
 
 [PigeonMilk](https://highrise.game/catalog/designer-profile/PigeonMilk)
 
+[PinkGlitzy](https://highrise.game/catalog/designer-profile/PinkGlitzy)
+
 [Poppiana](https://highrise.game/catalog/designer-profile/Poppiana)
 
 [profaniti](https://highrise.game/catalog/designer-profile/profaniti)
