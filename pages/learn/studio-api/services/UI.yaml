@@ -397,6 +397,24 @@ methods:
     returns:
       - type: void
         summary:
+  - name: OpenPetModal
+    summary: |
+      Open a pet modal for the given player if their current outfit has a pet.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: owner
+        type: Class.Player
+        tags:
+        default:
+        summary: |
+          Pet owner
+    returns:
+      - type: void
+        summary:
   - name: OpenPopup
     summary:
     description:
