@@ -21,7 +21,7 @@ code_samples: |
   function self:Start()
       print("Scene: " .. scene.name)
       print("Players in scene: " .. scene.playerCount)
-      
+  
       -- Iterate through scene players
       for i, player in ipairs(scene.players) do
           print("  - " .. player.name)
@@ -33,7 +33,7 @@ code_samples: |
       scene.PlayerJoined:Connect(function(scene, player)
           print(player.name .. " joined the scene!")
       end)
-      
+  
       -- Listen for players leaving this scene
       scene.PlayerLeft:Connect(function(scene, player)
           print(player.name .. " left the scene!")
