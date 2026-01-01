@@ -39,6 +39,8 @@ They may not be used as bases for any regular Concept.
 
 [Hirasuni](https://highrise.game/catalog/designer-profile/Hirasuni)
 
+[krysiis](https://highrise.game/catalog/designer-profile/krysiis)
+
 [LiIithh](https://highrise.game/catalog/designer-profile/LiIithh)
 
 [Lil_Buns](https://highrise.game/catalog/designer-profile/Lil_Buns)
