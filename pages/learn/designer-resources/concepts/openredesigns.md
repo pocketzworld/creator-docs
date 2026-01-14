@@ -45,6 +45,8 @@ They may not be used as bases for any regular Concept.
 
 [Lil_Buns](https://highrise.game/catalog/designer-profile/Lil_Buns)
 
+[iDestinee](https://highrise.game/catalog/designer-profile/iDestinee)
+
 [iMooseMoo](https://highrise.game/catalog/designer-profile/iMooseMoo)
 
 [iPix](https://highrise.game/catalog/designer-profile/iPix)
@@ -141,7 +143,7 @@ They may not be used as bases for any regular Concept.
 
 [xBLSSD](https://highrise.game/catalog/designer-profile/xBLSSD)
 
-[iDestinee](https://highrise.game/catalog/designer-profile/iDestinee)
+[xinachi](https://highrise.game/catalog/designer-profile/xinachi)
 
 [z.im](https://highrise.game/catalog/designer-profile/z.im)
 
