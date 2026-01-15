@@ -175,6 +175,24 @@ methods:
     returns:
       - type: void
         summary:
+  - name: CopyToClipboard
+    summary: |
+      Copies the provided text to the system clipboard.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: text
+        type: string
+        tags:
+        default:
+        summary: |
+          The text to copy.
+    returns:
+      - type: void
+        summary:
   - name: ExecuteDeepLink
     summary:
     description:
