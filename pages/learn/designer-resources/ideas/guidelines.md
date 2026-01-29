@@ -16,13 +16,15 @@ While some items might have built-in arms, legs, or accessories, we won’t appr
 
 **💡 Original Items**   
 
-Share your fresh item designs! We are not accepting any redesigns in Highrise Ideas - even if you’re using your own designs as your base. Additionally, an Idea may not be approved if it is too similar to an existing item – _regardless_ of whether or not the similarity is intentional. Innovate and bring something totally novel to the Idea table!
+Share your fresh item designs! We are not accepting any redesigns in Highrise Ideas - even if you’re using your own designs as your base. Additionally, an Idea may not be approved if it is too similar to an existing item – _regardless_ of whether or not the similarity is intentional. 
+
+We do NOT accept AI-generated or AI-edited entries. Ideas is a place for you to innovate and bring something totally novel to the Idea table!
 
 
 **🌈 Fixed Colors**     
 
 We only accept items that are "naturally" color changing: hair, eyes, lips, and blushes are all acceptable. 
-We _do not_ accept item that wouldn't color change in real life (handbags, scrunchies, gowns, shirts, shoes, etc.). 
+We _do not_ accept items that wouldn't color change in real life (handbags, scrunchies, gowns, shirts, shoes, etc.). 
 
 - **VALID COLOR CHANGE**: hair, lips, eyes, eyebrows, facial hair, clip-in bangs, freckles, blush. Additionally, items with built-in body parts (posed arms and legs, rider items, crop tops with exposed skin, items that tweak avatar body proportions) are all acceptable.
 -  **INVALID COLOR CHANGE**: clothing, auras, makeup, or accessory items that change based on hair, skin, lip, or eye color. Items that color change according to an _unnatural_ color dependencies are also not valid (ie, hair that changes color according to eyes; eyes that color change according to lips, etc.) 
@@ -49,6 +51,9 @@ _**In your commissioned Idea submission, please use a tag on the item image and 
 
 Ideas may be rejected by our team at any point! Here are some of the most common reasons why:
 
+
+🤖 **AI Entries**   
+If your entry has been denied on suspicion of AI use, please reach out to support with a speedpaint of your creation process and be prepared to send in your source files for review. 
 
 🛌 **Furniture Items**   
 Items that may be placed in rooms or Worlds are not accepted at this time.
