@@ -31,6 +31,8 @@ They may not be used as bases for any regular Concept.
 
 [eriee_v](https://highrise.game/catalog/designer-profile/eriee_v)
 
+[EvilPie](https://highrise.game/catalog/designer-profile/EvilPie)
+
 [feIine](https://highrise.game/catalog/designer-profile/feIine)
 
 [grass4life](https://highrise.game/catalog/designer-profile/grass4life)
@@ -80,6 +82,8 @@ They may not be used as bases for any regular Concept.
 [MazIsTired](https://highrise.game/catalog/designer-profile/MazIsTired)
 
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
+
+[Mithrel](https://highrise.game/catalog/designer-profile/Mithrel)
 
 [Mizune](https://highrise.game/catalog/designer-profile/Mizune)
 
