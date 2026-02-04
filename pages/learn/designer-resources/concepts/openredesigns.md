@@ -143,6 +143,8 @@ They may not be used as bases for any regular Concept.
 
 [deadly](https://highrise.game/catalog/designer-profile/deadly)
 
+[yokolatte](https://highrise.game/catalog/designer-profile/yokolatte)
+
 [_ _yuppi_ _](https://highrise.game/catalog/designer-profile/_yuppi_)
 
 [xBLSSD](https://highrise.game/catalog/designer-profile/xBLSSD)
