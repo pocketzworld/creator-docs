@@ -1,0 +1,62 @@
+name: NativeKeyboardType
+type: enums
+summary: |
+  Enum that determines the appearance of the keyboard when entering text on mobile devices.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: EmailAddress
+    summary: |
+      Use a keyboard optimized for entering email addresses.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardType
+  - name: Number
+    summary: |
+      Use a keyboard optimized for entering only numbers.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardType
+  - name: NumberPassword
+    summary: |
+      Use a keyboard optimized for entering a password that is only numbers.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardType
+  - name: Password
+    summary: |
+      Use a keyboard optimized for entering a password.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardType
+  - name: Text
+    summary: |
+      Use the default keyboard.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardType
+methods:
+math_operations:

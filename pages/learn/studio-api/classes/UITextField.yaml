@@ -237,6 +237,24 @@ properties:
       - ClientOnly
       - ReadOnly
     type: ITextSelection
+  - name: touchKeyboardReturnType
+    summary: |
+      Specifies the appearance of the return key on mobile devices.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.NativeKeyboardReturnType
+  - name: touchKeyboardType
+    summary: |
+      Specifies the type of keyboard that should be displayed on mobile devices.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.NativeKeyboardType
   - name: tripleClickSelectsLine
     summary:
     description:

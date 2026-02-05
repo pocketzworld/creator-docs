@@ -1,0 +1,42 @@
+name: NativeKeyboardReturnType
+type: enums
+summary: |
+  Enum that determines the appearance of the enter button when entering text on mobile devices.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Default
+    summary: |
+      Use the default enter button.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardReturnType
+  - name: Search
+    summary: |
+      Changes the enter button to indicate you are performing a search.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardReturnType
+  - name: Send
+    summary: |
+      Changes the enter button to indicate you are sending a message.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.NativeKeyboardReturnType
+methods:
+math_operations:
