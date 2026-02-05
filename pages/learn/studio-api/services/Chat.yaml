@@ -60,13 +60,12 @@ properties:
           Channel: a ChannelInfo instance representing the channel the message was received in.
           Player: the Player instance that sent the message.
           Message: the message that was received.
-          originalMessage: the original message that was sent, before any filtering.
     description:
     is_static: false
     code_samples: |
       ```lua
-      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message, originalMessage)
-        Chat:DisplayTextMessage(channel, player, message, originalMessage)
+      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
+        Chat:DisplayTextMessage(channel, player, message)
       end)
       ```
     tags:

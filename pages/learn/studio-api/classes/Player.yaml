@@ -170,7 +170,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: boolean
   - name: id
@@ -360,7 +360,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: Class.Pet
   - name: user

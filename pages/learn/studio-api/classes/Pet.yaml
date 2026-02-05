@@ -23,9 +23,19 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: string
+  - name: isNFT
+    summary: |
+      Whether this pet is connected to a NFT.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
   - name: name
     summary: |
       Name of the pet as displayed in the UI.
@@ -33,7 +43,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: string
   - name: owner
@@ -43,7 +53,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: Class.Player
   - name: skeletonId
@@ -53,7 +63,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: string
 methods:
