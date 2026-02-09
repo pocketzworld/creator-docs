@@ -81,6 +81,8 @@ They may not be used as bases for any regular Concept.
 
 [MazIsTired](https://highrise.game/catalog/designer-profile/MazIsTired)
 
+[_michail](https://highrise.game/catalog/designer-profile/_michail)
+
 [Miksqueek](https://highrise.game/catalog/designer-profile/Miksqueek)
 
 [Mithrel](https://highrise.game/catalog/designer-profile/Mithrel)
