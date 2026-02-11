@@ -186,6 +186,20 @@ properties:
       - ClientOnly
       - ReadOnly
     type: DataType.Vector3
+  - name: destinationRotation
+    summary: |
+      Return the ending rotation of the current move
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      print(tostring(player.character.destinationRotation))
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Quaternion
   - name: distanceToDestination
     summary: |
       Return the distance to the destination if character is moving or 0
