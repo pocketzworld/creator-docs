@@ -18,6 +18,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: {Class.CharacterClothing}
+  - name: containsNFTItem
+    summary: |
+      Whether this outfit contains a NFT item.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
 methods:
   - name: CreateInstance
     summary: |

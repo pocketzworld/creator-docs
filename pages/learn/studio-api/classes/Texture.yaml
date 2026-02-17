@@ -25,6 +25,15 @@ properties:
     tags:
       - ClientOnly
     type: number
+  - name: filterMode
+    summary: |
+      [Unity's Texture.filterMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-filterMode.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.FilterMode
   - name: height
     summary: |
       The 'height' property specifies the height of the texture in pixels. Knowing the texture dimensions can be crucial when working with texture manipulation such as UV mapping.
@@ -110,6 +119,42 @@ properties:
     tags:
       - ClientOnly
     type: number
+  - name: wrapMode
+    summary: |
+      [Unity's Texture.wrapMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-wrapMode.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.TextureWrapMode
+  - name: wrapModeU
+    summary: |
+      [Unity's Texture.wrapModeU Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-wrapModeU.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.TextureWrapMode
+  - name: wrapModeV
+    summary: |
+      [Unity's Texture.wrapModeV Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-wrapModeV.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.TextureWrapMode
+  - name: wrapModeW
+    summary: |
+      [Unity's Texture.wrapModeW Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Texture-wrapModeW.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.TextureWrapMode
 methods:
   - name: IncrementUpdateCount
     summary: |

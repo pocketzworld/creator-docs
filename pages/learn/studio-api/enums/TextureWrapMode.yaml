@@ -1,0 +1,52 @@
+name: TextureWrapMode
+type: enums
+summary: |
+  [Unity's TextureWrapMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextureWrapMode.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Clamp
+    summary: |
+      [Unity's TextureWrapMode.Clamp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextureWrapMode.Clamp.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextureWrapMode
+  - name: Mirror
+    summary: |
+      [Unity's TextureWrapMode.Mirror Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextureWrapMode.Mirror.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextureWrapMode
+  - name: MirrorOnce
+    summary: |
+      [Unity's TextureWrapMode.MirrorOnce Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextureWrapMode.MirrorOnce.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextureWrapMode
+  - name: Repeat
+    summary: |
+      [Unity's TextureWrapMode.Repeat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/TextureWrapMode.Repeat.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextureWrapMode
+methods:
+math_operations:

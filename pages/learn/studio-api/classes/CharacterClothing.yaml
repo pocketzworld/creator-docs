@@ -53,5 +53,15 @@ properties:
       - ClientOnly
       - ReadOnly
     type: string
+  - name: isNFT
+    summary: |
+      Whether this clothing item is connected to a NFT.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
 methods:
 math_operations:
