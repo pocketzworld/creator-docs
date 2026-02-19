@@ -43,7 +43,7 @@ Have a great Idea, but don't feel confident in your artistic ability? You may co
 
 In your commissioned Idea submission, please use a tag on the item image and description stating that it is commissioned work. Use “Commission from __” with your artist’s name so our team doesn’t accidentally remove your entry!
 
-Currently, any Commissioned HR Idea items released in-game may include **attribution to both usernames**, upon request by the user who submitted the idea. In all collaborations and commissions, Gold division is decided by players.
+As of February 19th, 2026, any Commissioned HR Idea items released in-game may include **attribution to both usernames**, upon request by the user who submitted the idea. In all collaborations and commissions, Gold division is decided by players. This change only applies to items currently in production and funding phases: items releases before this date will retain their original attributions.
 
 
 
