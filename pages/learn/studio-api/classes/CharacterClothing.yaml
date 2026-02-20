@@ -13,7 +13,7 @@ constructors:
     is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
     parameters:
       - name: descriptorId
         type: string
@@ -42,7 +42,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
     type: number
   - name: id
     summary:
@@ -50,7 +50,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: string
   - name: isNFT
@@ -60,7 +60,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: boolean
 methods:
