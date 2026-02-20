@@ -15,7 +15,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: {Class.CharacterClothing}
   - name: containsNFTItem
@@ -25,7 +25,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
       - ReadOnly
     type: boolean
 methods:
@@ -36,7 +36,7 @@ methods:
     is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
     parameters:
       - name: clothing
         type: {Class.CharacterClothing}
@@ -53,7 +53,64 @@ methods:
     is_static: true
     code_samples:
     tags:
-      - ClientOnly
+      - ClientAndServer
+    parameters:
+      - name: ids
+        type: {string}
+        tags:
+        default:
+        summary:
+      - name: skeletonId
+        type: string
+        tags:
+        default:
+        summary:
+      - name: includeFallbacks
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.CharacterOutfit
+        summary:
+  - name: new
+    summary: |
+      Create a new outfit from a collection of clothing items.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
+    parameters:
+      - name: clothing
+        type: {Class.CharacterClothing}
+        tags:
+        default:
+        summary:
+      - name: skeletonId
+        type: string
+        tags:
+          - optional
+        default:
+        summary:
+      - name: includeFallbacks
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
+    returns:
+      - type: Class.CharacterOutfit
+        summary:
+  - name: new
+    summary: |
+      Create a new outfit from a collection of clothing items.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientAndServer
     parameters:
       - name: ids
         type: {string}

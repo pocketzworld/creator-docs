@@ -39,6 +39,23 @@ methods:
     tags:
       - ClientOnly
     parameters:
+      - name: crew
+        type: Class.Crew
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: Load
+    summary: |
+      Load an image of a user
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
       - name: player
         type: Class.Player
         tags:

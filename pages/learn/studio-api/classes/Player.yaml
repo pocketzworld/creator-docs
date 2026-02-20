@@ -353,6 +353,16 @@ properties:
       - ClientAndServer
       - ReadOnly
     type: string
+  - name: outfit
+    summary: |
+      The player's outfit which is unaffected by any changes made to the character's outfit in the world.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.CharacterOutfit
   - name: pet
     summary: |
       Contains information about the player's current pet, nil if the player does not have a pet.

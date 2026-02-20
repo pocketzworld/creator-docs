@@ -1,0 +1,72 @@
+name: Crew
+type: classes
+summary: |
+  Represents a crew, including its identifier, name, membership details, and public status.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: flag
+    summary: |
+      Gets the flag associated with the crew.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.CrewFlag
+  - name: id
+    summary: |
+      Unique identifier of the crew
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+  - name: isPublic
+    summary: |
+      Is the crew able to be joined without a request
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: maxMembers
+    summary: |
+      Max member count of the crew
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: membersCount
+    summary: |
+      Member count of the crew
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
+  - name: name
+    summary: |
+      Name of the crew
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+methods:
+math_operations:
