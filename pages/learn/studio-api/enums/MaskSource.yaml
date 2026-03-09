@@ -1,0 +1,32 @@
+name: MaskSource
+type: enums
+summary: |
+  [Unity's MaskSource Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaskSource.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Sprite
+    summary: |
+      [Unity's MaskSource.Sprite Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaskSource.Sprite.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.MaskSource
+  - name: SupportedRenderers
+    summary: |
+      [Unity's MaskSource.SupportedRenderers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaskSource.SupportedRenderers.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.MaskSource
+methods:
+math_operations:

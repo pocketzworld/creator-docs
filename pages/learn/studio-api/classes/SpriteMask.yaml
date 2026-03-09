@@ -1,0 +1,94 @@
+name: SpriteMask
+type: classes
+summary: |
+  [Unity's SpriteMask Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask.html)
+description:
+code_samples:
+inherits:
+  - Class.Renderer
+tags:
+constructors:
+properties:
+  - name: alphaCutoff
+    summary: |
+      [Unity's SpriteMask.alphaCutoff Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-alphaCutoff.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: backSortingLayerID
+    summary: |
+      [Unity's SpriteMask.backSortingLayerID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-backSortingLayerID.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: backSortingOrder
+    summary: |
+      [Unity's SpriteMask.backSortingOrder Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-backSortingOrder.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: frontSortingLayerID
+    summary: |
+      [Unity's SpriteMask.frontSortingLayerID Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-frontSortingLayerID.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: frontSortingOrder
+    summary: |
+      [Unity's SpriteMask.frontSortingOrder Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-frontSortingOrder.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: isCustomRangeActive
+    summary: |
+      [Unity's SpriteMask.isCustomRangeActive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-isCustomRangeActive.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: maskSource
+    summary: |
+      [Unity's SpriteMask.maskSource Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-maskSource.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.MaskSource
+  - name: sprite
+    summary: |
+      [Unity's SpriteMask.sprite Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-sprite.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Class.Sprite
+  - name: spriteSortPoint
+    summary: |
+      [Unity's SpriteMask.spriteSortPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteMask-spriteSortPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.SpriteSortPoint
+methods:
+math_operations:

@@ -81,6 +81,15 @@ properties:
     tags:
       - ClientOnly
     type: Class.Sprite
+  - name: spriteSortPoint
+    summary: |
+      [Unity's SpriteRenderer.spriteSortPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-spriteSortPoint.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Enum.SpriteSortPoint
   - name: tileMode
     summary: |
       [Unity's SpriteRenderer.tileMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteRenderer-tileMode.html)
