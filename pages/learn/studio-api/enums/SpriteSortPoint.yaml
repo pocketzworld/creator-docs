@@ -1,0 +1,32 @@
+name: SpriteSortPoint
+type: enums
+summary: |
+  [Unity's SpriteSortPoint Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteSortPoint.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Center
+    summary: |
+      [Unity's SpriteSortPoint.Center Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteSortPoint.Center.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteSortPoint
+  - name: Pivot
+    summary: |
+      [Unity's SpriteSortPoint.Pivot Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SpriteSortPoint.Pivot.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SpriteSortPoint
+methods:
+math_operations:
