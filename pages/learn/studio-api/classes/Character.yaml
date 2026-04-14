@@ -984,6 +984,54 @@ methods:
       - name: loop
         type: boolean
         tags:
+        default:
+        summary: |
+          Whether the emote should loop.
+      - name: normalizedTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: callback
+        type: "(...any) -> (...any)"
+        tags:
+          - optional
+        default:
+        summary: |
+          A callback function to execute when the emote playback is complete.
+    returns:
+      - type: boolean
+        summary:
+  - name: PlayEmote
+    summary: |
+      Plays a specified emote animation on the character.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local player = client.localPlayer
+      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
+      print("Emote playback complete.")
+      end)
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: emoteName
+        type: string
+        tags:
+        default:
+        summary: |
+          The name of the emote to play.
+      - name: speed
+        type: number
+        tags:
+        default:
+        summary: |
+          The speed of the emote.
+      - name: loop
+        type: boolean
+        tags:
           - optional
         default:
         summary: |
@@ -1037,6 +1085,30 @@ methods:
     tags:
       - ClientOnly
     parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SetBoneScale
+    summary: |
+      Sets the scale of a named bone on the character's renderer.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: boneName
+        type: string
+        tags:
+        default:
+        summary: |
+          Name of the bone (e.g. Bones.Head).
+      - name: scale
+        type: number
+        tags:
+        default:
+        summary: |
+          Scale multiplier to apply to the bone.
     returns:
       - type: void
         summary:

@@ -249,4 +249,62 @@ properties:
       - ReadOnly
     type: DataType.Bounds
 methods:
+  - name: GetBlockedPlayers
+    summary: |
+      Gets all blocked players in the current room for the local player
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: {Class.Player}
+        summary:
+  - name: GetFriends
+    summary: |
+      Gets all friends in the current room for the local player
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: {Class.Player}
+        summary:
+  - name: IsPlayerBlocked
+    summary: |
+      Determines whether the specified player is currently blocked for the local player
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: IsPlayerFriend
+    summary: |
+      Determines whether the specified player is marked as a friend.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
 math_operations:

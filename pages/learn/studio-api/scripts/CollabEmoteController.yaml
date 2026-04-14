@@ -1,0 +1,524 @@
+name: CollabEmoteController
+type: scripts
+summary: |
+  CollabEmoteController is a module script that manages collaborative emote sessions in Highrise Studio.
+  It handles initiating collab emotes, joining sessions, position calculation, movement coordination,
+  and provides events for session lifecycle. Supports friends-only sessions and custom position/movement handlers.
+  This is a module script that can be required in your Lua code.
+description:
+code_samples: |
+  ```lua
+  local CollabEmoteController = require("CollabEmoteController")
+  ```
+inherits:
+tags:
+constructors:
+properties:
+  - name: ArrivalDetected
+    summary: |
+      Event that fires when the local player arrives at the join position. Client only.
+      Passes the initiator Player as argument.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.ArrivalDetected:Connect(function(initiator)
+          print("Arrived at join position")
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: MovementDestinationRequest
+    summary: |
+      Public event fired when a movement destination is requested. Passes the target Vector3 position.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.MovementDestinationRequest:Connect(function(position)
+          print("Moving to: " .. tostring(position))
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: MovementInterrupted
+    summary: |
+      Event that fires when the local player's movement to join position is interrupted. Client only.
+      Passes the initiator Player as argument.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.MovementInterrupted:Connect(function(initiator)
+          print("Movement interrupted for session by: " .. tostring(initiator))
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: MovementStoppedRequest
+    summary: |
+      Public event fired when a movement stop is requested.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.MovementStoppedRequest:Connect(function()
+          print("Movement stopped")
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: PlayerJoined
+    summary: |
+      Event that fires when a player joins a collab emote session. Client only.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.PlayerJoined:Connect(function(session)
+          print("Player joined session")
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: SessionEnded
+    summary: |
+      Event that fires when a collab emote session ends. Client only.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.SessionEnded:Connect(function(session)
+          print("Session ended")
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+  - name: SessionStarted
+    summary: |
+      Event that fires when a collab emote session starts. Client only.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.SessionStarted:Connect(function(session)
+          print("Session started by: " .. tostring(session.initiator))
+      end)
+      ```
+    tags:
+      - ClientAndServer
+    type: Class.Event
+methods:
+  - name: CancelReason
+    summary: |
+      Enumeration of reasons a collab emote session can be cancelled.
+      - HostMoved (0): The host moved
+      - JoinerMoved (1): The joiner moved
+      - HostStopped (2): The host stopped the emote
+      - HostLeft (3): The host left the session
+      - EmoteEnded (4): The emote ended naturally
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      if reason == CollabEmoteController.CancelReason.HostMoved then
+          print("Host moved, session cancelled")
+      end
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: {any}
+        summary:
+  - name: ErrorType
+    summary: |
+      Enumeration of error types that can occur during collab emote operations.
+      - None (0): No error
+      - SystemDisabled (1): Collab emotes system is disabled
+      - PlayerAlreadyInSession (2): Player is already in a session
+      - PlayerNotFound (3): Player not found
+      - CannotJoinOwnEmote (4): Cannot join your own emote
+      - SessionNotFound (5): Session not found
+      - SessionFull (6): Session is full
+      - NoValidPath (7): No valid path to join position
+      - NotAllowedToEndSession (8): Not allowed to end this session
+      - InitiatorNotFound (9): Initiator not found
+      - JoinerNotFound (10): Joiner not found
+      - JoinerBlocked (11): Player is blocked by the initiator
+      - NoValidJoinPosition (12): Move to an area with more space
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      if errorType == CollabEmoteController.ErrorType.SessionFull then
+          print("Session is full")
+      end
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: {any}
+        summary:
+  - name: GetDistanceScaleForPlayer
+    summary: |
+      Returns the distance scale multiplier for a player based on their humanoid-size item.
+      Returns 1.0 if the player has no size item.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      local scale = CollabEmoteController.GetDistanceScaleForPlayer(player)
+      print("Distance scale: " .. tostring(scale))
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: GetErrorMessage
+    summary: |
+      Returns a human-readable error message for the given error type.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      local msg = CollabEmoteController.GetErrorMessage(CollabEmoteController.ErrorType.SessionFull)
+      print(msg) -- "Session is full"
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: errorType
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: string
+        summary:
+  - name: GetNormalizedTime
+    summary: |
+      Returns the normalized playback time (0-1) of an emote given its start time and duration.
+      Returns nil if startTime is nil or duration is zero or negative.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      local t = CollabEmoteController.GetNormalizedTime(startTime, duration)
+      if t then
+          print("Playback progress: " .. tostring(t))
+      end
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: startTime
+        type: number
+        tags:
+        default:
+        summary:
+      - name: duration
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: number
+        summary:
+  - name: IsEnabled
+    summary: |
+      Returns whether the collab emotes system is currently enabled.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      if CollabEmoteController.IsEnabled() then
+          print("Collab emotes are enabled")
+      end
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: PlayerMoveState
+    summary: |
+      Enumeration of player movement states during a collab emote session.
+      - Moving (0): Player is moving toward the join position
+      - Arrived (1): Player has arrived at the join position
+      - Emoting (2): Player is playing the emote
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      if state == CollabEmoteController.PlayerMoveState.Arrived then
+          print("Player arrived")
+      end
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: {any}
+        summary:
+  - name: RegisterMoveHandler
+    summary: |
+      Registers a custom movement handler that overrides the default NavMeshAgent-based movement.
+      The handler receives the player, target position, and optionally the initiator, and returns true if handled.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.RegisterMoveHandler(function(player, position, initiator)
+          -- Custom movement logic
+          return true
+      end)
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: handler
+        type: "(player: Player, position: Vector3, initiator: Player) -> (boolean)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterPositionHandler
+    summary: |
+      Registers a custom position handler that overrides the default join position calculation.
+      The handler receives the initiator, emote data, position index, and optionally the joiner.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.RegisterPositionHandler(function(initiator, emoteData, positionIndex, joiner)
+          -- Custom position calculation
+          return Vector3.new(0, 0, 0)
+      end)
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: handler
+        type: "(initiator: Player, emoteData: any, positionIndex: number, joiner: Player) -> (Vector3)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterServerFacingValidator
+    summary: |
+      Registers a server-side facing validator that checks for valid join positions
+      and rotates the character to face a direction with available space.
+      The handler receives a Player and emote data, returns true if valid.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.RegisterServerFacingValidator(function(player, emoteData)
+          return true
+      end)
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: handler
+        type: "(player: Player, emoteData: any) -> (boolean)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RegisterServerPositionHandler
+    summary: |
+      Registers a server-side position handler that calculates join positions using platform-specific logic (e.g., NavGrid).
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.RegisterServerPositionHandler(function(initiator, emoteData, positionIndex, joiner)
+          return Vector3.new(0, 0, 0)
+      end)
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: handler
+        type: "(initiator: Player, emoteData: any, positionIndex: number, joiner: Player) -> (Vector3)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: RequestMove
+    summary: |
+      Requests a player to move to a target position. Uses the custom move handler if registered,
+      otherwise falls back to NavMeshAgent-based movement.
+      Returns true if the move was successfully initiated.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      local success = CollabEmoteController.RequestMove(player, targetPosition, initiator)
+      if success then
+          print("Moving to position")
+      end
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: position
+        type: DataType.Vector3
+        tags:
+        default:
+        summary:
+      - name: initiator
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: boolean
+        summary:
+  - name: StopCollabEmoteOnLocalPlayer
+    summary: |
+      Stops any active collab emote on the local player.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.StopCollabEmoteOnLocalPlayer()
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterMoveHandler
+    summary: |
+      Unregisters the custom movement handler, reverting to default movement behavior.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.UnregisterMoveHandler()
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterPositionHandler
+    summary: |
+      Unregisters the custom position handler, reverting to default position calculation.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.UnregisterPositionHandler()
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterServerFacingValidator
+    summary: |
+      Unregisters the server-side facing validator.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.UnregisterServerFacingValidator()
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UnregisterServerPositionHandler
+    summary: |
+      Unregisters the server-side position handler.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.UnregisterServerPositionHandler()
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+    returns:
+      - type: void
+        summary:
+math_operations:
