@@ -1,0 +1,86 @@
+name: CollabEmotes
+type: classes
+summary: |
+  Manages collaboration emotes in Lua worlds.
+  When enabled, tapping a collab emote shows a floating UI above the player
+  that other players can tap to join.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: EmoteSelected
+    summary: |
+      Fires when a player selects a collab emote. Parameters: emoteId, primedEmoteId, loop, waitForJoin, minDistance, playerLimit, positionType, attachBone, friendsOnly
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: JoinRequested
+    summary: |
+      Event fired when a player taps the join button on another player's collab emote UI.
+      Parameters: initiatorPlayer (Player), joiningPlayer (Player)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+methods:
+  - name: ClearLocalPlayerCollabEmote
+    summary:
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: HideUI
+    summary: |
+      Hides the collab emote UI for the specified player.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ShowUI
+    summary: |
+      Shows a collab emote UI above the specified player.
+      Called internally when a player selects a collab emote and IsEnabled is true.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: player
+        type: Class.Player
+        tags:
+        default:
+        summary:
+      - name: emoteId
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+math_operations:
