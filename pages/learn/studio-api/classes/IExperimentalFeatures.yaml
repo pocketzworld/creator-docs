@@ -1,11 +1,22 @@
 name: IExperimentalFeatures
 type: classes
-summary:
+summary: |
+  [Unity's IExperimentalFeatures Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IExperimentalFeatures.html)
 description:
 code_samples:
 inherits:
 tags:
 constructors:
 properties:
+  - name: animation
+    summary: |
+      [Unity's IExperimentalFeatures.animation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IExperimentalFeatures-animation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: ITransitionAnimations
 methods:
 math_operations:

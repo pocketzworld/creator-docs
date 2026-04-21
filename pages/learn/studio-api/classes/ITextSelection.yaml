@@ -1,11 +1,143 @@
 name: ITextSelection
 type: classes
-summary:
+summary: |
+  [Unity's ITextSelection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection.html)
 description:
 code_samples:
 inherits:
 tags:
 constructors:
 properties:
+  - name: cursorIndex
+    summary: |
+      [Unity's ITextSelection.cursorIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-cursorIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: cursorPosition
+    summary: |
+      [Unity's ITextSelection.cursorPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-cursorPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
+  - name: doubleClickSelectsWord
+    summary: |
+      [Unity's ITextSelection.doubleClickSelectsWord Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-doubleClickSelectsWord.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isSelectable
+    summary: |
+      [Unity's ITextSelection.isSelectable Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-isSelectable.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: selectAllOnFocus
+    summary: |
+      [Unity's ITextSelection.selectAllOnFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-selectAllOnFocus.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: selectAllOnMouseUp
+    summary: |
+      [Unity's ITextSelection.selectAllOnMouseUp Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-selectAllOnMouseUp.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: selectIndex
+    summary: |
+      [Unity's ITextSelection.selectIndex Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-selectIndex.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: tripleClickSelectsLine
+    summary: |
+      [Unity's ITextSelection.tripleClickSelectsLine Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection-tripleClickSelectsLine.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
 methods:
+  - name: HasSelection
+    summary: |
+      [Unity's ITextSelection.HasSelection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection.HasSelection.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: SelectAll
+    summary: |
+      [Unity's ITextSelection.SelectAll Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection.SelectAll.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SelectNone
+    summary: |
+      [Unity's ITextSelection.SelectNone Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection.SelectNone.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: SelectRange
+    summary: |
+      [Unity's ITextSelection.SelectRange Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextSelection.SelectRange.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: cursorIndex
+        type: number
+        tags:
+        default:
+        summary:
+      - name: selectionIndex
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:

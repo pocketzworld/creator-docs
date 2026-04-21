@@ -1,6 +1,8 @@
 name: IPlayerUIEventHandler
 type: classes
-summary:
+summary: |
+  Entry point through which gameplay systems push high-level UI changes
+  (world controls, radio, top buttons, tutorial overlays, popups) to the player's active UI layer.
 description:
 code_samples:
 inherits:
@@ -8,4 +10,74 @@ tags:
 constructors:
 properties:
 methods:
+  - name: AddTutorialOverlay
+    summary: |
+      Overlay a tutorial element on top of the player UI.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: overlay
+        type: Class.VisualElement
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: AddWorldTopButton
+    summary: |
+      Insert a button into the row of top-of-screen world buttons at the given index.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: button
+        type: Class.VisualElement
+        tags:
+        default:
+        summary: |
+          The button element to add.
+      - name: index
+        type: number
+        tags:
+        default:
+        summary: |
+          Position in the button row at which to insert.
+    returns:
+      - type: void
+        summary:
+  - name: CloseAllPopups
+    summary: |
+      Dismiss every open popup currently owned by the player UI.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: UpdateRadio
+    summary: |
+      Update the UI to reflect the currently playing radio station (or no station).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: station
+        type: Class.RadioStation
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:

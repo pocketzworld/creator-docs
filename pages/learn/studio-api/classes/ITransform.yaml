@@ -1,11 +1,49 @@
 name: ITransform
 type: classes
-summary:
+summary: |
+  [Unity's ITransform Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITransform.html)
 description:
 code_samples:
 inherits:
 tags:
 constructors:
 properties:
+  - name: matrix
+    summary: |
+      [Unity's ITransform.matrix Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITransform-matrix.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Matrix4x4
+  - name: position
+    summary: |
+      [Unity's ITransform.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITransform-position.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
+  - name: rotation
+    summary: |
+      [Unity's ITransform.rotation Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITransform-rotation.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Quaternion
+  - name: scale
+    summary: |
+      [Unity's ITransform.scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITransform-scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: DataType.Vector3
 methods:
 math_operations:
