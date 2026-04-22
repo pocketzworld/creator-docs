@@ -17,6 +17,8 @@ They may not be used as bases for any regular Concept.
 
 [catstronaut](https://highrise.game/catalog/designer-profile/catstronaut)
 
+[chickynugs](https://highrise.game/catalog/designer-profile/chickynugs)
+
 [cottex_](https://highrise.game/catalog/designer-profile/cottex_)
 
 [_CS_](https://highrise.game/catalog/designer-profile/_CS_)
@@ -142,6 +144,8 @@ They may not be used as bases for any regular Concept.
 [UnIovable](https://highrise.game/catalog/designer-profile/UnIovable)
 
 [Valimonroe](https://highrise.game/catalog/designer-profile/Valimonroe)
+
+[Veraaa24](https://highrise.game/catalog/designer-profile/Veraaa24)
 
 [deadly](https://highrise.game/catalog/designer-profile/deadly)
 
