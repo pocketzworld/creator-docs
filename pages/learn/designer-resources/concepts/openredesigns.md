@@ -31,8 +31,6 @@ They may not be used as bases for any regular Concept.
 
 [emooni](https://highrise.game/catalog/designer-profile/emooni)
 
-[eriee_v](https://highrise.game/catalog/designer-profile/eriee_v)
-
 [EvilPie](https://highrise.game/catalog/designer-profile/EvilPie)
 
 [feIine](https://highrise.game/catalog/designer-profile/feIine)
