@@ -436,6 +436,29 @@ methods:
     returns:
       - type: boolean
         summary:
+  - name: SetEnabled
+    summary: |
+      Enables or disables the collab emotes system. Server only — calling this on the client
+      logs an error and does nothing. When disabled, any active sessions are ended.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      local CollabEmoteController = require("CollabEmoteController")
+      CollabEmoteController.SetEnabled(false) -- disable collab emotes on the server
+      ```
+    tags:
+      - ClientAndServer
+      - NoSelfParameter
+    parameters:
+      - name: enabled
+        type: boolean
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: StopCollabEmoteOnLocalPlayer
     summary: |
       Stops any active collab emote on the local player.

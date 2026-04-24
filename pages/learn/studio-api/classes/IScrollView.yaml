@@ -1,11 +1,291 @@
 name: IScrollView
 type: classes
-summary:
+summary: |
+  Abstraction over a scrollable view, exposing scroll offset, viewport and
+  content sizing information, and the common controls for programmatic scrolling.
 description:
 code_samples:
 inherits:
 tags:
 constructors:
 properties:
+  - name: contentContainer
+    summary: |
+      The element that holds the full content, which may be only partially visible within the viewport.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+  - name: contentViewport
+    summary: |
+      The visible window into ; content outside this region is clipped.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+  - name: isAtEnd
+    summary: |
+      True when the scroll offset has reached (or passed) the end of the scrollable range.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+  - name: isEnabled
+    summary: |
+      Enables or disables the underlying gesture recognizer. When false, the scroll view stops
+      responding to user input.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isInertiaEnabled
+    summary: |
+      When true, the scroll view continues to scroll with a decaying velocity after the user
+      releases a touch drag.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isPagingEnabled
+    summary: |
+      When true, the scroll view snaps to full pages instead of allowing free scrolling.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isPanEndIntercepted
+    summary: |
+      Optional predicate consulted at the end of a pan gesture. When it returns true, the scroll
+      view suppresses its usual end-of-pan handling (settling, inertia, paging snap).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "() -> (boolean)"
+  - name: isReversed
+    summary: |
+      When true, the first item is laid out at the end and subsequent items are laid out before it.
+      For horizontal layouts, the effective direction also depends on RightToLeft.IsEnabled.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isScrollOffsetLocked
+    summary: |
+      When true, assignments to  are ignored, effectively freezing the scroll position.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isScrollWheelEnabled
+    summary: |
+      When true, the scroll view responds to mouse scroll wheel events.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: onScrollableSizeChanged
+    summary: |
+      Invoked when  changes; the callback receives the new scrollable size.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: "(obj: number) -> ()"
+  - name: pageEndOffset
+    summary: |
+      An offset subtracted from the viewport size when computing the size of a page.
+      Only applies when  is true.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: preventAutomaticValueUpdates
+    summary: |
+      When true, the scroll view will not automatically clamp its value when the scrollable size changes.
+      Useful when external code is managing the scroll offset directly.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: scrollableSize
+    summary: |
+      The total amount of scrollable distance, equal to the content size minus the viewport size.
+      Returns zero when the content fits within the viewport.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: shouldFadeEdges
+    summary: |
+      When true, the edges of the scroll view fade out visually to indicate that more content
+      exists beyond the viewport.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: value
+    summary: |
+      The current scroll offset along the scroll axis. Setting this value notifies value-changed listeners
+      unless  is true.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: viewportSize
+    summary: |
+      The size of the viewport along the scroll axis, including its padding.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: worldBound
+    summary: |
+      The world-space bounding rectangle of the scroll view.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rect
 methods:
+  - name: AdjustScrollOffset
+    summary: |
+      Shift the current scroll offset and related internal anchors by the given delta without
+      firing a change notification. Useful when content is inserted or removed and the visible
+      position should be preserved.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: offset
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: CancelAnimation
+    summary: |
+      Stop any in-progress scroll animation immediately, leaving the scroll offset at its current value.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToBeginning
+    summary: |
+      Scroll to the beginning of the content (offset = 0).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          Duration of the scroll animation in seconds. Zero scrolls instantly.
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToEnd
+    summary: |
+      Scroll to the end of the content (offset = ).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          Duration of the scroll animation in seconds. Zero scrolls instantly.
+    returns:
+      - type: void
+        summary:
+  - name: ScrollToOffset
+    summary: |
+      Scroll to an absolute offset along the scroll axis.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: offset
+        type: number
+        tags:
+        default:
+        summary: |
+          Target scroll offset, clamped to [0, ].
+      - name: animationDuration
+        type: number
+        tags:
+          - optional
+        default:
+        summary: |
+          Duration of the scroll animation in seconds. Zero scrolls instantly.
+      - name: propagateAnimation
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary: |
+          When false, the scroll-end notification is suppressed.
+    returns:
+      - type: void
+        summary:
 math_operations:
