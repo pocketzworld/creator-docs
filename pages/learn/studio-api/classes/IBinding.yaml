@@ -1,6 +1,7 @@
 name: IBinding
 type: classes
-summary:
+summary: |
+  [Unity's IBinding Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IBinding.html)
 description:
 code_samples:
 inherits:
@@ -8,4 +9,40 @@ tags:
 constructors:
 properties:
 methods:
+  - name: PreUpdate
+    summary: |
+      [Unity's IBinding.PreUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IBinding.PreUpdate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Release
+    summary: |
+      [Unity's IBinding.Release Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IBinding.Release.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Update
+    summary: |
+      [Unity's IBinding.Update Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IBinding.Update.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
 math_operations:

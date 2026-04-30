@@ -1,6 +1,9 @@
 name: IEmojiParser
 type: classes
-summary:
+summary: |
+  Transforms a raw text string by replacing emoji shortcodes (or other emoji source markers)
+  with their rendered representation. Implementations are pluggable so that label rendering
+  can support different emoji sources.
 description:
 code_samples:
 inherits:
@@ -8,4 +11,22 @@ tags:
 constructors:
 properties:
 methods:
+  - name: Parse
+    summary: |
+      Return a copy of  with emoji markers substituted for their
+      rendered form. Implementations must return the input unchanged when no substitutions apply.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: text
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: string
+        summary:
 math_operations:

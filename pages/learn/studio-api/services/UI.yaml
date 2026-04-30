@@ -106,14 +106,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
-  - name: playerUIEventHandler
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: IPlayerUIEventHandler
   - name: popupRoot
     summary:
     description:

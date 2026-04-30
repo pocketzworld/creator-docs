@@ -1,7 +1,8 @@
 name: ICollectionCellSizeProvider
 type: classes
 summary: |
-  The interface that provides the size of a cell in a collection layout.
+  Supplies the size of a single cell in a collection layout. Collection views query this
+  provider when laying out cells so that cell dimensions can adapt to the available width.
 description:
 code_samples:
 inherits:
@@ -9,4 +10,22 @@ tags:
 constructors:
 properties:
 methods:
+  - name: GetCellSize
+    summary: |
+      Return the desired cell size given the width available to the collection.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: width
+        type: number
+        tags:
+        default:
+        summary: |
+          The width available for laying out cells, in logical pixels.
+    returns:
+      - type: DataType.Vector2
+        summary:
 math_operations:
