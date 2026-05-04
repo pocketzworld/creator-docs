@@ -1,6 +1,7 @@
 name: ITextElementExperimentalFeatures
 type: classes
-summary:
+summary: |
+  [Unity's ITextElementExperimentalFeatures Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextElementExperimentalFeatures.html)
 description:
 code_samples:
 inherits:
@@ -8,4 +9,21 @@ tags:
 constructors:
 properties:
 methods:
+  - name: SetRenderedText
+    summary: |
+      [Unity's ITextElementExperimentalFeatures.SetRenderedText Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextElementExperimentalFeatures.SetRenderedText.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: renderedText
+        type: string
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:

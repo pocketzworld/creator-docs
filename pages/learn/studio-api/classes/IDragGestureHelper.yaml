@@ -1,6 +1,9 @@
 name: IDragGestureHelper
 type: classes
-summary:
+summary: |
+  Implemented by elements that want to customize when a  should
+  begin tracking input. The gesture recognizer consults the helper before transitioning
+  from pending to active, giving the owner a chance to veto or fast-track the gesture.
 description:
 code_samples:
 inherits:
@@ -8,4 +11,29 @@ tags:
 constructors:
 properties:
 methods:
+  - name: CanStartTrackingGesture
+    summary: |
+      Return true to allow the gesture to start tracking the pointer at the given position,
+      or false to continue waiting (typically until the minimum drag distance is reached).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: gesture
+        type: Class.DragGesture
+        tags:
+        default:
+        summary: |
+          The drag gesture being evaluated.
+      - name: position
+        type: DataType.Vector2
+        tags:
+        default:
+        summary: |
+          The current pointer position, in the gesture's coordinate space.
+    returns:
+      - type: boolean
+        summary:
 math_operations:

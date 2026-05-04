@@ -26,6 +26,26 @@ properties:
       - ClientAndServer
       - ReadOnly
     type: string
+  - name: isCarried
+    summary: |
+      Returns true if this pet is currently being carried by its owner as an animated clothing item.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
+  - name: isMounted
+    summary: |
+      Returns true if this pet is on a vehicle mount.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
   - name: isNFT
     summary: |
       Whether this pet is connected to a NFT.

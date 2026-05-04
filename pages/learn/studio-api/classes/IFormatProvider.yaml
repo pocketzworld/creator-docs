@@ -1,6 +1,7 @@
 name: IFormatProvider
 type: classes
-summary:
+summary: |
+  [Unity's IFormatProvider Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/IFormatProvider.html)
 description:
 code_samples:
 inherits:

@@ -126,10 +126,17 @@ methods:
       - type: void
         summary:
   - name: ClosePurchasePrompt
-    summary:
+    summary: |
+      Closes the purchase prompt if one is currently open on the local client. Has no effect otherwise.
+      
+      Must be called with colon syntax (Payments:ClosePurchasePrompt) — calling it with a dot will raise
+      "'self' cannot be null".
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Payments:ClosePurchasePrompt()
+      ```
     tags:
       - ClientOnly
     parameters:
@@ -186,14 +193,15 @@ methods:
       TESTING: In Studio, this returns test products "goldfish" and "eel" before your world is uploaded.
       Once uploaded with IWP configured, this returns your actual configured products.
       
-      Pagination: Pass nil for cursorId to get first results. Use returned nextCursorId for next page.
+      Pagination: limit caps how many products are returned in a single page.
+      Pass nil for cursorId to get the first page. Use the returned nextCursorId to fetch the next page.
       If returned nextCursorId is nil, no more results exist.
     description:
     is_static: false
     code_samples: |
       ```lua
-      -- Get all products (includes test products in Studio)
-      Payments.GetProducts(nil, function(products, nextCursorId, error)
+      -- Get the first page of products (includes test products in Studio)
+      Payments.GetProducts(25, nil, function(products, nextCursorId, error)
           if error == PaymentsError.None then
               print("Available products:")
               for i, product in ipairs(products) do
@@ -205,6 +213,11 @@ methods:
     tags:
       - ServerOnly
     parameters:
+      - name: limit
+        type: number
+        tags:
+        default:
+        summary:
       - name: cursorId
         type: string
         tags:
@@ -270,10 +283,27 @@ methods:
         summary:
   - name: PromptPurchase
     summary: |
-      Prompt the current user to make a purchase.
+      Opens the purchase prompt on the local client so the player can buy the given product.
+      The callback receives true if the player pressed the purchase button, false if they cancelled it.
+      Receiving true does not mean the purchase was completed; the PurchaseHandler must call AcknowledgePurchase.
+      Process the purchase there on the server, not here on the client.
+      
+      Must be called with colon syntax (Payments:PromptPurchase) — calling it with a dot will raise
+      "'self' cannot be null".
+      
+      TESTING: Use "goldfish" or "eel" as test product IDs in Studio before your world is uploaded.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      Payments:PromptPurchase("goldfish", function(success)
+          if success then
+              print("Player completed the purchase")
+          else
+              print("Player cancelled or the purchase failed")
+          end
+      end)
+      ```
     tags:
       - ClientOnly
     parameters:

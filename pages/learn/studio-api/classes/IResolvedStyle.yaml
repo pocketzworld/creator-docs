@@ -1,11 +1,712 @@
 name: IResolvedStyle
 type: classes
-summary:
+summary: |
+  [Unity's IResolvedStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle.html)
 description:
 code_samples:
 inherits:
 tags:
 constructors:
 properties:
+  - name: alignContent
+    summary: |
+      [Unity's IResolvedStyle.alignContent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-alignContent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Align
+  - name: alignItems
+    summary: |
+      [Unity's IResolvedStyle.alignItems Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-alignItems.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Align
+  - name: alignSelf
+    summary: |
+      [Unity's IResolvedStyle.alignSelf Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-alignSelf.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Align
+  - name: backgroundColor
+    summary: |
+      [Unity's IResolvedStyle.backgroundColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-backgroundColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: backgroundPositionX
+    summary: |
+      [Unity's IResolvedStyle.backgroundPositionX Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-backgroundPositionX.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.BackgroundPosition
+  - name: backgroundPositionY
+    summary: |
+      [Unity's IResolvedStyle.backgroundPositionY Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-backgroundPositionY.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.BackgroundPosition
+  - name: backgroundRepeat
+    summary: |
+      [Unity's IResolvedStyle.backgroundRepeat Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-backgroundRepeat.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.BackgroundRepeat
+  - name: backgroundSize
+    summary: |
+      [Unity's IResolvedStyle.backgroundSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-backgroundSize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.BackgroundSize
+  - name: borderBottomColor
+    summary: |
+      [Unity's IResolvedStyle.borderBottomColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderBottomColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: borderBottomLeftRadius
+    summary: |
+      [Unity's IResolvedStyle.borderBottomLeftRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderBottomLeftRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderBottomRightRadius
+    summary: |
+      [Unity's IResolvedStyle.borderBottomRightRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderBottomRightRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderBottomWidth
+    summary: |
+      [Unity's IResolvedStyle.borderBottomWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderBottomWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderLeftColor
+    summary: |
+      [Unity's IResolvedStyle.borderLeftColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderLeftColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: borderLeftWidth
+    summary: |
+      [Unity's IResolvedStyle.borderLeftWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderLeftWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderRightColor
+    summary: |
+      [Unity's IResolvedStyle.borderRightColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderRightColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: borderRightWidth
+    summary: |
+      [Unity's IResolvedStyle.borderRightWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderRightWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderTopColor
+    summary: |
+      [Unity's IResolvedStyle.borderTopColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderTopColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: borderTopLeftRadius
+    summary: |
+      [Unity's IResolvedStyle.borderTopLeftRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderTopLeftRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderTopRightRadius
+    summary: |
+      [Unity's IResolvedStyle.borderTopRightRadius Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderTopRightRadius.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: borderTopWidth
+    summary: |
+      [Unity's IResolvedStyle.borderTopWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-borderTopWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: bottom
+    summary: |
+      [Unity's IResolvedStyle.bottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-bottom.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: color
+    summary: |
+      [Unity's IResolvedStyle.color Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-color.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: display
+    summary: |
+      [Unity's IResolvedStyle.display Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-display.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.DisplayStyle
+  - name: flexBasis
+    summary: |
+      [Unity's IResolvedStyle.flexBasis Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-flexBasis.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.StyleFloat
+  - name: flexDirection
+    summary: |
+      [Unity's IResolvedStyle.flexDirection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-flexDirection.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.FlexDirection
+  - name: flexGrow
+    summary: |
+      [Unity's IResolvedStyle.flexGrow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-flexGrow.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: flexShrink
+    summary: |
+      [Unity's IResolvedStyle.flexShrink Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-flexShrink.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: flexWrap
+    summary: |
+      [Unity's IResolvedStyle.flexWrap Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-flexWrap.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Wrap
+  - name: fontSize
+    summary: |
+      [Unity's IResolvedStyle.fontSize Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-fontSize.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: height
+    summary: |
+      [Unity's IResolvedStyle.height Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-height.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: justifyContent
+    summary: |
+      [Unity's IResolvedStyle.justifyContent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-justifyContent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Justify
+  - name: left
+    summary: |
+      [Unity's IResolvedStyle.left Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-left.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: letterSpacing
+    summary: |
+      [Unity's IResolvedStyle.letterSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-letterSpacing.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: marginBottom
+    summary: |
+      [Unity's IResolvedStyle.marginBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-marginBottom.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: marginLeft
+    summary: |
+      [Unity's IResolvedStyle.marginLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-marginLeft.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: marginRight
+    summary: |
+      [Unity's IResolvedStyle.marginRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-marginRight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: marginTop
+    summary: |
+      [Unity's IResolvedStyle.marginTop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-marginTop.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: maxHeight
+    summary: |
+      [Unity's IResolvedStyle.maxHeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-maxHeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.StyleFloat
+  - name: maxWidth
+    summary: |
+      [Unity's IResolvedStyle.maxWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-maxWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.StyleFloat
+  - name: minHeight
+    summary: |
+      [Unity's IResolvedStyle.minHeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-minHeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.StyleFloat
+  - name: minWidth
+    summary: |
+      [Unity's IResolvedStyle.minWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-minWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.StyleFloat
+  - name: opacity
+    summary: |
+      [Unity's IResolvedStyle.opacity Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-opacity.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: paddingBottom
+    summary: |
+      [Unity's IResolvedStyle.paddingBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-paddingBottom.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: paddingLeft
+    summary: |
+      [Unity's IResolvedStyle.paddingLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-paddingLeft.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: paddingRight
+    summary: |
+      [Unity's IResolvedStyle.paddingRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-paddingRight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: paddingTop
+    summary: |
+      [Unity's IResolvedStyle.paddingTop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-paddingTop.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: position
+    summary: |
+      [Unity's IResolvedStyle.position Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-position.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Position
+  - name: right
+    summary: |
+      [Unity's IResolvedStyle.right Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-right.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: rotate
+    summary: |
+      [Unity's IResolvedStyle.rotate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-rotate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Rotate
+  - name: scale
+    summary: |
+      [Unity's IResolvedStyle.scale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-scale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Scale
+  - name: textOverflow
+    summary: |
+      [Unity's IResolvedStyle.textOverflow Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-textOverflow.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextOverflow
+  - name: top
+    summary: |
+      [Unity's IResolvedStyle.top Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-top.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: transformOrigin
+    summary: |
+      [Unity's IResolvedStyle.transformOrigin Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-transformOrigin.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: translate
+    summary: |
+      [Unity's IResolvedStyle.translate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-translate.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector3
+  - name: unityBackgroundImageTintColor
+    summary: |
+      [Unity's IResolvedStyle.unityBackgroundImageTintColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityBackgroundImageTintColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: unityFontStyleAndWeight
+    summary: |
+      [Unity's IResolvedStyle.unityFontStyleAndWeight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityFontStyleAndWeight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.FontStyle
+  - name: unityParagraphSpacing
+    summary: |
+      [Unity's IResolvedStyle.unityParagraphSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityParagraphSpacing.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unitySliceBottom
+    summary: |
+      [Unity's IResolvedStyle.unitySliceBottom Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unitySliceBottom.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unitySliceLeft
+    summary: |
+      [Unity's IResolvedStyle.unitySliceLeft Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unitySliceLeft.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unitySliceRight
+    summary: |
+      [Unity's IResolvedStyle.unitySliceRight Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unitySliceRight.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unitySliceScale
+    summary: |
+      [Unity's IResolvedStyle.unitySliceScale Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unitySliceScale.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unitySliceTop
+    summary: |
+      [Unity's IResolvedStyle.unitySliceTop Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unitySliceTop.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unityTextAlign
+    summary: |
+      [Unity's IResolvedStyle.unityTextAlign Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityTextAlign.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextAnchor
+  - name: unityTextOutlineColor
+    summary: |
+      [Unity's IResolvedStyle.unityTextOutlineColor Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityTextOutlineColor.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Color
+  - name: unityTextOutlineWidth
+    summary: |
+      [Unity's IResolvedStyle.unityTextOutlineWidth Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityTextOutlineWidth.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: unityTextOverflowPosition
+    summary: |
+      [Unity's IResolvedStyle.unityTextOverflowPosition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-unityTextOverflowPosition.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.TextOverflowPosition
+  - name: visibility
+    summary: |
+      [Unity's IResolvedStyle.visibility Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-visibility.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.Visibility
+  - name: whiteSpace
+    summary: |
+      [Unity's IResolvedStyle.whiteSpace Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-whiteSpace.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.WhiteSpace
+  - name: width
+    summary: |
+      [Unity's IResolvedStyle.width Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-width.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
+  - name: wordSpacing
+    summary: |
+      [Unity's IResolvedStyle.wordSpacing Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IResolvedStyle-wordSpacing.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: number
 methods:
 math_operations:
