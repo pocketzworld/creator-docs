@@ -29,6 +29,20 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: CarryPetChanged
+    summary: |
+      Event fired when the player starts or stops carrying their pet.
+      Event Parameters:
+          Player: the player whose carry state changed
+          IsCarried: true if carrying, false if not
+          PetId: the ID of the pet being carried (empty string if not carrying)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
   - name: CharacterChanged
     summary: |
       Event fired when the player's character object changes.

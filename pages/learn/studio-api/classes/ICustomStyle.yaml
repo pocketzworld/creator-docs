@@ -1,6 +1,7 @@
 name: ICustomStyle
 type: classes
-summary:
+summary: |
+  [Unity's ICustomStyle Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ICustomStyle.html)
 description:
 code_samples:
 inherits:

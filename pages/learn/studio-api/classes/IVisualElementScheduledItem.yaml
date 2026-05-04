@@ -1,0 +1,141 @@
+name: IVisualElementScheduledItem
+type: classes
+summary: |
+  [Unity's IVisualElementScheduledItem Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: element
+    summary: |
+      [Unity's IVisualElementScheduledItem.element Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem-element.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.VisualElement
+  - name: isActive
+    summary: |
+      [Unity's IVisualElementScheduledItem.isActive Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem-isActive.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: boolean
+methods:
+  - name: Every
+    summary: |
+      [Unity's IVisualElementScheduledItem.Every Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.Every.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: intervalMs
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: IVisualElementScheduledItem
+        summary:
+  - name: ExecuteLater
+    summary: |
+      [Unity's IVisualElementScheduledItem.ExecuteLater Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.ExecuteLater.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: delayMs
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: ForDuration
+    summary: |
+      [Unity's IVisualElementScheduledItem.ForDuration Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.ForDuration.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: durationMs
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: IVisualElementScheduledItem
+        summary:
+  - name: Pause
+    summary: |
+      [Unity's IVisualElementScheduledItem.Pause Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.Pause.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: Resume
+    summary: |
+      [Unity's IVisualElementScheduledItem.Resume Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.Resume.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: void
+        summary:
+  - name: StartingIn
+    summary: |
+      [Unity's IVisualElementScheduledItem.StartingIn Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.StartingIn.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: delayMs
+        type: number
+        tags:
+        default:
+        summary:
+    returns:
+      - type: IVisualElementScheduledItem
+        summary:
+  - name: Until
+    summary: |
+      [Unity's IVisualElementScheduledItem.Until Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IVisualElementScheduledItem.Until.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: stopCondition
+        type: "() -> (boolean)"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: IVisualElementScheduledItem
+        summary:
+math_operations:

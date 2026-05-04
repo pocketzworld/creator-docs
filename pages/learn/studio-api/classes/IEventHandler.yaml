@@ -1,6 +1,7 @@
 name: IEventHandler
 type: classes
-summary:
+summary: |
+  [Unity's IEventHandler Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IEventHandler.html)
 description:
 code_samples:
 inherits:
@@ -8,4 +9,62 @@ tags:
 constructors:
 properties:
 methods:
+  - name: HandleEvent
+    summary: |
+      [Unity's IEventHandler.HandleEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IEventHandler.HandleEvent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: evt
+        type: Class.EventBase
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
+  - name: HasBubbleUpHandlers
+    summary: |
+      [Unity's IEventHandler.HasBubbleUpHandlers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IEventHandler.HasBubbleUpHandlers.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: HasTrickleDownHandlers
+    summary: |
+      [Unity's IEventHandler.HasTrickleDownHandlers Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IEventHandler.HasTrickleDownHandlers.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+    returns:
+      - type: boolean
+        summary:
+  - name: SendEvent
+    summary: |
+      [Unity's IEventHandler.SendEvent Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.IEventHandler.SendEvent.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: e
+        type: Class.EventBase
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
 math_operations:

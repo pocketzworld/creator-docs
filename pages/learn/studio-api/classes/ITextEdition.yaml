@@ -1,11 +1,93 @@
 name: ITextEdition
 type: classes
-summary:
+summary: |
+  [Unity's ITextEdition Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition.html)
 description:
 code_samples:
 inherits:
 tags:
 constructors:
 properties:
+  - name: autoCorrection
+    summary: |
+      [Unity's ITextEdition.autoCorrection Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-autoCorrection.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: hideMobileInput
+    summary: |
+      [Unity's ITextEdition.hideMobileInput Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-hideMobileInput.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: hidePlaceholderOnFocus
+    summary: |
+      [Unity's ITextEdition.hidePlaceholderOnFocus Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-hidePlaceholderOnFocus.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isDelayed
+    summary: |
+      [Unity's ITextEdition.isDelayed Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-isDelayed.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isPassword
+    summary: |
+      [Unity's ITextEdition.isPassword Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-isPassword.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: isReadOnly
+    summary: |
+      [Unity's ITextEdition.isReadOnly Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-isReadOnly.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
+  - name: maskChar
+    summary: |
+      [Unity's ITextEdition.maskChar Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-maskChar.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: Char
+  - name: maxLength
+    summary: |
+      [Unity's ITextEdition.maxLength Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-maxLength.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
+  - name: placeholder
+    summary: |
+      [Unity's ITextEdition.placeholder Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UIElements.ITextEdition-placeholder.html)
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: string
 methods:
 math_operations:
