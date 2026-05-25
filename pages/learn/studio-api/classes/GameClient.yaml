@@ -251,7 +251,7 @@ properties:
 methods:
   - name: GetBlockedPlayers
     summary: |
-      Gets all blocked players in the current room for the local player
+      Gets all blocked players in the current room for the local player. If this client is a spectator, this function will always return an empty table.
     description:
     is_static: false
     code_samples:
@@ -263,7 +263,7 @@ methods:
         summary:
   - name: GetFriends
     summary: |
-      Gets all friends in the current room for the local player
+      Gets all friends in the current room for the local player. If this client is a spectator, this function will always return an empty table.
     description:
     is_static: false
     code_samples:
@@ -275,7 +275,7 @@ methods:
         summary:
   - name: IsPlayerBlocked
     summary: |
-      Determines whether the specified player is currently blocked for the local player
+      Determines whether the specified player is currently blocked for the local player. If this client is a spectator, this function will always return false.
     description:
     is_static: false
     code_samples:
@@ -292,7 +292,7 @@ methods:
         summary:
   - name: IsPlayerFriend
     summary: |
-      Determines whether the specified player is marked as a friend.
+      Determines whether the specified player is marked as a friend. If this client is a spectator, this function will always return false.
     description:
     is_static: false
     code_samples:
