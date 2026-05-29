@@ -42,7 +42,7 @@ The top 3 games will also win a 1 month in the Spotlight section of the Highrise
 2. Worlds must be created after the game jam theme announcement. Pre-existing worlds are disqualified.
 3. You may use pre-existing code, art, and audio assets you have legal rights to use, but worlds made before the announcement cannot be reused.
 4. Solo and group efforts are welcome. Teams of 2-4 people are recommended. Join the #studio-beta channel on our [Discord](https://discord.gg/highrise) to find teammates.
-5. Participants must be **13 or older** to join.
+5. Participants must be **16 or older** to join.
 6. Worlds must follow the [Highrise Community Guidelines](https://intercom.help/pocketworlds/en/articles/8043105-what-are-the-highrise-community-guidelines).
 7. In-world gold/items giveaways are not allowed during the judging period.
 8. Games must follow the announced theme.

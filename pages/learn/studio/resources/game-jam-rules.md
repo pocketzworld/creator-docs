@@ -121,7 +121,7 @@ Submissions that misrepresent collaboration may have collaborators removed from 
 
 ## General Rules
 
-* Participants must be 13 years or older.
+* Participants must be 16 years or older.
 * Cheating, misleading practices, or misrepresentation result in disqualification.
 * Worlds containing inappropriate or guideline violating content will be removed.
 * Purchased or fraudulently submitted worlds result in permanent exclusion from Game Jams.
