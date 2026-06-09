@@ -48,13 +48,13 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new Vector2Value instance with a specified name and default initial value of Vector2.zero.
+      Creates a new Vector2Value instance with a specified name and initial value.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local velocity = Vector2Value.new("Velocity")
-      -- Initial value is Vector2.zero by default
+      local spawnPoint = Vector2Value.new("SpawnPoint", Vector2.new(0, 10))
+      local direction = Vector2Value.new("Direction", Vector2.new(1, 0))
       ```
     tags:
       - ClientAndServer
@@ -74,13 +74,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new Vector2Value instance with a specified name and default initial value of Vector2.zero.
+      Creates a new Vector2Value instance with a specified name, initial value, and associated player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local velocity = Vector2Value.new("Velocity")
-      -- Initial value is Vector2.zero by default
+      local playerInput = Vector2Value.new("PlayerInput", Vector2.new(0, 0), player)
+      playerInput.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " input: " .. tostring(newVal))
+      end)
       ```
     tags:
       - ClientAndServer

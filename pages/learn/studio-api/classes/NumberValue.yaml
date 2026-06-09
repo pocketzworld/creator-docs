@@ -48,13 +48,13 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new NumberValue instance with a specified name and default initial value of 0.
+      Creates a new NumberValue instance with a specified name and initial value.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local counter = NumberValue.new("Counter")
-      -- Initial value is 0 by default
+      local temperature = NumberValue.new("Temperature", 23.5)
+      local speed = NumberValue.new("Speed", 10.0)
       ```
     tags:
       - ClientAndServer
@@ -74,13 +74,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new NumberValue instance with a specified name and default initial value of 0.
+      Creates a new NumberValue instance with a specified name, initial value, and associated player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local counter = NumberValue.new("Counter")
-      -- Initial value is 0 by default
+      local playerScore = NumberValue.new("PlayerScore", 0, player)
+      playerScore.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " score: " .. newVal)
+      end)
       ```
     tags:
       - ClientAndServer

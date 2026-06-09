@@ -956,7 +956,7 @@ methods:
         summary:
   - name: PingPong
     summary: |
-      Enables or PingPong mode.
+      Enables PingPong mode.
     description:
     is_static: false
     code_samples:
@@ -968,7 +968,10 @@ methods:
         summary:
   - name: PingPong
     summary: |
-      Enables or PingPong mode.
+      Enables or disables PingPong mode.  When PingPong mode is enabled the animation
+      will play itself fully forward and then then in reverse before stopping.  This means that
+      the effective duration of the animation will be doubled. Note that everything is run in reverse
+      including easing modes.
     description:
     is_static: false
     code_samples:
@@ -979,7 +982,8 @@ methods:
         type: boolean
         tags:
         default:
-        summary:
+        summary: |
+          True to enable PingPong mode, False to disable.
     returns:
       - type: DataType.Tween
         summary:
@@ -1041,7 +1045,7 @@ methods:
         summary:
   - name: Stop
     summary: |
-      Stop all tweens running on a target object
+      Stop all tweens that match the given identifier
     description:
     is_static: true
     code_samples:
@@ -1053,20 +1057,20 @@ methods:
         tags:
         default:
         summary: |
-          Optional identifier to filter by (0 = no identifier)
+          Identifier
       - name: executeCallbacks
         type: boolean
         tags:
           - optional
         default:
         summary: |
-          True if any remaining callbacks such as OnStop should be called (Default true)
+          True if callbacks such as OnStop should still be called
     returns:
       - type: void
         summary:
   - name: Stop
     summary: |
-      Stop all tweens running on a target object
+      Stop the tween
     description:
     is_static: false
     code_samples:
@@ -1079,7 +1083,7 @@ methods:
           - optional
         default:
         summary: |
-          True if any remaining callbacks such as OnStop should be called (Default true)
+          True to execute any remaining callbacks such as OnStop
     returns:
       - type: void
         summary:

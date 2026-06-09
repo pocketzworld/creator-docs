@@ -43,14 +43,14 @@ tags:
 constructors:
   - name: new
     summary: |
-      Creates a new BoolValue instance with a specified name and initial value.
-      Used for unique identification and initial state setting across clients.
+      Creates a new BoolValue instance with a specified name and default initial value of false.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local gameOver = BoolValue.new("GameOver", false)
-      local doorOpen = BoolValue.new("MainDoorOpen", true)
+      local flag = BoolValue.new("MyFlag")
+      -- Initial value is false by default
+      print(flag.value) -- prints: false
       ```
     tags:
       - ClientAndServer
@@ -92,14 +92,16 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new BoolValue instance with a specified name and initial value.
-      Used for unique identification and initial state setting across clients.
+      Creates a new BoolValue instance with a specified name, initial value, and associated player.
+      Use this constructor when the boolean value is specific to a particular player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local gameOver = BoolValue.new("GameOver", false)
-      local doorOpen = BoolValue.new("MainDoorOpen", true)
+      local playerReady = BoolValue.new("PlayerReady", false, player)
+      playerReady.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " ready state: " .. tostring(newVal))
+      end)
       ```
     tags:
       - ClientAndServer

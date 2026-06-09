@@ -1,0 +1,22 @@
+name: CrewRules
+type: classes
+summary: |
+  The rules of a crew and their metadata.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: text
+    summary: |
+      Crew rules text
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+methods:
+math_operations:

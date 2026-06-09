@@ -251,7 +251,7 @@ properties:
 methods:
   - name: GetBlockedPlayers
     summary: |
-      Gets all blocked players in the current room for the local player
+      Gets all blocked players in the current room for the local player. If this client is a spectator, this function will always return an empty table.
     description:
     is_static: false
     code_samples:
@@ -263,7 +263,7 @@ methods:
         summary:
   - name: GetFriends
     summary: |
-      Gets all friends in the current room for the local player
+      Gets all friends in the current room for the local player. If this client is a spectator, this function will always return an empty table.
     description:
     is_static: false
     code_samples:
@@ -273,9 +273,36 @@ methods:
     returns:
       - type: {Class.Player}
         summary:
+  - name: IsFollowingWorld
+    summary: |
+      Asynchronously checks whether the local player follows the world they are currently in.
+      Results are cached for 1 minute and refreshed passively when the local user follows
+      or unfollows the current world through the app.
+    description:
+    is_static: false
+    code_samples: |
+      ```lua
+      --!Type(Client)
+      client:IsFollowingWorld(function(isFollowed)
+          if isFollowed then
+              print("Thanks for the follow!")
+          end
+      end)
+      ```
+    tags:
+      - ClientOnly
+    parameters:
+      - name: callback
+        type: "(obj: boolean) -> ()"
+        tags:
+        default:
+        summary:
+    returns:
+      - type: void
+        summary:
   - name: IsPlayerBlocked
     summary: |
-      Determines whether the specified player is currently blocked for the local player
+      Determines whether the specified player is currently blocked for the local player. If this client is a spectator, this function will always return false.
     description:
     is_static: false
     code_samples:
@@ -292,7 +319,7 @@ methods:
         summary:
   - name: IsPlayerFriend
     summary: |
-      Determines whether the specified player is marked as a friend.
+      Determines whether the specified player is marked as a friend. If this client is a spectator, this function will always return false.
     description:
     is_static: false
     code_samples:

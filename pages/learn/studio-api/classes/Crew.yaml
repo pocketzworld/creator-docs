@@ -8,6 +8,16 @@ inherits:
 tags:
 constructors:
 properties:
+  - name: applyReason
+    summary: |
+      Reason/prompt shown when applying to join the crew
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
   - name: flag
     summary: |
       Gets the flag associated with the crew.
@@ -28,6 +38,16 @@ properties:
       - ClientAndServer
       - ReadOnly
     type: string
+  - name: isInviteOnly
+    summary: |
+      Is the crew joinable by invitation only
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
   - name: isPublic
     summary: |
       Is the crew able to be joined without a request
@@ -68,5 +88,35 @@ properties:
       - ClientAndServer
       - ReadOnly
     type: string
+  - name: rules
+    summary: |
+      Crew rules
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: Class.CrewRules
+  - name: tag
+    summary: |
+      Short tag identifier for the crew
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: string
+  - name: trophies
+    summary: |
+      Trophy count for seasonal competitions
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: number
 methods:
 math_operations:

@@ -9,7 +9,7 @@ tags:
 constructors:
   - name: new
     summary: |
-      Create a grid layout from uxml
+      Create a layout with a fixed size
     description:
     is_static: true
     code_samples:

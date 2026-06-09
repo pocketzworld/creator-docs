@@ -22,7 +22,7 @@ constructors:
         summary:
   - name: new
     summary: |
-      Create a new UI Button instance.
+      Create a new UI Button with a string to be displayed as the button text.
     description:
     is_static: true
     code_samples:
