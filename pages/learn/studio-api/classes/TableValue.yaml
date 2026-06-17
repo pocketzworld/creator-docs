@@ -52,13 +52,13 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new TableValue instance with a specified name and empty table as default initial value.
+      Creates a new TableValue instance with a specified name and initial table value.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local data = TableValue.new("GameData")
-      -- Initial value is empty table by default
+      local config = TableValue.new("Config", { speed = 10, health = 100 })
+      local teamData = TableValue.new("TeamData", { red = 0, blue = 0 })
       ```
     tags:
       - ClientAndServer
@@ -78,13 +78,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new TableValue instance with a specified name and empty table as default initial value.
+      Creates a new TableValue instance with a specified name, initial value, and associated player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local data = TableValue.new("GameData")
-      -- Initial value is empty table by default
+      local playerData = TableValue.new("PlayerData", { level = 1, exp = 0 }, player)
+      playerData.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " data updated")
+      end)
       ```
     tags:
       - ClientAndServer

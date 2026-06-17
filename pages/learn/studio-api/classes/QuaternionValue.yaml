@@ -48,13 +48,13 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new QuaternionValue instance with a specified name and default initial value of Quaternion.identity.
+      Creates a new QuaternionValue instance with a specified name and initial value.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local objectRotation = QuaternionValue.new("ObjectRotation")
-      -- Initial value is Quaternion.identity by default
+      local cameraRot = QuaternionValue.new("CameraRotation", Quaternion.identity)
+      local platformRot = QuaternionValue.new("PlatformRotation", Quaternion.Euler(0, 180, 0))
       ```
     tags:
       - ClientAndServer
@@ -74,13 +74,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new QuaternionValue instance with a specified name and default initial value of Quaternion.identity.
+      Creates a new QuaternionValue instance with a specified name, initial value, and associated player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local objectRotation = QuaternionValue.new("ObjectRotation")
-      -- Initial value is Quaternion.identity by default
+      local playerFacing = QuaternionValue.new("PlayerFacing", Quaternion.identity, player)
+      playerFacing.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " facing direction changed")
+      end)
       ```
     tags:
       - ClientAndServer

@@ -96,13 +96,31 @@ methods:
         summary:
   - name: AcknowledgePurchase
     summary: |
-      Acknowledges a purchase to confirm it has been fulfilled.
+      Acknowledges a purchase with a callback.
       Set wasConsumed to true for consumable items, false for permanent items.
     description:
     is_static: false
     code_samples: |
       ```lua
-      Payments.AcknowledgePurchase(purchase, true)
+      -- Accept the purchase
+      Payments.AcknowledgePurchase(purchase, true, function(error)
+          if error == PaymentsError.None then
+              print("Purchase acknowledged successfully")
+          else
+              print("Error acknowledging purchase: " .. tostring(error))
+          end
+      end)
+      
+      -- Reject the purchase
+      Payments.AcknowledgePurchase(purchase, false, function(error)
+          if error == PaymentsError.None then
+              print("Purchase acknowledged successfully")
+          else
+              print("Error acknowledging purchase: " .. tostring(error))
+          end
+          
+          return
+      end)
       ```
     tags:
       - ServerOnly

@@ -48,13 +48,13 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new StringValue instance with a specified name and empty string as default initial value.
+      Creates a new StringValue instance with a specified name and initial value.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local playerName = StringValue.new("PlayerName")
-      -- Initial value is empty string by default
+      local title = StringValue.new("GameTitle", "My Awesome Game")
+      local announcement = StringValue.new("Announcement", "Event starts soon!")
       ```
     tags:
       - ClientAndServer
@@ -74,13 +74,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new StringValue instance with a specified name and empty string as default initial value.
+      Creates a new StringValue instance with a specified name, initial value, and associated player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local playerName = StringValue.new("PlayerName")
-      -- Initial value is empty string by default
+      local playerStatus = StringValue.new("PlayerStatus", "Online", player)
+      playerStatus.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " status: " .. newVal)
+      end)
       ```
     tags:
       - ClientAndServer

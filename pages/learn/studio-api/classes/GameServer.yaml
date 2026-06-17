@@ -619,45 +619,24 @@ methods:
         summary:
   - name: SendWorldEvent
     summary: |
-      Sends a custom event to other world instances, enabling cross-instance communication.
-      Useful for global notifications, leaderboard updates, or coordinating multiple world instances.
-      
-      Event name must be 1-128 characters.
-      Payload is a Lua table/value that will be serialized and sent to other instances.
-      
-      Overloads:
-      - SendWorldEvent(eventName, payload): Fire and forget
-      - SendWorldEvent(eventName, payload, callback): Get error feedback
-      - SendWorldEvent(eventName, payload, callback, instanceIds): Target specific instances
-      
-      IMPORTANT: Rate limited. Avoid sending events too frequently.
+      Sends a custom event to specific world instances by their instance IDs.
+      Use this to target specific instances instead of broadcasting to all.
     description:
     is_static: false
     code_samples: |
       ```lua
       --!Type(Server)
       
-      function self:ServerStart()
-          -- Send a global event to all instances
-          server.SendWorldEvent("GlobalAnnouncement", {
-              message = "Special event starting!",
-              timestamp = os.time()
-          })
-          
-          -- Send with error handling
-          server.SendWorldEvent("PlayerAchievement", {
-              playerName = "John",
-              achievement = "First Victory"
-          }, function(error)
-              if error == EmitWorldEventError.None then
-                  print("Event sent successfully!")
-              elseif error == EmitWorldEventError.RequestThrottled then
-                  print("Too many events sent, throttled")
-              else
-                  print("Error sending event: " .. tostring(error))
-              end
-          end)
-      end
+      -- Send event to specific instances only
+      local targetInstances = {"instance-123", "instance-456"}
+      server.SendWorldEvent("PrivateMessage", {
+          from = "ServerA",
+          message = "Hello specific instances!"
+      }, function(error)
+          if error == EmitWorldEventError.None then
+              print("Targeted event sent")
+          end
+      end, targetInstances)
       ```
     tags:
       - ServerOnly

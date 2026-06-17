@@ -32,7 +32,7 @@ properties:
 methods:
   - name: Load
     summary: |
-      Load an image of a user
+      Load a crew flag image
     description:
     is_static: false
     code_samples:

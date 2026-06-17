@@ -48,13 +48,13 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new Vector3Value instance with a specified name and default initial value of Vector3.zero.
+      Creates a new Vector3Value instance with a specified name and initial value.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local velocity = Vector3Value.new("Velocity")
-      -- Initial value is Vector3.zero by default
+      local spawnPoint = Vector3Value.new("SpawnPoint", Vector3.new(0, 1, 0))
+      local lookDirection = Vector3Value.new("LookDirection", Vector3.new(0, 0, 1))
       ```
     tags:
       - ClientAndServer
@@ -74,13 +74,15 @@ constructors:
         summary:
   - name: new
     summary: |
-      Creates a new Vector3Value instance with a specified name and default initial value of Vector3.zero.
+      Creates a new Vector3Value instance with a specified name, initial value, and associated player.
     description:
     is_static: true
     code_samples: |
       ```lua
-      local velocity = Vector3Value.new("Velocity")
-      -- Initial value is Vector3.zero by default
+      local playerPosition = Vector3Value.new("PlayerPosition", Vector3.new(0, 0, 0), player)
+      playerPosition.Changed:Connect(function(newVal, oldVal)
+          print(player.name .. " moved to: " .. tostring(newVal))
+      end)
       ```
     tags:
       - ClientAndServer

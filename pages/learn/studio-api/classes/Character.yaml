@@ -924,8 +924,8 @@ methods:
     code_samples: |
       ```lua
       local player = client.localPlayer
-      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
-      print("Emote playback complete.")
+      player.character:PlayEmote("idle-dance-casual", false, function()
+        print("Emote playback complete.")
       end)
       ```
     tags:
@@ -956,14 +956,14 @@ methods:
         summary:
   - name: PlayEmote
     summary: |
-      Plays a specified emote animation on the character.
+      Play emote starting at a specific normalized time (0-1).
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
-      player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
-      print("Emote playback complete.")
+      player.character:PlayEmote("idle-dance-casual", 1.0, false, 0.5, function()
+        print("Emote playback complete.")
       end)
       ```
     tags:
@@ -991,7 +991,8 @@ methods:
         type: number
         tags:
         default:
-        summary:
+        summary: |
+          The normalized time (0-1) to start the emote at.
       - name: callback
         type: "(...any) -> (...any)"
         tags:
@@ -1004,14 +1005,14 @@ methods:
         summary:
   - name: PlayEmote
     summary: |
-      Plays a specified emote animation on the character.
+      Play emote a single time or looping with a speed multiplier.
     description:
     is_static: false
     code_samples: |
       ```lua
       local player = client.localPlayer
       player.character:PlayEmote("idle-dance-casual", 1.0, false, function()
-      print("Emote playback complete.")
+        print("Emote playback complete.")
       end)
       ```
     tags:

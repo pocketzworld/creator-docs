@@ -35,18 +35,39 @@ constructors:
         tags:
         default:
         summary:
-      - name: baseColor
+      - name: backgroundColor
         type: DataType.Color
         tags:
+        default:
+        summary:
+      - name: backgroundGradientColor
+        type: DataType.Color
+        tags:
+          - optional
+        default:
+        summary:
+      - name: gradientDirection
+        type: number
+        tags:
+          - optional
         default:
         summary:
     returns:
       - type: Class.CrewFlag
         summary:
 properties:
-  - name: baseColor
+  - name: backgroundColor
     summary: |
-      Gets or sets the base color used for rendering or processing operations.
+      Gets or sets the background color used for rendering or processing operations.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: DataType.Color
+  - name: backgroundGradientColor
+    summary: |
+      Gets or sets the second background color used for gradient rendering.
     description:
     is_static: false
     code_samples:
@@ -71,6 +92,25 @@ properties:
     tags:
       - ClientAndServer
     type: DataType.Color
+  - name: gradientDirection
+    summary: |
+      Gets or sets the gradient direction for the background in degrees (0-360).
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+    type: number
+  - name: hasGradientBackground
+    summary: |
+      Whether the flag's background has a gradient.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientAndServer
+      - ReadOnly
+    type: boolean
   - name: patternColor
     summary: |
       Gets or sets the color used for the pattern fill.

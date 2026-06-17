@@ -56,16 +56,19 @@ properties:
     summary: |
       An event that is fired when a client receives a text message. If this event has no connected listeners, the text message will display normally.
       If you connect to this event to do custom messaging logic, use the `DisplayTextMessage` method to send the final results.
+      For automatic translation to work properly in your world, both language and originalMessage must be passed to DisplayTextMessage.
       Event Parameters:
           Channel: a ChannelInfo instance representing the channel the message was received in.
           Player: the Player instance that sent the message.
           Message: the message that was received.
+          Language: the language of the message.
+          Original message: the original message before any automatic translation was applied to it.
     description:
     is_static: false
     code_samples: |
       ```lua
-      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message)
-        Chat:DisplayTextMessage(channel, player, message)
+      Chat.TextMessageReceivedHandler:Connect(function(channel, player, message, language, originalMessage)
+        Chat:DisplayTextMessage(channel, player, message, language, originalMessage)
       end)
       ```
     tags:

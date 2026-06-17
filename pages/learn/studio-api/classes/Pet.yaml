@@ -33,7 +33,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
       - ReadOnly
     type: boolean
   - name: isMounted
@@ -43,7 +43,7 @@ properties:
     is_static: false
     code_samples:
     tags:
-      - ClientAndServer
+      - ClientOnly
       - ReadOnly
     type: boolean
   - name: isNFT
