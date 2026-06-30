@@ -265,7 +265,12 @@ properties:
     type: boolean
   - name: value
     summary: |
-      The contents of the text field.
+      Override the value setter to strip non-emoji <sprite> tags before the base
+      runs. The base setter both updates the stored value and assigns the rendered
+      text directly (this.text = ProcessRawValue(...)), so filtering only in
+      isn't enough — by the time TMP sees the text
+      it could already contain a badge-shaped tag. Filtering here covers both typing
+      and programmatic field.value = ... assignments.
     description:
     is_static: false
     code_samples:
