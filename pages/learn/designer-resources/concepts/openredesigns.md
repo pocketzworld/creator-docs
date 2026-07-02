@@ -23,9 +23,11 @@ They may not be used as bases for any regular Concept.
 
 [_CS_](https://highrise.game/catalog/designer-profile/_CS_)
 
-[Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
-
 [declined](https://highrise.game/catalog/designer-profile/declined)
+
+[delixate](https://highrise.game/catalog/designer-profile/delixate)
+
+[Di0nysus_](https://highrise.game/catalog/designer-profile/Di0nysus_)
 
 [EIexus](https://highrise.game/catalog/designer-profile/EIexus)
 
@@ -118,6 +120,8 @@ They may not be used as bases for any regular Concept.
 [Serahnity](https://highrise.game/catalog/designer-profile/Serahnity)
 
 [Shaikuma](https://highrise.game/catalog/designer-profile/Shaikuma)
+
+[SioraLuxe](https://highrise.game/catalog/designer-profile/SioraLuxe)
 
 [StephanieSky](https://highrise.game/catalog/designer-profile/StephanieSky)
 
