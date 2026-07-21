@@ -20,6 +20,15 @@ constructors:
       - type: Class.UIImage
         summary:
 properties:
+  - name: forcedUpscale
+    summary: |
+      Forced upscale factor for the image.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: number
 methods:
   - name: Dispose
     summary:

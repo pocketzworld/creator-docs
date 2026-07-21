@@ -87,6 +87,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
+  - name: eventRewardPopupsEnabled
+    summary: |
+      Controls whether the full-screen popup is shown when the local player crosses an event
+      reward ticket threshold.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    type: boolean
   - name: hud
     summary:
     description:

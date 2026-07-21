@@ -7,20 +7,37 @@ inherits:
 tags:
 constructors:
   - name: new
-    summary:
+    summary: |
+      Creates a new HTTP request targeting the given URL. The method must be one of the
+      values on the global HTTPMethod table (GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS).
+      Raises an error if the URL is empty or the method is not a valid HTTPMethod value.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local request = HTTPRequest.new("https://api.example.com/scores", HTTPMethod.POST)
+      ```
     tags:
       - ServerOnly
     parameters:
+      - name: url
+        type: string
+        tags:
+        default:
+        summary:
+      - name: method
+        type: Enum.HTTPMethod
+        tags:
+        default:
+        summary:
     returns:
       - type: Class.HTTPRequest
         summary:
 properties:
 methods:
   - name: SetBody
-    summary:
+    summary: |
+      Sets the raw request body string. Returns the request, so calls can be chained.
     description:
     is_static: false
     code_samples:
@@ -33,13 +50,20 @@ methods:
         default:
         summary:
     returns:
-      - type: void
+      - type: Class.HTTPRequest
         summary:
   - name: SetHeader
-    summary:
+    summary: |
+      Sets a request header, replacing any previous value for the same name. Passing nil or
+      an empty string as the value removes the header. Returns the request, so calls can be
+      chained.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      request:SetHeader("Content-Type", "application/json")
+      request:SetHeader("x-api-key", apiKey)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -54,29 +78,50 @@ methods:
         default:
         summary:
     returns:
-      - type: void
+      - type: Class.HTTPRequest
         summary:
   - name: SetJSONBody
-    summary:
+    summary: |
+      Encodes the given Lua value (typically a table) as JSON and sets it as the request
+      body. Returns the request, so calls can be chained.
+      
+      Tables with consecutive integer keys starting at 1 encode as JSON arrays; all other
+      tables encode as JSON objects. Note that an EMPTY table encodes as an empty JSON
+      object ({}), never as an empty array. Use the global JSONNull to encode an explicit
+      JSON null (a nil table value would simply omit the key).
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      request:SetJSONBody({
+          grants = {
+              { user_id = player.user.id, tickets = 5 },
+          },
+          event_id = JSONNull, -- encodes as null
+      })
+      ```
     tags:
       - ServerOnly
     parameters:
-      - name: json
-        type: string
+      - name: value
+        type: any
         tags:
         default:
         summary:
     returns:
-      - type: void
+      - type: Class.HTTPRequest
         summary:
   - name: SetQueryParameter
-    summary:
+    summary: |
+      Sets a URL query parameter, replacing any previous value for the same name. Passing
+      nil or an empty string as the value removes the parameter. Returns the request, so
+      calls can be chained.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      request:SetQueryParameter("user_id", player.user.id)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -91,6 +136,6 @@ methods:
         default:
         summary:
     returns:
-      - type: void
+      - type: Class.HTTPRequest
         summary:
 math_operations:

@@ -9,10 +9,30 @@ constructors:
 properties:
 methods:
   - name: Request
-    summary:
+    summary: |
+      Sends an HTTP request and invokes the callback with the response. Requests are
+      rate-limited; bursts of requests may fail with HTTPError.RequestThrottled.
     description:
     is_static: true
-    code_samples:
+    code_samples: |
+      ```lua
+      local request = HTTPRequest.new("https://api.example.com/scores", HTTPMethod.POST)
+      request:SetHeader("Content-Type", "application/json")
+      request:SetJSONBody({ user_id = player.user.id, score = 100 })
+      
+      HTTPClient.Request(request, function(response, error)
+          if error ~= HTTPError.None or response == nil then
+              print("Request failed: " .. tostring(HTTPError[error]))
+              return
+          end
+          if response:GetStatusCode() ~= 200 then
+              print("HTTP " .. response:GetStatusCode() .. ": " .. tostring(response:GetBody()))
+              return
+          end
+          local data = response:GetJSONBody() -- decoded into a Lua table
+          print("New rank: " .. data.rank)
+      end)
+      ```
     tags:
       - ServerOnly
     parameters:
@@ -22,7 +42,7 @@ methods:
         default:
         summary:
       - name: callback
-        type: "(response: HTTPResponse) -> ()"
+        type: "(response: HTTPResponse, error: HTTPError) -> ()"
         tags:
         default:
         summary:
