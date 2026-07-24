@@ -35,13 +35,13 @@ Whenever we make changes, we’ll always do our best to explain our reasoning or
 
 Our artists have finished their interpretation of your design! We will send you a preview for you to review. Here is what we need from you!
 
-- You have 48 hours to review the design, starting from when the preview image is sent. This is your time to look over the design and request changes, so please be as thorough as possible with your feedback on the design so far. Is the hair too long? Do you want it a brighter red? Let us know. Some feedback *during* the 48 hour window is better than *no* feedback after the 48 hour window! So please, send your edits ASAP 🕜
+- You have 24 hours to review the design, starting from when the preview image is sent. This is your time to look over the design and request changes, so please be as thorough as possible with your feedback on the design so far. Is the hair too long? Do you want it a brighter red? Let us know. Some feedback *during* the 24 hour window is better than *no* feedback after the 24 hour window! So please, send your edits ASAP 🕜
     - Feel free to send us draw overs and written notes. Being specific helps us make the correct edits and makes sure you are happy with the changes.
     - We will sometimes send a second preview after making major edits. We will do our best to let you know what edits we can and cannot make in writing if a second preview is not sent.
 
 **Important things to keep in mind:**
 
-1. We have limited time to meet our production schedule, so please make sure you are providing ALL feedback within the 48 hour window. Any feedback outside that window may not be considered.
+1. We have limited time to meet our production schedule, so please make sure you are providing ALL feedback within the 24 hour window. Any feedback outside that window may not be considered.
 2. We may have to make changes to your design. Please review the concepting phase section to see common reasons why we may need to make changes.
 3. ALL design changes and requests need to be done within the concept stage! In the vector stage, any changes to the design will not be considered.
 4.  Due to strict production times we may have to limit the number of edits. We’ll prioritize the most impactful changes first, and minor tweaks later.
@@ -56,7 +56,7 @@ Our artists are cleaning up and converting the concept art into files Highrise u
 
 Our artist will send you the finalized preview of your design. It's time to take one last look!
 
-- You have 48 hours to review the design, starting from when the preview image is sent.
+- You have 24 hours to review the design, starting from when the preview image is sent.
     - This is the time to look at the item’s layering and placement: any major changes should be addressed in concept preview phase. If the layering of an item is not obvious in our lineup, please reach out to us for clarification.
     - We will do our best to show you color previews for complex hair or clothing items, but just note that we do not send color previews for every color-changing item like hair or lips.
 
@@ -69,7 +69,7 @@ Our artist will send you the finalized preview of your design. It's time to take
 
 ## 6. 🎁 Item in your inbox! 🎁
 
-Before the items are released to everyone in the game, you will receive the items in your inbox. Try them on! We hope you will totally fall in love with them. 😄 We do our very best to make sure your items are tested and layer properly before we send them off… but sometimes we miss things. Please flag us in our creator chat so we can fix any issues before the event, sale, or grab goes live. 
+Once the items are released to everyone in the game, you will receive the items in your inbox. Try them on! We hope you will totally fall in love with them. 😄 We do our very best to make sure your items are tested and layer properly before we send them off… but sometimes we miss things. Please flag us in our creator chat so we can fix any issues before the event, sale, or grab goes live. 
 
 At this point in the process, we are looking for layering errors and broken features.
 
