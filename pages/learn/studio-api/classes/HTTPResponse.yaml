@@ -9,7 +9,8 @@ constructors:
 properties:
 methods:
   - name: GetBody
-    summary:
+    summary: |
+      Returns the raw response body as a string, or nil if the body is empty.
     description:
     is_static: false
     code_samples:
@@ -20,7 +21,8 @@ methods:
       - type: string
         summary:
   - name: GetHeaders
-    summary:
+    summary: |
+      Returns the response headers as a table mapping header names to values.
     description:
     is_static: false
     code_samples:
@@ -28,21 +30,42 @@ methods:
       - ServerOnly
     parameters:
     returns:
-      - type: {string}
+      - type: Class.{[string]:string}
         summary:
   - name: GetJSONBody
-    summary:
+    summary: |
+      Parses the response body as JSON and returns the decoded Lua value (typically a
+      table). Returns nil if the body is empty; raises an error if the body is not valid
+      JSON.
+      
+      By default, JSON null values decode to the global JSONNull sentinel so that keys with
+      null values are preserved in decoded tables (a nil value would delete the key). Pass
+      false for decodeNull to decode JSON null as nil instead. Compare against JSONNull, or
+      use type(value) checks, when reading fields that may be null.
     description:
     is_static: false
-    code_samples:
+    code_samples: |
+      ```lua
+      local data = response:GetJSONBody()
+      if type(data.tickets_total) == "number" then
+          print("Total tickets: " .. data.tickets_total)
+      end
+      ```
     tags:
       - ServerOnly
     parameters:
+      - name: decodeNull
+        type: boolean
+        tags:
+          - optional
+        default:
+        summary:
     returns:
-      - type: string
+      - type: any
         summary:
   - name: GetStatusCode
-    summary:
+    summary: |
+      Returns the HTTP status code of the response (e.g. 200, 404).
     description:
     is_static: false
     code_samples:

@@ -1,0 +1,82 @@
+name: HTTPMethod
+type: enums
+summary: |
+  The method types available for HTTP requests.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: DELETE
+    summary: |
+      HTTP DELETE method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+  - name: GET
+    summary: |
+      HTTP GET method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+  - name: HEAD
+    summary: |
+      HTTP HEAD method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+  - name: OPTIONS
+    summary: |
+      HTTP OPTIONS method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+  - name: PATCH
+    summary: |
+      HTTP PATCH method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+  - name: POST
+    summary: |
+      HTTP POST method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+  - name: PUT
+    summary: |
+      HTTP PUT method
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ServerOnly
+      - ReadOnly
+    type: Enum.HTTPMethod
+methods:
+math_operations:

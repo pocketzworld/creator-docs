@@ -48,6 +48,16 @@ constructors:
       - type: Class.DragGesture
         summary:
 properties:
+  - name: startPosition
+    summary: |
+      Position the drag gesture started at
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: DataType.Vector2
 methods:
   - name: Custom
     summary:
