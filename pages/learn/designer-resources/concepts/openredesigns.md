@@ -23,6 +23,8 @@ They may not be used as bases for any regular Concept.
 
 [_CS_](https://highrise.game/catalog/designer-profile/_CS_)
 
+[Csarjavr](https://highrise.game/catalog/designer-profile/Csarjavr)
+
 [declined](https://highrise.game/catalog/designer-profile/declined)
 
 [delixate](https://highrise.game/catalog/designer-profile/delixate)
@@ -58,6 +60,8 @@ They may not be used as bases for any regular Concept.
 [IrisEstella](https://highrise.game/catalog/designer-profile/IrisEstella)
 
 [irensa](https://highrise.game/catalog/designer-profile/irensa)
+
+[iwvi](https://highrise.game/catalog/designer-profile/iwvi)
 
 [J4CY4NY](https://highrise.game/catalog/designer-profile/J4CY4NY)
 
