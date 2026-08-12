@@ -39,6 +39,8 @@ They may not be used as bases for any regular Concept.
 
 [feIine](https://highrise.game/catalog/designer-profile/feIine)
 
+[Gobcita](https://highrise.game/catalog/designer-profile/Gobcita)
+
 [grass4life](https://highrise.game/catalog/designer-profile/grass4life)
 
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
@@ -124,6 +126,8 @@ They may not be used as bases for any regular Concept.
 [Serahnity](https://highrise.game/catalog/designer-profile/Serahnity)
 
 [Shaikuma](https://highrise.game/catalog/designer-profile/Shaikuma)
+
+[Shimikaro](https://highrise.game/catalog/designer-profile/Shimikaro)
 
 [SioraLuxe](https://highrise.game/catalog/designer-profile/SioraLuxe)
 
