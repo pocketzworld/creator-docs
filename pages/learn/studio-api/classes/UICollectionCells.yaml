@@ -22,7 +22,8 @@ constructors:
         summary:
 properties:
   - name: cellCount
-    summary:
+    summary: |
+      Return the number of cells in the collection
     description:
     is_static: false
     code_samples:
@@ -31,7 +32,8 @@ properties:
       - ReadOnly
     type: number
   - name: collection
-    summary:
+    summary: |
+      Returns the parent collection
     description:
     is_static: false
     code_samples:
@@ -40,7 +42,8 @@ properties:
       - ReadOnly
     type: Class.UICollection
   - name: hasLayout
-    summary:
+    summary: |
+      Returns true if the cells container has a layout defined
     description:
     is_static: false
     code_samples:
@@ -49,7 +52,8 @@ properties:
       - ReadOnly
     type: boolean
   - name: loading
-    summary:
+    summary: |
+      Set to true to show the loading indicator
     description:
     is_static: false
     code_samples:
@@ -65,7 +69,8 @@ properties:
       - ClientOnly
     type: Class.UICollectionProvider
   - name: section
-    summary:
+    summary: |
+      Returns the parent section
     description:
     is_static: false
     code_samples:
@@ -74,7 +79,8 @@ properties:
       - ReadOnly
     type: Class.UICollectionSection
   - name: selection
-    summary:
+    summary: |
+      Returns the selection cell index
     description:
     is_static: false
     code_samples:
@@ -83,7 +89,8 @@ properties:
       - ReadOnly
     type: {number}
   - name: selectionCount
-    summary:
+    summary: |
+      Returns the number of selected cells
     description:
     is_static: false
     code_samples:
@@ -102,7 +109,8 @@ properties:
     type: {Class.UIView}
 methods:
   - name: AddCell
-    summary:
+    summary: |
+      Add a single cell to the end
     description:
     is_static: false
     code_samples:
@@ -113,7 +121,8 @@ methods:
       - type: void
         summary:
   - name: AddCells
-    summary:
+    summary: |
+      Add one or more cells to the end
     description:
     is_static: false
     code_samples:
@@ -129,7 +138,8 @@ methods:
       - type: void
         summary:
   - name: Deselect
-    summary:
+    summary: |
+      Deselect a cell using the cell view
     description:
     is_static: false
     code_samples:
@@ -145,7 +155,8 @@ methods:
       - type: void
         summary:
   - name: Deselect
-    summary:
+    summary: |
+      Deselect a cell using the cell index
     description:
     is_static: false
     code_samples:
@@ -161,7 +172,8 @@ methods:
       - type: void
         summary:
   - name: DeselectAll
-    summary:
+    summary: |
+      Deselect all cells in the collection
     description:
     is_static: false
     code_samples:
@@ -183,7 +195,9 @@ methods:
       - type: void
         summary:
   - name: EnumerateVisibleCells
-    summary:
+    summary: |
+      Enumerate all visible cells in the collection.  Note that no changes to the cells
+      should be made during a call to enumerate or the results will be unknown.
     description:
     is_static: false
     code_samples:
@@ -199,7 +213,8 @@ methods:
       - type: void
         summary:
   - name: GetVisibleCell
-    summary:
+    summary: |
+      Return the cell for the given visible cell for the index or null if the cell is not visible
     description:
     is_static: false
     code_samples:
@@ -215,7 +230,9 @@ methods:
       - type: Class.UIView
         summary:
   - name: IndexOf
-    summary:
+    summary: |
+      Return the index of the given cell within the collection.  If the cell is
+      not found a value of -1 will be returned.
     description:
     is_static: false
     code_samples:
@@ -247,7 +264,8 @@ methods:
       - type: void
         summary:
   - name: InsertCells
-    summary:
+    summary: |
+      Insert one or more cells into the collection.  If the given index is <0 then add to the end
     description:
     is_static: false
     code_samples:
@@ -268,7 +286,9 @@ methods:
       - type: void
         summary:
   - name: InstantiateCell
-    summary:
+    summary: |
+      Instantiates a new cell within the container and returns the instance.  This method
+      may pull cells from the recycle bin if available.
     description:
     is_static: false
     code_samples:
@@ -279,12 +299,14 @@ methods:
         type: number
         tags:
         default:
-        summary:
+        summary: |
+          Index of the cell within the collection to instantiate
     returns:
       - type: Class.UIView
         summary:
   - name: IsSelected
-    summary:
+    summary: |
+      Returns true if the given cell is selected
     description:
     is_static: false
     code_samples:
@@ -300,7 +322,8 @@ methods:
       - type: boolean
         summary:
   - name: IsSelected
-    summary:
+    summary: |
+      Returns true if the given cell index is selected
     description:
     is_static: false
     code_samples:
@@ -353,7 +376,8 @@ methods:
       - type: void
         summary:
   - name: RecycleCell
-    summary:
+    summary: |
+      Recycle the given cell using the appropriate recycling method.
     description:
     is_static: false
     code_samples:
@@ -374,7 +398,8 @@ methods:
       - type: void
         summary:
   - name: RemoveAllCells
-    summary:
+    summary: |
+      Remove all cells from the collection
     description:
     is_static: false
     code_samples:
@@ -385,7 +410,8 @@ methods:
       - type: void
         summary:
   - name: RemoveCell
-    summary:
+    summary: |
+      Remove a single cell from the collection
     description:
     is_static: false
     code_samples:
@@ -396,12 +422,14 @@ methods:
         type: number
         tags:
         default:
-        summary:
+        summary: |
+          Index of the cell to remove
     returns:
       - type: void
         summary:
   - name: RemoveCells
-    summary:
+    summary: |
+      Remove all cells in the given range.  Note that this call must be made from within PerformUpdates
     description:
     is_static: false
     code_samples:
@@ -412,17 +440,20 @@ methods:
         type: number
         tags:
         default:
-        summary:
+        summary: |
+          Starting index
       - name: count
         type: number
         tags:
         default:
-        summary:
+        summary: |
+          Number of cells to remove
     returns:
       - type: void
         summary:
   - name: ScrollTo
-    summary:
+    summary: |
+      Scroll to the cell at the given index
     description:
     is_static: false
     code_samples:
@@ -444,7 +475,9 @@ methods:
       - type: void
         summary:
   - name: Select
-    summary:
+    summary: |
+      Select the given cell and deselect all other cells.  To add a cell to the selection
+      pass true for the add parameter
     description:
     is_static: false
     code_samples:
@@ -466,7 +499,9 @@ methods:
       - type: void
         summary:
   - name: Select
-    summary:
+    summary: |
+      Select the cell at the given index and deselect all other cells.  To add a cell to the selection
+      pass true for the add parameter
     description:
     is_static: false
     code_samples:
@@ -488,7 +523,8 @@ methods:
       - type: void
         summary:
   - name: SelectionIndexOf
-    summary:
+    summary: |
+      Returns the cell's index in the selection list if it's selected or -1 if it's not
     description:
     is_static: false
     code_samples:
@@ -536,7 +572,8 @@ methods:
       - type: void
         summary:
   - name: Toggle
-    summary:
+    summary: |
+      Toggles the selection state of the cell
     description:
     is_static: false
     code_samples:
@@ -558,7 +595,8 @@ methods:
       - type: void
         summary:
   - name: Toggle
-    summary:
+    summary: |
+      Toggles the selection state of the cell
     description:
     is_static: false
     code_samples:

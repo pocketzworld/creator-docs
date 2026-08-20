@@ -78,6 +78,20 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.AudioShader
+  - name: ButtonClickNew
+    summary: |
+      ButtonClick is a static property that returns the audio shader for the button click sound.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the button click sound
+      Sounds.ButtonClickNew:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
   - name: CardFlip
     summary: |
       CardFlip is a static property that returns the audio shader for the card flip sound.
@@ -87,6 +101,51 @@ properties:
       ```lua
       -- Play the card flip sound
       Sounds.CardFlip:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
+  - name: CoinLandGeneric
+    summary: |
+      CoinLandGeneric is a static property that returns the audio shader for the generic coin land sound.
+      Played each time a non-gold currency sprite lands in the wallet.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the generic coin land sound
+      Sounds.CoinLandGeneric:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
+  - name: CoinLandGold
+    summary: |
+      CoinLandGold is a static property that returns the audio shader for the gold coin land sound.
+      Played each time a gold coin sprite lands in the wallet.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the gold coin land sound
+      Sounds.CoinLandGold:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
+  - name: CurrencyBurst
+    summary: |
+      CurrencyBurst is a static property that returns the audio shader for the currency burst sound.
+      A cork-pop played as a currency rewards card collapses and bursts into coins that fly toward the wallet.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the currency burst sound
+      Sounds.CurrencyBurst:Play()
       ```
     tags:
       - ClientOnly
@@ -157,6 +216,36 @@ properties:
       ```lua
       -- Play the slider haptics sound
       Sounds.HapticsSlider:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
+  - name: ItemLand
+    summary: |
+      ItemLand is a static property that returns the audio shader for the item land sound.
+      A soft thud played as a rewards item card lands in the backpack.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the item land sound
+      Sounds.ItemLand:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
+  - name: ItemWhoosh
+    summary: |
+      ItemWhoosh is a static property that returns the audio shader for the item whoosh sound.
+      A wind-rush played as a rewards item card launches toward the backpack.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the item whoosh sound
+      Sounds.ItemWhoosh:Play()
       ```
     tags:
       - ClientOnly
@@ -246,6 +335,21 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.AudioShader
+  - name: RewardsCardFlip
+    summary: |
+      RewardsCardFlip is a static property that returns the audio shader for the rewards card flip sound.
+      A short wind-rush played as a rewards card begins its flip rotation.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the rewards card flip sound
+      Sounds.RewardsCardFlip:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
   - name: Screenshot
     summary: |
       Screenshot is a static property that returns the audio shader for the screenshot sound.
@@ -255,6 +359,22 @@ properties:
       ```lua
       -- Play the screenshot sound
       Sounds.Screenshot:Play()
+      ```
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.AudioShader
+  - name: TilePop
+    summary: |
+      TilePop is a static property that returns the audio shader for the tile pop sound.
+      A soft pluck played as each card of the rewards wallet grid pops into view; successive
+      cards play it at a higher pitch.
+    description:
+    is_static: true
+    code_samples: |
+      ```lua
+      -- Play the tile pop sound
+      Sounds.TilePop:Play()
       ```
     tags:
       - ClientOnly

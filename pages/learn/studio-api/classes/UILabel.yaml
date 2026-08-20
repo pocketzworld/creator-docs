@@ -101,7 +101,8 @@ methods:
       - type: void
         summary:
   - name: EmojiPrelocalized
-    summary:
+    summary: |
+      Instantiate a UILabel using an emoji prelocalized text
     description:
     is_static: true
     code_samples:
@@ -129,7 +130,8 @@ methods:
       - type: Class.UILabel
         summary:
   - name: PreLocalized
-    summary:
+    summary: |
+      Instantiate a UILabel using prelocalized text
     description:
     is_static: true
     code_samples:
