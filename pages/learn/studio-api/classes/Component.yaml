@@ -106,18 +106,18 @@ methods:
         tags:
         default:
         summary: |
-          The type of the component to retrieve.
+          Component type to search for in children.
       - name: includeInactive
         type: boolean
         tags:
           - optional
         default:
         summary: |
-          Whether to include inactive GameObjects in the search.
+          Includes inactive GameObjects in the search.
     returns:
       - type: Class.Component
         summary: |
-          The first component of the specified type attached to the GameObject's children.
+          The component, if found among children.
   - name: GetComponentInParent
     summary: |
       Looks for a specified component type in the GameObject's parent hierarchy, useful for accessing shared components in parent objects.
@@ -133,14 +133,14 @@ methods:
         tags:
         default:
         summary: |
-          The type of the component to retrieve.
+          Component type to search for in parents.
       - name: includeInactive
         type: boolean
         tags:
           - optional
         default:
         summary: |
-          Whether to include inactive GameObjects in the search.
+          Includes inactive GameObjects in the search.
     returns:
       - type: Class.Component
         summary: |

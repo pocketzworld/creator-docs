@@ -87,16 +87,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: boolean
-  - name: eventRewardPopupsEnabled
-    summary: |
-      Controls whether the full-screen popup is shown when the local player crosses an event
-      reward ticket threshold.
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    type: boolean
   - name: hud
     summary:
     description:
@@ -414,6 +404,30 @@ methods:
         tags:
         default:
         summary:
+    returns:
+      - type: void
+        summary:
+  - name: OpenOutfitInspector
+    summary: |
+      Open an outfit inspector showing the items that make up the given outfit.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: outfit
+        type: Class.CharacterOutfit
+        tags:
+        default:
+        summary: |
+          The outfit to inspect.
+      - name: title
+        type: string
+        tags:
+        default:
+        summary: |
+          The title to display at the top of the inspector.
     returns:
       - type: void
         summary:

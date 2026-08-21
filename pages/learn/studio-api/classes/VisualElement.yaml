@@ -1075,6 +1075,138 @@ methods:
     returns:
       - type: void
         summary:
+  - name: TweenBorderColor
+    summary: |
+      Creates a tween that transitions all four border colors (top, bottom, left, right) of a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending border color of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenBorderColor
+    summary: |
+      Creates a tween that transitions all four border colors (top, bottom, left, right) of a VisualElement from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Starting border color of the VisualElement.
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending border color of the VisualElement.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenColor
+    summary: |
+      Creates a tween that transitions the alpha of an image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending alpha of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenColor
+    summary: |
+      Creates a tween that transitions the alpha of an image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Starting alpha of the object.
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending alpha of the object.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenImageTintColor
+    summary: |
+      Creates a tween that transitions the tint color of a VisualElement's background image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending tint color of the background image.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenImageTintColor
+    summary: |
+      Creates a tween that transitions the tint color of a VisualElement's background image from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Starting tint color of the background image.
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending tint color of the background image.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
   - name: TweenOpacity
     summary: |
       Creates a tween that transitions the opacity of a VisualElement from one value to the other.
