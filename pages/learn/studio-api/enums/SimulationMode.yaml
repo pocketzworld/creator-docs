@@ -1,0 +1,42 @@
+name: SimulationMode
+type: enums
+summary: |
+  [Unity's SimulationMode Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SimulationMode.html)
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: FixedUpdate
+    summary: |
+      [Unity's SimulationMode.FixedUpdate Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SimulationMode.FixedUpdate.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SimulationMode
+  - name: Script
+    summary: |
+      [Unity's SimulationMode.Script Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SimulationMode.Script.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SimulationMode
+  - name: Update
+    summary: |
+      [Unity's SimulationMode.Update Documentation](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/SimulationMode.Update.html)
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.SimulationMode
+methods:
+math_operations:

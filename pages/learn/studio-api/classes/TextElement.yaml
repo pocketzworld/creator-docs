@@ -129,4 +129,48 @@ methods:
     returns:
       - type: void
         summary:
+  - name: TweenTextColor
+    summary: |
+      Creates a tween that transitions the text color of a TextElement (Label, Button, etc.) from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending text color of the element.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
+  - name: TweenTextColor
+    summary: |
+      Creates a tween that transitions the text color of a TextElement (Label, Button, etc.) from one value to the other.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+    parameters:
+      - name: from
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Starting text color of the element.
+      - name: to
+        type: DataType.Color
+        tags:
+        default:
+        summary: |
+          Ending text color of the element.
+    returns:
+      - type: DataType.Tween
+        summary: |
+          A Tween object you can use to further customize the motion.
 math_operations:
