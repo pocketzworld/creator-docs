@@ -25,6 +25,8 @@ They may not be used as bases for any regular Concept.
 
 [Csarjavr](https://highrise.game/catalog/designer-profile/Csarjavr)
 
+[Czio](https://highrise.game/catalog/designer-profile/Czio)
+
 [declined](https://highrise.game/catalog/designer-profile/declined)
 
 [delixate](https://highrise.game/catalog/designer-profile/delixate)
@@ -107,6 +109,8 @@ They may not be used as bases for any regular Concept.
 
 [Papersweet](https://highrise.game/catalog/designer-profile/Papersweet)
 
+[peagean](https://highrise.game/catalog/designer-profile/peagean)
+
 [PigeonMilk](https://highrise.game/catalog/designer-profile/PigeonMilk)
 
 [PinkGlitzy](https://highrise.game/catalog/designer-profile/PinkGlitzy)
@@ -168,6 +172,8 @@ They may not be used as bases for any regular Concept.
 [xinachi](https://highrise.game/catalog/designer-profile/xinachi)
 
 [z.im](https://highrise.game/catalog/designer-profile/z.im)
+
+[4watty](https://highrise.game/catalog/designer-profile/4watty)
 
 [6tx](https://highrise.game/catalog/designer-profile/6tx)
 
