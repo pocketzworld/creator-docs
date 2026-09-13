@@ -1,126 +1,133 @@
-
 ## WHAT TO SUBMIT ✅
-![combined_banner_16_9](https://github.com/user-attachments/assets/47794206-b5aa-4076-8ac2-edf9fb5031cf)
 
+Anything can be the source of inspiration for a great Idea. Item themes and clothing types are entirely up to you. Here's what to consider as you design and share your item Ideas:
 
-Anything can be the source of inspiration for a great Idea! Item themes and clothing types are totally up to you. Here’s a quick checklist of what to consider as you design and share your item Ideas:
+**👚 Wearable Avatar Items**
 
-**👚 Wearable Avatar Items**   
+Ideas only accepts items that customise your avatar's features (eyes, noses, hair, body shape), clothing, and accessories.
 
-Ideas is currently only accepting items to customize your avatar’s features (eyes, noses, hair, body shape), clothing, and accessories.
+**☝️ Single Items**
 
-**☝️ Single Items**    
+Ideas accepts individual pieces only. Some items might have built-in arms, legs, or accessories, but we won't approve anything that could be released as multiple items. A hair item with built-in ears and hairclips, for example, may be rejected for containing three potential items instead of one.
 
-Ideas accepts individual pieces only. While some items might have built-in arms, legs, or accessories, we won’t approve any item that could potentially be released as multiple items. So if you design a hair item with built-in ears and hairclips, for example, your Idea may be rejected for containing three potential items instead of one.
+**✏️ Finished-Looking Designs**
 
-**💡 Original Items**   
+Your submission needs to clearly show what the player will actually get. Rough sketches, unclear concepts, and half-finished designs will be rejected.
 
-Share your fresh item designs! We are not accepting redesigns in Highrise Ideas. Additionally, an Idea may not be approved if it is too similar to an existing item, regardless of whether or not the similarity is intentional.
+This matters because backers preorder based on your picture, and our artists build what's in that picture. When a design is vague, the finished item often isn't what you had in mind, and everyone waiting behind you in the queue waits longer.
 
-A small exception to this rule is the use of BRANDING to create a unique line of bespoke items. If you are creating a brand around a particular item type (like shoes) or a specific aesthetic (like a curvy body shape), we provide greater flexibility in how you use your own item bases, styles, and rendering. Branding is limited to items originally released in HR Ideas; Concept entries are not eligible for use as future Ideas item bases. 
+If drawing isn't your strength, commissioning a fellow Highrise artist is completely legitimate. See Commissioned Items below.
 
-**🌈 Fixed Colors**     
+**💡 Original Items**
 
-We only accept items that are "naturally" color changing: hair, eyes, lips, and blushes are all acceptable. 
-We _do not_ accept items that wouldn't color change in real life (handbags, scrunchies, gowns, shirts, shoes, etc.). 
+Share fresh designs. We don't accept redesigns, and an Idea may be rejected if it's too similar to an existing item, whether or not the similarity is intentional.
 
-- **VALID COLOR CHANGE**: hair, lips, eyes, eyebrows, facial hair, clip-in bangs, freckles, blush. Additionally, items with built-in body parts (posed arms and legs, rider items, crop tops with exposed skin, items that tweak avatar body proportions) are all acceptable.
--  **INVALID COLOR CHANGE**: clothing, auras, makeup, or accessory items that change based on hair, skin, lip, or eye color. Items that color change according to unnatural_ color dependencies are also not valid (ie, hair that changes color according to eyes; eyes that color change according to lips, etc.) 
- 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c03c15cb-e551-4ec9-8acc-ee571a09d6cf" />
-</p>
+We're also stricter than we used to be about designs that follow a trend. When one Idea funds, we tend to see a wave of near-identical submissions chasing it. Those won't be approved.
 
-_Body parts that typically have hair are considered valid for color-changing. Animal ears, tails, and other fur-or-scale-clad body parts may change color._
+Accidental similarity gets your Idea rejected. Deliberately copying another player's item is different, and is covered under Copied Work below.
 
-**📄 Appropriately Categorized Items**   
+A small exception is the use of BRANDING to create a unique line of bespoke items. If you're building a brand around a particular item type (like shoes) or a specific aesthetic (like a curvy body shape), we allow greater flexibility in how you reuse your own item bases, styles, and rendering. Branding is limited to items originally released in HR Ideas; Concept entries are not eligible for use as future Ideas item bases.
 
-As you create your Idea submission, you’ll define the item’s type and rarity. Review the item type categories (shirt, aura, lips, bag, etc.) to ensure that your item will layer properly; then, pick a rarity that matches the item’s approximate value (ie, a dazzling, bombastic pair of wings should not be a Rare).
+**🌈 Fixed Colors**
 
-👛 **Commissioned Items**  
+We only accept items that change colour "naturally". Hair, eyes, lips, and blushes are all acceptable. We do not accept colour change on items that wouldn't change colour in real life, such as handbags, scrunchies, gowns, shirts, or shoes.
 
-Have a great Idea, but don't feel confident in your artistic ability? You may commission a fellow Highrise artist to help bring your vision to life. However, please note that commissions are considered "Trust Trades" – all payment or compensation must be handled prior to your Idea submission. Highrise is not responsible for ensuring commission payments are delivered.
+- **VALID COLOR CHANGE**: hair, lips, eyes, eyebrows, facial hair, clip-in bangs, freckles, blush. Items with built-in body parts are also acceptable, including posed arms and legs, rider items, crop tops with exposed skin, and items that tweak avatar body proportions.
+- **INVALID COLOR CHANGE**: clothing, auras, makeup, or accessory items that change based on hair, skin, lip, or eye colour. Items that colour change according to unnatural dependencies are also invalid, such as hair that changes with eye colour, or eyes that change with lip colour.
 
-In your commissioned Idea submission, please use a tag on the item image and description stating that it is commissioned work. Use “Commission from __” with your artist’s name so our team doesn’t accidentally remove your entry!
+_Body parts that typically have hair are valid for colour-changing. Animal ears, tails, and other fur-clad or scale-clad body parts may change colour._
 
-As of February 19th, 2026, any Commissioned HR Idea items released in-game may include **attribution to both usernames**, upon request by the user who submitted the idea. In all collaborations and commissions, Gold division is decided by players. This change only applies to items currently in production and funding phases: items releases before this date will retain their original attributions.
+**📄 Appropriately Categorized Items**
 
+As you create your submission, you'll define the item's type. Review the categories (shirt, aura, lips, bag, and so on) to make sure your item will layer properly.
 
+Item type also determines your item's price, so pick carefully. You don't choose a rarity: all Ideas items are Legendary. See the [Overview](https://create.highrise.game/learn/designer-resources/ideas/overview) for prices and the reasoning behind them.
 
-## WHAT WE'RE NOT ACCEPTING ❌  
+**👛 Commissioned Items**
 
-Ideas may be rejected by our team at any point! Here are some of the most common reasons why:
+Have a great Idea but don't feel confident in your artistic ability? You can commission a fellow Highrise artist to help bring your vision to life.
 
+Commissions are considered "Trust Trades". All payment or compensation must be handled before you submit your Idea, and Highrise is not responsible for ensuring commission payments are delivered.
 
-🤖 **AI Entries**   
+In a commissioned submission, tag the item image and description to say it's commissioned work. Use "Commission from __" with your artist's name so our team doesn't accidentally remove your entry.
 
-🛌 **Furniture Items**   
+Commissioned items released in-game may include **attribution to both usernames**, on request by the person who submitted the Idea. Gold division in any commission or collaboration is decided between the players involved. Items released before February 19th, 2026 retain their original attributions.
 
-🧸 **Pets, or any Pet accessory**    
+## WHAT WE'RE NOT ACCEPTING ❌
 
-🔫 **Guns**    
+Ideas may be rejected by our team at any point. Here are the most common reasons why:
 
-This applies specifically to rifles. Other firearms may be permitted but are subject to review.
+🤖 **AI Entries**
 
-👁️**Contact Lenses**   
+AI-generated submissions are not accepted. When you submit, you're confirming your design is your own work, and breaking that confirmation means a **permanent ban** from Highrise Ideas.
 
-🖼️ **Profile Backgrounds** 
+Ideas exists so that the people designing for Highrise get their work made and get paid for it. An AI output isn't your design, and putting your name on one takes a funding slot from someone who drew theirs.
 
-Stick to the wearables, please!
+🚫 **Copied Work**
+
+Basing your Idea on another player's item is grounds for a **permanent ban** from Highrise Ideas.
+
+This is separate from accidental similarity, which simply gets an Idea rejected. Deliberately taking someone else's design is theft from an artist in this community, and we treat it that way.
+
+If you see an Idea copying a player-made item, report it with the Flag Icon and include the name of the item it's based on.
+
+🛌 **Furniture Items**
+
+🧸 **Pets, or any Pet accessory**
+
+👁️ **Lenses**
+
+🖼️ **Profile Backgrounds**
+
+Stick to the wearables, please.
 
 🔐 **Account Bound Items**
 
-All Ideas items are released Tradable! We are not able to honor requests to make specific items permanently or temporarily Account Bound.
+We can't honour requests to make specific items permanently or temporarily Account Bound. Every Ideas item follows the same release rules: it can't be traded or gifted during its 7-day sale week, and trades normally after that.
 
-🦋 **Animated Items**   
+🦋 **Animated Items**
 
-⚖️™️ **Copyrighted Material**
+⚖️ **Copyrighted Material**
 
-No third-party Intellectual Property (IP) may be used in your submission. This includes...
+No third-party Intellectual Property (IP) may be used in your submission. This includes:
+
 - Trademarked logos or products
 - Branded clothing, accessories, or items
-- Fictional characters (anime, movies, games, comics, books, etc.)
-- Franchise-based visual cues (colour schemes, weapon designs, creature designs, etc.)
-- Celebrity likenesses or personas (No recognizable images of real people, celebrities, or public figures)
+- Fictional characters (anime, movies, games, comics, books, and so on)
+- Franchise-based visual cues (colour schemes, weapon designs, creature designs, and so on)
+- Celebrity likenesses or personas. No recognisable images of real people, celebrities, or public figures
 - Stock images or clip art
 
 📹 **Stock Elements**
 
-Pre-fab brushes, templates, textures, or other graphic elements may not be included. You may use these tools in the creation of your Idea if they are licensed for commercial use, or if they do not compose the majority of your design. 
-For example, you may use a free, publicly accessible sparkle asset to add an element of shine to a sequined dress that you designed yourself.
- 
+Pre-fab brushes, templates, textures, and other graphic elements may not be included. You may use these tools in creating your Idea if they're licensed for commercial use, or if they don't make up the majority of your design.
 
-####  A NOTE ON STYLE
+For example, you may use a free, publicly accessible sparkle asset to add shine to a sequined dress that you designed yourself.
 
-On the whole, Highrise’s art style lives on the border between realistic, highly rendered graphics and simple, cartoony styles. 
+#### A NOTE ON STYLE
 
-However, community concept art is as unique as each individual designer. Just take a look at our Ideas page to see an incredible diversity of styles! 
-Part of our art team’s job is to translate the varied art styles from our community creators into the Highrise style for each successful Ideas campaign. Since our virtual world is founded on the ability to mix and match thousands of items to suit your personal expression, the ability to create a cohesive outfit from a catalog of looks with a unified aesthetic really matters. 
+Highrise's art style lives on the border between realistic, highly rendered graphics and simple, cartoony styles.
 
-Because of this, some changes to your concept art style may be necessary. Highly detailed, rendered items may be simplified; flatter, less shaded concepts may be given more depth to bring them into style. 
+Community concept art is as unique as each individual designer, and part of our art team's job is to translate those varied styles into the Highrise style for each successful campaign. Our virtual world is built on mixing and matching thousands of items, so a cohesive catalogue with a unified aesthetic really matters.
 
-Hair items in particular can be pretty tricky to get right, since they need to be mix-and-matchable with different fronts and backs. While we won’t reject an item for being too rendered, please note that very realistic, HD items will be brought more in line with the rest of our items.
+Because of this, some changes to your concept art style may be necessary. Highly detailed, rendered items may be simplified. Flatter, less shaded concepts may be given more depth to bring them into style.
 
-Here are some examples of the level of rendering we’re able to give our hair items:
-<img width="3508" height="2480" alt="HairExamples (1)" src="https://github.com/user-attachments/assets/c3411a3b-cfd4-4fb9-ba7c-0adf5dcba660" />
+Hair in particular is tricky to get right, since it needs to be mix-and-matchable with different fronts and backs. We won't reject an item for being too rendered, but very realistic, HD items will be brought more in line with the rest of our catalogue.
 
-Up close, this is how we create our hair strands from deepest base shade, all the way up to the shiniest highlights. 
+Here's the level of rendering we're able to give our hair items:
 
-<img width="5075" height="2403" alt="Texture Example (1)" src="https://github.com/user-attachments/assets/64c3645c-35ee-4f8a-8383-cfd8a97f469a" />
+![Examples of Highrise hair rendering](https://github.com/user-attachments/assets/c3411a3b-cfd4-4fb9-ba7c-0adf5dcba660)
 
+Up close, this is how we build our hair strands, from the deepest base shade all the way up to the shiniest highlights:
 
+![Close-up of Highrise hair strand texture](https://github.com/user-attachments/assets/64c3645c-35ee-4f8a-8383-cfd8a97f469a)
 
+🔗 _**Not sure how to bring your concept art into style?**_ There are plenty of examples in our [Art Guides](https://create.highrise.game/learn/designer-resources/artguides/drawing).
 
-🔗 _**Not sure how to bring your concept art into style?**_ We have plenty of examples on how to draw in Highrise’s style in our Art Guides: https://create.highrise.game/learn/designer-resources/artguides/drawing
-
-####  NOTES
-
+#### NOTES
 
 1. Ideas may be rejected by Highrise staff at any stage during the Funding or Production Phase for technical constraints, quality considerations, or community guideline infringements by the designer.
-2. Highrise staff may adjust an item's details (name, rarity, and category) if necessary. Our art team may adjust an item’s appearance based on our technical limitations. This may affect proportions, hair layering, or rendering. See our Note On Style for more details. 
-3. Submit under your own account! Duplicate entries submitted under alt accounts will be removed. 
-4. You may submit any single-item design to **both Concepts and Ideas simultaneously**! We'll create whichever entry is successful first.
-5. To account for the volume of Ideas we receive, we may not share personalized explanations for why an Idea was rejected. Of course, we always welcome resubmissions, so take a look over this list, reassess your Idea, and resubmit! 
-
-
-
+2. Highrise staff may adjust an item's name or category if necessary. Our art team may adjust an item's appearance based on technical limitations, which can affect proportions, hair layering, or rendering. See A Note On Style above.
+3. Submit under your own account. Duplicate entries submitted under alt accounts will be removed.
+4. You may submit any single-item design to **both Concepts and Ideas simultaneously**. We'll create whichever entry is successful first.
+5. Given the volume of Ideas we receive, we may not share personalised explanations for why an Idea was rejected. We always welcome resubmissions, so look over this list, reassess your Idea, and try again.
