@@ -1,24 +1,32 @@
-### FUNDING PHASE 
+### FUNDING PHASE
 
-When you see an Idea that you’d love to support, click on the PRE-ORDER button to begin the preordering flow. 
+Funding is where an Idea proves people want it.
 
-![Screen Shot 2023-09-18 at 4.36.26 PM.png](https://cdn-production.joinhighrise.com/create-portal/Screen_Shot_2023_09_18_at_4_36_26_PM_b33bb246c3.png)
+Every approved Idea is live for **30 days**. During that window anyone can preorder it at **25% off**. If it reaches its goal, it goes into production immediately and gets made. If it doesn't, the Idea is cancelled and every backer is refunded.
 
-Next, you’ll be shown a page displaying the item’s creation and pricing timeline. 
+Backing an Idea is a commitment, not a wishlist. Preorders are what fund the item, so they're final.
 
-Choose how many items you want to preorder. You can order up to 10 items at a time; however TOTAL preorder purchases are unlimited. 
+**How to preorder**
 
-To buy more than 10 items, you’ll have to submit your first order of 10, and then restart the preordering process to buy another batch.
+- Open the Idea you want to support and hit **PRE-ORDER**
+- Choose how many you want. You can buy up to **10 at a time**, but there's no limit on how many you can own in total
+- To buy more than 10, complete your first order and start the flow again
+- Confirm, and you're in
 
-![Screen Shot 2023-09-18 at 4.35.24 PM.webp](https://cdn-production.joinhighrise.com/create-portal/Screen_Shot_2023_09_18_at_4_35_24_PM_89a2bc96f7.webp)
+You can preorder your own Ideas. Sometimes you just have to believe in yourself.
 
-Finally, after you select the item quantity, you’ll see one final confirmation popup. 
+**⚠️ All preorders are final**
 
-⚠️⚠️⚠️ ### ALL PREORDERS ARE FINAL. 
-Once you back an Idea, there is NO WAY to rescind your support. 
+Once you back an Idea there is no way to rescind your support. Your Gold is refunded only if:
 
-If an Idea fails to fund, or if the item is removed by Staff, your pledged Gold will be refunded. Otherwise, all preorders are **permanent commitments**. 
+- The Idea fails to reach its funding goal, or
+- The item is removed by Staff
 
-You CAN preorder your own items! Sometimes, you just have to believe in yourself. 💃
+In every other case, a preorder is a permanent commitment.
 
-Check on the progress of Ideas you’ve supported by tabbing over the **My Pre-Orders** menu on the top navigation bar.
+**After you preorder**
+
+- Track everything you've backed under **My Pre-Orders** in the top navigation bar
+- If the Idea funds, it moves straight into production. Preorders stay open at full price until the item is finished
+- Your copy arrives on launch day, when the item goes on sale in the Highrise store
+- Items can't be traded or gifted during their 7-day sale week. After that, they trade like anything else
