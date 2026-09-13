@@ -2,52 +2,106 @@
 
 ### How many Ideas can I submit?
 
-Share up to 2 Idea submissions. An individual item constitutes its own submission. 
-Once an Idea has been approved for funding or has been rejected, it no longer contributes to your Idea count. In other words, you may have an unlimited number of fully approved Ideas along the Funding and/or Production pipeline, but only 1 or 2 in the Review Phase at a time.
+As many as you like. There's no longer a limit on how many Ideas you can have in the Review Phase at once.
 
 ### What kinds of items can I submit?
 
-Share any original, wearable avatar item. This includes all avatar face and body items, hair, piercings, auras, and clothing. 
-We do not currently accept redesigns, color-changing items, furniture, or multi-item submissions.
+Any original, wearable avatar item. That includes face and body items, hair, piercings, auras, and clothing.
+
+We don't accept redesigns of existing items, furniture, pets or pet accessories, multi-item submissions, or anything generated with AI. Colour-changing is only allowed where it happens naturally, such as hair, lips, eyes, brows, facial hair, freckles, and blush.
+
+Check the [Guidelines](https://create.highrise.game/learn/designer-resources/ideas/guidelines) for the full list before you submit.
+
+### Does my submission need to look finished?
+
+Close to it, yes. Backers preorder based on your picture, so your submission needs to clearly show what the player will actually get. Rough, vague, or half-finished designs will be rejected.
+
+If drawing isn't your strength, commissioning an artist to help you realise your design is completely legitimate. A strong idea plus someone who can draw it is still your idea.
+
+### Can I use AI to make my submission?
+
+No. AI-generated submissions are not accepted, and using one is grounds for a **permanent ban** from Highrise Ideas.
+
+Ideas exists so that the people designing for Highrise get their work made and get paid for it. An AI output isn't your design, and putting your name on one takes a funding slot from someone who drew theirs.
+
+### Can I base my Idea on another player's item?
+
+No. Copying another player's design is grounds for a **permanent ban** from Highrise Ideas.
+
+Every Idea has to be your own original work. If you see an Idea that's based on a player-made item, report it using the Flag Icon and include the name of the item it's copying.
 
 ### Are collaborations allowed?
-Not at this time; all Idea submissions must be solo work only. 
-Earned Gold is sent to designers automatically at the end of the Production Phase, and this feature currently only supports single-artist entries. 
-Find your own path!
+
+You can commission another artist to help produce your design, and both usernames can be credited on the item.
+
+Earned Gold is still paid to a single account, so anything you agree to split is arranged between the two of you. Highrise doesn't divide payouts.
 
 ### Can I edit my Idea after it's been submitted?
-No: once you submit an Idea, its details may no longer be changed. If you need to make changes to your Idea's design, rarity, or description, you may delete any Idea in the **Review Phase** by navigating to **_My Ideas_** tab. Reupload the correct version of your Idea.
 
-### Can I edit my Idea after it's been submitted and approved? What if I need to make changes?
-Ideas cannot be edited after submission. If your Idea has already passed the **Review Phase** and is currently receiving funding, you must contact support to delete the Idea for you. 
-Keep in mind that this will entirely reset the Idea's funding cycle. Anyone who has backed the Idea will get refunded, and you'll have to resubmit the Idea for review. 
-### My Idea keeps getting rejected! 
-Check out our **_GUIDELINES_** to ensure you're meeting all eligibility criteria! Not only does your item need to meet basic community guideline  requirements for content, but your Idea must also be technically possible, have an appropriate rarity and item type category, and be original. 
-### How do I report an Idea?
-To report an Idea, tap on the Flag Icon in the item image's lower right corner. You may choose a Category (Copyright Infringement, Inappropriate Content, etc.) and add a brief description to help our Trust & Safety team take action. 
-If you're reporting an Idea for using a player-made item as a base or reference, please include the name of the item on which the offending item is based.
+No. Once an Idea is submitted, its details can't be changed.
+
+If it's still in the **Review Phase**, you can delete it yourself from the **_My Ideas_** tab and upload a corrected version.
+
+If it's already approved and receiving funding, you'll need to contact support to remove it. Be aware that this resets the entire funding cycle: every backer is refunded, and you'll have to resubmit the Idea for review from scratch.
+
+### My Idea keeps getting rejected!
+
+Read the [Guidelines](https://create.highrise.game/learn/designer-resources/ideas/guidelines) carefully. An Idea needs to meet community guidelines for content, be technically possible to build, sit in the right item category, be original, and clearly show the finished item.
+
+We're also stricter on originality than we used to be. Designs that closely resemble existing items, or that follow a wave of similar submissions after something funds, won't be approved.
+
+### How much do Ideas items cost?
+
+Most items are 6,000 to preorder and 8,000 after funding. Hair is 9,000 to preorder and 12,000 after funding. All Ideas items are Legendary.
+
+The reasoning behind these prices is explained in the [Overview](https://create.highrise.game/learn/designer-resources/ideas/overview).
 
 ### Is there a limit to how many items I can preorder?
-Nope! 
-While you must order items in batches of ten, your total preorders for a single Idea are unlimited. Snag as many Cursed Crocs as your heart desires!
 
-### Can I preorder my own Idea? 
-Yes! You can buy your own design as many times as you like. 
+No. You can buy up to 10 at a time, but your total preorders for a single Idea are unlimited. Snag as many Cursed Crocs as your heart desires.
+
+### Can I preorder my own Idea?
+
+Yes, as many times as you like.
 
 ### How do I cancel a preorder?
-Preorders cannot be canceled. Once you support an Idea by preordering, you are making a binding commitment that cannot be withdrawn. 
-If an Idea fails to fund, or if the Idea is subsequently rejected by staff, the Idea will be canceled and all backers refunded. 
 
-#### Can I support an Idea using Earned Gold? Does that go to the designer AS Earned Gold?
+You can't. Backing an Idea is a binding commitment that can't be withdrawn.
 
-You may use Earned Gold to preorder an item. 
-If you do use Earned Gold to support an Idea, it will behave just like regular Gold. The type of currency you use to preorder an Idea has no impact on the Designer's compensation. 
-Please be sure to check your Earned Gold balance on our Create Portal to ensure you're aware of how much Earned Gold VS regular Gold is in your Highrise wallet!
+Your Gold is refunded only if the Idea fails to fund, or if it's removed by staff.
 
-### I backed an Idea in the Funding Phase, and want to preorder more of the item now that it's in the Production Phase. Can I still get a discount?
-Nope! Prices are fixed according to the phase of development the Idea is currently in. Prices per item are unaffected by whether or not you've already shown support for the item or not. 
+### Can I support an Idea using Earned Gold? Does that reach the designer as Earned Gold?
 
-### I want to do a giveaway to promote my Idea. Is this allowed? 
-Yes; giveaways, competitions, raffles and rewards are acceptable for Highrise Ideas submissions. 
-In contrast to Concepts, where support for a design is free, accessible, and zero-risk via the community vote, support for Ideas is  a leap of faith, and requires the commitment of an upfront purchase.
-Similar to bonuses for reaching specific funding goals on platforms like Kickstarter, additional incentives provided by an Ideas designer are acceptable perks for the that designer's community of committed backers.
+You can use Earned Gold to preorder, and it behaves exactly like regular Gold. The currency you pay with has no effect on what the designer receives.
+
+Check your Earned Gold balance on the Create Portal so you know how much of your wallet is Earned Gold versus regular Gold.
+
+### I backed an Idea during funding. Can I still get the discount now that it's in production?
+
+No. The 25% discount applies during the Funding Phase only. Prices are fixed by the phase an Idea is currently in, and aren't affected by whether you've backed it before.
+
+### How long does production take?
+
+There's no fixed length. Items are finished when they're ready, and preorders stay open at full price the whole time.
+
+### When do I get my item?
+
+On launch day. Finished items go on sale in the Highrise store every Monday for 7 days, and backers and the designer receive their copies that day.
+
+### Why can't I trade my item?
+
+Items can't be traded or gifted during their 7-day sale week. Once the week ends, they trade like anything else.
+
+The lock exists because buying up a launch to resell it pushes the item's value down during the exact week the designer is earning from it.
+
+### How do I report an Idea?
+
+Tap the Flag Icon in the lower right corner of the item image. Choose a Category (Copyright Infringement, Inappropriate Content, and so on) and add a brief description to help our Trust & Safety team take action.
+
+If you're reporting an Idea for using a player-made item as a base or reference, include the name of the item it's based on.
+
+### I want to run a giveaway to promote my Idea. Is that allowed?
+
+Yes. Giveaways, competitions, raffles, and rewards are all fine.
+
+Unlike Concepts, where supporting a design is free and zero-risk through the community vote, backing an Idea is a leap of faith that costs Gold upfront. Much like bonuses for hitting funding goals on platforms like Kickstarter, extra incentives from a designer are a fair perk for the people committing to their Idea.
