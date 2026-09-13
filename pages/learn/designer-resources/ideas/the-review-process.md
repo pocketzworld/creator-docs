@@ -1,16 +1,37 @@
 ### THE REVIEW PROCESS
 
-Highrise Staff will manually review all submissions to ensure eligibility, checking for quality, technical feasibility, content, and originality.
+Every submission is reviewed manually by Highrise Staff before it can go up for funding.
 
-While we don't expect significant turnaround between the time you submit and the time an Idea is approved or denied, the review timeline is not on a firm cadence, and may take up to a few weeks. You can check the status of your Idea my navigating to the **My Ideas** menu. 
+Review is stricter than it used to be. Backers preorder based on your picture, so we only approve designs we can build as drawn. Approving something vague means our artists end up guessing at what you meant, the finished item isn't what you had in mind, and everyone behind you in the queue waits longer.
 
-*******If your idea is approved,******* congratulations! You’ll receive a notification that your item has moved on to the next stage, and is available for public funding. 
+**What we check**
 
-After an Idea has been approved, you cannot make any changes to the item, and you may not delete the Idea. We cannot make any changes for you, but please let us know if you need help deleting a submission by contacting Support.
+- **Quality.** Your submission clearly shows what the player will actually get
+- **Technical feasibility.** We can build it as an avatar item, as designed
+- **Content.** It meets Highrise community guidelines
+- **Originality.** It's your own work, it isn't AI-generated, and it isn't based on an existing item
+- **Category.** It's submitted under the right item type
 
-*******If your Idea is rejected,******* you’ll receive a notification along with a link to our Guidelines to provide some insight on the possible reasons why your Idea was rejected.
+**How long it takes**
 
-Support staff does not have information on this process, so please read the Guidelines, make the necessary changes, and resubmit your Idea!
+Review isn't on a firm cadence and can take up to a few weeks, though we don't expect long waits between submitting and hearing back. Check the status of anything you've submitted under the **My Ideas** menu.
 
+**If your Idea is approved** 🎉
 
+You'll get a notification letting you know it's moved on to public funding.
 
+From that point the item is locked. You can't change it, and you can't delete it yourself. If you need an approved Idea removed, contact Support. Be aware that this resets the whole funding cycle: every backer is refunded and you'll need to resubmit from scratch.
+
+**If your Idea is rejected**
+
+You'll get a notification with a link to the [Guidelines](https://create.highrise.game/learn/designer-resources/ideas/guidelines).
+
+We don't give individual reasons for rejections, and Support staff don't have visibility into this process, so please don't contact them about it. Read the Guidelines, work out what needs changing, and resubmit.
+
+**Giving yourself the best chance**
+
+- Submit a design that's close to finished, not a rough concept
+- Make sure it reads clearly as a Highrise item
+- Avoid resubmitting something that closely resembles an item already in the game
+- Avoid following a wave of similar submissions after an Idea funds. We reject these
+- If drawing isn't your strength, commissioning an artist to realise your design is completely legitimate
