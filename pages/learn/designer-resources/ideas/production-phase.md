@@ -1,13 +1,30 @@
 ### PRODUCTION PHASE
 
-⚠️ **_October 23 UPDATE: We've made some changes to this process! Please read on to learn about the new timelines for Ideas Production Phase scheduling. Thank you!_**
+The Production Phase is when your Idea actually gets built. Once it's funded, the Highrise Art Team takes your design and turns it into a real item, working with you the whole way.
 
-The Production Phase is when all the magic happens! During this phase, the Highrise Art Team communicates with the the Idea Designer to create the funded item. 
+**Working with the art team** 🎨
 
-Once your Idea has been fully funded, you’ll receive a message from our team to invite you to a 1-1 conversation with our staff artists. You can use this chat to share additional references, special notes, and review a sneak peek of your item before it goes live! 
+- You'll get a message inviting you to a 1-1 conversation with our staff artists
+- Use it to share extra references, notes, and anything that helps them understand the design
+- You'll see a sneak peek of the item before it goes live
+- Our artists follow your direction as closely as they fairly can. The goal is to release the item you designed, not our interpretation of it
+- Where there are technical limits around layering or rendering, we'll explain them and suggest workarounds
 
-The Production Phase is your opportunity to exercise creative control and bring your vision to life exactly as you imagine it. We'll inform you of technical limitations and potential workarounds regarding layering and rendering issues, but will do our best to see your Idea through as you intend.
+This is your chance to exercise creative control, so speak up. If something doesn't look right to you, say so while there's still time to change it.
 
-##### Production Phases last a minimum of two weeks to allow for continued Preorders.
+**How long it takes**
 
-**Throughout this phase, anyone may continue to preorder the item, in any amount, at full price.** This is the last time the item will be available for broad public purchase - after the item is released, it will only be available via trade. The two-week minimum Production Timeline will ensure that anyone who wants the item has a chance to buy it; and in tandem, it ensures you get a bigger payout! 
+There's no fixed length. Items are finished when they're ready.
+
+Production used to run for a minimum of two weeks whether the item needed it or not, which meant finished items sat waiting. Now they move as soon as they're done.
+
+**Preorders stay open** 💸
+
+Anyone can keep preordering the item, in any amount, at full price, right up until launch day. Nothing about the timeline cuts your earnings short.
+
+**What happens at the end** 🛍️
+
+- Your item goes on sale in the Highrise store on the next Monday, for 7 days
+- You and everyone who backed the Idea receive your copies on launch day
+- Items can't be traded or gifted during the sale week
+- Once the week ends, the item trades like anything else
