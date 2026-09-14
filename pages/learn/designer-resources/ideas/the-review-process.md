@@ -11,6 +11,13 @@ Review is stricter than it used to be. Backers preorder based on your picture, s
 - **Content.** It meets Highrise community guidelines
 - **Originality.** It's your own work, it isn't AI-generated, and it isn't based on an existing item
 - **Category.** It's submitted under the right item type
+</br>
+<p align="center">
+  <img width="32%" src="https://github.com/user-attachments/assets/f43937bb-c4dd-4fcc-9f49-4e1e59c7e0f5" />
+  <img width="32%" src="https://github.com/user-attachments/assets/b93e1668-0e50-4a8c-933b-ecab1b812f3c" />
+  <img width="32%" src="https://github.com/user-attachments/assets/6febf703-a30e-4e5a-8ae8-acefa79c906c" />
+  Examples of low quality ideas that would NOT be approved. These concepts do not look like items you could find on Highrise.
+</p></br>
 
 **How long it takes**
 
