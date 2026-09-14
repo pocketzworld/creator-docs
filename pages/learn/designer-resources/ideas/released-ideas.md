@@ -1,16 +1,25 @@
 ### RELEASED IDEAS
 
-At the end of the Production Phase, celebrate your success! You’ve either created an awesome item, or had the bright idea to support something amazing. Either way, congrats! 
+Your item is finished and out in the world. Whether you designed it or backed it, congratulations. 🎉
 
-### Backers
-Backers will find the newly released Idea item in the Gifts tab of their inbox with the label “PRE-ORDER REWARDS”. Items will begin to send immediately upon Production Phase closing, and send in staggered batches over the next hour or two.
+Finished items go on sale in the Highrise store every **Monday, for 7 days**. Everyone who backed the Idea, plus the designer, receives their copy on launch day.
 
-![Screenshot_20230925_135327_Highrise.jpg](https://cdn-production.joinhighrise.com/create-portal/Screenshot_20230925_135327_Highrise_b677c44599.jpg)
+**Backers** 🎁
 
-### Creators
+- Your item arrives in the **Gifts** tab of your inbox, labelled **PRE-ORDER REWARDS**
+- Items start sending on launch day and arrive in staggered batches over the following hour or two
+- Your item can't be traded or gifted during its 7-day sale week. After the week ends, it trades like anything else
 
-You'll receive your item when the Production Phase ends, along with your compensation. 
-Designers will receive 10% of the total Gold raised for their Idea in the form of **Earned Gold.** 
-Earned Gold may be used just like regular Highrise Gold, and it can also be redeemed for cash through our [Creator Exchange](https://create.highrise.game/dashboard/creator-exchange).  You can read our full guide to Earned Gold on our [FAQ](https://highrise.helpshift.com/hc/en/3-highrise---your-avatar-community/faq/193-earned-gold/).  
+**Designers** 🪙
 
-![Screenshot_20230925_135316_Highrise.jpg](https://cdn-production.joinhighrise.com/create-portal/Screenshot_20230925_135316_Highrise_4c25602601.jpg)
+You'll receive your own copy of the item on launch day, along with your compensation.
+
+Designers earn **10% of everything their item makes**, paid as Earned Gold:
+
+- Preorders during the Funding Phase
+- Preorders during the Production Phase
+- Every sale during the item's 7-day run in the Highrise store
+
+The store week matters. Your item is promoted in the app and browsable on the Ideas site, which puts it in front of players who never saw it while it was funding. For most items that's a meaningful share of what they earn.
+
+Earned Gold spends exactly like regular Highrise Gold, and can be redeemed for cash through [Creator Exchange](https://create.highrise.game/dashboard/creator-exchange). There's a full guide to Earned Gold in our [FAQ](https://highrise.helpshift.com/hc/en/3-highrise---your-avatar-community/faq/193-earned-gold/).

@@ -1,48 +1,40 @@
 ## WHAT IS HIGHRISE IDEAS?
-Highrise Ideas is our **crowdfunding platform**. Creatives on Highrise have no shortage of impressive item concepts, but like many artists, often need a bit of support to bring their unique visions to life. Highrise Ideas empowers the community to come together to forge a dream into reality. 🤝
 
-Similar to most crowdfunding platforms like Kickstarter or IndyGoGo, Highrise Ideas is a tool to help artists share concepts for single wearable avatar items they’d love to make, and helps members of the community explore a library of designs they’d love to wear. 
+Highrise Ideas turns community designs into real items.
 
-Once you see an Idea that resonates with you, you can commit to supporting that item by **Preordering** it. 
+You share a design for a single wearable item. Players who want it preorder it. If enough people back it, we build it, and everyone who preordered gets one.
 
-🔖 Preordering works just like pledging or backing a project in Kickstarter: if the item gets enough support to meet its funding goal, it gets created, and all backers receive the item. If it doesn’t meet its funding goal, the Idea is cancelled and preorders are refunded. 
+It works like Kickstarter: backing an Idea is a commitment, not a wishlist. If an Idea doesn't reach its goal, it's cancelled and every backer is refunded.
 
-As the Highrise Ideas feature is still in its embryonic stage, we’re eager to hear your thoughts on what changes might best serve our creative community in future updates! The keys to _any_ idea becoming a reality are both adaptability and perseverance to keep improving, and that’s exactly what we’re going to do. 💪
+### HOW IT WORKS
 
-So let’s go! Share a concept for a single item, and get ready to rally around designs that get people buzzing. After all, every great look starts with an Idea. 💭
+<img width="2320" height="680" alt="ideas-pipeline" src="https://github.com/user-attachments/assets/98018eb0-0d02-4ea4-bd2f-19e67c3d583d" />
+<br></br>
+**Review.** We're strict here, and it's worth knowing why. Backers preorder based on your picture, so we have to build what's in the picture. When a submission is rough or unclear, our artists end up guessing at what you meant, and the finished item often isn't what you had in mind. Approving only designs we can build as drawn protects you, your backers, and everyone else's place in the queue.
 
+**Funding.** Your Idea is live for 30 days at a 25% discount. Reach the goal and it goes into production immediately.
 
-### FUNDING PIPELINE
+**Production.** Our artists build the item and work with you on the details. There's no fixed length. It's ready when it's ready, and preorders stay open at full price the whole time.
 
-For an item to be released through Highrise Ideas, it will need to pass through three stages: 
+**Release.** Finished items go on sale in the Highrise store every Monday for 7 days. Backers and the designer get their copies on launch day.
 
-🔎 **Review Phase**, in which Highrise Staff assesses eligible Ideas and approves valid designs
+Items can't be traded or gifted during the sale week. Buying up a launch to resell it pushes the item's value down during the exact week the designer is earning from it. The 7 days protect the creator and the players who want to wear the item. After that, it trades like anything else.
 
-💸 **Funding Phase**, a 30 day period for the item to receive public funding from the Highrise community
+### PRICES
 
-🏗️ **Production Phase**, a 14+ day period for the HR Art Team to create the item.
+|            | Preorder | After funding |
+| ---------- | -------- | ------------- |
+| Most items | 6,000    | 8,000         |
+| Hair       | 9,000    | 12,000        |
 
-#
+All Ideas items are Legendary. Rarity used to be something you picked, and it set both your price and how many backers you needed. That meant a design's chances could come down to a decision made before anyone had seen it. One standard means every item funds on the strength of the design.
 
-![mermaid-diagram-2023-09-25-133305.svg](https://cdn-production.joinhighrise.com/create-portal/mermaid_diagram_2023_09_25_133305_4f7e712c6b.svg)
+**Why hair costs more.** Hair takes our artists roughly eight times longer to build than any other item type. It's also the most submitted type by a wide margin. Priced the same as everything else, hair fills the queue and everything behind it waits. The higher price reflects the work, and it keeps room open for the rest.
 
+**Why the price drops after funding.** It used to double, from 6,000 to 12,000, and sales tended to fall off sharply at that point. That's income creators never saw, on items that had just proved people wanted them. A smaller step keeps your item selling all the way through to launch.
 
+### WHAT YOU EARN
 
-#
+Designers receive 10% of everything their item makes, paid as Earned Gold. That's preorders during funding, preorders during production, and every sale during the Monday store week.
 
-Ideas can be approved or rejected by staff during the 🔎 **Review Phase** for a few different reasons. [Check out our item eligibility guidelines here!](https://create.highrise.game/learn/designer-resources/ideas/guidelines) 
-
-During the 💸 **Funding Phase**, anyone who wants to support the Idea can do so by preordering the item for a 50% discount. Once an Idea reaches its Funding Goal, the item **immediately** enters a its Production Phase. 
-
-During the 🏗️ **Production Phase**, anyone may continue to preorder the item for full price. _Production Phases are guaranteed to last a minimum of 14 days._ This ensures that anyone who missed the initial preordering window have a chance to buy it, and gives creators a longer runway to keep earning! 
-After Production concludes, the item will be distributed to backers automatically, and the item Designer will receive 10% of the total revenue in the form of Earned Gold. 
-
-Items created through HR Ideas are _only purchasable_ during the Funding and Production Phases! After that, they may be traded, but are no longer available through Ideas or any other Highrise Shop.
-
-## 💡 [VISIT IDEAS NOW!](https://highrise.game/highrise-ideas)
-
-
-
-
-
-
+Earned Gold spends like regular Gold, and can be cashed out through [Creator Exchange](https://create.highrise.game/dashboard/creator-exchange).
