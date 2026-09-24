@@ -48,15 +48,4 @@ properties:
       - ReadOnly
     type: Class.VisualElement
 methods:
-  - name: Dispose
-    summary:
-    description:
-    is_static: false
-    code_samples:
-    tags:
-      - ClientOnly
-    parameters:
-    returns:
-      - type: void
-        summary:
 math_operations:
