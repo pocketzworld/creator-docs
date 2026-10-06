@@ -78,20 +78,6 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.AudioShader
-  - name: ButtonClickNew
-    summary: |
-      ButtonClick is a static property that returns the audio shader for the button click sound.
-    description:
-    is_static: true
-    code_samples: |
-      ```lua
-      -- Play the button click sound
-      Sounds.ButtonClickNew:Play()
-      ```
-    tags:
-      - ClientOnly
-      - ReadOnly
-    type: Class.AudioShader
   - name: CardFlip
     summary: |
       CardFlip is a static property that returns the audio shader for the card flip sound.
