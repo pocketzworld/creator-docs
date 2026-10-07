@@ -17,6 +17,8 @@ They may not be used as bases for any regular Concept.
 
 [catstronaut](https://highrise.game/catalog/designer-profile/catstronaut)
 
+[CherryCirculation](https://highrise.game/catalog/designer-profile/CherryCirculation)
+
 [chickynugs](https://highrise.game/catalog/designer-profile/chickynugs)
 
 [cottex_](https://highrise.game/catalog/designer-profile/cottex_)
@@ -48,6 +50,8 @@ They may not be used as bases for any regular Concept.
 [HALLCYON](https://highrise.game/catalog/designer-profile/HALLCYON)
 
 [Hirasuni](https://highrise.game/catalog/designer-profile/Hirasuni)
+
+[_Kenopsia_](https://highrise.game/catalog/designer-profile/_Kenopsia_)
 
 [krysiis](https://highrise.game/catalog/designer-profile/krysiis)
 
