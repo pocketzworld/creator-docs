@@ -1,0 +1,42 @@
+name: PerformanceService
+type: classes
+summary: |
+  Read-only access to the local user's settings from the Options > Performance menu.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: SettingsChanged
+    summary: |
+      Fired when the graphics quality or render scale changes.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.Event
+  - name: graphicsQuality
+    summary: |
+      The user's graphics quality preset.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.GraphicsQualityLevel
+  - name: renderScale
+    summary: |
+      The user's render scale.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.RenderScale
+methods:
+math_operations:
