@@ -238,6 +238,16 @@ properties:
       - ClientOnly
       - ReadOnly
     type: Class.Camera
+  - name: performance
+    summary: |
+      The local user's performance settings.
+    description:
+    is_static: false
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Class.PerformanceService
   - name: worldBounds
     summary: |
       Bounds of the world.  It is calculated from the bounds of all of the active renderers.

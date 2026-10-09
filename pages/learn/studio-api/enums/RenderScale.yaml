@@ -1,0 +1,42 @@
+name: RenderScale
+type: enums
+summary: |
+  Resolution scale the world is rendered at.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: High
+    summary: |
+      Full resolution.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.RenderScale
+  - name: Low
+    summary: |
+      Quarter resolution.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.RenderScale
+  - name: Medium
+    summary: |
+      Half resolution.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.RenderScale
+methods:
+math_operations:

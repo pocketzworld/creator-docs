@@ -1,0 +1,52 @@
+name: GraphicsQualityLevel
+type: enums
+summary: |
+  Graphics quality preset.
+description:
+code_samples:
+inherits:
+tags:
+constructors:
+properties:
+  - name: Custom
+    summary: |
+      User-chosen frame rate and visual quality. Desktop only.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.GraphicsQualityLevel
+  - name: Default
+    summary: |
+      Reduced visual quality and frame rate to save battery.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.GraphicsQualityLevel
+  - name: Performance
+    summary: |
+      Lowest visual quality and frame rate.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.GraphicsQualityLevel
+  - name: Quality
+    summary: |
+      Highest visual quality and frame rate.
+    description:
+    is_static: true
+    code_samples:
+    tags:
+      - ClientOnly
+      - ReadOnly
+    type: Enum.GraphicsQualityLevel
+methods:
+math_operations:
