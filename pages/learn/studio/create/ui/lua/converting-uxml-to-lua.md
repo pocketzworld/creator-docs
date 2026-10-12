@@ -10,7 +10,7 @@ Instead of defining all UI elements in **UXML**, you can **create them dynamical
 
 ### Example: Creating a UI Button in Lua
 ```lua
-local _button = Button.new() -- Or VisualElement.new()
+local _button = UIButton.new() -- Or VisualElement.new()
 _button:AddToClassList("custom-button")
 ```
 - `UIButton.new()` creates a new button.

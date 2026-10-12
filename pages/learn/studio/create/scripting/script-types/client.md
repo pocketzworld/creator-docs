@@ -57,11 +57,11 @@ In this table, we summarize the best practices and common pitfalls when working 
 local myRadio = nil;
 
 function self:Awake()
-  myRadio = self:GetComponent("Radio")
+  myRadio = self:GetComponent(Radio)
 end
 
 function self:Start()
-  myRadio.SetActive(true)
+  myRadio.gameObject:SetActive(true)
 end
 ```
 

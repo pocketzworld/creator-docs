@@ -37,7 +37,7 @@ local value = TypeValue.new("Name", initialValue, player)
 local score = IntValue.new("Score", 0, player)                     -- Integer
 local job = StringValue.new("Job", "Unemployed", player)           -- String
 local isReady = BoolValue.new("IsReady", false, player)            -- Boolean
-local position = Vector3Value.new("Position", Vector3(0,0,0), player) -- Vector3
+local position = Vector3Value.new("Position", Vector3.new(0,0,0), player) -- Vector3
 local speed = NumberValue.new("Speed", 1.5, player)                -- Decimal
 local stats = TableValue.new("Stats", {kills=0, deaths=0}, player) -- Table
 ```
@@ -102,7 +102,7 @@ function TrackPlayers(game)
             score = IntValue.new("Score", 0, player),
             job = StringValue.new("Job", "Unemployed", player),
             isReady = BoolValue.new("IsReady", false, player),
-            position = Vector3Value.new("Position", Vector3(0,0,0), player),
+            position = Vector3Value.new("Position", Vector3.new(0,0,0), player),
             stats = TableValue.new("Stats", {kills=0, deaths=0}, player),
         }
     end)

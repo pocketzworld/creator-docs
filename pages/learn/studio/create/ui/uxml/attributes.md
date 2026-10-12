@@ -85,7 +85,7 @@ Example:
 
 ```xml
 
-<Button class="action-button" name="clickButton" />
+<hr:UIButton class="action-button" name="clickButton" />
 <VisualElement picking-mode="Ignore" />
 ```
 

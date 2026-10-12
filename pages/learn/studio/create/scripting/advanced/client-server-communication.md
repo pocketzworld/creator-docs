@@ -7,8 +7,8 @@ In Highrise Studio, you can establish communication between the client and serve
 Events can accept any [data type](https://create.highrise.game/learn/studio/create/coding-fundamentals/variables-and-data-types) as an argument, including tables, strings, numbers, and more. When firing an event, you can pass any data you want to the connected functions.
 
 <Note>
-When firing to client only, the first argument of the event will always be the player object.
-So, when connecting to an event that is fired to client only, the first argument of the connected function should be the player object.
+When a client fires an event to the server with `FireServer`, the function connected on the server receives the player who sent it as its first argument, followed by the arguments the client passed.
+When the server fires an event to one client with `FireClient`, its first argument is the player to send it to. The function connected on that client receives only the arguments after the player.
 </Note>
 
 Here's an example:
@@ -19,7 +19,7 @@ local myEvent = Event.new("MyEvent")
 
 function self:ClientAwake()
   local localPlayer = client.localPlayer
-  -- Fire the event on the server side
+  -- Listen for the event from the server
   myEvent:Connect(function(message)
     -- Print the player's name and the message received from the server
     print(localPlayer.name .. ", server says: " .. message) -- Output: Player1 says: Hello from server!
@@ -44,7 +44,7 @@ You can use the following methods to connect to events on the client and server 
 
 - **Connect:** Connects a function to the event. The function will be called whenever the event is fired.
 - **FireServer:** Fires the event on the server side. You can pass any data as arguments to the connected functions.
-- **FireClient:** Fires the event on the client side. You can pass any data as arguments to the connected functions.
+- **FireClient:** Fires the event on one player's client. Pass the player first, then any data as arguments to the connected functions.
 - **FireAllClients:** Fires the event on all clients. You can pass any data as arguments to the connected functions.
 
 ## Example Use Cases
@@ -98,8 +98,8 @@ function self:ClientAwake()
   GetMyScoreRequest:FireServer()
 
   -- Listen for the response from the server
-  GetMyScoreResponse:Connect(function(player, score)
-    local playerInfo = players[player.name]
+  GetMyScoreResponse:Connect(function(score)
+    local playerInfo = players[client.localPlayer.name]
     playerInfo.score = score
 
     print("My score is: " .. playerInfo.score)
@@ -119,10 +119,10 @@ function self:ServerAwake()
       if score == nil then score = 0 end
 
       -- Update the player's score in the local storage
-      players[player.name] = score
+      players[player.name].score = score
 
       -- Send the player's score back to the client
-      GetMyScoreResponse:FireClient(score)
+      GetMyScoreResponse:FireClient(player, score)
     end)
   end)
 

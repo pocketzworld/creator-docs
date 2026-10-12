@@ -12,11 +12,7 @@ This guide will walk you through creating a simple UI in **Highrise Studio** usi
      - **Lua script** (logic)
      - **UXML file** (layout)
      - **USS file** (styling)
-   - A **UI Visual Tree Factory** is also created in the root of your assets.
-
-<Note type="warning">
-Your project must have a **UI Tree** to display UI. This is included when you create a UI component.
-</Note>
+   - Keep the three files' names the same: Studio finds a UI script's layout by its name.
 
 ## Step 2: Set Up the UI in the Scene
 

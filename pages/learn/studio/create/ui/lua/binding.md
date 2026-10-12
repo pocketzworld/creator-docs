@@ -11,13 +11,13 @@ To bind a UI element from **UXML to Lua**, use the `--!Bind` keyword.
 ### Example: Binding a Button and Label
 ```xml
 <!-- UXML -->
-<Button name="_button" />
+<hr:UIButton name="_button">
     <Label name="_label" text="Button not clicked" />
-</Button>
+</hr:UIButton>
 ```
 ```lua
 --!Bind
-local _button : Button = nil
+local _button : UIButton = nil
 --!Bind
 local _label : Label = nil
 
@@ -38,7 +38,7 @@ Bindings **must match** the corresponding **UXML element type**.
 | `<hr:UIButton />`   | `UIButton`     |
 | `<hr:UIScrollView />` | `UIScrollView` |
 | `<VisualElement />` | `VisualElement` |
-| `<Image />`         | `Image`        |
+| `<hr:UIImage />`   | `UIImage`      |
 
 ### Example: Binding a UIScrollView
 ```lua

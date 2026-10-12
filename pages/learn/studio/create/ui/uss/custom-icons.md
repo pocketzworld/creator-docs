@@ -9,7 +9,7 @@ In Unity, custom icons allow you to create a visually distinct interface. This g
 ## Importing Custom Icons
 
 ### Step 1: Prepare Your Icons
-1. Create or download icons in **PNG, SVG, or JPEG** format.
+1. Create or download icons in **PNG or JPEG** format. Studio doesn't accept SVG files; convert them to PNG.
 2. Keep icons **simple, clear, and consistent**.
 3. Organize assets by creating a dedicated `Icons` folder in Unity.
 

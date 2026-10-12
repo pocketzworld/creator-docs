@@ -50,16 +50,14 @@ In this script:
 - `TapHandler`: Refers to the TapHandler component.
 - `HelloWorldScript`: Refers to the HelloWorldScript component.
 
-If you noticed, we used `TapHandler` and `"HelloWorldScript"` as arguments for `AddComponent` and `GetComponent`.
-
-We did not include the `" "` when adding the `TapHandler` component because it is a built-in component. However, we included the `" "` when adding the `HelloWorldScript` component because it is a custom Lua script.
+Pass the component type to `AddComponent` and `GetComponent` without quotes, for built-in components such as `TapHandler` and for your own Lua scripts such as `HelloWorldScript` alike. A Lua script's type is its file name.
 
 ## Creating and Destroying GameObjects
 
-You can create and destroy GameObjects using the `new` and `Destroy` functions.
+You can create and destroy GameObjects using the `GameObject.new` and `Object.Destroy` functions.
 
 - `new`: Creates a new GameObject.
-- `Destroy`: Destroys the GameObject.
+- `Object.Destroy`: Destroys the GameObject.
 
 ```lua
 -- Creating a new GameObject
@@ -67,14 +65,14 @@ local newGameObject = GameObject.new("NewGameObject")
 newGameObject.name = "NewGameObject" -- Set the name of the GameObject
 
 -- Destroying a GameObject
-Destroy(newGameObject)
+Object.Destroy(newGameObject)
 ```
 
 In this script:
 
 - `new`: Creates a new GameObject with the specified name.
 - `name`: Sets the name of the GameObject.
-- `Destroy`: Destroys the GameObject.
+- `Object.Destroy`: Destroys the GameObject.
 
 ## Creating Prefabs
 

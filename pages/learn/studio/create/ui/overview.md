@@ -12,7 +12,7 @@ Highrise Studio uses **Unity Extensible Markup Language (UXML)** files to define
 3. Name the folder appropriately.
 4. Inside the folder, right-click and select **Create**.
 5. Choose **Lua** > **UI**.
-6. Give your UI a name using all lowercase letters to avoid issues with class names when styling.
+6. Give your UI a name in PascalCase, such as `ScorePanel`. The name is also the script's type, and Studio derives the USS class of its root from it (`score-panel`).
 
 ![Create UI Steps](/assets/learn/guides/studio/UI/create-ui-steps.png)
 
