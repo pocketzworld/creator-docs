@@ -39,7 +39,7 @@ Example:
 ```
 
 ### Label
-The `Label` element is used to display text within the UI.
+The `Label` element is used to display text within the UI. Use it for text written in the layout: `hr:UILabel` ignores the `text` attribute and only shows text a script sets.
 
 Example:
 ```xml
