@@ -34,7 +34,7 @@ Inside a project, the agent uses the project's own launcher, `Library/Highrise/h
 
 ## Good to Know
 
-- The agent asks before it installs the Unity command line tools or a Unity editor.
+- The agent installs the Unity command line tools itself if they are missing. It asks before installing a Unity editor, which is a large download.
 - Unity must be allowed to open. If your computer asks for permission, allow it.
 - Highrise Studio's commands only work while the project is open in Unity. If Unity is closed, the agent runs `Library/Highrise/hr open` to open it.
 
