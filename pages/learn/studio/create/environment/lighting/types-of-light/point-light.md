@@ -18,7 +18,7 @@ Once you have created a Point Light in your scene, you can configure its propert
 
 - **General Settings**:
   - **Type**: Specifies the type of light source (Point Light).
-  - **Mode**: Determines how the light interacts with objects in the scene (Realtime, Mixed, or Baked). Use **Baked**: Highrise only lights the world with a Realtime point light when World Settings' **Enable Real Time Light** is on, and shows only the baked part of a Mixed one.
+  - **Mode**: Determines how the light interacts with objects in the scene (Realtime, Mixed, or Baked). Use **Baked**. Use **Realtime** only for a light that changes while the world runs, such as one a script moves or switches, and turn on World Settings' **Enable Real Time Light**, which costs performance. With that setting off, Highrise doesn't draw a Realtime point light and shows only the baked part of a Mixed one.
 
 - **Emission**:
   - **Color**: Specifies the color of the light emitted by the Point Light.
