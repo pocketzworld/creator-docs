@@ -35,18 +35,18 @@ You can target specific elements inside a class using nested selectors.
 ### Example: Targeting a Specific Element
 ```xml
 <VisualElement class="close-button">
-    <Image class="icon" />
+    <hr:UIImage class="icon" />
 </VisualElement>
 ```
 
 ```css
-.close-button Image {
+.close-button UIImage {
     width: 20px;
     height: 20px;
     --unity-image: var(--image-icon-close);
 }
 ```
-This targets the `<Image>` inside `.close-button` and resizes it.
+This targets the `hr:UIImage` inside `.close-button` and resizes it. A type selector uses the element's type without the `hr:` prefix.
 
 ## Targeting Named Elements with `#nameHere`
 
@@ -54,7 +54,9 @@ If an element has a `name` attribute, you can reference it directly in USS using
 
 ### Example (UXML)
 ```xml
-<Button name="submitButton" text="Submit" />
+<hr:UIButton name="submitButton">
+    <Label text="Submit" />
+</hr:UIButton>
 ```
 
 ### Example (USS)
@@ -93,7 +95,9 @@ USS allows styling elements based on multiple classes.
 
 ### Example (UXML)
 ```xml
-<Button class="button enabled" text="Click Me" />
+<hr:UIButton class="button enabled">
+    <Label text="Click Me" />
+</hr:UIButton>
 ```
 
 ### Example (USS)
@@ -110,8 +114,12 @@ You can apply styles to multiple elements using a comma-separated list.
 
 ### Example (UXML)
 ```xml
-<Button class="button-primary" text="Primary" />
-<Button class="button-secondary" text="Secondary" />
+<hr:UIButton class="button-primary">
+    <Label text="Primary" />
+</hr:UIButton>
+<hr:UIButton class="button-secondary">
+    <Label text="Secondary" />
+</hr:UIButton>
 ```
 
 ### Example (USS)
@@ -129,7 +137,9 @@ USS allows hover effects to provide feedback when users interact with elements.
 
 ### Example (UXML)
 ```xml
-<Button class="clickable" text="Hover Me" />
+<hr:UIButton class="clickable">
+    <Label text="Hover Me" />
+</hr:UIButton>
 ```
 
 ### Example (USS)

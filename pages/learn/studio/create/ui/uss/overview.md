@@ -33,7 +33,9 @@ You can assign **multiple classes** to a single UI element by **separating them 
 
 **Example (UXML):**
 ```xml
-<Button class="button primary" text="Click Me" />
+<hr:UIButton class="button primary">
+    <Label text="Click Me" />
+</hr:UIButton>
 ```
 
 **USS Styles:**
@@ -69,7 +71,7 @@ While USS is static, some **styles can be changed dynamically using Lua**.
 **Example (Lua):**
 ```lua
 --!Bind
-local myButton : Button = nil
+local myButton : UIButton = nil
 
 myButton:AddToClassList("highlighted") -- Adds a new class
 myButton:RemoveFromClassList("primary") -- Removes an existing class
