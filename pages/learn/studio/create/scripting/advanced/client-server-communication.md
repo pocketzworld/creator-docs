@@ -22,7 +22,7 @@ function self:ClientAwake()
   -- Listen for the event from the server
   myEvent:Connect(function(message)
     -- Print the player's name and the message received from the server
-    print(localPlayer.name .. ", server says: " .. message) -- Output: Player1 says: Hello from server!
+    print(localPlayer.name .. ", server says: " .. message) -- Output: Player1, server says: Hello from server!
   end)
 end
 

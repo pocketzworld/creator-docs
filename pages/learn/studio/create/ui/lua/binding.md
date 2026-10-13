@@ -34,6 +34,7 @@ Bindings **must match** the corresponding **UXML element type**.
 
 | UXML Element         | Binding Type   |
 |----------------------|---------------|
+| `<Label />`         | `Label`        |
 | `<hr:UILabel />`    | `UILabel`      |
 | `<hr:UIButton />`   | `UIButton`     |
 | `<hr:UIScrollView />` | `UIScrollView` |

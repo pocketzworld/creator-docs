@@ -56,7 +56,7 @@ Pass the component type to `AddComponent` and `GetComponent` without quotes, for
 
 You can create and destroy GameObjects using the `GameObject.new` and `Object.Destroy` functions.
 
-- `new`: Creates a new GameObject.
+- `GameObject.new`: Creates a new GameObject.
 - `Object.Destroy`: Destroys the GameObject.
 
 ```lua
@@ -70,7 +70,7 @@ Object.Destroy(newGameObject)
 
 In this script:
 
-- `new`: Creates a new GameObject with the specified name.
+- `GameObject.new`: Creates a new GameObject with the specified name.
 - `name`: Sets the name of the GameObject.
 - `Object.Destroy`: Destroys the GameObject.
 

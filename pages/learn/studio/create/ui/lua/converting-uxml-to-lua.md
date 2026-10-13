@@ -66,7 +66,7 @@ You can **link multiple UI elements** to interact dynamically.
 ### Example: Updating a Label with Button Click
 ```lua
 --!Bind
-local _button : Button = nil
+local _button : UIButton = nil
 --!Bind
 local _label : Label = nil
 
