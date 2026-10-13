@@ -51,109 +51,89 @@ You can use the following methods to connect to events on the client and server 
 
 In this example use case, we'll create a simple score system where the server keeps track of the player's score and updates it when the player collects a coin.
 
+A player can modify their client and fire any event with any arguments, so the server must never take a client's word for something that matters, like how many points it earned. Here the client only says which coin it touched. The server checks that the player could have collected that coin, and decides what it's worth.
+
 **ScoreSystem.lua**
 ```lua
+--!Type(Module)
+
 local GetMyScoreRequest = Event.new("GetMyScoreRequest")
-local GetMyScoreResponse = Event.new("GetMyScoreResponse")
-local UpdateMyScoreRequest = Event.new("UpdateMyScoreRequest")
+local CollectCoinRequest = Event.new("CollectCoinRequest")
+local ScoreChanged = Event.new("ScoreChanged")
 
-local players = {} -- Store players
+local COIN_POINTS = 10 -- What a coin is worth; only the server uses it
+local MAX_COLLECT_DISTANCE = 3 -- How close a player's character must be to a coin to collect it
 
--- Function to track players and initialize their scores
-function TrackPlayers(game)
-  game.PlayerConnected:Connect(function(player)
-      -- Initialize player info with score set to 0
-      players[player.name] = {
-        player = player,
-        score = 0
-      }
-  end)
-end
+local collectedCoins = {} -- On the server: for each player's name, the coins they have collected
 
--- Function to add score to a specific player
-AddScore = function(target, scoreToAdd)
-  local player = client.localPlayer
-  -- Ensure the target player matches the local player
-  if player ~= target then return end
-
-  -- Retrieve player info
-  local playerInfo = players[player.name]
-
-  -- Calculate new score
-  local newScore = playerInfo.score + scoreToAdd
-
-  -- Update the player's in the client storage
-  playerInfo.score = newScore
-
-  -- Send the score update request to the server
-  UpdateMyScoreRequest:FireServer(scoreToAdd)
+-- Function for client scripts to call when the local player touches a coin
+CollectCoin = function(coin : GameObject)
+  CollectCoinRequest:FireServer(coin.name)
 end
 
 -- Function to handle client initialization
 function self:ClientAwake()
-  -- Track players on the client side
-  TrackPlayers(client)
+  -- Listen for the player's score from the server
+  ScoreChanged:Connect(function(score)
+    print("My score is: " .. score)
+  end)
 
   -- Request the player's score from the server
   GetMyScoreRequest:FireServer()
+end
 
-  -- Listen for the response from the server
-  GetMyScoreResponse:Connect(function(score)
-    local playerInfo = players[client.localPlayer.name]
-    playerInfo.score = score
-
-    print("My score is: " .. playerInfo.score)
+-- Function to send a player their score from storage
+local function SendScore(player)
+  Storage.GetPlayerValue(player, "score", function(score)
+    ScoreChanged:FireClient(player, score or 0)
   end)
 end
 
 -- Function to handle server initialization
 function self:ServerAwake()
-  -- Track players on the server side
-  TrackPlayers(server)
-
-  -- Listen for score requests from clients
-  GetMyScoreRequest:Connect(function(player)
-    -- Retrieve the player's score from the storage, assuming you have a storage system
-    Storage.GetPlayerValue(player, "score", function(score)
-      -- Check if the score is nil (player not found in storage)
-      if score == nil then score = 0 end
-
-      -- Update the player's score in the local storage
-      players[player.name].score = score
-
-      -- Send the player's score back to the client
-      GetMyScoreResponse:FireClient(player, score)
-    end)
+  server.PlayerConnected:Connect(function(player)
+    collectedCoins[player.name] = {}
+  end)
+  server.PlayerDisconnected:Connect(function(player)
+    collectedCoins[player.name] = nil
   end)
 
-  -- Listen for score update requests from clients
-  UpdateMyScoreRequest:Connect(function(player, scoreToAdd)
-    -- Retrieve the player's info
-    local playerInfo = players[player.name]
+  -- Listen for score requests from clients
+  GetMyScoreRequest:Connect(SendScore)
 
-    -- Update the player's score
-    playerInfo.score = playerInfo.score + scoreToAdd
+  -- Listen for coin collections from clients, and check each one before awarding points
+  CollectCoinRequest:Connect(function(player, coinName)
+    local collected = collectedCoins[player.name]
+    -- Ignore anything but the name of a coin this player hasn't collected yet
+    if type(coinName) ~= "string" or collected == nil or collected[coinName] then return end
 
-    -- Update the score in the storage, assuming you have a storage system
-    Storage.IncrementPlayerValue(player, "score", scoreToAdd)
+    -- Ignore a coin that doesn't exist or that the player's character is too far away to touch
+    local coin = GameObject.Find(coinName)
+    if coin == nil or player.character == nil then return end
+    if Vector3.Distance(player.character.transform.position, coin.transform.position) > MAX_COLLECT_DISTANCE then return end
 
-    -- Print the updated score
-    print(player.name .. " collected a coin! New score: " .. playerInfo.score)
+    collected[coinName] = true
+    Storage.IncrementPlayerValue(player, "score", COIN_POINTS, function()
+      SendScore(player)
+    end)
+    print(player.name .. " collected " .. coinName)
   end)
 end
 ```
 
-In this example, the server keeps track of the player's score and updates it when the player collects a coin. The client requests the player's score from the server, and the server responds with the player's score. When the player collects a coin, the client sends a score update request to the server, which updates the player's score and stores it in the storage system.
+In this example, the server keeps each player's score in storage and sends it to the player's client when the client asks for it and whenever it changes. When the player touches a coin, the client sends the coin's name to the server. The server ignores the request unless the coin exists, the player is close enough to it, and the player hasn't already collected it; then it adds the coin's points. Give each coin a unique name, since the server finds the coin by its name.
 
 <Note type="warning">
-In the example above, we assume the script type is a `Module` script. Which allow us to use the `AddScore` function in different scripts.
+In the example above, the script type is a `Module` script, which allows us to use the `CollectCoin` function in different scripts.
 </Note>
 
-Assuming you have a script that handles the coin collection, let's say `CoinCollector` that has `OnTriggerEnter` function to detect when the player collects a coin. You can call the `AddScore` function from the `CoinCollector` script to update the player's score when a coin is collected.
+Assuming you have a script that handles the coin collection, let's say `CoinCollector` that has `OnTriggerEnter` function to detect when the player collects a coin. You can call the `CollectCoin` function from the `CoinCollector` script when the local player touches the coin.
 
 **CoinCollector.lua**
 ```lua
--- Require the module script that contains the AddScore function, in this case, the ScoreSystem module script
+--!Type(Client)
+
+-- Require the module script that contains the CollectCoin function, in this case, the ScoreSystem module script
 local ScoreSystem = require("ScoreSystem")
 
 -- Function to handle trigger enter event
@@ -164,18 +144,15 @@ function self:OnTriggerEnter(other : Collider)
   -- If there is no character component, return
   if playerCharacter == nil then return end
 
-  -- Retrieve the player associated with the character
-  local player = playerCharacter.player
-
-  -- Check if the local player triggered the checkpoint
-  if client.localPlayer == player then
-    -- Call the AddScore function to update the player's score
-    ScoreSystem.AddScore(player, 10) -- Add 10 points to the player's score
+  -- Check if the local player touched the coin
+  if client.localPlayer == playerCharacter.player then
+    -- Tell the server which coin was touched; the server decides whether it counts
+    ScoreSystem.CollectCoin(self.gameObject)
   end
 end
 ```
 
-In this example, the `CoinCollector` script detects when the player collects a coin and calls the `AddScore` function from the `ScoreSystem` module script to update the player's score by 10 points.
+In this example, the `CoinCollector` script detects when the local player touches a coin and calls the `CollectCoin` function from the `ScoreSystem` module script, which asks the server to award the coin's points.
 
 By utilizing events effectively, you can create dynamic and engaging experiences for players in your Highrise Studio projects.
 
