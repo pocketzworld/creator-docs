@@ -18,7 +18,7 @@ Once you have created a Spot Light in your scene, you can configure its properti
 
 - **General Settings**:
   - **Type**: Specifies the type of light source (Spot Light).
-  - **Mode**: Determines how the light interacts with objects in the scene (Realtime or Baked).
+  - **Mode**: Determines how the light interacts with objects in the scene (Realtime, Mixed, or Baked). Use **Baked**. Use **Realtime** only for a light that changes while the world runs, such as one a script moves or switches, and turn on World Settings' **Enable Real Time Light**, which costs performance. With that setting off, Highrise doesn't draw a Realtime spot light and shows only the baked part of a Mixed one.
 
 - **Emission**:
   - **Color**: Specifies the color of the light emitted by the Spot Light.

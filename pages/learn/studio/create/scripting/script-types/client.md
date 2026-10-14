@@ -54,20 +54,20 @@ In this table, we summarize the best practices and common pitfalls when working 
 
 ```lua
 --!Type(Client)
-local myRadio = nil;
+
+--!SerializeField
+local sparkles : ParticleSystem = nil
 
 function self:Awake()
-  myRadio = self:GetComponent("Radio")
-end
-
-function self:Start()
-  myRadio.SetActive(true)
+  self.gameObject:GetComponent(TapHandler).Tapped:Connect(function()
+    sparkles:Play()
+  end)
 end
 ```
 
-In this example, the client script initializes a radio component and activates it when the client starts, enabling the player to interact with the radio in the game world.
+In this example, the client script plays a particle effect when the player taps the object (which needs a TapHandler and a Collider). The tap and the effect both happen on the player's own device, so only the player who tapped sees the sparkles.
 
-Now if you were to run this script as a `Server` script, the script will not work as intended and may cause errors due to the fact that you cannot directly modify object components that belong to individual clients. This is why it is important to use the correct script type for the intended functionality.
+This wouldn't work as a `Server` script: the server has no screen, so it never receives taps, and `ParticleSystem:Play` is client-only. To show the effect to every player, the client tells the server about the tap, and the server tells every client to play it, as [Client-Server Communication](https://create.highrise.game/learn/studio/create/scripting/advanced/client-server-communication) shows.
 
 By following these guidelines and best practices, you can effectively utilize client scripts to create engaging and interactive gameplay experiences in your game projects.
 

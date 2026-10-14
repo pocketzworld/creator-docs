@@ -25,7 +25,7 @@ A well-structured UI follows a logical hierarchy where **containers** group rela
 
     <!-- Close Button -->
     <VisualElement class="close-button" name="_closeButton">
-        <Image />
+        <hr:UIImage />
     </VisualElement>
 
     <!-- Content Area -->

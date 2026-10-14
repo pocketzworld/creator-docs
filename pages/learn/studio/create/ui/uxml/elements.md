@@ -23,7 +23,7 @@ Example:
 ```xml
 <hr:UILuaView class="dropdown">
   <VisualElement class="button">
-    <Image class="icon" />
+    <hr:UIImage class="icon" />
   </VisualElement>
 </hr:UILuaView>
 ```
@@ -39,27 +39,29 @@ Example:
 ```
 
 ### Label
-The `Label` element is used to display text within the UI.
+The `Label` element is used to display text within the UI. Use it for text written in the layout: `hr:UILabel` ignores the `text` attribute and only shows text a script sets.
 
 Example:
 ```xml
 <Label text="Hello, World!" class="greeting" />
 ```
 
-### Button
-The `Button` element creates a clickable button for user interactions.
+### Highrise.UI.Button
+The `hr:UIButton` element creates a clickable button for user interactions. Put its text in a `Label` inside it.
 
 Example:
 ```xml
-<Button text="Click Me" class="action-button" />
+<hr:UIButton class="action-button">
+  <Label text="Click Me" />
+</hr:UIButton>
 ```
 
-### Image
-The `Image` element is used to display images within the UI.
+### Highrise.UI.Image
+The `hr:UIImage` element is used to display images within the UI.
 
 Example:
 ```xml
-<Image class="icon-image" />
+<hr:UIImage class="icon-image" />
 ```
 
 ## Attributes
@@ -96,7 +98,9 @@ The `tooltip` attribute provides additional information when the user hovers ove
 
 Example:
 ```xml
-<Button text="Hover me" tooltip="This is a button" />
+<hr:UIButton tooltip="This is a button">
+  <Label text="Hover me" />
+</hr:UIButton>
 ```
 
 ## Conclusion

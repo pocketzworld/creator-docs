@@ -14,9 +14,9 @@ In Unity, these functions are called at specific points in the game's execution 
 
 ## Lifecycle Stages
 
-<Note type="warning">
-When using `ClientAndServer` type script in Highrise Studio, the functions must be defined as `self:Client[FunctionName]` or `self:Server[FunctionName]` to work properly.
-For example, `self:Awake()` should be defined as `self:ClientAwake()` or `self:ServerAwake()`.
+<Note type="info">
+In a `ClientAndServer` script, a function without a prefix, such as `self:Awake()`, runs on both the client and the server.
+To run it on one side only, define it as `self:Client[FunctionName]` or `self:Server[FunctionName]`, such as `self:ClientAwake()` or `self:ServerAwake()`.
 </Note>
 
 ### Initialization Events

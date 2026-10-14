@@ -28,7 +28,7 @@ To modify a UI element in Lua, it must be **bound** using the `--!Bind` keyword.
 
 ```lua
 --!Bind
-local _button : VisualElements = nil
+local _button : UIButton = nil
 --!Bind
 local _label : Label = nil
 

@@ -25,7 +25,7 @@ Below is an example of a simple **UXML** file used in **Highrise Studio**:
 
   <hr:UILuaView class="dropdown">
     <VisualElement class="button plus">
-      <Image class="icon plus" />
+      <hr:UIImage class="icon plus" />
     </VisualElement>
   </hr:UILuaView>
 
@@ -37,7 +37,7 @@ Below is an example of a simple **UXML** file used in **Highrise Studio**:
 - The **`xmlns`** attributes specify namespaces to reference UI elements from **Unity**, **Highrise**, and **Unity Editor**.
 - The **`<hr:UILuaView>`** element represents a custom UI component defined in Highrise, styled with the **`dropdown`** class.
 - Inside it, a **`<VisualElement>`** acts as a button (styled with **`button plus`**).
-- The **`<Image>`** element within the button represents an icon (styled with **`icon plus`**).
+- The **`<hr:UIImage>`** element within the button represents an icon (styled with **`icon plus`**).
 
 ## Getting Started with UXML
 To begin using **UXML**:

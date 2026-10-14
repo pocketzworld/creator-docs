@@ -25,7 +25,7 @@ Nesting is useful when:
     </VisualElement>
 
     <VisualElement class="profile-body">
-        <Image class="profile-picture" />
+        <hr:UIImage class="profile-picture" />
         <Label class="player-status" text="Online" />
     </VisualElement>
 </VisualElement>
@@ -72,7 +72,7 @@ The **`flex-direction`** property determines how nested elements are arranged ho
 ```xml
 <VisualElement class="vertical-layout">
     <Label class="title" text="Profile Info" />
-    <Image class="profile-picture" />
+    <hr:UIImage class="profile-picture" />
     <Label class="status" text="Online" />
 </VisualElement>
 ```
@@ -93,7 +93,7 @@ The **`flex-direction`** property determines how nested elements are arranged ho
 ✔ **Good Example (Horizontal Layout)**
 ```xml
 <VisualElement class="horizontal-layout">
-    <Image class="profile-picture" />
+    <hr:UIImage class="profile-picture" />
     <Label class="username" text="Player123" />
     <Label class="status" text="Online" />
 </VisualElement>

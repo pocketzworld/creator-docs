@@ -85,7 +85,7 @@ Example:
 
 ```xml
 
-<Button class="action-button" name="clickButton" />
+<hr:UIButton class="action-button" name="clickButton" />
 <VisualElement picking-mode="Ignore" />
 ```
 
@@ -98,7 +98,9 @@ The `tooltip` attribute provides additional information when the user hovers ove
 Example:
 
 ```xml
-<Button text="Hover me" tooltip="This is a button" />
+<hr:UIButton tooltip="This is a button">
+  <Label text="Hover me" />
+</hr:UIButton>
 ```
 
 The tooltip will be displayed when the user hovers over the element.

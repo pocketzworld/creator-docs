@@ -23,7 +23,7 @@ In this example, we define a **clickable button** using `VisualElement` in UXML,
 
   <hr:UILuaView class="button-example">
     <VisualElement class="my-button" name="_MyButton">
-      <Image />
+      <hr:UIImage />
     </VisualElement>
   </hr:UILuaView>
 
@@ -31,7 +31,7 @@ In this example, we define a **clickable button** using `VisualElement` in UXML,
 ```
 - **`UILuaView`** wraps the UI component.
 - **`VisualElement`** (named `_MyButton`) acts as the button.
-- **`Image`** inside the button is styled using USS.
+- **`UIImage`** inside the button is styled using USS.
 
 ## Styling the Button
 
@@ -78,7 +78,7 @@ In this example, we define a **clickable button** using `VisualElement` in UXML,
   --unity-image-tint-color: rgba(0.522, 0.380, 1, 1);/* Adjusts image tint to a deeper purple */
 }
 
-.my-button Image {
+.my-button UIImage {
   width: 20px; /* Constrains image width within the button */
   height: 20px; /* Constrains image height to maintain aspect ratio */
 

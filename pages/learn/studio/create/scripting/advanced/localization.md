@@ -232,7 +232,7 @@ print(Strings.hello_player:Format(client.localPlayer.name))
 * This is especially useful for dynamic content such as player names, scores, or variable counts.
 
 <Note type="info">
-Use this approach whenever you need localized text outside of UI components, such as server messages, debug logs, or chat output.
+Use this approach whenever you need localized text outside of UI components, such as debug logs or chat output. `Strings` is only available in client code, where it uses the local player's language; to show a message from the server, send its string key to the client with an event and look it up there.
 </Note>
 
 ## Testing and Maintenance

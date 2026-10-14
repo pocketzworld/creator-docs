@@ -154,7 +154,7 @@ Do not rely on the `PromptPurchase` **paid** callback to determine if a purchase
 
 ```lua
 -- Prompt the player to purchase a token
-Payments.PromptPurchase("token_100", function(paid: boolean)
+Payments:PromptPurchase("token_100", function(paid: boolean)
   if paid then
     print("Purchase successful")
   else

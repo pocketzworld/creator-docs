@@ -10,7 +10,7 @@ Instead of defining all UI elements in **UXML**, you can **create them dynamical
 
 ### Example: Creating a UI Button in Lua
 ```lua
-local _button = Button.new() -- Or VisualElement.new()
+local _button = UIButton.new() -- Or VisualElement.new()
 _button:AddToClassList("custom-button")
 ```
 - `UIButton.new()` creates a new button.
@@ -66,7 +66,7 @@ You can **link multiple UI elements** to interact dynamically.
 ### Example: Updating a Label with Button Click
 ```lua
 --!Bind
-local _button : Button = nil
+local _button : UIButton = nil
 --!Bind
 local _label : Label = nil
 
