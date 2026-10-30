@@ -13,8 +13,6 @@ They may not be used as bases for any regular Concept.
 
 [blackcats666](https://highrise.game/catalog/designer-profile/blackcats666)
 
-[CancelIed](https://highrise.game/catalog/designer-profile/CancelIed)
-
 [catstronaut](https://highrise.game/catalog/designer-profile/catstronaut)
 
 [CherryCirculation](https://highrise.game/catalog/designer-profile/CherryCirculation)
