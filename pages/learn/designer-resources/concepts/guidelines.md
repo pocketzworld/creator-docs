@@ -17,7 +17,7 @@ If you're participating in a _**Redesign Concept**_, you rework any Highrise ite
 **6. Player Items:**  Anyone may freely use Highrise items designed by staff as references and in redesigned items. However, you may not trace items designed by other players. Please report any designs you believe to be using player material, and our team will review the submission.
 You can, however, redesign your **own** items.
 
-All submissions will be regarded as User-Generated Content as defined in the Pocket Worlds Terms of Service. By submitting a design, you acknowledge Highrise will own the rights to the finished items, and that your compensation will take the form of free items and/or gold.
+**Please ensure that all entries include your Highrise username as written in app!** This allows staff to easily reach out to winners once voting is complete. All submissions will be regarded as User-Generated Content as defined in the Pocket Worlds Terms of Service. By submitting a design, you acknowledge Highrise will own the rights to the finished items, and that your compensation will take the form of free items and/or gold.
 
 
 ### CREATE MULTIPLE SUBMISSIONS
