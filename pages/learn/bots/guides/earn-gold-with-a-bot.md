@@ -1,7 +1,7 @@
 # Earn Gold with a Bot
 Creating a Tipping Bot
 
-This is a total beginner guide to hosting a simple bot to accept tips in your room. Tips sent to bots are automatically converted to Earned Gold, allowing you to exchange the gold for real money! For more info: [https://create.highrise.game/dashboard/creator-exchange](https://create.highrise.game/dashboard/creator-exchange)
+This is a total beginner guide to hosting a simple bot to accept tips in your room. Tips sent to bots are automatically converted to Earned Gold, which you can exchange for real money! To cash out, withdraw the Earned Gold from your bot to your account, then exchange it in the Creator Exchange. Highrise takes 30% of each Earned Gold withdrawal. For more info: [https://create.highrise.game/dashboard/creator-exchange](https://create.highrise.game/dashboard/creator-exchange)
 
 This guide assumes you’re on an up to date Windows PC. You shouldn’t need any coding knowledge or tech understanding, just follow the steps closely to the end.
 
