@@ -173,6 +173,8 @@ They may not be used as bases for any regular Concept.
 
 [xinachi](https://highrise.game/catalog/designer-profile/xinachi)
 
+[Yana.Yaska](https://highrise.game/catalog/designer-profile/Yana.Yaska)
+
 [z.im](https://highrise.game/catalog/designer-profile/z.im)
 
 [4watty](https://highrise.game/catalog/designer-profile/4watty)
