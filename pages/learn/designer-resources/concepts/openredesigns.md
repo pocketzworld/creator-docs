@@ -103,6 +103,8 @@ They may not be used as bases for any regular Concept.
 
 [Mockeri](https://highrise.game/catalog/designer-profile/Mockeri)
 
+[Mvash](https://highrise.game/catalog/designer-profile/Mvash)
+
 [myrch](https://highrise.game/catalog/designer-profile/myrch)
 
 [Nymphey](https://highrise.game/catalog/designer-profile/Nymphey)
